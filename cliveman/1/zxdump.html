@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>ZXDUMP(1): create a zx dump for file trees</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: zxdump [-1Dsv] [-d dir] {-x expr} {file|name!file}
+        -1: dump once and exit
+        -D: debug
+        -d dir: where to keep the dump, ~/dump if none
+        -s: don&#39;t dump right now, wait until next at 5am
+        -v: verbose
+        -x expr: files excluded (.*, tmp.* if none given); tmp always excluded.
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Zxdump</em> creates a tree with a dump for contents of
+the named file tree. The dump contains one directory per tree, which
+contains one per year, which contains one per day, which contains the
+tree as of that day.
+<p>
+The dump is created at <code>/dump</code> unless flag
+<code>-d</code> tells otherwise.
+<p>
+The program operates on a local file tree and can therefore be used to
+create a dump for UNIX files. But it may dump remote trees as well.
+<p>
+The dump de-duplicates files, using the SHA of file (or directory)
+contents to identify the file.
+<p>
+Unless flag <code>-1</code> is used, the program makes a
+dump and then keeps on running to make a new dump every day at 5am.
+<p>
+By default, files starting with a &#34;<code>.</code>&#34; or with
+&#34;<code>tmp.</code>&#34; are not dumped and contents of
+directoried named <code>tmp</code> are ignored.
+<p>
+This command relies on underlying UNIX files to create the dump and
+(for now) to read the dumped tree, to let our dump survive any bugs
+found in the ZX code as a result of using the development tree.
+<p>
+<a name="sec3"></a><h2>EXAMPLE</h2>
+Make a dump at <code>/dump</code> for the tree at
+<code>/home/lsub</code> with the name
+<code>lsub</code> and then exit.
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxdump -1 -d /dump -v &#39;lsub!/home/lsub&#39;
+    </pre></code>
+<p>
+</ul><p>
+Start dump to make a local dump once a day for local replicas:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; rc -c &#39;zxdump -vd /u/dump `{zxrepl | awk &#39;&#39;{print $2}&#39;&#39;} &#39;
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/zxdump</code>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

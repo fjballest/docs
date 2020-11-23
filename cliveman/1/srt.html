@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>SRT(1): sort lines</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: srt [-1Ddux] [-F sep] {-r key} {file}
+        -1: fields separated by 1 run of the field delimiter string
+        -D: debug
+        -F sep: input field delimiter character(s) (or string under -1)
+        -d: do not print dup lines
+        -r key: use this field range as the sort key(s)
+        -u: use unix out
+        -x: sort each extracted text on its own (eg. out from gr -x)
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Srt</em> sorts files using as keys the ones indicated
+to the <code>-r</code> flag, in the order in which they
+were specified. This can be used to sort each input file on its own
+and to sort output from <code>gx</code> or related
+commands.
+<p>
+A key is indicated by giving, in this order:
+<ul>
+    <li>A field range
+    <li>A format
+    <li>An optional reverse indicator
+<p>
+</ul>
+A range may be a single line number, counting from 1, or a pair of
+start and end field numbers separated by a
+&#34;<code>,</code>&#34; character. Negative field numbers count
+backwards from the end of the line (the last is
+<code>-1</code> and so on). A missing start number in a
+range means <code>1</code>, and a missing end number in a
+range means <code>-1</code>. If no range is given,
+&#34;<code>,</code>&#34; is implied. And, when such range is
+indicated, all fields are printed, one line at a time.
+<p>
+The format may be one of:
+<ul>
+    <li><code>n</code> to consider that the field is a
+    number.
+    <li><code>t</code> to consider that the field is a time.
+    <li><code>s</code> to consider that the field is a
+    string, this is the default when no format is given.
+<p>
+</ul>
+The reverse indicator is &#34;<code>r</code>&#34;, causing a sort
+in reverse order.
+<p>
+By default the field separator is a run of blanks. Flag
+<code>-F</code> changes the set of runes used as field
+separators to its argument.
+<p>
+Flag <code>-1</code> indicates that fields are separated
+exactly by one instance of the separator string. Such string defaults
+to a tabulator character in this case, unless
+<code>-F</code> says otherwise.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Sort in ascending string order:
+<p><ul style="list-style:none;">
+    <code><pre>
+    srt file
+    </pre></code>
+<p>
+</ul><p>
+Sort in reverse numeric order (all fields):
+<p><ul style="list-style:none;">
+    <code><pre>
+    srt -r nr file
+    </pre></code>
+<p>
+</ul><p>
+Sort all files in the current directory and write them back sorted:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf -g ,1 | srt -x | wf
+    </pre></code>
+<p>
+</ul><p>
+Sort the second and third fields in ascending numeric order and the
+last field in reverse string order, for a file separated with a
+&#34;<code>:</code>&#34; character, honoring empty fields:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; srt -1F: -r 2,3n -r -1r file
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/srt</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

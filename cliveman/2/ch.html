@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/ch"
+
+const Tnone uint16 = iota ...
+const MaxMsgSz = 64 * 1024 ...
+var ErrTooLarge = errors.New("message size is too large") ...
+var ErrBadPeer = errors.New("both peers are caller/callee")
+func DefType(x Unpacker)
+func GroupBytes(in <-chan interface{}, ival time.Duration, size int) <-chan interface{}
+func Merge(in ...<-chan interface{}) <-chan interface{}
+func ReadBytes(r io.Reader, c chan<- interface{}) (nbytes int64, nmsgs int, err error)
+func ReadMsg(r io.Reader) (n int, tag uint32, m interface{}, err error)
+func ReadMsgs(r io.Reader, c chan<- interface{}) (nbytes int64, nmsgs int, err error)
+func UnpackString(b []byte) ([]byte, string, error)
+func WriteBytes(w io.Writer, c <-chan interface{}) (nbytes int64, nmsgs int, err error)
+func WriteMsg(w io.Writer, tag uint32, m interface{}) (int64, error)
+func WriteMsgs(w io.Writer, tag uint32, c <-chan interface{}) (nbytes int64, nmsgs int, err error)
+func WriteStringTo(w io.Writer, s string) (n int64, err error)
+func NewConn(rw io.ReadWriter, nbuf int, hup chan bool) Conn
+func NewPipe(nbuf int) Conn
+func NewPipePair(nbuf int) (Conn, Conn)
+func NewMux(rw io.ReadWriter, iscaller bool) *Mux
+func NewMuxPair() (*Mux, *Mux, error)
+type Byteser interface { ... }
+type CloseReader interface { ... }
+type CloseWriter interface { ... }
+type Conn struct { ... }
+    func NewConn(rw io.ReadWriter, nbuf int, hup chan bool) Conn
+    func NewPipe(nbuf int) Conn
+    func NewPipePair(nbuf int) (Conn, Conn)
+type Ign struct { ... }
+type Mux struct { ... }
+    func NewMux(rw io.ReadWriter, iscaller bool) *Mux
+    func NewMuxPair() (*Mux, *Mux, error)
+type Typer interface { ... }
+type Unpacker interface { ... }
+
+DESCRIPTION
+
+Channels that can go through external I/O devices for Clive.
+
+The protocol used in the device permits muxing of multiple channels within a
+single connection.
+
+In the connection, messages exchanged use the format:
+
+size[4] tag[2] type[2] data[size]
+
+Here, a tag identifies a channel and type identifies the type of data
+exchanged.
+
+CONSTANTS
+
+const (
+	Tnone  uint16 = iota
+	Tbytes        // byte[], used as data
+	Tign          // byte[], ignored as data
+	Tstr          // string
+	Terr          // error string
+	Taddr         // file address (name, ln, ch)
+	Tdir          // map[string]string, directory entry
+	Tzx           // zx protocol msg
+	Tusr          // first user defined type value
+)
+    Message types. It is ok for the user to define new types. By convention,
+    unknown message types are to be forwarded as-is by processes piping data
+    along with actual data being processed. For any unknown type, Bytes(),
+    WriteTo(), and String() are used if they exist, if they don't, the type is
+    discarded. In this case, the type is Tign unless a TypeId() method exists to
+    return the type id to be sent.
+
+const (
+
+	// Maximum supported msg sz
+	MaxMsgSz = 64 * 1024
+	// Maximum supported len(Dir)
+	MaxDirSz = 1024
+)
+
+TYPES
+
+type Byteser interface {
+	Bytes() []byte
+}
+
+type CloseReader interface {
+	CloseRead() error
+}
+    See NewConn.
+
+type CloseWriter interface {
+	CloseWrite() error
+}
+    See NewConn.
+
+type Conn struct {
+	Tag string // debug
+	In  <-chan interface{}
+	Out chan<- interface{}
+}
+    A Conn is a channel-pair used as a duplex connection. The tag may be used
+    for debugging or to convey the address of the other end of the connection.
+
+func NewConn(rw io.ReadWriter, nbuf int, hup chan bool) Conn
+    Create a Conn to perform msg I/O through the given device. If r/w implements
+    CloseReader/CloseWriter, half closes are used. Note that TCP has half closes
+    but TLS does not. Otherwise, if Close() is implemented, the end of the
+    reading or writing processes cause a close on the entire connection. Error
+    messages are propagated like everybody else and do not cause a break. I/O
+    errors (and the like) on the device do cause the connection to break and the
+    error is propagated if possible. If hup is not nil, it is closed when rw is
+    closed.
+
+func NewPipe(nbuf int) Conn
+    Creates an io.Pipe with a Conn interface, using channels with nbuf elements
+    of buffering.
+
+func NewPipePair(nbuf int) (Conn, Conn)
+    Returns two Conns piped to each other. The chans involved all have nbuf
+    elements of buffering. Useful for debugging or to replace the network.
+
+type Ign struct {
+	Typ uint16
+	Dat []byte
+}
+    byte[] messages ignored as data.
+
+type Mux struct {
+	In  <-chan Conn // new connections are sent here
+	Hup <-chan bool // closed upon device hang up
+
+	dbg.Flag
+	// contains filtered or unexported fields
+}
+    A Mux is a multiplexed set of channels on a duplex connection. It relies on
+    Conns to perform I/O, but permits multiple Conns to be active on the same
+    underlying device. There is flow control and it is ok for any of the mux
+    clients to cease reading for a while, and to stream a bunch of data, other
+    connections will be able to stream their data at the same time.
+
+func NewMux(rw io.ReadWriter, iscaller bool) *Mux
+    Create a Mux on the given underlying device. One end of the device must be
+    the caller and the other the callee. It does not matter which end is each
+    one. When I/O ceases due to errors or the mux being closed, the underlying
+    device is closed if it implements io.Closer. No half-closes are ever used.
+
+func NewMuxPair() (*Mux, *Mux, error)
+    Create a pair of (os) piped muxes
+
+func (m *Mux) Close()
+    Cease I/O in this mux and release all resources.
+
+func (m *Mux) Out() Conn
+    Ask for a channel to send an output stream to the other end. There is no
+    reply for the request stream.
+
+func (m *Mux) Rpc() Conn
+    Ask for a channel to send an output stream that expects an input stream as
+    its reply.
+
+type Typer interface {
+	TypeId() uint16
+}
+
+type Unpacker interface {
+	Typer
+	Unpack([]byte) (interface{}, error)
+}
+    For user defined types, implementors of this interface use their own make
+    function to make values of the message type upon reception.
+
+FUNCTIONS
+
+func DefType(x Unpacker)
+    Define a user type to be sent through chans Should be used only at init
+    time.
+
+func GroupBytes(in <-chan interface{}, ival time.Duration, size int) <-chan interface{}
+    Group bytes from the input channel so data is sent at most every ival or
+    when the given size is reached. Useful to collect command output and display
+    it for the user without issuing a single write for each msg in the input.
+
+func Merge(in ...<-chan interface{}) <-chan interface{}
+    Merge input channels: msgs received from in are sent to a single channel
+
+func ReadBytes(r io.Reader, c chan<- interface{}) (nbytes int64, nmsgs int, err error)
+    Read bytes from a external reader and send them as messages through c The
+    chan is not closed, the caller may close(c, err) upon return.
+
+func ReadMsg(r io.Reader) (n int, tag uint32, m interface{}, err error)
+    Read a message and return the number of bytes, the msg, and its tag. If the
+    message is an error, it is returned in in the interface. Errors while
+    reading from r are returned using the error instead. EOF is reported using
+    io.EOF; but it's not an error.
+
+func ReadMsgs(r io.Reader, c chan<- interface{}) (nbytes int64, nmsgs int, err error)
+    Read messages from a external reader and send them through c Error messages
+    are forwarded. The chan is not closed, the caller may close(c, err) upon
+    return.
+
+func UnpackString(b []byte) ([]byte, string, error)
+
+func WriteBytes(w io.Writer, c <-chan interface{}) (nbytes int64, nmsgs int, err error)
+    Write []byte messages to an external writer, ignoring everything else. Error
+    messages are ignored (the first one is used as the return sts).
+
+func WriteMsg(w io.Writer, tag uint32, m interface{}) (int64, error)
+    Write []byte, or Ign, string, error, Stringer, Byteser or discard the write.
+    If the write is discarded, ErrDiscarded is returned.
+
+func WriteMsgs(w io.Writer, tag uint32, c <-chan interface{}) (nbytes int64, nmsgs int, err error)
+    Write messages received from c through an external writer with the given
+    tag. The chan is not closed, the caller may close(c, err) upon return. Error
+    messages are also propagated. The cerror of c, if not nil, is also written
+    as an error message.
+
+func WriteStringTo(w io.Writer, s string) (n int64, err error)
+
+VARIABLES
+
+var (
+	ErrTooLarge  = errors.New("message size is too large")
+	ErrTooSmall  = errors.New("truncated message")
+	ErrAlready   = errors.New("type already defined")
+	ErrDiscarded = errors.New("msg write discarded")
+	ErrIO        = errors.New("i/o error")
+
+	// Msg size for []byte readers
+	MsgSz = 16 * 1024
+)
+
+var (
+	ErrBadPeer = errors.New("both peers are caller/callee")
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

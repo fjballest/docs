@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+<h2>NSPACE(3): name space conventions</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>SYNOPSYS</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; NS=&#39; / /
+        /zx tcp!server!zx
+    &#39;
+    ; Importzx
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+This page describes the conventions for the name space. The
+<a href="//lsub.org/sys/man/1/importzx.html">importzx(1)</a> command
+imports the main tree which follows such conventions.
+<p>
+Clive terminals operate on hosted environments. Clive servers may be
+native (not yet, really) or hosted.
+<p>
+The main tree is usually mounted at <code>/zx</code> and
+its dump can be found at <code>/dump</code>. The
+<code>/once</code> tree keeps stuff not be dumped. The
+dump contains a frozen version of the main tree for each day.
+Directories named <code>tmp</code> or
+<code>tmp.*</code> or <code>*.tmp</code> or
+containing a file named <code>NODUMP</code> are never
+copied to the dump. Files with names starting with a dot character
+(<code>.</code>) are never dumped.
+<p>
+The name space is usually specified by either a environment variable
+(<code>$NS</code>) or by a file at
+<code>$HOME/NS</code>. In both cases, the text describes
+the name space. The environment variable may be just the path for a
+file describing the name space, and acts as an indirection to that
+file in such a case.
+<p>
+The description of the name space is a series of lines, one per mount
+entry. A line can be a printed directory entry (with attribute/value
+pairs, as expected). In that case, the path for the directory is used
+as the mount point and the directory is mounted there.
+<p>
+A line can be also a pair of strings, the first is the path for the
+mount point and the second refers to the resource mounted there. The
+resource may be a path, in which case it refers to a local file, or it
+may be a resource address as described in
+<a href="//lsub.org/sys/man/3/addr.html">addr(3)</a>, to refer to
+the addressed resource.
+<p>
+For example,
+<p><ul style="list-style:none;">
+    <code><pre>
+    /    /
+    /zx    unix!localhost!zx
+    </pre></code>
+<p>
+</ul><p>
+The name space is a prefix table and the longest prefix wins, but each
+prefix may have more than one entry (i.e., be a union).
+<p>
+These files can be expected in the name space.
+<dl>
+    <dt><code>/bin</code></dt><dd>
+local terminal binaries
+        for the hosting system
+    </dd>
+    <dt><code>/bin/rc</code></dt><dd>
+The Rc shell, always
+        kept at the terminal
+    </dd>
+    <dt><code>/once</code></dt><dd>
+Root of mounted
+        non-archived main tree
+    </dd>
+    <dt><code>/dump</code></dt><dd>
+Root of the mounted
+        dumps
+    </dd>
+    <dt><code>/dump/zx</code></dt><dd>
+Root of dump for
+        the <code>zx</code> tree
+    </dd>
+    <dt><code>/dump/zx/2014/0509/...</code></dt><dd>
+Copy
+        of files for the named year and day
+    </dd>
+    <dt><code>/zx</code></dt><dd>
+Root of the main tree
+    </dd>
+    <dt><code>/zx/bin</code></dt><dd>
+Binaries
+    </dd>
+    <dt><code>/zx/bin/rc</code></dt><dd>
+Portable scripts.
+        Non portable scripts are kept on a per-architecture directory along
+        with binaries.
+    </dd>
+    <dt><code>/zx/bin/darwin_amd64</code></dt><dd>
+Binaries
+         for OSX on amd64 hosts.
+    </dd>
+    <dt><code>/zx/bin/bsd_amd64</code></dt><dd>
+Binaries
+        for BSD on amd64 hosts.
+    </dd>
+    <dt><code>/zx/bin/linux_amd64</code></dt><dd>
+Binaries
+        for Linux on amd64 hosts.
+    </dd>
+    <dt><code>/zx/cfg</code></dt><dd>
+Copy of
+        configuration for servers and terminals
+    </dd>
+    <dt><code>/zx/doc</code></dt><dd>
+Documents
+    </dd>
+    <dt><code>/zx/lib</code></dt><dd>
+System wide
+        libraries (eg, bibliography, icons, etc.)
+    </dd>
+    <dt><code>/zx/mail</code></dt><dd>
+Copy of system wide
+        e-mail files
+    </dd>
+    <dt><code>/zx/sys</code></dt><dd>
+Source for the
+        system
+    </dd>
+    <dt><code>/zx/sys/bin</code></dt><dd>
+To make
+        <code>/sys</code> go compliant, should not be used. Use
+        <code>/zx/bin/*</code> directories instead.
+    </dd>
+    <dt><code>/zx/sys/doc</code></dt><dd>
+White papers for
+        the system
+    </dd>
+    <dt><code>/zx/sys/man</code></dt><dd>
+Source for
+        manual pages.
+    </dd>
+    <dt><code>/zx/sys/golang</code></dt><dd>
+Source for
+        the lsub branch of the go compiler
+    </dd>
+    <dt><code>/zx/sys/pkg</code></dt><dd>
+To make
+        <code>/sys</code> go compliant.
+    </dd>
+    <dt><code>/zx/sys/src</code></dt><dd>
+System source
+    </dd>
+    <dt><code>/zx/sys/src/clive</code></dt><dd>
+Source for
+        clive packages and binary commands
+    </dd>
+    <dt><code>/zx/sys/src/clive/cmd</code></dt><dd>
+Source
+        for clive binary commands
+    </dd>
+    <dt><code>/zx/sys/src/clive/x</code></dt><dd>
+Source
+        for external go packages (google code, etc.).
+    </dd>
+    <dt><code>/zx/usr</code></dt><dd>
+Home and project
+        directories
+    </dd>
+    <dt><code>/zx/usr/web</code></dt><dd>
+Web pages
+    </dd>
+    <dt><code>/zx/usr/p9p</code></dt><dd>
+Plan9ports copy
+    </dd>
+    <dt><code>/x</code></dt><dd>
+Directory for
+        <a href="//lsub.org/sys/man/1/xcmd.html">xcmd(1)</a> to execute
+        commands on lsub systems.
+    </dd>
+    <dt><code>/x/nautilus</code></dt><dd>
+Commands run at
+        nautilus, see <a href="//lsub.org/sys/man/1/xcmd.html">xcmd(1)</a>.
+    </dd>
+    <dt><code>/x/nautilus/web</code></dt><dd>
+Web command
+        run at nautilus, see
+        <a href="//lsub.org/sys/man/1/xcmd.html">xcmd(1)</a>.
+<p>
+    </dd>
+</dl>
+<a name="sec3"></a><h2>SEE ALSO</h2>
+<li>Introduction to Clive and its commands:
+<a href="//lsub.org/sys/man/1/intro.html">intro(1)</a>.
+<li>The command execution service:
+<a href="//lsub.org/sys/man/1/xcmd.html">xcmd(1)</a>.
+<li>Addresses:
+<a href="//lsub.org/sys/man/3/addr.html">addr(3)</a>.
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

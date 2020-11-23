@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/fuse"
+
+var Debug bool
+func Serve(c *fuse.Conn, fs FS) error
+func SetTimeOuts(attrvalid, entryvalid time.Duration)
+func DataHandle(data []byte) Handle
+type FS interface { ... }
+type Handle interface { ... }
+    func DataHandle(data []byte) Handle
+type HandleIsCtler interface { ... }
+type HandlePuter interface { ... }
+type HandleWriter interface { ... }
+type Intr chan bool
+type Node interface { ... }
+type NodeCreater interface { ... }
+type NodeFsyncer interface { ... }
+type NodeLookuper interface { ... }
+type NodeMkdirer interface { ... }
+type NodePuter interface { ... }
+type NodeRef struct { ... }
+type NodeRemover interface { ... }
+type NodeRenamer interface { ... }
+type NodeSetAttrer interface { ... }
+type NodeXAttrer interface { ... }
+type Server struct { ... }
+
+DESCRIPTION
+
+FUSE service loop, from bazil.org.
+
+This was once bazil.org/fuse/fs/serve.go, see bazil.org/fuse/LICENSE. This
+version has been heavily changed to clean it up and to make it fit our
+needs.
+
+CONSTANTS
+
+TYPES
+
+type FS interface {
+	// Root is called to obtain the Node for the file system root.
+	Root() (Node, fuse.Error)
+}
+    An FS is the interface required of a file system.
+
+    Other FUSE requests can be handled by implementing methods from the FS*
+    interfaces, for example FSIniter. On normal FUSE filesystems, use Forget of
+    the root Node to do actions at unmount time.
+
+type Handle interface {
+	ReadDir(Intr) ([]fuse.Dirent, fuse.Error)
+	Read(off int64, sz int, i Intr) ([]byte, fuse.Error)
+	// Close is called each time the file or directory is closed.
+	// Because there can be multiple file descriptors referring to a
+	// single opened file, Close can be called multiple times.
+	Close(Intr) fuse.Error
+}
+    A Handle is the interface required of an opened file or directory. See the
+    documentation for type FS for general information pertaining to all methods.
+
+    Other FUSE requests can be handled by implementing methods from the Node*
+    interfaces. The most common to implement are HandleReader, HandleReadDirer,
+    and HandleWriter.
+
+    TODO implement methods: Getlk, Setlk, Setlkw
+
+    NB: We do not use DirectIO as the open mode, because that would require
+    aligned buffers or execve will fail. However, this might affect append. In a
+    previous version, in some cases, append would work only with directIO.
+
+func DataHandle(data []byte) Handle
+    DataHandle returns a read-only Handle that satisfies reads using the given
+    data.
+
+type HandleIsCtler interface {
+	IsCtl() bool
+}
+    If a handle implements this, and the method returns true, FUSE relies on
+    DirectIO for the file. That usually prevents exec() from working on the file
+    but on the other hand does not let UNIX assume which one is the file size
+    until the file has been read. File trees with control files should implement
+    this and return true for ctl files.
+
+type HandlePuter interface {
+	// Put back the handle to where it was and forget about it.
+	PutHandle()
+}
+
+type HandleWriter interface {
+	Write([]byte, int64, Intr) (int, fuse.Error)
+}
+
+type Intr chan bool
+    An Intr is a channel that signals that a request has been interrupted. Being
+    able to receive from the channel means the request has been interrupted.
+
+func (Intr) String() string
+
+type Node interface {
+	Attr() (*fuse.Attr, fuse.Error)
+	Open(fuse.OpenFlags, Intr) (Handle, fuse.Error)
+}
+    A Node is the interface required of a file or directory. See the
+    documentation for type FS for general information pertaining to all methods.
+
+    Other FUSE requests can be handled by implementing methods from the Node*
+    interfaces, for example NodeOpener.
+
+type NodeCreater interface {
+	// Create creates a new directory entry in the receiver, which
+	// must be a directory.
+	Create(name string, flag fuse.OpenFlags, mode os.FileMode, i Intr) (Node, Handle, fuse.Error)
+}
+
+type NodeFsyncer interface {
+	Fsync(intr Intr) fuse.Error
+}
+    TODO this should be on Handle not Node
+
+type NodeLookuper interface {
+	// Lookup looks up a specific entry in the receiver,
+	// which must be a directory.  Lookup should return a Node
+	// corresponding to the entry.  If the name does not exist in
+	// the directory, Lookup should return nil, err.
+	//
+	// Lookup need not to handle the names "." and "..".
+	Lookup(string, Intr) (Node, fuse.Error)
+}
+
+type NodeMkdirer interface {
+	// Create dir name with the given mode
+	Mkdir(name string, mode os.FileMode, i Intr) (Node, fuse.Error)
+}
+
+type NodePuter interface {
+	// Kernel says we can forget node and put it back to where it was.
+	PutNode()
+}
+
+type NodeRef struct {
+	// contains filtered or unexported fields
+}
+    NodeRef can be embedded in a Node to recognize the same Node being returned
+    from multiple Lookup, Create etc calls.
+
+    Without this, each Node will get a new NodeID, causing spurious cache
+    invalidations, extra lookups and aliasing anomalies. This may not matter for
+    a simple, read-only filesystem.
+
+type NodeRemover interface {
+	// Remove removes the entry with the given name from
+	// the receiver, which must be a directory.  The entry to be removed
+	// may correspond to a file (unlink) or to a directory (rmdir).
+	Remove(elem string, i Intr) fuse.Error
+}
+
+type NodeRenamer interface {
+	// Move to the directory node newDir (which is the type implementing Node)
+	// so
+	Rename(oldelem, newelem string, newDir Node, intr Intr) fuse.Error
+}
+
+type NodeSetAttrer interface {
+	// Setattr sets the standard metadata for the receiver.
+	// EPERM otherwise
+	SetAttr(*fuse.SetattrRequest, Intr) fuse.Error
+}
+
+type NodeXAttrer interface {
+	// get the named attribute
+	Xattr(name string) ([]byte, fuse.Error)
+	// set the named attribute (use nil val to remove)
+	Wxattr(name string, val []byte) fuse.Error
+	// list named attributes
+	Xattrs() []string
+}
+
+type Server struct {
+	FS FS
+	// contains filtered or unexported fields
+}
+
+func (s *Server) Serve(c *fuse.Conn) error
+    Serve serves the FUSE connection by making calls to the methods of fs and
+    the Nodes and Handles it makes available. It returns only when the
+    connection has been closed or an unexpected error occurs.
+
+FUNCTIONS
+
+func Serve(c *fuse.Conn, fs FS) error
+    Serve serves a FUSE connection with the default settings. See Server.Serve.
+
+func SetTimeOuts(attrvalid, entryvalid time.Duration)
+    Set the fuse protocol cache timeouts for attributes and entries
+
+VARIABLES
+
+var (
+	Debug bool
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

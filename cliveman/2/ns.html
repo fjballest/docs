@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/ns"
+
+const Repl Flag = iota ...
+func AddLfsPath(path string, fs zx.Fs)
+func DirFs(d zx.Dir) (zx.Fs, error)
+func Lfs(path string) (zx.Fs, string, string)
+func New() *NS
+func Parse(s string) (*NS, error)
+type Binder interface { ... }
+type Flag int
+type NS struct { ... }
+    func New() *NS
+    func Parse(s string) (*NS, error)
+
+DESCRIPTION
+
+name spaces.
+
+A name space goes from a textual representation of paths and directory
+entries (perhaps referring to a remote mounted dir) to a finder interface.
+
+It's a prefix table where the longest prefix wins. There are no binds and no
+unions.
+
+CONSTANTS
+
+TYPES
+
+type Binder interface {
+	// Add an entry at the given d["path"] prefix for the given directory entry.
+	// If flag is Before or After, previous contents of the path are preserved and
+	// the new entry is added before or after them.
+	// Despite Repl mounts, other mounts that are suffixes of the given prefix
+	// remain mounted.
+	Mount(d zx.Dir, flag Flag) error
+
+	// Remove entries for the given path prefix (all if d is nil, or those matching
+	// them.
+	// Other mounts that are suffixes of the given prefix
+	// remain mounted.
+	Unmount(name string, d ...zx.Dir) error
+}
+    A binder is a name space that binds prefixes to directory entries. The
+    implementor usually supports the Finder interface to navigate the resulting
+    tree.
+
+type Flag int
+    Mount flags
+
+const (
+	Repl   Flag = iota // replace previous mounted dirs.
+	Before             // mount before previous mounted dirs.
+	After              // mount after previous mounted dirs.
+)
+
+func (f Flag) String() string
+
+type NS struct {
+	dbg.Flag
+	Verb bool // verbose debug diags
+	// contains filtered or unexported fields
+}
+    A clive name space tree. It implements both the binder and finder
+    interfaces.
+
+func New() *NS
+    Create a new empty name space. It has a single entry for an empty directory
+    mounted at "/"
+
+func Parse(s string) (*NS, error)
+    Recreate a name space provided its printed representation. It accepts the
+    special line formats
+
+    path addr
+    path filepath
+
+    to dial the given addr or use the given lfs filepath and mount it at path.
+
+    A full addr is proto!net!host!port!tree!path, where proto can be zx|lfs. For
+    lfs, the addr is of the form lfs!lfsroot!path zx is implied it no proto is
+    given. Any suffix components may be absent so we accept
+
+    localhost!zx	-> zx!tcp!localhost!zx!main!/
+    unix!localhost!zx	-> zx!unix!localhost!zx!main!/
+    zx!unix!localhost!zx
+    unix!localhost!zx!other
+    ...
+
+func (ns *NS) Dup() *NS
+    Create a copy of the ns.
+
+func (ns *NS) Entries() []zx.Dir
+    Return an array of mount entries for ns. The "path" attribute in them
+    indicates the prefix where they are mounted.
+
+func (ns *NS) Find(name string, fpred string, spref, dpref string, depth0 int) <-chan zx.Dir
+    Implementation of the Finder.Find operation. Issues finds to all involved
+    mount points, starting at the longest prefix that is a prefix of name
+    (perhaps name itself). As it gets entries, it will issue further finds for
+    those mount points that are suffixes of any directory found. As a result, if
+    a find is issued at /path, and a suffix of path is in a mount point that no
+    longer has a directory entry at the FS mounted at path, no finds are issued
+    for the second. That is, suffixes might be "disconnected" from the prefix if
+    their names can't be reached from there. But you can still issue finds for
+    those prefixes (and any suffix path).
+
+func (ns *NS) FindGet(name string, fpred string, spref, dpref string, depth0 int) <-chan interface{}
+    Implementation of the Finder.FindGet operation. See also Find for a
+    description of the find requests issued.
+
+func (ns *NS) Get(path string, off, count int64) <-chan []byte
+
+func (ns *NS) Mount(d zx.Dir, flag Flag) error
+
+func (ns *NS) Move(from, to string) <-chan error
+
+func (ns *NS) Put(path string, ud zx.Dir, off int64, dc <-chan []byte) <-chan zx.Dir
+    On unions, the first entry is always used.
+
+func (ns *NS) Remove(path string) <-chan error
+
+func (ns *NS) RemoveAll(path string) <-chan error
+
+func (ns *NS) Resolve(name string) (pref string, mnts []zx.Dir, err error)
+    Resolve a name and return the prefix path and the array of mount points for
+    it. The "addr" attribute for each mount point returned is adjusted to refer
+    to the path in the server for the resource resolved. However, the path is
+    left pointing to the mount point. The path must be absolute.
+
+func (ns *NS) Stat(path string) <-chan zx.Dir
+
+func (ns *NS) String() string
+
+func (ns *NS) Unmount(fname string, d zx.Dir) error
+    See the Binder.Unmount operation.
+
+func (ns *NS) Wstat(path string, ud zx.Dir) <-chan zx.Dir
+
+FUNCTIONS
+
+func AddLfsPath(path string, fs zx.Fs)
+    Add the given (absolute) paths as valid paths to resolve lfs addresses. If
+    the path is not ok, it's a panic. DirFs relies on this to resolve addresses
+    of the form lfs!* and the longest path added is used. If fs is not given, a
+    default zux tree is made for it and it's a panic if we fail to make fs.
+
+func DirFs(d zx.Dir) (zx.Fs, error)
+    Dial the server for this dir (if not already dialed) and return it, the dir
+    addr is updated.
+
+func Lfs(path string) (zx.Fs, string, string)
+    Return the best lfs added for the given path, its root, and the relative
+    path for path Returns nil if there's no such tree
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

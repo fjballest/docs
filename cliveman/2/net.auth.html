@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/net/auth"
+
+var TLSclient *tls.Config ...
+func ChallengeResponseOk(name, ch, resp string) (user string, ok bool)
+func KeyDir() string
+func KeyFile(dir, name string) string
+func LoadKey(dir, name string) (ks []Key, err error)
+func SaveKey(dir, name, user, secret string, groups ...string) error
+func TLScfg(pem, key string) (*tls.Config, error)
+func TLSenable(on bool)
+func AtClient(c ch.Conn, name string, proto ...string) (*Info, error)
+func AtServer(c ch.Conn, name string, proto ...string) (*Info, error)
+func NoneAtClient(c ch.Conn, name string, proto ...string) (*Info, error)
+func NoneAtServer(c ch.Conn, name string, proto ...string) (*Info, error)
+type Info struct { ... }
+    func AtClient(c ch.Conn, name string, proto ...string) (*Info, error)
+    func AtServer(c ch.Conn, name string, proto ...string) (*Info, error)
+    func NoneAtClient(c ch.Conn, name string, proto ...string) (*Info, error)
+    func NoneAtServer(c ch.Conn, name string, proto ...string) (*Info, error)
+type Key struct { ... }
+
+DESCRIPTION
+
+Authentication services for clive.
+
+Clive relies on challenge response authentication using shared keys. This
+package provides tools to authenticate clients and servers and to
+authenticate acess to wax interfaces.
+
+auth.Conn is the primary interface. All other tools are helpers (and there
+are even more helpers not exported in case you need an auth related
+function; just look at the code).
+
+CONSTANTS
+
+TYPES
+
+type Info struct {
+	Uid       string          // authenticated user name
+	Gids      map[string]bool // local groups known for that user
+	SpeaksFor string          // user name as reported by the remote peer.
+	Proto     map[string]bool // protocols spoken by the peer.
+	Ok        bool            // auth was successful?
+}
+    Auth info resulting from authentication.
+
+    This is most often used to perform file access permission checking. The
+    expected semantics are as follow, as a reference for file server
+    implementors:
+
+    - A remote user is defined by the Info structure, including the set of
+    groups it belongs to. Locally, the user uid and its groups are defined by a
+    similar Key structure.
+
+    - A file server relies on this package (clive/net/auth) to authenticate a
+    user, and define the list of (locally defined groups) it belongs to.
+
+    - Both the user and the group are local concepts, and authentication is used
+    to attach a remote user to a locally defined user.
+
+    - If there is no auth info the file server usually grants access (no-auth).
+
+    - If the user is the file owner, and any of the u/g/o permissions are set,
+    then permission is granted.
+
+    - If the user has a gid listed that is that of the file, and any of the g/o
+    permissions are set, permission is granted.
+
+    - Only members of sys may change the owner of a file.
+
+    - The group of a file may be changed by users in that group or by users in
+    the sys group.
+
+    - User defined attributes may be changed only if the user can write the
+    file, or is the owner of the file.
+
+    - The mode may be changed by the file owner.
+
+    - Files (re)created in a directory are created with the group of that
+    directory, and permissions are filtered according to those of the directory.
+
+    - When files are being created, if Uid/Gid are specified and the rules
+    described would not grant permission, such attributes are removed from the
+    request and no error is produced because of them. This is so common due to
+    wstats carrying uids/gids that reporting an error would cause more harm than
+    not doing so in this case.
+
+    - Otherwise permission checking is similar to that of unix (v6).
+
+func AtClient(c ch.Conn, name string, proto ...string) (*Info, error)
+    Run by a client to authenticate a connection to a server (as provided by
+    clive/nchan).
+
+    This performs symmetric challenge-response over a TLS secured connection (or
+    a pipe or fifo). The shared key is kept at the KeyDir() directory in the
+    file reported by KeyFile() for the named auth domain.
+
+    By convention, the dialer takes the first key and user name kept in the key
+    file and uses those. The callee waits until it has received a proposed user
+    name to complete its part of the protocol, and selects the key for that user
+    name as kept in the key file. The iscaller argument indicates if it's the
+    dialer or not.
+
+    If there's no key, or TLS is not configured for the network, or auth is not
+    enabled, c is left undisturbed and an error is returned instead. The error
+    is ErrDisabled when auth is disabled.
+
+    Otherwise, c is closed unless it authenticates correctly and the auth info
+    resulting from the protocol is returned.
+
+func AtServer(c ch.Conn, name string, proto ...string) (*Info, error)
+    Run by a server to authenticate a connection to a client (as provided by
+    clive/nchan). Despite the names, the protocol is symmetric. See Caller for a
+    description.
+
+func NoneAtClient(c ch.Conn, name string, proto ...string) (*Info, error)
+    Like AtClient(), but with auth disabled for this client/server
+
+func NoneAtServer(c ch.Conn, name string, proto ...string) (*Info, error)
+    Like AtServer(), but with auth disabled for this client/server
+
+func (ai *Info) InGroup(name string) bool
+    Return true if the auth info indicates that the user is a member of the
+    given group name or is the given group name. Everyone belongs to the empty
+    ("") group. The nil auth info befongs to every group. ai.Uid "elf" belongs
+    to every group.
+
+type Key struct {
+	Uid  string
+	Gids []string
+	Key  []byte
+}
+    Per-user keys. See Info for a description.
+
+FUNCTIONS
+
+func ChallengeResponseOk(name, ch, resp string) (user string, ok bool)
+    Check out to see if resp is the expected response for the ch challenge on
+    the named auth domain. Returns the user who authenticates and the status for
+    authentication. Always returns true when Auth is not enabled.
+
+func KeyDir() string
+    Return the path to the directory where clive keys and certificates are kept.
+
+func KeyFile(dir, name string) string
+    Return the path to the file at dir where clive keys for the auth domain
+    named are kept.
+
+func LoadKey(dir, name string) (ks []Key, err error)
+    Load the key for the named auth domain kept at dir. Return the user name for
+    the key, the user key, and any error indication.
+
+func SaveKey(dir, name, user, secret string, groups ...string) error
+    Save the key for the given secret of the given user in the named auth domain
+    at KeyFile(dir, name). The key is added if there is no such user in the auth
+    domain or replaced if the user already exists.
+
+func TLScfg(pem, key string) (*tls.Config, error)
+    Build a TLS config for use with dialing functions provided by others.
+
+func TLSenable(on bool)
+    Used in tests to disable TLS. By convention, clive always enables TLS. When
+    TLS is enabled all network connections are secured through TLS by default.
+    Pipe and fifo connections are never encrypted, but they are also
+    authenticated when authentication is enabled.
+
+VARIABLES
+
+var (
+	// Global certificates used by default for clients and servers.
+	TLSclient, TLSserver *tls.Config
+
+	// Paths to pem and key files used by servers.
+	ServerPem, ServerKey string
+
+	// Enable authentication. TLS can still be enabled with auth disabled.
+	Enabled = true
+
+	// Errors returned by authentication tools.
+	ErrDisabled = errors.New("auth disabled")
+	ErrTimedOut = errors.New("auth timed out")
+	ErrFailed   = errors.New("auth failed")
+
+	// Timeout placed on the authentication protocol.
+	Tmout = 10 * time.Second
+
+	// Enable debug diagnostics.
+	Debug = false
+)
+
+BUGS
+
+BUG: the secrets file for a domain should keep multiple user/key pairs.
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

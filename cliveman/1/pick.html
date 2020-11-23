@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>PICK(1): compile picky programs</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: pick [-DELPSYdgv] [-o outfile] infile[..]
+    </pre></code>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+pick compiles programs written in the Picky programming language.
+Picky is a programming language intended for a first course on
+computer programming. It is closer to a bicycle with two side-wheels
+than it is to a motor-bike. You won&#39;t probably use it unless you are
+using it for your first steps in programming.
+<p>
+The compiler generates byte-code, interpreted by an abstract machine
+for portability. The language is utterly picky, hence its name, by
+design.
+<p>
+These are the options:
+<p><ul style="list-style:none;">
+    -D
+    <p><ul style="list-style:none;">
+        debug declarations
+    </ul><p>
+    -E
+    <p><ul style="list-style:none;">
+        debug expressions
+    </ul><p>
+    -L
+    <p><ul style="list-style:none;">
+        debug the lexer
+    </ul><p>
+    -P
+    <p><ul style="list-style:none;">
+        debug program
+    </ul><p>
+    -S
+    <p><ul style="list-style:none;">
+        dump statistics of resource usage (imprecise)
+    </ul><p>
+    -Y
+    <p><ul style="list-style:none;">
+        set Yydebug, for parser state debugging in yacc
+    </ul><p>
+    -d
+    <p><ul style="list-style:none;">
+        dump the stack on error before exiting
+    </ul><p>
+    -g
+    <p><ul style="list-style:none;">
+        enable global variables, forbidden by default
+    </ul><p>
+    -o out.pam
+    <p><ul style="list-style:none;">
+        output file name
+    </ul><p>
+    -v
+    <p><ul style="list-style:none;">
+        return version of the build of the compiler, the number is seconds
+        since epoch when the build happened.
+<p>
+    </ul><p>
+</ul><p>
+<a name="sec3"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/picky</code>
+<p>
+</ul>
+<a name="sec4"></a><h2>BUGS</h2>
+Statistics should be more precise.
+<p>
+<a name="sec5"></a><h2>REFERENCES</h2>
+See also <a href="http://lsub.org/sys/man/1/pam.html">pam(1)</a>
+<a href="http://lsub.org/ls/export/newpicky/picky.pdf">http://lsub.org/ls/export/newpicky/picky.pdf</a>.
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

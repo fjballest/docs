@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>ZXFUSE(1): import remote zx file trees through FUSE</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    zxfs: No such file or directory
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Zxfuse</em> imports the named address and serves the
+imported zx file tree through the local FUSE interface.
+<p>
+If the address is a file existing in the local file tree, a local ZX
+service is started for that file and then mounted through FUSE. If the
+address is a network address, the remote file is imported.
+<p>
+The tree is mounted at <code>/n/zx</code> by default
+unless a mount point <code>mnt</code> is supplied in the
+command line.
+<p>
+By default an in-memory cache is kept for the remote tree and write
+operations are accepted. The cache performs delayed writes and never
+evicts its contents. It is suggested not to use the cache when
+mounting a dump file system. The cache is synced after one second of
+inactivity regarding writes and also once per minute. Unmounting the
+file system syncs the cache as well.
+<p>
+When using the in-memory cache and a remote tree reached through the
+network, temporary disconnections are tolerated. The file system may
+be used (and updated) during disconnections, but any access to
+uncached content will fail with an i/o error.
+<p>
+Under flag <code>-x</code> the program re-exports the
+cached tree to the given address. This can be used to let speakers of
+the zx file system protocol leverage the cache kept by this program
+without going through FUSE.
+<p>
+<a name="sec3"></a><h2>EXAMPLE</h2>
+Mount the zx file tree from <code>nautilus</code> at
+<code>/n/zx</code> and export the cache at the local unix
+network under the <code>zx</code> service name.
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxfuse -x unix!*!zx tcp!nautilus!zx!main /n/zx
+    </pre></code>
+<p>
+</ul><p>
+See who is using the file system and force a sync of the cache.
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; grep user /n/zx/Ctl
+    user: rfs:95.122.101.57:63257 nemo as nemo
+    ; echo sync &gt;/n/zx/Ctl
+    </pre></code>
+<p>
+</ul><p>
+Mount the dump, uncached:
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxfuse -n tcp!server!zx!dump /dump &amp;
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/zxfuse</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>BUGS</h2>
+The errors reported through FUSE are many times a permission denied
+when other things happen, and the actual error is printed by the
+server. This is so for portability, because some of our UNIX kernels
+have problems with other error types when they come from FUSE. This
+must be addressed in the future.
+<p>
+<a name="sec6"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/xzx.html">xzx(1)</a> to export
+    trees to the network.
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

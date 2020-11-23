@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/cmd"
+
+var ErrIO = errors.New("no such IO chan")
+func AbsPath(p string) string
+func Args() []string
+func ByteLines(c <-chan []byte) <-chan []byte
+func Cd(to string) error
+func Chans() (in []string, out []string)
+func CleanName(name string) (string, string)
+func CloseIO(name string)
+func Cprintf(io, f string, args ...interface{}) (n int, err error)
+func Dir(name string) (zx.Dir, error)
+func Dirs(names ...string) chan interface{}
+func Dot() string
+func DotFile(name string) string
+func Dprintf(f string, args ...interface{}) (n int, err error)
+func EnvList(val string) []string
+func EnvMap(env string) map[string][]string
+func Eprintf(f string, args ...interface{}) (n int, err error)
+func Exit(sts ...interface{})
+func Fatal(args ...interface{})
+func Files(names ...string) chan interface{}
+func FlagPrintf(flag *bool) dbg.PrintFunc
+func ForkDot()
+func ForkEnv()
+func ForkIO()
+func ForkNS()
+func FullFiles(c <-chan interface{}) <-chan interface{}
+func Get(path string, off, count int64) <-chan []byte
+func GetAll(path string) ([]byte, error)
+func GetDir(path string) ([]zx.Dir, error)
+func GetEnv(v string) string
+func GetEnvList(v string) []string
+func GetEnvMap(v string) map[string][]string
+func HandleIntr() <-chan os.Signal
+func In(name string) <-chan interface{}
+func IsEnvMap(value string) bool
+func Lines(c <-chan interface{}) <-chan interface{}
+func ListEnv(lst []string) string
+func LookPath(cmd string) string
+func MapEnv(m map[string][]string) string
+func Move(from, to string) error
+func NS() *ns.NS
+func OSEnv() []string
+func Out(name string) chan<- interface{}
+func Path() []string
+func Printf(f string, args ...interface{}) (n int, err error)
+func Put(path string, ud zx.Dir, off int64, dc <-chan []byte) <-chan zx.Dir
+func PutAll(path string, data []byte, mode ...string) error
+func Remove(path string) error
+func RemoveAll(path string) error
+func SetEnv(name, value string)
+func SetEnvList(v string, val []string)
+func SetEnvMap(v string, val map[string][]string)
+func SetIn(name string, c <-chan interface{})
+func SetOut(name string, c chan<- interface{})
+func Stat(path string) (zx.Dir, error)
+func UnixIO(name ...string)
+func VWarn(f string, args ...interface{}) (n int, err error)
+func Warn(f string, args ...interface{}) (n int, err error)
+func Wstat(path string, ud zx.Dir) (zx.Dir, error)
+func AppCtx() *Ctx
+func New(fun func(), wc ...chan bool) *Ctx
+type Ctx struct { ... }
+    func AppCtx() *Ctx
+    func New(fun func(), wc ...chan bool) *Ctx
+
+DESCRIPTION
+
+Clive command tools and interfaces
+
+Each application has a context including
+
+    - A set of IO channels
+
+    - A name space
+
+    - A dot path
+
+    - A set of environment variables
+
+    - A wait channel and exit status
+
+Importing this package initializes a command context for the underlying OS
+environment. Further commands may be created within the same OS process with
+different contexts if so desired. They may later change or dup the resources
+used.
+
+All IO channels carry interface{} messages, which usually are a series of
+zx.Dir{} []byte and error messages. Other data may be sent as well. In some
+cases it's context or app. specific data not to be forwarded outside of the
+system.
+
+All commands are expected to forward messages not understood and process
+those they understand along the way, in very much the same way a roff
+pipeline works.
+
+The name space is constructed by the first method that works:
+
+    1. Using $NS as the description (see ns.Parse).
+    2. Using the contents of $HOME/NS as the description.
+    3. Using "/"
+
+Methods 2 and 3 set $NS to the resulting name space.
+
+CONSTANTS
+
+TYPES
+
+type Ctx struct {
+	Args []string // command line arguments
+
+	Debug, Verb bool
+	// contains filtered or unexported fields
+}
+    Command context. In, Out, and Err carry []byte as data, but may carry other
+    pieces of data as context (eg., zx.Dir) When fed into external processes,
+    non []byte messages are discarded.
+
+func AppCtx() *Ctx
+    Return the current command application context.
+
+func New(fun func(), wc ...chan bool) *Ctx
+    Run the given function in a new process on a new context and return its
+    context. If wc is supplied, the new function won't run until wc is closed
+    and the caller has time to adjust the new context for the function to run,
+    eg. to set the Args, etc. The new conext shares everything with the parent,
+    but for io, which is a dup.
+
+func (c *Ctx) Cd(to string) error
+
+func (c *Ctx) Chans() (in []string, out []string)
+
+func (c *Ctx) CloseIO(name string)
+
+func (c *Ctx) Dot() string
+
+func (c *Ctx) ForkDot()
+
+func (c *Ctx) ForkEnv()
+
+func (c *Ctx) ForkIO()
+
+func (c *Ctx) ForkNS()
+
+func (c *Ctx) GetEnv(name string) string
+
+func (c *Ctx) In(name string) <-chan interface{}
+
+func (c *Ctx) NS() *ns.NS
+
+func (c *Ctx) Out(name string) chan<- interface{}
+
+func (c *Ctx) SetEnv(name, value string)
+
+func (c *Ctx) SetIn(name string, ioc <-chan interface{})
+
+func (c *Ctx) SetOut(name string, ioc chan<- interface{})
+
+func (c *Ctx) UnixIO(name ...string)
+    Set Unix IO for the named chans (all if none is given)
+
+func (c *Ctx) Waitc() chan error
+
+FUNCTIONS
+
+func AbsPath(p string) string
+    return p as a cleaned and absolute path for the current context.
+
+func Args() []string
+
+func ByteLines(c <-chan []byte) <-chan []byte
+    Process a stream of input []byte data and send one line at a time
+
+func Cd(to string) error
+
+func Chans() (in []string, out []string)
+
+func CleanName(name string) (string, string)
+    Clean a name according to conventions so that it has both a path and a
+    predicate and return both things. In the predicate, both '&' and ',' can be
+    used as the and operator. (which is & in clive/zx/pred) The name is returned
+    as given by the user, it's not an absolute path. A missing name is taken as
+    ".".
+
+func CloseIO(name string)
+
+func Cprintf(io, f string, args ...interface{}) (n int, err error)
+
+func Dir(name string) (zx.Dir, error)
+    Like Dirs(), but return a single dir.
+
+func Dirs(names ...string) chan interface{}
+    Issue a find for these names ("filename,predicate") In the predicate, both
+    '&' and ',' can be used as the and operator. (which is & in clive/zx/pred)
+    If no predicate is given, then "depth<1" is used. eg. /a -> just /a; /a, ->
+    subtree at /a Errors are reported by sending an error. The chan error status
+    is not nil if there's an error. The Upath attribute in the dir entries
+    returned mimics the paths given in the names. The Rpath attribute in the dir
+    entries provide a path relative to the one specified by the user. If one
+    argument is "|...", it names an IO chan and a dir entry is sent for it, type
+    "c", With the path (and Upath/Rpath) set to the name
+
+func Dot() string
+
+func DotFile(name string) string
+    Return the content of a `dotfile' for the given name. if $name is defined,
+    the data is its value. Otherwise, if $home/lib/name or $home/.name exists,
+    The empty string is returned if there's no configuration for name.
+
+func Dprintf(f string, args ...interface{}) (n int, err error)
+
+func EnvList(val string) []string
+
+func EnvMap(env string) map[string][]string
+
+func Eprintf(f string, args ...interface{}) (n int, err error)
+
+func Exit(sts ...interface{})
+
+func Fatal(args ...interface{})
+    Warn and exit
+
+func Files(names ...string) chan interface{}
+    Like Dirs(), but sends also file contents If one argument is "|...", it
+    names an IO chan and a dir entry is sent for it, type "c", With the path
+    (and Upath/Rpath) set to the name, then its contents.
+
+func FlagPrintf(flag *bool) dbg.PrintFunc
+    Return a function that calls Eprintf but only when flag is set.
+
+func ForkDot()
+
+func ForkEnv()
+
+func ForkIO()
+
+func ForkNS()
+
+func FullFiles(c <-chan interface{}) <-chan interface{}
+    pipe an input chan and make sure the output issues one message per file in
+    the input containing all data. non []byte messages forwarded as-is.
+
+func Get(path string, off, count int64) <-chan []byte
+
+func GetAll(path string) ([]byte, error)
+
+func GetDir(path string) ([]zx.Dir, error)
+    Unlike zx.GetDir(), this updates the paths in dirs to reflect user paths,
+    like Dirs() and Files() do.
+
+func GetEnv(v string) string
+
+func GetEnvList(v string) []string
+
+func GetEnvMap(v string) map[string][]string
+
+func HandleIntr() <-chan os.Signal
+
+func In(name string) <-chan interface{}
+
+func IsEnvMap(value string) bool
+
+func Lines(c <-chan interface{}) <-chan interface{}
+    Process a stream of input file data and send one line at a time.
+
+func ListEnv(lst []string) string
+
+func LookPath(cmd string) string
+    Returns "" if there's no such cmd in the path. Returns the absolute path for
+    cmd if it's /... or ./... or ../...
+
+func MapEnv(m map[string][]string) string
+
+func Move(from, to string) error
+
+func NS() *ns.NS
+
+func OSEnv() []string
+    Return a copy of the environment in the format expected by go os.
+
+func Out(name string) chan<- interface{}
+
+func Path() []string
+
+func Printf(f string, args ...interface{}) (n int, err error)
+
+func Put(path string, ud zx.Dir, off int64, dc <-chan []byte) <-chan zx.Dir
+
+func PutAll(path string, data []byte, mode ...string) error
+
+func Remove(path string) error
+
+func RemoveAll(path string) error
+
+func SetEnv(name, value string)
+
+func SetEnvList(v string, val []string)
+
+func SetEnvMap(v string, val map[string][]string)
+
+func SetIn(name string, c <-chan interface{})
+
+func SetOut(name string, c chan<- interface{})
+
+func Stat(path string) (zx.Dir, error)
+
+func UnixIO(name ...string)
+
+func VWarn(f string, args ...interface{}) (n int, err error)
+    Warn if verbose flag is set
+
+func Warn(f string, args ...interface{}) (n int, err error)
+    Printf to stderr, prefixed with app name and terminating with \n. Each warn
+    is atomic.
+
+func Wstat(path string, ud zx.Dir) (zx.Dir, error)
+
+VARIABLES
+
+var (
+	ErrIO = errors.New("no such IO chan")
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/cmd/wr/refs"
+
+const Dir = "/zx/lib/bib" ...
+var BibTexOk = true
+func Load(dir string) (*Bib, error)
+type Bib struct { ... }
+    func Load(dir string) (*Bib, error)
+type Ref struct { ... }
+
+DESCRIPTION
+
+References for wr using the refer format
+
+    A	Author's name
+    B	Title of book containing item
+    C	City of publication
+    D	Date
+    E	Editor(s) of book containing item
+    F	Caption
+    G	Government (NTIS) ordering number
+    I	Issuer (publisher)
+    J	Journal name
+    K	Keys for searching
+    N	Issue number
+    O	Other information
+    P	Page(s) of article
+    R	Technical report number
+    S	Series title
+    T	Title
+    V	Volume number
+    W	Where the item can be found locally
+    X	Annotations (not in all macro styles)
+
+    Books
+    %A	R. E. Griswold
+    %A	J. F. Poage
+    %A	I. P. Polonsky
+    %T	The SNOBOL4 Programming Language
+    %I	PRHALL
+    %D	second edition 1971
+
+    Journal article
+    %A	M. A. Harrison
+    %A	W. L. Ruzzo
+    %A	J. D. Ullman
+    %T	Protection in Operating Systems
+    %J	CACM
+    %V	19
+    %N	8
+    %P	461-471
+    %D	AUG 1976
+    %K	hru
+
+    Article in conference proceedings
+    %A	M. Bishop
+    %A	L. Snyder
+    %T	The Transfer of Information and Authority
+    in	a Protection System
+    %J	Proceedings of the 7th SOSP
+    %P	45-54
+    %D	1979
+
+    Article in book
+    %A	John B. Goodenough
+    %T	A Survey of Program Testing Issues
+    %B	Research Directions in Software Technology
+    %E	Peter Wegner
+    %I	MIT Press
+    %P	316-340
+    %D	1979
+
+    Technical Reports
+    %A	T. A. Budd
+    %T	An APL Complier
+    %R	University of Arizona Techical Report 81-17
+    %C	Tucson, Arizona
+    %D	1981
+
+    PhD Thesis
+    %A	Martin Brooks
+    %T	Automatic Generation of Test Data for
+    Recursive	Programs Having Simple Errors
+    %I	PhD Thesis, Stanford University
+    %D	1980
+
+    Miscellaneous
+    %F	BHS--
+    %A	Timothy A. Budd
+    %A	Robert Hess
+    %A	Frederick G. Sayward
+    %T	User's Guide for the EXPER Mutation Analysis system
+    %O	(Yale university, memo)
+
+CONSTANTS
+
+const (
+	Dir  = "/zx/lib/bib" // default bib dir (should become /u/bib)
+	Keys = "ATBSJPRVNEFGICDOWX"
+)
+
+TYPES
+
+type Bib struct {
+	All []*Ref // once loaded, can be used to iterate over the references.
+	// contains filtered or unexported fields
+}
+    A bib maps from words found in references to references
+
+func Load(dir string) (*Bib, error)
+    Load the files at the given dir into a Bib set.
+
+func (b *Bib) Cite(keys ...string) *Ref
+    Search bib for keys and return at most one reference
+
+func (b *Bib) Cites(keys ...string) []*Ref
+    Search bib for keys and return all matching references
+
+func (b *Bib) WriteTo(w io.Writer)
+
+type Ref struct {
+	Keys map[rune][]string
+}
+    A reference maps from the key (eg. 'A') to values (eg. authors)
+
+func (r *Ref) Authors() string
+    return authors separated by "," and terminated with a "."
+
+func (r *Ref) Reference() []string
+    Return text lines or sentences for a reference. The strings might be written
+    in a single paragraph. The first two strings are usually the title and
+    author list, but that depends on the existence of such keys.
+
+func (r *Ref) String() string
+
+func (r *Ref) Title() string
+    return title terminated in "."
+
+FUNCTIONS
+
+VARIABLES
+
+var BibTexOk = true
+    When true, Load() reads .bib files containing "bib2ref ok" in the first line
+    (with this line being discarded). Parsing of the bibtex entries is naive and
+    assumes that each field is described in a single line.
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

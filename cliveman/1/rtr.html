@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>RTR(1): translate runes</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: rtr [-Dltuv] [-d arg] [from to] {file}
+        -D: debug
+        -d: delete
+        -l: convert to lowercase
+        -t: convert to title
+        -u: convert to uppercase
+        -v: invert matches for deletes
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Rtr</em> translates runes in files.
+<p>
+When given <code>from</code> and
+<code>to</code> it translates runes matching those in
+<code>from</code> to the ones specified in
+<code>to</code>. These arguments are sets and may contain
+runes (the same number of runes in each set), and/or rune ranges,
+specified as <code>x-y</code>. Both sets must describe the
+same number of runes to translate from one to another, or the
+<code>to</code> set may have a single rune to translate
+any rune in <code>from</code> to the rune in
+<code>to</code>.
+<p>
+Instead of this usage, the following flags are understood:
+<p>
+<dl>
+    <dt><code>-u</code></dt><dd>
+translates runes to
+        uppercase
+    </dd>
+    <dt><code>-l</code></dt><dd>
+translates runes to
+        lowercase
+    </dd>
+    <dt><code>-t</code></dt><dd>
+translates runes as in a
+        title case.
+    </dd>
+    <dt><code>-d</code></dt><dd>
+deletes runes matching
+        the argument set. If flag <code>-v</code> is given,
+        matching is inverted.
+<p>
+    </dd>
+</dl>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Translate digits to letters starting at A:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; echo A01Z | rtr 0-9 A-x
+    AABZ
+    </pre></code>
+<p>
+</ul><p>
+Make a title
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; echo lord of the rings | rtr -t
+    Lord Of The Rings
+    </pre></code>
+<p>
+</ul><p>
+Replace any digit with an <code>X</code> in the input:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; echo ab012cd | rtr 0-9 X
+    abXXXcd
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/rtr</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

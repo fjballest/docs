@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+<h2>DIR(3): directory entries</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>DESCRIPTION</h2>
+Files are described by directory entries. Each directory entry is a
+self-describing entity made of attribute/value pairs. Most tools in
+the system operate by first finding a stream of directory entries
+provided a set of names as described in
+<a href="//lsub.org/sys/man/3/names.html">names(3)</a> and then
+performing some operation(s) on them.
+<p>
+By convention, there are a few attributes that can be expected to
+exist. All their values are strings. Those that imply a numeric value
+keep the value represented as a string. Those that imply a time value
+correspond to the UNIX nanosecond time.
+<p>
+Attributes <code>name</code>,
+<code>type</code>, <code>mode</code>,
+<code>size</code>, and <code>mtime</code> and
+those starting with an lowercase rune are expected to persist. All
+other attributes starting with uppercase are not expected to persist
+in the file system and are considered as temporary. The tools in the
+<code>clive/cmd</code> package decorate directory entries
+with <code>Upath</code> and
+<code>Rpath</code>, for example, to represent the path as
+given by the user and as relative from the path as given by the user.
+<p>
+Attributes <code>path</code>,
+<code>addr</code>, <code>type</code>, and
+<code>name</code> will not be changed by requests that
+update attributes. The <code>size</code> attribute for
+directories is also ignored during updates. Depening on permissions,
+<code>mode</code>, <code>size</code>,
+<code>uid</code>, <code>gid</code> and
+<code>mtime</code> can be changed; the same goes for other
+attributes added by the user.
+<p>
+Empty attribute names can be used to remove a existing attribute, but
+it is an error to try to remove attributes that cannot be changed by
+the user. Although <code>mode</code>,
+<code>mtime</code>, <code>size</code>,
+<code>Uid</code>, and <code>Gid</code> can be
+changed by the user, they cannot be removed.
+<p>
+This is a list of some conventional attributes:
+<p>
+<dl>
+    <dt><code>name</code></dt><dd>
+holds the (base) name
+        of the file
+    </dd>
+    <dt><code>path</code></dt><dd>
+holds the absolute path
+        of the file as seen by the user in the name-space
+    </dd>
+    <dt><code>addr</code></dt><dd>
+holds the address where
+        to reach the resource.
+    </dd>
+    <dt><code>mtime</code></dt><dd>
+holds the last
+        modification time for the file
+    </dd>
+    <dt><code>type</code></dt><dd>
+holds a
+        <code>d</code> for directories, a
+        <code>-</code> for files, and other values for other file
+        types.
+    </dd>
+    <dt><code>mode</code></dt><dd>
+holds
+        <code>0777</code> or any other number represented in octal
+        for the file permissions.
+    </dd>
+    <dt><code>err</code></dt><dd>
+is present only in
+        entries used to report errors on a file during a find request. Entries
+        with this attribute should be considered as errors, not as actual
+        entries.
+    </dd>
+    <dt><code>uid</code></dt><dd>
+holds the user id (a
+        string)
+    </dd>
+    <dt><code>gid</code></dt><dd>
+holds the group id
+    </dd>
+    <dt><code>wuid</code></dt><dd>
+holds the id of the
+        user who last changed the file
+<p>
+    </dd>
+</dl>
+<a name="sec2"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/3/names.html">names(3)</a>
+    <li><a href="//lsub.org/sys/man/2/zx.html">zx(2)</a>
+<p>
+</ul>
+<a name="sec3"></a><h2>BUG</h2>
+<ul>
+    <li>The <code>err</code> attribute should be
+    <code>Err</code>.
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

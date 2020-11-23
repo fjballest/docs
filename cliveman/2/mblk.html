@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/mblk"
+
+const KiB = 1024 ...
+var Size = 16 * KiB ...
+func Clear(b []byte)
+type Buffer struct { ... }
+type BufferFd struct { ... }
+
+DESCRIPTION
+
+Memory block buffers
+
+CONSTANTS
+
+const (
+	KiB = 1024
+	MiB = KiB * 1024
+	GiB = MiB * 1024
+	TiB = GiB * 1024
+)
+    Popular sizes.
+
+TYPES
+
+type Buffer struct {
+	sync.Mutex
+	// contains filtered or unexported fields
+}
+    A buffer made out of blocks of data, perhaps with holes. Sequential
+    reads/writes are more efficient that random ones. It might be large and
+    sparse, beware that asking for a string or the array of bytes might run out
+    of memory quickly. It can be safely used by multiple processes, there's a
+    lock inside.
+
+func (b *Buffer) Bytes() []byte
+    Return the contents in a single array.
+
+func (b *Buffer) Len() int
+    Return the length in bytes. Ok if b is nil
+
+func (b *Buffer) Open() (*BufferFd, error)
+    Prepare to read from b, sets the read offset to 0. Not really needed if read
+    was never called on the buffer.
+
+func (b *Buffer) ReadAt(p []byte, roff int64) (int, error)
+
+func (b *Buffer) RecvFrom(soff int64, c <-chan []byte) (int64, int, error)
+    Receive the contents starting at off from the given chan. if off < 0 it
+    means the initial size of the buffer. The data is copied. The buffer is not
+    locked during receives Returns the number of bytes, number of messages and
+    the error status. The channel is not closed.
+
+func (b *Buffer) Reset()
+    Drop the content Ok if b is nil
+
+func (b *Buffer) SendTo(soff, scount int64, c chan<- []byte) (int64, int, error)
+    Send the contents of b[off:off+cnt] to the given chan. if count < 0 it means
+    send everything starting at off. The data is copied and the buffer is
+    unlocked during sends Returns the number of bytes, number of messages and
+    the error status. The channel is not closed. Ok if b is nil.
+
+func (b *Buffer) String() string
+    Return the string for the buffer
+
+func (b *Buffer) Truncate(n int64) error
+    Truncate at size n, if n is 0, it's ok if b is nil.
+
+func (b *Buffer) Write(p []byte) (n int, err error)
+    Write more data to the buffer (append). The data is copied.
+
+func (b *Buffer) WriteAt(p []byte, at int64) (n int, err error)
+    Write more data to the buffer at the given offset. The data is not inserted,
+    it is rewritten. Holes are ok.
+
+func (b *Buffer) WriteString(s string) (n int, err error)
+    Write a string into the buffer
+
+func (b *Buffer) WriteTo(w io.Writer) (int64, error)
+    Write the contents of b to w.
+
+type BufferFd struct {
+	*Buffer
+	// contains filtered or unexported fields
+}
+    Like an open fd for a block, with its own offset.
+
+func (b *BufferFd) Close() error
+    Done reading from b (reset read offset to 0) Not really needed if the buffer
+    is not going to be reread
+
+func (b *BufferFd) Read(p []byte) (int, error)
+    Any write into the fd resets the read offset to 0. Ok if b is nil.
+
+func (b *BufferFd) ReadAt(p []byte, roff int64) (n int, err error)
+
+func (b *BufferFd) Seek(uoff int64, whence int) (int64, error)
+
+func (b *BufferFd) Write(p []byte) (int, error)
+
+FUNCTIONS
+
+func Clear(b []byte)
+    Zero out the given buffer
+
+VARIABLES
+
+var (
+	// Default block size for Buffer in bytes
+	// Kept as a var for testing.
+	Size = 16 * KiB
+
+	// Max number of cached buffers.
+	// Change only at init time.
+	Count = 128
+
+	Debug bool
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

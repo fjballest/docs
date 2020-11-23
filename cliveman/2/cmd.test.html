@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/cmd/test"
+
+func Cmd(t *testing.T, cmd string) (cout, cerr string, fails bool)
+func Cmds(t *testing.T, runs []Run)
+func InstallCmd(t *testing.T)
+type Run struct { ... }
+
+DESCRIPTION
+
+Help for testing commands
+
+CONSTANTS
+
+TYPES
+
+type Run struct {
+	Line     string
+	Out, Err string
+	Fails    bool
+	Ok       bool // if set, out, err and fails are ignored
+}
+
+FUNCTIONS
+
+func Cmd(t *testing.T, cmd string) (cout, cerr string, fails bool)
+    Run cmd and make sure that the out and err streams are as given. The command
+    runs at /tmp/cmdtest where zx/fstest.MkTree has created our usual file
+    testing tree, in case the command needs input. It is run using "sh -c 'cd
+    /tmp/cmdtest; <cmd>' ". go install is run before running the command.
+
+func Cmds(t *testing.T, runs []Run)
+
+func InstallCmd(t *testing.T)
+    Installs the command, for use before running the tests.
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

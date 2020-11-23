@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+<h2>NAMES(3): file names and predicates</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>SYNOPSYS</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    path,predicate
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+Many commands accept file names as arguments. A path name is
+<code>/</code> to refer to the root of the name space
+followed by one or more components (naming directories, except the
+last which might name a file). Path names not starting with
+<code>/</code> are understood as suffixes of the current
+directory (<code>.</code>). The name
+<code>..</code> refers to the parent of the previous path
+(or the current directory if none). The parent of
+<code>/</code> is <code>/</code> itself.
+<p>
+In most cases, file names given to commands are not just
+<em>path names</em>. Usually, they are a combination of a
+path name and a predicate separated by a comma
+(<code>,</code>) character.
+<p>
+This combination is understood as a spec to search for and find
+matching files; commands rely on the [clive/zx(2)]
+<code>Finder</code> interface to issue the find request,
+and most of the times, they do so using the [clive/cmd(2)] pakcage.
+<p>
+The file search always starts at the path name given before the comma,
+and proceeds within the subtree rooted there. All files matching the
+predicate are selected and processed by the command considered.
+<p>
+An empty predicate is considered <code>true</code>, which
+means it selects all files within the subtree. For example,
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf .,
+    </pre></code>
+</ul><p>
+lists all files under the current directory, including also all
+directories and the current directory.
+<p>
+If the predicate is not supplied (i.e., there is no comma
+&#34;<code>,</code>&#34; character), then only the name supplied
+is selected. For example
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf . | ch 0775
+    </pre></code>
+</ul><p>
+changes the mode of the current directory, but
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf ., | ch 0775
+    </pre></code>
+</ul><p>
+changes the mode for all files rooted at <code>.</code>,
+including <code>.</code>.
+<p>
+An empty name is understood as &#34;<code>.</code>&#34;. Thus,
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf , | ch 0775
+    </pre></code>
+</ul><p>
+is exactly the same command.
+<p>
+A predicate is a boolean expression operating on directory entry
+attributes written in textual format. Besides the directory attribute
+names, the special name <code>depth</code> can be used to
+refer to the file depth in the tree rooted at the path used in the
+query. See <a href="//lsub.org/sys/man/3/dir.html">dir(3)</a> for a
+description of directory attributes.
+<p>
+The following expressions can be used as predicates:
+<p>
+<dl>
+    <dt><code>true</code></dt><dd>
+always evaluates to
+        true
+    </dd>
+    <dt><code>false</code></dt><dd>
+always evaluates to
+        false
+    </dd>
+    <dt><code>name=value</code></dt><dd>
+compares for
+        equality the value of the attribute <code>name</code> with
+        <code>value</code> as a string.
+    </dd>
+    <dt><code>=value</code></dt><dd>
+the same thing using
+        the <code>path</code> attribute if
+        <code>value</code> starts with <code>/</code>,
+        and the <code>name</code> attribute otherwise.
+    </dd>
+    <dt><code>d</code></dt><dd>
+is understood as
+        <code>type=d</code>, and the same goes for
+        <code>-</code> and <code>c</code>.
+    </dd>
+    <dt><code>name==value</code></dt><dd>
+compares the
+        value of the attribute <code>name</code> with
+        <code>value</code> as a number.
+    </dd>
+    <dt><code>name!=value</code></dt><dd>
+compares for
+        inequality the value of the attribute <code>name</code>
+        with <code>value</code> as a string. Prunes the search if
+        the attribute is <code>name</code> or
+        <code>path</code> and matches the value.
+    </dd>
+    <dt><code>name~exp</code></dt><dd>
+matches
+        <code>exp</code> against the value of the attribute
+        <code>name</code> using globbing.
+    </dd>
+    <dt><code>~exp</code></dt><dd>
+the same thing using
+        the <code>path</code> attribute if
+        <code>value</code> contains <code>/</code>,
+        and the <code>name</code> attribute otherwise.
+    </dd>
+    <dt><code>name~~regexp</code></dt><dd>
+matches
+        <code>regexp</code> against the value of the attribute
+        <code>name</code>. Prunes the search if the attribute is
+        <code>name</code> or <code>path</code> and
+        matches the value.
+    </dd>
+    <dt><code>~~regexp</code></dt><dd>
+the same thing
+        using the <code>path</code> attribute if
+        <code>value</code> starts with <code>/</code>,
+        and the <code>name</code> attribute otherwise.
+    </dd>
+    <dt><code>name&gt;value</code></dt><dd>
+compares (as a
+        number) for greater-than the value of the attribute
+        <code>name</code> with <code>value</code>.
+    </dd>
+    <dt><code>name&gt;=value</code></dt><dd>
+compares (as a
+        number) for greater-or-equal-to the value of the attribute
+        <code>name</code> with <code>value</code>.
+    </dd>
+    <dt><code>name&lt;value</code></dt><dd>
+compares (as a
+        number) for less-than the value of the attribute
+        <code>name</code> with <code>value</code>.
+    </dd>
+    <dt><code>name&lt;=value</code></dt><dd>
+compares (as a
+        number) for less-or-equal-to the value of the attribute
+        <code>name</code> with <code>value</code>.
+    </dd>
+    <dt><em>number</em></dt><dd>
+is understood as
+        <code>depth&lt;=</code><em>number</em>
+    </dd>
+    <dt><code>prune</code></dt><dd>
+fails and prunes the
+        search when evaluated (child files are ignored).
+<p>
+    </dd>
+</dl>
+Also, if <code>p1</code> and <code>p2</code>
+are predicates, the following expressions can be used:
+<p>
+<dl>
+    <dt><code>p1&amp;p2</code></dt><dd>
+true if both
+        predicates are true. If the first is false the second is not
+        evaluated.
+    </dd>
+    <dt><code>p1|p2</code></dt><dd>
+true if one of the
+        predicates is true. If the first is true the second is not evaluated.
+    </dd>
+    <dt><code>!p1</code></dt><dd>
+true if the predicate is
+        false. If <code>p1</code> is comparing for equality or
+        matching the <code>name</code> or
+        <code>path</code> attributes and
+        <code>p1</code> is true, the search is pruned (and the
+        predicate is false).
+    </dd>
+    <dt><code>(p1)</code></dt><dd>
+exactly like
+        <code>p1</code> (but useful to change the evaluation
+        order).
+<p>
+    </dd>
+</dl>
+Some operators have other names (as aliases) as described now.
+Although the aliases are preferred over the original names to save
+quotes in the shell, the original names can always be typed easily in
+most keyboards.
+<ul>
+    <li>The operator &#34;<code>,</code>&#34; is an alias of
+    &#34;<code>&amp;</code>&#34;.
+    <li>The operator &#34;<code>:</code>&#34; is an alias of
+    &#34;<code> | </code>&#34;
+    <li>The operator &#34;<code>≈</code>&#34; is an alias of
+    &#34;<code>~~</code>&#34;.
+    <li>The operator &#34;<code>≠</code>&#34; is an alias of
+    &#34;<code>!=</code>&#34;.
+    <li>The operator &#34;<code>≡</code>&#34; is an alias of
+    &#34;<code>==</code>&#34;.
+    <li>The operator &#34;<code>≤</code>&#34; is an alias of
+    &#34;<code>&lt;=</code>&#34;.
+    <li>The operator &#34;<code>≥</code>&#34; is an alias of
+    &#34;<code>&gt;=</code>&#34;.
+<p>
+</ul>
+The <em>not</em> operation has the higher precedence, then
+<em>and</em> and then <em>or</em>. Evaluation
+is left to right.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Similar to <code>ls /*/*/foo</code> in UNIX:
+<p><ul style="list-style:none;">
+    <code><pre>
+    l /,path~/*/*/foo
+    </pre></code>
+<p>
+</ul><p>
+Similar to <code>find . -name &#39;*.go&#39;</code> in UNIX:
+<p><ul style="list-style:none;">
+    <code><pre>
+    l ,~*.go
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/intro.html">intro(1)</a>
+    <li><a href="//lsub.org/sys/man/3/dir.html">dir(3)</a>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

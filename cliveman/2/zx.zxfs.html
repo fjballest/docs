@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/zx/zxfs"
+
+var Verb bool ...
+func MountServer(t zx.Getter, mntdir string) error
+func New(fs zx.Getter) (*FS, error)
+type Dir struct { ... }
+type FS struct { ... }
+    func New(fs zx.Getter) (*FS, error)
+type Fd struct { ... }
+
+DESCRIPTION
+
+FUSE server for zx.
+
+In general, fuse requests are sent directly as zx requests.
+
+CONSTANTS
+
+TYPES
+
+type Dir struct {
+	fs.NodeRef
+
+	sync.Mutex
+	// contains filtered or unexported fields
+}
+    Implementation of fuse Node interface To match unix semantics we issue many
+    more zx calls than needed so that each call is made when unix expects it.
+
+func (zd *Dir) Attr() (*fuse.Attr, fuse.Error)
+    return the dir entry for a node
+
+func (zd *Dir) Create(elem string, flg fuse.OpenFlags, mode os.FileMode, intr fs.Intr) (fs.Node, fs.Handle, fuse.Error)
+
+func (zd *Dir) Lookup(name string, intr fs.Intr) (fs.Node, fuse.Error)
+    lookup a name in a dir
+
+func (zd *Dir) Mkdir(elem string, mode os.FileMode, intr fs.Intr) (fs.Node, fuse.Error)
+
+func (zd *Dir) Open(flg fuse.OpenFlags, _ fs.Intr) (fs.Handle, fuse.Error)
+    open a dir/file
+
+func (zd *Dir) PutNode()
+
+func (zd *Dir) Remove(elem string, _ fs.Intr) fuse.Error
+    Remove (EPERM otherwise)
+
+func (szd *Dir) Rename(oelem, nelem string, tond fs.Node, _ fs.Intr) fuse.Error
+
+func (zd *Dir) SetAttr(r *fuse.SetattrRequest, _ fs.Intr) fuse.Error
+    Set attributes (EPERM otherwise).
+
+func (zd Dir) String() string
+
+func (zd *Dir) Wxattr(name string, v []byte) fuse.Error
+    write extended attribute
+
+func (zd *Dir) Xattr(name string) ([]byte, fuse.Error)
+    read extended attribute.
+
+func (zd *Dir) Xattrs() []string
+    list extended attributes.
+
+type FS struct {
+	sync.RWMutex
+	// contains filtered or unexported fields
+}
+    Implementation of fuse FS for a zx.Tree
+
+    Keeps an in-memory cache of directory entries to track generated inode
+    numbers for each path/entry.
+
+func New(fs zx.Getter) (*FS, error)
+    Create a fuse server for fs.
+
+func (zd *FS) DumpTo(w io.Writer, lvl int)
+    Dump a debug representation of the state of z into w, with lvl indent.
+
+func (z *FS) Root() (fs.Node, fuse.Error)
+    return the root node
+
+func (z *FS) String() string
+
+type Fd struct {
+	// everything kept at and locked by Dir
+	*Dir
+}
+    Implementation of fuse handle interface.
+
+func (fd *Fd) Close(_ fs.Intr) fuse.Error
+
+func (fd *Fd) IsCtl() bool
+
+func (fd *Fd) PutHandle()
+
+func (fd *Fd) Read(off int64, sz int, i fs.Intr) ([]byte, fuse.Error)
+
+func (fd *Fd) ReadDir(intr fs.Intr) ([]fuse.Dirent, fuse.Error)
+
+func (fd *Fd) String() string
+
+func (fd *Fd) Write(data []byte, off int64, _ fs.Intr) (int, fuse.Error)
+    TODO: when we start a write, keep the chan open after the write, receiving
+    async errors from previous writes, and check the write offset. Any other
+    operation including moves and lookups involving this file or the parent must
+    close the write chan and await until the put completes. If there's no futher
+    operation in, say, 1s, the put must be closed and completed. This is good to
+    coallesce multiple writes into a single put. Speed seems to be ok
+
+FUNCTIONS
+
+func MountServer(t zx.Getter, mntdir string) error
+    Serve the tree for FUSE and mount it at the given path. Returns when
+    unmounted.
+
+VARIABLES
+
+var (
+	Verb  bool // print errors to stderr
+	Debug bool
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="/ls/class.css" />
+	<title>
+		Laboratorio de Sistemas
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="/ls/index.html">
+		<img src="/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/sys/man">User's manual</a>. <a href="/sys/man/1">Section 1</a></b>
+<pre>
+CHZ(1): CHANGE ZX ATTRIBUTES
+
+USAGE
+
+    usage: chz [-D] attr value {file}
+    	-D: debug
+    	attr uids means all of Uid, Gid, Wuid
+    	attr mode can use +rwx or -rwx as value; name optional here
+    
+
+DESCRIPTION
+
+chz changes zx attributes for files on a local file system. It is most useful on
+UNIX to change the attributes and uids as used by zx.
+
+Only one attribute is changed at a time, however, the attribute uids can be used
+to change all of Uid, Gid, and Wuid. The attribute mode admits as value the form
++rwx and the form -rwx to add or remove one of those.
+
+EXAMPLE
+
+Add read permission to all files within the current directory.
+    ; chz mode +r ,
+    
+
+SOURCE
+
+  * /zx/sys/src/clive/cmd/chz
+
+</pre>
+<p><b><a href="/sys/man">User's manual</a>. <a href="/sys/man/1">Section 1</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2013
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

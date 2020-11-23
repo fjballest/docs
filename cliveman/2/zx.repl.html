@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/zx/repl"
+
+const Nowhere Where = iota ...
+func LoadDB(fname string) (*DB, error)
+func NewDB(name, path string, excl ...string) (*DB, error)
+func ScanNewDB(name, path string, excl ...string) (*DB, error)
+func Load(fname string) (*Tree, error)
+func New(name, path, rpath string, excl ...string) (*Tree, error)
+type Chg struct { ... }
+type DB struct { ... }
+    func LoadDB(fname string) (*DB, error)
+    func NewDB(name, path string, excl ...string) (*DB, error)
+    func ScanNewDB(name, path string, excl ...string) (*DB, error)
+type File struct { ... }
+type Tree struct { ... }
+    func Load(fname string) (*Tree, error)
+    func New(name, path, rpath string, excl ...string) (*Tree, error)
+type Where int
+
+DESCRIPTION
+
+Tools to synchronize zx file trees
+
+CONSTANTS
+
+TYPES
+
+type Chg struct {
+	zx.Chg
+	At Where
+}
+    A zx file change made to a replicated file
+
+func (c Chg) String() string
+
+type DB struct {
+	Name string   // of the repl
+	Addr string   // addr!path or path
+	Excl []string // exclude exprs.
+
+	Fs zx.Fs // keeping the db files
+	dbg.Flag
+	Root *File // root
+	// contains filtered or unexported fields
+}
+    A DB for a fs tree
+
+func LoadDB(fname string) (*DB, error)
+    Load a DB from a (unix) file. The DB is not dialed and Dial() must be called
+    before making a scan.
+
+func NewDB(name, path string, excl ...string) (*DB, error)
+    Create a DB for the given tree with the given name. if path contains '!',
+    it's assumed to be a remote tree address and the db operates on a remote ZX
+    fs In this case, the last component of the address must be a path. The DB is
+    not scanned, unlike in ScanNewDB
+
+func ScanNewDB(name, path string, excl ...string) (*DB, error)
+    Like NewDB() and then Scan()
+
+func (db *DB) Add(d zx.Dir) error
+    add or update the entry for a dir into db. If d has "rm" or "err" set, then
+    the file is flagged as such and children are discarded.
+
+func (ndb *DB) ChangesFrom(db *DB) <-chan Chg
+    Compare and compute changes for db to make it like ndb. Removes are noted in
+    ndb using the mtime of the dir.
+
+func (db *DB) Close() error
+
+func (db *DB) Dial() error
+    For DBs loaded from a file, dial the DB fs.
+
+func (db *DB) DumpTo(w io.Writer)
+    Debug dump
+
+func (db *DB) Files() <-chan *File
+    Enumerate all files in db. Removed files known to be removed have Dir["rm"]
+    set to "y" and are also reported.
+
+func (db *DB) MoveTo(path string) error
+    Move the path for the root to a new place.
+
+func (db *DB) Save(fname string) error
+    Save a db to a local file
+
+func (db *DB) Scan() error
+    Scan the underlying tree and re-build the metadata db. Beware that this
+    drops "removed file" entries. Dials the tree if necessary. Only the first
+    error is reported.
+
+func (db *DB) String() string
+
+func (db *DB) Walk(elems ...string) (*File, error)
+    Walk to the given path
+
+type File struct {
+	D     zx.Dir  // for the file
+	Child []*File // for directories
+}
+    a File in the metadata DB
+
+func (f *File) String() string
+
+func (f *File) Walk1(name string) (*File, error)
+
+type Tree struct {
+	Ldb, Rdb *DB
+	*dbg.Flag
+	// contains filtered or unexported fields
+}
+    A replicated tree
+
+func Load(fname string) (*Tree, error)
+    Load a replica configuration from the given (unix) files. Its DBs are dialed
+    and the tree is ready to pull/push/sync. Files are named <fname>.ldb and
+    <fname>.rdb
+
+func New(name, path, rpath string, excl ...string) (*Tree, error)
+    Create a new replicated tree with the given name and replica paths. Both
+    replicas are assumed to be already synced, so that only new changes made
+    will be propagated. If that's not the case, you can always use Tree.PullAll
+    or PushAll to make one synced wrt the other before further
+    pulls/pushes/syncs. If a path contains '!', it's assumed to be a remote tree
+    address and the db operates on a remote ZX fs In this case, the last
+    component of the address must be a path
+
+func (t *Tree) AllPullChanges() (<-chan Chg, error)
+    Report all replica differences as changes that may be pulled
+
+func (t *Tree) AllPushChanges() (<-chan Chg, error)
+    Report all replica differences as changes that may be pushed
+
+func (t *Tree) Apply(c Chg) error
+    Apply a single change and update the dbs accordingly. If the change has
+    errors noted in it, it's ignored.
+
+func (t *Tree) ApplyAll(cc <-chan Chg, from Where, appliedc chan<- Chg) error
+    Apply a series of changes from local/remote/both replicas to the other and
+    update the dbs accordingly. If a change has errors noted in it, it's
+    ignored.
+
+func (t *Tree) BlindPull(cc chan<- Chg) error
+    Pull changes and apply them, w/o paying attention to any local change made.
+    If cc is not nil, report changes applied there. Failed changes have
+    dir["err"] set to the error status.
+
+func (t *Tree) BlindPush(cc chan<- Chg) error
+    Push changes and apply them, w/o paying attention to any remote change made.
+    If cc is not nil, report changes applied there. Failed changes have
+    dir["err"] set to the error status
+
+func (t *Tree) Changes() (<-chan Chg, error)
+    Report pull and push changes that must be made to sync. If there's a
+    conflict, the latest change wins.
+
+func (t *Tree) Close() error
+
+func (t *Tree) Pull(cc chan<- Chg) error
+    Sync changes and apply just pulls. If cc is not nil, report changes applied
+    there. Failed changes have dir["err"] set to the error status.
+
+func (t *Tree) PullAll(cc chan<- Chg) error
+    Pull all changes (not just new ones) to make the local replica become like
+    the remote one. If cc is not nil, report changes applied there. Failed
+    changes have dir["err"] set to the error status.
+
+func (t *Tree) PullChanges() (<-chan Chg, error)
+    Report remote changes that must be applied locally to sync
+
+func (t *Tree) Push(cc chan<- Chg) error
+    Sync changes and apply just pushes. If cc is not nil, report changes applied
+    there. Failed changes have dir["err"] set to the error status
+
+func (t *Tree) PushAll(cc chan<- Chg) error
+    Push all changes (not just new ones) to make the remote replica become like
+    the local one. If cc is not nil, report changes applied there. Failed
+    changes have dir["err"] set to the error status.
+
+func (t *Tree) PushChanges() (<-chan Chg, error)
+    Report local changes that must be applied to the remote to sync
+
+func (t *Tree) Save(fname string) error
+    Save a replica configuration to the given (unix) files. Files are named
+    <fname>.ldb and <fname>.rdb
+
+func (t *Tree) Sync(cc chan<- Chg) error
+    Sync changes and apply them. If there's a create/remote, it wins wrt inner
+    files changed at the peer. If there's a conflict, the newest change wins. If
+    cc is not nil, report changes applied there. Failed changes have dir["err"]
+    set to the error status
+
+type Where int
+    Where a change was found
+
+const (
+	Nowhere Where = iota
+	Local
+	Remote
+	Both
+)
+
+func (w Where) String() string
+
+FUNCTIONS
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

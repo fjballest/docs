@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>REPL(1): replicate zx file trees</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: repl [-12DVnpqs] [-m name] cfg [laddr raddr]
+        -1: pull only
+        -2: push only
+        -D: debug
+        -V: verbose debug
+        -m name: make the named repl and exit
+        -n: dry run
+        -p: print the replica state and exit
+        -q: quiet, do not print files pulled/pushed
+        -s: sleep and sync everyday at 3am
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Repl</em> imports the two file tree addresses given
+and makes sure they become a replicated tree by synchronizing them.
+<p>
+The last two arguments identify a local and a remote tree and must be
+given only when flag <code>-m</code> is used to create a
+new replica. If the address is a file existing in the local file tree,
+it is used as a local file tree. If the address is a network address,
+the remote file tree is imported.
+<p>
+The <em>cfg</em> argument refers to the name of a
+configuration file recording the replica name and both addresses. Two
+other files are created using <em>cfg</em> as a prefix to
+record metadata for both trees.
+<p>
+Synchronization happens by updating a tree of metadata to record local
+and remote files, including removals, and then comparing both metadata
+trees to pull or push everything that differs between them. Times,
+including removal times, are used to determine if a change should be
+pulled (sent to the first tree) or pushes (sent to the second tree).
+If there is no known time for a removal, zero is used.
+<p>
+The algorithm implies that there are no conflicts, by design. If you
+are not brave enough for this, use
+<a href="http://lsub.org/sys/man/1/zxdump.html">zxdump(1)</a> to
+make a dump of the tree before synchronizing it to recover any data
+lost.
+<p>
+Files that had errors are ignored during synchronization (even if the
+error happen at only one of the trees). Files with names starting with
+a dot are ignored and not synchronized.
+<p>
+As a result, creating an empty directory and using it as a replica of
+an existing tree will populate the empty directory with a copy of the
+remote tree on the first synchronization.
+<p>
+If a tree has been replicated by hand, it can be used to setup a
+replica. The first time it is syncrhonized, files present at only one
+of the trees will be copied to the other.
+<p>
+If the configuration file name given does not exist and does not
+contain slashes, it refers to a file name at
+<code>$HOME/lib</code>.
+<p>
+Additions and removals reported by flag <code>-v</code>
+always refer to the entire subtree rooted at the printed path.
+<p>
+<a name="sec3"></a><h2>EXAMPLE</h2>
+Create a new replica (but do not replicate anything yet):
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; mkdir /a/local/dir
+    ; repl -m testing testrepl /a/local/dir tcp!server!zx
+    </pre></code>
+<p>
+</ul><p>
+Check out changes in that replica
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; repl -n testrepl
+    ...
+    </pre></code>
+<p>
+</ul><p>
+Synchronize it
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; repl testrepl
+    ...
+    </pre></code>
+<p>
+</ul><p>
+Recreate the replica if we made a mess and synchronize the trees
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; repl -m testing testrepl /a/local/dir tcp!server!zx
+    ; repl testrepl
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/app/repl</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

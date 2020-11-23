@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/2">Section 2</a>.</b>
+<hr>
+<p>
+
+&lt;!DOCTYPE html&gt; &lt;html&gt;
+<p>
+&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34;&gt;
+&lt;head&gt;
+<p><ul style="list-style:none;">
+    &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;//lsub.org/ls/class.css&#34;
+    /&gt; &lt;title&gt;
+    <p><ul style="list-style:none;">
+        Clive User&#39;s Manual, 2nd ed.
+    </ul><p>
+    &lt;/title&gt;
+</ul><p>
+&lt;/head&gt; &lt;body&gt; &lt;div id=&#34;container&#34; class=&#34;Container&#34;&gt;
+<p>
+<p><ul style="list-style:none;">
+    &lt;div id=&#34;header&#34; class=&#34;Header&#34;&gt;
+    <p><ul style="list-style:none;">
+        &lt;a href=&#34;//lsub.org/ls/index.html&#34;&gt; &lt;img
+        src=&#34;//lsub.org/ls/figs/lsub-peq.png&#34; height=&#34;50px&#34; width=&#34;50px&#34;&gt; &lt;/a&gt;
+        &lt;div style=&#34;position: absolute; top: 25px; left: 70px&#34;&gt;
+        <p><ul style="list-style:none;">
+            Laboratorio de Sistemas // Systems Lab
+        </ul><p>
+        &lt;/div&gt;
+    </ul><p>
+    &lt;/div&gt;
+<p>
+    &lt;div id=&#34;menu&#34; class=&#34;Menu&#34;&gt;
+    <p><ul style="list-style:none;">
+        &lt;a class=&#34;MenuText&#34; href=&#34;//lsub.org/ls/index.html&#34;&gt;Welcome&lt;/a&gt;&lt;br&gt; &lt;a
+        class=&#34;MenuText&#34; href=&#34;//lsub.org/ls/research.html&#34;&gt;Research &amp;amp;
+        innovation&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;MenuText&#34;
+        href=&#34;//lsub.org/ls/training.html&#34;&gt;Courses &amp;amp; training&lt;/a&gt;&lt;br&gt; &lt;a
+        class=&#34;MenuText&#34; href=&#34;//lsub.org/ls/software.html&#34;&gt;Software &amp;amp;
+        consulting&lt;/a&gt;&lt;br&gt; &lt;a class=&#34;MenuText&#34;
+        href=&#34;//lsub.org/ls/projects.html&#34;&gt;Systems we made&lt;/a&gt; &lt;a
+        class=&#34;MenuText&#34; href=&#34;//lsub.org/ls/contact.html&#34;&gt;Contact&lt;/a&gt;
+    </ul><p>
+    &lt;/div&gt;
+<p>
+    &lt;div id=&#34;content&#34; class=&#34;Content&#34;&gt;
+</ul><p>
+&lt;b&gt;&lt;a href=&#34;//lsub.org/sys/man&#34;&gt;User&#39;s manual&lt;/a&gt;.&lt;/b&gt; &lt;b&gt;&lt;a
+href=&#34;//lsub.org/sys/man/-o&#34;&gt;Section -o&lt;/a&gt;.&lt;/b&gt; &lt;h2&gt;INTRO(2):
+introduction to clive packages&lt;/h2&gt; &lt;hr&gt; &lt;p&gt;
+<p>
+&lt;a name=&#34;sec1&#34;&gt;&lt;/a&gt;&lt;h2&gt;SYNOPSYS&lt;/h2&gt; &lt;p&gt;&lt;ul style=&#34;list-style:none;&#34;&gt;
+&lt;code&gt;&lt;pre&gt; import ( &amp;#34;clive/cmd&amp;#34; ... ) &lt;/pre&gt;&lt;/code&gt; &lt;p&gt;
+&lt;code&gt;&lt;pre&gt; ; Go install clive/... &lt;/pre&gt;&lt;/code&gt; &lt;p&gt; &lt;/ul&gt;&lt;p&gt; &lt;a
+name=&#34;sec2&#34;&gt;&lt;/a&gt;&lt;h2&gt;DESCRIPTION&lt;/h2&gt; Clive commands are written in the
+Go programming language. &lt;p&gt; External packages are not to be imported
+directly from their source repositories. Instead, they should be
+installed under the &lt;code&gt;clive/x/...&lt;/code&gt; path and then imported
+from there (to survive to incompatible upgrades made by their
+authors). &lt;p&gt; The compiler requires modifications as made to the Lsub
+fork of the standard Go compiler. &lt;p&gt; In particular, there is a
+&lt;code&gt;close&lt;/code&gt; operation for channels that accepts an error
+indication and can be used both by the sender and the receiver. A new
+&lt;code&gt;cerror&lt;/code&gt; operation retrieves the error causing the close of
+a channel. The send operation can be used as a value to see if the
+send could proceed or the channel was closed. For example: &lt;p&gt;&lt;ul
+style=&#34;list-style:none;&#34;&gt; &lt;code&gt;&lt;pre&gt; c := make(chan []byte, 0) for i
+:= 0; i &amp;lt; 10; i++ { ok := c &amp;lt;-
+[]byte(fmt.Sprintf(&amp;#34;&amp;lt;%d&amp;gt;&amp;#34;, i)) if !ok {
+dbg.Fatal(cerror(c)) } } close(c, &amp;#34;oops&amp;#34;) &lt;/pre&gt;&lt;/code&gt; &lt;p&gt;
+&lt;/ul&gt;&lt;p&gt; The runtime provides support for application contexts, which
+is also missing in the standard (non-lsub) Go. &lt;p&gt; Most system I/O
+happens through channels packaged in &lt;code&gt;nchan.Conn&lt;/code&gt;
+structures. These bridge external pipes and connections to channels.
+&lt;p&gt; Most application I/O happens through &lt;code&gt;interface{}&lt;/code&gt;
+channels, usually by calling &lt;code&gt;clive/cmd&lt;/code&gt; functions. See &lt;a
+href=&#34;//lsub.org/sys/man/1/intro.html&#34;&gt;intro(1)&lt;/a&gt; for a description
+of the environment variables used when compilying, and for conventions
+regarding I/O. &lt;p&gt; The &lt;a
+href=&#34;//lsub.org/sys/man/1/Go.html&#34;&gt;Go(1)&lt;/a&gt; command can be used to
+adjust them and run the standard &lt;code&gt;go&lt;/code&gt; command to compile
+and operate on system source. &lt;p&gt; But for a few pages (including this
+one), the manual pages in this section are generated using
+&lt;code&gt;godoc&lt;/code&gt; from the system source. &lt;p&gt; &lt;a
+name=&#34;sec3&#34;&gt;&lt;/a&gt;&lt;h2&gt;EXAMPLES&lt;/h2&gt; To learn how to use the
+&lt;code&gt;clive/ch&lt;/code&gt; package: &lt;p&gt;&lt;ul style=&#34;list-style:none;&#34;&gt;
+&lt;code&gt;&lt;pre&gt; ; doc clive/ch &lt;/pre&gt;&lt;/code&gt; &lt;/ul&gt;&lt;p&gt; or &lt;p&gt;&lt;ul
+style=&#34;list-style:none;&#34;&gt; &lt;code&gt;&lt;pre&gt; ; doc 2 clive/ch &lt;/pre&gt;&lt;/code&gt;
+&lt;p&gt; &lt;/ul&gt;&lt;p&gt; To compile the entire system: &lt;p&gt;&lt;ul
+style=&#34;list-style:none;&#34;&gt; &lt;code&gt;&lt;pre&gt; ; cd /zx/sys/src/clive ; Go
+install ./... &lt;/pre&gt;&lt;/code&gt; &lt;p&gt; &lt;/ul&gt;&lt;p&gt; The &lt;a
+href=&#34;//lsub.org/sys/man/1/eco.html&#34;&gt;eco(1)&lt;/a&gt; command source is a
+good example for a simple Clive command. &lt;p&gt; &lt;a
+name=&#34;sec4&#34;&gt;&lt;/a&gt;&lt;h2&gt;SOURCE&lt;/h2&gt; &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/zx/sys/src/clive&lt;/code&gt; &lt;li&gt;&lt;code&gt;/zx/bin/rc&lt;/code&gt; &lt;p&gt;
+&lt;/ul&gt; &lt;a name=&#34;sec5&#34;&gt;&lt;/a&gt;&lt;h2&gt;BUGS&lt;/h2&gt; Yes. It&amp;#39;s a research
+system. Nevertheless, we are using it as our computing environment for
+most daily work. &lt;p&gt; &lt;p&gt; &lt;hr&gt;&lt;p&gt;
+<p>
+&lt;b&gt;&lt;a href=&#34;//lsub.org/sys/man&#34;&gt;User&#39;s manual&lt;/a&gt;.&lt;/b&gt; &lt;b&gt;&lt;a
+href=&#34;//lsub.org/sys/man/-o&#34;&gt;Section -o&lt;/a&gt;.&lt;/b&gt;
+<p>
+<p><ul style="list-style:none;">
+    &lt;/div&gt;
+</ul><p>
+&lt;/div&gt;
+<p>
+&lt;div id=&#34;footer&#34; class=&#34;Footer&#34;&gt;
+<p><ul style="list-style:none;">
+    Copyright © LSUB 2014-2016 &lt;br&gt;&lt;br&gt; &lt;a
+    href=&#34;https://twitter.com/lsub<em>org&#34;&gt;&lt;img
+    src=&#34;//lsub.org/ls/figs/twitter.png&#34; height=&#34;25px&#34; width=&#34;25px&#34;&gt; &lt;/a&gt;
+</ul><p>
+&lt;/div&gt;
+<p>
+&lt;/body&gt; &lt;/html&gt;
+<p>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/2">Section 2</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

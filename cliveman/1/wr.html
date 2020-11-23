@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>WR(1): document writer</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: wr [-DIPSehlmprsu] [-b dir] [-c sect] [-o file] [-w wid] {file}
+        -D: debug
+        -I: debug indents
+        -P: debug paragraphs
+        -S: debug split
+        -b dir: change the default refer bib dir
+        -c sect: with -h, generate a man page in the given section
+        -e: use spanish for labels
+        -h: generate html
+        -l: generate latex
+        -m: generate man page
+        -o file: generate a single output file
+        -p: generate pdf
+        -r: generate roff
+        -s: generate ps
+        -u: do not generate output for unix
+        -w wid: text width for text formats
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Wr</em> is a document writer that knows how to convert
+a simple format to one of raw text (for manual pages), troff source,
+LaTeX source, HTML, PostScript or PDF. It knows how to handle figures
+(including [cite pic(1)] source) and tables.
+<p>
+The output file(s) are generated in the directory where the command is
+run, unless flag <code>-o</code> is used to indicate an
+output file. In this case, output file(s) are generated in the
+directory of the indicated output file, and this may include extra
+files for figures using the output file name as a prefix.
+<p>
+The input file may have any name, but the suggested extension is
+<code>.w</code> for all <code>wr</code> input
+files.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Generate text output for a file:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; wr file
+    </pre></code>
+</ul><p>
+Generate output for many of them
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf -g , | wr
+    </pre></code>
+<p>
+</ul><p>
+Generate html and place the output at another directory (including any
+auxiliary files for figures):
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; wr -h -o /dest/dir/out.html file
+    </pre></code>
+<p>
+</ul><p>
+Besides the file mentioned in the see-also section, all manual pages
+are also examples of the input format.
+<p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/wr</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/wr/example</code> for an
+    up to date example source file describing the input language.
+    <li><a href="http://lsub.org/export/clivewr.pdf">The Wr document writer</a>.
+     Francisco Ballesteros, 2014, for an out of date but more readable
+    description of the input language.
+<p>
+</ul>
+<a name="sec6"></a><h2>BUGS</h2>
+<em>Wr</em> does not generate PDF nor images on its own.
+For figures, <em>wr</em> relies on
+<em>convert</em> (from imagemagick) and a few scripts
+contained in both ghostscript and TeX to generate and convert EPS
+files. If there are errors while compiling a document with images, it
+might be that some of these packages are missing. Installing
+<ul>
+    <li>Ghostscript-9.18.pkg, and
+    <li>ImageMagick-6.9.1-0.pkg
+</ul>
+seem to suffice for OSX hosts, and you should add
+<ul>
+    <li>mactex-20150613.pkg
+</ul>
+if you want LaTeX with <em>pdflatex</em> to compile
+generated TeX.
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

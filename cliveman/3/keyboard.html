@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+<h2>KEYBOARD(3): keyboard sequences</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>SYNOPSYS</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    Alt key...
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+Text input as implemented by Ink permit composition of keys. To
+compose a key, type <em>Alt</em> and then one or more
+keys. If the sequence of keys is a prefix of a valid sequence, the
+keys will not be shown, and will be collected. Once a valid sequence
+has been typed, the corresponding key will be inserted instead of the
+full sequence. If the sequence is not valid, the original keys typed
+will be shown, and composition will finish.
+<p>
+The composition sequences are those of Plan 9 from Bell Labs, but for
+typing of unicode code points directly, which are usually provided
+using the underlying terminal OS keyboard facilities. From the Plan 9
+man page...
+<p>
+<ul>
+    <li>A repeated symbol gives a variant of that symbol, e.g., ??
+    yields ¿.
+    <li>ASCII digraphs for mathematical operators give the corresponding
+    operator, e.g., &lt;= yields ≤.
+    <li>Two letters give the corresponding ligature, e.g., AE yields Æ.
+    <li>Mathematical and other symbols are given by abbreviations for
+    their names, e.g., pg yields ¶.
+    <li>Chess pieces are given by a w or b followed by a letter for the
+    piece (k for king, q for queen, r for rook, n for knight, b for
+    bishop, or p for pawn), e.g., wk for a white king.
+    <li>Greek letters are given by an asterisk followed by a
+    corresponding latin letter, e.g., <code>*</code>d yields
+    δ.
+    <li>Cyrillic letters are given by an at sign followed by a
+    corresponding latin letter or letters, e.g., @ya yields я.
+    <li>Script letters are given by a dollar sign followed by the
+    corresponding regular letter, e.g., $F yields ℱ.
+    <li>A digraph of a symbol followed by a letter gives the letter with
+    an accent that looks like the symbol, e.g., ,c yields ç.
+    <li>Two digits give the fraction with that numerator and
+    denominator, e.g., 12 yields ½.
+    <li>The letter s followed by a character gives that character as a
+    superscript, e.g., s1 yields ⁱ. These characters are taken from the
+    Unicode block 0x2070; the 1, 2, and 3 superscripts in the Latin-1
+    block are available by using a capital S instead of s.
+    <li>Sometimes a pair of characters give a symbol related to the
+    superimposition of the characters, e.g., cO yields ©.
+    <li>A mnemonic letter followed by $ gives a currency symbol, e.g.,
+    l$ yields £.
+<p>
+</ul>
+<a name="sec3"></a><h2>SEE ALSO</h2>
+<li><a href="//lsub.org/sys/man/2/net.ink.html">net.ink(2)</a> for
+the Ink package.
+<li><a href="//lsub.org/sys/man/1/ix.html">ix(1)</a> for the UI
+environment using this.
+<p>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

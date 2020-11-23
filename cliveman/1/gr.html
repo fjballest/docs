@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>GR(1): grep files</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: gr [-Daeflmsuvx] rexp [rexp]
+        -D: debug
+        -a: print just addresses
+        -e: extend regexps to match all the text
+        -f: print addresses for matches in full files (like sam)
+        -l: print just the names of matching files
+        -m: print just matching text
+        -s: just status
+        -u: use unix out
+        -v: invert match
+        -x: print selections for further editing commands
+
+        gg is gr -xef
+        gv is gr -xvef
+        gx is gr -xf
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Gr</em> greps zx files for the expression given. If
+two expressions are given, they match the text starting at the match
+for the first expression and ending at the text matching the second
+one. This is similar to an address in Sam and Acme editors.
+<p>
+By default it operates on a line by line basis, but most interesting
+usages rely on flag <code>-f</code> that operates on full
+files.
+<p>
+Flag <code>-x</code> deserves a note. It makes the command
+pass to the output unmatched text as ignored output, which means that
+such data is ignored by default by most other commands, but can be
+retrieved later, in-place, by tools like
+<a href="//lsub.org/sys/man/1/pf.html">pf(1)</a>. Also, it makes
+<em>gr</em> report as <code>zx.Addr</code>
+data types the addresses for matches into the output, and
+<em>pf</em> knows how to print those.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Grep for <code>func</code> at the start of line in all
+files in the subtree rooted at the current directory:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf -g ,- | gr -u &#39;^func&#39;
+    </pre></code>
+<p>
+</ul><p>
+Grep to select lines with <code>func</code> at the start
+of line, translate those lines to uppercase, and print resulting files
+(both selected and unselected lines):
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf -g ,- | gr -xf &#39;^func.*\n&#39; | trex -c | pf -i
+    </pre></code>
+<p>
+</ul><p>
+Grep for <code>struct</code> or
+<code>var</code> declarations in go sources and print them
+in uppercase:
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf -g ,~*.go | gr -xf &#39;^(struct|var)&#39;  &#39;^(}|\))\n&#39; | trex -c | pf
+    </pre></code>
+</ul><p>
+Grep for <code>struct</code> or
+<code>var</code> declarations in go sources, filter only
+those that contain <code>ix</code>, and print them in
+uppercase,
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf -g ,~*.go | gr -xf &#39;^(struct|var)&#39;  &#39;^(}|\))\n&#39; |
+        gr -xfe ix | trex -c | pf
+    </pre></code>
+</ul><p>
+Grep for <code>struct</code> or
+<code>var</code> declarations in go sources, filter only
+those that do not contain <code>ix</code>, and print them
+in uppercase,
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf -g ,~*.go | gr -xf &#39;^(struct|var)&#39;  &#39;^(}|\))\n&#39; |
+        gr -xfev ix | trex -c | pf
+    </pre></code>
+</ul><p>
+Grep for <code>struct</code> or
+<code>var</code> declarations in go sources, filter only
+those that do not contain <code>ix</code>, and print all
+words in different lines
+<p><ul style="list-style:none;">
+    <code><pre>
+    lf -g ,~*.go | gr -xf &#39;^(struct|var)&#39;  &#39;^(}|\))\n&#39; |
+        gr -xfve ix | gr -xf &#39;[a-zA-Z]+&#39;  | pf -s
+    </pre></code>
+<p>
+</ul><p>
+Popular aliases are
+<dl>
+    <dt><code>gg</code></dt><dd>
+for <code>gr
+        -xef</code>, similar to the <code>g</code> command
+        in Sam.
+    </dd>
+    <dt><code>gv</code></dt><dd>
+for <code>gr
+        -xvef</code>, similar to the <code>v</code> command
+        in Sam.
+    </dd>
+    <dt><code>gx</code></dt><dd>
+for <code>gr
+        -xf</code>, similar to the <code>x</code> command in
+        Sam.
+    </dd>
+</dl>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/gr</code>
+</ul>
+<code>
+<p>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/cmd/look"
+
+var Debug bool ...
+func ParseRules(txt string) (Rules, error)
+type Rule struct { ... }
+type Rules []*Rule
+    func ParseRules(txt string) (Rules, error)
+
+DESCRIPTION
+
+Return commands to run when the user looks for strings.
+
+Programs rely on this package to "plumb" user looks. By convention, $look,
+or $home/lib/look, or $home/.look are used to keep the rules. A rule is a
+pair of lines, the first line is a regular expression as provided by sre(2)
+and the second is the command to execute for the rule. The special command
+"not" can be used to prevent further rules to match. Back-references may be
+used to build a command from parts of the matching text.
+
+CONSTANTS
+
+TYPES
+
+type Rule struct {
+	Rexp string
+	Cmd  string
+
+	sync.Mutex
+	// contains filtered or unexported fields
+}
+    If the user looks for something matching Rexp, then Cmd leads to a result
+    string. Backquoting to refer to \0...\9 is ok in Cmd.
+
+func (r *Rule) CmdFor(s string) (string, error)
+    Return the command to run if s matches the rule. ErrNoMatch is returned if
+    there's no match.
+
+type Rules []*Rule
+
+func ParseRules(txt string) (Rules, error)
+
+func (rs Rules) CmdFor(s string) (string, error)
+    Return the command for a user look, if any. ErrNoMatch is returned if no
+    rule matches. If there's an error in any of the rules, no further rules are
+    attempted.
+
+func (rs Rules) String() string
+    Return a string that can be parsed later on by ParseRules to make a set of
+    rules.
+
+FUNCTIONS
+
+VARIABLES
+
+var (
+	Debug bool
+
+	ErrNoMatch = errors.New("no match")
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

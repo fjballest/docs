@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>ZXSYNC(1): synchronize a replica</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: zxsync [-Dnuv] [file]
+        -D: debug
+        -n: dry run
+        -u: don&#39;t use unix out
+        -v: verbose
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Zxsync</em> both pulls and pushes changes for a remote
+tree and a local replica. It compares local and remote changes and
+decides which changes must be pushed and which ones must be pulled.
+The newest change wins if there is a conflicting change. File removes
+are noted and using the modification time for their directory. If a
+directory is added or removed, inner files and directories are added
+or removed as well no matter if the other replica has changes for such
+inner files. See
+<a href="//lsub.org/sys/man/1/zxrepl.html">zxrepl(1)</a> for usage
+examples.
+<p>
+If no argument is given, <em>zxsync</em> synchronizes all
+replicas found at <code>/u/lib/repl</code>.
+<p>
+When given, the <em>file</em> argument names the replica
+and the database files. The replica is the basename for
+<em>file</em>. The local database file is
+<em>file</em> with &#34;<code>.ldb</code>&#34;
+appended. The remote database file is <em>file</em> with
+&#34;<code>.rdb</code>&#34; appended. If <em>file</em>
+does not contain &#34;<code>/</code>&#34; then
+&#34;<code>/u/lib/repl/</code>&#34; is prepended to it.
+<p>
+Metadata changes at the root of the replica are always ignored.
+<p>
+<a name="sec3"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/zxsync</code>
+<p>
+</ul>
+<a name="sec4"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/zxrepl.html">zxrepl(1)</a> to
+    create replicas.
+    <li><a href="//lsub.org/sys/man/1/zxpull.html">zxpull(1)</a> to
+    pull changes.
+    <li><a href="//lsub.org/sys/man/1/zxpush.html">zxpush(1)</a> to
+    push changes.
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

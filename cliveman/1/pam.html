@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>PAM(1): Picky Abstract Machine interpreter</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: pam [-CDEFIMSXds] [-w] file
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<p><ul style="list-style:none;">
+    pam interprets acts as an interpreter for the Picky Abstract Machine
+    which <a href="http://lsub.org/sys/man/1/pick.html">pick(1)</a>
+    compiles to.
+</ul><p>
+Multimedia is served as a web page using javascript. In Unix-like
+environments pam is called automatically using the [verb #!/bin/pam ]
+prelude. In Windows the .pam extension is registered for the same
+purpose.
+<p>
+These are the options:
+<p><ul style="list-style:none;">
+    -C
+    <p><ul style="list-style:none;">
+        cpu profiling
+    </ul><p>
+    -D
+    <p><ul style="list-style:none;">
+        memory allocation debug
+    </ul><p>
+    -E
+    <p><ul style="list-style:none;">
+        memory profiling
+    </ul><p>
+    -F
+    <p><ul style="list-style:none;">
+        binary file debug
+    </ul><p>
+    -I
+    <p><ul style="list-style:none;">
+        file i/o debug
+    </ul><p>
+    -M
+    <p><ul style="list-style:none;">
+        globals debug
+    </ul><p>
+    -S
+    <p><ul style="list-style:none;">
+        stack debug
+    </ul><p>
+    -X
+    <p><ul style="list-style:none;">
+        instruction execution debug
+    </ul><p>
+    -d
+    <p><ul style="list-style:none;">
+        dump stack on error before exiting
+    </ul><p>
+    -s
+    <p><ul style="list-style:none;">
+        dump statistics
+    </ul><p>
+    -w
+    <p><ul style="list-style:none;">
+        don&#39;t wait at the end in Windows for when it is being run inside an
+        environment like SciTE
+<p>
+    </ul><p>
+</ul><p>
+<a name="sec3"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/picky</code>
+<p>
+</ul>
+<a name="sec4"></a><h2>BUGS</h2>
+Statistics should be more precise.
+<p>
+<a name="sec5"></a><h2>REFERENCES</h2>
+See also <a href="http://lsub.org/sys/man/1/pick.html">pick(1)</a>
+<a href="http://lsub.org/ls/export/newpicky/picky.pdf">http://lsub.org/ls/export/newpicky/picky.pdf</a>.
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+<h2>PERMS(3): file permissions and permission checks</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>DESCRIPTION</h2>
+Files are described by directory entries as described in
+<a href="//lsub.org/sys/man/3/dir.html">dir(3)</a>. Read that before
+reading the description of permission checks that follows.
+<p>
+Users and groups are defined by the authentication protocol spoken
+when dialing file systems. They are a local to each file tree.
+<p>
+In general, only bits <code>0777</code> are honored and
+their sematics are those used by UNIX for both files and directories,
+but for what follows.
+<p>
+<ul>
+    <li>Users in the group are granted permission either by the group
+    bits or by the other bits.
+<p>
+    <li>The owner is granted permissions by its bits, or the group bits,
+    or the other bits.
+<p>
+    <li>When new files or directories are created, their group is set to
+    that to the containing directory unless a different one is specified
+    in the system call.
+<p>
+    <li>The group mode bits for new files and directories are masked
+    with those of the containing directory, and then any group bit set in
+    the containing directory is set if it is also set for the user. (NOTE:
+    not yet for the second edition).
+<p>
+    <li>Moving a file requires just write permissions in the parent
+    directories for the old and new locations.
+<p>
+    <li>Creating a file requires write permission in the file (if it
+    existed) or in the parent dir (if it did not exist).
+<p>
+    <li>Only the owner may change the mode of a file.
+<p>
+    <li>Changing the size using <code>wstat</code> requires
+    write permissions on the file.
+<p>
+    <li>Uids (but for <code>wuid</code>) can be changed by
+    the owner but only if the owner is <code>elf</code> or the
+    owner is also in the target uid.
+<p>
+    <li>Only the owner or anyone with write permission on a file may
+    change <code>mtime</code> or other attributes not
+    described before.
+<p>
+</ul>
+When writing new file systems, the convention is to use
+<a href="//lsub.org/sys/man/1/zxc.html">zxc(1)</a> as a the
+reference and [zx/perms(2)] to check for permissions.
+<p>
+<a name="sec2"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/3/names.html">names(3)</a>
+    <li><a href="//lsub.org/sys/man/2/zx.html">zx(2)</a>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

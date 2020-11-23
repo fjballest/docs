@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>MVC(1): move files</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: mvc [-Dacmnv] {file} file
+        -D: debug
+        -a: preserve attributes
+        -c: copy and remove to cross devices
+        -m: behave like when moving many files
+        -n: dry run; implies -v
+        -v: report operations made
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Mvc</em> moves files to a new destination. The last
+name given as an argument indicates the destination. If a single
+source file is moved then the destination is the exact name of the new
+file, and it is overwritten if it already exists.
+<p>
+If multiple files are being moved (or a single source with a predicate
+is used to find all matching files) then the destination for each file
+is the path resulting from appending to the destination specified in
+the command line the relative path of the source file with respect to
+the name indicated in the command line. That is, the move preserves
+the tree structure of the files being moved.
+<p>
+If the source and destinations are within the same device, a single
+rename request is issued and the move preserves all attributes.
+<p>
+If the move crosses a device boundary, it fails unless
+<code>-c</code> is given. In this case the file is copied
+and removed from the orginal location if the copy succeeds.
+Permissions are preserved in the copied file. Use
+<code>-a</code> to preserve all user attributes in this
+case.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Move the subtree rooted at the current directory to
+<code>/tmp/dst</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; mvc , /tmp/dst
+    </pre></code>
+<p>
+</ul><p>
+Move all go source files and the directories to a similar tree at
+<code>/tmp/dst</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; mvc  &#39;,~\.go$&#39; /tmp/dst
+    </pre></code>
+<p>
+</ul><p>
+Move file <code>1</code> to file
+<code>2</code> at <code>/tmp</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; mvc 1 /tmp/2
+    </pre></code>
+<p>
+</ul><p>
+Move files <code>1</code> and <code>2</code>
+to <code>/tmp</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; mvc 1 2 /tmp
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/mvc</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

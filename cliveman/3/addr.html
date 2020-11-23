@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+<h2>ADDR(3): network and resource addresses</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>SYNOPSYS</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    network!address!service
+    protocol!network!address!service!tree!path
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+Network addresses are strings used by clive packages and other tools
+to name network services and end-points. They are also used by files
+and strings with name space descriptions. This page documents a few
+conventions.
+<p>
+An full network address has the form
+<p><ul style="list-style:none;">
+    <code><pre>
+    network!address!service
+    </pre></code>
+</ul><p>
+where
+<dl>
+    <dt>network</dt><dd>
+is the name of a network
+        (<code>unix</code>, <code>tcp</code>, or
+        <code>tls</code>, etc.)
+    </dd>
+    <dt>address</dt><dd>
+is the name of a system in such network
+    </dd>
+    <dt>service</dt><dd>
+is the name or number for a service
+<p>
+    </dd>
+</dl>
+A partial network address is usually completed as follows:
+<ul>
+    <li><code>host</code> means
+    <code>tcp!host!zx</code>
+    <li><code>host!port</code> means
+    <code>tcp!host!port</code>
+<p>
+</ul>
+A full resource address as found in directory entries and name space
+elements has the form:
+<p><ul style="list-style:none;">
+    <code><pre>
+    protocol!network!address!service!tree!path
+    </pre></code>
+</ul><p>
+where
+<dl>
+    <dt>protocol</dt><dd>
+is the name of the protocol for the resource
+        (eg., <code>lfs</code> or <code>zx</code>)
+    </dd>
+    <dt><code>network!address!service!</code></dt><dd>
+is
+        a network address as described before. For
+        <code>lfs</code>, this component is never present in the
+        address.
+    </dd>
+    <dt>tree</dt><dd>
+is the name of a resource tree (eg.,
+        <code>main</code>, <code>dump</code>, etc.).
+        For <code>lfs</code>, this component is the absolute path
+        for the root of the local FS.
+    </dd>
+    <dt>path</dt><dd>
+is the full path of a resource path within that
+        tree (eg., <code>/</code>).
+<p>
+    </dd>
+</dl>
+The <code>lfs</code> protocol indicates access to a local
+ZX file tree. The <code>zx</code> protocol indicates
+access to a remote ZX file tree.
+<p>
+Commands and packages usually accept shorter versions and complete the
+addresses given if they are not full address. Refer to their
+documentation and/or source. The usual completion rules are as
+follows:
+<ul>
+    <li>if no protocol is given, <code>zx!</code> is
+    prepended to the address.
+    <li>other elements may be missing, starting from the last element.
+</ul>
+For example:
+<ul>
+    <li><code>localhost!zx</code> means
+    <code>zx!tcp!localhost!zx!main!/</code>
+    <li><code>unix!localhost!zx</code> means
+    <code>zx!unix!localhost!zx!main!/</code>
+    <li><code>unix!localhost!zx!main</code> means
+    <code>zx!unix!localhost!zx!main!/</code>
+    <li><code>lfs!/tmp</code> means
+    <code>lfs!/tmp!/</code>
+<p>
+</ul>
+Popular network names are <code>tcp</code>,
+<code>tls</code>, <code>unix</code>, and
+<code>*</code> to represent any of the networks when
+providing addresses to be listened.
+<p>
+The <code>unix</code> networks lives only within a single
+UNIX machine and is not reacheable from outside.
+<p>
+The map between service names and (eg TCP) protocol numbers is built
+by calls to the <code>clive/net</code> package.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    tcp!nautilus!zx
+    unix!*!zx
+    tcp!nautilus!zx!dump
+    *!*!zx
+    </pre></code>
+<p>
+</ul><p>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/net"
+
+var ErrBadAddr = errors.New("bad address") ...
+func DefSvc(name, port string)
+func Dial(addr string, tlscfg ...*tls.Config) (c ch.Conn, err error)
+func IsLocal(host string) bool
+func MuxDial(addr string, tlscfg ...*tls.Config) (m *ch.Mux, err error)
+func MuxServe(addr string, tlscfg ...*tls.Config) (c <-chan *ch.Mux, ec chan bool, err error)
+func ParseAddr(addr string) (net, mach, svc string)
+func Port(netw, svc string) string
+func Serve(addr string, tlscfg ...*tls.Config) (c <-chan ch.Conn, ec chan bool, err error)
+func TLSCfg(name string) (*tls.Config, error)
+
+DESCRIPTION
+
+Network services and tools over clive/ch chans.
+
+FUNCTIONS
+
+func DefSvc(name, port string)
+    Define name as the name for the service at the given TCP port. Can be used
+    to provide the same service through the fifo/pipe networks and the TCP/IP
+    network. Clive relies on some predefined services, including:
+
+    ns	8000	name space
+    sns	8001	shared name spaces
+    zx	8002	zx
+
+func Dial(addr string, tlscfg ...*tls.Config) (c ch.Conn, err error)
+    Dial the given address and return a point to point connection. The
+    connection is secured if tlscfg is not nil. Using MuxDial is preferred
+    because muxes provide flow control.
+
+func IsLocal(host string) bool
+    Return true if the machine address given seems to address the local host. A
+    bad address is not considered local.
+
+func MuxDial(addr string, tlscfg ...*tls.Config) (m *ch.Mux, err error)
+    Dial the given address and return a muxed connection The connection is
+    secured if tlscfg is not nil.
+
+func MuxServe(addr string, tlscfg ...*tls.Config) (c <-chan *ch.Mux, ec chan bool, err error)
+    Serve the given address and return a chan to receive muxed connections from
+    new clients and a termination channel. The termination channel can be closed
+    by the caller to stop the service, and will be closed if the underlying
+    transport fails and the service can't continue. If the requested service
+    name is already being served or any other error happens, the error is
+    returned (along with two nil channels). If the network is "*", the service
+    will be started on all networks. The connections are secured if tlscfg is
+    not nil.
+
+func ParseAddr(addr string) (net, mach, svc string)
+    Parse an address and return its network, machine adress, and service
+    name/number. When the address is invalid an empty network name is returned.
+    Addresses are of the form
+
+    address
+    address!service
+    network!address!service
+
+    The network/address may be "*" to use any available. Known networks are
+    unix, tcp, and tls; the default is tcp. The service defaults to "zx".
+
+func Port(netw, svc string) string
+    Return the port for a given network and service
+
+func Serve(addr string, tlscfg ...*tls.Config) (c <-chan ch.Conn, ec chan bool, err error)
+    Serve the given address and return a chan to receive connections from new
+    clients and atermination channel. The termination channel can be closed by
+    the caller to stop the service, and will be closed if the underlying
+    transport fails and the service can't continue. If the requested service
+    name is already being served or any other error happens, the error is
+    returned (along with two nil channels). If the network is "*", the service
+    will be started on all networks. The connections are secured if tlscfg is
+    not nil.
+
+func TLSCfg(name string) (*tls.Config, error)
+    Build a TLS config for use with dialing functions provided by others.
+
+VARIABLES
+
+var (
+	ErrBadAddr  = errors.New("bad address")
+	ErrNotLocal = errors.New("not a local address")
+	ErrNoTLSCfg = errors.New("TLS not configured")
+
+	// If these are set, the tls network will use them by default
+	ClientTLSCfg, ServerTLSCfg *tls.Config
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

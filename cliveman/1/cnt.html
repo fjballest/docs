@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>CNT(1): count lines, words, runes, and bytes</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: cnt [-Dabclmnruw] {file}
+        -D: debug
+        -a: count all messages and not just data msgs
+        -b: count just bytes
+        -c: count just characters
+        -l: count just lines
+        -m: count just msgs
+        -n: print just totals
+        -r: count just runes
+        -u: use unix output
+        -w: count just words
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Cnt</em> counts messages, lines, words, runes, and
+bytes in the given files. A word is defined as a series of
+non-control, non-separation-punctuation, and non-space runes at the
+start of a file or after a non-word rune. A rune is considered as
+separation-punctuation if it is punctuation and non-dash and
+non-connector. This definition is not compatible with the venerable
+<code>wc</code> UNIX command, but it is more accurate.
+<p>
+If no file is given, the program prints just the count(s). Otherwise,
+it prints the count(s) followed by the name of each file. All counters
+are printed by default, unless a flag says otherwise.
+<p>
+<a name="sec3"></a><h2>EXAMPLE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    % lf -g , | cnt -u
+           1       72      191     1220     1220  all/all.go
+           1       33       66      420      420  all/all_test.go
+           1       60      209     1311     1311  auth/auth.go
+           1      163      501     2966     2966  ch/ch.go
+           1      630     1806    11475    11475  cmd.go
+    </pre></code>
+<p>
+</ul><p>
+The same may be achieved running
+<p><ul style="list-style:none;">
+    <code><pre>
+    % cnt -u ,
+    </pre></code>
+<p>
+</ul><p>
+Grep for <code>struct</code> or
+<code>var</code> declarations in go sources, filter only
+those that do not contain <code>ix</code>, and count the
+words in them:
+<p><ul style="list-style:none;">
+    <code><pre>
+    % lf -g ,~*.go | gr -xf &#39;^(struct|var)&#39;  &#39;^(}|\))\n&#39; |
+        gr -xfve ix | gr -xf &#39;[a-zA-Z]+&#39;  |
+        cnt -mu
+          15        0        1       49       49  ix.go
+    </pre></code>
+</ul><p>
+The pipe selects each word and sends a message for each one, and then
+counting the messages produces the expected result.
+<p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/cnt</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

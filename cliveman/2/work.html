@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/work"
+
+var Debug bool
+func NewPool(n int) *Pool
+type Pool struct { ... }
+    func NewPool(n int) *Pool
+
+DESCRIPTION
+
+A pool of worker processes.
+
+CONSTANTS
+
+TYPES
+
+type Pool struct {
+	// contains filtered or unexported fields
+}
+    A pool of work to do.
+
+func NewPool(n int) *Pool
+    create a pool of workers with up to n concurrent works.
+
+func (p *Pool) Call(donec chan bool, fn func()) chan bool
+    Run fn in a worker from the pool. If there is no worker available, run the
+    function in the caller process. Either way, return a chan that is sent-to
+    when the call completes. The channel is the one passed or a new one if it is
+    nil.
+
+func (p *Pool) Close()
+    Terminate the pool. Running functions continue to run but no further work is
+    accepted causing a panic instead.
+
+func (p *Pool) Go(donec chan bool, fn func()) chan bool
+    Run fn in a worker from the pool. If there is no worker available, await
+    until there is one Either way, return a chan that is sent-to when the call
+    completes. The channel is the one passed or a new one if it is nil.
+
+func (p *Pool) Wait()
+    Wait until all workers are done, closing if the pool is not yet closed.
+
+FUNCTIONS
+
+VARIABLES
+
+var (
+	Debug bool
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

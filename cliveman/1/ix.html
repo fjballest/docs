@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>IX(1): ink shell and command executor</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: ix [-DIn] [-l file] {file}
+        -D: debug
+        -I: debug ink
+        -l file: load the session from the given file
+        -n: dry run (don&#39;t ever save)
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Ix</em> is a shell using the [net/ink(2)], web based,
+graphics interface. It lets the user browse the file system, execute
+commands, edit files, and open other ink interfaces (including web
+pages and interfaces from other tools in the system).
+<p>
+The interface is reached on the ink port using a Web browser.
+Initially, a command window is created. Other command windows and
+further edits may be open using it. The words near the top are
+buttons:
+<ul>
+    <li><code>more</code>: increases the number of columns
+    in the page.
+    <li><code>less</code>: decreases the number of columns
+    in the page.
+    <li><code>win</code>: opens a new command window.
+    <li><code>quit</code>: quits IX.
+<p>
+</ul>
+IX ancestors (O/live, Omero, and Acme) inspired much of the mouse
+language. If you know how to use one of those, you almost know how to
+use IX. Mouse buttons are named 1, 2, 3, and 4 (left to right).
+Function keys (starting at F1) may be used as mouse buttons. Function
+key F12 toggles debug in the browser console.
+<p>
+Each window is decorated with a status line. A click on the icons
+shown in the line may be used to close the window, save it (only shown
+if the window has unsaved changed), minimize all windows in the same
+column, make the window larger, make it smaller, and resize it to make
+its bottom the bottom of the column. A click on the rest of the status
+line shifts the windows in the column, moving the top window to the
+end of the column. Windows may be dragged and moved to another
+location using button-1 on the status line.
+<p>
+The status line shows a label written in black when the window is
+clean. The label is written in blue when the window is dirty (and
+should be saved). The status line background is shown in a lighter
+color when the window has the focus, and it is darkern when the window
+is not the focus.
+<p>
+A click with button-1 on a window sets it as the focus. However, the
+keyboard follows the mouse and writes at the window under the mouse
+pointer. You can type commands in a window and use another one as the
+focus for them.
+<p>
+The width of a window depends on the number of columns and cannot be
+adjusted by the user. The height of a window can be adjusted by
+dragging its bottom line with the mouse.
+<p>
+Button-1 sets the selection. It is empty for a single click, a word
+for a double click, and a long word for a tripple click. A long word
+accepts more runes as word characters. A double click on a rune that
+seems to delimit a range (like brackets, quotes, etc.) selects the
+enclosed text. A double click at the end of the line selects the
+entire line. To select more text than shown in a window, use the
+scroll wheel while holding down button-1.
+<p>
+While holding down button-1, a click with button-2 cuts the selected
+text, and a click with button-3 replaces the selected text with a
+paste of the clipboard. A chick with button-4 while holding down
+button-1 copies the selection into the clipboard. Keys
+<em>Command</em>-!x!, <em>Command</em>-!v!,
+and <em>Command</em>-!c!, achieve the same effect.
+<p>
+Commands are executed with the button-2, either with a single click or
+with a selection. New edits can be looked for with the button-3,
+either with a single click or with a selection. Text search happens
+when using button-4, which searches for the last text selected
+(perhaps at a different window) on the clicked window. Executing a
+directory in a commands window changes the dot to that directory.
+Executing it in a directory window replaces the directory shown with
+the one executed.
+<p>
+For buttons 2 and 3, a click at the end of a line refers to the whole
+line, a click on a word refers on the whole word, and a click on a
+selection refers to the text selected. A click on a final empty line
+selects the previous line.
+<p>
+The mouse wheel scrolls up and down the text shown in the window. When
+used outside a window it scrolls the whole page (or screen). Up and
+down array keys also scroll text in windows.
+<p>
+A thin blue line on the right of text windows depicts the location of
+the text shown within the full text. The size of the line is
+proportional to the percentage of text shown and its position
+indicates the location of the shown text. This line cannot be used to
+scroll.
+<p>
+The left and right arrow keys do not move the cursor, but perform undo
+and redo operations.
+<p>
+There is no command language (although there are some builtins).
+Commands executed are standard
+<a href="//lsub.org/sys/man/1/ql.html">ql(1)</a> commands, unless
+they are a builtin. IX serves a standard output
+<em>ink</em> channel to all commands executed in it.
+Commands with user interfaces rely on this to use the relevant IX
+instance. But note how
+<p><ul style="list-style:none;">
+    <code><pre>
+    eco  http://lsub.org &gt;[out:ink]
+    </pre></code>
+</ul><p>
+and similar commands can be used to output URLs, or HTML in general,
+to the standard output <em>ink</em> and convince IX to
+display external interfaces or resources. When a command outputs a
+file address (or more), IX selects that address as a result, and
+button-3 clicks on such selection iterates through the address list.
+<p>
+Ink messages starting with <code>exec:</code> are
+understood as requests to execute commands and display its output in a
+new window. Those starting with <code>look:</code> are
+understood as requests to look for text.
+<p>
+The variable <code>$look</code>, or the file
+<code>$home/lib/look</code>, or
+<code>$home/.look</code> are used to learn rules to
+execute commands when the user looks for text.
+<p>
+Command windows operate like a typescript. Upon command execution, the
+command output will get inserted on the line after the end of the
+command. Each window operates in its own Clive command context and may
+use a different name space, dot, etc.
+<p>
+The builtin commands are:
+<ul>
+    <li><code>cd</code>: changes the directory to that of
+    the focus (if no argument is given) or to that given.
+    <li><code>pwd</code>: print the current directory.
+    <li><code>cmds</code>: list the running commands.
+    <li><code>=</code>: print the dot (the selection of the
+    focus).
+    <li><code>n file</code>: create a new edit for the named
+    file.
+    <li><code>w [file]</code>: write the focus, if dirty,
+    back to disk. If the file name is given, it is written to that file
+    and the edit is updated to operate on the new name.
+    <li><code>e</code>: re-read the focus, discarding all
+    edits, and start a new edit.
+    <li><code>d</code>: delete the focus.
+    <li><code>u</code>: undo the last edit.
+    <li><code>r</code>: redo the last undo.
+    <li><code>&gt; cmds...</code>: run commands using the dot
+    as input.
+    <li><code>&lt; cmds...</code>: run commands inserting their
+    output at the dot.
+    <li><code> |cmds...</code>: filter the dot with
+    commands.
+    <li><code>x [expr] cmd</code>: run command for all
+    selections of edits matching expr.
+    <li><code>X [expr] cmd</code>: run command for all edits
+    matching expr.
+    <li><code>. cmd...</code>: run command on the dot.
+    <li><code>, cmd...</code>: run command on the focus.
+    <li><code>dump [name]</code>: print the state of the
+    session or dump it into the given file name, if any.
+    <li><code>load name</code>: load the session edits
+    dumped at the given file name.
+    <li><code>win</code>: start a new commands window.
+    <li><code>rules</code>: reload the look rules.
+<p>
+</ul>
+All other commands are external Clive commands.
+<p>
+Typing <em>Esc</em> twice at a window clears the window.
+For command windows, the text is cleared. For directory windows, the
+directory is re-read. For text edits, the edits are discarded and the
+on-disk text is re-read.
+<p>
+Text processing happens for keys supplied by the browser (which might
+or might not take into account your keyboard layout and locale
+settings). Nevertheless, the <em>Alt</em> key may be used
+to compose a key by typing <em>Alt</em> and then one or
+more keys. The valid sequences are those of Plan 9 from Bell Labs. See
+<a href="//lsub.org/sys/man/3/keyboard.html">keyboard(3)</a> for a
+description of valid key sequences.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Open all go files under the current dir:
+<p><ul style="list-style:none;">
+    Type
+    <code><pre>
+    .,~*.go
+    </pre></code>
+</ul><p>
+and right-click on it.
+<p>
+Find foo in the current edit: Type
+<p><ul style="list-style:none;">
+    <code><pre>
+    , &gt;gr -x foo
+    </pre></code>
+</ul><p>
+and middle-click on it. If you click (button-3) on one of the
+addresses printed by <code>gr</code>, the selection is
+changed. If you click on one of those selections (button-3), the next
+address located by <code>gr</code> is looked for. If you
+click on one of those selections (button-4), the next instance of
+selected text is looked for.
+<p>
+Replace foo with bar in all edits: Type
+<p><ul style="list-style:none;">
+    <code><pre>
+    X |trex foo bar
+    </pre></code>
+</ul><p>
+and middle click on it.
+<p>
+Save everything: Type
+<p><ul style="list-style:none;">
+    <code><pre>
+    X w
+    </pre></code>
+</ul><p>
+and middle click on it.
+<p>
+Teach IX to show manual pages and to use the OS browser to open URLs,
+and teach it to open PostScript and PDF files by itself.
+<p><ul style="list-style:none;">
+    <code><pre>
+    look=&#39;# rules for look(2), used by ix(1)
+    ^([a-zA-Z.]+)\(([0-9]+)\)$
+        doc \2 \1|rf
+        ^https://localhost
+            not
+    ^(http|https)://.*$
+        open \0
+    ^.*\.(ps|pdf)$
+        eco file://^&lt;{path \0} &#39;|&#39; \0 &gt;[out:ink]
+    &#39;
+    ix &amp;
+    </pre></code>
+</ul><p>
+<a name="sec4"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/gr.html">gr(1)</a> has many
+    useful examples for command lines that may be used as IX commands to
+    perform common editing tasks.
+    <li><a href="//lsub.org/sys/man/2/cmd.look.html">cmd.look(2)</a>
+    for a description of look rules.
+    <li><a href="//lsub.org/sys/man/3/keyboard.html">keyboard(3)</a>
+    for composing keys.
+<p>
+</ul>
+<a name="sec5"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/ix</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

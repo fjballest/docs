@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+<h2>CERTS(3): certificates for authentication</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>DESCRIPTION</h2>
+Clive uses public key encryption in order to authenticate clients and
+servers. In the server machine, the server&#39;s private key must be
+stored in <code>$HOME/.ssh/server.key</code> (PEM
+encoding) and the client&#39;s autosigned X.509 certificate must be stored
+in <code>$HOME/.ssh/client.pem</code>. In the client
+machine, the private key must be stored in
+<code>$HOME/.ssh/client.key</code> and the server&#39;s
+certificate must be stored in
+<code>$HOME/.ssh/server.pem</code>.
+<p>
+The private key and the certificate with the public key can be
+generated with <code>openssl</code>. For example, in the
+server:
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; cd $HOME/.ssh
+    ; openssl req -new -nodes -x509 -out server.pem \
+        -keyout server.key -days 500 -subj \
+        &#34;/C=DE/ST=NRW/L=Earth/O=Random \
+        Company/OU=IT/CN=lsub.org/emailAddress=dont@mail.me&#34;
+    </pre></code>
+<p>
+</ul><p>
+The <a href="//lsub.org/sys/man/1/web.html">web(1)</a> command uses
+<code>/zx/lib/webkey.pem</code> for the private key and
+<code>/zx/lib/webcert.pem</code> for the certificate, for
+TLS connections.
+<p>
+<a name="sec2"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/xzx.html">xzx(1)</a>
+    <li><a href="//lsub.org/sys/man/1/zxfuse.html">zxfuse(1)</a>
+    <li><a href="//lsub.org/sys/man/1/auth.html">auth(1)</a>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/3">Section 3</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

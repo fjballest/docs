@@ -1,0 +1,80 @@
+#!/bin/rc
+dot=()
+d=/zx/usr/web/sys/man
+TEMPLATE=$d/TEMPLATE
+s=/u/cliveman
+pd=/u/gosrc/src/clive
+bd=/u/gosrc/pkg/darwin_amd64/clive
+cd $pd || exit nosrc
+pkgs=`{@{cd $bd ; du -a | grep -v '\./x/' | grep -v 'picky'| grep -v 'oldql' | grep '\.a$' | 9 sed 's,.*\./,,' | sed 's/\.a$//' |sort}} 
+
+cd $d || exit fail 
+idx=_index.html
+9 sed  '/<div[ 	]+id[ 	]*=[ 	]*"content"/r  '$idx $TEMPLATE >index.html
+cd $s || exit fail
+for(sect in [0-9]*) {
+	@{
+		mkdir -p $d/$sect
+		cd $d/$sect
+		echo -n '<a href="/ls/clive.html"><img src="/clive.gif"></a><img src ="/zxlogo.gif" style="float:right"><p><b><a href="/sys/man">User''s manual</a>, 2nd ed .</b><p>' >_index.html
+		switch $sect {
+		case 1
+			echo '<title>Section 1: commands</title>'>>_index.html
+			echo '<h1>Section 1: commands</h1>'>>_index.html
+		case 2
+			echo '<title>Section 2: go packages</title>'>>_index.html
+			echo '<h1>Section 2: go packages</h1>'>>_index.html
+		case 3
+			echo '<title>Section 3: system conventions and file formats</title>'>>_index.html
+			echo '<h1>Section 3: system conventions and file formats</h1>'>>_index.html
+		case *
+			echo '<title>Section '^$sect^'</title>'>>_index.html
+			echo '<h1>Section '^$sect^'</h1>'>>_index.html
+		}
+		echo '<hr><ul>' >>_index.html
+		files=`{ls $s/$sect/[A-Za-z]* | grep -v '/intro$'}
+		if(test -e $s/$sect/intro) {
+			files=($s/$sect/intro $files)
+		}
+		for(pg in $files) {
+			echo $pg
+			nm=`{basename $pg}
+			man=$nm.html
+			wr -c $sect -o $man $pg
+			echo -n '<li> <b><a href="/sys/man/'^$sect/$nm^'.html">'^$nm^':</a></b>' >>_index.html
+			echo '<em>' `{wr $pg | sed 1q |tr A-Z a-z | sed 's/[ a-z()0-9]*://'} '</em>'>>_index.html
+		}
+		if (~ $sect 2) {
+			for(p in $pkgs) {
+				if(test -d $pd/$p) {
+					f=`{echo $p|sed 's,/,.,g'}
+					man=$d/2/$f.html
+					echo $man
+					echo -n '<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User''s manual</a>.' >>$man.x
+					echo  ' <a href="/sys/man/'^$sect^'">Section '^$sect^'</a></b>' >>$man.x
+					echo '<pre>' >>$man.x
+					Go doc clive/$p >[2]/dev/null |
+	9 sed 's|\[([a-zA-Z.0-9]+)\(([0-9]+)\)\]|<a href="/sys/man/\2/\1.html">\1(\2)</a>|g'>>$man.x
+					echo '</pre>' >>$man.x
+					echo -n '<p><b><a href="/sys/man">User''s manual, 2nd ed</a>.' >>$man.x
+					echo  ' <a href="/sys/man/'^$sect^'">Section '^$sect^'</a></b>' >>$man.x
+					9 sed  '/<div[ 	]+id[ 	]*=[ 	]*"content"/r  '$man.x $TEMPLATE >$man
+
+					nm=$f
+					tit=`{cat $man.x | sed 1,/DESCRIPTION/d | sed -n 2p}
+					rm -f $man.x
+					echo -n '<li> <b><a href="/sys/man/'^$sect/$nm^'.html">'^$nm^'</a>:</b>' >>_index.html
+					echo '<em>' $tit '</em>'>>_index.html
+				}
+			}
+		}
+		echo '</ul><hr>' >>_index.html
+		echo -n '<p><b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User''s manual</a>.</b>' >>_index.html
+		9 sed  '/<div[ 	]+id[ 	]*=[ 	]*"content"/r  '_index.html $TEMPLATE >index.html
+		rm -f _index.html
+	}
+}
+
+cd $d || exit fail 
+idx=_index.html
+9 sed  '/<div[ 	]+id[ 	]*=[ 	]*"content"/r  '$idx $TEMPLATE >index.html

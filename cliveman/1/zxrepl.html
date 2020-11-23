@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>ZXREPL(1): create a file tree replica configuration</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: zxrepl [-Dmnuv] {-x arg} [file [ldir rdir]]
+        -D: debug
+        -m: move existing replica client/server paths and/or add excludes
+        -n: print just replica names when used to list replicas
+        -u: don&#39;t use unix out
+        -v: verbose
+        -x: exclude
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+Without arguments, <em>zxrepl</em> lists replicas found at
+<code>/u/lib/repl</code>.
+<p>
+With one argument (naming a replica), <em>zxrepl</em>
+lists the replica paths. Databases are printed if verbose is set.
+<p>
+With three arguments <em>Zxrepl</em> creates the databases
+for a replica. The replica consists on a local file tree and a remote
+one. The remote is usually a single tree at the server and local
+replicas synchronize with the remote. <em>Zxrepl</em> does
+not perform any synchronization. See the example.
+<p>
+The <em>file</em> argument names the replica and the
+database files. The replica is the basename for
+<em>file</em>. The local database file is
+<em>file</em> with &#34;<code>.ldb</code>&#34;
+appended. The remote database file is <em>file</em> with
+&#34;<code>.rdb</code>&#34; appended. If <em>file</em>
+does not contain &#34;<code>/</code>&#34; then
+&#34;<code>/u/lib/repl/</code>&#34; is prepended to it.
+<p>
+Arguments to <code>-x</code> are expressions to exclude
+files. If the expression starts with &#34;<code>/</code>&#34; it
+is matched against paths relative to the root of the replicated tree.
+Otherwise, the expression is matched against all components in the
+path and the file is excluded if there is a match.
+<p>
+Under flag <code>-m</code>, paths for local and remote
+trees are updated without making any other change in the databases,
+and any given exclude is added to existing excludes. This can be used
+after a replicated tree has moved to a different location and also to
+add new excludes.
+<p>
+Metadata changes at the root of the replica are always ignored.
+<p>
+<a name="sec3"></a><h2>EXAMPLE</h2>
+Make a replica for the clive source excluding ZX attribute files and
+Git directories.
+<p><ul style="list-style:none;">
+    <code><pre>
+    ;  zxrepl -v -x .git -x .zx clive \
+        /u/gosrc/src/clive \
+        &#39;tcp!fs.lsub.org!zx!lsub!/sys/src/clive&#39;
+    </pre></code>
+<p>
+</ul><p>
+Now make the local tree identical to the remote one (overwriting any
+local file):
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxpull -va clive
+    </pre></code>
+</ul><p>
+After making changes, see which changes will be synchronized:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxsync -nv clive
+    </pre></code>
+</ul><p>
+And synchronize them:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxsync -v clive
+    </pre></code>
+<p>
+</ul><p>
+List existing replicas:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxrepl
+    </pre></code>
+<p>
+</ul><p>
+Update the replica databases to reflect new (local or remote) paths
+for for the replicated tree and to add a new exclude:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ;  zxrepl -m -x objdir clive \
+        /u/gosrc/src/clive \
+        &#39;tcp!fs.lsub.org!zx!lsub!/newdir/clive&#39;
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/zxrepl</code>
+</ul>
+<a name="sec5"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/zxpull.html">zxpull(1)</a> to
+    pull changes.
+    <li><a href="//lsub.org/sys/man/1/zxpush.html">zxpush(1)</a> to
+    push changes.
+    <li><a href="//lsub.org/sys/man/1/zxsync.html">zxsync(1)</a> to
+    synchronize changes.
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

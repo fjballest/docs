@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/fuse/ostest"
+
+const WithMtime = true ...
+var Dirs = [...]string{"/a", "/a/b", "/a/b/c", "/d", "/e", "/e/f"} ...
+var GetFPaths = []string{"/1", "/a/a2", "/2"} ...
+var MkdirPaths = []string{"/nd", "/nd/nd2", "/nd/nd22", "/nd/nd23", "/nd3"} ...
+var RemovePaths = []string{"/d", "/e/f", "/e", "/a/a2"} ...
+var PutTests = []PutTest{
+	PutTest{Path: "/n1"},
+	PutTest{Path: "/n1"},
+	PutTest{Path: "/a/n2"},
+	PutTest{Path: "/", Fails: true},
+	PutTest{Path: "/a", Fails: true},
+	PutTest{Path: "/a/b/c/d/e/f", Fails: true},
+}
+var StatTests = []StatTest{
+	{"/a/b/c", `c drwxr-xr-x`, false},
+	{"/a", `a drwxr-xr-x`, false},
+	{"/a/b/c/c3", `c3 -rw-r--r-- 44970`, false},
+	{"/2", `2 -rw-r--r-- 31658`, false},
+	{"zz", `no stat`, true},
+	{"/a/b/c/c5", `no stat`, true},
+	{"/a/b/../", `a drwxr-xr-x`, false},
+}
+var WstatTests = []WstatTest{
+	WstatTest{
+		Path:  "/d",
+		Mode:  0700,
+		Mtime: 5,
+	},
+	WstatTest{
+		Path:  "/e/f",
+		Mode:  0704,
+		Mtime: 500,
+	},
+	WstatTest{
+		Path:  "/e",
+		Mode:  0704,
+		Mtime: 500,
+	},
+	WstatTest{
+		Path:  "/a/a2",
+		Mode:  0704,
+		Mtime: 500,
+	},
+	WstatTest{
+		Path:  "/xxx",
+		Fails: true,
+	},
+	WstatTest{
+		Path:  "/a/xxx",
+		Fails: true,
+	},
+}
+func All(t Fataler, dirs ...string)
+func AsAFile(t Fataler, dirs ...string)
+func AsAFs(t Fataler, dirs ...string)
+func Children(p string) []string
+func Diff(meta bool, dirs ...string) ([]string, error)
+func Gets(t Fataler, dirs ...string)
+func MkChgs(t Fataler, tdir string)
+func MkChgs2(t Fataler, tdir string)
+func MkTree(t Fataler, tdir string)
+func Mkdirs(t Fataler, dirs ...string)
+func Puts(t Fataler, dirs ...string)
+func Removes(t Fataler, dirs ...string)
+func ResetTime()
+func RmTree(t Fataler, tdir string)
+func Stats(t Fataler, dirs ...string)
+func Touch(path string)
+func Wstats(t Fataler, dirs ...string)
+type Fataler interface { ... }
+type PutTest struct { ... }
+type StatTest struct { ... }
+type WstatTest struct { ... }
+
+DESCRIPTION
+
+Utilities to aid in tests of fuse file systems. Mimics zx/fstest but using
+OS interfaces.
+
+CONSTANTS
+
+const (
+	WithMtime    = true
+	WithoutMtime = false
+)
+    arg to Diff
+
+TYPES
+
+type Fataler interface {
+	Fatalf(format string, args ...interface{})
+	Logf(format string, args ...interface{})
+	Fail()
+}
+    Usually testing.T or testing.B
+
+type PutTest struct {
+	Path  string
+	Mode  string
+	Fails bool
+}
+
+type StatTest struct {
+	Path  string
+	Res   string
+	Fails bool
+}
+
+type WstatTest struct {
+	Path  string
+	Mode  os.FileMode
+	Mtime int64
+	Fails bool
+}
+
+FUNCTIONS
+
+func All(t Fataler, dirs ...string)
+
+func AsAFile(t Fataler, dirs ...string)
+    Make sure /foo behaves as a file issuing calls from 3 fds.
+
+func AsAFs(t Fataler, dirs ...string)
+    Perform black box testing of dir1 by performing random FS ops in it and a
+    read OS dir and comparing the trees and the results from the operations.
+    There can be at most one invocation of this function at a time.
+
+func Children(p string) []string
+    Return a sorted list of child names for dir at p; ignore /Ctl and dot files
+
+func Diff(meta bool, dirs ...string) ([]string, error)
+    Compare trees and report differences
+
+func Gets(t Fataler, dirs ...string)
+
+func MkChgs(t Fataler, tdir string)
+    Make some changes in the test tree.
+
+    - Touch /a/a1
+    - Chmod /a/a2
+    - Remove /a/b/c /a/b/c/c3
+    - Create /a/n /a/n/m /a/n/m/m1
+
+func MkChgs2(t Fataler, tdir string)
+    Make some changes in the test tree, another version.
+
+    - Remove /2
+    - Create /2/n2
+    - Truncate /1
+
+func MkTree(t Fataler, tdir string)
+    Create a tree with Dirs and Files at tdir at the underlying OS
+
+func Mkdirs(t Fataler, dirs ...string)
+
+func Puts(t Fataler, dirs ...string)
+
+func Removes(t Fataler, dirs ...string)
+
+func ResetTime()
+    Reset the time for files created
+
+func RmTree(t Fataler, tdir string)
+
+func Stats(t Fataler, dirs ...string)
+
+func Touch(path string)
+    set a fake mtime that can be predicted.
+
+func Wstats(t Fataler, dirs ...string)
+
+VARIABLES
+
+var (
+
+	// directories created
+	Dirs = [...]string{"/a", "/a/b", "/a/b/c", "/d", "/e", "/e/f"}
+
+	// files created
+	Files = [...]string{"/1", "/a/a1", "/a/a2", "/a/b/c/c3", "/2"}
+
+	// data stored in each file
+	FileData = map[string][]byte{}
+
+	Repeats = 1
+)
+
+var (
+	GetFPaths = []string{"/1", "/a/a2", "/2"}
+	GetDPaths = []string{"/"}
+	GetDOuts  = map[string]string{
+		"/": `1 2 a d e`,
+	}
+	BadPaths = []string{"zz", "/a/b/c/c5"}
+)
+
+var (
+	MkdirPaths    = []string{"/nd", "/nd/nd2", "/nd/nd22", "/nd/nd23", "/nd3"}
+	BadMkdirPaths = []string{"/", "/nd", "/a", "/1"}
+)
+
+var (
+	RemovePaths    = []string{"/d", "/e/f", "/e", "/a/a2"}
+	BadRemovePaths = []string{"/", "/xxx", "/a"}
+)
+
+var PutTests = []PutTest{
+	PutTest{Path: "/n1"},
+	PutTest{Path: "/n1"},
+	PutTest{Path: "/a/n2"},
+	PutTest{Path: "/", Fails: true},
+	PutTest{Path: "/a", Fails: true},
+	PutTest{Path: "/a/b/c/d/e/f", Fails: true},
+}
+
+var StatTests = []StatTest{
+	{"/a/b/c", `c drwxr-xr-x`, false},
+	{"/a", `a drwxr-xr-x`, false},
+	{"/a/b/c/c3", `c3 -rw-r--r-- 44970`, false},
+	{"/2", `2 -rw-r--r-- 31658`, false},
+	{"zz", `no stat`, true},
+	{"/a/b/c/c5", `no stat`, true},
+	{"/a/b/../", `a drwxr-xr-x`, false},
+}
+
+var WstatTests = []WstatTest{
+	WstatTest{
+		Path:  "/d",
+		Mode:  0700,
+		Mtime: 5,
+	},
+	WstatTest{
+		Path:  "/e/f",
+		Mode:  0704,
+		Mtime: 500,
+	},
+	WstatTest{
+		Path:  "/e",
+		Mode:  0704,
+		Mtime: 500,
+	},
+	WstatTest{
+		Path:  "/a/a2",
+		Mode:  0704,
+		Mtime: 500,
+	},
+	WstatTest{
+		Path:  "/xxx",
+		Fails: true,
+	},
+	WstatTest{
+		Path:  "/a/xxx",
+		Fails: true,
+	},
+}
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

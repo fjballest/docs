@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>TREX(1): translate expressions</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: trex [-Dcfglrstux] to | {from to}
+        -D: debug
+        -c: translate to capitals (upper case)
+        -f: match expressions in full files
+        -g: change globally (as many times as can be done per line)
+        -l: translate to lower case
+        -r: interpret replacements as rune sets
+        -s: handle args as strings and not rexps.
+        -t: translate to title case
+        -u: use unix out
+        -x: match against each extracted text (eg., out from gr -x)
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Trex</em> translates expressions in the input.
+<p>
+When given <code>from</code> and
+<code>to</code> it translates expressions starting at
+<code>from</code> and ending at
+<code>to</code>, for each pair given. Under flag
+<code>-s</code> both expressions are considered strings,
+and flag <code>-r</code> makes them behave like in the
+venerable <code>tr</code> command in UNIX. An empty (but
+not missing) &#34;<code>to</code>&#34; implies removal of the
+matched text in this case.
+<p>
+Flags <code>-x</code> and <code>-f</code> are
+similar to those in <code>gr</code> and are used to
+preserve matching within data portions as selected by previous
+<code>gr</code> calls and to perform the matching against
+the full input text.
+<p>
+There is no flag to delete, just replace with nothing.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Translate digits to letters starting at A:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; eco A01Z | trex -u -r 0-9 A-x
+    AABZ
+    </pre></code>
+<p>
+</ul><p>
+Make a title
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; eco lord of the rings | trex -ut
+    Lord Of The Rings
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/trex</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>INTRO(1): introduction to clive</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; Importzx
+    ; export GOROOT=/zx/sys/golang
+    ; export PLAN9=/plan9
+    ; export CPUTYPE=darwin_amd64
+    ; export GOPATH=/zx/usr/$USER/gosrc
+    ; export GOBIN=/zx/usr/$USER/bin/$CPUTYPE
+    ; PATH=$PATH:/zx/bin/$CPUTYPE:/zx/bin/rc:$PLAN9/bin
+    ; NS=&#39;/ /
+        /zx zx!tcp!zxserver!zx!main
+    &#39;
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+Clive is a system built out of services interconnected through
+channels and other network connections. Processes in clive run on
+other hosted operating systems, because there is no native clive
+kernel as of now.
+<p>
+The central part of the system is a file system (or rather, a set of
+file systems) exported through the zx protocol. The file system(s) may
+be mounted on UNIX-like systems through fuse, to permit alien (UNIX)
+commands to operate on Clive services. The Clive shell and other clive
+commands know how to speak zx directly to Clive servers.
+<p>
+The main tree is usually mounted at <code>/zx</code> and
+its dump can be found at <code>/dump</code>. The
+<code>/once</code> tree keeps stuff not be dumped. The
+tree at <code>/x</code> is used to request command
+execution via <a href="//lsub.org/sys/man/1/xcmd.html">xcmd(1)</a>.
+The dump contains a frozen version of the main tree for each day.
+Directories named <code>tmp</code> or
+<code>tmp.*</code> or <code>*.tmp</code> or
+containing a file named <code>NODUMP</code> are never
+copied to the dump. Files with names starting with a dot character
+(<code>.</code>) are never dumped. See
+<a href="//lsub.org/sys/man/3/nspace.html">nspace(3)</a> for the
+conventions of the name space.
+<p>
+File system services are split into <em>finders</em> and
+<em>zx file trees.</em> Most Clive servers are both
+finders and file trees.
+<p>
+A finder accepts find requests to find directory entries. A file tree
+accepts file operations on directory entries. Directory entries are
+sets of name/value pairs, where certain attributes are expected to
+exist.
+<p>
+Clive commands carry a per-process name-space where foreign (UNIX) or
+zx file systems may be imported. The name space maps name prefixes to
+ordered sets of directory entries and accepts find requests to gather
+directory entries of interest. The name space is initialized by
+inspecting the <code>NS</code> environment variable, which
+can be adjusted at will for different commands, and inherited when new
+processes are created.
+<p>
+Command I/O relies on input and output channels, carrying data as byte
+arrays, directory entries, file addresses, and other types in general.
+Each channel has a name and it is customary to use
+<em>in</em>, <em>out</em>, and
+<em>err</em> to represent the channels for standard input,
+output, and error.
+<p>
+Commands executed within
+<a href="//lsub.org/sys/man/1/ix.html">ix(1)</a> also have the
+<em>ink</em> output channel, used to let them output
+graphical interfaces and requests for <em>ix</em> to look
+for things or to execute commands.
+<p>
+Some commands accept a configuration file. The convention is to
+provide the configuration in the environment, or in a file at
+<code>$home/lib</code>, or in a dot-file at
+<code>$home</code>. For example,
+<a href="//lsub.org/sys/man/1/ql.html">ql(1)</a> looks for
+<code>$ql</code>, or the file
+<code>$home/lib/ql</code>, or the file
+<code>$home/.ql</code>.
+<p>
+File names given to most commands are a combination of a file (path)
+name and a predicate. Either (or both) may be missing from a name. The
+file name along with the predicate is used to select files matching
+the name/predicate pair. See
+<a href="//lsub.org/sys/man/3/names.html">names(3)</a> for a
+description and examples of names and predicates.
+<p>
+Standard I/O in Clive happens through channels of arbitrary data types
+but these conventions hold:
+<ul>
+    <li>Only <code>[]byte</code> messages are considered
+    actual data to be processed.
+    <li><code>zx.Dir</code> directory entries indicate to
+    which file the following data refers to.
+    <li>All other (unknown) messages are to be forwarded to the output
+    when read from the input.
+</ul>
+Most commands rely on these conventions so that, for example, a
+command lists files and retrieves file data from the server and
+following commands in a shell pipe-line operate on such data without
+knowing how to retrieve files from the server. For example:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; gf src,- | gr  func | pf
+    </pre></code>
+</ul><p>
+gets regular files under the <code>src</code> directory
+and sends them to <code>gr</code> to select lines
+containing <code>func</code>, which sends the result to
+<code>pf</code> to print the result.
+<p>
+A Clive command may be given input files either through the standard
+input or, if the command accepts that, by supplying names in the
+command line. Names are a combination of a file name and a predicate.
+Note that more than one file can be sent either way. Clive is not
+UNIX.
+<p>
+Many commands accept a <code>-u</code> flag that makes
+them issue output for UNIX, and not for clive. That is the default in
+<code>pf</code>. By default, all commands process the
+standard stream of messages and so they would not work as expected if
+they are fed by a unix output stream or their output is sent to a unix
+device or command. The commands <code>rf</code> and
+<code>pf</code> convert a UNIX stream to a Clive stream
+and vice-versa. For example
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; seq 15 | rf | gr 1 | pf
+    </pre></code>
+<p>
+</ul><p>
+Alien commands are relegated to using the FUSE provided services and
+are not aware of the Clive name spaces.
+<p>
+<ul>
+    <li>This section documents shell commands.
+    <li>Section 2 documents source packages (in Go).
+    <li>Section 3 documents conventions.
+<p>
+</ul>
+The synopsys in the commands follows the UNIX style, but uses curly
+brackets to indicate flags that may be repeated multiple times.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+To import the main tree using the ZX file protocol:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; Importzx
+    </pre></code>
+</ul><p>
+which does something like:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; zxfuse -n &#39;tcp!crun.lsub.org!zx!dump&#39; /dump&amp;
+    ; zxfuse -v &#39;tcp!crun.lsub.org!zx!main&#39; /zx&amp;
+    ...
+    </pre></code>
+<p>
+</ul><p>
+To work on your local tree, in the environment set by the commands in
+the synopsys:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; export GOBIN=/zx/usr/$USER/bin/$CPUTYPE
+    ; export GOPATH=/zx/usr/$USER/gosrc
+    ; go install ....
+    </pre></code>
+<p>
+</ul><p>
+To work in the system, in the same environment:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; export GOBIN=/zx/bin/$CPUTYPE
+    ; export GOPATH=/zx/sys
+    ; go install ....
+    </pre></code>
+</ul><p>
+or
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; Go install ...
+    </pre></code>
+<p>
+</ul><p>
+See <a href="//lsub.org/sys/man/2/intro.html">intro(2)</a> for an
+implementation example of a hello-world clive command.
+<p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive</code>
+    <li><code>/zx/bin/rc</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/2/intro.html">intro(2)</a>
+    <li><a href="//lsub.org/sys/man/3/nspace.html">nspace(3)</a>
+    <li><a href="//lsub.org/sys/man/3/names.html">names(3)</a>
+    <li><a href="//lsub.org/sys/man/3/dir.html">dir(3)</a>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

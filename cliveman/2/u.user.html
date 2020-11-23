@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/u/user"
+
+const Idle = State(iota) ...
+var IdleIval = 30 * time.Second ...
+func Becomes() (<-chan State, error)
+func IdleFor(d time.Duration) <-chan error
+func IdleTime() (time.Duration, error)
+func Wakeup() <-chan error
+type State int
+
+DESCRIPTION
+
+User events. Currently works only for osx but it should be trivial to fix it
+to work on other systems as well.
+
+CONSTANTS
+
+const (
+	Idle  = State(iota) // user is idle for more than IdleIVal seconds
+	Busy                // user ceases being idle
+	Awake               // user terminal wake up from sleep
+)
+
+TYPES
+
+type State int
+    User states
+
+func (i State) String() string
+
+FUNCTIONS
+
+func Becomes() (<-chan State, error)
+    Notify through the chan returned when the user becomes idle, ceases being
+    idle or resumes after a sleep. Upon errors the channel is closed.
+
+func IdleFor(d time.Duration) <-chan error
+    Notify through the chan returned when the user is idle for more than the
+    given duration. If there's any error the chan is notified with the error
+    indication, a null error is sent otherwise.
+
+func IdleTime() (time.Duration, error)
+    Return the duration for user idleness, if it's more than one day, one day is
+    reported.
+
+func Wakeup() <-chan error
+    Close the returned channel when the terminal resumes from sleep.
+
+VARIABLES
+
+var (
+	IdleIval = 30 * time.Second // user is idle if quiet for more than this.
+	PollIval = 5 * time.Second  // freq. to poll user for idleness
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

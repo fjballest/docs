@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>MVF(1): move files</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: mvf [-Ddnuv] [src] dst | src1 src2... dstdir
+        -D: debug
+        -d: take always destination as a parent dir
+        -n: dry run; report moves but do not make them
+        -u: use unix output
+        -v: report moves
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Mvf</em> moves a single file (or directory) to a
+target name or multiple files to a target directory. The destination
+is the exact name of the new file, and it is overwritten if it already
+exists.
+<p>
+Unlike in UNIX, there is no doubt regarding what the target name is.
+It does not matter if the target is or not a directory and if it
+exists or not.
+<p>
+When a single file is named as a source in the arguments (although it
+might imply a tree of files!), the root of the named source (perhaps a
+single file) will become the named target.
+<p>
+When more than one single source is given (again, sources might imply
+full trees), the destination is always the parent of the source roots.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Move file <code>./1</code> to file
+<code>/tmp/2</code>.
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf 1 | mvf /tmp/2
+    </pre></code>
+<p>
+</ul><p>
+Unlike in UNIX, this is an error in Clive, because the source is a
+file and the copy name is a directory:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf 1 | mvf /tmp
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/mvf</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/lf.html">lf(1)</a> to select
+    files to move.
+    <li><a href="//lsub.org/sys/man/1/pf.html">pf(1)</a> to copy
+    files.
+    <li><a href="//lsub.org/sys/man/1/rmf.html">rmf(1)</a> to remove
+    files.
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>XP(1): evaluate expressions</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: xp [-DFLYqu] [expr]
+        -D: debug
+        -F: report known functions and exit
+        -L: debug lex
+        -Y: debug yacc
+        -q: do not print values as they are evaluated
+        -u: use unix out
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Xp</em> evaluates the expression given as an argument,
+or those in its standard input if none is given. When using standard
+input, each line is parsed and evaluated as a single expression. The
+expressions may involve file attributes. Thus, <em>xp</em>
+replaces the venerable UNIX <code>test</code> command.
+<p>
+The usual arithmetic and logic operators can be used, Values in
+operations are considered as unsigned integers, integers, floating
+point numbers, strings, or booleans, depending on the context.
+<p>
+The following functions are known to <em>xp</em>, all
+operate on floating point numbers:
+<p><ul style="list-style:none;">
+    <code><pre>
+    abs   asin  atanh cosh  floor log2  sqrt  trunc
+    acos  asinh cbrt  exp   log   sin   tan   Γ
+    acosh atan  cos   exp2  log10 sinh  tanh
+    </pre></code>
+<p>
+</ul><p>
+A name that starts with &#34;<code>%</code>&#34; is considered a
+conversion for <code>Printf</code> and can be used as a
+function to print the argument with such conversion.
+<p>
+Any name that is not a function name and is not a conversion can be
+used as a function to ask for the value of a file attribute with such
+name. The names <code>r</code>,
+<code>w</code>, and <code>x</code> can be used
+as attribute names and evaluate to a boolean value indicating if the
+file has any of the read, write, or execute permissions set.
+<p>
+Text enclosed in double quotes is understood always as a name. Also,
+after calling a file attribute as a function, the next non-blank word
+is understood as a name, including characters like
+<code>/</code>, <code>-</code>, etc., which
+would become operators in other places. This is a helper to specify
+file paths in a convenient way.
+<p>
+A string in square brackets represents a time. This can be used with
+the relational operators to compare against attributes that indicate
+times. The string may use any format understood by the [cmd/opt(2)]
+package.
+<p>
+If the last computed yields a value of <code>true</code>
+the command exits with success, and if it is
+<code>false</code> with failure. This, along with flag
+<code>-q</code>, is useful to evaluate expressions as
+shell conditions without printing their value.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+<p><ul style="list-style:none;">
+    See if the length of the file is greater than 3 Mbytes and print
+    <code>y</code> if it is.
+    <code><pre>
+    ; xp -q size afile &#39;&gt;&#39; 3m &amp;&amp; echo y
+    </pre></code>
+<p>
+    Print the mtime for a file
+    <code><pre>
+    ; xp mtime afile
+    2015-05-08 11:35:28
+    </pre></code>
+<p>
+    See if the file was changed since 2013-01-02 3pm
+    <code><pre>
+    ; xp mtime afile &#39;&gt;&#39; &#39;[2013-01-02 3pm]&#39;
+    false
+    </pre></code>
+<p>
+    Print 4KiB as a 32bit binary number [
+    <p><ul style="list-style:none;">
+        ; xp &#39;%064b (4 <b> 1024)&#39; 00000000000000000001000000000000
+    </ul><p>
+    ]
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li>[/zx/sys/src/clive/cmd/xp[
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

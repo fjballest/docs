@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="/ls/index.html">
+		<img src="/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/sys/man">User's manual</a>. <a href="/sys/man/1">Section 1</a></b>
+<h2>XPR(1): expression evaluator</h2>
+<hr>
+<p>
+<p><h2>USAGE</h2>
+<hr>
+<p><ul style="list-style: none;">
+<code><pre>
+<li>usage: xpr [-DFq] [expr]
+	-D: debug
+	-F: report known functions and exit
+	-q: do not print values as they are evaluated
+
+</pre></code><p>
+<p>
+<p>
+</ul><p>
+<p><h2>DESCRIPTION</h2>
+<hr>
+<em>Xpr
+</em> evaluates the expression given as an argument, or in its standard input if none is given. When using standard input, each line is parsed and evaluated as an expression.
+<p>
+The usual arithmetic and logic operators can be used, Values in operations are considered as unsigned integers, floating point numbers, strings, or booleans, depending on the context.
+<p>
+The following functions are known and operate on floating point numbers:
+<p><ul style="list-style: none;">
+<code><pre>
+<li>abs   acos  acosh asin  asinh atan  atanh cbrt  
+cos   cosh  exp   exp2  floor log   log10 log2  
+sin   sinh  sqrt  tan   tanh  trunc Γ     
+
+</pre></code><p>
+<p>
+<p>
+</ul><p>
+This command also replaces the venerable UNIX test command. The name of a directory attribute can be used as a function on a file name and yields the value of the attribute as the result.
+<p>
+A string in square brackets may be used to indicate a time. This can be used with the relational operators to compare against attributes that indicate times. The string may use any format understood by the 
+[cmd/opt(2)]
+ package
+<p>
+If the last computed yields a value of 
+<code>true
+</code> the command exits with success, and if it is 
+<code>false
+</code> with failure. This, along with flag 
+<code>-q
+</code>, is useful to evaluate expressions as shell conditions without printing their value.
+<p>
+<p><h2>EXAMPLES</h2>
+<hr>
+<p><ul style="list-style: none;">
+See if the length of the file is greater than 3, and print 
+<code>y
+</code> if it is.
+<code><pre>
+<li>xpr -q size afile &#39;&gt;&#39; 3 &amp;&amp; echo y
+
+</pre></code><p>
+<p>
+Print the mtime for a file
+<code><pre>
+<li>xpr mtime afile
+
+</pre></code><p>
+<p>
+See if the file was changed since 2013-01-02 3pm Pint 1 if it was and 0 if it was not.
+<code><pre>
+<li>xpr mtime afile &#39;&gt;&#39; &#39;[2013-01-02 3pm]&#39;
+
+</pre></code><p>
+<p>
+<p>
+</ul><p>
+<p><h2>SOURCE</h2>
+<hr>
+<p><ul>
+<code><li>/zx/sys/src/clive/cmd/xpr
+</code><p>
+<p>
+</ul><p>
+<p>
+<p><b><a href="/sys/man">User's manual</a>. <a href="/sys/man/1">Section 1</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2013
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

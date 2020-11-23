@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/2">Section 2</a>.</b>
+<h2>INTRO(2): introduction to clive packages</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>SYNOPSYS</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    import (
+        &#34;clive/cmd&#34;
+        ...
+    )
+    </pre></code>
+<p>
+    <code><pre>
+    ; Go install clive/...
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+Clive commands are written in the Go programming language.
+<p>
+External packages are not to be imported directly from their source
+repositories. Instead, they should be installed under the
+<code>clive/x/...</code> path and then imported from there
+(to survive to incompatible upgrades made by their authors).
+<p>
+The compiler requires modifications as made to the Lsub fork of the
+standard Go compiler.
+<p>
+In particular, there is a <code>close</code> operation for
+channels that accepts an error indication and can be used both by the
+sender and the receiver. A new <code>cerror</code>
+operation retrieves the error causing the close of a channel. The send
+operation can be used as a value to see if the send could proceed or
+the channel was closed. For example:
+<p><ul style="list-style:none;">
+    <code><b>[:]</b>:<br><pre>
+    c := make(chan []byte, 0)
+    for i := 0; i &lt; 10; i++ {
+    ok := c &lt;- []byte(fmt.Sprintf(&#34;&lt;%d&gt;&#34;, i))
+        if !ok {
+            dbg.Fatal(cerror(c))
+        }
+    }
+            close(c, &#34;oops&#34;)
+    </pre></code>
+<p>
+</ul><p>
+The runtime provides support for application contexts, which is also
+missing in the standard (non-lsub) Go.
+<p>
+Most system I/O happens through channels packaged in
+<code>nchan.Conn</code> structures. These bridge external
+pipes and connections to channels.
+<p>
+Most application I/O happens through
+<code>interface{}</code> channels, usually by calling
+<code>clive/cmd</code> functions. See
+<a href="//lsub.org/sys/man/1/intro.html">intro(1)</a> for a
+description of the environment variables used when compilying, and for
+conventions regarding I/O.
+<p>
+The <a href="//lsub.org/sys/man/1/Go.html">Go(1)</a> command can be
+used to adjust them and run the standard <code>go</code>
+command to compile and operate on system source.
+<p>
+But for a few pages (including this one), the manual pages in this
+section are generated using <code>godoc</code> from the
+system source.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+To learn how to use the <code>clive/ch</code> package:
+<p><ul style="list-style:none;">
+    <code><b>[:]</b>:<br><pre>
+    ; doc clive/ch
+    </pre></code>
+</ul><p>
+or
+<p><ul style="list-style:none;">
+    <code><b>[:]</b>:<br><pre>
+    ; doc 2 clive/ch
+    </pre></code>
+<p>
+</ul><p>
+To compile the entire system:
+<p><ul style="list-style:none;">
+    <code><b>[:]</b>:<br><pre>
+    ; cd /zx/sys/src/clive
+    ; Go install ./...
+    </pre></code>
+<p>
+</ul><p>
+The <a href="//lsub.org/sys/man/1/eco.html">eco(1)</a> command
+source is a good example for a simple Clive command.
+<p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive</code>
+    <li><code>/zx/bin/rc</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>BUGS</h2>
+Yes. It&#39;s a research system. Nevertheless, we are using it as our
+computing environment for most daily work.
+<p>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/2">Section 2</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>GG(1): select greps.</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: gr [-Daeflmsvx] rexp [rexp]
+        -D: debug
+        -a: print just addresses
+        -e: extend regexps to match all the text
+        -f: print addresses for matches in full files (like sam)
+        -l: print just the names of matching files
+        -m: print just matching text
+        -s: just status
+        -v: invert match
+        -x: print selections for further editing commands
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Gg</em> is
+<a href="http://lsub.org/sys/man/1/gr.html">gr(1)</a> with flags
+<code>-xef</code>. It is useful in pipes after a call to
+<a href="http://lsub.org/sys/man/1/gx.html">gx(1)</a> to filter the
+selections that contain text matching the given expression.
+<p>
+<a name="sec3"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/app/gr</code>
+<p>
+</ul>
+<a name="sec4"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="http://lsub.org/sys/man/1/gr.html">gr(1)</a>, for a
+    full description and examples.
+</ul>
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

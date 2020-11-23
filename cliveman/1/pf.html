@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>PF(1): print files</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: pf [-DWadfhilnpsuw] [-o arg] {file}
+        -D: debug
+        -W: writeall file data back to disk (-d implied)
+        -a: print addresses
+        -d: no not print file data
+        -f: no not print dir data
+        -h: serve the output as a page sent to ink
+        -i: print also ignored data
+        -l: long list for dirs
+        -n: print just names
+        -o: write destination path
+        -p: print just paths
+        -s: separate messages, print each message in its own line.
+        -u: don&#39;t use unix out
+        -w: write file data back to disk (-d implied)
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Pf</em> prints files. Usually the files come from the
+standard input as a result of a, perhaps filtered,
+<code>lf</code> command.
+<p>
+As <a href="//lsub.org/sys/man/1/intro.html">intro(1)</a> says, the
+input in Clive includes directory entries, raw data, and other data
+types (ignored by convention). This command is used as the last
+command in many pipe-lines to print the result of the processing or to
+write the resulting files back to disk.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+List files in the home directory:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf $home,1 | pf
+    /zx/usr/nemo
+    /zx/usr/nemo/acme
+    /zx/usr/nemo/bin
+    ...
+    </pre></code>
+<p>
+</ul><p>
+List Go files and their contents:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf -g ,~go$ | pf
+    </pre></code>
+<p>
+</ul><p>
+Rewrite all files with their first three lines:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lg -g , | lns -r ,3 | pf -w
+    </pre></code>
+<p>
+</ul><p>
+The same, but write them under <code>/tmp</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lg -g , | lns -r ,3 | pf -w -o /tmp
+    </pre></code>
+<p>
+</ul><p>
+There are more examples in
+<a href="//lsub.org/sys/man/1/lf.html">lf(1)</a> and other manual
+pages.
+<p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/pf</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="//lsub.org/sys/man/1/lf.html">lf(1)</a>, list files.
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

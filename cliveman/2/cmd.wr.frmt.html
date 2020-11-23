@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/cmd/wr/frmt"
+
+const Left = false ...
+const Esc = "\001" ...
+const NoBlankLines ParFmt = iota ...
+func Fmt(wc <-chan []rune, wid int, right bool, keeplines ParFmt) <-chan []rune
+func Words() (chan<- string, <-chan []rune)
+type ParFmt int
+
+DESCRIPTION
+
+CONSTANTS
+
+const (
+	Left = false // left-justify only
+	Both = true  // justify both margins
+)
+    1st arg to Fmt
+
+const (
+	Esc   = "\001" // start of raw word escape
+	NoEsc = "\002" // end of raw word escape
+)
+    Escapes can be used to handle a portion of text as a single word. They are
+    also written to the output and, if used, requires the caller to remove them
+    before presenting data to the user.
+
+TYPES
+
+type ParFmt int
+    2nd arg to Fmt
+
+const (
+	NoBlankLines  ParFmt = iota // format everything as a single par
+	OneBlankLine                // output one empty line between pars
+	AllBlankLines               // keep all empty lines between pars
+)
+
+FUNCTIONS
+
+func Fmt(wc <-chan []rune, wid int, right bool, keeplines ParFmt) <-chan []rune
+    Given a chan as the output of Words(), return a chan to read lines from it
+    so that each line is at most n runes wide. This eats most of the white space
+    including empty lines. Justify also the right margin if right is true. If
+    keeplines is true, runs of empty lines are not eated, but replaced with a
+    single empty line.
+
+func Words() (chan<- string, <-chan []rune)
+    Given a chan where we send strings, return a chan to get separate words and
+    white-space runs.
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

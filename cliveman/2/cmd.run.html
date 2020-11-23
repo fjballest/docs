@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/cmd/run"
+
+func Cmd(args ...string) (*Proc, error)
+func CtxCmd(adjust func(*cmd.Ctx), args ...string) (*Proc, error)
+func PipeTo(args ...string) (*Proc, error)
+func PipeToCtx(adjust func(*cmd.Ctx), args ...string) (*Proc, error)
+func PipeToUnix(args ...string) (*Proc, error)
+func UnixCmd(args ...string) (*Proc, error)
+type Proc struct { ... }
+    func Cmd(args ...string) (*Proc, error)
+    func CtxCmd(adjust func(*cmd.Ctx), args ...string) (*Proc, error)
+    func PipeTo(args ...string) (*Proc, error)
+    func PipeToCtx(adjust func(*cmd.Ctx), args ...string) (*Proc, error)
+    func PipeToUnix(args ...string) (*Proc, error)
+    func UnixCmd(args ...string) (*Proc, error)
+
+DESCRIPTION
+
+run a command and use channels for I/O
+
+CONSTANTS
+
+TYPES
+
+type Proc struct {
+	Id   int
+	Args []string
+	In   chan<- interface{} // process input
+	Out  <-chan interface{} // process output
+	Err  <-chan interface{} // process errors
+	// contains filtered or unexported fields
+}
+    A running command. Out and Err correspond to the "out" and "err" channels.
+    The status is reported by closing the Err channel using it. You can use
+    ch.Merge() to merge Out and Err into a single stream.
+
+func Cmd(args ...string) (*Proc, error)
+    Run args as a Clive command and return it. The command runs in a new clive
+    cmd context with:
+
+    "in" set to null
+    "out" set to a new Proc.Out chan
+    "err" set to a new Proc.Err chan
+
+func CtxCmd(adjust func(*cmd.Ctx), args ...string) (*Proc, error)
+    Run args as a clive command with a context adjusted by the caller, and
+    return it. The command runs in a new clive cmd context with:
+
+    "in" set to null
+    "out" set to a new Proc.Out chan
+    "err" set to a new Proc.Err chan
+
+    Adjust is called in that context before actually starting the command, to
+    let it adjust the context at will, but in, out, and err are set as said no
+    matter what adjust does.
+
+func PipeTo(args ...string) (*Proc, error)
+    Run args as a clive command with an open input channel. The command runs in
+    a new clive cmd context with
+
+    "in" set to a new Proc.In chan
+    "out" set to a new Proc.Out chan
+    "err" set to a new Proc.Err chan
+
+func PipeToCtx(adjust func(*cmd.Ctx), args ...string) (*Proc, error)
+    Run args as a clive command with a context adjusted by the caller and an
+    open input channel, and return it. The command runs in a new clive cmd
+    context with:
+
+    "in" set to a new Proc.In chan
+    "out" set to a new Proc.Out chan
+    "err" set to a new Proc.Err chan
+
+    Adjust is called in that context before actually starting the command, to
+    let it adjust the context at will, but in, out, and err are set as said no
+    matter what adjust does.
+
+func PipeToUnix(args ...string) (*Proc, error)
+    Run args as a unix command with an open input channel. The command runs in a
+    new clive cmd context with
+
+    "in" set to a new Proc.In chan
+    "out" set to a new Proc.Out chan
+    "err" set to a new Proc.Err chan
+
+func UnixCmd(args ...string) (*Proc, error)
+    Run args as a Unix command and return it. The command runs in a new clive
+    cmd context with
+
+    "in" set to null
+    "out" set to a new Proc.Out chan
+    "err" set to a new Proc.Err chan
+
+func (p *Proc) Wait() error
+    Wait for the command to terminate and return its status.
+
+FUNCTIONS
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

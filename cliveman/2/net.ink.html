@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/net/ink"
+
+var Debug bool
+func AuthHandler(fn http.HandlerFunc) http.HandlerFunc
+func AuthWebSocketHandler(h websocket.Handler) http.HandlerFunc
+func Serve() error
+func ServeJS()
+func ServeZX()
+func UsePort(port string)
+func WriteHeaders(w io.Writer)
+func NewButtonSet(button ...*Button) *ButtonSet
+func NewColsPg(path string, cols ...[]interface{}) *Pg
+func NewPg(path string, els ...interface{}) *Pg
+func NewRadioSet(value *string, button ...*Button) *RadioSet
+func NewTxt(lines ...string) *Txt
+type Button struct { ... }
+type ButtonSet struct { ... }
+    func NewButtonSet(button ...*Button) *ButtonSet
+type Ctlr struct { ... }
+type Ev struct { ... }
+type Html string
+type Pg struct { ... }
+    func NewColsPg(path string, cols ...[]interface{}) *Pg
+    func NewPg(path string, els ...interface{}) *Pg
+type RadioSet struct { ... }
+    func NewRadioSet(value *string, button ...*Button) *RadioSet
+type Tagger interface { ... }
+type Txt struct { ... }
+    func NewTxt(lines ...string) *Txt
+type Url string
+
+DESCRIPTION
+
+Clive's ink: web based user interfaces.
+
+CONSTANTS
+
+TYPES
+
+type Button struct {
+	Name  string // reported in events
+	Tag   string // shown in the button
+	Value *bool  // nil, or on/off value for check buttons
+	// contains filtered or unexported fields
+}
+    A single button
+
+type ButtonSet struct {
+	*Ctlr
+	// contains filtered or unexported fields
+}
+    A set of buttons See Ctlr for the common API for controls. The events posted
+    to the user are:
+
+    start
+    end
+    click name nb	(nb is the index in the button array)
+    Set  name nb on|off
+
+func NewButtonSet(button ...*Button) *ButtonSet
+    Create a Button Set The buttons are check buttons if they have a pointer to
+    a bool
+
+func (bs *ButtonSet) WriteTo(w io.Writer) (tot int64, err error)
+    Write the HTML for the button set control to a page.
+
+type Ctlr struct {
+	Id string // unique id for the controlled element
+
+	sync.Mutex
+	// contains filtered or unexported fields
+}
+    Element controler, provides a chan interface for a page interface element,
+    running over a web socket to the element. Supports multiple views and
+    reflects events to synchronize them. All controls export this public
+    interface.
+
+func (c *Ctlr) Close() error
+    Terminate the operation of the control and remove it from pages.
+
+func (c *Ctlr) CloseView(id string)
+    Close the view of this control with the given id.
+
+func (c *Ctlr) Closed() bool
+    Return true if the control is closed.
+
+func (c *Ctlr) Events() chan *Ev
+    Return the (application) event channel for the control.
+
+func (c *Ctlr) GetId() string
+
+func (c *Ctlr) SendEventsTo(evc chan *Ev) error
+    Set the (application) event channel for the control to the given one. It is
+    an error to call this after the event channel is already set.
+
+func (c *Ctlr) SetTag(s string)
+
+func (c *Ctlr) Show()
+    Ask the viewer to show this control (eg, by moving it to the first one in
+    the page).
+
+func (c *Ctlr) Tag() string
+
+func (c *Ctlr) Views() []string
+    Return the list of identifiers of the current views of the control.
+
+func (c *Ctlr) Wait()
+    Wait for the control to be closed.
+
+type Ev struct {
+	Id, Src string   // element id and source view id (eg txt1, txt1_3)
+	Vers    int      // version of the control the event is for
+	Args    []string // events with string arguments
+	Data    []byte   // all other events
+	// contains filtered or unexported fields
+}
+    Events to/from a control Args[0] is the event name If the name starts with
+    uppercase, it does reflect and all views get an automatic copy of the event.
+
+type Html string
+    Raw HTML text when used as a page element.
+
+type Pg struct {
+	*Ctlr
+	Tag  string
+	Cmds []string // If set, these commands are added to the top
+	sync.Mutex
+	Path   string
+	NoAuth bool // set to true to disable auth
+	// contains filtered or unexported fields
+}
+    A web page used as a user interface. It's itself a control, and posts the
+    events:
+
+    start
+    end
+    click4 name colname
+
+func NewColsPg(path string, cols ...[]interface{}) *Pg
+    Create a new UI multicolum page, authenticated. Elements can be strings,
+    Html, Url, or io.WriterTo that know how to write the HTML for them (controls
+    implement this interface). The tag line for each element comes from its Tag
+    method if it's a Tagger.
+
+func NewPg(path string, els ...interface{}) *Pg
+    Create a new single column UI page, authenticated. Elements can be strings,
+    Html, or io.WriterTo that know how to write the HTML for them (controls
+    implement this interface).
+
+func (pg *Pg) Add(el interface{}) (string, error)
+    Add the given element to the page. The element is always added to the last
+    column and can be a string, Url, Html, io.WriterTo, or fmt.Stringer. The
+    string returned can be used to remove the element later. If it's a Url, the
+    string can be the url or "url|name" where name is the name to be shown as
+    the tag.
+
+func (pg *Pg) AddAt(el interface{}, colnb int) (string, error)
+    Like Add, but add the element to the given column.
+
+func (pg *Pg) Cols() [][]string
+    Return the layout of the page, in columns. Each column returns the ids of
+    the elements shown.
+
+func (pg *Pg) Del(id string)
+    Delete the element with the given id from the page (see Add for the id).
+
+type RadioSet struct {
+	*Ctlr
+	Value *string // current value
+	// contains filtered or unexported fields
+}
+    A set of radio buttons See Ctlr for the common API for controls. The events
+    posted to the user are:
+
+    start
+    end
+    Set  name idx on
+
+func NewRadioSet(value *string, button ...*Button) *RadioSet
+    Create a Radio button Set. Value is updated to reflect the selected button
+    name.
+
+func (bs *RadioSet) WriteTo(w io.Writer) (tot int64, err error)
+    Write the HTML for the radio set control to a page.
+
+type Tagger interface {
+	Tag() string
+}
+    Elements implementing this may provide the tag as the tittle for the tag
+    bar.
+
+type Txt struct {
+	*Ctlr
+	// contains filtered or unexported fields
+}
+    Editable text control. See Ctlr for the common API for controls. The events
+    posted to the user are:
+
+    start
+    end
+    tag wordclicked
+    click[1248]	textclicked	p0 p1	(buttons are 1, 2, 4, 8, 16, ...)
+    tick	p0 p1
+    eins	text p0
+    edel	p0 p1
+    intr	esc|...
+
+func NewTxt(lines ...string) *Txt
+    Create a new text control with the given body lines.
+
+func (t *Txt) Clean()
+    Flag the text as clean
+
+func (t *Txt) ClientDoesUndoRedo()
+    If called, undo and redo events are not processed by the text, but are
+    forwarded to the client as events instead.
+
+func (t *Txt) ContdEdit()
+
+func (t *Txt) Del(off, n int) []rune
+    Delete
+
+func (t *Txt) DelMark(name string)
+
+func (t *Txt) Dirty()
+    Flag the text as dirty; it's a nop if t.DoesntGetDirty() has been called.
+
+func (t *Txt) DoesntGetDirty()
+    Prevent t from getting dirty despite viewer or user calls.
+
+func (t *Txt) Edits()
+    Permit user edits (default)
+
+func (t *Txt) Get(off int, n int) <-chan []rune
+    Retrieve the current text. Txt is locked while getting the text
+
+func (t *Txt) GetText() *txt.Text
+    Return the text so the application can edit it at will, further updates from
+    the views will fail due to wrong version, and the caller must call
+    EditDone() when done so the views are reloaded with the new text.
+
+func (t *Txt) Getc(off int) rune
+    Retrieve a rune.
+
+func (t *Txt) Ins(data []rune, off int) error
+    Insert
+
+func (t *Txt) IsDirty() bool
+    Is the text dirty (as indicated by calls to Dirty/Clean)?
+
+func (t *Txt) Len() int
+    Get the text length.
+
+func (t *Txt) LineAt(off int) int
+
+func (t *Txt) LineOff(n int) int
+
+func (t *Txt) LinesAt(off0, off1 int) (int, int)
+
+func (t *Txt) LinesOff(ln0, ln1 int) (int, int)
+
+func (t *Txt) Mark(name string) *txt.Mark
+
+func (t *Txt) MarkIns(mark string, data []rune) error
+
+func (t *Txt) Marks() []string
+
+func (t *Txt) NoEdits()
+    Prevent user edits
+
+func (t *Txt) PutText()
+    After calling GetText() and using the txt.Text to edit by program, this must
+    be called to unlock the text and reload the views with the new text.
+
+func (t *Txt) Redo() bool
+
+func (t *Txt) SetFont(f string)
+    Change the font used. Known fonts are "r", "b", "i", "t". Known combinations
+    are "rb", "tb", and "ri".
+
+func (t *Txt) SetMark(name string, off int) *txt.Mark
+
+func (t *Txt) SetSel(p0, p1 int)
+
+func (t *Txt) Undo() bool
+
+func (t *Txt) UngetText()
+    Undo a GetText w/o putting the new text (no text was changed)
+
+func (t *Txt) Vers() int
+
+func (t *Txt) WriteTo(w io.Writer) (tot int64, err error)
+    Write the HTML for the text control to a page.
+
+type Url string
+    External page when used as a page element
+
+FUNCTIONS
+
+func AuthHandler(fn http.HandlerFunc) http.HandlerFunc
+    Authenticate before calling the handler. When TLS is disabled, or there's no
+    key file, auth is considered ok.
+
+func AuthWebSocketHandler(h websocket.Handler) http.HandlerFunc
+    Authenticate a websocket before servicing it.
+
+func Serve() error
+    Serve the pages. Even if they are NoAuth, it's always through TLS.
+
+func ServeJS()
+    go:generate mkjs Serve the javascript files at /js. Only needed if NewPg()
+    is not used.
+
+func ServeZX()
+    Serve files under /zx
+
+func UsePort(port string)
+    Use port, "8181" by default
+
+func WriteHeaders(w io.Writer)
+    Write headers to a page so it can support controls. Not needed for pages
+    created with NewPg. If you do not use NewPg, remember to use AuthHandler and
+    HTTPS.
+
+VARIABLES
+
+var (
+	Debug bool // set to enable debug diagnostics
+
+)
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

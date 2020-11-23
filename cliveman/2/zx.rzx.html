@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/zx/rzx"
+
+const Ttrees MsgId = iota + 66 ...
+var ErrBadMsg = errors.New("bad message type")
+func FillAddr(addr string) string
+func UnpackMsg(buf []byte) ([]byte, *Msg, error)
+func Dial(addr string, tlscfg ...*tls.Config) (*Fs, error)
+func NewROServer(addr string, tlscfg ...*tls.Config) (*Server, error)
+func NewServer(addr string, tlscfg ...*tls.Config) (*Server, error)
+type Fs struct { ... }
+    func Dial(addr string, tlscfg ...*tls.Config) (*Fs, error)
+type Msg struct { ... }
+type MsgId byte
+type Server struct { ... }
+    func NewROServer(addr string, tlscfg ...*tls.Config) (*Server, error)
+    func NewServer(addr string, tlscfg ...*tls.Config) (*Server, error)
+
+DESCRIPTION
+
+Remote ZX access
+
+CONSTANTS
+
+TYPES
+
+type Fs struct {
+	*dbg.Flag
+	*zx.Flags
+	Verb bool
+
+	sync.Mutex // for redials
+	// contains filtered or unexported fields
+}
+    Remote zx client
+
+func Dial(addr string, tlscfg ...*tls.Config) (*Fs, error)
+    addr is completed if needed using FillAddr() The previously dialed addresses
+    are cached and the old connections are returned. Different fsys names are
+    considered different dials. Network errors are reported including "i/o
+    error", and the caller might call Redial() to re-create the FS or Close() to
+    cease its operation.
+
+func (fs *Fs) Close() error
+
+func (fs *Fs) Find(p, fpred, spref, dpref string, depth0 int) <-chan zx.Dir
+
+func (fs *Fs) FindGet(p, fpred, spref, dpref string, depth0 int) <-chan interface{}
+
+func (fs *Fs) Fsys(name string) (*Fs, error)
+
+func (fs *Fs) Get(p string, off, count int64) <-chan []byte
+
+func (fs *Fs) Link(oldp, newp string) <-chan error
+
+func (fs *Fs) Move(from, to string) <-chan error
+
+func (fs *Fs) Put(p string, d zx.Dir, off int64, dc <-chan []byte) <-chan zx.Dir
+
+func (fs *Fs) Redial() error
+    Dial again a previously dialed remote ZX FS. If the file system is still
+    dialed, the old connection is closed and a new one created. Upon network
+    errors, the error strings contain "i/o errror" and the caller might just
+    redial the file system to try to continue its operation, or Close() might be
+    called instead.
+
+func (fs *Fs) Remove(p string) <-chan error
+
+func (fs *Fs) RemoveAll(p string) <-chan error
+
+func (fs *Fs) Stat(p string) <-chan zx.Dir
+
+func (fs *Fs) String() string
+
+func (fs *Fs) Trees() []string
+
+func (fs *Fs) Wstat(p string, d zx.Dir) <-chan zx.Dir
+
+type Msg struct {
+	Op    MsgId
+	Fsys  string // All requests
+	Path  string // All requests
+	Off   int64  // Get, Put
+	Count int64  // Get
+	D     zx.Dir // Put, Wstat
+	To    string // Move, Liink
+	Pred  string // Find, Findget
+	Spref string // Find, Findget
+	Dpref string // Find, Findget
+	Depth int    // Find, Findget
+}
+
+func (m *Msg) String() string
+
+func (m *Msg) TypeId() uint16
+
+func (m *Msg) Unpack(b []byte) (interface{}, error)
+
+func (m *Msg) WriteTo(w io.Writer) (n int64, err error)
+
+type MsgId byte
+
+const (
+	Ttrees MsgId = iota + 66
+	Tstat
+	Tget
+	Tput
+	Tmove
+	Tlink
+	Tremove
+	Tremoveall
+	Twstat
+	Tfind
+	Tfindget
+	Tend
+	Tmin = Ttrees
+)
+
+func (o MsgId) String() string
+
+type Server struct {
+	*dbg.Flag
+	*sync.Mutex
+	// contains filtered or unexported fields
+}
+
+func NewROServer(addr string, tlscfg ...*tls.Config) (*Server, error)
+    Start a read-only server at the given address.
+
+func NewServer(addr string, tlscfg ...*tls.Config) (*Server, error)
+    Start a read-write server at the given address.
+
+func (s *Server) Close()
+    Terminate the server.
+
+func (s *Server) NoAuth()
+    Disable auth in server
+
+func (s *Server) Serve(name string, fs zx.Fs) error
+    Serve fs with the given tree name.
+
+func (s *Server) String() string
+
+func (s *Server) Wait() error
+    Wait until the server is done
+
+FUNCTIONS
+
+func FillAddr(addr string) string
+    return network!host!port!tree from addr.
+
+    host -> tcp!host!zx!main
+    host!port -> tcp!host!port!main
+    net!host!port -> net!host!port!main
+
+func UnpackMsg(buf []byte) ([]byte, *Msg, error)
+
+VARIABLES
+
+var ErrBadMsg = errors.New("bad message type")
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

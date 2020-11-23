@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/sre"
+
+const Fwd = iota ...
+var Debug = false
+func Match(sre, text string) ([]string, error)
+func Repl(matches []string, s string) string
+func Compile(re []rune, dir Dir) (prg *ReProg, err error)
+func CompileStr(re string, dir Dir) (prg *ReProg, err error)
+type Dir int
+type Range struct { ... }
+type ReProg struct { ... }
+    func Compile(re []rune, dir Dir) (prg *ReProg, err error)
+    func CompileStr(re string, dir Dir) (prg *ReProg, err error)
+type Text interface { ... }
+
+DESCRIPTION
+
+Structural Regular Expressions on rune based text.
+
+Besides those understood by Sam, these ones have \w and \s to match unicode
+alpha and space runes (can be also used within character classes). Matching
+does not wrap if no further matches are found.
+
+CONSTANTS
+
+const (
+	Fwd = iota // compile for forward search in text
+	Bck        // compile for backward search in text
+)
+    Argument to Compile.
+
+TYPES
+
+type Dir int
+    Argument to Compile.
+
+type Range struct {
+	P0, P1 int
+}
+    A selection in the string implied by a regexp.
+
+type ReProg struct {
+	// contains filtered or unexported fields
+}
+    A compiled regexp
+
+func Compile(re []rune, dir Dir) (prg *ReProg, err error)
+    Compile re as a regexp to search forward or backward in text
+
+func CompileStr(re string, dir Dir) (prg *ReProg, err error)
+    Compile re as a regexp to match in text, forward if dir is Fwd, and backward
+    otherwise.
+
+func (prg *ReProg) Exec(txt Text, start int, end int) []Range
+    Execute prg to search in s starting at s[start] and not going past s[end],
+    when compiled to search forward. When compiled to search backward, it starts
+    at s[start] but goes backwards and considers s[end] the end of text. Like
+    ExecStr but for a general rune provider. Returns nil if there is no match.
+    Otherwise, the returned slice contains at 0 the match for the full
+    expression and in further elements the matching ranges for subexpressions
+    matched (i.e, \1, \2, ...). The matched substrings are s[range.P1:range.P1].
+
+func (prg *ReProg) ExecRunes(s []rune, start int, end int) []Range
+    Like Exec but for []rune See Exec for more details.
+
+func (prg *ReProg) ExecStr(s string, start int, end int) []Range
+    Like Exec but for strings. See Exec for more details.
+
+func (prg *ReProg) Match(text string) []string
+    Like Match, for a compiled sre.
+
+func (prg *ReProg) String() string
+    Debug: return a printable program, including the entire NFA machine program.
+
+type Text interface {
+	Len() int
+	Getc(at int) rune
+}
+    Interface for a rune provider to match a regexp against it.
+
+FUNCTIONS
+
+func Match(sre, text string) ([]string, error)
+    Match (forward) the given sre against the given string, return the
+    (sub)strings matching (nil if none) and any error.
+
+func Repl(matches []string, s string) string
+    Replace in the given string \n with the corresponding entry in matches. Only
+    \0 to \9 accepted.
+
+VARIABLES
+
+var Debug = false
+    Set to true to enable debug of rexp execution.
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

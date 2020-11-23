@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<a href="/ls/clive.html"><img src="/clive.gif"></a><img src ="/zxlogo.gif" style="float:right"><p><b><a href="/sys/man">User's manual</a>, 2nd ed .</b><p><title>Section 2: go packages</title>
+<h1>Section 2: go packages</h1>
+<hr><ul>
+<li> <b><a href="/sys/man/2/intro.html">intro:</a></b><em> introduction to clive packages </em>
+<li> <b><a href="/sys/man/2/ch.html">ch</a>:</b><em> Channels that can go through external I/O devices for Clive. </em>
+<li> <b><a href="/sys/man/2/cmd.html">cmd</a>:</b><em> Clive command tools and interfaces </em>
+<li> <b><a href="/sys/man/2/cmd.child.html">cmd.child</a>:</b><em> Report the set of pids for a command and all its descendants </em>
+<li> <b><a href="/sys/man/2/cmd.look.html">cmd.look</a>:</b><em> Return commands to run when the user looks for strings. </em>
+<li> <b><a href="/sys/man/2/cmd.opt.html">cmd.opt</a>:</b><em> command line options, in the unix style and working on any argv[] array. </em>
+<li> <b><a href="/sys/man/2/cmd.run.html">cmd.run</a>:</b><em> run a command and use channels for I/O </em>
+<li> <b><a href="/sys/man/2/cmd.test.html">cmd.test</a>:</b><em> Help for testing commands </em>
+<li> <b><a href="/sys/man/2/cmd.tty.html">cmd.tty</a>:</b><em> UNIX tty tools </em>
+<li> <b><a href="/sys/man/2/cmd.wr.frmt.html">cmd.wr.frmt</a>:</b><em> CONSTANTS </em>
+<li> <b><a href="/sys/man/2/cmd.wr.refs.html">cmd.wr.refs</a>:</b><em> References for wr using the refer format </em>
+<li> <b><a href="/sys/man/2/dbg.html">dbg</a>:</b><em> Debug tools </em>
+<li> <b><a href="/sys/man/2/fswatch.html">fswatch</a>:</b><em> file system watcher </em>
+<li> <b><a href="/sys/man/2/fuse.html">fuse</a>:</b><em> FUSE service loop, from bazil.org. </em>
+<li> <b><a href="/sys/man/2/fuse.ostest.html">fuse.ostest</a>:</b><em> Utilities to aid in tests of fuse file systems. Mimics zx/fstest but using </em>
+<li> <b><a href="/sys/man/2/mblk.html">mblk</a>:</b><em> Memory block buffers </em>
+<li> <b><a href="/sys/man/2/mblk.rwtest.html">mblk.rwtest</a>:</b><em> Test tools for things that can be read and written. </em>
+<li> <b><a href="/sys/man/2/net.html">net</a>:</b><em> Network services and tools over clive/ch chans. </em>
+<li> <b><a href="/sys/man/2/net.auth.html">net.auth</a>:</b><em> Authentication services for clive. </em>
+<li> <b><a href="/sys/man/2/net.ink.html">net.ink</a>:</b><em> Clive's ink: web based user interfaces. </em>
+<li> <b><a href="/sys/man/2/net.ink.js.html">net.ink.js</a>:</b><em> VARIABLES </em>
+<li> <b><a href="/sys/man/2/ns.html">ns</a>:</b><em> name spaces. </em>
+<li> <b><a href="/sys/man/2/snarf.html">snarf</a>:</b><em> Access to the system clipboard. </em>
+<li> <b><a href="/sys/man/2/sre.html">sre</a>:</b><em> Structural Regular Expressions on rune based text. </em>
+<li> <b><a href="/sys/man/2/txt.html">txt</a>:</b><em> In-memory text with insertion, removal, selection, and marks </em>
+<li> <b><a href="/sys/man/2/u.html">u</a>:</b><em> users </em>
+<li> <b><a href="/sys/man/2/u.user.html">u.user</a>:</b><em> User events. Currently works only for osx but it should be trivial to fix it </em>
+<li> <b><a href="/sys/man/2/work.html">work</a>:</b><em> A pool of worker processes. </em>
+<li> <b><a href="/sys/man/2/zx.html">zx</a>:</b><em> Clive ZX file system tools. </em>
+<li> <b><a href="/sys/man/2/zx.fscmp.html">zx.fscmp</a>:</b><em> Compare two file systems. For testing mostly and not using find. Refer to </em>
+<li> <b><a href="/sys/man/2/zx.fstest.html">zx.fstest</a>:</b><em> Utilities to aid in tests of zx file systems packages </em>
+<li> <b><a href="/sys/man/2/zx.pred.html">zx.pred</a>:</b><em> Predicates on files as used by the zx interfaces </em>
+<li> <b><a href="/sys/man/2/zx.repl.html">zx.repl</a>:</b><em> Tools to synchronize zx file trees </em>
+<li> <b><a href="/sys/man/2/zx.rzx.html">zx.rzx</a>:</b><em> Remote ZX access </em>
+<li> <b><a href="/sys/man/2/zx.zux.html">zx.zux</a>:</b><em> ZX for UX file systems </em>
+<li> <b><a href="/sys/man/2/zx.zxc.html">zx.zxc</a>:</b><em> ZX caching fs </em>
+<li> <b><a href="/sys/man/2/zx.zxfs.html">zx.zxfs</a>:</b><em> FUSE server for zx. </em>
+</ul><hr>
+<p><b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>.</b>
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

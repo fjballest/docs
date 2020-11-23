@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>LNS(1): print lines</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: lns [-Dnpu] {-r range} {file}
+        -D: debug
+        -n: print line numbers
+        -p: print file names and line numbers
+        -r range: print this range
+        -u: use unix out
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Lns</em> prints selected lines for files in the input.
+Lines are specified as ranges. A range may be a single line number,
+counting from 1, or a pair of start and end line numbers separated by
+a &#34;<code>,</code>&#34; character. Negative line numbers count
+backwards from the end of the file (the last is
+<code>-1</code> and so on).
+<p>
+Multiple ranges may be given. But beware, in such case, to avoid
+storing the entire file, ranges involving only positive line numbers
+are printed first and then ranges involving negative line numbers.
+Depending on the ranges given, this might lead to unsorted line
+prints.
+<p>
+A missing start number in a range means <code>1</code>,
+and a missing end number in a range means <code>-1</code>.
+If no range is given, &#34;<code>,</code>&#34; is implied. And,
+when such range is indicated, all lines are printed, one line at a
+time. This is useful to generate messages into the output for each
+single line in the input.
+<p>
+<a name="sec3"></a><h2>EXAMPLE</h2>
+Print the first two lines and the last two lines of the input
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; seq 15 | rf | lns -u -r ,2 -r -2,
+    1
+    2
+    14
+    15
+    </pre></code>
+<p>
+</ul><p>
+Apply <em>cmd</em> to each line of Go sources files
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf -g ,~*.go | lns | for x {
+        cmd $x
+    }
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/cmd/lns</code>
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="//lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="//lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

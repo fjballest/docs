@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/net/web"
+
+func Auth(w http.ResponseWriter, r *http.Request) bool
+func Serve(port string) error
+func ServeJS()
+func ServeLoginFor(proceedto string)
+func WriteHeaders(w io.Writer)
+func NewButtonSet(button ...*Button) *ButtonSet
+func NewPg(path string, els ...face{}) *Pg
+func NewRadioSet(value *string, button ...*Button) *RadioSet
+func NewTaggedText(tag string, lines ...string) *Text
+func NewText(lines ...string) *Text
+type Button struct { ... }
+type ButtonSet struct { ... }
+type Ctlr struct { ... }
+type Ev struct { ... }
+type Html string
+type Pg struct { ... }
+type RadioSet struct { ... }
+type Text struct { ... }
+
+DESCRIPTION
+
+Clive web interfaces and tools
+
+CONSTANTS
+
+TYPES
+
+struct Button {
+	Name  string // reported in events
+	Tag   string // shown in the button
+	Value *bool  // nil, or on/off value for check buttons
+	// contains filtered or unexported fields
+}
+    A single button
+
+struct ButtonSet {
+	*Ctlr
+	// contains filtered or unexported fields
+}
+    A set of buttons See Ctlr for the common API for controls. The events posted
+    to the user are:
+
+    start
+    end
+    click name nb	(nb is the index in the button array)
+    Set  name nb on|off
+
+func NewButtonSet(button ...*Button) *ButtonSet
+    Create a Button Set The buttons are check buttons if they have a pointer to
+    a bool
+
+func (bs *ButtonSet) WriteTo(w io.Writer) (tot int64, err error)
+    Write the HTML for the button set control to a page.
+
+struct Ctlr {
+	Id string // unique id for the controlled element
+
+	sync.Mutex
+	// contains filtered or unexported fields
+}
+    Element controler, provides a chan interface for a page interface element,
+    running over a web socket to the element. Supports multiple views and
+    reflects events to synchronize them. All controls export this public
+    interface.
+
+func (c *Ctlr) Close() error
+    Terminate the operation of the control and remove it from pages.
+
+func (c *Ctlr) CloseView(id string)
+    Close the view of this control with the given id.
+
+func (c *Ctlr) Closed() bool
+    Return true if the control is closed.
+
+func (c *Ctlr) Events() chan *Ev
+    Return the (application) event channel for the control.
+
+func (c *Ctlr) SendEventsTo(evc chan *Ev) error
+    Set the (application) event channel for the control to the given one. It is
+    an error to call this after the event channel is already set.
+
+func (c *Ctlr) Views() []string
+    Return the list of identifiers of the current views of the control.
+
+func (c *Ctlr) Wait()
+    Wait for the control to be closed.
+
+struct Ev {
+	Id, Src string   // element id and source view id (eg txt1, txt1_3)
+	Vers    int      // version of the control the event is for
+	Args    []string // events with string arguments
+	Data    []byte   // all other events
+}
+    Events to/from a control Args[0] is the event name If the name starts with
+    uppercase, it does reflect and all views get an automatic copy of the event.
+
+type Html string
+    Raw HTML text when used as a page element.
+
+struct Pg {
+	sync.Mutex
+	Path   string
+	NoAuth bool // set to true to disable auth
+	// contains filtered or unexported fields
+}
+    A web page used as a user interface.
+
+func NewPg(path string, els ...face{}) *Pg
+    Create a new UI page. Elements can be strings, Html, or io.WriterTo that
+    know how to write the HTML for them (controls implement this interface).
+
+func (pg *Pg) Add(element face{})
+    Add the given element to the page. The page is not reloaded on current
+    viewers.
+
+func (pg *Pg) Del(el face{})
+    Del the given element from the page. The element is not closed. The page is
+    not reloaded on current viewers.
+
+struct RadioSet {
+	*Ctlr
+	Value *string // current value
+	// contains filtered or unexported fields
+}
+    A set of radio buttons See Ctlr for the common API for controls. The events
+    posted to the user are:
+
+    start
+    end
+    Set  name idx on
+
+func NewRadioSet(value *string, button ...*Button) *RadioSet
+    Create a Radio button Set. Value is updated to reflect the selected button
+    name.
+
+func (bs *RadioSet) WriteTo(w io.Writer) (tot int64, err error)
+    Write the HTML for the radio set control to a page.
+
+struct Text {
+	*Ctlr
+	// contains filtered or unexported fields
+}
+    Editable text control. See Ctlr for the common API for controls. The events
+    posted to the user are:
+
+    start
+    end
+    tag wordclicked
+    click[124]	textclicked	p0 p1	(buttons are 1, 2, 4, 8, 16, ...)
+    tick	p0 p1
+    eins	text p0
+    edel	p0 p1
+    intr	esc|...
+
+func NewTaggedText(tag string, lines ...string) *Text
+    Create a new text control with the given tag line and body lines.
+
+func NewText(lines ...string) *Text
+    Create a new text control with no tag line and the given body lines.
+
+func (t *Text) Del(off, n int) []rune
+    Delete in the text and update the views. Views might have to reload if they
+    are concurrently editing.
+
+func (t *Text) EditDone()
+    After calling EditText() and using the txt.Text to edit by program, this
+    must be called to reload the views with the new text.
+
+func (t *Text) EditText() *txt.Text
+    Return the text so the application can edit it at will, further updates from
+    the views will fail due to wrong version, and the caller must call
+    EditDone() when done so the views are reloaded with the new text.
+
+func (t *Text) Edits()
+    Permit user edits (default)
+
+func (t *Text) Get(off int, n int) <-chan []rune
+    Retrieve the current text. Text is locked while getting the text
+
+func (t *Text) Getc(off int) rune
+    Retrieve a rune.
+
+func (t *Text) Ins(data []rune, off int) error
+    / Insert in the text and update the views. Views might have to reload if
+    they are concurrently editing.
+
+func (t *Text) NoEdits()
+    Prevent user edits
+
+func (t *Text) SetFont(f string)
+    Change the font used. Known fonts are "r", "b", "i", "t". Known combinations
+    are "rb", "tb", and "ri".
+
+func (t *Text) WriteTo(w io.Writer) (tot int64, err error)
+    Write the HTML for the text control to a page.
+
+FUNCTIONS
+
+func Auth(w http.ResponseWriter, r *http.Request) bool
+    Authenticate the client of the interface. To be called early within the
+    handler function for clive pages. It returns false if auth failed and the
+    handler should return without handling anything. When TLS is disabled, or
+    there's no key file, auth is considered ok.
+
+func Serve(port string) error
+    Serve the pages. Even if they are NoAuth, it's always through TLS.
+
+func ServeJS()
+    Serve the javascript files at /js. Only needed if NewPg() is not used.
+
+func ServeLoginFor(proceedto string)
+
+func WriteHeaders(w io.Writer)
+    Write headers to a page so it can support controls. Not needed for pages
+    created with NewPg. If you do not use NewPg, remember to call Auth early in
+    the handler (unless you don't want auth) and then return without writing
+    anything if it failed.
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

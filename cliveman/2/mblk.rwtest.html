@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/mblk/rwtest"
+
+func AsAConcFile(t Fataler, rw []Object, nops, maxoff, maxsz int)
+func AsAFile(t Fataler, rw Object, nops, maxoff, maxsz int)
+type Fataler interface { ... }
+type FullyReadable interface { ... }
+type Object interface { ... }
+type Resizeable interface { ... }
+
+DESCRIPTION
+
+Test tools for things that can be read and written.
+
+CONSTANTS
+
+TYPES
+
+type Fataler interface {
+	Fatalf(format string, args ...interface{})
+	Logf(format string, args ...interface{})
+	Fail()
+}
+    Usually testing.T or testing.B
+
+type FullyReadable interface {
+	Seek(int64, int) (int64, error)
+	Read([]byte) (int, error)
+}
+    Objects that implement this are tested by comparing the final contents of
+    the file.
+
+type Object interface {
+	WriteAt([]byte, int64) (int, error)
+	ReadAt([]byte, int64) (int, error)
+}
+    Objects that can be used in such tests.
+
+type Resizeable interface {
+	Truncate(int64) error
+}
+    Objects that implemented truncable are also tested for truncations and
+    resizes.
+
+FUNCTIONS
+
+func AsAConcFile(t Fataler, rw []Object, nops, maxoff, maxsz int)
+
+func AsAFile(t Fataler, rw Object, nops, maxoff, maxsz int)
+    If the object tested as a file has Truncate, it is also tested. Test a rw
+    object by comparing what a real file does and what it does. 10% of the
+    operations are resizes (if any) and the rest are half read, half writes.
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

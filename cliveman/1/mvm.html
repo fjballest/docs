@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>MVM(1): move multiple files</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: mvm [-Dcnv] [dst]
+        -D: debug
+        -c: collect all files into the destination dir
+        -n: dry run
+        -v: report operations made
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Mvm</em> moves multiple files (or directories) to a
+target directory. The argument indicates the destination directory and
+defaults to the current directory.
+<p>
+The destination for each file is the path resulting from appending to
+the destination path the relative path of the source file with respect
+to the name indicated in the command line. In particular:
+<ul>
+    <li>Moving <code>/a/dir</code> to a destination moves
+    the tree at <code>/a/dir</code> to the tree rooted at the
+    destination.
+    <li>Moving <code>afile</code> to a destination moves the
+    file to a file with the same name in the destination directory.
+<p>
+</ul>
+That is, the move preserves the tree structure of the files being
+moved. Under flag <code>-c</code> all files are moved
+directly into the destination directory, including directories.
+<p>
+The program refuses to move files if the operations crosses a device.
+If the caller cares, it can rely on
+<a href="http://lsub.org/sys/man/1/cpm.html">cpm(1)</a> and
+<a href="http://lsub.org/sys/man/1/rem.html">rem(1)</a> to achieve
+the same effect.
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Move the subtree rooted at the current directory to
+<code>/tmp/dst</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf ,| mvm /tmp/dst
+    </pre></code>
+<p>
+</ul><p>
+Move all go source files from <code>/tmp/src</code> at the
+current directory:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf  &#39;~\.go$&#39;  | mvm
+    </pre></code>
+<p>
+</ul><p>
+Move files <code>1</code> and <code>2</code>
+to <code>/tmp</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf 1 2 | mvm /tmp
+    </pre></code>
+<p>
+</ul><p>
+Move file <code>1</code> at
+<code>/tmp/1</code>:
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; lf 1  | mvm /tmp
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/app/mvm</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="http://lsub.org/sys/man/1/lf.html">lf(1)</a> to
+    select files to move.
+    <li><a href="http://lsub.org/sys/man/1/mvf.html">mvf(1)</a> for a
+    related command that moves a single file.
+    <li><a href="http://lsub.org/sys/man/1/cpm.html">cpm(1)</a> to
+    copy files.
+    <li><a href="http://lsub.org/sys/man/1/rem.html">rem(1)</a> to
+    remove files.
+</ul>
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

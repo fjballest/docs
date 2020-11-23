@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/zx/pred"
+
+func EvalStr(e zx.Dir, p string, depth int) (value, pruned bool, err error)
+func Find(fs zx.Getter, path, pred string) <-chan zx.Dir
+func And(args ...*Pred) *Pred
+func New(s string) (*Pred, error)
+func Not(arg *Pred) *Pred
+func Or(args ...*Pred) *Pred
+type Pred struct { ... }
+    func And(args ...*Pred) *Pred
+    func New(s string) (*Pred, error)
+    func Not(arg *Pred) *Pred
+    func Or(args ...*Pred) *Pred
+
+DESCRIPTION
+
+Predicates on files as used by the zx interfaces
+
+A predicate is a string with a specific format that may be compiled to a
+Pred and used to implement zx.Find.
+
+Example predicates are:
+
+    ``	true
+    `true`	true (`t` is also true)
+    `false`	false (`f` is also false)
+    `attr="value"`	true if dir[attr] == "value"
+    `="value"`	idem for attrs path (val == /...) or name (val != /...)
+    `attr==value`	true if dir.Int64("attr") == value
+    `attr≡value`	true if dir.Int64("attr") == value
+    `attr!="value"	true if dir[attr] != "value"
+    `attr≠"value"	true if dir[attr] != "value"
+    `attr~"expr"	true if dir[attr] matches "expr" (globbing)
+    `~expr`		idem for attrs path (val == /...) or name (val != /...)
+    `attr~~"regexp"	true if dir[attr] matches "regexp" (not globbing)
+    `~~regexp`	idem for attrs path (val == /...) or name (val != /...)
+    `attr≈"regexp"	true if dir[attr] matches "regexp" (not globbing)
+    `≈regexp`	idem for attrs path (val == /...) or name (val != /...)
+    `attr>value`	true if dir.Int64(attr) >= value
+    		// you can use also >=, <, and <=, ≤, ≥
+    `prune`		false, and indicates that the tree can be pruned
+
+The predefined attribute "depth" may be used to indicate the depth of the
+Dir evaluted.
+
+    n	(where n is an int) is understood as `depth<=n`
+    d	is understood as `type=d`
+    -	is understood as `type=-`
+    c	is understood as `type=c`
+
+When checking that "name" or "path" do not match or differ from a given
+expression, prune is implied if the name or path match. That is, name!=value
+is actually name!=value|prune, and so on.
+
+Also, when checking that path equals or matches something, if that something
+does not start with /, then name is used instead of path. That is, the path
+attribute can be used to check for both paths and names, as a convenience.
+
+These may be combined using
+
+    pred&pred	similar to && in C.
+    pred,pred		similar to && in C.
+    pred|pred		similar to || in C.
+    pred:pred		similar to || in C.
+    !pred		similar to ! in C.
+    (pred)		like pred, to group operations.
+
+For example, these predicates select...
+
+    ``	everything
+    `type=d`	directories
+    `depth==1`	directory contents
+
+Because prunes are notified as soon as they are found, place the prune terms
+at the end of the conditions or they will notify the prunes and stop
+evaluating other conditions.
+
+CONSTANTS
+
+TYPES
+
+type Pred struct {
+	// contains filtered or unexported fields
+}
+    A compiled predicate.
+
+func And(args ...*Pred) *Pred
+    Create a new predicate with the logical AND of the arguments.
+
+func New(s string) (*Pred, error)
+    Compile a predicate from a string representation.
+
+func Not(arg *Pred) *Pred
+    Create a new predicate with the logical NOT of the argument.
+
+func Or(args ...*Pred) *Pred
+    Create a new predicate with the logical OR of the arguments.
+
+func (p *Pred) DebugString() string
+    return a debug string for p
+
+func (p *Pred) EvalAt(e zx.Dir, lvl int) (value, pruned bool, err error)
+    Evaluate the predicate at the given directory entry (considering that its
+    depth is the given one). Returns true or false as the value of the
+    predicate, a prune indication that is true if we can prune the tree at this
+    directory entry (e.g., the depth indicated is beyond that asked by the
+    predicate), and any error indication.
+
+func (p *Pred) FindAt(fs zx.Getter, d zx.Dir, c chan<- zx.Dir, lvl int)
+    Execute the part of the ns.Find operation that evaluates p at the tree
+    rooted at d (considering that its level is the one indicated). Found entries
+    are sent through the given channel, which is closed only upon errors. This
+    is useful to implement ns.Find when writting services.
+
+func (p *Pred) String() string
+    return a string that can be parsed back to this predicate.
+
+FUNCTIONS
+
+func EvalStr(e zx.Dir, p string, depth int) (value, pruned bool, err error)
+    Like Pred.EvalAt, but useful when you want to specify the predicate using a
+    string.
+
+func Find(fs zx.Getter, path, pred string) <-chan zx.Dir
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="//lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual, 2nd ed.
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="//lsub.org/ls/index.html">
+		<img src="//lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="//lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="//lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="//lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="/ls/clive.html">Clive</a>, 2nd ed. <a href="/sys/man">User's manual</a>. <a href="/sys/man/2">Section 2</a></b>
+<pre>
+SYNOPSYS
+
+import "clive/txt"
+
+const Eins = Tedit(iota) ...
+func New(txt []rune) *Text
+func NewEditing(txt []rune) *Text
+type Edit struct { ... }
+type Edition interface { ... }
+type Interface interface { ... }
+type Mark struct { ... }
+type Tedit int
+type Text struct { ... }
+    func New(txt []rune) *Text
+    func NewEditing(txt []rune) *Text
+
+DESCRIPTION
+
+In-memory text with insertion, removal, selection, and marks
+
+CONSTANTS
+
+const (
+	Eins = Tedit(iota) // insert
+	Edel               // delete
+
+	// Edit flag (part of the last edit, new edit)
+	Esame = true
+	Enew  = false
+
+	// size arg for get
+	All = -1
+)
+
+TYPES
+
+type Edit struct {
+	Op    Tedit  // Eins | Edel
+	Off   int    // offset for the edit
+	Data  []rune // data inserted or deleted
+	Contd bool   // part of the previous edit regarding undo/redo
+}
+    Edition operation
+
+func (e Edit) String() string
+    Debug: return a printable edit string
+
+type Edition interface {
+	Interface
+	Undo() *Edit
+	Redo() *Edit
+	ContdEdit()
+}
+    Undoable text
+
+type Interface interface {
+	Len() int
+	Ins(data []rune, off int) error
+	Del(off, n int) []rune
+	Get(off int, n int) <-chan []rune
+	Getc(off int) rune
+	Vers() int
+}
+    The basic text interface as supplied by this package.
+
+type Mark struct {
+	Name string
+	Off  int
+	// contains filtered or unexported fields
+}
+    A position kept in text despite insertions/removals
+
+func (m *Mark) String() string
+
+type Tedit int
+    edit type
+
+func (te Tedit) String() string
+
+type Text struct {
+	sync.Mutex
+	// contains filtered or unexported fields
+}
+    Text kept in a series of rune slices with insert, delete, marks, undo, and
+    redo.
+
+func New(txt []rune) *Text
+    Create a new text with no support for undo and redo
+
+func NewEditing(txt []rune) *Text
+    Create a new text with support for undo and redo
+
+func (t *Text) ContdEdit()
+    Flag that the next Ins or Del is to be considered part of the last edition
+    regarding undo and redo. The edit added to the undo list will have Contd ==
+    true
+
+func (t *Text) Del(off, n int) []rune
+    Delete n runes at off
+
+func (t *Text) DelAll()
+    Delete all text (undoable)
+
+func (t *Text) DelMark(name string)
+    Remove a mark from the text
+
+func (t *Text) DiscontdEdit()
+    Flag that the next Ins or Del not to be considered part of the last edition
+    regarding undo and redo. That is, undo the effect of a previous call to
+    ContdEdit().
+
+func (t *Text) DropEdits()
+    Discard all the edits (drop undo/redo entries).
+
+func (t *Text) Get(off int, n int) <-chan []rune
+    Get n runes starting at off. They will be sent as slices to the chan
+    returned. Updating the runes returned will change the text without it
+    knowing, beware. The text is locked while we are getting the runes
+
+func (t *Text) Getc(off int) rune
+    Get a single rune at off (0 if off-limits)
+
+func (t *Text) Ins(data []rune, off int) error
+    Insert text at off
+
+func (t *Text) Len() int
+    Return the text length
+
+func (t *Text) LineAt(off int) int
+    Return the line number at the given offset
+
+func (t *Text) LineOff(ln int) int
+    Return the offset for the start of the given line number
+
+func (t *Text) LinesAt(p0, p1 int) (int, int)
+    Return the line numbers for the given range
+
+func (t *Text) LinesOffs(ln0, ln1 int) (int, int)
+    Return the offsets or the given line range
+
+func (t *Text) Mark(name string) *Mark
+    Return a mark by name. The returned mark is a copy and changing it is ok.
+
+func (t *Text) MarkDel(mark string, n int) []rune
+    Delete n runes right before the given mark and keep the mark where it is.
+
+func (t *Text) MarkIns(mark string, data []rune) error
+    Insert runes at the given mark, moving the mark after them.
+
+func (t *Text) Marks() []string
+    Return the names of existing marks
+
+func (t *Text) Redo() *Edit
+    Return the next edit in the redo list, nil if none. Contd is set to true in
+    the returned edit if the edit continues. (and apply the edit to the text).
+
+func (t *Text) SetMark(name string, off int) *Mark
+    Place a mark in the text, keeping its position despite further inserts and
+    removes. The returned mark is the actual mark as used by the text. Changing
+    it changes the mark and may lead to races if other processes are modifying
+    the text.
+
+func (t *Text) Sprint() string
+    Debug: print the tag followed by the state of text
+
+func (t *Text) SprintMarks() string
+    Debug: print the tag followed by the state of text including marks
+
+func (t *Text) String() string
+    Return the text as a string
+
+func (t *Text) Undo() *Edit
+    Return the next edit in the undo list, nil if none. Contd is set to true in
+    the returned edit if the edit continues. (and apply the edit to the text)
+
+func (t *Text) Vers() int
+
+FUNCTIONS
+
+</pre>
+<p><b><a href="/sys/man">User's manual, 2nd ed</a>. <a href="/sys/man/2">Section 2</a></b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2016
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="//lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://lsub.org/ls/class.css" />
+	<title>
+		Clive User's Manual
+	</title>
+</head>
+<body>
+<div id="container" class="Container">
+
+	<div id="header" class="Header">
+		<a href="http://lsub.org/ls/index.html">
+		<img src="http://lsub.org/ls/figs/lsub-peq.png" height="50px" width="50px"> 
+		</a>
+		<div style="position: absolute; top: 25px; left: 70px">
+			Laboratorio de Sistemas // Systems Lab
+		</div>
+	</div>
+
+	<div id="menu" class="Menu">
+		<a class="MenuText" href="http://lsub.org/ls/index.html">Welcome</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/research.html">Research &amp; innovation</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/training.html">Courses &amp; training</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/software.html">Software &amp; consulting</a><br> 
+		<a class="MenuText" href="http://lsub.org/ls/projects.html">Systems we made</a>
+		<a class="MenuText" href="http://lsub.org/ls/contact.html">Contact</a>
+	</div>
+
+	<div id="content" class="Content">
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+<h2>QLFS(1): Ql as a file system</h2>
+<hr>
+<p>
+
+<a name="sec1"></a><h2>USAGE</h2>
+<p><ul style="list-style:none;">
+    <code><pre>
+    usage: qlfs [-DFSs] [-x addr] [mntdir] &amp;
+        -D: debug
+        -F: debug fuse requests
+        -S: dump stacks on unmount for debugging
+        -s: statistics
+        -x addr: re-export locally the ql tree to this address
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec2"></a><h2>DESCRIPTION</h2>
+<em>Qlfs</em> serves
+<a href="http://lsub.org/sys/man/2/app.ql.qlfs.html">app.ql.qlfs(2)</a>
+as a file system through FUSE. The layout of the file system is
+<p><ul style="list-style:none;">
+    <code><pre>
+    /n/ql/
+        Ctl    control file
+        env0/    environment
+            vars/
+                var    (contents are $var)
+                ns    (textual form for the ns)
+                dot    (cwd)
+            cmd0/    one command
+                cmd    command text
+                in    // stdin
+                out    // stdout as of now
+                err    // stdout as of now
+                pout    // streaming stdout
+                perr    // streaming stderr
+                sts    // current command status
+                wait    // (wait for exit and get) exit status
+                sig    // write to post sigs to cmd
+            cmd1/
+                ...
+        env1/...
+    </pre></code>
+</ul><p>
+where <code>/n/ql/</code> is the root of the tree.
+<p>
+Each top level dir created is a new environment created as a set of
+name space, environment vars, dot, etc. Commands are created as new
+dirs within a top-level dir. When started, they
+<ul>
+    <li>inherit a copy of env&#39;s dot
+    <li>inherit a copy of env&#39;s env (vars)
+    <li>start with a new IO set
+    <li>share env&#39;s name space
+<p>
+</ul>
+Writing text into the <code>cmd</code> file starts the
+command using <code>ql -c</code>. Be careful to issue a
+single write when using FUSE.
+<p>
+Remove the directory for a command once you are done with it. Remove a
+top-level directory to get rid of that environment and all the
+commands in it.
+<p>
+The tree is mounted at <code>/n/ql</code> by default
+unless a mount point <em>mntdir</em> is supplied in the
+command line.
+<p>
+Under flag <code>-x</code> the program re-exports the Ql
+tree to the given address. This can be used to let ZX speakers avoid
+FUSE to talk to Ql as a file system.
+<p>
+Statistics and debug flags are available by reading the
+<code>/Ctl</code> file.
+<p>
+<a name="sec3"></a><h2>EXAMPLES</h2>
+Start a new Ql file system:
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; qlfs &amp;
+    ; ls /n/ql
+    Ctl
+    </pre></code>
+<p>
+</ul><p>
+Create a new environment to use <code>/tmp</code> as
+<em>dot</em> and a simple name space:
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; mkdir /n/ql/e0
+    ; echo /tmp &gt;/n/ql/e0/vars/dot
+    echo &#39;/ /
+        /zx tcp!zxserver!zx
+    &#39; &gt;/n/ql/e0/vars/ns
+    </pre></code>
+<p>
+</ul><p>
+Create a new command and run it on the output of <code>seq
+15</code>.
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; mkdir /n/ql/e0/c0
+    ; seq 15 &gt;/n/ql/e0/c0/in
+    ; echo &#39;lns -n&#39; &gt;/n/ql/e0/c0/cmd
+    </pre></code>
+<p>
+</ul><p>
+See the output
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; cat /n/ql/e0/c0/out
+    1    1
+    2    2
+    ...
+    </pre></code>
+<p>
+</ul><p>
+Wait for it to finish and get rid of it
+<p>
+<p><ul style="list-style:none;">
+    <code><pre>
+    ; cat /n/ql/e0/c0/wait
+    success
+    ; rmdir /n/ql/e0/c0
+    </pre></code>
+<p>
+</ul><p>
+<a name="sec4"></a><h2>SOURCE</h2>
+<ul>
+    <li><code>/zx/sys/src/clive/app/ql/qlfs</code>
+<p>
+</ul>
+<a name="sec5"></a><h2>SEE ALSO</h2>
+<ul>
+    <li><a href="http://lsub.org/sys/man/1/ql.html">ql(1)</a> The
+    shell Ql.
+    <li><a href="http://lsub.org/sys/man/2/app.ql.qlfs.html">app.ql.qlfs(2)</a>
+     Ql as a file system.
+    <li><a href="http://lsub.org/sys/man/1/Q.html">Q(1)</a> Run
+    commands using <em>Qlfs</em>.
+<p>
+</ul>
+<p>
+<hr><p>
+
+<b><a href="http://lsub.org/sys/man">User's manual</a>.</b>
+<b><a href="http://lsub.org/sys/man/1">Section 1</a>.</b>
+
+	</div>
+</div>
+
+<div id="footer" class="Footer">
+	Copyright © LSUB 2014-2015
+	<br><br>
+	<a href="https://twitter.com/lsub_org"><img src="http://lsub.org/ls/figs/twitter.png" height="25px" width="25px"> </a>
+</div>
+
+</body>
+</html>
+

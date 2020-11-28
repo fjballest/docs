@@ -1,0 +1,1975 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4198
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.012 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Pr)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 261.47 633 Tm
+(Clips 20 y 21)Tj
+-2.039 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+[(1. )-250(Car)10(ga de pr)18(ogramas)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0498 Tw
+[(V)60(imos que cuando un programa se compila y se enlaza obtenemos un )]TJ
+/TT7 1 Tf
+28.6406 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0498 Tw
+(chero ejecutable. Este )Tj
+/TT7 1 Tf
+9.1445 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0498 Tw
+(chero con-)Tj
+-38.8974 -1.2 TD
+0.0522 Tw
+[(tiene toda la información necesaria para que el Sistema Operati)25(v)20(o)20( )-20.1(pueda ponerlo a ejecutar \(con)40(v)15(ertirlo en)]TJ
+T*
+0.0169 Tw
+(un proceso\). Hay diferentes partes del binario que contienen tipos diferentes de información \(código, datos,)Tj
+T*
+0.0364 Tw
+(etc.\) y se denominan)Tj
+/TT4 1 Tf
+8.6705 0 TD
+0 Tw
+(secciones)Tj
+/TT6 1 Tf
+4.1179 0 TD
+0.0364 Tw
+(del ejecutable. Además, el ejecutable suele comenzar con una estructura de)Tj
+-12.7884 -1.2 TD
+0.0762 Tw
+(datos denominada cabecera que incluye información sobre qué secciones están presentes en el ejecutable.)Tj
+T*
+0 Tw
+(Concretamente, dónde empiezan en el )Tj
+/TT7 1 Tf
+15.4932 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero, de qué tipo son y qué tamaño tienen.)Tj
+-16.0493 -2.4 TD
+0.1368 Tw
+(Una sección del )Tj
+/TT7 1 Tf
+7.0466 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1368 Tw
+[(chero contiene el te)15(xto del programa \(el código\).)-636.9(Las v)25(ariables globales inicializadas)]TJ
+-7.6028 -1.2 TD
+0.0776 Tw
+(están en otra sección. O, con más precisión, los bytes que corresponden a los datos inicializados están en)Tj
+T*
+0.0503 Tw
+(dicha sección. En realidad el sistema no sabe)Tj
+/TT4 1 Tf
+18.6457 0 TD
+0 Tw
+(nada)Tj
+/TT6 1 Tf
+2.3004 0 TD
+0.0504 Tw
+[(respecto a qué v)25(ariables hay en tu programa o qué sig-)]TJ
+-20.9461 -1.2 TD
+0 Tw
+(ni)Tj
+/TT7 1 Tf
+0.7778 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.1282 Tw
+[(can dichas v)24.9(ariables. Simplemente se guardan en el ejecutable los bytes que, una v)14.9(ez car)17.9(gados en la)]TJ
+-1.334 -1.2 TD
+0 Tc
+0.179 Tw
+[(memoria, dan el v)25(alor inicial a las v)25(ariables que utilizas. P)15(ara v)25(ariables sin inicializar)40(,)-429.1(sólo es preciso)]TJ
+T*
+0.0299 Tw
+(guardar en la cabecera del )Tj
+/TT7 1 Tf
+10.8365 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0298 Tw
+[(chero ejecutable qué tamaño en bytes es preciso para dichas v)25(ariables \(y a par)20(-)]TJ
+-11.3927 -1.2 TD
+0.0282 Tw
+[(tir de qué dirección estarán car)18(gadas en la memoria\). Dado que no tienen v)25(alor inicial, o mejor dicho, dado)]TJ
+T*
+0.0784 Tw
+[(que su v)25(alor inicial es cero \(todos los bytes a cero\), no es preciso guardar los ceros en el ejecutable. Con)]TJ
+T*
+0 Tw
+(indicar el tamaño de dicha sección de memoria basta.)Tj
+0 -2.4 TD
+0.0802 Tw
+(Habitualmente, el ejecutable contiene también una tabla de símbolos con información para depuradores y)Tj
+0 -1.2 TD
+0.0469 Tw
+(programas como)Tj
+/TT4 1 Tf
+7.0362 0 TD
+0 Tw
+(nm\(1\))Tj
+/TT6 1 Tf
+2.6851 0 TD
+0.0469 Tw
+(que indica los nombres de los símbolos en el fuente, y los nombres de los )Tj
+/TT7 1 Tf
+30.3099 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+-40.5874 -1.2 TD
+0.0368 Tw
+[(fuente y números de línea. Esta información no es para el sistema operati)25(v)20(o)0(,)-286.8(e)0(s)-286.8(para ti y para el depurador)55(.)]TJ
+T*
+0.0211 Tw
+[(P)15(ara el sistema, tu programa no tiene ningún signi)]TJ
+/TT7 1 Tf
+20.1772 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.021 Tw
+[(cado en particular)55(.)-271(Sólo tu código sabe el signi)]TJ
+/TT7 1 Tf
+18.8027 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.021 Tw
+(cado de)Tj
+-40.0922 -1.2 TD
+0 Tw
+[(los bytes en los datos que manipula \(si son enteros que hay que sumar)40(,)-250(o)-250(qué hay que hacer con ellos\).)]TJ
+0 -2.4 TD
+0.1429 Tw
+[(Y)100(a)100( )-100(vimos como utilizar)]TJ
+/TT4 1 Tf
+10.1362 0 TD
+0 Tw
+(nm)Tj
+/TT6 1 Tf
+1.6151 0 TD
+0.1429 Tw
+(para mostrar la información de )Tj
+/TT7 1 Tf
+13.2926 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1429 Tw
+(cheros objeto y ejecutables. Consideremos)Tj
+-25.6 -1.2 TD
+0 Tw
+(ahora el programa del siguiente listado.)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+11 0 obj
+<<
+/Length 4478
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT9 1 Tf
+-14.917 -3.6 TD
+([global.c])Tj
+/TT6 1 Tf
+6.001 0 TD
+(:)Tj
+/TT11 1 Tf
+8 0 0 8 133 684 Tm
+(#include <stdlib.h>)Tj
+0 -3 TD
+(char global[1 * 1024 * 1024];)Tj
+0 -1.5 TD
+(int global2;)Tj
+T*
+(int init1 = 4;)Tj
+T*
+(int init2 = 3;)Tj
+T*
+(static int stint1;)Tj
+T*
+(static int stint2 = 3;)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char*argv[]\))Tj
+T*
+({)Tj
+4.8 -1.5 TD
+(exit\(0\);)Tj
+-4.8 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 498 Tm
+0.0583 Tw
+[(Este programa tiene declaradas v)25(arias v)25(ariables globales. Por un lado,)]TJ
+/TT11 1 Tf
+28.6893 0 TD
+0 Tw
+(global)Tj
+/TT6 1 Tf
+3.9089 0 TD
+(y)Tj
+/TT11 1 Tf
+0.8083 0 TD
+(global2)Tj
+/TT6 1 Tf
+4.5089 0 TD
+0.0582 Tw
+[(son v)25(ariables)]TJ
+-37.9153 -1.2 TD
+0.0759 Tw
+[(globales sin inicializar)55(.)-325.9(Igualmente,)]TJ
+/TT11 1 Tf
+14.7437 0 TD
+0 Tw
+(stint1)Tj
+/TT6 1 Tf
+3.9265 0 TD
+0.0759 Tw
+[(es una global sin inicializar)40(,)-325.9(aunque declarada)]TJ
+/TT4 1 Tf
+19.1502 0 TD
+0 Tw
+(static)Tj
+/TT6 1 Tf
+2.4925 0 TD
+0.076 Tw
+(\(con lo)Tj
+-40.3129 -1.2 TD
+0.0948 Tw
+[(que no se e)15(xporta desde el )]TJ
+/TT7 1 Tf
+11.328 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0948 Tw
+(chero objeto y sólo puede usarse desde el )Tj
+/TT7 1 Tf
+17.5309 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0948 Tw
+(chero que estamos compilando\).)Tj
+-29.9712 -1.2 TD
+0.0535 Tw
+[(Además, tenemos v)25(ariables globales llamadas)]TJ
+/TT11 1 Tf
+18.848 0 TD
+0 Tw
+(init1)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT11 1 Tf
+0.5535 0 TD
+(init2)Tj
+/TT6 1 Tf
+3.304 0 TD
+(y)Tj
+/TT11 1 Tf
+0.8035 0 TD
+(stinit2)Tj
+/TT6 1 Tf
+4.5043 0 TD
+0.0536 Tw
+(que están inicializadas. Si uti-)Tj
+-31.0137 -1.2 TD
+0 Tw
+(lizamos)Tj
+/TT4 1 Tf
+3.3604 0 TD
+(nm)Tj
+/TT6 1 Tf
+1.4722 0 TD
+[(en el ejecutable resultante de compilar y enlazar este programa v)15(emos lo siguiente:)]TJ
+/TT11 1 Tf
+8 0 0 8 133 432 Tm
+(unix$ cc global.c)Tj
+0 -1.5 TD
+(unix$ nm -n a.out)Tj
+T*
+(00000a30 T __start)Tj
+T*
+(00000a30 T _start)Tj
+T*
+(00000c30 T atexit)Tj
+T*
+(00000ca4 T main)Tj
+T*
+(...)Tj
+T*
+(00201008 D __progname)Tj
+T*
+(00201010 D __dso_handle)Tj
+T*
+(00201020 D init1)Tj
+T*
+(00201024 D init2)Tj
+T*
+(00201028 d stinit2)Tj
+T*
+(...)Tj
+T*
+(00401320 A __bss_start)Tj
+T*
+(00401320 A _edata)Tj
+T*
+(00401360 b stint1)Tj
+T*
+(00401380 B _dl_skipnum)Tj
+T*
+(004014a0 B global2)Tj
+T*
+(004014c0 B global)Tj
+T*
+(005014c0 A _end)Tj
+T*
+(crun%)Tj
+/TT6 1 Tf
+10 0 0 10 72 162 Tm
+0.0154 Tw
+(El comando)Tj
+/TT4 1 Tf
+5.085 0 TD
+0 Tw
+(nm)Tj
+/TT6 1 Tf
+1.4876 0 TD
+-0.0001 Tc
+0.0154 Tw
+[(nos informa de las direcciones en que podremos encontrar)39.9(,)-265.4(una v)14.9(ez car)17.9(gado en la memoria,)]TJ
+-6.5726 -1.2 TD
+0 Tc
+0.0613 Tw
+[(cada uno de los símbolos del ejecutable. Como puedes v)15(ers, el código del te)15(xto del programa \(las instruc-)]TJ
+T*
+0.061 Tw
+(ciones\) estarán a partir de la dirección)Tj
+/TT11 1 Tf
+15.8914 0 TD
+0 Tw
+(a30)Tj
+/TT6 1 Tf
+2.1113 0 TD
+0.061 Tw
+(de memoria. Esos símbolos se muestran con la letra ")Tj
+/TT11 1 Tf
+21.8967 0 TD
+0 Tw
+(T)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.311 Tc
+[("e)311(nl)311(a)]TJ
+-40.4994 -1.2 TD
+0 Tc
+(salida de)Tj
+/TT4 1 Tf
+3.7764 0 TD
+(nm)Tj
+/TT6 1 Tf
+1.4722 0 TD
+[(para indicar que son de te)15(xto.)]TJ
+-5.2485 -2.4 TD
+0.153 Tw
+[(Las v)25(ariables)]TJ
+/TT11 1 Tf
+5.8342 0 TD
+0 Tw
+(init1)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT11 1 Tf
+0.653 0 TD
+(init2)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.403 Tc
+(,y)Tj
+/TT11 1 Tf
+1.5561 0 TD
+0 Tc
+(stinit2)Tj
+/TT6 1 Tf
+4.6038 0 TD
+0.1531 Tw
+(estarán a partir de la dirección)Tj
+/TT11 1 Tf
+13.2453 0 TD
+0 Tw
+(201020)Tj
+/TT6 1 Tf
+4.0037 0 TD
+0.1531 Tw
+[(\(en he)15(xadecimal\).)]TJ
+-35.897 -1.2 TD
+0.1823 Tw
+[(Puedes v)15(er como cuatro bytes después de)]TJ
+/TT11 1 Tf
+18.0619 0 TD
+0 Tw
+(init1)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-432.3(e)0(n)-432.3(l)0(a)-432.3(dirección)]TJ
+/TT11 1 Tf
+7.3648 0 TD
+(201024)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(,)-432.2(estará)]TJ
+/TT11 1 Tf
+3.4459 0 TD
+(init2)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.1822 Tw
+[(.)-432.2(Dado que)]TJ
+/TT11 1 Tf
+-38.4742 -1.2 TD
+0 Tw
+(init1)Tj
+/TT6 1 Tf
+3.2564 0 TD
+0.0059 Tw
+(es un)Tj
+/TT4 1 Tf
+2.3448 0 TD
+0 Tw
+(int)Tj
+/TT6 1 Tf
+1.3116 0 TD
+0.006 Tw
+[(y)-255.9(que en este sistema \(y con este compilador\) ocupa 4 bytes, eso tiene sentido. T)80(odas estos)]TJ
+-6.9128 -1.2 TD
+0.0565 Tw
+(símbolos se muestran con la letra ")Tj
+/TT11 1 Tf
+14.2994 0 TD
+0 Tw
+(D)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.3064 Tc
+[("\()306.4(o")]TJ
+/TT11 1 Tf
+2.2622 0 TD
+0 Tc
+(d)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0564 Tw
+[("\), indicado que corresponden a datos inicializados.)-556.4(Las letras)]TJ
+ET
+endstream
+endobj
+12 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 13 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+16 0 obj
+<<
+/Length 8474
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+0.1055 Tw
+(que muestra)Tj
+/TT4 1 Tf
+5.3204 0 TD
+0 Tw
+(nm)Tj
+/TT6 1 Tf
+1.5777 0 TD
+0.1055 Tw
+[(son mayúsculas cuando los símbolos se e)15(xportan desde el )]TJ
+/TT7 1 Tf
+24.2361 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1056 Tw
+(chero objeto \(pueden usarse)Tj
+-31.6903 -1.2 TD
+0.0285 Tw
+(desde otros )Tj
+/TT7 1 Tf
+4.8339 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0285 Tw
+(cheros objeto dentro del mismo ejecutable\) y minúscula en caso contrario. Fíjate en)Tj
+/TT11 1 Tf
+34.0263 0 TD
+0 Tw
+(init2)Tj
+/TT6 1 Tf
+3.279 0 TD
+(y)Tj
+-42.6953 -1.2 TD
+(en)Tj
+/TT11 1 Tf
+1.1938 0 TD
+(stinit2)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(en la salida de)Tj
+/TT4 1 Tf
+5.9419 0 TD
+(nm)Tj
+/TT6 1 Tf
+1.4722 0 TD
+[(y)-250(e)0(n)-250(e)0(l)-250(código fuente. ¿V)111(es la diferencia?)]TJ
+-13.0586 -2.4 TD
+0.0806 Tw
+[(Las v)25(ariables)]TJ
+/TT11 1 Tf
+5.6894 0 TD
+0 Tw
+(global2)Tj
+/TT6 1 Tf
+4.5313 0 TD
+(y)Tj
+/TT11 1 Tf
+0.8306 0 TD
+(global)Tj
+/TT6 1 Tf
+3.9312 0 TD
+0.0806 Tw
+(se muestran con la letra ")Tj
+/TT11 1 Tf
+10.5016 0 TD
+0 Tw
+(B)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0806 Tw
+[(", indicando que corresponden a v)25(ariables)]TJ
+-26.0842 -1.2 TD
+0.0916 Tw
+[(sin inicializar)55(.)-341.7(P)15(ara estas v)25(ariables, el v)25(alor inicial será cero \(todos los bytes a cero\). Puedes v)15(er cómo la)]TJ
+T*
+0 Tw
+[(v)25(ariable)]TJ
+/TT11 1 Tf
+3.4755 0 TD
+(global)Tj
+/TT6 1 Tf
+3.8809 0 TD
+0.0303 Tw
+(está en la dirección)Tj
+/TT11 1 Tf
+8.0617 0 TD
+0 Tw
+(004014c0)Tj
+/TT6 1 Tf
+5.0812 0 TD
+0.0304 Tw
+[(y)65(,)65( )-65(un)-280.4(Mbyte después, en la dirección)]TJ
+/TT11 1 Tf
+15.0604 0 TD
+0 Tw
+(005014c0)Tj
+/TT6 1 Tf
+5.0812 0 TD
+0.0304 Tw
+(está la)Tj
+-40.6409 -1.2 TD
+0 Tw
+[(siguiente v)25(ariable.)]TJ
+0 -2.4 TD
+0.0652 Tw
+(El código ocupará una zona de memoria contigua y tendrá permisos para permitir la ejecución de instruc-)Tj
+0 -1.2 TD
+0.0399 Tw
+(ciones. Habitualmente, no tendrá permisos para permitir la escritura de esa zona de memoria. El contenido)Tj
+T*
+0.1087 Tw
+[(de esta memoria se inicializa le)15(yendo los bytes del )]TJ
+/TT7 1 Tf
+21.4286 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1086 Tw
+[(chero ejecutable que corresponden al te)15(xto del pro-)]TJ
+-21.9848 -1.2 TD
+0.064 Tw
+(grama. Los datos inicializados ocuparán otra zona de memoria contigua, con permisos para leer y escribir)Tj
+T*
+0.0815 Tw
+[(dicha memoria. Esta memoria se inicializará le)15(yendo del )]TJ
+/TT7 1 Tf
+23.5442 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0815 Tw
+(chero ejecutable los bytes que corresponden al)Tj
+-24.1004 -1.2 TD
+0 Tw
+[(v)25(alor inicial de esa zona de memoria. Los datos sin inicializar ocuparán otra zona, inicializada a cero.)]TJ
+0 -2.4 TD
+0.0008 Tw
+(Cada una de estas zonas es contigua, tiene una dirección de comienzo y un tamaño, y la memoria que ocupa)Tj
+0 -1.2 TD
+0.0139 Tw
+(tiene las mismas propiedades \(permisos, cómo se inicializa, etc.\). Es precisamente a eso a lo que se denom-)Tj
+T*
+0 Tw
+(ina)Tj
+/TT4 1 Tf
+1.586 0 TD
+[(se)40(gmento)]TJ
+/TT6 1 Tf
+3.7369 0 TD
+0.1143 Tw
+[(.)-364.3(Cuando el program ejecute, tendrá un se)15(gmento de te)15(xto con el código, otro de datos con)]TJ
+-5.3228 -1.2 TD
+0.0927 Tw
+[(v)25(ariables inicializadas, otro denominado)]TJ
+/TT4 1 Tf
+16.7569 0 TD
+0 Tw
+(BSS)Tj
+/TT6 1 Tf
+1.9535 0 TD
+0.0927 Tw
+(con datos sin inicializar \(que parten con los bytes a cero\) y)Tj
+-18.7105 -1.2 TD
+0.0694 Tw
+(otro de pila. Véase la )Tj
+/TT7 1 Tf
+9.0658 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0694 Tw
+[(gura 1. El nombre BSS viene de una instrucción de una máquina que ya no e)15(xiste)]TJ
+-9.6219 -1.2 TD
+0.0356 Tw
+(que se utilizaba para inicializar memoria a cero \(y son las iniciales de)Tj
+/TT4 1 Tf
+28.4784 0 TD
+[(Base Stac)20(k)-285.6(S)0(e)40(gment)]TJ
+/TT6 1 Tf
+8.0083 0 TD
+[(,)-285.6(aunque ho)10(y)-285.6(día)]TJ
+-36.4867 -1.2 TD
+0 Tw
+[(no tiene que v)15(er con la pila\).)]TJ
+0 -2.4 TD
+0.1897 Tw
+(Cuando el sistema ejecute el programa contenido en este )Tj
+/TT7 1 Tf
+24.6155 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.1898 Tw
+[(chero ejecutable, car)17.9(gará en la memoria el)]TJ
+-25.1717 -1.2 TD
+0 Tc
+0.0924 Tw
+[(código procedente del mismo, y los v)25(alores iniciales para v)25(ariables inicializadas. Igualmente, la memoria)]TJ
+T*
+0.0719 Tw
+[(que ocupen las v)25(ariables sin inicializar se inicializará a cero y se creará una pila para que puedan hacerse)]TJ
+T*
+0 Tw
+[(llamadas a procedimiento. El trozo de código del k)10(ernel que se ocupa de todo esto se denomina car)18(gador)55(.)]TJ
+/TT4 1 Tf
+4.826 -3.22 TD
+[(Se)40(gmento)]TJ
+0.272 -1.2 TD
+[(de T)92(e)20(xto)]TJ
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+112.5 294 54 36 re
+S
+BT
+/TT6 1 Tf
+10 0 0 10 120.9 315.8 Tm
+-0.195 Tw
+[(T)70(e)70( xto )-195(del)]TJ
+-0.056 -1.2 TD
+0 Tw
+(programa)Tj
+/TT4 1 Tf
+5.392 4.8 TD
+[(Se)40(gmento)]TJ
+0.1325 -1.2 TD
+(de Datos)Tj
+ET
+166.5 294 54 36 re
+S
+BT
+/TT6 1 Tf
+10 0 0 10 182.945 315.8 Tm
+(datos)Tj
+-0.6805 -1.2 TD
+(inicializ.)Tj
+/TT4 1 Tf
+11.7305 4.2 TD
+(BSS)Tj
+ET
+220.5 294 162 36 re
+S
+BT
+/TT6 1 Tf
+10 0 0 10 283.86 315.8 Tm
+(datos sin)Tj
+-0.2355 -1.2 TD
+(inicializar)Tj
+12.4245 0.6 TD
+(...)Tj
+/TT4 1 Tf
+3.851 4.2 TD
+[(Se)40(gmento)]TJ
+0.4935 -1.2 TD
+(de Pila)Tj
+ET
+436.5 294 54 36 re
+S
+BT
+/TT6 1 Tf
+10 0 0 10 456 309.8 Tm
+(pila)Tj
+ET
+112.5 294 m
+114.3 286.8 l
+110.7 286.8 l
+f
+0.1 w 
+112.5 294 m
+114.3 286.8 l
+110.7 286.8 l
+s
+0.4 w 
+112.47 286.83 m
+112.47 258.03 l
+S
+BT
+/TT11 1 Tf
+10 0 0 10 103.5 248.5999 Tm
+(0x0)Tj
+ET
+166.5 294 m
+168.3 286.8 l
+164.7 286.8 l
+f
+0.1 w 
+166.5 294 m
+168.3 286.8 l
+164.7 286.8 l
+s
+0.4 w 
+166.47 286.83 m
+166.47 258.03 l
+S
+BT
+10 0 0 10 151.5 248.5999 Tm
+(etext)Tj
+ET
+220.5 294 m
+222.3 286.8 l
+218.7 286.8 l
+f
+0.1 w 
+220.5 294 m
+222.3 286.8 l
+218.7 286.8 l
+s
+0.4 w 
+220.47 286.83 m
+220.47 258.03 l
+S
+BT
+10 0 0 10 205.5 248.5999 Tm
+(edata)Tj
+ET
+382.5 294 m
+384.3 286.8 l
+380.7 286.8 l
+f
+0.1 w 
+382.5 294 m
+384.3 286.8 l
+380.7 286.8 l
+s
+0.4 w 
+382.47 286.83 m
+382.47 258.03 l
+S
+BT
+10 0 0 10 373.5 248.5999 Tm
+(end)Tj
+ET
+89.964 171.6 54 36 re
+S
+BT
+10 0 0 10 93.036 187.4 Tm
+(cabecera)Tj
+ET
+143.964 171.6 144 36 re
+S
+BT
+10 0 0 10 200.964 187.4 Tm
+(texto)Tj
+ET
+287.964 171.6 108 36 re
+S
+BT
+10 0 0 10 326.964 187.4 Tm
+(datos)Tj
+ET
+395.964 171.6 36 36 re
+S
+BT
+10 0 0 10 404.964 187.4 Tm
+(...)Tj
+/TT4 1 Tf
+3.8767 0.6 TD
+[(F)45(i)0(c)15(her)45(o)]TJ
+-0.5245 -1.2 TD
+(ejecutable)Tj
+ET
+139.5 294 m
+144.18 288.24 l
+140.94 286.728 l
+f
+0.1 w 
+139.5 294 m
+144.18 288.24 l
+140.94 286.728 l
+s
+0.4 w 
+179.91 207.63 m
+178.47 210.87 l
+177.03 213.99 m
+175.47 217.23 l
+174.03 220.35 m
+172.47 223.59 l
+171.03 226.71 m
+169.47 229.95 l
+168.03 233.19 m
+166.47 236.43 l
+165.03 239.55 m
+163.59 242.79 l
+162.03 245.91 m
+160.47 249.15 l
+159.03 252.27 m
+157.59 255.51 l
+156.03 258.63 m
+154.59 261.87 l
+153.03 265.11 m
+151.47 268.35 l
+150.03 271.47 m
+148.59 274.71 l
+147.03 277.83 m
+145.59 281.07 l
+144.15 284.19 m
+142.59 287.43 l
+S
+193.5 294 m
+200.628 291.912 l
+198.828 288.816 l
+f
+0.1 w 
+193.5 294 m
+200.628 291.912 l
+198.828 288.816 l
+s
+0.4 w 
+341.91 207.63 m
+338.91 209.43 l
+335.67 211.23 m
+332.55 213.03 l
+329.31 214.95 m
+326.31 216.75 l
+323.07 218.67 m
+319.95 220.47 l
+316.71 222.27 m
+313.59 224.07 l
+310.35 225.99 m
+307.23 227.79 l
+303.99 229.71 m
+300.87 231.51 l
+297.75 233.43 m
+294.63 235.23 l
+291.39 237.03 m
+288.27 238.83 l
+285.03 240.75 m
+282.03 242.55 l
+278.79 244.35 m
+275.67 246.15 l
+272.43 248.07 m
+269.31 249.87 l
+266.07 251.79 m
+262.95 253.59 l
+259.71 255.51 m
+256.59 257.31 l
+253.47 259.11 m
+250.35 260.91 l
+247.11 262.83 m
+243.99 264.63 l
+240.75 266.55 m
+237.75 268.35 l
+234.51 270.15 m
+231.39 271.95 l
+228.15 273.87 m
+225.03 275.67 l
+221.79 277.47 m
+218.67 279.27 l
+215.43 281.19 m
+212.31 282.99 l
+209.19 284.91 m
+206.07 286.71 l
+202.83 288.63 m
+199.71 290.43 l
+S
+BT
+/TT2 1 Tf
+10 0 0 10 97 148.6 Tm
+0.095 Tw
+(Figura 1:)Tj
+/TT4 1 Tf
+4.4117 0 TD
+[(El car)37(gador se ocupa de car)37(gar los se)40(gmentos de un pr)45(oceso con datos pr)45(ocedentes del)]TJ
+-4.4117 -1.2 TD
+0 Tw
+[(ejecutable)15(.)]TJ
+/TT6 1 Tf
+-2.5 -1.2 TD
+0.013 Tw
+(Pero es importante que comprendas que el sistema)Tj
+/TT4 1 Tf
+20.5425 0 TD
+(no sabe nada)Tj
+/TT6 1 Tf
+5.6223 0 TD
+(sobre tu programa. Ni siquiera sabe ni qué)Tj
+-26.1648 -1.2 TD
+0.0022 Tw
+(funciones has de)Tj
+/TT7 1 Tf
+6.669 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0022 Tw
+[(nido ni qué v)25(ariables utilizas. ¡Ni le importa! Si utilizamos el comando)]TJ
+/TT4 1 Tf
+28.6337 0 TD
+0 Tw
+(strip\(1\))Tj
+/TT6 1 Tf
+3.2521 0 TD
+0.0021 Tw
+(para elim-)Tj
+-39.1109 -1.2 TD
+0 Tw
+[(inar la información de la tabla de símbolos del ejecutable, podremos v)15(erlo.)]TJ
+ET
+endstream
+endobj
+17 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 6023
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT11 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ ls -l a.out)Tj
+0 -1.5 TD
+0.6 Tw
+[(-rwxr-xr-x 1)-600(nemo wheel 8729)-600(May )600(23 )600(14:59 )600(a.out*)]TJ
+T*
+0 Tw
+(unix$ strip a.out)Tj
+T*
+(unix$ ls -l a.out)Tj
+T*
+0.6 Tw
+[(-rwxr-xr-x 1)-600(nemo wheel 6776)-600(May )600(23 )600(15:26 )600(a.out*)]TJ
+0 -3 TD
+0 Tw
+(unix$ nm -n a.out)Tj
+0 -1.5 TD
+(00000000 W __cxa_atexit)Tj
+T*
+(00000cc0 T __fini)Tj
+T*
+(00201008 D __data_start)Tj
+T*
+(00201008 D __progname)Tj
+T*
+(003012a0 D __got_start)Tj
+T*
+(00301320 D __got_end)Tj
+T*
+(00401320 A __bss_start)Tj
+T*
+(00401320 A _edata)Tj
+T*
+(005014c0 A _end)Tj
+/TT6 1 Tf
+10 0 0 10 72 510 Tm
+0.0186 Tw
+[(T)35(ras ejecutar)]TJ
+/TT4 1 Tf
+5.4431 0 TD
+0 Tw
+(strip)Tj
+/TT6 1 Tf
+1.834 0 TD
+(,)Tj
+/TT4 1 Tf
+0.5186 0 TD
+(nm)Tj
+/TT6 1 Tf
+1.4908 0 TD
+0.0186 Tw
+[(no puede obtener información alguna respecto que qué v)25(ariables globales o qué fun-)]TJ
+-9.2865 -1.2 TD
+0.0287 Tw
+(ciones están contenidas en el ejecutable. Como hemos compilado con enlace dinámico aún quedan algunos)Tj
+T*
+0.0305 Tw
+(símbolos que son necesarios para que el enlazado dinámico funcione, pero eso es todo. ¡Nadie puede saber)Tj
+T*
+0 Tw
+(que había algo llamado)Tj
+/TT11 1 Tf
+9.5522 0 TD
+(global)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(en tu código!)Tj
+-13.4028 -2.4 TD
+-0.0001 Tc
+0.0178 Tw
+[(El car)17.9(gador se limitará a car)17.9(gar)-267.9(los bytes de te)14.9(xto hacia el se)14.9(gmento de te)14.9(xto y los bytes de datos inicializa-)]TJ
+0 -1.2 TD
+0 Tc
+0.0203 Tw
+[(dos hacia el se)15(gmento de datos. Lo que signi)]TJ
+/TT7 1 Tf
+18.0048 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0204 Tw
+(quen esos bytes es cosa tuya. En cuanto al BSS, el ejecutable)Tj
+-18.561 -1.2 TD
+0.0254 Tw
+(indica en la cabecera cuantos bytes son necesarios, pero naturalmente no guardamos 1Mbyte de ceros en el)Tj
+T*
+0.0422 Tw
+[(ejecutable para nuestra v)25(ariable)]TJ
+/TT11 1 Tf
+13.0251 0 TD
+0 Tw
+(global)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0423 Tw
+[(.)-292.2(Simplemente se indica en el ejecutable en número total de bytes)]TJ
+-16.6257 -1.2 TD
+0 Tw
+[(a)-250(cero y la dirección en que deben comenzar)55(.)]TJ
+0 -2.4 TD
+0.0529 Tw
+[(V)129(olv)25(amos a pensar en los se)15(gmentos de un proceso. En la )]TJ
+/TT7 1 Tf
+23.7962 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0529 Tw
+[(gura 1 puedes v)15(er que el enlazador suele dejar)]TJ
+-24.3524 -1.2 TD
+0.0261 Tw
+(en el ejecutable un símbolo llamado)Tj
+/TT11 1 Tf
+14.8187 0 TD
+0 Tw
+(etext)Tj
+/TT6 1 Tf
+3.2766 0 TD
+0.0261 Tw
+(cuya dirección es el )Tj
+/TT7 1 Tf
+8.267 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0261 Tw
+[(nal de te)15(xto, otro)]TJ
+/TT11 1 Tf
+7.1154 0 TD
+0 Tw
+(edata)Tj
+/TT6 1 Tf
+3.2767 0 TD
+0.0262 Tw
+(cuya dirección)Tj
+-37.3105 -1.2 TD
+0.1293 Tw
+(es el )Tj
+/TT7 1 Tf
+2.3133 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1293 Tw
+(nal de los datos inicializados y otro)Tj
+/TT11 1 Tf
+15.263 0 TD
+0 Tw
+(end)Tj
+/TT6 1 Tf
+2.1796 0 TD
+0.1293 Tw
+(cuya dirección es el )Tj
+/TT7 1 Tf
+8.6798 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1293 Tw
+(nal del BSS. Con estos símbolos)Tj
+-29.548 -1.2 TD
+0.0218 Tw
+[(puedes saber qué direcciones utilizan tus principales se)15(gmentos. El comando)]TJ
+/TT4 1 Tf
+31.1662 0 TD
+0 Tw
+(size\(1\))Tj
+/TT6 1 Tf
+2.9379 0 TD
+0.0219 Tw
+(muestra el tamaño que)Tj
+-34.1041 -1.2 TD
+0 Tw
+[(tendrán los se)15(gmentos de un programa cuando lo ejecutes:)]TJ
+/TT11 1 Tf
+8 0 0 8 133 312 Tm
+(unix$ size a.out)Tj
+0 -1.5 TD
+1.8 Tw
+[(text data bss)-3000(dec )-600(hex)]TJ
+T*
+0 Tw
+[(2845 )-1800(500)-3000(1048992 1052337 100eb1)]TJ
+/TT6 1 Tf
+10 0 0 10 72 270 Tm
+[(P)15(ara nuestro programa, el BSS tendrá)]TJ
+/TT11 1 Tf
+15.2868 0 TD
+(1048992)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(bytes.)Tj
+-19.7374 -2.4 TD
+-0.0001 Tc
+0.0605 Tw
+[(Los se)14.9(gmentos son parte de la abstracción que te da UNIX para que tengas procesos. Como habrás obser)19.9(-)]TJ
+0 -1.2 TD
+0 Tc
+0.0135 Tw
+[(v)25(ado, aunque ejecutemos muchos procesos, todos ellos piensan que tienen la memoria para ellos solos.)-513.6(Por)]TJ
+T*
+0.1309 Tw
+[(ejemplo, en nuestro programa la v)25(ariable)]TJ
+/TT11 1 Tf
+17.3927 0 TD
+0 Tw
+(global)Tj
+/TT6 1 Tf
+3.9815 0 TD
+0.1308 Tw
+(estaría en la dirección)Tj
+/TT11 1 Tf
+9.5183 0 TD
+0 Tw
+(004014c0)Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(.)-380.8(S)0(i)-380.8(l)0(o)-380.8(ejecutamos)]TJ
+-35.6933 -1.2 TD
+0.1027 Tw
+[(v)25(arias v)15(eces de forma simultánea, cada uno de los procesos tendrá su propia v)15(ersión y pensará que es el)]TJ
+T*
+0 Tw
+(único en el mundo. En todos ellos,)Tj
+/TT11 1 Tf
+14.0815 0 TD
+(global)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(estará en la dirección)Tj
+/TT11 1 Tf
+8.7173 0 TD
+(004014c0)Tj
+/TT6 1 Tf
+4.8008 0 TD
+(.)Tj
+-31.4502 -2.4 TD
+0.0163 Tw
+[(Simplemente, la memoria del proceso es memoria virtual. Esta memoria no e)15(xiste en realidad. Por eso se la)]TJ
+0 -1.2 TD
+0.1738 Tw
+[(denomina virtual. El sistema utiliza el hardw)10(are de traducción de direcciones \(la unidad de gestión de)]TJ
+T*
+0.0925 Tw
+(memoria o MMU\) para hacer que las direcciones que utiliza el procesador se cambien por otras)Tj
+/TT4 1 Tf
+39.9091 0 TD
+0.0924 Tw
+(al vuelo)Tj
+/TT6 1 Tf
+-39.9091 -1.2 TD
+0.0846 Tw
+[(antes de que el hardw)10(are de memoria las v)15(ea. Cada proceso utilizará zonas distintas de memoria física y)65(,)]TJ
+T*
+0.038 Tw
+(gracias a la traducción de direcciones, la dirección)Tj
+/TT11 1 Tf
+20.7102 0 TD
+0 Tw
+(004014c0)Tj
+/TT6 1 Tf
+5.0887 0 TD
+0.0379 Tw
+(de cada proceso se cambia por la dirección)Tj
+-25.7988 -1.2 TD
+0.0999 Tw
+(de memoria física que dicho proceso utilice. Pero todos ejecutan instrucciones que acceden a)Tj
+/TT11 1 Tf
+38.8009 0 TD
+0 Tw
+(global)Tj
+/TT6 1 Tf
+3.9505 0 TD
+(a)Tj
+-42.7514 -1.2 TD
+(partir de la dirección)Tj
+/TT11 1 Tf
+8.5513 0 TD
+(004014c0)Tj
+/TT6 1 Tf
+4.8008 0 TD
+(.)Tj
+-13.3521 -2.4 TD
+0.0567 Tw
+(Las direcciones de memoria virtual se traducen a direcciones de memoria física empleando una tabla \(que)Tj
+0 -1.2 TD
+0.1031 Tw
+[(inicializa para cada proceso el sistema operati)25(v)20(o)0(\))-353.2(llamada)]TJ
+/TT4 1 Tf
+24.1023 0 TD
+0.1032 Tw
+(tabla de páginas)Tj
+/TT6 1 Tf
+6.8729 0 TD
+[(.)-353.2(Esta tabla traduce de 4 en 4)]TJ
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+22 0 obj
+<<
+/Length 5378
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+0.0824 Tw
+[(Kbytes \(o un tamaño similar\) las direcciones.)-582.4(A)-332.4(cada trozo de 4 Kbytes de memoria virtual lo llamamos)]TJ
+0 -1.2 TD
+0 Tw
+(página y al trozo correspondiente de memoria física lo denominamos marco de página.)Tj
+0 -2.4 TD
+0.1571 Tw
+(La primera página de memoria suele dejarse sin traducción, lo que hace que sea imposible utilizar sus)Tj
+0 -1.2 TD
+0.0507 Tw
+[(direcciones sin ocasionar un error \(similar al que se produciría si di)25(vides por cero\). Este error o e)15(xcepción)]TJ
+T*
+0.0897 Tw
+[(se atiende de forma similar a una interrupción y)65(,)-339.7(habitualmente, el sistema operati)25(v)20(o)20( )-20.1(detiene la ejecución)]TJ
+T*
+0.1031 Tw
+[(del programa que lo ha causado. Por eso no puedes atra)20(v)15(esar un puntero a)]TJ
+/TT4 1 Tf
+31.2038 0 TD
+0 Tw
+(nil)Tj
+/TT6 1 Tf
+1.0557 0 TD
+0.1031 Tw
+[(.)-353.1(L)0(a)-353.1(dirección de memoria)]TJ
+-32.2595 -1.2 TD
+0 Tw
+[(cero es in)40(válida, y)]TJ
+/TT4 1 Tf
+7.4849 0 TD
+(nil)Tj
+/TT6 1 Tf
+1.3057 0 TD
+[(es el v)25(alor cero utilizado como dirección de memoria.)]TJ
+-8.7906 -2.4 TD
+-0.0002 Tc
+0.1374 Tw
+[(T)79.8(odo esto es importante puesto que tiene impacto en tus programas.)-637.5(Habitualmente el sistema car)17.8(ga )-5.1(tu)]TJ
+0 -1.2 TD
+0 Tc
+0 Tw
+[(código y datos, y te asigna memoria física, conforme utilizas direcciones de memoria virtual en tus se)15(gmen-)]TJ
+T*
+0.0179 Tw
+[(tos. Inicialmente no habrá traducciones a memoria física para casi nada en tu proceso y)65(,)-268(conforme el proce-)]TJ
+T*
+-0.0001 Tc
+0.0159 Tw
+[(sador utilice direcciones, el sistema irá car)17.9(gando en demanda el resto. A esto se lo denomina)]TJ
+/TT4 1 Tf
+37.4951 0 TD
+0 Tc
+0.0158 Tw
+[(pa)10(ginación en)]TJ
+-37.4951 -1.2 TD
+0 Tw
+(demanda)Tj
+/TT6 1 Tf
+3.666 0 TD
+(.)Tj
+-3.666 -2.4 TD
+0.0475 Tw
+[(La paginación en demanda es fácil de implementar puesto que el sistema sabe qué se)15(gmentos tiene el pro-)]TJ
+0 -1.2 TD
+0.252 Tw
+[(ceso y qué direcciones usan estos.)-752(Además, sabe cómo inicializar la memoria de dichos se)15(gmentos)]TJ
+T*
+0.009 Tw
+[(\(le)15(yendo v)25(alores iniciales del )]TJ
+/TT7 1 Tf
+11.9359 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.009 Tw
+[(chero ejecutable o inicializándola a cero, por ejemplo\). Inicialmente, un se)15(g-)]TJ
+-12.4921 -1.2 TD
+0.1051 Tw
+(mento puede tener sus páginas sin traducción a \(marcos de página en\) memoria física. Cuando el proce-)Tj
+T*
+0.0127 Tw
+[(sador utiliza una dirección en dichas páginas, el hardw)10(are el)]TJ
+24.1497 0 TD
+-0.025 Tc
+0 Tw
+(eva )Tj
+1.6004 0 TD
+0 Tc
+0.0127 Tw
+[(una e)15(xcepción y el manejador instalado por)]TJ
+-25.7501 -1.2 TD
+0.0319 Tw
+[(el sistema operati)25(v)20(o)20( )-20(la)-281.9(atiende. Dicho manejador comprueba que en teoría el proceso debería poder utilizar)]TJ
+T*
+0.0086 Tw
+(dicha página de memoria y asigna un marco de página \(poniendo una traducción en la tabla de páginas\) ini-)Tj
+T*
+0.0878 Tw
+[(cializado se)15(gún corresponda. Cuando el manejador retorna, el programa de usuario continúa su ejecución)]TJ
+T*
+0 Tw
+[(como si nunca hubiese sucedido el f)10(allo de página.)]TJ
+0 -2.4 TD
+0.085 Tw
+(Por ejemplo,)Tj
+/TT11 1 Tf
+5.5304 0 TD
+0 Tw
+(global)Tj
+/TT6 1 Tf
+3.9356 0 TD
+0.085 Tw
+(está inicializado a cero porque las páginas en que reside serán inicializadas a cero)Tj
+-9.4659 -1.2 TD
+0.0679 Tw
+(por el sistema cuando las asigne. Y será así dado que dichas páginas forman parte del BSS. Si tu proceso)Tj
+T*
+0.1348 Tw
+(lee una posición de)Tj
+/TT11 1 Tf
+8.4812 0 TD
+0 Tw
+(global)Tj
+/TT6 1 Tf
+3.9855 0 TD
+0.1349 Tw
+[(por primera v)15(ez, es muy posible que al proceso se le asignen 4Kbytes de)]TJ
+-12.4667 -1.2 TD
+0.0433 Tw
+(memoria física para la página a que accede, inicializados a cero. Y por eso tu proceso creerá que)Tj
+/TT11 1 Tf
+39.5934 0 TD
+0 Tw
+(global)Tj
+/TT6 1 Tf
+-39.5934 -1.2 TD
+0.0373 Tw
+[(está inicializado a cero. Antes de utilizar el array)65(,)-287.3(e)0(l)-287.3(MByte es sólo memoria virtual.)-537.3(¡No consume memo-)]TJ
+T*
+0.0476 Tw
+[(ria física! Eso si, si se te ocurre la "b)20(uena" idea de utilizar un b)20(ucle para inicializar tu array a cero, tu pro-)]TJ
+T*
+0.1067 Tw
+(ceso accederá a todas esas direcciones y el sistema le asignará la memoria correspondiente. La memoria)Tj
+T*
+0.0873 Tw
+[(virtual es gratis, la memoria física no.)-587.3(Es muy habitual utilizar arrays de gran tamaño sabiendo que sólo)]TJ
+T*
+0.0334 Tw
+[(v)25(a)0(n)-283.4(a)-283.4(utilizarse unas pocas posiciones en tiempo de ejecución, por ejemplo para grandes tablas hash y para)]TJ
+T*
+0.0588 Tw
+(otros propósitos en algunos run-times de lenguajes de programación. ¿Comprendes por qué puede hacerse)Tj
+T*
+0 Tw
+(esto?)Tj
+0 -2.4 TD
+0.0061 Tw
+[(Sucede lo mismo con la pila ho)10(y)-256.1(día. Hace tiempo, el se)15(gmento de pila solía crecer a medida que el proceso)]TJ
+0 -1.2 TD
+0.0122 Tw
+[(utilizaba más espacio en la misma. Ho)10(y)-262.3(día, el se)15(gmento de pila suele tener un tamaño pre)]TJ
+/TT7 1 Tf
+36.2702 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0122 Tw
+(jado y no crece.)Tj
+-36.8264 -1.2 TD
+0.0493 Tw
+(Dado que la memoria que usa es)Tj
+/TT4 1 Tf
+13.5908 0 TD
+0 Tw
+(virtual)Tj
+/TT6 1 Tf
+2.6665 0 TD
+0.0494 Tw
+[(,)-299.4(inicialmente dicha memoria es gratis: no tiene asignada memoria)]TJ
+-16.2573 -1.2 TD
+0 Tw
+(física. Naturalmente, esto es así hasta que dicha memoria se usa a medida que crece la pila.)Tj
+ET
+endstream
+endobj
+23 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+8 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 611 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 0 278 0 0 0 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 24 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 0 250 0 
+500 500 500 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 722 611 611 0 0 0 444 0 0 0 0 0 
+611 0 0 500 556 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 500 500 278 278 444 278 722 500 500 
+500 0 389 389 278 500 444 0 444 444 389 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 25 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 500 500 500 500 500 0 0 0 0 278 0 0 0 0 444 
+0 722 667 667 722 611 556 0 722 333 0 722 611 889 722 722 
+556 0 0 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 26 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 27 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 111
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 600 600 600 0 0 0 600 0 0 0 0 600 0 
+0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 28 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 0 0 600 600 600 0 0 600 600 600 0 600 600 600 0 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 
+0 600 600 0 600 0 0 0 0 0 0 0 0 600 0 0 
+0 0 0 0 600 0 0 600 0 0 0 600 0 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 29 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+10 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 12 0 R
+/Contents 11 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 17 0 R
+/Contents 16 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 23 0 R
+/Contents 22 0 R
+>>
+endobj
+30 0 obj
+<<
+/S /D
+>>
+endobj
+31 0 obj
+<<
+/Nums [0 30 0 R ]
+>>
+endobj
+9 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 10 0 R 15 0 R 18 0 R 21 0 R]
+/Count 5
+/MediaBox [0 0 612 792]
+>>
+endobj
+32 0 obj
+<<
+/CreationDate (D:20160905151710+02'00')
+/ModDate (D:20160905151710+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+33 0 obj
+<<
+/Type /Catalog
+/Pages 9 0 R
+/PageLabels 31 0 R
+>>
+endobj
+xref
+0 34
+0000000000 65535 f 
+0000033888 00000 n 
+0000000016 00000 n 
+0000004266 00000 n 
+0000030835 00000 n 
+0000031487 00000 n 
+0000032171 00000 n 
+0000032924 00000 n 
+0000029506 00000 n 
+0000034368 00000 n 
+0000033968 00000 n 
+0000004394 00000 n 
+0000008925 00000 n 
+0000033094 00000 n 
+0000033414 00000 n 
+0000034051 00000 n 
+0000009068 00000 n 
+0000017595 00000 n 
+0000034134 00000 n 
+0000017737 00000 n 
+0000023813 00000 n 
+0000034217 00000 n 
+0000023944 00000 n 
+0000029375 00000 n 
+0000029646 00000 n 
+0000029848 00000 n 
+0000030048 00000 n 
+0000030245 00000 n 
+0000030442 00000 n 
+0000030644 00000 n 
+0000034300 00000 n 
+0000034328 00000 n 
+0000034477 00000 n 
+0000034600 00000 n 
+trailer
+<<
+/Size 34
+/Root 33 0 R
+/Info 32 0 R
+/ID [<43956899d64903674cc8ef55fd7dd4f1><43956899d64903674cc8ef55fd7dd4f1>]
+>>
+startxref
+34669
+%%EOF

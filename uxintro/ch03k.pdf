@@ -1,0 +1,1175 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 7928
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.342 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Ficher)18(os)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Montajes)-250(y)-250(nombr)18(es)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0533 Tw
+(En UNIX tienes todos los )Tj
+/TT7 1 Tf
+10.7934 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0533 Tw
+(cheros dispuestos en un único árbol como ya sabes. El directorio raíz es ")Tj
+/TT9 1 Tf
+30.0371 0 TD
+0 Tw
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.3032 Tc
+("y)Tj
+-41.9867 -1.2 TD
+0 Tc
+0.0873 Tw
+(en dicho directorio están contenidos todos los )Tj
+/TT7 1 Tf
+19.135 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0873 Tw
+[(cheros a que puedes acceder)55(.)-337.3(Esto es así incluso si tienes)]TJ
+-19.6912 -1.2 TD
+0 Tw
+[(v)25(arias particiones con )]TJ
+/TT7 1 Tf
+8.9438 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros o v)25(arios discos.)]TJ
+-9.4999 -2.4 TD
+0.0288 Tw
+[(Una v)15(ez más, estamos ante otra abstracción suministrada por el sistema, la idea de un)]TJ
+/TT2 1 Tf
+34.8224 0 TD
+[(espacio de nombr)18(es)]TJ
+/TT6 1 Tf
+-34.8224 -1.2 TD
+0.1018 Tw
+(único que podemos adaptar para crear la ilusión de un sólo árbol, aunque tengamos múltiples árboles de)Tj
+/TT7 1 Tf
+T*
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.009 Tw
+(cheros. Normalmente cada árbol está guardado en una partición utilizando un formato concreto de sistema)Tj
+-0.5562 -1.2 TD
+0 Tw
+(de )Tj
+/TT7 1 Tf
+1.1984 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0046 Tw
+[(cheros, pero recuerda que e)15(xisten árboles de )]TJ
+/TT7 1 Tf
+17.9535 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0047 Tw
+[(cheros implementados en softw)10(are que no tienen almace-)]TJ
+-20.2643 -1.2 TD
+0 Tw
+(namiento en disco \(como)Tj
+/TT9 1 Tf
+10.3306 0 TD
+(/proc)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(\).)Tj
+-13.3311 -2.4 TD
+0.0662 Tw
+(La implementación es simple: UNIX dispone de una)Tj
+/TT4 1 Tf
+21.8021 0 TD
+(tabla de montajes)Tj
+/TT6 1 Tf
+7.559 0 TD
+0.0661 Tw
+(que hace que, al recorrer paths, el)Tj
+-29.361 -1.2 TD
+0 Tw
+[(k)10(ernel pueda saltar de un directorio en el árbol al directorio raíz de de otro árbol.)]TJ
+10.1995 -3.82 TD
+(disco #1)Tj
+/TT2 1 Tf
+1.5415 -3.6 TD
+(/)Tj
+/TT9 1 Tf
+-10.841 -7.2 TD
+[(tmp)-3239.7(etc)-3239.7(usr)-3239.7(bin)-2939.7(home)]TJ
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+176.19 342.99 m
+104.67 291.87 l
+190.83 335.43 m
+190.83 299.43 l
+180.51 338.67 m
+150.75 296.19 l
+205.47 342.99 m
+276.87 291.87 l
+201.15 338.67 m
+230.79 296.19 l
+S
+BT
+/TT2 1 Tf
+10 0 0 10 405.41 279.2 Tm
+(/)Tj
+/TT9 1 Tf
+-6.821 -5.4 TD
+[(root)-2639.6(nemo)-2939.6(elf)-3239.7(...)]TJ
+ET
+393.75 269.07 m
+362.43 239.67 l
+404.43 263.55 m
+402.03 245.31 l
+417.99 267.39 m
+438.75 241.47 l
+422.43 272.43 m
+484.83 236.43 l
+309.528 279.6 m
+309.588 280.198 309.618 280.799 309.618 281.4 c
+309.618 282.001 309.588 282.602 309.528 283.2 c
+308.808 286.584 m
+308.463 287.731 308.005 288.84 307.44 289.896 c
+305.568 292.776 m
+304.794 293.726 303.926 294.594 302.976 295.368 c
+300.096 297.24 m
+299.041 297.805 297.931 298.263 296.784 298.608 c
+293.4 299.328 m
+292.802 299.388 292.201 299.418 291.6 299.418 c
+290.999 299.418 290.398 299.388 289.8 299.328 c
+286.416 298.608 m
+285.269 298.263 284.159 297.805 283.104 297.24 c
+280.224 295.368 m
+279.274 294.594 278.406 293.726 277.632 292.776 c
+275.76 289.896 m
+275.195 288.84 274.737 287.731 274.392 286.584 c
+273.672 283.2 m
+273.612 282.602 273.582 282.001 273.582 281.4 c
+273.582 280.799 273.612 280.198 273.672 279.6 c
+274.392 276.216 m
+274.737 275.069 275.195 273.959 275.76 272.904 c
+277.632 270.024 m
+278.406 269.074 279.274 268.206 280.224 267.432 c
+283.104 265.56 m
+284.159 264.995 285.269 264.537 286.416 264.192 c
+289.8 263.472 m
+290.398 263.412 290.999 263.382 291.6 263.382 c
+292.201 263.382 292.802 263.412 293.4 263.472 c
+296.784 264.192 m
+297.931 264.537 299.041 264.995 300.096 265.56 c
+302.976 267.432 m
+303.926 268.206 304.794 269.074 305.568 270.024 c
+307.44 272.904 m
+308.005 273.959 308.463 275.069 308.808 276.216 c
+424.728 279.6 m
+424.788 280.198 424.818 280.799 424.818 281.4 c
+424.818 282.001 424.788 282.602 424.728 283.2 c
+424.008 286.584 m
+423.663 287.731 423.205 288.84 422.64 289.896 c
+420.768 292.776 m
+419.994 293.726 419.126 294.594 418.176 295.368 c
+415.296 297.24 m
+414.241 297.805 413.131 298.263 411.984 298.608 c
+408.6 299.328 m
+408.002 299.388 407.401 299.418 406.8 299.418 c
+406.199 299.418 405.598 299.388 405 299.328 c
+401.616 298.608 m
+400.469 298.263 399.359 297.805 398.304 297.24 c
+395.424 295.368 m
+394.474 294.594 393.606 293.726 392.832 292.776 c
+390.96 289.896 m
+390.395 288.84 389.937 287.731 389.592 286.584 c
+388.872 283.2 m
+388.812 282.602 388.782 282.001 388.782 281.4 c
+388.782 280.799 388.812 280.198 388.872 279.6 c
+389.592 276.216 m
+389.937 275.069 390.395 273.959 390.96 272.904 c
+392.832 270.024 m
+393.606 269.074 394.474 268.206 395.424 267.432 c
+398.304 265.56 m
+399.359 264.995 400.469 264.537 401.616 264.192 c
+405 263.472 m
+405.598 263.412 406.199 263.382 406.8 263.382 c
+407.401 263.382 408.002 263.412 408.6 263.472 c
+411.984 264.192 m
+413.131 264.537 414.24 264.995 415.296 265.56 c
+418.176 267.432 m
+419.126 268.206 419.994 269.074 420.768 270.024 c
+422.64 272.904 m
+423.205 273.959 423.663 275.069 424.008 276.216 c
+S
+388.8 281.4 m
+381.6 279.6 l
+381.6 283.2 l
+f
+0.1 w 
+388.8 281.4 m
+381.6 279.6 l
+381.6 283.2 l
+s
+0.4 w 
+309.63 281.43 m
+313.23 281.43 l
+317.19 281.43 m
+320.79 281.43 l
+324.75 281.43 m
+328.35 281.43 l
+332.43 281.43 m
+336.03 281.43 l
+339.99 281.43 m
+343.59 281.43 l
+347.67 281.43 m
+351.27 281.43 l
+355.23 281.43 m
+358.83 281.43 l
+362.79 281.43 m
+366.39 281.43 l
+370.35 281.43 m
+373.95 281.43 l
+378.03 281.43 m
+381.63 281.43 l
+309.63 281.79 m
+313.23 281.79 l
+317.19 281.79 m
+320.79 281.79 l
+324.75 281.79 m
+328.35 281.79 l
+332.31 281.79 m
+335.91 281.79 l
+339.87 281.79 m
+343.47 281.79 l
+347.43 281.79 m
+351.03 281.79 l
+354.99 281.79 m
+358.59 281.79 l
+362.55 281.79 m
+366.15 281.79 l
+370.11 281.79 m
+373.71 281.79 l
+377.67 281.79 m
+381.27 281.79 l
+385.23 281.79 m
+388.83 281.79 l
+S
+BT
+/TT6 1 Tf
+10 0 0 10 333.09 285.56 Tm
+(montaje)Tj
+5.6905 2.964 TD
+(disco #2)Tj
+/TT2 1 Tf
+-29.2995 -12.88 TD
+0.0104 Tw
+(Figura 1:)Tj
+/TT4 1 Tf
+4.2425 0 TD
+[(Un montaje hace que UNIX salte de un dir)37(ectorio en el árbol al r)15(aíz de otr)45(o)-260.5(árbol cr)37(eando)]TJ
+-4.2425 -1.2 TD
+0 Tw
+(el efecto de un único árbol.)Tj
+/TT6 1 Tf
+-2.5 -1.2 TD
+0.0681 Tw
+[(El efecto puedes v)15(erlo en la )]TJ
+/TT7 1 Tf
+11.7217 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0681 Tw
+[(gura 1. En ella puedes v)15(er que el administrador de este sistema ha utilizado)]TJ
+-12.2779 -1.2 TD
+0.0416 Tw
+(dos discos \(o dos particiones, a UNIX le da lo mismo\) y ha hecho que en el directorio)Tj
+/TT9 1 Tf
+35.2678 0 TD
+0 Tw
+(/home)Tj
+/TT6 1 Tf
+3.2921 0 TD
+0.0416 Tw
+(se monte el)Tj
+-38.5599 -1.2 TD
+0.2743 Tw
+[(se)15(gundo disco \(o la se)15(gunda partición\). T)35(ras el montaje, cuando el k)10(ernel resuelv)25(a)-524.3(paths y alcance)]TJ
+T*
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(/home)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.2115 Tw
+[(", saltará al directorio raíz del se)15(gundo disco, por lo que aparentemente tenemos paths como)]TJ
+-3.4087 -1.2 TD
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(/home/nemo)Tj
+/TT6 1 Tf
+6.001 0 TD
+(", lo que es una ilusión.)Tj
+-6.4092 -2.4 TD
+0.0775 Tw
+[(A)-327.5(l)0(a)-327.5(vista de esto puedes imaginar que si)]TJ
+/TT9 1 Tf
+17.2766 0 TD
+0 Tw
+(/home)Tj
+/TT6 1 Tf
+3.328 0 TD
+(contenía )Tj
+/TT7 1 Tf
+3.7146 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0774 Tw
+(cheros o directorios antes del montaje, dicho)Tj
+-24.8753 -1.2 TD
+0.1265 Tw
+(contenido resulta ahora inaccesible. Aparentemente)Tj
+/TT9 1 Tf
+21.512 0 TD
+0 Tw
+(/home)Tj
+/TT6 1 Tf
+3.3771 0 TD
+0.1266 Tw
+(contiene los directorios)Tj
+/TT9 1 Tf
+9.9604 0 TD
+0 Tw
+(root)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(,)Tj
+/TT9 1 Tf
+0.6266 0 TD
+(nemo)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1266 Tw
+[(,)-376.6(etc. y)]TJ
+-40.2768 -1.2 TD
+0 Tw
+[(eso es todo lo que pueden v)15(er los usuarios del sistema.)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 6646
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+(El comando)Tj
+/TT9 1 Tf
+5.0542 0 TD
+(mount\(1\))Tj
+/TT6 1 Tf
+5.0508 0 TD
+(muestra los montajes en el sistema:)Tj
+/TT9 1 Tf
+8 0 0 8 133 690 Tm
+(unix$ mount)Tj
+0 -1.5 TD
+(/dev/disk1 on / \(hfs, local, journaled, noatime\))Tj
+T*
+(devfs on /dev \(devfs, local, nobrowse\))Tj
+T*
+(elf@fs.lsub.org:/home/dump on /dump \(osxfusefs, nodev, nosuid\))Tj
+T*
+(elf@fs.lsub.org:/home/lsub on /zx \(osxfusefs, nodev, nosuid\))Tj
+T*
+(elf@fs.lsub.org:/home/once on /once \(osxfusefs, nodev, nosuid\))Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 588 Tm
+0.0252 Tw
+(El resultando dependerá mucho no sólo del tipo de UNIX sino también de cómo esté administrado. En este)Tj
+0 -1.2 TD
+0.0761 Tw
+[(caso v)15(emos que hay una sóla partición en el primer disco que está montada en el directorio raíz. Por otra)]TJ
+T*
+0.0861 Tw
+(parte, no hay)Tj
+/TT9 1 Tf
+5.7007 0 TD
+0 Tw
+(/proc)Tj
+/TT6 1 Tf
+3.3366 0 TD
+0.0861 Tw
+(en este sistema \(OS X\) y)Tj
+/TT9 1 Tf
+10.6812 0 TD
+0 Tw
+(/dev)Tj
+/TT6 1 Tf
+2.7365 0 TD
+0.0861 Tw
+(es un sistema de )Tj
+/TT7 1 Tf
+7.1208 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0861 Tw
+(cheros sintético \(igual que lo es)Tj
+/TT9 1 Tf
+-30.1318 -1.2 TD
+0 Tw
+(/proc)Tj
+/TT6 1 Tf
+3.2836 0 TD
+0.0332 Tw
+[(en otros UNIX\). Puede v)15(erse también que los directorios)]TJ
+/TT9 1 Tf
+23.2223 0 TD
+0 Tw
+(/dump)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5332 0 TD
+(/zx)Tj
+/TT6 1 Tf
+2.0835 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7832 0 TD
+(/once)Tj
+/TT6 1 Tf
+3.2837 0 TD
+0.0332 Tw
+(están montados y)Tj
+-36.1899 -1.2 TD
+0 Tw
+(proceden de otra máquina llamada)Tj
+/TT9 1 Tf
+14.0215 0 TD
+(fs.lsub.org)Tj
+/TT6 1 Tf
+6.6011 0 TD
+(.)Tj
+-20.6226 -2.4 TD
+0.0743 Tw
+[(Existe otro comando que resulta útil no sólo para v)15(er qué tenemos montado sino también para v)15(er cuánto)]TJ
+0 -1.2 TD
+0.041 Tw
+(espacio libre resta en cada uno de los sistemas de )Tj
+/TT7 1 Tf
+20.3475 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.041 Tw
+(cheros. hablamos de)Tj
+/TT4 1 Tf
+8.5093 0 TD
+0 Tw
+(df\(1\))Tj
+/TT6 1 Tf
+1.9438 0 TD
+0.0411 Tw
+[(.)-291.1(P)15(ara que puedamos v)15(er otro)]TJ
+-31.3568 -1.2 TD
+0 Tw
+[(ejemplo, v)25(amos a utilizar un sistema OpenBSD esta v)15(ez:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 474 Tm
+(unix$ mount)Tj
+0 -1.5 TD
+(/dev/sd2a on / type ffs \(local, noatime, softdep\))Tj
+T*
+(unix$ df -h)Tj
+T*
+2.4 Tw
+[(Filesystem Size)-2400(Used )1200(Avail)-600(Capacity )1800(Mounted)-600(on)]TJ
+T*
+1.8 Tw
+[(/dev/sd2a )-1200(1.8T)-2400(239G 1.5T 14% /)]TJ
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 396 Tm
+0.0317 Tw
+(En este sistema hay un único sistema de )Tj
+/TT7 1 Tf
+16.5275 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0317 Tw
+(cheros montado en el raíz, procedente de la primera partición \(la)Tj
+-17.0837 -1.2 TD
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(a)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.3111 Tc
+[("e)311.1(n")]TJ
+/TT9 1 Tf
+2.3825 0 TD
+0 Tc
+(sd2a)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0611 Tw
+("\) del tercer disco \(el ")Tj
+/TT9 1 Tf
+9.3675 0 TD
+0 Tw
+(2)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.3112 Tc
+[("e)311.2(n")]TJ
+/TT9 1 Tf
+2.3826 0 TD
+0 Tc
+(sd2a)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0612 Tw
+(", empezando a contar en cero\). Con el )Tj
+/TT7 1 Tf
+16.2796 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.255 0 TD
+(-h)Tj
+/TT6 1 Tf
+1.5114 0 TD
+(\()Tj
+/TT4 1 Tf
+0.333 0 TD
+(human)Tj
+-40.4769 -1.2 TD
+[(r)37(eadable sizes)]TJ
+/TT6 1 Tf
+5.6568 0 TD
+(\))Tj
+/TT9 1 Tf
+0.583 0 TD
+(df)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(informa que en dicha partición de 1.8T)35(iB estamos usando 239GiB.)]TJ
+-7.6901 -2.4 TD
+(El )Tj
+/TT7 1 Tf
+1.1387 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(-i)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(de)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(df)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(es muy útil e informa de cuántos)Tj
+/TT4 1 Tf
+13.3022 0 TD
+(i-nodos)Tj
+/TT6 1 Tf
+3.25 0 TD
+(estamos usando en cada sistema de )Tj
+/TT7 1 Tf
+14.2734 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros.)Tj
+/TT9 1 Tf
+8 0 0 8 133 330 Tm
+(unix$ df -ih)Tj
+0 -1.5 TD
+0.6 Tw
+[(Filesystem )-1800(Size)-2400(Used )-600(Avail)-600(Capacity )600(iused)-1800(ifree %iused Mounted)-600(on)]TJ
+T*
+1.8 Tw
+[(/dev/sd2a )-1200(1.8T)-2400(239G 1.5T 14%)-600(1727771 )1800(58895843)-3000(3% )600(/)]TJ
+/TT6 1 Tf
+10 0 0 10 72 288 Tm
+0.0314 Tw
+[(Como podrás suponer)40(,)-281.4(una v)15(ez hemos usado todos los)]TJ
+/TT4 1 Tf
+22.1138 0 TD
+0 Tw
+(i-nodos)Tj
+/TT6 1 Tf
+3.2814 0 TD
+0.0314 Tw
+(de que dispone un sistema de )Tj
+/TT7 1 Tf
+12.1303 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0314 Tw
+(cheros ya no)Tj
+-38.0817 -1.2 TD
+0 Tw
+[(es posible crear nue)25(v)20(o)0(s)]TJ
+/TT7 1 Tf
+9.5072 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros dentro del mismo.)Tj
+-10.0634 -2.4 TD
+0.0245 Tw
+[(P)15(ara montar sistemas de )]TJ
+/TT7 1 Tf
+10.0249 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0245 Tw
+(cheros hay que ser)Tj
+/TT4 1 Tf
+7.7616 0 TD
+0 Tw
+[(r)45(oot)]TJ
+/TT6 1 Tf
+1.8965 0 TD
+0.0246 Tw
+(\(a no ser que dicho usuario se ocupe de con)Tj
+/TT7 1 Tf
+17.632 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0246 Tw
+(gurar el sis-)Tj
+-38.4273 -1.2 TD
+0.0495 Tw
+(tema para que un usuario normal pueda realizar ciertos montajes, como por ejemplo sucede con los discos)Tj
+T*
+0 Tw
+[(USB ho)10(y)-250(día\). Un ejemplo es)]TJ
+/TT9 1 Tf
+8 0 0 8 133 210 Tm
+(unix$ mount -t mfs -o rw /dev/sd0b /tmp)Tj
+/TT6 1 Tf
+10 0 0 10 72 192 Tm
+0.066 Tw
+(que monta \(en un sistema OpenBSD\) en)Tj
+/TT9 1 Tf
+16.8199 0 TD
+0 Tw
+(/tmp)Tj
+/TT6 1 Tf
+2.7164 0 TD
+0.066 Tw
+(un sistema de )Tj
+/TT7 1 Tf
+5.8914 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.066 Tw
+(cheros en memoria virtual, respaldado por)Tj
+-25.9838 -1.2 TD
+0.0185 Tw
+[(una partición de sw)10(ap en disco. \(Dicha partición se utiliza para mantener en ella la parte de la memoria vir)20(-)]TJ
+T*
+0 Tw
+(tual que no nos cabe en memoria física\).)Tj
+0 -2.4 TD
+[(P)15(ara deshacer el efecto de)]TJ
+/TT4 1 Tf
+10.6173 0 TD
+(mount\(8\))Tj
+/TT6 1 Tf
+3.916 0 TD
+(disponemos de)Tj
+/TT4 1 Tf
+6.2217 0 TD
+(umount\(8\))Tj
+/TT6 1 Tf
+4.166 0 TD
+[(.)-250(Por ejemplo,)]TJ
+/TT9 1 Tf
+8 0 0 8 133 126 Tm
+(unix$ umount /tmp)Tj
+/TT6 1 Tf
+10 0 0 10 72 108 Tm
+-0.0001 Tc
+0.0592 Tw
+[(deshace el montaje del ejemplo anterior)54.9(.)-309.3(E)-0.1(l)-309.3(sistema se ne)14.9(gará a desmontar un sistema de )]TJ
+/TT7 1 Tf
+36.4106 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0592 Tw
+(cheros que esté)Tj
+-36.9668 -1.2 TD
+0.1274 Tw
+(utilizándose. Por ejemplo, si un proceso tiene su directorio actual dentro de dicho sistema de )Tj
+/TT7 1 Tf
+39.1507 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.1274 Tw
+(cheros o)Tj
+-39.7069 -1.2 TD
+0 Tw
+(tiene )Tj
+/TT7 1 Tf
+2.2301 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0367 Tw
+(cheros abiertos procedentes del mismo, o está paginando su código desde un ejecutable almacenado)Tj
+-2.7862 -1.2 TD
+0 Tw
+(en él. Si lo intentamos...)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 441
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ umount /)Tj
+0 -1.5 TD
+(/dev/sd2a: device busy)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 654 Tm
+0.0919 Tw
+[(T)70(enemos llamadas al sistema en)]TJ
+/TT4 1 Tf
+13.5242 0 TD
+0 Tw
+(mount\(2\))Tj
+/TT6 1 Tf
+4.0078 0 TD
+0.0918 Tw
+(que utilizan los comandos que hemos visto, pero es muy poco)Tj
+-17.532 -1.2 TD
+0 Tw
+(probable que las necesites.)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+17 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+18 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+19 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+20 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+21 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 278 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 611 0 0 389 0 0 0 944 0 778 
+0 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 500 556 278 333 0 0 833 556 500 
+556 0 444 389 333 556 500 0 0 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 17 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 250 0 
+0 500 500 0 0 0 0 0 500 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 333 444 0 0 0 667 0 
+0 0 0 0 0 722 0 0 611 0 0 0 0 0 0 0 
+0 500 500 444 500 444 278 0 500 278 278 0 278 722 500 500 
+500 500 389 389 278 500 0 0 444 0 389 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 0 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 18 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 408 500 0 0 0 0 333 333 0 0 250 333 250 0 
+0 500 500 500 0 0 0 0 500 500 278 0 0 0 0 0 
+0 722 667 667 722 611 0 722 0 333 0 0 611 0 722 722 
+556 0 0 556 611 722 0 0 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 19 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 20 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 122
+/Widths [600 0 0 0 600 600 0 0 600 600 0 0 600 600 600 600 
+600 600 600 600 600 600 0 600 600 600 600 0 0 0 0 0 
+600 600 0 600 0 0 600 600 0 0 0 0 0 600 0 0 
+0 0 0 600 600 600 0 0 0 0 0 0 0 0 0 0 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 21 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+22 0 obj
+<<
+/S /D
+>>
+endobj
+23 0 obj
+<<
+/Nums [0 22 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R]
+/Count 3
+/MediaBox [0 0 612 792]
+>>
+endobj
+24 0 obj
+<<
+/CreationDate (D:20160905151714+02'00')
+/ModDate (D:20160905151714+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+25 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 23 0 R
+>>
+endobj
+xref
+0 26
+0000000000 65535 f 
+0000019419 00000 n 
+0000000016 00000 n 
+0000007996 00000 n 
+0000016701 00000 n 
+0000017361 00000 n 
+0000018057 00000 n 
+0000018792 00000 n 
+0000018966 00000 n 
+0000015574 00000 n 
+0000019736 00000 n 
+0000019500 00000 n 
+0000008135 00000 n 
+0000014834 00000 n 
+0000019584 00000 n 
+0000014963 00000 n 
+0000015456 00000 n 
+0000015714 00000 n 
+0000015916 00000 n 
+0000016116 00000 n 
+0000016313 00000 n 
+0000016510 00000 n 
+0000019668 00000 n 
+0000019696 00000 n 
+0000019832 00000 n 
+0000019955 00000 n 
+trailer
+<<
+/Size 26
+/Root 25 0 R
+/Info 24 0 R
+/ID [<18a48d3f3aab3ba945d075fc43e3a22a><18a48d3f3aab3ba945d075fc43e3a22a>]
+>>
+startxref
+20025
+%%EOF

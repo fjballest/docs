@@ -1,0 +1,1127 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4854
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 158.01 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Concurr)18(encia)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Cierr)18(es)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1934 Tw
+[(¿Cómo podemos e)25(vitar una condición de carrera como la que hemos visto?)-693.4(La respuesta viene de la)]TJ
+0 -1.2 TD
+0 Tw
+(de)Tj
+/TT7 1 Tf
+0.9438 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0078 Tw
+[(nición del problema. Necesitamos que la re)15(gión crítica ejecute atómicamente \(de forma indi)25(visible en lo)]TJ
+-1.5 -1.2 TD
+0.0493 Tw
+(que se re)Tj
+/TT7 1 Tf
+3.6523 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0493 Tw
+(ere a otros que utilizan el mismo recurso\). Decimos que necesitamos)Tj
+/TT2 1 Tf
+28.2557 0 TD
+(exclusión mutua)Tj
+/TT6 1 Tf
+7.0224 0 TD
+[(.)-299.3(Esto es,)]TJ
+-39.4866 -1.2 TD
+0.0458 Tw
+[(que si un proceso está en la re)15(gión crítica, otros no puedan estarlo. Dicho de otro modo, que si un proceso)]TJ
+T*
+0 Tw
+(está utilizando el recurso compartido otros no puedan hacerlo.)Tj
+0 -2.4 TD
+0.0196 Tw
+(En la )Tj
+/TT7 1 Tf
+2.3717 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0196 Tw
+[(gura 1 puede v)15(erse lo que sucede si)]TJ
+/TT9 1 Tf
+14.5256 0 TD
+0 Tw
+(cnt++)Tj
+/TT6 1 Tf
+3.2701 0 TD
+0.0196 Tw
+(ejecuta de forma atómica. En este caso, al contrario que)Tj
+-20.7235 -1.2 TD
+0.0457 Tw
+(antes, uno de los procesos ejecuta)Tj
+/TT9 1 Tf
+14.0198 0 TD
+0 Tw
+(cnt++)Tj
+/TT6 1 Tf
+3.2962 0 TD
+-0.0003 Tc
+0.0466 Tw
+[(antes que otro. El que lle)14.7(ga después puede ejecutar)]TJ
+/TT9 1 Tf
+20.9943 0 TD
+0 Tc
+0 Tw
+(cnt++)Tj
+/TT6 1 Tf
+3.2963 0 TD
+[(par)20(-)]TJ
+-41.6066 -1.2 TD
+0.0161 Tw
+[(tiendo del v)25(alor resultante del primero, sin que e)15(xista problema alguno. Incluso si no sabemos en qué orden)]TJ
+T*
+0 Tw
+(ejecutan los)Tj
+/TT9 1 Tf
+4.998 0 TD
+(cnt++)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-250(e)0(l)-250(v)25(alor )]TJ
+/TT7 1 Tf
+3.7514 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nal resulta correcto.)Tj
+/TT2 1 Tf
+8 0 0 8 144.224 424.24 Tm
+[(Thr)18(ead #1)-5605.5(Child)]TJ
+ET
+0 G
+1 J 1 j 0.32 w 10 M []0 d
+1 i 
+179.82 402.6 36 10.8 re
+S
+BT
+/TT9 1 Tf
+8 0 0 8 183.42 406.24 Tm
+(cnt: 0)Tj
+-4.2 -2.25 TD
+(cnt++)Tj
+ET
+179.82 366.6 36 10.8 re
+S
+BT
+8 0 0 8 183.42 370.24 Tm
+(cnt: 1)Tj
+4.8 -2.25 TD
+(cnt++)Tj
+ET
+179.82 330.6 36 10.8 re
+S
+BT
+8 0 0 8 183.42 334.24 Tm
+(cnt: 2)Tj
+/TT2 1 Tf
+1.217 -6.075 TD
+(\(a\))Tj
+ET
+287.82 287.4 0.36 144 re
+S
+BT
+8 0 0 8 324.584 424.24 Tm
+[(Thr)18(ead #2)-5605.5(Child)]TJ
+ET
+360.18 402.6 36 10.8 re
+S
+BT
+/TT9 1 Tf
+8 0 0 8 363.78 406.24 Tm
+(cnt: 0)Tj
+4.8 -2.25 TD
+(cnt++)Tj
+ET
+360.18 366.6 36 10.8 re
+S
+BT
+8 0 0 8 363.78 370.24 Tm
+(cnt: 1)Tj
+-4.2 -2.25 TD
+(cnt++)Tj
+ET
+360.18 330.6 36 10.8 re
+S
+BT
+8 0 0 8 363.78 334.24 Tm
+(cnt: 2)Tj
+/TT2 1 Tf
+1.189 -6.075 TD
+(\(b\))Tj
+10 0 0 10 97 264.4 Tm
+0.0445 Tw
+(Figura 1:)Tj
+/TT4 1 Tf
+4.3107 0 TD
+[(Incr)37(ementando el contador de forma atómica no hay condiciones de carr)37(er)15(a, ya sea \(a\) o)]TJ
+-4.3107 -1.2 TD
+0 Tw
+[(\(b\) lo que suceda en r)37(ealidad.)]TJ
+/TT6 1 Tf
+-2.5 -2.4 TD
+0.0025 Tw
+[(Dependiendo del recurso al que accedamos, tenemos di)25(v)15(ersas abstracciones para conse)15(guir e)15(xclusión mutua)]TJ
+0 -1.2 TD
+0.079 Tw
+[(en la re)15(gión crítica. Lo que necesitamos es una abstracción como mecanismo de)]TJ
+/TT2 1 Tf
+33.2231 0 TD
+0 Tw
+[(sincr)18(onización)]TJ
+/TT6 1 Tf
+6.4776 0 TD
+0.0791 Tw
+(para que)Tj
+-39.7007 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(unos procesos se pongan de acuerdo con otros.)Tj
+0 -2.4 TD
+0 Tc
+0.0394 Tw
+(En el caso de procesos que comparten memoria podemos utilizar una abstracción llamada)Tj
+/TT2 1 Tf
+36.6377 0 TD
+0 Tw
+[(cierr)18(e)]TJ
+/TT6 1 Tf
+2.7685 0 TD
+0.0394 Tw
+(para con-)Tj
+-39.4062 -1.2 TD
+0 Tw
+[(se)15(guir tener e)15(xclusión mutua. La idea es rodear la re)15(gión crítica por código similar a...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 150.4 Tm
+(lock\(cierre\);)Tj
+0 -1.5 TD
+(... región crítica...)Tj
+T*
+(unlock\(cierre\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 96.4 Tm
+0.0025 Tw
+[(La v)25(ariable)]TJ
+/TT9 1 Tf
+4.7549 0 TD
+0 Tw
+(cierre)Tj
+/TT6 1 Tf
+3.8531 0 TD
+0.0025 Tw
+[(y)-252.5(sus dos operaciones se comportan como una "lla)20(v)15(e)0(")-252.6(\(de ahí el nombre\). Sólo un pro-)]TJ
+-8.608 -1.2 TD
+0.0048 Tw
+(ceso puede tener el cierre. Cuando un proceso llama a)Tj
+/TT9 1 Tf
+21.8439 0 TD
+0 Tw
+(lock)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0048 Tw
+[(,)-254.8(s)0(i)-254.8(e)0(l)-254.8(cierre está abierto \(libre\), el proceso echa)]TJ
+-24.2443 -1.2 TD
+0.0642 Tw
+(el cierre y continúa. Si el cierre está echado \(ocupado\) el proceso espera \(dentro de)Tj
+/TT9 1 Tf
+34.3913 0 TD
+0 Tw
+(lock)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0643 Tw
+[(\))-314.3(y)65(,)-314.3(cuando esté)]TJ
+-36.7917 -1.2 TD
+0 Tw
+(libre, el proceso echa el cierre y continúa. La operación)Tj
+/TT9 1 Tf
+22.4331 0 TD
+(unlock)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(suelta o libera el cierre.)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 4320
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.2134 Tw
+(Existen instrucciones capaces de consultar y actualizar una posición de memoria de forma atómica y)Tj
+0 -1.2 TD
+0.1429 Tw
+(pueden utilizarse para implementar)Tj
+/TT9 1 Tf
+14.8987 0 TD
+0 Tw
+(lock)Tj
+/TT6 1 Tf
+2.7933 0 TD
+(y)Tj
+/TT9 1 Tf
+0.8929 0 TD
+(unlock)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.143 Tw
+[(.)-392.9(Basta usar un entero y suponer que si es cero el)]TJ
+-22.1855 -1.2 TD
+0 Tw
+(cierre está libre y si no lo es está ocupado.)Tj
+0 -2.4 TD
+0.0178 Tw
+(Dependiendo del tipo de cierre que utilicemos es posible que el proceso esté en un)Tj
+/TT9 1 Tf
+33.4505 0 TD
+0 Tw
+(while)Tj
+/TT6 1 Tf
+3.2682 0 TD
+0.0177 Tw
+(esperando a que)Tj
+-36.7187 -1.2 TD
+0.0566 Tw
+(el cierre se libere. En tal caso el proceso utiliza el procesador para esperar y decimos que tenemos)Tj
+/TT2 1 Tf
+40.4177 0 TD
+0 Tw
+(espera)Tj
+-40.4177 -1.2 TD
+[(acti)10(v)10(a)]TJ
+/TT6 1 Tf
+2.5347 0 TD
+0.0396 Tw
+[(.)-289.6(A)-289.6(estos cierres se los conoce como)]TJ
+/TT2 1 Tf
+15.0066 0 TD
+(spin locks)Tj
+/TT6 1 Tf
+4.2358 0 TD
+[(.)-289.5(Igualmente, es posible que los cierres cooperen con)]TJ
+-21.7771 -1.2 TD
+0.0456 Tw
+(UNIX y que el sistema pueda bloquear al proceso mientras espera. Esto último es lo deseable, pero has de)Tj
+T*
+0 Tw
+[(consultar el manual para v)15(er qué cierres tienes disponibles en tu librería de threads.)]TJ
+0 -2.4 TD
+0.106 Tw
+[(Cuando un cierre \(u otra abstracción\) se utiliza para dar e)15(xclusión mutua se lo denomina)]TJ
+/TT2 1 Tf
+37.201 0 TD
+0 Tw
+(mutex)Tj
+/TT6 1 Tf
+2.666 0 TD
+[(.)-356(Suelen)]TJ
+-39.867 -1.2 TD
+[(usarse las e)15(xpresiones)]TJ
+/TT4 1 Tf
+9.0656 0 TD
+[(co)10(g)10(e)0(r)-250(e)0(l)-250(mute)20(x)]TJ
+/TT6 1 Tf
+6.0962 0 TD
+(y)Tj
+/TT4 1 Tf
+0.75 0 TD
+[(soltar el mute)20(x)]TJ
+/TT6 1 Tf
+6.1734 0 TD
+(para indicar que se echa el cierre y se libera.)Tj
+-22.0852 -2.4 TD
+0.0462 Tw
+(Cuando utilizamos)Tj
+/TT4 1 Tf
+7.8693 0 TD
+0 Tw
+[(pthr)37(eads)]TJ
+/TT6 1 Tf
+3.7592 0 TD
+0.0462 Tw
+(tenemos a nuestra disposición el tipo de datos)Tj
+/TT9 1 Tf
+18.9215 0 TD
+0 Tw
+(pthread_mutex_t)Tj
+/TT6 1 Tf
+9.2978 0 TD
+0.0463 Tw
+(que rep-)Tj
+-39.8477 -1.2 TD
+0.0254 Tw
+[(resenta un mute)15(x)-275.5(y)-275.5(funciones para adquirir y liberar el mute)15(x. P)15(ara implementar e)15(xclusión mutua basta con)]TJ
+T*
+0 Tw
+(usar)Tj
+/TT9 1 Tf
+8 0 0 8 133 510 Tm
+(pthread_mutex_lock\(&lock\);)Tj
+0 -1.5 TD
+(...región crítica...)Tj
+T*
+(pthread_mutex_unlock\(&lock\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 468 Tm
+[(Donde la v)25(ariable)]TJ
+/TT9 1 Tf
+7.3329 0 TD
+(lock)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(puede declararse e inicializarse se)15(gún)]TJ
+/TT9 1 Tf
+8 0 0 8 133 450 Tm
+(pthread_mutex_t lock;)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(pthread_mutex_init\(&lock, NULL\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 408 Tm
+[(Una v)15(ez deje de ser útil el mute)15(x, hay que liberar los recursos que usa llamando a)]TJ
+/TT9 1 Tf
+8 0 0 8 133 390 Tm
+(pthread_mutex_destroy\(&lock\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 360 Tm
+0.0641 Tw
+[(Un a)20(viso. T)80(odas estas llamadas de)25(vuelv)15(en en realidad una indicación de error)55(.)-314.2(Normalmente)]TJ
+/TT9 1 Tf
+37.9314 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.9143 0 TD
+0.0642 Tw
+(is hacen el)Tj
+-38.8457 -1.2 TD
+0.1233 Tw
+(trabajo y algún otro número si no. Hemos optado por no comprobar estos errores en los programas que)Tj
+T*
+0.0363 Tw
+(mostramos en esta sección para no distraer del código que requiere la programación concurrente. Pero)Tj
+/TT2 1 Tf
+41.6392 0 TD
+0 Tw
+(hay)Tj
+-41.6392 -1.2 TD
+0.115 Tw
+[(que compr)18(obar los err)18(or)18(es)]TJ
+/TT6 1 Tf
+12.0144 0 TD
+[(cuando se utilicen en la práctica. Muchas v)15(eces sólo f)10(allan si el proceso se)]TJ
+-12.0144 -1.2 TD
+0 Tw
+[(queda sin memoria disponible, pero eso no es una e)15(xcusa para no comprobar errores.)]TJ
+0 -2.4 TD
+(El siguiente programa es similar al del epígrafe anterior pero no presenta condiciones de carrera.)Tj
+/TT11 1 Tf
+6.1 -1.8 TD
+([safe.c])Tj
+/TT6 1 Tf
+4.8008 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 258 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <pthread.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+0 -3 TD
+(typedef struct Cnt Cnt;)Tj
+0 -1.5 TD
+(struct Cnt {)Tj
+2.4 -1.5 TD
+(int n;)Tj
+T*
+(pthread_mutex_t lock;)Tj
+-2.4 -1.5 TD
+(};)Tj
+0 -3 TD
+(enum { Nloops = 10 };)Tj
+0 -1.5 TD
+(static int nloops = Nloops;)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+16 0 obj
+<<
+/Length 1509
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(static void*)Tj
+0 -1.5 TD
+(tmain\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(Cnt *cntp;)Tj
+0 -3 TD
+(cntp = a;)Tj
+0 -1.5 TD
+(for\(i = 0; i < nloops; i++\) {)Tj
+2.4 -1.5 TD
+(pthread_mutex_lock\(&cntp->lock\);)Tj
+T*
+(cntp->n = cntp->n + 1;)Tj
+T*
+(pthread_mutex_unlock\(&cntp->lock\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(Cnt cnt;)Tj
+T*
+(pthread_t thr[3];)Tj
+T*
+(void *sts[3];)Tj
+0 -3 TD
+(if\(argc > 1\) {)Tj
+2.4 -1.5 TD
+(nloops = atoi\(argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(cnt.n = 0;)Tj
+T*
+(if\(pthread_mutex_init\(&cnt.lock, NULL\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "mutex"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(if\(pthread_create\(thr+i, NULL, tmain, &cnt\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(pthread_join\(thr[i], sts+i\);)Tj
+T*
+(free\(sts[i]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(pthread_mutex_destroy\(&cnt.lock\);)Tj
+T*
+(printf\("cnt is %d\\n", cnt.n\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 150 Tm
+0.0893 Tw
+[(Hemos se)15(guido la costumbre de situar el cierre cerca del recurso al que cierra, si ello es posible. En este)]TJ
+0 -1.2 TD
+0 Tw
+(caso, situamos tanto el cierre como el contador dentro de la misma estructura:)Tj
+ET
+endstream
+endobj
+17 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 2356
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(typedef struct Cnt Cnt;)Tj
+0 -1.5 TD
+(struct Cnt {)Tj
+2.4 -1.5 TD
+(int n;)Tj
+T*
+(pthread_mutex_t lock;)Tj
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 630 Tm
+[(Cuando los threads intentan incrementar el contador)40(,)-250(ejecutan)]TJ
+/TT9 1 Tf
+8 0 0 8 133 612 Tm
+(pthread_mutex_lock\(&cntp->lock\);)Tj
+T*
+(cntp->n = cntp->n + 1;)Tj
+T*
+(pthread_mutex_unlock\(&cntp->lock\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 570 Tm
+-0.0002 Tc
+0.0912 Tw
+[(y)-341.2(uno de ellos lle)14.8(gará a)]TJ
+/TT9 1 Tf
+10.0226 0 TD
+0 Tc
+0 Tw
+(pthread_mutex_lock)Tj
+/TT6 1 Tf
+11.1428 0 TD
+0.091 Tw
+(antes que los demás. Ese proceso adquiere el cierre y)Tj
+-21.1653 -1.2 TD
+-0.0002 Tc
+0.0485 Tw
+[(continúa. Si lle)14.8(gan)-298.5(otros a)]TJ
+/TT9 1 Tf
+10.8861 0 TD
+0 Tc
+0 Tw
+(pthread_mutex_lock)Tj
+/TT6 1 Tf
+11.1001 0 TD
+0.0483 Tw
+[(antes de que el proceso que tiene el mute)15(x)-298.4(l)0(o)-298.4(suelte,)]TJ
+-21.9861 -1.2 TD
+0.087 Tw
+(quedarán bloqueados dentro de)Tj
+/TT9 1 Tf
+13.0658 0 TD
+0 Tw
+(pthread_mutex_lock)Tj
+/TT6 1 Tf
+11.1388 0 TD
+0.087 Tw
+(hasta que el cierre quede libre. Si ahora edita-)Tj
+-24.2045 -1.2 TD
+0.1027 Tw
+(mos el código y añadimos un)Tj
+/TT9 1 Tf
+12.5591 0 TD
+0 Tw
+(sleep)Tj
+/TT6 1 Tf
+3.3533 0 TD
+0.1028 Tw
+[(a)-352.8(mitad del incremento, como hicimos antes, v)15(eremos que no ten-)]TJ
+-15.9124 -1.2 TD
+0 Tw
+[(emos condiciones de carrera. Podemos v)15(er esto además en la siguiente ejecución:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 504 Tm
+(unix$ safe 10000)Tj
+0 -1.5 TD
+(cnt is 30000)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 462 Tm
+(¡No se pierden incrementos!)Tj
+0 -2.4 TD
+0.0036 Tw
+[(Por cierto, los mute)15(x)-253.6(d)0(e)]TJ
+/TT4 1 Tf
+9.7789 0 TD
+0 Tw
+[(pthr)37(ead\(3\))]TJ
+/TT6 1 Tf
+4.4934 0 TD
+0.0035 Tw
+(suelen bloquear el proceso para hacer que espere, por lo que no son)Tj
+/TT4 1 Tf
+27.2569 0 TD
+0 Tw
+(spin)Tj
+-41.5292 -1.2 TD
+[(loc)20(ks)]TJ
+/TT6 1 Tf
+2.2847 0 TD
+[(y)-250(n)0(o)-250(desperdician procesador)55(.)]TJ
+-2.2847 -2.4 TD
+0.1545 Tw
+[(Otro detalle importante es que es posible inicializar un cierre usando un v)25(alor inicial, en lugar de usar)]TJ
+/TT9 1 Tf
+0 -1.2 TD
+0 Tw
+(pthread_mutex_init)Tj
+/TT6 1 Tf
+10.8018 0 TD
+[(.)-500(P)15(ara hacerlo, basta usar código como:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 372 Tm
+(pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;)Tj
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+21 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+22 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 500 0 0 0 0 333 333 0 0 0 0 250 0 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 611 0 0 389 0 0 0 0 0 778 
+0 0 0 556 667 0 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 500 556 278 0 556 278 833 556 500 
+556 556 444 389 333 556 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 21 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 250 0 250 0 
+0 0 0 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 333 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 278 500 500 278 0 444 278 722 500 500 
+500 500 389 389 278 500 0 0 444 444 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 22 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 500 500 500 500 0 0 0 0 0 278 0 0 0 0 444 
+0 722 667 667 722 611 0 0 722 333 0 0 611 889 722 722 
+556 0 0 556 611 722 0 0 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 23 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 24 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 0 
+600 600 600 600 0 0 0 0 0 0 600 600 600 600 600 0 
+0 600 0 600 600 600 0 0 600 600 0 0 600 600 600 0 
+600 0 600 0 600 600 0 0 600 0 600 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 0 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 0 
+0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 25 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 115
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 600 0 600 0 600 600 0 0 0 0 0 0 0 
+0 0 0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 26 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 17 0 R
+/Contents 16 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+27 0 obj
+<<
+/S /D
+>>
+endobj
+28 0 obj
+<<
+/Nums [0 27 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 15 0 R 18 0 R]
+/Count 4
+/MediaBox [0 0 612 792]
+>>
+endobj
+29 0 obj
+<<
+/CreationDate (D:20160905151719+02'00')
+/ModDate (D:20160905151719+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+30 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 28 0 R
+>>
+endobj
+xref
+0 31
+0000000000 65535 f 
+0000018419 00000 n 
+0000000016 00000 n 
+0000004922 00000 n 
+0000015101 00000 n 
+0000015777 00000 n 
+0000016447 00000 n 
+0000017186 00000 n 
+0000017356 00000 n 
+0000013772 00000 n 
+0000018820 00000 n 
+0000018500 00000 n 
+0000005061 00000 n 
+0000009434 00000 n 
+0000018093 00000 n 
+0000018584 00000 n 
+0000009576 00000 n 
+0000011138 00000 n 
+0000018668 00000 n 
+0000011245 00000 n 
+0000013654 00000 n 
+0000013912 00000 n 
+0000014114 00000 n 
+0000014314 00000 n 
+0000014511 00000 n 
+0000014708 00000 n 
+0000014899 00000 n 
+0000018752 00000 n 
+0000018780 00000 n 
+0000018923 00000 n 
+0000019046 00000 n 
+trailer
+<<
+/Size 31
+/Root 30 0 R
+/Info 29 0 R
+/ID [<f8c92c608c896c630d06df5cd3b17aa8><f8c92c608c896c630d06df5cd3b17aa8>]
+>>
+startxref
+19116
+%%EOF

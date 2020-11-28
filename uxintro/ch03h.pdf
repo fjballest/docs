@@ -1,0 +1,1601 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 5420
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.342 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Ficher)18(os)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Enlaces)-250(simbólicos)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.06 Tw
+(Recientemente hemos visto que podemos enlazar )Tj
+/TT7 1 Tf
+20.298 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.06 Tw
+[(cheros desde v)25(arios nombres. A este tipo de enlaces se)]TJ
+-20.8541 -1.2 TD
+0.0023 Tw
+(los denomina)Tj
+/TT2 1 Tf
+5.615 0 TD
+(hard links)Tj
+/TT6 1 Tf
+4.6179 0 TD
+0 Tw
+(o)Tj
+/TT4 1 Tf
+0.7523 0 TD
+0.0023 Tw
+[(enlaces dur)45(os)]TJ
+/TT6 1 Tf
+5.4842 0 TD
+0.0024 Tw
+[(.)-252.3(L)0(a)-252.3(v)15(entaja que tienen es que todos los enlaces se comportan bien.)]TJ
+-16.4693 -1.2 TD
+0 Tw
+(Por ejemplo, borrando cualquiera de los nombres para un )Tj
+/TT7 1 Tf
+23.1597 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero se)15(guimos teniendo el )]TJ
+/TT7 1 Tf
+11.1486 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero accesible.)Tj
+-35.4205 -2.4 TD
+0.0824 Tw
+(No obstante, no es posible hacer un enlace a un )Tj
+/TT7 1 Tf
+20.012 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0824 Tw
+(chero que esté en otro sistema de )Tj
+/TT7 1 Tf
+14.0441 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0824 Tw
+[(cheros \(en otra par)20(-)]TJ
+-35.1684 -1.2 TD
+0.0586 Tw
+[(tición, otro disco y otra máquina\). Esto es ob)15(vio si piensas que el enlace simplemente crea una entrada de)]TJ
+T*
+0.0402 Tw
+(directorio que se re)Tj
+/TT7 1 Tf
+7.8115 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0402 Tw
+(ere a un número de)Tj
+/TT4 1 Tf
+8.1141 0 TD
+0 Tw
+(i-nodo)Tj
+/TT6 1 Tf
+2.901 0 TD
+0.0401 Tw
+(dado, y piensas que el número de)Tj
+/TT4 1 Tf
+13.8325 0 TD
+0 Tw
+(i-nodo)Tj
+/TT6 1 Tf
+2.9009 0 TD
+0.0401 Tw
+(sólo tiene sentido)Tj
+-36.1162 -1.2 TD
+0 Tw
+(dentro de la misma partición o sistema de )Tj
+/TT7 1 Tf
+16.8843 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros.)Tj
+-17.4404 -2.4 TD
+0.0715 Tw
+[(P)15(ara solucionar este problema, UNIX dispone de)]TJ
+/TT2 1 Tf
+20.3132 0 TD
+(enlaces simbólicos)Tj
+/TT6 1 Tf
+8.1427 0 TD
+(además de enlaces duros. Un enlace)Tj
+-28.4559 -1.2 TD
+0.0196 Tw
+(simbólico es similar a un)Tj
+/TT4 1 Tf
+10.3465 0 TD
+[(acceso dir)37(ecto)]TJ
+/TT6 1 Tf
+6.0554 0 TD
+[(en W)40(indo)25(ws. Se trata de un )]TJ
+/TT7 1 Tf
+11.2992 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0195 Tw
+(chero cuyos datos son el path de otro)Tj
+/TT7 1 Tf
+-28.2573 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1101 Tw
+[(chero. ¡T)80(an sencillo como eso!. La consecuencia es que un enlace simbólico puede apuntar a cualquier)]TJ
+/TT7 1 Tf
+-0.5562 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1244 Tw
+[(chero dado su path. Y)129(,)-374.4(naturalmente, la desv)15(entaja es que si borramos el )]TJ
+/TT7 1 Tf
+30.5748 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1244 Tw
+(chero original perdemos los)Tj
+-31.6871 -1.2 TD
+0 Tw
+(datos del )Tj
+/TT7 1 Tf
+3.8325 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero y el enlace queda apuntando a un )Tj
+/TT7 1 Tf
+15.9927 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero que no e)15(xiste.)]TJ
+-20.9375 -2.4 TD
+[(P)15(ara crear un enlace simbólico puedes utilizar el )]TJ
+/TT7 1 Tf
+19.5875 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(-s)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(de)Tj
+/TT4 1 Tf
+1.1938 0 TD
+(ln\(1\))Tj
+/TT6 1 Tf
+1.9438 0 TD
+[(.)-250(Por ejemplo:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 359.4 Tm
+(unix$ echo hola >fich)Tj
+0 -1.5 TD
+(unix$ ln -s fich link)Tj
+T*
+(unix$ ls -l fich link)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo wheel 5)-600(Aug )600(21 )600(19:24 )600(fich)]TJ
+T*
+0 Tw
+[(lrwxr-xr-x )-600(1)-600(nemo )-600(wheel )-600(4)-600(Aug 21 19:24 link -> fich)]TJ
+T*
+(unix$ cat link)Tj
+T*
+(hola)Tj
+T*
+(unix$ cat fich)Tj
+T*
+(hola)Tj
+T*
+(unix$ rm fich)Tj
+T*
+(unix$ cat link)Tj
+T*
+(cat: link: No such file or directory)Tj
+T*
+(unix$ ls -l link)Tj
+T*
+[(lrwxr-xr-x )-600(1)-600(nemo )-600(wheel )-600(4)-600(Aug 21 19:24 link -> fich)]TJ
+/TT6 1 Tf
+10 0 0 10 72 173.4 Tm
+0.0528 Tw
+(Es interesante )Tj
+/TT7 1 Tf
+5.9367 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0528 Tw
+(jarse en la salida de)Tj
+/TT9 1 Tf
+8.3436 0 TD
+0 Tw
+(ls)Tj
+/TT6 1 Tf
+1.503 0 TD
+(para)Tj
+/TT9 1 Tf
+2.0235 0 TD
+(link)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0529 Tw
+[(.)-302.9(E)0(l)-302.9(primer carácter es ")]TJ
+/TT9 1 Tf
+9.723 0 TD
+0 Tw
+(l)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0529 Tw
+(", lo que indica que el tipo de)Tj
+/TT7 1 Tf
+-31.0864 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero es)Tj
+/TT4 1 Tf
+3.5537 0 TD
+(symbolic link)Tj
+/TT6 1 Tf
+5.3042 0 TD
+[(.)-250(S)0(i)-250(recuerdas)]TJ
+/TT4 1 Tf
+5.6646 0 TD
+(stat\(2\))Tj
+/TT6 1 Tf
+2.6108 0 TD
+[(,)-250(puedes utilizar código como)]TJ
+/TT9 1 Tf
+8 0 0 8 133 143.4 Tm
+(if \(\(st.st_mode & S_IFMT\) == S_IFLNK\) {)Tj
+2.4 -1.5 TD
+(// el fichero es un enlace simbolico)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 101.4 Tm
+[(para v)15(er si el )]TJ
+/TT7 1 Tf
+5.3712 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero que tienes entre manos es un enlace simbólico o no.)Tj
+-5.9274 -2.4 TD
+0.1268 Tw
+(En general, las llamadas al sistema y funciones que operan con )Tj
+/TT7 1 Tf
+26.8303 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1268 Tw
+[(cheros suelen se)15(guir los enlaces como)]TJ
+-27.3865 -1.2 TD
+0.2463 Tw
+[(cabe esperar)55(.)-496.3(Por ejemplo, si)]TJ
+/TT9 1 Tf
+12.9221 0 TD
+0 Tw
+(open)Tj
+/TT6 1 Tf
+2.8967 0 TD
+0.2463 Tw
+[(recibe como ar)18(gumento el path de un )]TJ
+/TT7 1 Tf
+16.7842 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.2464 Tw
+(chero que es un enlace)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 5776
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+(simbólico, UNIX se da cuenta de ello y procede como sigue:)Tj
+2.5 -1.56 TD
+[(•)-2150(S)0(e)-250(leen los datos del )]TJ
+/TT7 1 Tf
+10.9151 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+-11.4713 -1.56 TD
+[(•)-2150(S)0(e)-250(interpretan como el path del que hay que hacer el)]TJ
+/TT9 1 Tf
+23.6856 0 TD
+(open)Tj
+/TT6 1 Tf
+-23.6856 -1.56 TD
+[(•)-2150(S)0(e)-250(efectúa el)]TJ
+/TT9 1 Tf
+7.858 0 TD
+(open)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(de dicho )Tj
+/TT7 1 Tf
+3.6655 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+-17.2301 -1.2 TD
+(Esto hace que normalmente tus programas trabajen correctamente aunque encuentren enlaces simbólicos.)Tj
+0 -2.4 TD
+0.0131 Tw
+(No obstante, hay ocasiones en que hay que prestar atención a este tipo de )Tj
+/TT7 1 Tf
+29.701 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0131 Tw
+(cheros. Por ejemplo, si hacemos)Tj
+-30.2571 -1.2 TD
+0 Tw
+(un)Tj
+/TT9 1 Tf
+1.3419 0 TD
+(unlink)Tj
+/TT6 1 Tf
+3.9425 0 TD
+0.0919 Tw
+(de un enlace simbólico tan sólo se borra el enlace y no el )Tj
+/TT7 1 Tf
+24.2142 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0919 Tw
+[(chero enlazado.)-592(Aquí UNIX no)]TJ
+-30.0548 -1.2 TD
+0 Tw
+(sigue el enlace de forma automática. Pero es mejor así, dado que lo que cabría esperar al ejecutar)Tj
+/TT9 1 Tf
+8 0 0 8 133 583.2 Tm
+(unix$ rm fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 565.2 Tm
+0.0426 Tw
+(es que se borre)Tj
+/TT9 1 Tf
+6.3901 0 TD
+0 Tw
+(fich)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0426 Tw
+[(,)-292.6(sea un enlace o no. En ningún caso esperamos que se borre el )]TJ
+/TT7 1 Tf
+25.9211 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0426 Tw
+(chero al que apunta)Tj
+/TT9 1 Tf
+-35.2678 -1.2 TD
+0 Tw
+(fich)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(si es un enlace simbólico.)Tj
+-2.6504 -2.4 TD
+0.0313 Tw
+(Llamadas como)Tj
+/TT4 1 Tf
+6.6715 0 TD
+0 Tw
+(stat\(2\))Tj
+/TT6 1 Tf
+2.8921 0 TD
+0.0314 Tw
+(son más delicadas. Utilizar)Tj
+/TT9 1 Tf
+11.15 0 TD
+0 Tw
+(stat)Tj
+/TT6 1 Tf
+2.6818 0 TD
+0.0314 Tw
+(sobre un )Tj
+/TT7 1 Tf
+3.7288 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0314 Tw
+(chero que es un enlace simbólico hace)Tj
+-27.6804 -1.2 TD
+0.0322 Tw
+[(que UNIX \(como hace en general\) atra)20(viese el enlace automáticamente.)-532.3(Esto hace que en realidad obteng-)]TJ
+T*
+0.0732 Tw
+(amos los metadatos del )Tj
+/TT7 1 Tf
+9.8465 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0732 Tw
+(chero al que apunta el enlace. Dicho de otro modo, ¡)Tj
+/TT9 1 Tf
+21.668 0 TD
+0 Tw
+(stat)Tj
+/TT6 1 Tf
+2.7236 0 TD
+0.0732 Tw
+(nunca te dirá que un)Tj
+/TT7 1 Tf
+-34.7943 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero es un enlace simbólico!)Tj
+-0.5562 -2.4 TD
+0.0705 Tw
+(Una forma de solucionar este problema es llamar a)Tj
+/TT9 1 Tf
+21.2097 0 TD
+0 Tw
+(lstat)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0705 Tw
+[(,)-320.5(que funciona igual que)]TJ
+/TT9 1 Tf
+10.2381 0 TD
+0 Tw
+(stat)Tj
+/TT6 1 Tf
+2.7208 0 TD
+0.0704 Tw
+(pero cuando el)Tj
+/TT7 1 Tf
+-37.1691 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(chero es un enlace de)24.9(vuelv)14.9(e)-250.1(los atrib)19.9(utos del enlace en lugar de los del )]TJ
+/TT7 1 Tf
+28.4238 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero enlazado.)Tj
+-29.5361 -2.4 TD
+0.2334 Tw
+(Sucede lo mismo con llamadas como)Tj
+/TT4 1 Tf
+16.5084 0 TD
+0 Tw
+[(c)15(hown\(2\))]TJ
+/TT6 1 Tf
+3.7619 0 TD
+(,)Tj
+/TT4 1 Tf
+0.7335 0 TD
+[(c)15(hmod\(2\))]TJ
+/TT6 1 Tf
+3.817 0 TD
+0.2335 Tw
+[(,)-483.5(etc. Estas llamadas atra)20(viesan los enlaces)]TJ
+-24.8208 -1.2 TD
+0.0101 Tw
+(simbólicos y operan sobre los )Tj
+/TT7 1 Tf
+12.1877 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0101 Tw
+(cheros enlazados, pero dispones de llamadas con igual nombre pero comen-)Tj
+-12.7439 -1.2 TD
+0.05 Tw
+(zando por ")Tj
+/TT9 1 Tf
+4.7289 0 TD
+0 Tw
+(l)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.05 Tw
+[(")-300(\(por ej., ")]TJ
+/TT9 1 Tf
+4.6041 0 TD
+0 Tw
+(lchmod)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.05 Tw
+("\) que, cuando el )Tj
+/TT7 1 Tf
+7.2444 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.05 Tw
+(chero es un enlace simbólico, trabajan sobre el enlace)Tj
+-21.3343 -1.2 TD
+0 Tw
+(en sí y no sobre el )Tj
+/TT7 1 Tf
+7.4985 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero enlazado.)Tj
+/TT2 1 Tf
+-8.0547 -2.4 TD
+0.0025 Tw
+(¡El manual es tu amigo!)Tj
+/TT6 1 Tf
+10.4295 0 TD
+(Aunque creas que sabes usar UNIX, consulta rápidamente la página de manual de)Tj
+-10.4295 -1.2 TD
+0.0536 Tw
+[(la llamada que piensas usar)55(.)-303.6(Quizá recuerdes que debieras utilizar)]TJ
+/TT9 1 Tf
+26.9972 0 TD
+0 Tw
+(lstat)Tj
+/TT6 1 Tf
+3.3042 0 TD
+0.3037 Tc
+[(yn)303.7(o)]TJ
+/TT9 1 Tf
+2.1074 0 TD
+0 Tc
+(stat)Tj
+/TT6 1 Tf
+2.7041 0 TD
+(o)Tj
+/TT9 1 Tf
+0.8037 0 TD
+(fstat)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0537 Tw
+[(... ¡y ahor)20(-)]TJ
+-38.9171 -1.2 TD
+0 Tw
+[(rarás mucho tiempo depurando b)20(ugs que podrías haber e)25(vitado!)]TJ
+0 -2.4 TD
+0.0263 Tw
+[(P)15(ara crear un enlace simbólico desde C puedes utilizar)]TJ
+/TT4 1 Tf
+22.2964 0 TD
+0 Tw
+(symlink\(2\))Tj
+/TT6 1 Tf
+4.497 0 TD
+0.0263 Tw
+(que funciona igual que)Tj
+/TT4 1 Tf
+9.4909 0 TD
+0 Tw
+(link\(2\))Tj
+/TT6 1 Tf
+2.6655 0 TD
+0.0263 Tw
+[(,)-276.3(pero crea)]TJ
+-38.9499 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(un enlace simbólico en lugar de uno duro. Por ejemplo, este programa es similar a)Tj
+/TT4 1 Tf
+33.0687 0 TD
+0 Tc
+0 Tw
+(ln\(1\))Tj
+/TT6 1 Tf
+2.1938 0 TD
+(bajo el )Tj
+/TT7 1 Tf
+2.9434 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(-s)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 295.2 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -3 TD
+(if \(argc != 3\) {)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "usage: %s old new\\n", argv[0]\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(symlink\(argv[1], argv[2]\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "symlink %s", argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 6257
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT2 1 Tf
+-21.017 -3.6 TD
+0.25 Tw
+[(2. Dispositi)10(v)10(o)0(s)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+[(Y)100(a)100( )-100(conocemos di)25(v)15(ersos tipos de )]TJ
+/TT7 1 Tf
+12.9962 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+-11.0524 -1.56 TD
+[(•)-2150(Ficheros re)15(gulares)]TJ
+T*
+[(•)-2150(Directorios)]TJ
+T*
+[(•)-2150(Enlaces simbólicos)]TJ
+-2.5 -1.2 TD
+(Pero es hora de mencionar dos más:)Tj
+2.5 -1.56 TD
+[(•)-2150(Dispositi)25(v)20(o)0(s)-250(d)0(e)-250(tipo carácter)]TJ
+T*
+[(•)-2150(Dispositi)25(v)20(o)0(s)-250(d)0(e)-250(tipo bloque)]TJ
+-2.5 -2.4 TD
+0.0944 Tw
+[(Los dispositi)25(v)20(o)0(s)-344.4(son)]TJ
+/TT4 1 Tf
+8.6562 0 TD
+0 Tw
+(i-nodos)Tj
+/TT6 1 Tf
+3.3444 0 TD
+0.0944 Tw
+[(que no contienen datos en realidad. Se utilizan para representar dispositi)25(v)20(o)0(s)]TJ
+-12.0006 -1.2 TD
+0.0325 Tw
+[(que pueden ser artef)10(actos hardw)10(are \(como una impresora o un disco\) o pueden ser in)40(v)15(enciones de softw)10(are)]TJ
+T*
+0 Tw
+(\(como)Tj
+/TT9 1 Tf
+2.8047 0 TD
+(/dev/null)Tj
+/TT6 1 Tf
+5.4009 0 TD
+[(\). La mayoría de los dispositi)25(v)20(o)0(s)-250(suelen estar en)]TJ
+/TT9 1 Tf
+19.3949 0 TD
+(/dev)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-30.0009 -2.4 TD
+0.0148 Tw
+[(UNIX distingue entre dispositi)25(v)20(o)0(s)-264.8(d)0(e)-264.8(modo carácter y de modo bloque principalmente por que los primeros)]TJ
+0 -1.2 TD
+0.0916 Tw
+(se espera que correspondan a streams de caracteres \(el teclado, la pantalla al escribir caracteres, el ratón,)Tj
+T*
+0.0572 Tw
+[(etc.\) y los se)15(gundos se espera que correspondan a almacenes de bloques de bytes de los que UNIX podría)]TJ
+T*
+0 Tw
+(mantener una cache.)Tj
+0 -2.4 TD
+0.0557 Tw
+(De hecho, los discos duros \(y las particiones\) suelen tener un par de )Tj
+/TT7 1 Tf
+28.105 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0556 Tw
+[(cheros de dispositi)25(v)20(o)20( )-20(cada uno: uno)]TJ
+-28.6611 -1.2 TD
+0.0432 Tw
+(de tipo carácter y uno de tipo bloque. El primero se utiliza para formatear el disco y para leerlo saltándose)Tj
+T*
+0.0885 Tw
+[(la cache. El se)15(gundo se utiliza para acceder al disco bene)]TJ
+/TT7 1 Tf
+23.6642 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0885 Tw
+(ciándose de la cache de bloques que mantiene)Tj
+-24.2204 -1.2 TD
+0.0888 Tw
+[(UNIX. Por ejemplo, presentamos los dispositi)25(v)20(o)0(s)-338.9(d)0(e)-338.9(l)0(a)-338.9(primera partición del primer disco en nuestro sis-)]TJ
+T*
+0 Tw
+(tema:)Tj
+/TT9 1 Tf
+8 0 0 8 133 404.4 Tm
+(unix$ ls -l /dev/rdisk0s1)Tj
+0 -1.5 TD
+[(crw-r----- )-600(1)-600(root )-600(operator)-2400(1, )-1200(1)-600(Jul 13 07:30 /dev/rdisk0s1)]TJ
+T*
+(unix$ ls -l /dev/disk0s1)Tj
+T*
+[(brw-r----- )-600(1)-600(root )-600(operator)-2400(1, )-1200(1)-600(Jul 13 07:30 /dev/disk0s1)]TJ
+/TT6 1 Tf
+10 0 0 10 72 338.4 Tm
+0.1536 Tw
+(Cuando abres, lees o escribes un )Tj
+/TT7 1 Tf
+14.1677 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1536 Tw
+(chero, UNIX localiza el)Tj
+/TT4 1 Tf
+10.4152 0 TD
+0 Tw
+(i-nodo)Tj
+/TT6 1 Tf
+3.0143 0 TD
+(del )Tj
+/TT7 1 Tf
+1.6252 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.1535 Tw
+(chero y en función del tipo de)Tj
+/TT7 1 Tf
+-30.3347 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0147 Tw
+[(chero hace una cosa u otra. En el caso de los dispositi)25(v)20(os, simplemente se llama a una función distinta \(en)]TJ
+-0.5562 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+[(el k)9.9(ernel\) para cada tipo de dispositi)24.9(v)19.9(o)19.9( )-20(y)19.9( )-20(se)-250.1(deja que ella haga)-250.1(e)-0.1(l)-250.1(trabajo.)]TJ
+0 -2.4 TD
+0 Tc
+0.0183 Tw
+[(El código de un dispositi)25(v)20(o)20( )-20(suele llamarse)]TJ
+/TT2 1 Tf
+17.2188 0 TD
+0 Tw
+(manejador)Tj
+/TT6 1 Tf
+4.9343 0 TD
+(o)Tj
+/TT2 1 Tf
+0.7683 0 TD
+-0.01 Tc
+[(d)-10(r)-10(ive)-10(r)]TJ
+/TT6 1 Tf
+2.6455 0 TD
+0 Tc
+0.0183 Tw
+[(.)-268.3(S)0(i)-268.3(s)0(e)-268.3(trata de hardw)10(are, además de atender)]TJ
+-25.567 -1.2 TD
+0.0875 Tw
+[(las interrupciones de dicho trozo de hardw)10(are y de detectar si está instalado en el sistema o no, el mane-)]TJ
+T*
+0 Tw
+(jador implementará las operaciones del)Tj
+/TT4 1 Tf
+15.9102 0 TD
+(i-nodo)Tj
+/TT6 1 Tf
+2.8608 0 TD
+[(para el tipo de dispositi)25(v)20(o)20( )-20(de)-250(que se trate.)]TJ
+-18.771 -2.4 TD
+(En un)Tj
+/TT4 1 Tf
+2.6108 0 TD
+(i-nodo)Tj
+/TT6 1 Tf
+2.8608 0 TD
+[(de un dispositi)25(v)20(o)20( )-20(tienes dos números:)]TJ
+-2.9717 -1.56 TD
+[(•)-2150(Número principal \()]TJ
+/TT4 1 Tf
+10.1642 0 TD
+(major number)Tj
+/TT6 1 Tf
+5.6943 0 TD
+(\))Tj
+-15.8585 -1.56 TD
+[(•)-2150(Número secundario \()]TJ
+/TT4 1 Tf
+10.9415 0 TD
+(minor number)Tj
+/TT6 1 Tf
+5.6943 0 TD
+(\))Tj
+-19.1358 -1.2 TD
+0.0453 Tw
+(El primero identi)Tj
+/TT7 1 Tf
+6.9221 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0452 Tw
+[(ca un manejador de dispositi)25(v)20(o)20( )-20.1(\(por ejemplo, discos duros SA)111(T)93(A\). El se)15(gundo identi)]TJ
+/TT7 1 Tf
+34.2736 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca)Tj
+-42.3081 -1.2 TD
+[(de qué dispositi)25(v)20(o)20( )-20(concreto se trata \(por ejemplo, el primer disco SA)111(T)93(A)93( )-93(en)-250(el)-250(primer b)20(us SA)111(T)93(A\).)]TJ
+0 -2.4 TD
+0.0061 Tw
+(Así pues, si un)Tj
+/TT4 1 Tf
+6.1636 0 TD
+0 Tw
+(i-nodo)Tj
+/TT6 1 Tf
+2.8669 0 TD
+0.0061 Tw
+[(es un dispositi)25(v)20(o)20( )-20(de)-256.1(bloque que identi)]TJ
+/TT7 1 Tf
+15.101 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0061 Tw
+(ca un disco y el número principal corresponde)Tj
+-24.6876 -1.2 TD
+0.0486 Tw
+[(al dri)25(v)15(e)0(r)-298.6(d)0(e)-298.6(discos SA)111(T)93(A)0(,)-298.6(todas las llamadas)]TJ
+/TT9 1 Tf
+18.3352 0 TD
+0 Tw
+(open)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5486 0 TD
+(read)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0485 Tw
+[(,)-298.6(... que operen sobre ese)]TJ
+/TT4 1 Tf
+10.3985 0 TD
+0 Tw
+(i-nodo)Tj
+/TT6 1 Tf
+2.9093 0 TD
+0.0485 Tw
+(llamarán a fun-)Tj
+-36.9925 -1.2 TD
+0.0245 Tw
+[(ciones concretas del manejador de discos SA)111(T)93(A)0(.)-274.5(A)-274.5(dichas funciones se les dará además el)]TJ
+/TT4 1 Tf
+36.5407 0 TD
+0 Tw
+(i-nodo)Tj
+/TT6 1 Tf
+2.8854 0 TD
+0.0246 Tw
+(de que se)Tj
+-39.4261 -1.2 TD
+0 Tw
+[(trate y podrán v)15(er el número secundario \(v)15(er de qué disco concreto hay que leer)40(,)-250(escribir)40(,)-250(etc.\).)]TJ
+0 -2.4 TD
+(Ahora puedes entender la salida de este comando:)Tj
+/TT9 1 Tf
+8 0 0 8 133 85.2 Tm
+(unix$ ls -l /dev/tty)Tj
+0 -1.5 TD
+[(crw-rw-rw- )-600(1)-600(root )-600(wheel)-2400(2, )-1200(0)-600(Aug 20 12:30 /dev/tty)]TJ
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 3230
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+0.0149 Tw
+(El primer carácter es una ")Tj
+/TT9 1 Tf
+10.7268 0 TD
+0 Tw
+(c)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0149 Tw
+(", lo que indica)Tj
+/TT4 1 Tf
+6.3828 0 TD
+[(dispositivo de car)15(acter)37(es)]TJ
+/TT6 1 Tf
+9.9758 0 TD
+[(.)-264.9(Y)-264.9(los números)]TJ
+/TT9 1 Tf
+6.6426 0 TD
+0 Tw
+(2)Tj
+/TT6 1 Tf
+0.865 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7649 0 TD
+(0)Tj
+/TT6 1 Tf
+0.865 0 TD
+0.0148 Tw
+(corresponden al)Tj
+-36.8231 -1.2 TD
+0 Tw
+(número principal y secundario.)Tj
+0 -2.4 TD
+0.0557 Tw
+[(Los dispositi)25(v)20(o)0(s)-305.7(sólo son )]TJ
+/TT7 1 Tf
+10.5128 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.0558 Tw
+[(cheros que representan a los dispositi)24.9(v)19.9(os, no son hardw)9.9(are. Esto es, que tengas)]TJ
+-11.0689 -1.2 TD
+0 Tc
+0 Tw
+(en)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(/dev)Tj
+/TT6 1 Tf
+2.6504 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(mil dispositi)24.9(v)19.9(o)-0.1(s)-250.1(para discos duros no quiere decir que tengas mil discos instalados.)]TJ
+-3.8442 -2.4 TD
+0 Tc
+0.0569 Tw
+[(P)15(ara crear un )]TJ
+/TT7 1 Tf
+5.6801 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0569 Tw
+[(chero de dispositi)25(v)20(o)20( )-20(podemos utilizar)]TJ
+/TT4 1 Tf
+15.4866 0 TD
+0 Tw
+(mknod\(1\))Tj
+/TT6 1 Tf
+3.832 0 TD
+0.0568 Tw
+[(,)-306.8(que llama a)]TJ
+/TT4 1 Tf
+5.5861 0 TD
+0 Tw
+(mknod\(2\))Tj
+/TT6 1 Tf
+3.832 0 TD
+0.0568 Tw
+[(.)-306.8(Pero, normalmente)]TJ
+-34.973 -1.2 TD
+0 Tw
+(hay que ser)Tj
+/TT4 1 Tf
+4.8037 0 TD
+[(r)45(oot)]TJ
+/TT6 1 Tf
+1.872 0 TD
+[(para poderlo hacer)55(.)-250(!Así que v)25(amos a con)40(v)15(ertirnos en)]TJ
+/TT4 1 Tf
+21.468 0 TD
+[(r)45(oot)]TJ
+/TT6 1 Tf
+1.872 0 TD
+[(y)-250(crear uno!:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 606 Tm
+(unix$ sudo su)Tj
+0 -1.5 TD
+(Password:)Tj
+T*
+(unix# mknod term c 2 0)Tj
+T*
+(sh-3.2# echo hola >term)Tj
+T*
+(hola)Tj
+T*
+(unix# ls -l term)Tj
+T*
+[(crw-r--r-- )-600(1)-600(root )-600(staff)-2400(2, )-1200(0)-600(Aug 21 19:56 term)]TJ
+T*
+(unix# rm term)Tj
+T*
+(unix# exit)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 468 Tm
+0.0412 Tw
+[(Como v)15(erás, hemos creado un )]TJ
+/TT7 1 Tf
+12.5211 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0412 Tw
+(chero llamado)Tj
+/TT9 1 Tf
+6.0243 0 TD
+0 Tw
+(term)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0412 Tw
+[(,)-291.2(que es un dispositi)25(v)20(o)20( )-20.1(de)-291.3(modo carácter \(")]TJ
+/TT9 1 Tf
+17.3275 0 TD
+0 Tw
+(c)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0413 Tw
+("\) y tiene)Tj
+-39.4295 -1.2 TD
+0 Tw
+(números)Tj
+/TT9 1 Tf
+3.7401 0 TD
+(2)Tj
+/TT6 1 Tf
+0.8964 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7963 0 TD
+(0)Tj
+/TT6 1 Tf
+0.8964 0 TD
+(como)Tj
+/TT4 1 Tf
+2.5179 0 TD
+(major)Tj
+/TT6 1 Tf
+2.6854 0 TD
+(y)Tj
+/TT4 1 Tf
+0.7962 0 TD
+(minor)Tj
+/TT6 1 Tf
+2.3892 0 TD
+0.0462 Tw
+[(.)-296.2(S)0(i)-296.2(recuerdas el listado de)]TJ
+/TT9 1 Tf
+11.0238 0 TD
+0 Tw
+(/dev/tty)Tj
+/TT6 1 Tf
+4.8008 0 TD
+0.0462 Tw
+[(,)-296.2(v)15(erás que estamos creando un)]TJ
+-30.5424 -1.2 TD
+0.0669 Tw
+[(dispositi)25(v)20(o)20( )-20(para el mismo artef)10(acto. Una v)15(ez creado, podemos utilizar)]TJ
+/TT9 1 Tf
+28.8119 0 TD
+0 Tw
+(term)Tj
+/TT6 1 Tf
+2.7174 0 TD
+0.067 Tw
+(igual que)Tj
+/TT9 1 Tf
+4.0774 0 TD
+0 Tw
+(/dev/tty)Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(,)-317(como)]TJ
+-40.4074 -1.2 TD
+[(puedes v)15(er por el efecto de)]TJ
+/TT9 1 Tf
+10.9796 0 TD
+(echo)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(en nuestro ejemplo.)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+20 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+21 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+22 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 333 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 722 667 611 0 0 389 0 0 0 0 0 778 
+0 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 500 556 278 333 556 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 20 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 121
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 0 0 
+0 500 500 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 0 500 278 278 444 278 722 500 500 
+500 0 389 389 278 500 444 667 444 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 21 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 0 500 500 500 0 0 0 0 0 278 0 0 0 0 0 
+0 722 0 667 722 611 556 0 0 333 0 0 611 0 722 0 
+556 722 667 556 611 722 0 944 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 22 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 23 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 600 600 600 600 600 600 0 600 600 600 0 600 600 600 600 
+600 600 600 600 600 600 600 600 0 600 600 600 600 600 600 0 
+0 600 0 0 0 0 600 0 0 600 600 600 600 600 600 0 
+600 0 0 600 600 0 0 0 0 0 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 0 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 24 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+25 0 obj
+<<
+/S /D
+>>
+endobj
+26 0 obj
+<<
+/Nums [0 25 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R]
+/Count 4
+/MediaBox [0 0 612 792]
+>>
+endobj
+27 0 obj
+<<
+/CreationDate (D:20160905151713+02'00')
+/ModDate (D:20160905151713+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+28 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 26 0 R
+>>
+endobj
+xref
+0 29
+0000000000 65535 f 
+0000025069 00000 n 
+0000000016 00000 n 
+0000005488 00000 n 
+0000022585 00000 n 
+0000023253 00000 n 
+0000023667 00000 n 
+0000024406 00000 n 
+0000024580 00000 n 
+0000021458 00000 n 
+0000025470 00000 n 
+0000025150 00000 n 
+0000005627 00000 n 
+0000011456 00000 n 
+0000025234 00000 n 
+0000011596 00000 n 
+0000017906 00000 n 
+0000025318 00000 n 
+0000018046 00000 n 
+0000021329 00000 n 
+0000021598 00000 n 
+0000021800 00000 n 
+0000022000 00000 n 
+0000022197 00000 n 
+0000022394 00000 n 
+0000025402 00000 n 
+0000025430 00000 n 
+0000025573 00000 n 
+0000025696 00000 n 
+trailer
+<<
+/Size 29
+/Root 28 0 R
+/Info 27 0 R
+/ID [<46d3c437552bef70ae2762b0b1228374><46d3c437552bef70ae2762b0b1228374>]
+>>
+startxref
+25766
+%%EOF

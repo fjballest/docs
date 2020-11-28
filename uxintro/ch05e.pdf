@@ -1,0 +1,514 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 1756
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 117.792 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Comunicación entr)18(e)-250(P)0(r)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+(1. Alarmas)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0327 Tw
+(Podemos combinar las señales con un temporizador que tiene cada proceso para implementar time-outs. El)Tj
+0 -1.2 TD
+0.0675 Tw
+(temporizador es otra abstracción que suministra UNIX para cada proceso. Podemos programarlo para que)Tj
+T*
+0 Tw
+[(en)40(víe la señal)]TJ
+/TT8 1 Tf
+5.6519 0 TD
+(ALRM)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(pasado un tiempo, e instalar el manejador que queramos para dicha señal.)Tj
+-8.3023 -2.4 TD
+[(V)111(eamos un programa que hace esto:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 491.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <signal.h>)Tj
+0 -3 TD
+(static void)Tj
+0 -1.5 TD
+(tout\(int no\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "interrupted\\n"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(char buf[1024];)Tj
+T*
+(int nr;)Tj
+0 -3 TD
+(signal\(SIGALRM, tout\);)Tj
+0 -1.5 TD
+(fprintf\(stderr, "> "\);)Tj
+T*
+[(siginterrupt\(SIGALRM, 1\);)-2400(// try with 0)]TJ
+T*
+(alarm\(15\);)Tj
+T*
+(nr = read\(0, buf, sizeof buf - 1\);)Tj
+T*
+(alarm\(0\);)Tj
+T*
+(if\(nr > 0\){)Tj
+2.4 -1.5 TD
+(write\(1, buf, nr\);)Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(warn\("read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 113.4 Tm
+[(Si lo ejecutamos y escribimos una línea antes de que pasen 15 se)15(gundos esto es lo que sucede:)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+11 0 obj
+<<
+/Length 2305
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ 8.alrm)Tj
+0 -1.5 TD
+[(>)-600(hola)]TJ
+T*
+(hola)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 654 Tm
+0.037 Tw
+(El programa termina la llamada a)Tj
+/TT8 1 Tf
+13.827 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.6874 0 TD
+0.0369 Tw
+[(y)-287(escribe lo que ha leído. Pero si lo ejecutamos y pasan 15 se)15(gun-)]TJ
+-16.5144 -1.2 TD
+0 Tw
+(dos...)Tj
+/TT8 1 Tf
+8 0 0 8 133 624 Tm
+(unix$ 8.alrm)Tj
+0 -1.5 TD
+[(>)-600(interrupted)]TJ
+T*
+(8.alrm: read: Interrupted system call)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 570 Tm
+0.078 Tw
+(Primero se interrumpe)Tj
+/TT8 1 Tf
+9.4259 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.078 Tw
+[(,)-328(y)-328(ejecuta el manejador)]TJ
+/TT8 1 Tf
+10.163 0 TD
+0 Tw
+(tout)Tj
+/TT6 1 Tf
+2.7284 0 TD
+0.078 Tw
+(que hemos instalado \(que imprime ")Tj
+/TT8 1 Tf
+14.8783 0 TD
+0 Tw
+(inter-)Tj
+-39.5959 -1.2 TD
+(rupted)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[("\). Lue)15(go)]TJ
+/TT8 1 Tf
+4.0309 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(termina indicando como error)Tj
+/TT8 1 Tf
+12.1621 0 TD
+(EINTR)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-250(y)-250(e)0(l)-250(programa continúa.)]TJ
+-25.4445 -2.4 TD
+0.0731 Tw
+(La primera llamada a)Tj
+/TT8 1 Tf
+9.0654 0 TD
+0 Tw
+(alarm)Tj
+/TT6 1 Tf
+3.3236 0 TD
+0.073 Tw
+[(instala el temporizador para que en)40(víe la señal)]TJ
+/TT8 1 Tf
+19.314 0 TD
+0 Tw
+(ALRM)Tj
+/TT6 1 Tf
+2.7234 0 TD
+0.073 Tw
+[(pasados 15 se)15(gundos.)]TJ
+-34.4264 -1.2 TD
+0 Tw
+[(La se)15(gunda llamada a)]TJ
+/TT8 1 Tf
+8.9254 0 TD
+(alarm)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(\(tras)Tj
+/TT8 1 Tf
+2.0269 0 TD
+(read)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(\))-250(cancela el temporizador)55(.)]TJ
+-16.6032 -2.4 TD
+[(Observ)25(a)-250(l)0(a)-250(llamada a)]TJ
+/TT8 1 Tf
+8.6376 0 TD
+(siginterrupt)Tj
+/TT6 1 Tf
+7.2012 0 TD
+[(,)-250(¿Qué sucede si la quitamos?)]TJ
+-15.8388 -2.4 TD
+0.0799 Tw
+[(Una última adv)15(ertencia. Los temporizadores han de usarse con sumo cuidado. De hecho, si es posible, es)]TJ
+0 -1.2 TD
+0.0008 Tw
+[(mejor no utilizarlos. Hacen los programas impredecibles y difíciles de depurar)55(.)-250.8(Por ejemplo, ¿Qué pasa si el)]TJ
+T*
+0.1325 Tw
+[(usuario tardó 16 se)15(gundos en escribir su línea? ¿Por qué f)10(alla el programa en esos casos? T)80(al v)15(ez sería)]TJ
+T*
+0 Tw
+[(mejor dejar el programa bloqueado le)15(yendo en nuestro caso...)]TJ
+ET
+endstream
+endobj
+12 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+8 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+13 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+14 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+15 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+16 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 722 0 722 0 0 0 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 13 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 120
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 0 444 0 0 0 278 0 0 278 0 500 500 
+500 0 389 389 278 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 14 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 500 500 0 0 500 500 0 0 0 278 0 0 0 0 444 
+0 0 0 0 722 611 0 0 722 333 0 0 611 0 722 722 
+556 722 0 556 611 722 722 0 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 0 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 15 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 0 600 600 600 0 0 0 600 600 600 0 600 600 600 600 
+600 600 600 0 600 600 0 0 600 0 600 600 600 600 600 0 
+0 600 0 0 0 600 0 600 0 600 0 0 600 600 600 0 
+0 0 600 600 600 0 0 0 0 0 0 600 600 600 0 0 
+0 600 600 600 600 600 600 600 600 600 0 0 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 16 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+10 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 12 0 R
+/Contents 11 0 R
+>>
+endobj
+17 0 obj
+<<
+/S /D
+>>
+endobj
+18 0 obj
+<<
+/Nums [0 17 0 R ]
+>>
+endobj
+9 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 10 0 R]
+/Count 2
+/MediaBox [0 0 612 792]
+>>
+endobj
+19 0 obj
+<<
+/CreationDate (D:20160905151717+02'00')
+/ModDate (D:20160905151717+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 9 0 R
+/PageLabels 18 0 R
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000007581 00000 n 
+0000000016 00000 n 
+0000001824 00000 n 
+0000005347 00000 n 
+0000005999 00000 n 
+0000006381 00000 n 
+0000007108 00000 n 
+0000004417 00000 n 
+0000007812 00000 n 
+0000007661 00000 n 
+0000001952 00000 n 
+0000004310 00000 n 
+0000004557 00000 n 
+0000004759 00000 n 
+0000004959 00000 n 
+0000005156 00000 n 
+0000007744 00000 n 
+0000007772 00000 n 
+0000007900 00000 n 
+0000008023 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [<550fde9f35b4b46cb9c1b879c3678711><550fde9f35b4b46cb9c1b879c3678711>]
+>>
+startxref
+8092
+%%EOF

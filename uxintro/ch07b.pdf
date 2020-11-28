@@ -1,0 +1,1334 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 1365
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 158.01 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Concurr)18(encia)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Condiciones)-250(de )250(carr)18(era)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1392 Tw
+[(¿De nue)25(v)20(o?... ¡Sí! En cuanto más de un proceso utiliza el mismo recurso... hay condiciones de carrera.)]TJ
+0 -1.2 TD
+0 Tw
+[(Ahora que podemos compartir memoria entre v)25(arios procesos v)25(amos a v)15(erlo de nue)25(v)20(o)0(.)]TJ
+0 -2.4 TD
+0.0799 Tw
+[(El siguiente programa incrementa un contador un número dado de v)15(eces \(10 por omisión\) en tres threads)]TJ
+0 -1.2 TD
+0 Tw
+(distintos:)Tj
+/TT8 1 Tf
+6.1 -1.8 TD
+([race.c])Tj
+/TT6 1 Tf
+4.8008 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 479.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <pthread.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+0 -3 TD
+(enum { Nloops = 10 };)Tj
+0 -1.5 TD
+(static int nloops = Nloops;)Tj
+0 -4.5 TD
+(static void*)Tj
+0 -1.5 TD
+(tmain\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(int *cntp;)Tj
+0 -3 TD
+(cntp = a;)Tj
+0 -1.5 TD
+(for\(i = 0; i < nloops; i++\) {)Tj
+2.4 -1.5 TD
+(*cntp = *cntp + 1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT10 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 2115
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT10 1 Tf
+8 0 0 8 133 708 Tm
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i, cnt;)Tj
+T*
+(pthread_t thr[3];)Tj
+T*
+(void *sts[3];)Tj
+0 -3 TD
+(if\(argc > 1\) {)Tj
+2.4 -1.5 TD
+(nloops = atoi\(argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(cnt = 0;)Tj
+T*
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(if\(pthread_create\(thr+i, NULL, tmain, &cnt\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(pthread_join\(thr[i], sts+i\);)Tj
+T*
+(free\(sts[i]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("cnt is %d\\n", cnt\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 402 Tm
+[(Si lo ejecutamos, el contador debiera ser tres v)15(eces el número de incrementos, ¿No?. Y parece que es así...)]TJ
+/TT10 1 Tf
+8 0 0 8 133 384 Tm
+(unix$ thr)Tj
+T*
+(cnt is 30)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 330 Tm
+-0.0001 Tc
+0.0001 Tw
+[(Pero... ¡V)110.9(amos a ejecutarlo para que cada thread haga)-250.1(1000 incrementos!)]TJ
+/TT10 1 Tf
+8 0 0 8 133 312 Tm
+0 Tc
+0 Tw
+(unix$ thr 1000)Tj
+T*
+(cnt is 2302)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 258 Tm
+[(¡Otra v)15(ez!)]TJ
+/TT10 1 Tf
+8 0 0 8 133 240 Tm
+(unix$ thr 1000)Tj
+T*
+(cnt is 2801)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 186 Tm
+0.0318 Tw
+(No te gustaría que pasara esto si se tratase del programa que controla ingresos en tu cuenta corriente. Esta-)Tj
+0 -1.2 TD
+0.0094 Tw
+[(mos viendo simplemente el efecto de una condición de carrera en el uso de la v)25(ariable)]TJ
+/TT10 1 Tf
+34.7777 0 TD
+0 Tw
+(cnt)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0094 Tw
+[(,)-259.4(que es compar)20(-)]TJ
+-36.578 -1.2 TD
+0.089 Tw
+(tida por todos los procesos del programa \(el proceso que teníamos desde el programa principal y los tres)Tj
+T*
+0 Tw
+(threads que hemos creado\).)Tj
+0 -2.4 TD
+0.1319 Tw
+[(Podemos v)15(erlo fácilmente si simpli)]TJ
+/TT11 1 Tf
+14.6215 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1319 Tw
+(camos el programa para que ejecute sólo dos threads y para que la)Tj
+-15.1776 -1.2 TD
+0 Tw
+(función que ejecutan sea:)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT10 8 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+16 0 obj
+<<
+/Length 1638
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT8 1 Tf
+-14.917 -3.6 TD
+([race2])Tj
+/TT6 1 Tf
+4.2007 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 696 Tm
+(...)Tj
+0 -1.5 TD
+(static int cnt;)Tj
+T*
+(static void*)Tj
+T*
+(tmain\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(for \(i =0 ; i < 2; i++\) {)Tj
+2.4 -1.5 TD
+(cnt++;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("cnt is %d\\n", cnt\);)Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 522 Tm
+0.0356 Tw
+(Ahora haremos dos incrementos en dos threads y hemos cambiado la declaración de)Tj
+/TT10 1 Tf
+34.3681 0 TD
+0 Tw
+(cnt)Tj
+/TT6 1 Tf
+2.0859 0 TD
+0.0355 Tw
+(para que sea una)Tj
+-36.454 -1.2 TD
+0 Tw
+[(v)25(ariable global, por simpli)]TJ
+/TT11 1 Tf
+10.5282 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(car más.)Tj
+-11.0844 -2.4 TD
+[(Cuando lo ejecutamos v)15(emos:)]TJ
+/TT10 1 Tf
+8 0 0 8 133 468 Tm
+(unix$ race2)Tj
+0 -1.5 TD
+(cnt is 2)Tj
+T*
+(cnt is 4)Tj
+/TT6 1 Tf
+10 0 0 10 72 426 Tm
+[(T)80(odo bien.)]TJ
+0 -2.4 TD
+[(Cambiemos otra v)15(ez el código para que sea:)]TJ
+/TT8 1 Tf
+6.1 -1.8 TD
+([race3])Tj
+/TT6 1 Tf
+4.2007 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 372 Tm
+(static void*)Tj
+0 -1.5 TD
+(tmain\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i, loc;)Tj
+T*
+(for \(i =0 ; i < 2; i++\) {)Tj
+2.4 -1.5 TD
+(loc = cnt;)Tj
+T*
+(loc++;)Tj
+T*
+(cnt = loc;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("cnt is %d\\n", cnt\);)Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 222 Tm
+[(Si lo ejecutamos, v)15(emos que todo sigue bien:)]TJ
+/TT10 1 Tf
+8 0 0 8 133 204 Tm
+(unix$ race3)Tj
+T*
+(cnt is 2)Tj
+T*
+(cnt is 4)Tj
+/TT6 1 Tf
+10 0 0 10 72 150 Tm
+(Pero si hacemos el siguiente cambio:)Tj
+ET
+endstream
+endobj
+17 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+/TT10 8 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 4172
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT8 1 Tf
+-14.917 -3.6 TD
+([race4])Tj
+/TT6 1 Tf
+4.2007 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 696 Tm
+(static void*)Tj
+0 -1.5 TD
+(tmain\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i, loc;)Tj
+T*
+(for \(i =0 ; i < 2; i++\) {)Tj
+2.4 -1.5 TD
+(loc = cnt;)Tj
+T*
+(loc++;)Tj
+T*
+(sleep\(1\);)Tj
+T*
+(cnt = loc;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("cnt is %d\\n", cnt\);)Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 534 Tm
+(¡La cosa cambia!)Tj
+/TT10 1 Tf
+8 0 0 8 133 516 Tm
+(unix$ race4)Tj
+T*
+(cnt is 2)Tj
+T*
+(cnt is 2)Tj
+/TT6 1 Tf
+10 0 0 10 72 462 Tm
+0.1255 Tw
+(Ambos threads escriben)Tj
+/TT10 1 Tf
+10.2349 0 TD
+0 Tw
+(2)Tj
+/TT6 1 Tf
+0.9756 0 TD
+0.1255 Tw
+[(como v)25(alor )]TJ
+/TT11 1 Tf
+5.0024 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1255 Tw
+(nal para)Tj
+/TT10 1 Tf
+3.6935 0 TD
+0 Tw
+(cnt)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.1256 Tw
+[(.)-375.6(Hemos pro)15(v)20(ocado que la condición de carrera se)]TJ
+-22.2628 -1.2 TD
+0 Tw
+(mani)Tj
+/TT11 1 Tf
+1.9995 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0223 Tw
+[(este. Esto quiere decir que, aunque no seamos conscientes, todas las v)15(ersiones anteriores de este pro-)]TJ
+-2.5557 -1.2 TD
+0 Tw
+(grama están mal y no pueden utilizarse.)Tj
+0 -2.4 TD
+0.0964 Tw
+(El problema de la condición de carrera procede en realidad de la)Tj
+/TT4 1 Tf
+27.1432 0 TD
+0 Tw
+(ilusión)Tj
+/TT6 1 Tf
+3.0692 0 TD
+0.0965 Tw
+(implementada por los procesos:)Tj
+/TT4 1 Tf
+-30.2124 -1.2 TD
+0.2082 Tw
+(ejecución secuencial independiente)Tj
+/TT6 1 Tf
+14.5766 0 TD
+[(.)-458.2(Resulta que si tenemos un sólo procesador)40(,)-458.1(l)0(a)-458.1(ejecución no es ni)]TJ
+-14.5766 -1.2 TD
+0.1312 Tw
+[(secuencial ni independiente. UNIX multiple)15(xa \(reparte\) el procesador entre los procesos, y aun así pen-)]TJ
+T*
+0 Tw
+(samos que nuestros programas ejecutan secuencialmente y sin interferencias.)Tj
+0 -2.4 TD
+0.0446 Tw
+(Lo que sucede en realidad es que las instrucciones de los procesos se)Tj
+/TT4 1 Tf
+28.3762 0 TD
+0 Tw
+(mezclan)Tj
+/TT6 1 Tf
+3.5715 0 TD
+0.0445 Tw
+(en un único )Tj
+/TT11 1 Tf
+5.049 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0445 Tw
+(ujo de control)Tj
+-37.5528 -1.2 TD
+0.1186 Tw
+[(implementado por el procesador)55(.)-368.6(Esto es, ejecutará determinado número de instrucciones de un proceso,)]TJ
+T*
+0.021 Tw
+[(lue)15(go tendremos un cambio de conte)15(xto y ejecutará otro, lue)15(go otro, etc. No sabemos cuándo sucederán los)]TJ
+T*
+0.0654 Tw
+[(cambios de conte)15(xto y por tanto no sabemos en qué orden se mezclaran las instrucciones. Se suele llamar)]TJ
+/TT2 1 Tf
+T*
+0 Tw
+[(interlea)25(ving)]TJ
+/TT6 1 Tf
+5.3354 0 TD
+(\(entrelazado\) al mezclado de instrucciones, por cierto.)Tj
+-5.3354 -2.4 TD
+[(Las primeras v)15(eces que hemos utilizado el programa resulta que todas las instrucciones in)40(v)20(olucradas en)]TJ
+/TT10 1 Tf
+8 0 0 8 133 264 Tm
+(cnt++)Tj
+/TT6 1 Tf
+10 0 0 10 72 246 Tm
+0.0635 Tw
+(han ejecutado. Cuando hemos cambiado el código para que sea más parecido a las instrucciones que real-)Tj
+0 -1.2 TD
+0 Tw
+(mente ejecutan)Tj
+/TT10 1 Tf
+8 0 0 8 133 216 Tm
+(loc = cnt;)Tj
+0 -1.5 TD
+(loc++;)Tj
+T*
+(cnt = loc;)Tj
+/TT6 1 Tf
+10 0 0 10 72 174 Tm
+[(hemos se)15(guido teniendo \(mala\) suerte y dichas instrucciones han ejecutado sin interrupción.)]TJ
+0 -2.4 TD
+0.0268 Tw
+(Así pues, la ilusión de ejecución secuencial y sin interferencia se ha mantenido. Cuando incrementamos un)Tj
+0 -1.2 TD
+0.1167 Tw
+[(re)15(gistro para incrementar la v)25(ariable el mundo se)15(guía como lo dejamos en la línea anterior y la v)25(ariable)]TJ
+T*
+0.0638 Tw
+[(global \(en la memoria\) se)15(guía teniendo el mismo v)25(alor)55(.)-313.8(Cuando actualizamos en la siguiente línea la v)25(ari-)]TJ
+T*
+0 Tw
+[(able global nadie había consultado ni cambiado la v)25(ariable mientras ejecutamos.)]TJ
+0 -2.4 TD
+0.0822 Tw
+(Al introducir la llamada a)Tj
+/TT10 1 Tf
+10.9348 0 TD
+0 Tw
+(sleep)Tj
+/TT6 1 Tf
+3.3326 0 TD
+0.0821 Tw
+[(hemos pro)15(v)20(ocado un cambio de conte)15(xto justo en el punto en que ten-)]TJ
+-14.2674 -1.2 TD
+0.0913 Tw
+[(emos la condición de carrera \(durante la consulta e incremento de la global\). El efecto puede v)15(erse en la)]TJ
+/TT11 1 Tf
+T*
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gura 1.)Tj
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT10 8 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+22 0 obj
+<<
+/Length 3692
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT2 1 Tf
+8 0 0 8 180 700.84 Tm
+[(Thr)18(ead #1)-7185(memoria)-11584.5(Thr)18(ead #2)]TJ
+ET
+0 G
+1 J 1 j 0.32 w 10 M []0 d
+1 i 
+162 679.2 36 10.8 re
+S
+BT
+/TT10 1 Tf
+8 0 0 8 165.6 682.84 Tm
+(loc: ?)Tj
+ET
+270 679.2 36 10.8 re
+S
+BT
+8 0 0 8 273.6 682.84 Tm
+(cnt: 0)Tj
+ET
+378 679.2 36 10.8 re
+S
+BT
+8 0 0 8 381.6 682.84 Tm
+(loc: ?)Tj
+-25.2 -2.25 TD
+(loc = cnt)Tj
+0 -1.35 TD
+(sleep)Tj
+ET
+162 632.4 36 10.8 re
+S
+BT
+8 0 0 8 165.6 636.04 Tm
+(loc: 0)Tj
+ET
+270 632.4 36 10.8 re
+S
+BT
+8 0 0 8 273.6 636.04 Tm
+(cnt: 0)Tj
+ET
+378 632.4 36 10.8 re
+S
+BT
+8 0 0 8 381.6 636.04 Tm
+(loc: ?)Tj
+1.8 -2.25 TD
+(loc = cnt)Tj
+0 -1.35 TD
+(sleep)Tj
+ET
+162 585.6 36 10.8 re
+S
+BT
+8 0 0 8 165.6 589.24 Tm
+(loc: 0)Tj
+ET
+270 585.6 36 10.8 re
+S
+BT
+8 0 0 8 273.6 589.24 Tm
+(cnt: 0)Tj
+ET
+378 585.6 36 10.8 re
+S
+BT
+8 0 0 8 381.6 589.24 Tm
+(loc: 0)Tj
+-25.2 -2.25 TD
+(loc++)Tj
+0 -1.35 TD
+(cnt = loc)Tj
+T*
+(loc = cnt)Tj
+T*
+(sleep)Tj
+ET
+162 517.2 36 10.8 re
+S
+BT
+8 0 0 8 165.6 520.84 Tm
+(loc: 1)Tj
+ET
+270 517.2 36 10.8 re
+S
+BT
+8 0 0 8 273.6 520.84 Tm
+(cnt: 1)Tj
+ET
+378 517.2 36 10.8 re
+S
+BT
+8 0 0 8 381.6 520.84 Tm
+(loc: 0)Tj
+1.8 -2.25 TD
+(loc++)Tj
+0 -1.35 TD
+(cnt = loc)Tj
+T*
+(loc = cnt)Tj
+T*
+(sleep)Tj
+ET
+162 448.8 36 10.8 re
+S
+BT
+8 0 0 8 165.6 452.44 Tm
+(loc: 1)Tj
+ET
+270 448.8 36 10.8 re
+S
+BT
+8 0 0 8 273.6 452.44 Tm
+(cnt: 1)Tj
+ET
+378 448.8 36 10.8 re
+S
+BT
+8 0 0 8 381.6 452.44 Tm
+(loc: 1)Tj
+-25.2 -2.25 TD
+(loc++)Tj
+0 -1.35 TD
+(cnt = loc)Tj
+T*
+(loc = cnt)Tj
+T*
+(sleep)Tj
+ET
+162 380.4 36 10.8 re
+S
+BT
+8 0 0 8 165.6 384.04 Tm
+(loc: 2)Tj
+ET
+270 380.4 36 10.8 re
+S
+BT
+8 0 0 8 273.6 384.04 Tm
+(cnt: 2)Tj
+ET
+378 380.4 36 10.8 re
+S
+BT
+8 0 0 8 381.6 384.04 Tm
+(loc: 1)Tj
+1.8 -2.25 TD
+(loc++)Tj
+0 -1.35 TD
+(cnt = loc)Tj
+T*
+(loc = cnt)Tj
+T*
+(sleep)Tj
+ET
+162 312 36 10.8 re
+S
+BT
+8 0 0 8 165.6 315.64 Tm
+(loc: 2)Tj
+ET
+270 312 36 10.8 re
+S
+BT
+8 0 0 8 273.6 315.64 Tm
+(cnt: 2)Tj
+ET
+378 312 36 10.8 re
+S
+BT
+8 0 0 8 381.6 315.64 Tm
+(loc: 2)Tj
+-25.2 -2.25 TD
+(printf)Tj
+27 -2.25 TD
+(printf)Tj
+/TT2 1 Tf
+10 0 0 10 97 253 Tm
+0.0247 Tw
+(Figura 1:)Tj
+/TT4 1 Tf
+4.2711 0 TD
+0.0246 Tw
+[(Un entr)37(elazado de sentencias en ambos pr)45(ocesos que da lugar a una condición de carr)37(er)15(a)]TJ
+-4.2711 -1.2 TD
+0 Tw
+[(en la última ver)10(sión del pr)45(o)10(g)0(r)15(ama.)]TJ
+/TT6 1 Tf
+-2.5 -2.4 TD
+0.0462 Tw
+[(El problema consiste en que, después de haber consultado el v)25(alor del contador en la local)]TJ
+/TT10 1 Tf
+37.0072 0 TD
+0 Tw
+(loc)Tj
+/TT6 1 Tf
+2.0965 0 TD
+0.0463 Tw
+[(y)-296.3(antes de)]TJ
+-39.1037 -1.2 TD
+0.0401 Tw
+[(que actualicemos el v)25(alor del contador)40(,)]TJ
+/TT4 1 Tf
+16.0858 0 TD
+0 Tw
+[(otr)45(o)]TJ
+/TT6 1 Tf
+1.9121 0 TD
+0.04 Tw
+(proceso accede al contador y puede que incluso lo cambie. En)Tj
+-17.9978 -1.2 TD
+0 Tw
+(la )Tj
+/TT11 1 Tf
+0.9717 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(gura podemos v)15(er que el entrelazado ha sido:)]TJ
+0.9722 -1.56 TD
+[(1. )-1500(El)-250(thread 1 consulta la v)25(ariable)]TJ
+T*
+[(2. )-1500(El)-250(thread 2 consulta la v)25(ariable)]TJ
+T*
+[(3. )-1500(El)-250(thread 1 incrementa su copia de la v)25(ariable \(re)15(gistro o v)25(ariable local\))]TJ
+T*
+[(4. )-1500(El)-250(thread 1 incrementa su copia de la v)25(ariable \(re)15(gistro o v)25(ariable local\))]TJ
+T*
+[(5. )-1500(El)-250(thread 1 actualiza la v)25(ariable)]TJ
+T*
+[(6. )-1500(El)-250(thread 2 actualiza la v)25(ariable)]TJ
+-2.5 -2.4 TD
+(Este)Tj
+/TT4 1 Tf
+2.0262 0 TD
+(interleaving)Tj
+/TT6 1 Tf
+5.1365 0 TD
+0.0545 Tw
+[(pierde un incremento. El problema es que toda la secuencia de código utilizando la v)25(ari-)]TJ
+-7.1627 -1.2 TD
+0.0521 Tw
+[(able no ejecuta de forma indi)25(visible \(se "cuela" otro proceso que utiliza la misma v)25(ariable\). Si este código)]TJ
+ET
+endstream
+endobj
+23 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT10 8 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+25 0 obj
+<<
+/Length 1580
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+-21.017 -3.6 TD
+(fuese)Tj
+/TT2 1 Tf
+2.3599 0 TD
+(atómico)Tj
+/TT6 1 Tf
+3.3877 0 TD
+[(,)-250(esto es, ejecutase de forma indi)25(visible, no habría condición de carrera; pero no lo es.)]TJ
+-5.7476 -2.4 TD
+0.0756 Tw
+[(Por ello es crítico que no se utilice la v)25(ariable global desde ningún otro proceso mientras la consultamos,)]TJ
+0 -1.2 TD
+0.0395 Tw
+(incrementamos y actualizamos y llamamos)Tj
+/TT2 1 Tf
+17.6642 0 TD
+0.0394 Tw
+[(r)18(egión crítica)]TJ
+/TT6 1 Tf
+6.0027 0 TD
+[(a)-289.4(dicho fragmento de código. Una)]TJ
+/TT4 1 Tf
+14.0928 0 TD
+[(r)37(e)40(gión crítica)]TJ
+/TT6 1 Tf
+-37.7597 -1.2 TD
+0.0631 Tw
+(es simplemente código que accede a un recurso compartido y que plantea condiciones de carrera si no las)Tj
+T*
+0.2565 Tw
+[(e)25(vitamos haciendo que ejecute de forma atómica \(indi)25(visible con respecto a otros que comparten el)]TJ
+T*
+0 Tw
+(recurso\).)Tj
+0 -2.4 TD
+0.1242 Tw
+(¿Qué sucedía en el programa inicial que hacía)Tj
+/TT4 1 Tf
+19.6513 0 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.8743 0 TD
+0.1243 Tw
+(incrementos en 3 threads? Simplemente que hay cierta)Tj
+-20.5256 -1.2 TD
+0.1381 Tw
+[(probabilidad de tener un cambio de conte)15(xto en la re)15(gión crítica. La probabilidad aumenta cuantas más)]TJ
+T*
+0.0101 Tw
+[(v)15(eces ejecutemos la re)15(gión crítica. Al ejecutar mil v)15(eces el incremento en cada thread,)]TJ
+/TT4 1 Tf
+34.8026 0 TD
+0 Tw
+(algunos)Tj
+/TT6 1 Tf
+3.4272 0 TD
+0.0102 Tw
+(de los incre-)Tj
+-38.2298 -1.2 TD
+0 Tw
+[(mentos sufrieron un cambio de conte)15(xto en mal sitio, eso es todo.)]TJ
+ET
+endstream
+endobj
+26 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+30 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+31 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+32 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 500 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 611 0 0 389 0 0 0 0 0 778 
+0 0 0 556 667 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 556 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 27 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 722 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 500 0 278 278 0 278 722 500 500 
+500 500 389 389 278 500 444 0 444 0 389 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 28 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+500 500 500 500 500 500 500 0 0 0 278 278 0 0 0 444 
+0 722 0 667 722 611 0 0 722 333 0 0 611 0 722 722 
+556 722 667 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 29 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 114
+/Widths [600 0 0 0 600 600 600 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 600 0 600 0 600 0 0 0 0 0 0 0 0 
+0 0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 30 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 0 600 0 
+600 600 600 600 600 0 0 0 600 0 600 600 600 600 600 600 
+0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 0 
+0 0 0 0 0 600 0 0 0 0 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 0 600 600 600 600 
+600 0 600 600 600 600 600 0 600 0 0 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 31 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 32 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 17 0 R
+/Contents 16 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 23 0 R
+/Contents 22 0 R
+>>
+endobj
+24 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 26 0 R
+/Contents 25 0 R
+>>
+endobj
+33 0 obj
+<<
+/S /D
+>>
+endobj
+34 0 obj
+<<
+/Nums [0 33 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 15 0 R 18 0 R 21 0 R 24 0 R]
+/Count 6
+/MediaBox [0 0 612 792]
+>>
+endobj
+35 0 obj
+<<
+/CreationDate (D:20160905151719+02'00')
+/ModDate (D:20160905151719+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+36 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 34 0 R
+>>
+endobj
+xref
+0 37
+0000000000 65535 f 
+0000020086 00000 n 
+0000000016 00000 n 
+0000001433 00000 n 
+0000017032 00000 n 
+0000017694 00000 n 
+0000018372 00000 n 
+0000019121 00000 n 
+0000019448 00000 n 
+0000015703 00000 n 
+0000020655 00000 n 
+0000020167 00000 n 
+0000001573 00000 n 
+0000003741 00000 n 
+0000019911 00000 n 
+0000020251 00000 n 
+0000003862 00000 n 
+0000005553 00000 n 
+0000020335 00000 n 
+0000005685 00000 n 
+0000009910 00000 n 
+0000020419 00000 n 
+0000010064 00000 n 
+0000013809 00000 n 
+0000020503 00000 n 
+0000013952 00000 n 
+0000015585 00000 n 
+0000015843 00000 n 
+0000016045 00000 n 
+0000016245 00000 n 
+0000016442 00000 n 
+0000016644 00000 n 
+0000016835 00000 n 
+0000020587 00000 n 
+0000020615 00000 n 
+0000020772 00000 n 
+0000020895 00000 n 
+trailer
+<<
+/Size 37
+/Root 36 0 R
+/Info 35 0 R
+/ID [<c87e01fdb427058affc286908b7f550e><c87e01fdb427058affc286908b7f550e>]
+>>
+startxref
+20965
+%%EOF

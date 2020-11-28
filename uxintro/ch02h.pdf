@@ -1,0 +1,915 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4581
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.012 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Pr)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. /pr)18(oc)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0258 Tw
+[(Existe otro interf)10(az para manipular procesos más allá de las llamadas al sistema habituales para ello. Conc-)]TJ
+0 -1.2 TD
+0.0178 Tw
+(retamente, hay un directorio en \(la mayoría de los sistemas\) UNIX que aparenta tener )Tj
+/TT7 1 Tf
+34.7077 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0178 Tw
+(cheros relacionados)Tj
+-35.2639 -1.2 TD
+0 Tw
+(con procesos:)Tj
+/TT9 1 Tf
+8 0 0 8 133 515.4 Tm
+(unix$ ls /proc)Tj
+0 -1.5 TD
+1.8 Tw
+[(1)-3600(153 25)-1800(43 701)-4800(dma )-3600(mtrr)]TJ
+T*
+2.4 Tw
+[(10 154)-2400(26 )1200(44)-2400(778 )-1800(driver)-4200(net)]TJ
+T*
+1.2 Tw
+[(1001 16)-3000(27 45)-2400(8)-6000(execdomains )600(pagetypeinfo)]TJ
+T*
+[(1002 17)-3000(28 46)-2400(89 )-3600(fb)-6600(partitions)]TJ
+T*
+1.8 Tw
+[(103 174 29)-1800(47 898)-4800(filesystems )1200(sched_debug)]TJ
+T*
+1.2 Tw
+[(1046 175)-2400(3)-2400(4)0(8)-2400(9)-2400( )-1800(fs)-6600(schedstat)]TJ
+T*
+[(1071 18)-3000(30 5)-3000(90 )-3600(interrupts)-1800(scsi)]TJ
+T*
+2.4 Tw
+[(11 19 31)-1800(50 )600(900)-4800(iomem )-1800(self)]TJ
+T*
+1.2 Tw
+[(1130 2)-3600(32 516 903)-4800(ioports )-1800(slabinfo)]TJ
+T*
+2.4 Tw
+[(12 20 325)-1200(52 )600(908)-4800(irq )-3000(softirqs)]TJ
+T*
+[(13 21 33)-1800(522 )1200(909)-4800(kallsyms stat)]TJ
+T*
+4.2 Tw
+[(14 )1800(21102)-1200(330 )3600(53)-2400(911 kcore swaps)]TJ
+T*
+1.8 Tw
+[(143 21104)-1200(34 )600(54)-2400(930 )-2400(key-users)-2400(sys)]TJ
+T*
+1.2 Tw
+[(144 )-600(21227)-1200(35 541 acpi)-4200(keys )-3600(sysrq-trigger)]TJ
+T*
+1.8 Tw
+[(145 21246)-1200(36 )600(55)-2400(asound )-600(kmsg)-5400(sysvipc)]TJ
+T*
+0.6 Tw
+[(146 )-1200(21247)-1200(368 5627 buddyinfo kpagecount)-1800(timer_list)]TJ
+T*
+1.8 Tw
+[(147 21248)-1200(369 )1200(613)-1800(bus )-2400(kpageflags)-1800(timer_stats)]TJ
+T*
+1.2 Tw
+[(148 )-600(21301)-1200(37 629 cgroups)-2400(loadavg )-1800(tty)]TJ
+T*
+[(149 )-600(21302)-1200(38 637 cmdline)-2400(locks )-3000(uptime)]TJ
+T*
+[(15 )-1200(21317)-1200(39 67)-2400(consoles mdstat)-4200(version)]TJ
+T*
+1.8 Tw
+[(150 215 40)-1800(68 cpuinfo meminfo)-3600(version_signature)]TJ
+T*
+[(151 22)-3000(41 )600(69)-2400(crypto )-600(misc)-5400(vmallocinfo)]TJ
+T*
+0.6 Tw
+[(15160 23)-3000(42 )-600(7)-3000(devices )-1200(modules)-3600(vmstat)]TJ
+T*
+[(152 )-1200(24)-3000(421 70)-2400(diskstats mounts)-4200(zoneinfo)]TJ
+/TT6 1 Tf
+10 0 0 10 72 197.4 Tm
+0.0407 Tw
+(En este caso, hemos utilizado un sistema Linux. Los )Tj
+/TT7 1 Tf
+21.5567 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0407 Tw
+(cheros en)Tj
+/TT9 1 Tf
+4.1351 0 TD
+0 Tw
+(/proc)Tj
+/TT6 1 Tf
+3.2912 0 TD
+0.0407 Tw
+(no son )Tj
+/TT7 1 Tf
+2.9706 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0407 Tw
+(cheros reales en el disco.)Tj
+-33.0659 -1.2 TD
+0.0945 Tw
+[(UNIX se los in)40(v)15(enta para re)]TJ
+/TT7 1 Tf
+11.6081 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0946 Tw
+[(ejar el estado de los procesos que están ejecutando y para dejarte a)20(v)15(erigüar)]TJ
+-12.1643 -1.2 TD
+0.1446 Tw
+[(cosas sobre ellos e incluso operar sobre ellos.)-644.7(Aún más, no sólo para operar sobre procesos, sino para)]TJ
+T*
+0 Tw
+(operar sobre el sistema entero.)Tj
+0 -2.4 TD
+0.1213 Tw
+(Cuando un proceso lee o escribe uno de estos )Tj
+/TT7 1 Tf
+19.5033 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1213 Tw
+(cheros, UNIX hace que la operación sobre el )Tj
+/TT7 1 Tf
+19.1569 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1213 Tw
+(chero se)Tj
+-39.7726 -1.2 TD
+0.2353 Tw
+[(comporte normalmente, pero UNIX in)40(v)15(enta el resultado de la operación para hacer creer que dichos)]TJ
+/TT7 1 Tf
+T*
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0211 Tw
+(cheros corresponden en cada momento al estado del sistema. Son )Tj
+/TT7 1 Tf
+26.564 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+/TT4 1 Tf
+2.8811 0 TD
+(sintéticos)Tj
+/TT6 1 Tf
+3.7773 0 TD
+0.0212 Tw
+[(.)-271.2(Dicho de otro modo,)]TJ
+-34.3347 -1.2 TD
+0 Tw
+[(son f)10(alsos y UNIX se los in)40(v)15(enta en cada momento.)]TJ
+0 -2.4 TD
+0.0447 Tw
+[(Como puedes v)15(er por el listado de )]TJ
+/TT7 1 Tf
+14.2117 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0447 Tw
+(cheros en)Tj
+/TT9 1 Tf
+4.1431 0 TD
+0 Tw
+(/proc)Tj
+/TT6 1 Tf
+3.2952 0 TD
+0.0447 Tw
+(hay un directorio por proceso, siendo el nombre del)Tj
+-22.2061 -1.2 TD
+0.1853 Tw
+(directorio el pid del proceso. Dicho directorio contiene )Tj
+/TT7 1 Tf
+23.6689 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1853 Tw
+[(cheros que permiten v)15(er y cambiar datos del)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 4933
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+(proceso en cuestión. Por ejemplo, en un sistema Linux:)Tj
+/TT9 1 Tf
+8 0 0 8 133 690 Tm
+(unix$ ps)Tj
+1.2 -1.5 TD
+[(PID TTY)-6000(TIME CMD)]TJ
+-1.2 -1.5 TD
+[(21422 pts/0)-2400(00:00:00 bash)]TJ
+T*
+[(21438 pts/0)-2400(00:00:00 ps)]TJ
+T*
+(unix$ ls -l /proc/21422)Tj
+T*
+[(unix$ ls)-1200(/proc/21422)]TJ
+T*
+4.2 Tw
+[(attr coredump_filter)-1200(gid_map )2400(mountinfo)-1800(oom_score )1200(schedstat)-1200(status)]TJ
+T*
+0.6 Tw
+[(autogroup )-600(cpuset)-6600(io )-4200(mounts)-3600(oom_score_adj sessionid syscall)]TJ
+T*
+4.2 Tw
+[(auxv cwd)-8400(limits )1800(mountstats)-1200(pagemap setgroups)-1200(task)]TJ
+T*
+3 Tw
+[(cgroup environ)-6000(loginuid )1800(net)-5400(personality )1200(smaps)-3600(timers)]TJ
+T*
+0.6 Tw
+[(clear_refs exe)-8400(map_files ns)-6000(projid_map )-1800(stack)-3600(uid_map)]TJ
+T*
+2.4 Tw
+[(cmdline fd)-9000(maps )-1200(numa_maps)-1800(root )-3600(stat)-4200(wchan)]TJ
+T*
+4.2 Tw
+[(comm fdinfo)-6600(mem oom_adj)-3000(sched )-1200(statm)]TJ
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 516 Tm
+0.0854 Tw
+[(Hemos listado el directorio que corresponde al proceso del shell que estábamos ejecutando. Podemos v)15(e)0(r)]TJ
+0 -1.2 TD
+0 Tw
+(cual es la línea de comandos para dicho proceso:)Tj
+/TT9 1 Tf
+8 0 0 8 133 486 Tm
+(unix$ cat /proc/21422/cmdline)Tj
+0 -1.5 TD
+(-bashunix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 456 Tm
+0.0104 Tw
+(Dado que era un shell de login \(ejecutado al hacer el login en el sistema\), el programa)Tj
+/TT4 1 Tf
+34.7746 0 TD
+0 Tw
+[(lo)10(gin)]TJ
+/TT6 1 Tf
+2.3062 0 TD
+0.0105 Tw
+(que lo creó uti-)Tj
+-37.0807 -1.2 TD
+0 Tw
+(lizó)Tj
+/TT9 1 Tf
+1.8058 0 TD
+(-bash)Tj
+/TT6 1 Tf
+3.3068 0 TD
+0.0563 Tw
+[(como v)25(alor para el primer ar)18(gumento \()]TJ
+/TT9 1 Tf
+15.7885 0 TD
+0 Tw
+(argv[0])Tj
+/TT6 1 Tf
+4.5069 0 TD
+(en)Tj
+/TT9 1 Tf
+1.25 0 TD
+(main)Tj
+/TT6 1 Tf
+2.7066 0 TD
+0.0562 Tw
+[(en dicho proceso\). El con)40(v)15(enio en)]TJ
+-29.3646 -1.2 TD
+0.0156 Tw
+(UNIX es que si en un shell,)Tj
+/TT9 1 Tf
+11.3851 0 TD
+0 Tw
+(argv[0])Tj
+/TT6 1 Tf
+4.4663 0 TD
+0.0156 Tw
+(comienza por ")Tj
+/TT9 1 Tf
+6.1035 0 TD
+0 Tw
+(-)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0157 Tw
+(", entonces se trata de un shell de login \(y habitual-)Tj
+-22.5549 -1.2 TD
+0.0383 Tw
+(mente dicho shell leerá)Tj
+/TT9 1 Tf
+9.6492 0 TD
+0 Tw
+($HOME/.profile)Tj
+/TT6 1 Tf
+8.6896 0 TD
+[(u)-288.2(otro )]TJ
+/TT7 1 Tf
+2.6872 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.0383 Tw
+[(chero para ejecutar los comandos que contenga)-288.3(como)]TJ
+-21.5822 -1.2 TD
+0 Tc
+0 Tw
+(parte del proceso de inicialización\).)Tj
+0 -2.4 TD
+(En)Tj
+/TT9 1 Tf
+1.4533 0 TD
+(/proc/21422/maps)Tj
+/TT6 1 Tf
+9.9441 0 TD
+0.0925 Tw
+[(tenemos una descripción de los se)15(gmentos de memoria que utiliza dicho pro-)]TJ
+-11.3974 -1.2 TD
+0 Tw
+(ceso:)Tj
+/TT9 1 Tf
+8 0 0 8 133 354 Tm
+(unix$ cat /proc/21422/maps)Tj
+0 -1.5 TD
+[(00400000-004ef000 r-xp 00000000 08:01 17039362)-16200(/bin/bash)]TJ
+T*
+[(006ef000-006f0000 r--p 000ef000 08:01 17039362)-16200(/bin/bash)]TJ
+T*
+[(006f0000-006f9000 rw-p 000f0000 08:01 17039362)-16200(/bin/bash)]TJ
+T*
+(006f9000-006ff000 rw-p 00000000 00:00 0)Tj
+T*
+[(01f99000-021a0000 rw-p 00000000 00:00 0)-20400([heap])]TJ
+T*
+(...)Tj
+T*
+(7f3164b43000-7f3164b44000 rw-p 00000000 00:00 0)Tj
+T*
+[(7fff170f1000-7fff17112000 rw-p 00000000 00:00 0)-15600([stack])]TJ
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 216 Tm
+0.0737 Tw
+[(Puedes v)15(er las direcciones de comienzo y )]TJ
+/TT7 1 Tf
+17.3559 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0736 Tw
+[(n para los se)15(gmentos de te)15(xto, datos inicializados de sólo lec-)]TJ
+-17.912 -1.2 TD
+0.0911 Tw
+[(tura, datos inicializados, BSS, y pila \(entre otros\). Hemos borrado del listado los se)15(gmentos correspondi-)]TJ
+T*
+0.0088 Tw
+[(entes a las librerías dinámicas que utiliza dicho proceso.)-508.8(Resulta interesante v)15(er que los se)15(gmentos de te)15(xto)]TJ
+T*
+0.0854 Tw
+[(y)-335.4(datos inicializados proceden de)]TJ
+/TT9 1 Tf
+13.95 0 TD
+0 Tw
+(/bin/bash)Tj
+/TT6 1 Tf
+5.7364 0 TD
+0.0855 Tw
+[(para este proceso.)-585.5(Como v)15(erás, el te)15(xto tiene permiso de)]TJ
+-19.6863 -1.2 TD
+0.0351 Tw
+[(ejecución y los datos tienen permiso de lectura al menos. Los datos que no son constantes están en un se)15(g-)]TJ
+T*
+0 Tw
+(mento con permisos de lectura escritura.)Tj
+0 -2.4 TD
+0.0416 Tw
+[(A)-291.6(l)0(a)-291.6(vista de esto, aunque en C,)]TJ
+/TT9 1 Tf
+13.2185 0 TD
+0 Tw
+("hola")Tj
+/TT6 1 Tf
+3.8922 0 TD
+0.0416 Tw
+(es un array de)Tj
+/TT9 1 Tf
+5.997 0 TD
+0 Tw
+(char)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0417 Tw
+[(,)-291.7(n)0(o)-291.7(deberías intentar cambiar su contenido.)]TJ
+-25.5081 -1.2 TD
+0.0216 Tw
+[(Es muy posible que dicho array esté guardado en memoria en un se)15(gmento de datos de sólo lectura durante)]TJ
+T*
+0 Tw
+(la ejecución del programa.)Tj
+0 -2.4 TD
+(El )Tj
+/TT7 1 Tf
+1.1387 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT9 1 Tf
+2.4707 0 TD
+(/proc/21422/status)Tj
+/TT6 1 Tf
+11.0518 0 TD
+(tiene información interesante sobre el estado del proceso:)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 1707
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ cat /proc/21422/status)Tj
+0 -1.5 TD
+1.8 Tw
+(Name: bash)Tj
+T*
+[(State: S)-600(\(sleeping\))]TJ
+T*
+(Pid: 21422)Tj
+T*
+(PPid: 21421)Tj
+T*
+0 Tw
+(...)Tj
+T*
+1.8 Tw
+(voluntary_ctxt_switches: 398)Tj
+T*
+(nonvoluntary_ctxt_switches: 247)Tj
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 582 Tm
+0.0202 Tw
+[(Entre otras cosas, puedes v)15(er que actualmente el proceso está bloqueado \(durmiendo\) y que unas 398 v)15(eces)]TJ
+0 -1.2 TD
+0.021 Tw
+[(ha hecho llamadas al sistema que han pro)15(v)20(ocado que se le e)15(xpulse del procesador)55(.)-271(Además, unas 247 v)15(eces)]TJ
+T*
+0.0456 Tw
+[(ha sido UNIX el que lo ha e)15(xpulsado sin que el proceso hiciera ninguna llamada que causara la e)15(xpulsión.)]TJ
+T*
+0.03 Tw
+[(Simplemente, lle)15(garía una interrupción de reloj y UNIX decidiría que ya era hora de empezar a ejecutar un)]TJ
+T*
+0 Tw
+(rato otro proceso.)Tj
+0 -2.4 TD
+0.1415 Tw
+(Recuerda que)Tj
+/TT9 1 Tf
+6.0022 0 TD
+0 Tw
+(/proc)Tj
+/TT6 1 Tf
+3.392 0 TD
+0.1415 Tw
+(\(en la mayoría de los UNIX\) es una abstracción y no corresponde a datos reales)Tj
+-9.3942 -1.2 TD
+0.1489 Tw
+[(guardados en ningún disco.)-649(UNIX se in)40(v)15(enta esos )]TJ
+/TT7 1 Tf
+21.5772 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1489 Tw
+(cheros respondiendo a las llamadas al sistema que)Tj
+-22.1334 -1.2 TD
+0.0194 Tw
+(operan sobre dichos )Tj
+/TT7 1 Tf
+8.3058 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0194 Tw
+(cheros para que aparentemente)Tj
+/TT9 1 Tf
+12.6816 0 TD
+0 Tw
+(/proc)Tj
+/TT6 1 Tf
+3.2699 0 TD
+-0.0001 Tc
+0.0196 Tw
+[(contenga)-269.5(una representación del estado de los)]TJ
+-24.8134 -1.2 TD
+0 Tc
+0 Tw
+(procesos y el sistema.)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+17 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+18 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+19 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+20 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+21 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 278 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 0 278 0 0 0 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 17 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 233
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 0 444 0 500 0 278 0 0 278 0 500 500 
+500 0 389 389 278 0 0 0 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 18 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 252
+/Widths [250 0 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 0 500 500 500 0 0 500 500 500 278 0 0 0 0 0 
+0 722 667 667 722 611 0 0 722 333 0 0 611 0 722 0 
+556 0 667 556 0 722 0 0 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 19 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 20 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 122
+/Widths [600 0 600 0 600 0 0 0 600 600 0 0 0 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 0 0 0 0 0 
+0 0 0 600 600 600 0 0 600 600 0 0 0 600 600 600 
+600 0 0 600 600 0 0 0 0 600 0 600 0 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 21 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+22 0 obj
+<<
+/S /D
+>>
+endobj
+23 0 obj
+<<
+/Nums [0 22 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R]
+/Count 3
+/MediaBox [0 0 612 792]
+>>
+endobj
+24 0 obj
+<<
+/CreationDate (D:20160905151711+02'00')
+/ModDate (D:20160905151711+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+25 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 23 0 R
+>>
+endobj
+xref
+0 26
+0000000000 65535 f 
+0000015551 00000 n 
+0000000016 00000 n 
+0000004649 00000 n 
+0000012908 00000 n 
+0000013556 00000 n 
+0000014175 00000 n 
+0000014910 00000 n 
+0000015084 00000 n 
+0000011781 00000 n 
+0000015868 00000 n 
+0000015632 00000 n 
+0000004788 00000 n 
+0000009774 00000 n 
+0000015716 00000 n 
+0000009903 00000 n 
+0000011663 00000 n 
+0000011921 00000 n 
+0000012123 00000 n 
+0000012323 00000 n 
+0000012520 00000 n 
+0000012717 00000 n 
+0000015800 00000 n 
+0000015828 00000 n 
+0000015964 00000 n 
+0000016087 00000 n 
+trailer
+<<
+/Size 26
+/Root 25 0 R
+/Info 24 0 R
+/ID [<111d58631b15bdbe4e00dc65a0e91978><111d58631b15bdbe4e00dc65a0e91978>]
+>>
+startxref
+16157
+%%EOF

@@ -1,0 +1,1520 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3938
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.012 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Pr)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+(1. Nacimiento)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0738 Tw
+[(A)-323.9(los subprogramas se los llama y retornan, pero si consideramos un programa que queremos ejecutar en)]TJ
+0 -1.2 TD
+0.053 Tw
+(un proceso, no hay)Tj
+/TT4 1 Tf
+8.0157 0 TD
+0 Tw
+(llamadas)Tj
+/TT6 1 Tf
+3.9701 0 TD
+0.0531 Tw
+[(a)-303.1(programas ni dichos programas)]TJ
+/TT4 1 Tf
+13.7894 0 TD
+0 Tw
+[(r)37(etornan)]TJ
+/TT6 1 Tf
+3.463 0 TD
+0.0531 Tw
+[(.)-303.1(U)0(n)-303.1(proceso simplemente termina)]TJ
+-29.2382 -1.2 TD
+0.0394 Tw
+(cuando le pide al sistema terminar o cuando se comporta mal \(por ej., intenta leer una dirección de memo-)Tj
+T*
+0.1176 Tw
+[(ria que no está en ningún se)15(gmento\) y el sistema lo mata. No obstante, como sabes, cuando ejecutamos)]TJ
+T*
+0.035 Tw
+[(comandos en el shell podemos indicar ar)18(gumentos para que sus programas los procesen y para controlar lo)]TJ
+T*
+0 Tw
+(que hacen.)Tj
+0 -2.4 TD
+0.0832 Tw
+[(Cuando el shell el pide al sistema que ejecute un programa, una v)15(ez que dicho programa está car)18(gado en)]TJ
+0 -1.2 TD
+0.0955 Tw
+(memoria, el sistema suministra un )Tj
+/TT7 1 Tf
+14.4194 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0955 Tw
+(ujo de control para que ejecute. En realidad sabes que lo habitual es)Tj
+-14.9755 -1.2 TD
+0 Tw
+(que)Tj
+/TT4 1 Tf
+1.7934 0 TD
+(no)Tj
+/TT6 1 Tf
+1.3496 0 TD
+0.0996 Tw
+[(se car)18(gue todo el programa en memoria y)65(,)-349.6(en)-349.6(cambio, se pagina en demanda aquellas páginas de)]TJ
+-3.143 -1.2 TD
+0.0351 Tw
+(memoria a las que accede el programa conforme ejecuta. Pues bien, el )Tj
+/TT7 1 Tf
+28.7415 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0351 Tw
+[(ujo de control supone v)25(alores para)]TJ
+-29.2977 -1.2 TD
+0.0585 Tw
+[(los re)15(gistros del procesador)40(,)-308.5(inicializados para que comiencen la ejecución del programa que se desea eje-)]TJ
+T*
+0.0218 Tw
+(cutar e incluyendo un contador de programa y un puntero de pila. La pila inicialmente estará prácticamente)Tj
+T*
+0.293 Tw
+[(v)25(acía salv)20(o)-543(por los ar)18(gumentos del programa principal. Cuando compilamos un programa en C, el)]TJ
+T*
+0.0573 Tw
+(enlazador se ocupa de indicar en el ejecutable que la dirección de)Tj
+/TT9 1 Tf
+27.0626 0 TD
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.7077 0 TD
+0.0573 Tw
+(es la dirección en la que hay que)Tj
+-29.7703 -1.2 TD
+0.0309 Tw
+(empezar a ejecutar código. Es por eso que los programas en C comienzan ejecutando)Tj
+/TT9 1 Tf
+34.669 0 TD
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.031 Tw
+[(.)-281(Los ar)18(gumen-)]TJ
+-37.0694 -1.2 TD
+0 Tw
+(tos de)Tj
+/TT9 1 Tf
+2.6108 0 TD
+(main)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(son un array de strings \(en)Tj
+/TT9 1 Tf
+10.8306 0 TD
+(argv)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(\))-250(y)-250(e)0(l)-250(número de strings que hay en dicho array \(en)]TJ
+/TT9 1 Tf
+20.604 0 TD
+(argc)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(\).)Tj
+-41.4966 -2.4 TD
+0.1605 Tw
+[(T)70(eniendo esto en cuenta, el siguiente programa escribe sus ar)18(gumentos indicando antes de cada uno el)]TJ
+0 -1.2 TD
+0 Tw
+(índice en)Tj
+/TT9 1 Tf
+3.8872 0 TD
+(argv)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 311.4 Tm
+(#include <stdlib.h>)Tj
+0 -1.5 TD
+(#include <stdio.h>)Tj
+T*
+(int)Tj
+T*
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+0 -3 TD
+(for\(i = 0; i < argc; i++\) {)Tj
+2.4 -1.5 TD
+(printf\("%d\\t%s\\n", i, argv[i]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 149.4 Tm
+0.0091 Tw
+(Si lo guardamos en el )Tj
+/TT7 1 Tf
+8.9605 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT9 1 Tf
+2.4798 0 TD
+(eco.c)Tj
+/TT6 1 Tf
+3.2596 0 TD
+0.0091 Tw
+[(y)-259.1(l)0(o)-259.1(compilamos y lo ejecutamos podemos v)15(er qué ar)18(gumentos recibe)]TJ
+-15.2561 -1.2 TD
+0 Tw
+(el programa para una línea de comandos dada:)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 3365
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ cc eco.c)Tj
+0 -1.5 TD
+(unix$ ./eco un programa sencillo)Tj
+T*
+1.8 Tw
+(0: ./eco)Tj
+T*
+(1: un)Tj
+T*
+(2: programa)Tj
+T*
+(3: sencillo)Tj
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 606 Tm
+0.0156 Tw
+[(Como v)15(erás, ¡el primer "ar)18(gumento" en)]TJ
+/TT9 1 Tf
+16.1221 0 TD
+0 Tw
+(argv)Tj
+/TT6 1 Tf
+2.666 0 TD
+0.0155 Tw
+(es en realidad el nombre del programa! Concretamente, es el)Tj
+-18.7881 -1.2 TD
+0.2279 Tw
+(nombre del programa tal y como lo hemos escrito en la línea de comandos del shell. Recuerda que)Tj
+T*
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(./eco)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0918 Tw
+[(")-341.8(e)0(s)-341.8(u)0(n)-341.8(camino o path relati)25(v)20(o)20( )-20(y)20( )-20(que ")]TJ
+/TT9 1 Tf
+15.8437 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0918 Tw
+[(")-341.8(e)0(s)-341.8(e)0(l)-341.8(directorio actual. Así pues,)]TJ
+/TT9 1 Tf
+14.352 0 TD
+0 Tw
+(argv[0])Tj
+/TT6 1 Tf
+4.5424 0 TD
+0.0917 Tw
+(contiene el)Tj
+-38.7468 -1.2 TD
+0.1157 Tw
+(nombre del programa. Los siguientes strings en)Tj
+/TT9 1 Tf
+20.0282 0 TD
+0 Tw
+(argv)Tj
+/TT6 1 Tf
+2.7661 0 TD
+0.1157 Tw
+[(son los ar)18(gumentos que hemos dado a)]TJ
+/TT9 1 Tf
+16.206 0 TD
+0 Tw
+(eco)Tj
+/TT6 1 Tf
+2.166 0 TD
+0.1158 Tw
+(en la)Tj
+-41.1662 -1.2 TD
+0.0528 Tw
+(línea de comandos. Es muy útil emplear)Tj
+/TT9 1 Tf
+16.643 0 TD
+0 Tw
+(argv[0])Tj
+/TT6 1 Tf
+4.5035 0 TD
+0.0527 Tw
+(en mensajes de error para identi)Tj
+/TT7 1 Tf
+13.0076 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0527 Tw
+(car ante el usuario al)Tj
+-34.7103 -1.2 TD
+0 Tw
+(programa que tiene problemas.)Tj
+0 -2.4 TD
+0.1506 Tw
+(Lo que ha sucedido es que el shell ha leído la línea de comandos que hemos escrito, y ha utilizado la)Tj
+0 -1.2 TD
+0.0901 Tw
+(primera palabra para localizar el )Tj
+/TT7 1 Tf
+13.6365 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0901 Tw
+[(chero que contiene el programa que queremos ejecutar)55(.)-340.1(Después, le ha)]TJ
+-14.1927 -1.2 TD
+-0.0001 Tc
+0.1469 Tw
+[(pedido a UNIX que lo ejecute y que haga)-396.9(que)]TJ
+/TT9 1 Tf
+19.9562 0 TD
+0 Tc
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.7972 0 TD
+0.1468 Tw
+(en dicho programa reciba una copia del array de)Tj
+-22.7534 -1.2 TD
+0 Tw
+(strings que corresponde a la línea de comandos.)Tj
+0 -2.4 TD
+0.128 Tw
+[(Y)100(a)100( conocemos)]TJ
+/TT4 1 Tf
+6.1206 0 TD
+0 Tw
+[(ec)15(ho\(1\))]TJ
+/TT6 1 Tf
+3.0387 0 TD
+0.028 Tw
+[(.)-278(Recuerda que dicho comando acepta la opción ")]TJ
+/TT9 1 Tf
+19.9852 0 TD
+0 Tw
+(-n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.028 Tw
+[(")-278(para suprimir la impresión del)]TJ
+/TT7 1 Tf
+-30.3447 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.2076 Tw
+[(n de línea tras imprimir sus ar)18(gumentos. Podemos cambiar el programa anterior para que sea como)]TJ
+/TT4 1 Tf
+-0.5562 -1.2 TD
+0 Tw
+[(ec)15(ho\(1\))]TJ
+/TT6 1 Tf
+3.0387 0 TD
+0.0717 Tw
+[(,)-321.8(y)-321.8(podemos hacer que la opción ")]TJ
+/TT9 1 Tf
+14.0729 0 TD
+0 Tw
+(-v)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0717 Tw
+[(")-321.7(imprima cada ar)18(gumento entre corchetes, para distinguirlos)]TJ
+-18.3118 -1.2 TD
+0 Tw
+[(mejor)55(.)-250(Este es el programa:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 408 Tm
+(#include <stdlib.h>)Tj
+0 -1.5 TD
+(#include <stdio.h>)Tj
+T*
+(#include <string.h>)Tj
+0 -3 TD
+(static char *argv0;)Tj
+T*
+(static void)Tj
+0 -1.5 TD
+(usage\(void\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "usage: %s [-nv] [args...]\\n", argv0\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 3081
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i, nflag, vflag;)Tj
+T*
+(char *arg, *sep;)Tj
+0 -3 TD
+(nflag = vflag = 0;)Tj
+0 -1.5 TD
+(argv0 = argv[0];)Tj
+T*
+(argv++;)Tj
+T*
+(argc--;)Tj
+T*
+(while\(argc > 0 && argv[0][0] == ’-’\) {)Tj
+2.4 -1.5 TD
+(if \(strcmp\(argv[0], "--"\) == 0\) {)Tj
+2.4 -1.5 TD
+(argv++;)Tj
+T*
+(argc--;)Tj
+T*
+(break;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(for\(arg = argv[0]+1; *arg != 0; arg++\) {)Tj
+2.4 -1.5 TD
+(switch\(*arg\) {)Tj
+T*
+(case ’n’:)Tj
+2.4 -1.5 TD
+(nflag = 1;)Tj
+T*
+(break;)Tj
+-2.4 -1.5 TD
+(case ’v’:)Tj
+2.4 -1.5 TD
+(vflag = 1;)Tj
+T*
+(break;)Tj
+-2.4 -1.5 TD
+(default:)Tj
+2.4 -1.5 TD
+(usage\(\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(argv++;)Tj
+T*
+(argc--;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(sep = "";)Tj
+T*
+(for\(i = 0; i < argc; i++\){)Tj
+2.4 -1.5 TD
+(if \(vflag\) {)Tj
+2.4 -1.5 TD
+(printf\("%s[%s]", sep, argv[i]\);)Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(printf\("%s%s", sep, argv[i]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(sep = " ";)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(!nflag\) {)Tj
+2.4 -1.5 TD
+(printf\("\\n"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 150 Tm
+0.0055 Tw
+(Primero guardamos en la global)Tj
+/TT9 1 Tf
+13.052 0 TD
+0 Tw
+(argv0)Tj
+/TT6 1 Tf
+3.2561 0 TD
+0.0056 Tw
+(el nombre del programa. Esto lo usamos en la función)Tj
+/TT9 1 Tf
+21.9115 0 TD
+0 Tw
+(usage)Tj
+/TT6 1 Tf
+3.2561 0 TD
+(para)Tj
+-41.4757 -1.2 TD
+0.1622 Tw
+(imprimir un recordatorio del uso del programa empleando el nombre tal y como lo hemos recibido en)Tj
+/TT9 1 Tf
+T*
+0 Tw
+(argv[0])Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.0899 Tw
+[(.)-339.9(Una v)15(ez hecho esto, quitamos del v)15(ector del ar)18(gumentos el primer string haciendo que)]TJ
+/TT9 1 Tf
+36.5955 0 TD
+0 Tw
+(argv)Tj
+/TT6 1 Tf
+-40.7962 -1.2 TD
+(apunte al siguiente elemento \(y actualizando)Tj
+/TT9 1 Tf
+18.0483 0 TD
+(argc)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(para que re)Tj
+/TT7 1 Tf
+4.4414 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eje el número de strings en)Tj
+/TT9 1 Tf
+10.9966 0 TD
+(argv)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(\).)Tj
+-39.0933 -2.4 TD
+0.0833 Tw
+[(El b)20(ucle)]TJ
+/TT9 1 Tf
+3.7008 0 TD
+0 Tw
+(while)Tj
+/TT6 1 Tf
+3.3338 0 TD
+0.0833 Tw
+[(procesa las opciones \(ar)18(gumentos que empiezan por ")]TJ
+/TT9 1 Tf
+22.049 0 TD
+0 Tw
+(-)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0832 Tw
+("\) para detectar si se ha indicado)Tj
+-29.6837 -1.2 TD
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(-n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.294 Tc
+("o")Tj
+/TT9 1 Tf
+1.9044 0 TD
+0 Tc
+(-v)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.044 Tw
+[(". Como v)15(erás, el programa también entiende dichas opciones si se suministra ")]TJ
+/TT9 1 Tf
+32.3226 0 TD
+0 Tw
+(-nv)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.2941 Tc
+("o")Tj
+/TT9 1 Tf
+1.9046 0 TD
+0 Tc
+(-vn)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(",)Tj
+-42.5408 -1.2 TD
+0.0189 Tw
+[(como suelen hacer los programas en UNIX. Además, un ar)18(gumento ")]TJ
+/TT9 1 Tf
+27.9053 0 TD
+0 Tw
+(--)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0189 Tw
+[(")-268.9(indica el )]TJ
+/TT7 1 Tf
+4.3799 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0189 Tw
+(n de las opciones, para)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 3820
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+0.0141 Tw
+[(hacer que el resto de ar)18(gumentos no se procesen como opciones. Esto es lo habitual en UNIX. Por ejemplo,)]TJ
+0 -1.2 TD
+0 Tw
+(podemos ejecutar el programa como sigue, si lo tenemos compilado y enlazado en el ejecutable ")Tj
+/TT9 1 Tf
+38.8389 0 TD
+(eco2)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(".)Tj
+/TT9 1 Tf
+8 0 0 8 133 678 Tm
+(unix$ eco2 -v -- -n hola)Tj
+0 -1.5 TD
+([-n] [hola])Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 624 Tm
+0.0439 Tw
+[(Hemos optado por procesar los ar)18(gumentos de tal forma que una v)15(ez procesadas todas las opciones,)]TJ
+/TT9 1 Tf
+40.7964 0 TD
+0 Tw
+(argc)Tj
+/TT6 1 Tf
+-40.7964 -1.2 TD
+(y)Tj
+/TT9 1 Tf
+0.75 0 TD
+(argv)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(contienen el resto de ar)18(gumentos. Esto es cómodo en general.)]TJ
+-3.4004 -2.4 TD
+(Si llamamos al programa de forma incorrecta, obtenemos un recordatorio de cómo hay que usarlo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 570 Tm
+(unix$ eco2 -vx hola)Tj
+0 -1.5 TD
+(usage: eco2 [-nv] [args...])Tj
+T*
+(unix$)Tj
+/TT2 1 Tf
+10 0 0 10 72 504 Tm
+0.25 Tw
+(2. Muerte)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0217 Tw
+(Habrás notado que ")Tj
+/TT9 1 Tf
+8.2209 0 TD
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0217 Tw
+[(")-271.7(termina llamando a)]TJ
+/TT9 1 Tf
+8.7142 0 TD
+0 Tw
+(exit)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0217 Tw
+[(.)-271.7(Esta llamada al sistema pide a UNIX que termine la)]TJ
+-21.7359 -1.2 TD
+0.0461 Tw
+[(ejecución del proceso \(y por tanto de su programa\). El entero que pasamos como ar)18(gumento se espera que)]TJ
+T*
+0.0389 Tw
+[(sea cero si el programa ha conse)15(guido hacer su trabajo y distinto de cero en caso contrario. A este v)25(alor se)]TJ
+T*
+0.03 Tw
+(le suele llamar)Tj
+/TT2 1 Tf
+6.1706 0 TD
+(exit status)Tj
+/TT6 1 Tf
+4.6152 0 TD
+[(\(en inglés\).)-530(T)80(odo esto es muy importante. Habitualmente es un programa el que)]TJ
+-10.7857 -1.2 TD
+0.0566 Tw
+(ejecuta otros programas \(por ejemplo el shell\). Si dichos programas no informan correctamente respecto a)Tj
+T*
+0 Tw
+(si pudieron hacer su trabajo o no, el programa que los ejecuta podría hacer cosas que no esperamos.)Tj
+0 -2.4 TD
+0.0769 Tw
+[(Si un programa no comprueba si sus ar)18(gumentos son correctos y/o no suministra el estatus de salida ade-)]TJ
+0 -1.2 TD
+0.0688 Tw
+(cuado \(cero o distinto de cero\), no está correctamente programado y es posible que no pueda usarse en la)Tj
+T*
+0 Tw
+(práctica.)Tj
+0 -2.4 TD
+0.1005 Tw
+(Habrás visto que)Tj
+/TT9 1 Tf
+7.2722 0 TD
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.7509 0 TD
+0.1005 Tw
+(retorna un entero. Dado que)Tj
+/TT4 1 Tf
+11.9424 0 TD
+0 Tw
+[(e)20(xit\(3\))]TJ
+/TT6 1 Tf
+2.9399 0 TD
+0.1005 Tw
+(termina la ejecución, no retornamos nada en)Tj
+-24.9054 -1.2 TD
+0.0063 Tw
+(nuestro programa. No obstante, retornar de)Tj
+/TT9 1 Tf
+17.4763 0 TD
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.6567 0 TD
+0.0063 Tw
+[(hace que el v)25(alor retornado se utilice para llamar a)]TJ
+/TT4 1 Tf
+20.4721 0 TD
+0 Tw
+[(e)20(xit\(3\))]TJ
+/TT6 1 Tf
+-40.605 -1.2 TD
+[(con dicho v)25(alor)55(.)-250(Esto es, podríamos haber terminado nuestro programa escribiendo)]TJ
+/TT9 1 Tf
+8 0 0 8 133 314.4 Tm
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(return 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 224.4 Tm
+[(No hay magia en esto. En realidad el programa principal es una función que hace algo equi)25(v)25(alente a)]TJ
+/TT9 1 Tf
+8 0 0 8 133 206.4 Tm
+(exit\(main\(argc, argv\)\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 188.4 Tm
+[(lo que e)15(xplica que podamos retornar de)]TJ
+/TT9 1 Tf
+16.007 0 TD
+(main)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-18.4074 -2.4 TD
+[(Podemos utilizar el shell para v)15(er que tal le fue a un comando que ejecutamos anteriormente:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 146.4 Tm
+(unix$ ls /blah)Tj
+0 -1.5 TD
+(ls: /blah: No such file or directory)Tj
+T*
+(unix$ echo $?)Tj
+T*
+(1)Tj
+T*
+(unix$ echo $?)Tj
+T*
+(0)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 2978
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+0.0577 Tw
+(Aquí, ")Tj
+/TT9 1 Tf
+2.9659 0 TD
+0 Tw
+($?)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(")-307.7(e)0(s)-307.6(una)]TJ
+/TT4 1 Tf
+3.608 0 TD
+0.0576 Tw
+(variable de entorno)Tj
+/TT6 1 Tf
+8.31 0 TD
+[(\(más adelante v)15(eremos lo que es esto\) que contiene como v)25(alor un)]TJ
+-16.0841 -1.2 TD
+0.0297 Tw
+[(string correspondiente al estatus de salida del último comando ejecutado. ¿Puedes decir por qué la se)15(gunda)]TJ
+T*
+0 Tw
+[(v)15(e)0(z)-250(e)0(l)-250(estatus es 0?)]TJ
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(3. En)-250(la )250(salida)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0664 Tw
+[(En ocasiones resulta útil ejecutar código cuando un programa termina.)-566.4(Aunque no se debe ab)20(usar de este)]TJ
+0 -1.2 TD
+0.1242 Tw
+(mecanismo, puede resultar útil para, por ejemplo, borrar )Tj
+/TT7 1 Tf
+23.7353 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1242 Tw
+(cheros temporales o realizar alguna otra tarea)Tj
+-24.2915 -1.2 TD
+0 Tw
+(incluso si una función decide llamar a)Tj
+/TT9 1 Tf
+15.4116 0 TD
+(exit)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-17.812 -2.4 TD
+0.032 Tw
+(La función)Tj
+/TT4 1 Tf
+4.6734 0 TD
+0 Tw
+[(ate)20(xit\(3\))]TJ
+/TT6 1 Tf
+3.6492 0 TD
+0.032 Tw
+(permite instalar punteros a función de tal forma que dichas funciones ejecuten durante)Tj
+-8.3226 -1.2 TD
+0.1531 Tw
+(la llamada a)Tj
+/TT4 1 Tf
+5.5399 0 TD
+0 Tw
+[(e)20(xit\(3\))]TJ
+/TT6 1 Tf
+2.5894 0 TD
+[(.)-403.1(E)0(n)-403.1(realidad,)]TJ
+/TT9 1 Tf
+6.0404 0 TD
+(exit)Tj
+/TT6 1 Tf
+2.8035 0 TD
+0.1531 Tw
+(llama las funciones que ha instalado)Tj
+/TT9 1 Tf
+15.6364 0 TD
+0 Tw
+(atexit)Tj
+/TT6 1 Tf
+4.0037 0 TD
+0.1532 Tw
+[(y)-403.2(lue)15(go llama a)]TJ
+/TT9 1 Tf
+-36.6131 -1.2 TD
+0 Tw
+(_exit)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-250(que realmente termina la ejecución del proceso.)]TJ
+-3.0005 -2.4 TD
+(Recuerda que el programa principal es el realidad)Tj
+/TT9 1 Tf
+8 0 0 8 133 518.4 Tm
+(exit\(main\(argc, argv\)\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 488.4 Tm
+(La función de librería)Tj
+/TT9 1 Tf
+8.9404 0 TD
+(exit)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(se parece a...)Tj
+/TT9 1 Tf
+8 0 0 8 133 470.4 Tm
+(void)Tj
+0 -1.5 TD
+(exit\(int sts\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(for \(i = 0; i < numexitfns; i++\) {)Tj
+2.4 -1.5 TD
+(exitfns[i]\(\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(_exit\(sts\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 344.4 Tm
+0.0744 Tw
+[(P)15(ara ejecutar algo cuando el programa termine llamando a)]TJ
+/TT4 1 Tf
+24.2274 0 TD
+0 Tw
+[(e)20(xit)]TJ
+/TT6 1 Tf
+1.4234 0 TD
+0.0743 Tw
+[(,)-324.3(podemos llamar a)]TJ
+/TT4 1 Tf
+8.1561 0 TD
+0 Tw
+[(ate)20(xit)]TJ
+/TT6 1 Tf
+2.5255 0 TD
+0.0743 Tw
+(como en el sigu-)Tj
+-36.3323 -1.2 TD
+0 Tw
+(iente programa:)Tj
+/TT9 1 Tf
+8 0 0 8 133 314.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+0 -3 TD
+(static void)Tj
+0 -1.5 TD
+(exitfn1\(void\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(puts\("dentro de exitfn1"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(static void)Tj
+0 -1.5 TD
+(exitfn2\(void\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(puts\("dentro de exitfn2"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 1233
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(atexit\(exitfn1\);)Tj
+T*
+(atexit\(exitfn2\);)Tj
+T*
+(puts\("a punto de salir..."\);)Tj
+T*
+(return 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 594 Tm
+(Cuando lo ejecutemos, suponiendo que el ejecutable es)Tj
+/TT9 1 Tf
+22.2988 0 TD
+(atexit)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(,)-250(v)15(eremos algo como...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 576 Tm
+(unix$ atexit)Tj
+0 -1.5 TD
+[(a)-600(punto de salir...)]TJ
+T*
+(dentro de exitfn2)Tj
+T*
+(dentro de exitfn1)Tj
+/TT6 1 Tf
+10 0 0 10 72 510 Tm
+0.1282 Tw
+[(Como v)15(erás, el k)10(ernel de UNIX no sabe nada de nada de tus)]TJ
+/TT4 1 Tf
+25.9678 0 TD
+0 Tw
+[(ate)20(xit)]TJ
+/TT6 1 Tf
+2.2012 0 TD
+0.1283 Tw
+[(.)-378.3(Simplemente la función de librería)]TJ
+/TT4 1 Tf
+-28.169 -1.2 TD
+0 Tw
+[(e)20(xit\(3\))]TJ
+/TT6 1 Tf
+2.8777 0 TD
+0.0382 Tw
+(se ocupa de hacer los honores. ¿Qué pasaría si llamas a)Tj
+/TT4 1 Tf
+22.7449 0 TD
+0 Tw
+[(e)20(xit)]TJ
+/TT6 1 Tf
+1.7116 0 TD
+0.0382 Tw
+(desde una función instalada con)Tj
+/TT4 1 Tf
+13.2144 0 TD
+0 Tw
+[(ate)20(xit)]TJ
+/TT6 1 Tf
+2.2012 0 TD
+(?)Tj
+-42.7498 -1.2 TD
+(¡Pruébalo! ¿Entiendes por qué?)Tj
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+30 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 500 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 667 0 0 0 389 0 0 0 944 722 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 500 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 26 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 120
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 0 0 0 
+0 500 0 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 0 500 278 0 0 278 722 500 500 
+500 0 389 389 278 0 444 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 27 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+500 0 500 500 500 500 500 0 0 0 278 0 0 0 0 444 
+0 722 0 667 722 611 0 0 722 333 0 0 611 0 722 0 
+556 722 667 556 611 722 0 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 28 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 29 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 600 
+600 600 600 600 0 0 0 0 0 0 600 600 600 600 600 600 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 
+0 0 0 0 0 0 0 0 0 0 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 0 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 30 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+31 0 obj
+<<
+/S /D
+>>
+endobj
+32 0 obj
+<<
+/Nums [0 31 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R]
+/Count 6
+/MediaBox [0 0 612 792]
+>>
+endobj
+33 0 obj
+<<
+/CreationDate (D:20160905151710+02'00')
+/ModDate (D:20160905151710+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+34 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 32 0 R
+>>
+endobj
+xref
+0 35
+0000000000 65535 f 
+0000023136 00000 n 
+0000000016 00000 n 
+0000004006 00000 n 
+0000020648 00000 n 
+0000021308 00000 n 
+0000021708 00000 n 
+0000022453 00000 n 
+0000022627 00000 n 
+0000019521 00000 n 
+0000023705 00000 n 
+0000023217 00000 n 
+0000004145 00000 n 
+0000007563 00000 n 
+0000023301 00000 n 
+0000007692 00000 n 
+0000010826 00000 n 
+0000023385 00000 n 
+0000010944 00000 n 
+0000014817 00000 n 
+0000023469 00000 n 
+0000014946 00000 n 
+0000017977 00000 n 
+0000023553 00000 n 
+0000018117 00000 n 
+0000019403 00000 n 
+0000019661 00000 n 
+0000019863 00000 n 
+0000020063 00000 n 
+0000020260 00000 n 
+0000020457 00000 n 
+0000023637 00000 n 
+0000023665 00000 n 
+0000023822 00000 n 
+0000023945 00000 n 
+trailer
+<<
+/Size 35
+/Root 34 0 R
+/Info 33 0 R
+/ID [<ad9aae1e6f8405f31bc590525cce361a><ad9aae1e6f8405f31bc590525cce361a>]
+>>
+startxref
+24015
+%%EOF

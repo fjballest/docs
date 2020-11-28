@@ -1,0 +1,1814 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4359
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 154.89 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Usando el shell)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Usando)-250(expr)18(esiones )250(r)18(egular)18(es)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+-0.0001 Tc
+0.0897 Tw
+[(V)110.9(amos a resolv)14.9(er el problema que teníamos. Supongamos que tenemos nuestra aplicación)]TJ
+/TT8 1 Tf
+37.1838 0 TD
+0 Tc
+0 Tw
+(myapp)Tj
+/TT6 1 Tf
+3.34 0 TD
+0.0895 Tw
+(con su)Tj
+/TT9 1 Tf
+-40.5238 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero de con)Tj
+/TT9 1 Tf
+5.1084 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(guración en)Tj
+/TT8 1 Tf
+4.9424 0 TD
+($HOME/.myapp)Tj
+/TT6 1 Tf
+7.4512 0 TD
+(para cada usuario, y que su aspecto es como habíamos visto:)Tj
+/TT8 1 Tf
+8 0 0 8 133 527.4 Tm
+(shell /bin/sh)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+/TT6 1 Tf
+10 0 0 10 72 473.4 Tm
+0.102 Tw
+[(V)111(amos a hacer un script llamado)]TJ
+/TT8 1 Tf
+13.8854 0 TD
+0 Tw
+(chkappconf)Tj
+/TT6 1 Tf
+6.3531 0 TD
+0.1021 Tw
+(que compruebe la con)Tj
+/TT9 1 Tf
+9.1081 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1021 Tw
+(guración para todos los usuarios)Tj
+-29.9027 -1.2 TD
+0.1089 Tw
+[(del sistema. Por el momento v)25(amos a usar un )]TJ
+/TT9 1 Tf
+19.2852 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1089 Tw
+(chero llamado)Tj
+/TT8 1 Tf
+6.1597 0 TD
+0 Tw
+(config)Tj
+/TT6 1 Tf
+3.9595 0 TD
+0.1088 Tw
+(que tiene justo el contenido que)Tj
+-29.9605 -1.2 TD
+0.0075 Tw
+(mostramos arriba como ejemplo de )Tj
+/TT9 1 Tf
+14.3944 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0075 Tw
+(chero de con)Tj
+/TT9 1 Tf
+5.1234 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0075 Tw
+[(guración. Lue)15(go es fácil trabajar con los )]TJ
+/TT9 1 Tf
+16.3648 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0076 Tw
+[(cheros de v)15(e)0(r)20(-)]TJ
+-37.551 -1.2 TD
+0.0146 Tw
+[(dad. )-250(La)-264.6(idea es procesar los )]TJ
+/TT9 1 Tf
+11.6384 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+/TT4 1 Tf
+2.8745 0 TD
+[(enter)45(os)]TJ
+/TT6 1 Tf
+2.8988 0 TD
+0.0145 Tw
+[(,)-264.6(poco a poco, e ir generando nue)25(v)20(o)0(s)-264.5(")]TJ
+/TT9 1 Tf
+15.3631 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0145 Tw
+(cheros" como salida de)Tj
+-33.8871 -1.2 TD
+0 Tw
+(comandos que procesan los datos que tenemos. En realidad, generamos bytes que )Tj
+/TT9 1 Tf
+32.8237 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(uyen por un pipe.)Tj
+-33.3799 -2.4 TD
+0.034 Tw
+[(En este caso, v)25(amos a necesitar utilizar)]TJ
+/TT4 1 Tf
+16.0954 0 TD
+0 Tw
+[(gr)37(ep\(1\))]TJ
+/TT6 1 Tf
+2.962 0 TD
+[(,)-284.1(o)0(,)-284.1(concretamente)]TJ
+/TT4 1 Tf
+7.6819 0 TD
+[(e)40(g)0(r)37(ep\(1\))]TJ
+/TT6 1 Tf
+3.3659 0 TD
+0.0341 Tw
+[(.)-284.1(Este comando lee su entrada, o)]TJ
+/TT9 1 Tf
+-30.1052 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0949 Tw
+[(cheros indicados en la línea de comandos, línea a línea y escribe aquellas que encajan con la e)15(xpresión)]TJ
+-0.5562 -1.2 TD
+0 Tw
+(que le damos. Por ejemplo,)Tj
+/TT8 1 Tf
+8 0 0 8 133 359.4 Tm
+(unix$ egrep dir config)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+/TT6 1 Tf
+10 0 0 10 72 305.4 Tm
+[(El primer parámetro es la e)15(xpresión que b)20(uscamos y el se)15(gundo es el )]TJ
+/TT9 1 Tf
+27.7469 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero en que estamos b)20(uscando.)]TJ
+-28.303 -2.4 TD
+(Otro ejemplo:)Tj
+/TT8 1 Tf
+8 0 0 8 133 263.4 Tm
+(unix$ seq 15 | egrep 1)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 149.4 Tm
+(En este caso)Tj
+/TT8 1 Tf
+5.1924 0 TD
+(egrep)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(lee de la entrada estándar)40(,)-250(dado que no hemos indicado )]TJ
+/TT9 1 Tf
+22.2569 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero alguno.)Tj
+-31.2559 -2.4 TD
+0.1036 Tw
+[(Las e)15(xpresiones de)]TJ
+/TT8 1 Tf
+8.1542 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3541 0 TD
+0.1036 Tw
+(son muy potentes. Son de hecho un lenguaje denominado)Tj
+/TT2 1 Tf
+24.1503 0 TD
+[(expr)18(esiones r)18(egu-)]TJ
+-35.6586 -1.2 TD
+0 Tw
+[(lar)18(es)]TJ
+/TT6 1 Tf
+2.4118 0 TD
+0.125 Tw
+[(que se utiliza en di)25(v)15(ersos comandos de UNIX, por lo que resulta muy útil aprenderlo. Mirando la)]TJ
+-2.4118 -1.2 TD
+0 Tw
+(página)Tj
+/TT4 1 Tf
+2.9155 0 TD
+[(e)40(g)0(r)37(ep\(1\))]TJ
+/TT6 1 Tf
+3.6159 0 TD
+[(v)15(emos hacia el )]TJ
+/TT9 1 Tf
+6.1769 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nal...)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 9738
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ man egrep)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(SEE ALSO)Tj
+3 -1.5 TD
+(ed\(1\), ex\(1\), gzip\(1\), sed\(1\), re_format\(7\))Tj
+-3 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 642 Tm
+[(Y)-276.4(precisamente)]TJ
+/TT4 1 Tf
+6.5499 0 TD
+-0.037 Tc
+(re)Tj
+/TT8 1 Tf
+0.796 0 TD
+0 Tc
+(_)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(format\(7\))Tj
+/TT6 1 Tf
+4.1094 0 TD
+0.0264 Tw
+[(en este sistema documenta las e)15(xpresiones re)15(gulares. Esto lo hemos hecho en)]TJ
+-12.0554 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(un sistema OS X. Si usamos un sistema Linux podemos hacer la misma jugada)Tj
+/TT8 1 Tf
+8 0 0 8 133 612 Tm
+0 Tc
+0 Tw
+(unix$ man egrep)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(SEE ALSO)Tj
+T*
+[(awk\(1\), )-600(cmp\(1\),)-600(diff\(1\), find\(1\), sed\(1\), sort\(1\),)]TJ
+4.2 -1.5 TD
+(glob\(7\), regex\(7\).)Tj
+-4.2 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 534 Tm
+0.1242 Tw
+[(y)-374.2(v)15(emos que)]TJ
+/TT4 1 Tf
+5.6623 0 TD
+0 Tw
+[(r)37(e)40(g)10(e)20(x\(7\))]TJ
+/TT6 1 Tf
+3.6539 0 TD
+0.1241 Tw
+[(documenta sus e)15(xpresiones re)15(gulares. Las que usamos en este curso funcionan en)]TJ
+-9.3162 -1.2 TD
+0 Tw
+(ambos.)Tj
+0 -2.4 TD
+0.2526 Tw
+[(Una e)15(xpresión re)15(gular es un string que describe otros strings. Decimos que un string encaja con la)]TJ
+0 -1.2 TD
+0.0316 Tw
+[(e)15(xpresión si)]TJ
+/TT4 1 Tf
+5.1029 0 TD
+0 Tw
+(contiene)Tj
+/TT6 1 Tf
+3.6688 0 TD
+0.0316 Tw
+[(uno de los strings que describe la e)15(xpresión. Podemos de)]TJ
+/TT9 1 Tf
+23.0428 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0316 Tw
+[(nir las e)15(xpresiones recursi-)]TJ
+-32.3707 -1.2 TD
+0 Tw
+[(v)25(amente como sigue:)]TJ
+2.5 -1.56 TD
+0.1232 Tw
+[(•)-2150(Cualquier carácter normal que no forma parte de la sintaxis de e)15(xpresiones re)15(gulares encaja)]TJ
+2.5 -1.2 TD
+0 Tw
+(con el mismo. Por ejemplo,)Tj
+/TT8 1 Tf
+11.2485 0 TD
+(a)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(describe el string)Tj
+/TT8 1 Tf
+7.0811 0 TD
+(a)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(.)Tj
+-22.2798 -1.56 TD
+0.0018 Tw
+[(•)-2150(L)0(a)-251.8(e)15(xpresión ")]TJ
+/TT8 1 Tf
+8.3393 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0017 Tw
+[(")-251.8(describe con cualquier carácter)40(,)-251.7(pero sólo uno. Por ejemplo,)]TJ
+/TT8 1 Tf
+24.8485 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.8518 0 TD
+0.0017 Tw
+(puede ser tanto)Tj
+/TT8 1 Tf
+-32.1397 -1.2 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(como)Tj
+/TT8 1 Tf
+2.4717 0 TD
+(b)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(,)-250(pero no el string v)25(acío ni tampoco on)]TJ
+/TT8 1 Tf
+15.6381 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-23.2602 -1.56 TD
+0.063 Tw
+[(•)-2150(Una e)15(xpresión re)15(gular)]TJ
+/TT4 1 Tf
+11.7944 0 TD
+0 Tw
+(r0)Tj
+/TT6 1 Tf
+1.2022 0 TD
+0.063 Tw
+[(se)15(guida de otra)]TJ
+/TT4 1 Tf
+6.4773 0 TD
+0 Tw
+(r1)Tj
+/TT6 1 Tf
+1.2023 0 TD
+0.0631 Tw
+(describe los strings que tienen un pre)Tj
+/TT9 1 Tf
+15.2082 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0631 Tw
+(jo descrito)Tj
+-33.9404 -1.2 TD
+0 Tw
+(por)Tj
+/TT4 1 Tf
+1.7119 0 TD
+(r0)Tj
+/TT6 1 Tf
+1.2681 0 TD
+0.1289 Tw
+[(se)15(guido de otro descrito por)]TJ
+/TT4 1 Tf
+12.0436 0 TD
+0 Tw
+(r1)Tj
+/TT6 1 Tf
+0.8892 0 TD
+0.1289 Tw
+[(.)-628.9(Por ejemplo)]TJ
+/TT8 1 Tf
+6.247 0 TD
+0 Tw
+(ab)Tj
+/TT6 1 Tf
+1.5791 0 TD
+0.1289 Tw
+(describe el string)Tj
+/TT8 1 Tf
+7.4678 0 TD
+0 Tw
+(ab)Tj
+/TT6 1 Tf
+1.579 0 TD
+0.1288 Tw
+(puesto que)Tj
+/TT8 1 Tf
+4.8123 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+-37.5979 -1.2 TD
+(puede ser)Tj
+/TT8 1 Tf
+4.0537 0 TD
+(a)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(y)Tj
+/TT8 1 Tf
+0.75 0 TD
+(b)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(puede ser)Tj
+/TT8 1 Tf
+4.0537 0 TD
+(b)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(.)-250(Igualmente,)]TJ
+/TT8 1 Tf
+5.498 0 TD
+(.b)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(describe)Tj
+/TT8 1 Tf
+3.5815 0 TD
+(ab )Tj
+1.4503 0 TD
+(bb)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no)Tj
+/TT8 1 Tf
+3.2769 0 TD
+(ba)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-31.565 -1.56 TD
+2.15 Tc
+[(•S)2150(i)]TJ
+/TT4 1 Tf
+3.6311 0 TD
+0 Tc
+(r0)Tj
+/TT6 1 Tf
+1.1862 0 TD
+(y)Tj
+/TT4 1 Tf
+0.797 0 TD
+(r1)Tj
+/TT6 1 Tf
+1.1862 0 TD
+0.047 Tw
+[(son dos e)15(xpresiones re)15(gulares, La e)15(xpresión)]TJ
+/TT4 1 Tf
+18.0934 0 TD
+0 Tw
+(r0)Tj
+/TT8 1 Tf
+0.8892 0 TD
+(|)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r1)Tj
+/TT6 1 Tf
+1.1863 0 TD
+0.0471 Tw
+(describe los strings que describe)Tj
+-25.0693 -1.2 TD
+0 Tw
+[(alguna de las e)15(xpresiones)]TJ
+/TT4 1 Tf
+10.4259 0 TD
+(r0)Tj
+/TT6 1 Tf
+1.1392 0 TD
+(y)Tj
+/TT4 1 Tf
+0.75 0 TD
+(r1)Tj
+/TT6 1 Tf
+1.1392 0 TD
+(\(o que describen las dos\).)Tj
+-15.9542 -1.56 TD
+0.1832 Tw
+[(•)-2150(S)0(i)-433.2(tenemos una e)15(xpresión)]TJ
+/TT4 1 Tf
+13.7159 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+[(,)-433.2(entonces)]TJ
+/TT4 1 Tf
+4.6148 0 TD
+(r)Tj
+/TT8 1 Tf
+0.3892 0 TD
+(*)Tj
+/TT6 1 Tf
+1.0332 0 TD
+0.1831 Tw
+[(describe los strings "" \(la cadena v)25(acía\), los que)]TJ
+-17.6423 -1.2 TD
+0 Tw
+(describe)Tj
+/TT4 1 Tf
+3.6292 0 TD
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+0.0477 Tw
+[(,)-297.7(los de)]TJ
+/TT4 1 Tf
+3.2539 0 TD
+0 Tw
+(rr)Tj
+/TT6 1 Tf
+0.7783 0 TD
+0.0477 Tw
+[(,)-297.7(los de)]TJ
+/TT4 1 Tf
+3.2539 0 TD
+0 Tw
+(rrr)Tj
+/TT6 1 Tf
+1.1675 0 TD
+0.0478 Tw
+[(,)-297.7(etc. \(Repetimos la e)15(xpresión cualquier número de v)15(eces, posi-)]TJ
+-12.4721 -1.2 TD
+0 Tw
+(blemente ninguna\).)Tj
+-2.5 -1.56 TD
+[(•)-2150(S)0(i)-250(tenemos una e)15(xpresión)]TJ
+/TT4 1 Tf
+12.9831 0 TD
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+[(,)-250(entonces)]TJ
+/TT4 1 Tf
+4.2485 0 TD
+(r)Tj
+/TT8 1 Tf
+0.3892 0 TD
+(+)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(es lo mismo que)Tj
+/TT4 1 Tf
+6.7773 0 TD
+(r)Tj
+/TT8 1 Tf
+0.3892 0 TD
+(\()Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r)Tj
+/TT8 1 Tf
+0.3892 0 TD
+(\)*)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(.)-500(Esto es,)]TJ
+/TT4 1 Tf
+4.1108 0 TD
+(r)Tj
+/TT6 1 Tf
+0.6392 0 TD
+[(una o más v)15(eces.)]TJ
+-32.9661 -1.56 TD
+0.0886 Tw
+[(•)-2150(S)0(i)-338.6(tenemos una e)15(xpresión)]TJ
+/TT4 1 Tf
+13.3375 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+[(,)-338.6(entonces)]TJ
+/TT4 1 Tf
+4.4257 0 TD
+(r)Tj
+/TT8 1 Tf
+0.3892 0 TD
+(?)Tj
+/TT6 1 Tf
+0.9387 0 TD
+0.0886 Tw
+(es lo mismo que)Tj
+/TT8 1 Tf
+7.1317 0 TD
+0 Tw
+(\()Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r)Tj
+/TT8 1 Tf
+0.3892 0 TD
+(\)|\(\))Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0886 Tw
+[(.)-338.6(Esto es,)]TJ
+/TT4 1 Tf
+4.1266 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.7278 0 TD
+0.0885 Tw
+(una o ninguna)Tj
+-32.3561 -1.2 TD
+0 Tw
+[(v)15(ez.)]TJ
+-2.5 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(ˆ)Tj
+/TT6 1 Tf
+0.8791 0 TD
+0.029 Tw
+[(representa el principio del string en que b)20(uscamos encajes de la e)15(xpresión re)15(gular)55(.)-279.1(Por ejem-)]TJ
+-0.8792 -1.2 TD
+0 Tw
+(plo,)Tj
+/TT8 1 Tf
+1.7778 0 TD
+(ˆa)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(encaja con)Tj
+/TT8 1 Tf
+4.4971 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no con)Tj
+/TT8 1 Tf
+4.9707 0 TD
+(ba)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-17.8462 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+($)Tj
+/TT6 1 Tf
+0.9217 0 TD
+0.0716 Tw
+(representa el )Tj
+/TT9 1 Tf
+5.4733 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0716 Tw
+[(nal del string en que b)20(uscamos encajes de la e)15(xpresión re)15(gular)55(.)-321.6(Por ejemplo,)]TJ
+/TT8 1 Tf
+-6.9512 -1.2 TD
+0 Tw
+(a$)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(encaja con)Tj
+/TT8 1 Tf
+4.4971 0 TD
+(ba)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no con)Tj
+/TT8 1 Tf
+4.9707 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-16.0684 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(\\)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(c)Tj
+/TT6 1 Tf
+0.7936 0 TD
+0.0998 Tw
+(quita el signi)Tj
+/TT9 1 Tf
+5.3656 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0998 Tw
+(cado especial a)Tj
+/TT4 1 Tf
+6.6012 0 TD
+0 Tw
+(c)Tj
+/TT6 1 Tf
+0.4438 0 TD
+0.0998 Tw
+[(,)-349.8(d)0(e)-349.8(tal modo que podemos utilizar caracteres que forman)]TJ
+-14.3606 -1.2 TD
+0.0138 Tw
+[(parte de la sintaxis de e)15(xpresiones re)15(gulares como caracteres normales. Por ejemplo,)]TJ
+/TT8 1 Tf
+34.178 0 TD
+0 Tw
+(\\\\)Tj
+/TT6 1 Tf
+1.4639 0 TD
+(encaja)Tj
+-35.6419 -1.2 TD
+(con)Tj
+/TT8 1 Tf
+1.6938 0 TD
+(\\)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(y)Tj
+/TT8 1 Tf
+0.75 0 TD
+(\\.c)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(encaja con)Tj
+/TT8 1 Tf
+4.4971 0 TD
+(.c)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no con)Tj
+/TT8 1 Tf
+4.9707 0 TD
+(ac)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(.)-250(E)0(n)-250(cambio)]TJ
+/TT8 1 Tf
+5.0542 0 TD
+(.c)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(encaja también con)Tj
+/TT8 1 Tf
+7.9683 0 TD
+(ac)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-35.6353 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(\()Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r)Tj
+/TT8 1 Tf
+0.3892 0 TD
+(\))Tj
+/TT6 1 Tf
+1.1486 0 TD
+0.2985 Tw
+[(permite agrupar una e)15(xpresión y describe los strings descritos por)]TJ
+/TT4 1 Tf
+29.4628 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+0.2986 Tw
+[(.)-548.6(Por ejemplo,)]TJ
+/TT8 1 Tf
+-31.9899 -1.2 TD
+0 Tw
+(\(a|b\)\(x|y\))Tj
+/TT6 1 Tf
+6.251 0 TD
+(describe)Tj
+/TT8 1 Tf
+3.5815 0 TD
+(ax)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no)Tj
+/TT8 1 Tf
+3.2769 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-18.2598 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+([)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(...)Tj
+/TT8 1 Tf
+0.75 0 TD
+(])Tj
+/TT6 1 Tf
+1.0112 0 TD
+0.1611 Tw
+(describe cualquiera de los caracteres entre los corchetes. Y es posible escribir rangos)Tj
+-2.3614 -1.2 TD
+0.0051 Tw
+(como en)Tj
+/TT8 1 Tf
+3.6757 0 TD
+0 Tw
+([a-c])Tj
+/TT6 1 Tf
+3.2557 0 TD
+0.0052 Tw
+(\(de la)Tj
+/TT8 1 Tf
+2.5089 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.8553 0 TD
+0.2552 Tc
+[(al)255.2(a)]TJ
+/TT8 1 Tf
+1.6759 0 TD
+0 Tc
+(c)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0052 Tw
+(\). Por ejemplo,)Tj
+/TT8 1 Tf
+6.209 0 TD
+0 Tw
+([a-zA-Z0-9_])Tj
+/TT6 1 Tf
+7.4564 0 TD
+0.0052 Tw
+(es cualquier letra minúscula o)Tj
+-26.237 -1.2 TD
+0 Tw
+(mayúscula o dígito o bien ")Tj
+/TT8 1 Tf
+10.9897 0 TD
+(_)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(". ¡Pero cuidado aquí con caracteres como ")Tj
+/TT8 1 Tf
+17.5313 0 TD
+(ñ)Tj
+/TT6 1 Tf
+0.6001 0 TD
+("!)Tj
+-32.2212 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+([ˆ)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(...)Tj
+/TT8 1 Tf
+0.75 0 TD
+(])Tj
+/TT6 1 Tf
+1.005 0 TD
+0.1549 Tw
+(describe cualquiera de los caracteres no descritos por)Tj
+/TT8 1 Tf
+22.7293 0 TD
+0 Tw
+([)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(...)Tj
+/TT8 1 Tf
+0.75 0 TD
+(])Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1548 Tw
+[(.)-404.8(Por ejemplo,)]TJ
+/TT8 1 Tf
+6.3247 0 TD
+0 Tw
+([0-9])Tj
+/TT6 1 Tf
+3.4053 0 TD
+(es)Tj
+-37.3649 -1.2 TD
+(cualquier carácter que no sea un dígito.)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 2453
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+0.0578 Tw
+[(V)111(eamos algunos ejemplos utilizando)]TJ
+/TT8 1 Tf
+15.1173 0 TD
+0 Tw
+(seq)Tj
+/TT6 1 Tf
+2.1081 0 TD
+0.0578 Tw
+(para usar)Tj
+/TT8 1 Tf
+4.0023 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3083 0 TD
+0.0578 Tw
+[(en su salida. Primero, b)20(uscamos un)]TJ
+/TT8 1 Tf
+14.6579 0 TD
+0 Tw
+(1)Tj
+/TT6 1 Tf
+0.9079 0 TD
+[(se)15(guido)]TJ
+-40.1017 -1.2 TD
+(de un carácter:)Tj
+/TT8 1 Tf
+8 0 0 8 133 678 Tm
+(unix$ seq 15 | egrep 1.)Tj
+0 -1.5 TD
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 576 Tm
+[(Ahora un carácter se)15(guido de un)]TJ
+/TT8 1 Tf
+13.2018 0 TD
+(1)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 558 Tm
+(unix$ seq 15 | egrep .1)Tj
+0 -1.5 TD
+(11)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 516 Tm
+[(O)-250(bien)]TJ
+/TT8 1 Tf
+2.9438 0 TD
+(11)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(o)-250(bien)]TJ
+/TT8 1 Tf
+2.7217 0 TD
+(12)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 498 Tm
+(unix$ seq 15 | egrep ’11|12’)Tj
+0 -1.5 TD
+(11)Tj
+T*
+(12)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 444 Tm
+[(Y)-250(tambien podemos combinar e)15(xpresiones más complejas del mismo modo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 426 Tm
+(unix$ seq 15 | egrep ’.2|1.’)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 324 Tm
+(Un)Tj
+/TT8 1 Tf
+1.4722 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(y)-250(cualquier cosa:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 306 Tm
+(unix$ seq 15 | egrep ’1.*’)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 192 Tm
+0.0594 Tw
+(¡Ojo al)Tj
+/TT8 1 Tf
+3.1735 0 TD
+0 Tw
+(.*)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(!)-309.4(S)0(i)-309.4(usáramos)]TJ
+/TT8 1 Tf
+5.872 0 TD
+(1*)Tj
+/TT6 1 Tf
+1.5096 0 TD
+0.0593 Tw
+[(entonces v)15(eríamos todas las líneas dado que todas contienen el string v)25(acío y)]TJ
+-11.7553 -1.2 TD
+0 Tw
+(que)Tj
+/TT8 1 Tf
+1.6938 0 TD
+(1*)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(encaja con el string v)25(acío. Pero podríamos pedir las líneas que son cualquier número de unos:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 162 Tm
+(unix$ seq 15 | egrep ’ˆ1*$’)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(11)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 96 Tm
+(Un)Tj
+/TT8 1 Tf
+1.4722 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(o)-250(e)0(l)-250(principio del te)15(xto y lue)15(go un)]TJ
+/TT8 1 Tf
+13.7449 0 TD
+(2)Tj
+/TT6 1 Tf
+0.8501 0 TD
+0.25 Tc
+[(ou)250(n)]TJ
+/TT8 1 Tf
+2 0 TD
+0 Tc
+(3)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 2421
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 15 | egrep ’\(1|ˆ\)\(2|3\)’)Tj
+0 -1.5 TD
+(2)Tj
+T*
+(3)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 630 Tm
+[(Aunque tal v)15(ez sería mejor)]TJ
+/TT8 1 Tf
+8 0 0 8 133 612 Tm
+(unix$ seq 15 | egrep ’\(1|ˆ\)[23]’)Tj
+T*
+(2)Tj
+T*
+(3)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 534 Tm
+[(para conse)15(guir el mismo efecto.)]TJ
+0 -2.4 TD
+(Ahora cualquier línea que use sólo cualquier carácter menos los del)Tj
+/TT8 1 Tf
+27.2393 0 TD
+(2)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(al)Tj
+/TT8 1 Tf
+0.9717 0 TD
+(8)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 492 Tm
+(unix$ seq 15 | egrep ’ˆ[ˆ2-8]*$’)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(9)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+/TT6 1 Tf
+10 0 0 10 72 414 Tm
+-0.0003 Tc
+0.0003 Tw
+(Líneas que tengan)Tj
+/TT8 1 Tf
+7.5199 0 TD
+0 Tc
+0 Tw
+(3)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(una o más v)15(eces:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 396 Tm
+(unix$ seq 15 | egrep ’3+’)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 330 Tm
+(Quizá un)Tj
+/TT8 1 Tf
+3.8877 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+0.25 Tc
+[(yu)250(n)]TJ
+/TT8 1 Tf
+2 0 TD
+0 Tc
+(3)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 312 Tm
+(unix$ seq 15 | egrep ’1?3’)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 246 Tm
+0.0566 Tw
+[(Bueno, ya conocemos las e)15(xpresiones re)15(gulares y podemos utilizar)]TJ
+/TT8 1 Tf
+27.472 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3072 0 TD
+0.0567 Tw
+(para obtener las líneas de nue-)Tj
+-30.7792 -1.2 TD
+0 Tw
+(stro )Tj
+/TT9 1 Tf
+1.75 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero de con)Tj
+/TT9 1 Tf
+5.1084 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(guración que se re)Tj
+/TT9 1 Tf
+7.3022 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eren al shell:)Tj
+/TT8 1 Tf
+8 0 0 8 133 216 Tm
+(unix$ egrep ’ˆshell ’ config)Tj
+0 -1.5 TD
+(shell /bin/sh)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 174 Tm
+[(Y)-250(también las que se re)]TJ
+/TT9 1 Tf
+9.3579 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eren a directorios:)Tj
+/TT8 1 Tf
+8 0 0 8 133 156 Tm
+(unix$)Tj
+0 -1.5 TD
+(unix$ egrep ’ˆ[a-z]+dir ’ config)Tj
+T*
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 66 Tm
+0.1183 Tw
+(Nótese que utilizar aquí ")Tj
+/TT8 1 Tf
+10.6558 0 TD
+0 Tw
+(dir)Tj
+/TT6 1 Tf
+1.8003 0 TD
+-0.0001 Tc
+0.1183 Tw
+[(")-368.3(como e)14.9(xpresión habría sido se)14.9(guramente un error)54.9(.)-368.3(Líneas que contengan)]TJ
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 194
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+[(algo como "/opt/bindir/ksh" habrían salido y no tienen por qué ser las que b)20(uscamos en este caso.)]TJ
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 333 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 389 0 0 0 0 0 778 
+0 0 0 556 0 722 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 556 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 500 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 23 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 120
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 0 0 0 
+500 500 0 0 0 0 0 500 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 0 444 278 500 0 278 0 0 278 722 500 500 
+500 0 389 389 278 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 24 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+0 0 500 500 500 500 0 0 0 0 278 0 0 0 0 0 
+0 722 667 667 722 611 0 0 0 333 0 0 611 889 722 722 
+556 722 667 556 0 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 25 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 241
+/Widths [600 0 0 0 600 0 0 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 0 600 600 600 0 0 0 0 0 600 
+0 600 0 0 0 600 0 0 600 0 0 0 600 600 0 600 
+0 0 0 600 0 0 0 0 0 0 600 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 600 600 600 600 600 0 600 600 600 600 0 600 0 0 0 
+0 0 0 0 0 0 0 0 600 0 0 0 0 0 0 0 
+0 0 600 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 26 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 27 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+28 0 obj
+<<
+/S /D
+>>
+endobj
+29 0 obj
+<<
+/Nums [0 28 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R]
+/Count 5
+/MediaBox [0 0 612 792]
+>>
+endobj
+30 0 obj
+<<
+/CreationDate (D:20160905151718+02'00')
+/ModDate (D:20160905151718+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+31 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 29 0 R
+>>
+endobj
+xref
+0 32
+0000000000 65535 f 
+0000023844 00000 n 
+0000000016 00000 n 
+0000004427 00000 n 
+0000021160 00000 n 
+0000021816 00000 n 
+0000022214 00000 n 
+0000022957 00000 n 
+0000023670 00000 n 
+0000020033 00000 n 
+0000024329 00000 n 
+0000023925 00000 n 
+0000004566 00000 n 
+0000014357 00000 n 
+0000024009 00000 n 
+0000014486 00000 n 
+0000016992 00000 n 
+0000024093 00000 n 
+0000017099 00000 n 
+0000019573 00000 n 
+0000024177 00000 n 
+0000019691 00000 n 
+0000019937 00000 n 
+0000020173 00000 n 
+0000020375 00000 n 
+0000020575 00000 n 
+0000020772 00000 n 
+0000020963 00000 n 
+0000024261 00000 n 
+0000024289 00000 n 
+0000024439 00000 n 
+0000024562 00000 n 
+trailer
+<<
+/Size 32
+/Root 31 0 R
+/Info 30 0 R
+/ID [<513ac313662ed097fd861c603abe832f><513ac313662ed097fd861c603abe832f>]
+>>
+startxref
+24632
+%%EOF

@@ -1,0 +1,2476 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4215
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.342 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Ficher)18(os)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+(1. Offsets)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0199 Tw
+[(Hay una pre)15(gunta que se)15(guramente te has hecho. ¿Cómo saben)]TJ
+/TT8 1 Tf
+25.6324 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.6703 0 TD
+(y)Tj
+/TT8 1 Tf
+0.7699 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2704 0 TD
+0.0198 Tw
+(en qué posición del )Tj
+/TT9 1 Tf
+8.0772 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+-40.9764 -1.2 TD
+(han de trabajar? Esto es, ¿En qué)Tj
+/TT4 1 Tf
+13.4941 0 TD
+[(of)18(fset)]TJ
+/TT6 1 Tf
+2.3985 0 TD
+(debe escribir)Tj
+/TT8 1 Tf
+5.3862 0 TD
+(write)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(?)-250(o)-250(¿Desde qué)]TJ
+/TT4 1 Tf
+6.3306 0 TD
+[(of)18(fset)]TJ
+/TT6 1 Tf
+2.3985 0 TD
+(debe leer)Tj
+/TT8 1 Tf
+3.8862 0 TD
+(read)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(?)Tj
+-39.2951 -2.4 TD
+0.0418 Tw
+(La respuesta procede de)Tj
+/TT8 1 Tf
+10.051 0 TD
+0 Tw
+(open)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0418 Tw
+[(.)-291.8(Cuando se abre un )]TJ
+/TT9 1 Tf
+8.3736 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0418 Tw
+(chero, el sistema mantiene la pista de en qué posición)Tj
+-21.3811 -1.2 TD
+0 Tw
+(del )Tj
+/TT9 1 Tf
+1.5819 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1102 Tw
+[(chero se está trabajando. Inicialmente este of)25(fset es cero. Cuando se escribe, se escribe en el of)25(fset)]TJ
+-2.138 -1.2 TD
+0.0632 Tw
+(para el )Tj
+/TT9 1 Tf
+3.0688 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0632 Tw
+(chero abierto y un efecto lateral de escribir)Tj
+/TT4 1 Tf
+17.8855 0 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.8132 0 TD
+0.0632 Tw
+[(bytes es que el of)25(fset aumenta en)]TJ
+/TT4 1 Tf
+13.8847 0 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.8132 0 TD
+0.0632 Tw
+(unidades. Igual)Tj
+-37.0215 -1.2 TD
+0.0043 Tw
+(sucede en)Tj
+/TT8 1 Tf
+4.1732 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0043 Tw
+[(.)-254.3(Cuando se lee, se lee desde el of)25(fset que UNIX mantiene para el )]TJ
+/TT9 1 Tf
+26.4693 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0043 Tw
+(chero abierto. Si se leen)Tj
+/TT4 1 Tf
+-33.599 -1.2 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.8416 0 TD
+0.0916 Tw
+[(bytes, el of)25(fset aumenta en)]TJ
+/TT4 1 Tf
+11.3734 0 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.5 0 TD
+0.0916 Tw
+[(.)-341.6(Dicho de otro modo, los )]TJ
+/TT9 1 Tf
+10.993 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0916 Tw
+(chero se leen y escriben)Tj
+/TT2 1 Tf
+10.2589 0 TD
+0 Tw
+(secuencialmente)Tj
+/TT6 1 Tf
+7.2841 0 TD
+(uti-)Tj
+-41.8071 -1.2 TD
+(lizando)Tj
+/TT8 1 Tf
+3.1998 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6568 0 TD
+(y)Tj
+/TT8 1 Tf
+0.7564 0 TD
+(write)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0063 Tw
+[(.)-256.4(S)0(i)-256.4(vuelv)15(es a mirar la salida de)]TJ
+/TT4 1 Tf
+12.7817 0 TD
+0 Tw
+(lsof)Tj
+/TT6 1 Tf
+1.7011 0 TD
+0.0063 Tw
+[(que mostramos anteriormente, v)15(erás que una de)]TJ
+-24.0963 -1.2 TD
+0 Tw
+[(las columnas indica cuál es el of)25(fset para cada descriptor)55(.)]TJ
+0 -2.4 TD
+(Por ejemplo, considera este programa:)Tj
+/TT8 1 Tf
+8 0 0 8 133 407.4 Tm
+(#include <stdlib.h>)Tj
+0 -1.5 TD
+(#include <fcntl.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+[(int fd,)-600(i, )1800(n;)]TJ
+0 -3 TD
+0 Tw
+(fd = open\("afile", O_WRONLY|O_CREAT, 0644\);)Tj
+0 -1.5 TD
+(if \(fd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "afile"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(for \(i = 1; i < argc; i++\) {)Tj
+2.4 -1.5 TD
+[(n)-600(=)-600(strlen\(argv[i]\);)]TJ
+T*
+(if \(write\(fd, argv[i], n\) != n\) {)Tj
+2.4 -1.5 TD
+(close\(fd\);)Tj
+T*
+(err\(1, "write"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(close\(fd\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "close"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 65.4 Tm
+0.0454 Tw
+[(El programa escribe sus ar)18(gumentos en el )]TJ
+/TT9 1 Tf
+17.2109 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT8 1 Tf
+2.5161 0 TD
+(afile)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0454 Tw
+[(.)-295.4(L)0(a)-295.4(llamada a)]TJ
+/TT8 1 Tf
+6.0952 0 TD
+0 Tw
+(open)Tj
+/TT6 1 Tf
+2.6958 0 TD
+0.0454 Tw
+(abre el )Tj
+/TT9 1 Tf
+3.0332 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT8 1 Tf
+2.5162 0 TD
+(afile)Tj
+/TT6 1 Tf
+3.296 0 TD
+(para)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 5840
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.0463 Tw
+(escribir en el \()Tj
+/TT8 1 Tf
+5.886 0 TD
+0 Tw
+(O_WRONLY)Tj
+/TT6 1 Tf
+4.8008 0 TD
+0.0463 Tw
+[(\). Como v)15(erás, el se)15(gundo ar)18(gumento son )]TJ
+/TT9 1 Tf
+17.134 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0463 Tw
+(ags en un único entero. Se utiliza un)Tj
+/TT4 1 Tf
+-28.3769 -1.2 TD
+0 Tw
+(or)Tj
+/TT6 1 Tf
+1.2688 0 TD
+0.1296 Tw
+[(para acti)25(v)25(a)0(r)-379.6(los bits que se desean en el entero.)]TJ
+/TT8 1 Tf
+20.2104 0 TD
+0 Tw
+(O_CREAT)Tj
+/TT6 1 Tf
+4.5803 0 TD
+0.1297 Tw
+[(indica que si no e)15(xiste queremos crear el)]TJ
+/TT9 1 Tf
+-26.0594 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0028 Tw
+(chero. En dicho caso, cuando el )Tj
+/TT9 1 Tf
+12.9563 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0027 Tw
+[(chero no e)15(xiste y se crea, el tercer ar)18(gumento indica qué permisos quere-)]TJ
+-14.0686 -1.2 TD
+0 Tw
+[(mos para el nue)25(v)20(o)20( )]TJ
+/TT9 1 Tf
+7.5082 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-8.0644 -2.4 TD
+[(V)111(amos a ejecutarlo por primera v)15(ez tras comprobar que)]TJ
+/TT8 1 Tf
+22.3921 0 TD
+(afile)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(no e)15(xiste.)]TJ
+/TT8 1 Tf
+8 0 0 8 133 630 Tm
+(unix$ ls -l afile)Tj
+0 -1.5 TD
+(ls: afile: No such file or directory)Tj
+T*
+(unix$ writef aa bb cc)Tj
+/TT6 1 Tf
+10 0 0 10 72 588 Tm
+(Si inspeccionamos)Tj
+/TT8 1 Tf
+7.7212 0 TD
+(afile)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(v)15(eremos que tiene 9 bytes)]TJ
+/TT8 1 Tf
+8 0 0 8 133 570 Tm
+(unix$ ls -l afile)Tj
+0 -1.5 TD
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 9)-600(Aug )600(20 )600(15:49 )600(afile)]TJ
+/TT6 1 Tf
+10 0 0 10 72 540 Tm
+0 Tw
+[(y)-250(que su contenido son los ar)18(gumentos de)]TJ
+/TT8 1 Tf
+16.9239 0 TD
+(writef)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(\(con un )Tj
+/TT9 1 Tf
+3.2769 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(n de línea añadido tras cada uno\):)Tj
+/TT8 1 Tf
+8 0 0 8 133 522 Tm
+(unix$ cat afile)Tj
+0 -1.5 TD
+(aa)Tj
+T*
+(bb)Tj
+T*
+(cc)Tj
+/TT6 1 Tf
+10 0 0 10 72 468 Tm
+(Podemos utilizar)Tj
+/TT4 1 Tf
+6.999 0 TD
+(xd\(1\))Tj
+/TT6 1 Tf
+2.3599 0 TD
+[(para v)15(er los bytes y caracteres que contiene el )]TJ
+/TT9 1 Tf
+18.5592 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+/TT8 1 Tf
+8 0 0 8 133 450 Tm
+(unix$ xd -b -c afile)Tj
+0 -1.5 TD
+[(0000000 )-600(61)-600(61 0a 62 62 0a 63 63 0a)]TJ
+3.6 -1.5 TD
+0.6 Tw
+[(0)-1800(a)-1200(a)-600(\\)0(n)-1200(b)-1200(b)-600(\\n c c)-600(\\)0(n)]TJ
+-3.6 -1.5 TD
+0 Tw
+(0000009)Tj
+/TT6 1 Tf
+10 0 0 10 72 384 Tm
+0.0392 Tw
+[(La primera columna indica el of)25(fset en que aparecen los bytes que)]TJ
+/TT4 1 Tf
+27.157 0 TD
+0 Tw
+(xd)Tj
+/TT6 1 Tf
+1.2331 0 TD
+0.0393 Tw
+(muestra a continuación. Los )Tj
+/TT9 1 Tf
+11.6816 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0393 Tw
+(nes de)Tj
+-40.628 -1.2 TD
+0.0847 Tw
+[(línea son bytes con el v)25(alor)]TJ
+/TT8 1 Tf
+11.6468 0 TD
+0 Tw
+(0xa)Tj
+/TT6 1 Tf
+2.1349 0 TD
+(\()Tj
+/TT8 1 Tf
+0.333 0 TD
+(10)Tj
+/TT6 1 Tf
+1.5348 0 TD
+0.0846 Tw
+[(en decimal\). Como v)15(erás, hemos hecho seis writes y se han escrito)]TJ
+-15.6495 -1.2 TD
+0.1796 Tw
+(secuencialmente en el )Tj
+/TT9 1 Tf
+9.5617 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1796 Tw
+(chero. Esto quiere decir que el primer)Tj
+/TT8 1 Tf
+16.5839 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.4301 0 TD
+0.1796 Tw
+(ha escrito en la posición)Tj
+/TT8 1 Tf
+10.8116 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+1.0297 0 TD
+(del)Tj
+/TT9 1 Tf
+-41.9731 -1.2 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0392 Tw
+[(chero: ha utilizado el of)25(fset)]TJ
+/TT8 1 Tf
+11.3608 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(.)-289.1(E)0(l)-289.1(s)0(e)15(gundo)]TJ
+/TT8 1 Tf
+5.324 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2896 0 TD
+0.0391 Tw
+(ha escrito un ")Tj
+/TT8 1 Tf
+5.8849 0 TD
+0 Tw
+(\\n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0391 Tw
+[(")-289.1(tras escribir el primer ar)18(gumento, y)]TJ
+-28.2157 -1.2 TD
+0.0042 Tw
+[(ha escrito a partir del of)25(fset)]TJ
+/TT8 1 Tf
+11.2175 0 TD
+0 Tw
+(2)Tj
+/TT6 1 Tf
+0.8543 0 TD
+0.0042 Tw
+(en el )Tj
+/TT9 1 Tf
+2.1739 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0042 Tw
+(chero. El tercer)Tj
+/TT8 1 Tf
+6.3974 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.2547 0 TD
+0.0042 Tw
+[(ha escrito el se)15(gundo ar)18(gumento en la posición)]TJ
+/TT8 1 Tf
+-24.4539 -1.2 TD
+0 Tw
+(3)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(.)-250(Y)-250(así sucesi)25(v)25(amente.)]TJ
+-0.6001 -2.4 TD
+0.0281 Tw
+(Por cierto, el tamaño del )Tj
+/TT9 1 Tf
+10.1927 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0281 Tw
+(chero es)Tj
+/TT8 1 Tf
+3.6099 0 TD
+0 Tw
+(9)Tj
+/TT6 1 Tf
+0.8782 0 TD
+0.028 Tw
+[(puesto que el mayor of)25(fset escrito ha sido el)]TJ
+/TT8 1 Tf
+18.0834 0 TD
+0 Tw
+(8)Tj
+/TT6 1 Tf
+0.8781 0 TD
+0.028 Tw
+[(y)-278(empezamos a contar)]TJ
+-34.1985 -1.2 TD
+0 Tw
+(en)Tj
+/TT8 1 Tf
+1.1976 0 TD
+(0)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0038 Tw
+[(.)-253.8(Lue)15(go el )]TJ
+/TT9 1 Tf
+4.2728 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0038 Tw
+(chero tiene)Tj
+/TT8 1 Tf
+4.6717 0 TD
+0 Tw
+(9)Tj
+/TT6 1 Tf
+0.8539 0 TD
+0.0039 Tw
+(bytes escritos en total. Más allá no hemos escrito nunca. Dicho de otro modo,)Tj
+-12.1522 -1.2 TD
+0 Tw
+(el tamaño del )Tj
+/TT9 1 Tf
+5.6367 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero está determinado por hasta dónde hemos escrito en el )Tj
+/TT9 1 Tf
+24.0469 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-30.7959 -2.4 TD
+[(Si ejecutamos el programa una se)15(gunda v)15(ez, v)15(eremos mejor qué supone utilizar un of)25(fset.)]TJ
+/TT8 1 Tf
+8 0 0 8 133 234 Tm
+(unix$ writef x y)Tj
+0 -1.5 TD
+(unix$ ls -l afile)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 9)-600(Aug )600(20 )600(15:49 )600(afile)]TJ
+T*
+0 Tw
+(unix$ cat afile)Tj
+T*
+(x)Tj
+T*
+(y)Tj
+T*
+(b)Tj
+T*
+(cc)Tj
+T*
+(unix$ xd -b -c afile)Tj
+T*
+[(0000000 )-600(78)-600(0a 79 0a 62 0a 63 63 0a)]TJ
+3.6 -1.5 TD
+0.6 Tw
+[(0)-1800(x)-600(\\n y)-600(\\n b)-600(\\n c c)-600(\\)0(n)]TJ
+-3.6 -1.5 TD
+0 Tw
+(0000009)Tj
+/TT6 1 Tf
+10 0 0 10 72 72 Tm
+0.1617 Tw
+[(Lo primero que v)15(emos es que ¡el )]TJ
+/TT9 1 Tf
+14.5295 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1617 Tw
+(chero sigue teniendo 9 bytes!. Dicho de otro modo, aunque hemos)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 6851
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+0.0087 Tw
+[(escrito más v)15(eces, el tamaño no ha aumentado. El primer ar)18(gumento se ha escrito al principio, lo que quiere)]TJ
+0 -1.2 TD
+0.007 Tw
+(decir que el primer)Tj
+/TT8 1 Tf
+7.8576 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.2575 0 TD
+0.007 Tw
+[(ha utilizado un of)25(fset)]TJ
+/TT8 1 Tf
+8.7227 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.8571 0 TD
+0.0069 Tw
+[(y)-257(h)0(a)-256.9(escrito un byte. El se)15(gundo)]TJ
+/TT8 1 Tf
+13.0861 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.2574 0 TD
+0.0069 Tw
+(ha escrito el )Tj
+/TT9 1 Tf
+5.1018 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(n)Tj
+-42.6963 -1.2 TD
+[(de línea en el of)25(fset)]TJ
+/TT8 1 Tf
+8.0546 0 TD
+(1)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(,)-250(dado que el primer write escribió un byte.)-500(Etcétera.)]TJ
+-8.6547 -2.4 TD
+0.2159 Tw
+[(Otro detalle curioso es que después del te)15(xto escrito \(")]TJ
+/TT8 1 Tf
+23.6908 0 TD
+0 Tw
+(x\\ny\\n)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.2159 Tw
+[("\) puedes v)15(er que el )]TJ
+/TT9 1 Tf
+9.2752 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.216 Tw
+(chero contiene)Tj
+-37.1228 -1.2 TD
+0 Tw
+(")Tj
+/TT8 1 Tf
+0.4082 0 TD
+(b\\ncc\\n)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.0188 Tw
+[(". Lo único que sucede es que esos bytes se escribieron la v)15(ez anterior que ejecutamos)]TJ
+/TT8 1 Tf
+34.9882 0 TD
+0 Tw
+(writef)Tj
+/TT6 1 Tf
+-39.5971 -1.2 TD
+0.029 Tw
+[(y)-279(esta v)15(ez no los hemos vuelto a escribir)40(,)-279(lue)15(go tienen el mismo v)25(alor que tenían. Recuerda que)]TJ
+/TT8 1 Tf
+38.8596 0 TD
+0 Tw
+(write)Tj
+/TT2 1 Tf
+3.2795 0 TD
+(no)Tj
+/TT6 1 Tf
+-42.1391 -1.2 TD
+(inserta,)Tj
+/TT8 1 Tf
+3.1655 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(\(re\)escribe.)Tj
+-6.416 -2.4 TD
+0.0489 Tw
+[(Y)-298.9(una cosa más. Ahora el )]TJ
+/TT9 1 Tf
+10.8178 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0489 Tw
+(chero tiene 4 líneas, pero no obstante su tamaño sigue siendo 9 bytes. Aunque)Tj
+-11.374 -1.2 TD
+-0.0003 Tc
+0.063 Tw
+[(tenga)-312.9(más líneas, el )]TJ
+/TT9 1 Tf
+8.3263 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.0628 Tw
+[(chero no es mas grande que antes. Que tenga)-312.8(más líneas se debe simplemente a que)]TJ
+-8.8824 -1.2 TD
+0 Tc
+0 Tw
+(hay más ")Tj
+/TT8 1 Tf
+3.9629 0 TD
+(\\n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(")-250(escritos en el )]TJ
+/TT9 1 Tf
+6.1284 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-11.8477 -2.4 TD
+0.0421 Tw
+[(P)15(ara v)15(er estas cosas te puede resultar cómodo utilizar)]TJ
+/TT4 1 Tf
+21.9241 0 TD
+0 Tw
+(wc\(1\))Tj
+/TT6 1 Tf
+2.2769 0 TD
+0.042 Tw
+[(,)-292.1(que cuenta líneas, palabras y caracteres en un)]TJ
+/TT9 1 Tf
+-24.201 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero, o en la entrada si no indicas )Tj
+/TT9 1 Tf
+14.0781 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero alguno.)Tj
+/TT8 1 Tf
+8 0 0 8 133 522 Tm
+(unix$ wc afile)Tj
+4.2 -1.5 TD
+[(4)-4200(4)-4200(9)-600(afile)]TJ
+-4.2 -1.5 TD
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 468 Tm
+[(¿Dónde está el of)25(fset? La )]TJ
+/TT9 1 Tf
+10.3866 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gura 1 muestra qué aspecto tiene la estructura de datos que usa UNIX.)Tj
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+181.8 421.2 m
+181.8 405.302 168.898 392.4 153 392.4 c
+137.102 392.4 124.2 405.302 124.2 421.2 c
+124.2 437.098 137.102 450 153 450 c
+168.898 450 181.8 437.098 181.8 421.2 c
+s
+BT
+10 0 0 10 137.17 419 Tm
+(Proceso)Tj
+ET
+153 356.4 m
+151.2 363.6 l
+154.8 363.6 l
+f
+0.1 w 
+153 356.4 m
+151.2 363.6 l
+154.8 363.6 l
+s
+0.4 w 
+153.03 392.43 m
+153.03 363.63 l
+S
+BT
+10 0 0 10 159 378.2 Tm
+(Descriptores)Tj
+0 -1.2 TD
+(de )Tj
+/TT9 1 Tf
+1.1938 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT8 1 Tf
+-6.25 -1.92 TD
+(0)Tj
+ET
+124.2 342 72 14.4 re
+S
+BT
+10 0 0 10 114 332.6 Tm
+(1)Tj
+ET
+124.2 327.6 72 14.4 re
+S
+BT
+10 0 0 10 114 318.2 Tm
+(2)Tj
+ET
+124.2 313.2 72 14.4 re
+S
+BT
+10 0 0 10 114 303.8 Tm
+(3)Tj
+ET
+124.2 298.8 72 14.4 re
+S
+BT
+10 0 0 10 151.2 289.4 Tm
+(...)Tj
+-3.72 -1.44 TD
+(n)Tj
+ET
+124.2 270 72 14.4 re
+S
+232.2 306 m
+225 304.2 l
+225 307.8 l
+f
+0.1 w 
+232.2 306 m
+225 304.2 l
+225 307.8 l
+s
+0.4 w 
+160.23 306.03 m
+225.03 306.03 l
+232.2 284.4 108 43.2 re
+S
+BT
+10 0 0 10 239.4 318.2 Tm
+(offset: 4)Tj
+T*
+(mode: O_WRONLY)Tj
+T*
+(file:)Tj
+ET
+282.6 219.6 m
+280.8 226.8 l
+284.4 226.8 l
+f
+0.1 w 
+282.6 219.6 m
+280.8 226.8 l
+284.4 226.8 l
+s
+0.4 w 
+282.6 291.6 m
+300.6 291.6 l
+312.6 291.6 318.6 285.6 318.6 273.6 c
+318.6 261.6 312.6 255.6 300.6 255.6 c
+288.6 255.6 282.6 249.72 282.6 237.96 c
+282.6 220.32 l
+282.6 205.2 14.4 14.4 re
+S
+BT
+/TT6 1 Tf
+10 0 0 10 287.3 210.2 Tm
+(x)Tj
+ET
+297 205.2 14.4 14.4 re
+S
+BT
+10 0 0 10 300.31 210.2 Tm
+(\\n)Tj
+ET
+311.4 205.2 14.4 14.4 re
+S
+BT
+10 0 0 10 316.1 210.2 Tm
+(y)Tj
+ET
+325.8 205.2 14.4 14.4 re
+S
+BT
+10 0 0 10 329.11 210.2 Tm
+(\\n)Tj
+ET
+340.2 205.2 72 14.4 re
+S
+BT
+10 0 0 10 372.45 210.2 Tm
+[(...)-5064(a)]TJ
+/TT9 1 Tf
+6.2578 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(le)Tj
+ET
+340.2 219.6 m
+341.784 226.872 l
+345.024 225.288 l
+f
+0.1 w 
+340.2 219.6 m
+341.784 226.872 l
+345.024 225.288 l
+s
+0.4 w 
+318.6 320.4 m
+336.6 320.4 l
+348.6 320.4 360.6 320.4 372.6 320.4 c
+384.6 320.4 382.248 303.708 365.544 270.324 c
+340.488 220.248 l
+S
+BT
+10 0 0 10 237.79 332.6 Tm
+(Fichero abierto)Tj
+/TT2 1 Tf
+-14.079 -15.04 TD
+0.185 Tw
+(Figura 1:)Tj
+/TT4 1 Tf
+4.5917 0 TD
+[(El of)18(fset par)15(a)-435(lectur)15(as y escritur)15(as se guar)37(da fuer)15(a)-435.1(del descriptor de )]TJ
+/TT10 1 Tf
+29.8249 0 TD
+0 Tw
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+0.1851 Tw
+[(c)15(her)45(o, en una)]TJ
+-34.9166 -1.2 TD
+0 Tw
+[(entr)15(ada en la tabla de )]TJ
+/TT10 1 Tf
+9.067 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(c)15(her)45(os abiertos.)]TJ
+/TT6 1 Tf
+-12.067 -2.4 TD
+0.1069 Tw
+(En cada descriptor de )Tj
+/TT9 1 Tf
+9.3124 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1069 Tw
+(chero hay un puntero hacia un record \(como siempre\). En dicho record, llamado)Tj
+/TT10 1 Tf
+-9.8685 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(c)15(her)45(o)-250(abierto)]TJ
+/TT6 1 Tf
+5.6055 0 TD
+(por UNIX y almacenado en una)Tj
+/TT4 1 Tf
+12.9951 0 TD
+(tabla de )Tj
+/TT10 1 Tf
+3.4995 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(c)15(her)45(os abiertos)]TJ
+/TT6 1 Tf
+6.3838 0 TD
+(se guarda:)Tj
+-26.984 -1.56 TD
+[(•)-2150(E)0(l)-250(o)0(f)25(fset en que hay que leer/escribir)55(.)]TJ
+T*
+[(•)-2150(E)0(l)-250(modo en que se abrió el )]TJ
+/TT9 1 Tf
+13.4137 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero \(lectura, escritura, o lectura/escritura\).)Tj
+-13.9698 -1.56 TD
+[(•)-2150(E)0(l)-250(puntero hacia la estructura de datos que representa el )]TJ
+/TT9 1 Tf
+25.0455 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero en UNIX.)Tj
+-28.1017 -2.4 TD
+0.0479 Tw
+(En la )Tj
+/TT9 1 Tf
+2.4283 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0479 Tw
+[(gura se v)15(e)-297.9(qué v)25(alor tenía el contenido de)]TJ
+/TT8 1 Tf
+17.2457 0 TD
+0 Tw
+(afile)Tj
+/TT6 1 Tf
+3.2985 0 TD
+0.298 Tc
+[(ye)298(l)]TJ
+/TT8 1 Tf
+1.8177 0 TD
+0 Tc
+(offset)Tj
+/TT6 1 Tf
+3.8986 0 TD
+(del )Tj
+/TT9 1 Tf
+1.5197 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.048 Tw
+(chero abierto justo al )Tj
+/TT9 1 Tf
+8.8556 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.048 Tw
+(nal de)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+/TT10 17 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 6632
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+[(ejecutar por se)15(gunda v)15(e)0(z)]TJ
+/TT8 1 Tf
+10.1316 0 TD
+(afile)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-250(antes de llamar a)]TJ
+/TT8 1 Tf
+7.4966 0 TD
+(close)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(.)Tj
+-23.6292 -2.4 TD
+0.0007 Tw
+[(Si queremos que cada v)15(ez que ejecutemos)]TJ
+/TT8 1 Tf
+17.0666 0 TD
+0 Tw
+(writef)Tj
+/TT6 1 Tf
+3.8513 0 TD
+(el )Tj
+/TT9 1 Tf
+0.9723 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT8 1 Tf
+2.4713 0 TD
+(afile)Tj
+/TT6 1 Tf
+3.2511 0 TD
+0.0006 Tw
+(quede justo con lo que hemos escrito,)Tj
+-28.1687 -1.2 TD
+0.1119 Tw
+(la solución es eliminar el contenido de)Tj
+/TT8 1 Tf
+16.4176 0 TD
+0 Tw
+(afile)Tj
+/TT6 1 Tf
+3.3624 0 TD
+0.1119 Tw
+(cuando el )Tj
+/TT9 1 Tf
+4.3332 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1119 Tw
+[(chero ya e)15(xiste, durante)]TJ
+/TT8 1 Tf
+10.1784 0 TD
+0 Tw
+(open)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.112 Tw
+[(.)-362(Esto es, si el)]TJ
+/TT9 1 Tf
+-37.2481 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0738 Tw
+[(chero no e)15(xiste lo creamos y si e)15(xiste lo)]TJ
+/TT4 1 Tf
+16.8248 0 TD
+0 Tw
+(truncamos)Tj
+/TT6 1 Tf
+4.546 0 TD
+0.0738 Tw
+[(a)-323.8(0-bytes. El )]TJ
+/TT9 1 Tf
+5.4978 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT8 1 Tf
+1.2677 0 TD
+(O_TRUNC)Tj
+/TT6 1 Tf
+4.5245 0 TD
+(de)Tj
+/TT8 1 Tf
+1.2676 0 TD
+(open)Tj
+/TT6 1 Tf
+2.7242 0 TD
+0.0738 Tw
+(consigue este)Tj
+-37.7649 -1.2 TD
+0 Tw
+(efecto. Basta utilizar)Tj
+/TT8 1 Tf
+8 0 0 8 133 630 Tm
+(fd = open\("afile", O_WRONLY|O_TRUNC|O_CREAT, 0644\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 612 Tm
+-0.0002 Tc
+0.0463 Tw
+(en lugar de la llamada a)Tj
+/TT8 1 Tf
+10.0447 0 TD
+0 Tc
+0 Tw
+(open)Tj
+/TT6 1 Tf
+2.6966 0 TD
+0.0462 Tw
+[(que hacíamos antes. La próxima v)15(ez que ejecutemos)]TJ
+/TT8 1 Tf
+21.5963 0 TD
+0 Tw
+(writef)Tj
+/TT6 1 Tf
+3.8968 0 TD
+0.0462 Tw
+(no quedarán)Tj
+-38.2343 -1.2 TD
+0.0248 Tw
+(restos del contenido que)Tj
+/TT8 1 Tf
+10.0411 0 TD
+0 Tw
+(afile)Tj
+/TT6 1 Tf
+3.2752 0 TD
+0.0247 Tw
+[(pudiera tener antes si es que e)15(xistía. Aunque claro, si has leído)]TJ
+/TT4 1 Tf
+25.5514 0 TD
+0 Tw
+(open\(2\))Tj
+/TT6 1 Tf
+3.3846 0 TD
+(ya)Tj
+-42.2523 -1.2 TD
+(lo sabías.)Tj
+0 -2.4 TD
+0.0638 Tw
+(Existe otro )Tj
+/TT9 1 Tf
+4.738 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0638 Tw
+(ag que podemos utilizar con)Tj
+/TT4 1 Tf
+11.8434 0 TD
+0 Tw
+(open\(2\))Tj
+/TT6 1 Tf
+3.4237 0 TD
+0.0638 Tw
+[(que afecta al of)25(fset que utiliza)]TJ
+/TT8 1 Tf
+12.6294 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0639 Tw
+[(.)-313.9(S)0(e)-313.9(trata del )]TJ
+/TT9 1 Tf
+5.5036 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT8 1 Tf
+-42.2509 -1.2 TD
+(O_APPEND)Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(.)-411.6(S)0(i)-411.6(indicamos)]TJ
+/TT8 1 Tf
+6.4291 0 TD
+(O_APPEND)Tj
+/TT6 1 Tf
+5.2124 0 TD
+(en)Tj
+/TT8 1 Tf
+1.3554 0 TD
+(open)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1615 Tw
+[(,)-411.5(las llamadas a)]TJ
+/TT8 1 Tf
+7.0049 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.412 0 TD
+0.1615 Tw
+[(ignoran el of)25(fset del )]TJ
+/TT9 1 Tf
+8.8959 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1615 Tw
+(chero y)Tj
+-40.0671 -1.2 TD
+0.0362 Tw
+(escriben siempre al )Tj
+/TT9 1 Tf
+8.0774 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0362 Tw
+(nal del mismo. En realidad, se escribe justo en la posición indicada por el tamaño del)Tj
+/TT9 1 Tf
+-8.6335 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0919 Tw
+[(chero. )-250(Pero)-341.9(cuidado aquí si el )]TJ
+/TT9 1 Tf
+12.881 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0919 Tw
+(chero es un )Tj
+/TT9 1 Tf
+5.0794 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0919 Tw
+(chero compartido en red: cada UNIX que tiene abierto el)Tj
+/TT9 1 Tf
+-19.6289 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.098 Tw
+(chero podría tener su propia idea del tamaño del mismo \(por ejemplo si un UNIX acaba justo de hacer)Tj
+-0.5562 -1.2 TD
+0 Tw
+(crecer el )Tj
+/TT9 1 Tf
+3.6631 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero pero otro no se ha dado cuenta toda)20(vía\).)]TJ
+/TT2 1 Tf
+-4.2192 -3.6 TD
+0.25 Tw
+[(2. Ajustando)-250(el )250(offset)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0941 Tw
+[(P)15(ara e)25(vitar errores utilizando)]TJ
+/TT8 1 Tf
+12.1645 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.7445 0 TD
+(y)Tj
+/TT8 1 Tf
+0.8441 0 TD
+(write)Tj
+/TT6 1 Tf
+3.3446 0 TD
+0.094 Tw
+(basta con que pienses que UNIX es muy obediente y hace)Tj
+-19.0977 -1.2 TD
+0.0431 Tw
+(justo lo que se supone que cada llama hace. No hay magia. Si recuerdas lo que hemos visto, podrás enten-)Tj
+T*
+0 Tw
+[(der lo que ocurre. ¡V)111(amos a comprobarlo!)]TJ
+0 -2.4 TD
+0.079 Tw
+(Hay otra llamada,)Tj
+/TT4 1 Tf
+7.6227 0 TD
+0 Tw
+(lseek\(2\))Tj
+/TT6 1 Tf
+3.1645 0 TD
+0.079 Tw
+[(,)-329(que permite cambiar el of)25(fset de un descriptor de )]TJ
+/TT9 1 Tf
+21.118 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.079 Tw
+(chero. Bueno, en realidad,)Tj
+-32.4615 -1.2 TD
+0.0502 Tw
+(queremos decir ")Tj
+/TT4 1 Tf
+6.8948 0 TD
+[(el of)18(fset de un )]TJ
+/TT10 1 Tf
+6.0152 0 TD
+0 Tw
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+0.0503 Tw
+[(c)15(her)45(o)-300.3(abierto al que apunta un descriptor)]TJ
+/TT6 1 Tf
+17.0177 0 TD
+(". Se le suministra el descriptor)Tj
+-30.4277 -1.2 TD
+0 Tw
+(de )Tj
+/TT9 1 Tf
+1.1938 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero, cuantos bytes queremos mo)15(v)15(e)0(r)-250(e)0(l)-250(o)0(f)25(fset y desde donde contamos. Por ejemplo,)]TJ
+0.75 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(lseek\(fd, 10, SEEK_SET\))Tj
+/TT9 1 Tf
+14.0522 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(ja el of)25(fset a 10 en)]TJ
+/TT8 1 Tf
+7.5829 0 TD
+(fd)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-25.8916 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(lseek\(fd, 10, SEEK_CUR\))Tj
+/TT6 1 Tf
+14.0522 0 TD
+[(añade 10 al of)25(fset de)]TJ
+/TT8 1 Tf
+8.4989 0 TD
+(fd)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-26.2515 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.142 Tw
+(lseek\(fd, 10, SEEK_END\))Tj
+/TT9 1 Tf
+14.4782 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1419 Tw
+[(ja el of)25(fset 10 bytes contando desde el )]TJ
+/TT9 1 Tf
+16.6053 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1419 Tw
+(nal del )Tj
+/TT9 1 Tf
+3.2272 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+(chero)Tj
+-35.9793 -1.2 TD
+(hacia atrás en)Tj
+/TT8 1 Tf
+5.6909 0 TD
+(fd)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-11.8911 -1.2 TD
+0.1465 Tw
+(Las constantes)Tj
+/TT8 1 Tf
+6.4024 0 TD
+0 Tw
+(SEEK_SET)Tj
+/TT6 1 Tf
+4.8008 0 TD
+(,)Tj
+/TT8 1 Tf
+0.6465 0 TD
+(SEEK_CUR)Tj
+/TT6 1 Tf
+5.1973 0 TD
+(y)Tj
+/TT8 1 Tf
+0.8965 0 TD
+(SEEK_END)Tj
+/TT6 1 Tf
+5.1973 0 TD
+0.1465 Tw
+(son simplemente)Tj
+/TT8 1 Tf
+7.292 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(,)Tj
+/TT8 1 Tf
+0.6465 0 TD
+(1)Tj
+/TT6 1 Tf
+0.9966 0 TD
+(y)Tj
+/TT8 1 Tf
+0.8966 0 TD
+(2)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1466 Tw
+[(.)-396.6(D)0(e)-396.6(hecho, dado que)]TJ
+-34.1726 -1.2 TD
+0 Tw
+[(desde el comienzo de UNIX han tenido esos v)25(alores, es muy poco probable que cambien nunca de v)25(alor)55(.)]TJ
+0 -2.4 TD
+(Entendido esto, fíjate en este programa:)Tj
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+/TT10 17 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+22 0 obj
+<<
+/Length 3263
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(#include <stdlib.h>)Tj
+0 -1.5 TD
+(#include <fcntl.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+(int fd;)Tj
+0 -3 TD
+0 Tw
+(fd = open\("afile", O_WRONLY|O_TRUNC|O_CREAT\);)Tj
+0 -1.5 TD
+(if \(fd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "open: afile"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(lseek\(fd, 32, 0\);)Tj
+T*
+(if \(write\(fd, "xx\\n", 3\) != 3\) {)Tj
+2.4 -1.5 TD
+(close\(fd\);)Tj
+T*
+(err\(1, "write"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(close\(fd\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "close"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 402 Tm
+[(Ejecutándolo podemos v)15(er lo que sucede con el nue)25(v)20(o)]TJ
+/TT8 1 Tf
+21.9053 0 TD
+(afile)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(en este caso.)Tj
+/TT8 1 Tf
+8 0 0 8 133 384 Tm
+(unix$ seekwrite)Tj
+0 -1.5 TD
+(unix$ ls -l afile)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 35)-600(Aug )600(20 )600(16:32 )600(afile)]TJ
+T*
+0 Tw
+(unix$ cat afile)Tj
+T*
+(xx)Tj
+T*
+(unix$ xd -b -c afile)Tj
+T*
+[(0000000 )-600(00)-600(00 00 00 00 00 00 00 00 00 00 00 00 00 00 00)]TJ
+3.6 -1.5 TD
+0.6 Tc
+[(0)-600(0)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(00)600(0)]TJ
+-3.6 -1.5 TD
+0 Tc
+[(0000010 )-600(00)-600(00 00 00 00 00 00 00 00 00 00 00 00 00 00 00)]TJ
+3 -1.5 TD
+[(10 )-600(00)-600(00 00 00 00 00 00 00 00 00 00 00 00 00 00 00)]TJ
+-3 -1.5 TD
+0.6 Tw
+[(0000020 78)-600(78 )600(0a)]TJ
+3 -1.5 TD
+1.2 Tw
+[(20 x)-1200(x)-600(\\n)]TJ
+-3 -1.5 TD
+0 Tw
+(0000023)Tj
+/TT6 1 Tf
+10 0 0 10 72 222 Tm
+0.2409 Tw
+(¡Curioso!, ¿No? Resulta que)Tj
+/TT4 1 Tf
+12.5998 0 TD
+0 Tw
+(ls)Tj
+/TT6 1 Tf
+1.1578 0 TD
+0.2408 Tw
+(dice que el )Tj
+/TT9 1 Tf
+5.3035 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.2408 Tw
+(chero tiene 35 bytes. Pero sólo hemos escrito 3 bytes.)Tj
+-19.6172 -1.2 TD
+0 Tw
+[(V)111(eamos...)]TJ
+2.5 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(lseek)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(ha cambiado el of)25(fset a 32, contando desde el comienzo del )]TJ
+/TT9 1 Tf
+24.0214 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-30.3281 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(ha escrito tres bytes en dicho of)25(fset.)]TJ
+-8.2506 -1.2 TD
+0.1167 Tw
+[(Lue)15(go en total, el byte más alto que hemos escrito es el 34 \(contando desde 0\), lo que quiere decir que)]TJ
+T*
+0.1166 Tw
+(mirando los 35 primeros bytes tenemos el contenido del )Tj
+/TT9 1 Tf
+23.6837 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1166 Tw
+[(chero que hemos escrito alguna v)15(ez. Además,)]TJ
+-24.2398 -1.2 TD
+0 Tw
+[(puedes v)15(er que los bytes que no hemos escrito nunca están a cero. Eso es cortesía de UNIX.)]TJ
+0 -2.4 TD
+0.0763 Tw
+(El otro detalle curioso es que cuando hemos hecho un)Tj
+/TT4 1 Tf
+22.5345 0 TD
+0 Tw
+(cat)Tj
+/TT6 1 Tf
+1.548 0 TD
+(del )Tj
+/TT9 1 Tf
+1.548 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0763 Tw
+(chero sólo hemos visto una línea con)Tj
+/TT8 1 Tf
+15.5586 0 TD
+0 Tw
+(xx)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+-42.9454 -1.2 TD
+[(que era lo que cabría esperar)55(.)-250(Pero en realidad, sí que)]TJ
+/TT8 1 Tf
+21.5182 0 TD
+(cat)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(ha escrito un total de 35 bytes en su salida:)Tj
+ET
+endstream
+endobj
+23 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+25 0 obj
+<<
+/Length 3253
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ cat afile >/tmp/out)Tj
+0 -1.5 TD
+(unix$ ls -l /tmp/out)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo wheel 35)-600(Aug )600(20 )600(16:37 )600(/tmp/out)]TJ
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 642 Tm
+0.019 Tw
+(Lo que ocurre es que cuando)Tj
+/TT4 1 Tf
+11.887 0 TD
+0 Tw
+(cat)Tj
+/TT6 1 Tf
+1.4907 0 TD
+0.019 Tw
+[(escribe un byte a cero en su salida estándar)40(,)-269(y)-269(esta es el terminal, el termi-)]TJ
+-13.3776 -1.2 TD
+0.1157 Tw
+[(nal no sabe cómo mostrar dicho byte \(¿Cómo dib)20(ujar un símbolo para el byte nulo?\) y no lo escribe en)]TJ
+T*
+0.109 Tw
+(absoluto. Es normal,)Tj
+/TT8 1 Tf
+8.7982 0 TD
+0 Tw
+(/dev/tty)Tj
+/TT6 1 Tf
+5.1598 0 TD
+0.109 Tw
+[(sólo espera que escribas te)15(xto en el teclado y que muestres te)15(xto en la)]TJ
+-13.958 -1.2 TD
+0 Tw
+(pantalla. No espera efectos especiales.)Tj
+0 -2.4 TD
+(Utilizar)Tj
+/TT8 1 Tf
+3.3114 0 TD
+(lseek)Tj
+/TT6 1 Tf
+3.2578 0 TD
+0.0073 Tw
+(como hemos hecho es muy habitual. Por ejemplo, para crear un )Tj
+/TT9 1 Tf
+25.7112 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0073 Tw
+(chero con 1GiB basta con)Tj
+-32.8365 -1.2 TD
+-0.0004 Tc
+0.0258 Tw
+(que hagas un)Tj
+/TT8 1 Tf
+5.5418 0 TD
+0 Tc
+0 Tw
+(lseek)Tj
+/TT6 1 Tf
+3.2758 0 TD
+[(a)-275.3(l)0(a)-275.3(posición)]TJ
+/TT8 1 Tf
+5.3801 0 TD
+(1024*1024*1024-1)Tj
+/TT6 1 Tf
+9.8769 0 TD
+0.0253 Tw
+[(y)-275.3(escribas un byte. El tamaño del nue)25(v)20(o)20( )]TJ
+/TT9 1 Tf
+16.3473 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+-40.978 -1.2 TD
+0.107 Tw
+[(será justo de 1GiB. Lo que es más, es muy posible que UNIX no asigne espacio en disco para el nue)25(v)20(o)]TJ
+/TT9 1 Tf
+T*
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0747 Tw
+[(chero salv)20(o)-324.7(para el último)]TJ
+/TT4 1 Tf
+10.9888 0 TD
+0 Tw
+(bloque)Tj
+/TT6 1 Tf
+3.0464 0 TD
+0.0746 Tw
+(que use el )Tj
+/TT9 1 Tf
+4.4723 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0746 Tw
+[(chero \(que es dónde has escrito el byte\). T)80(odos los trozos)]TJ
+-19.6198 -1.2 TD
+0.1206 Tw
+(anteriores del )Tj
+/TT9 1 Tf
+5.9053 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1206 Tw
+[(chero están sin escribir y)65(,)-370.6(si)-370.6(se)-370.6(leen, UNIX sabe que se leen con todos los bytes a cero.)]TJ
+-6.4614 -1.2 TD
+0.0319 Tw
+[(Siendo esto así, ¿P)15(ara qué guardar los ceros en el disco si UNIX sabe que están a cero? A estos )]TJ
+/TT9 1 Tf
+38.9165 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0319 Tw
+(cheros se)Tj
+-39.4726 -1.2 TD
+0.1758 Tw
+(les llama)Tj
+/TT10 1 Tf
+4.1836 0 TD
+0 Tw
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+0.1758 Tw
+[(c)15(her)45(os con huecos)]TJ
+/TT6 1 Tf
+7.6783 0 TD
+0.1759 Tw
+[(.)-425.9(¡Puedes tener )]TJ
+/TT9 1 Tf
+6.6923 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1759 Tw
+(cheros más grandes que el tamaño del disco en que los)Tj
+-19.6104 -1.2 TD
+0 Tw
+(guardas!)Tj
+0 -2.4 TD
+0.0057 Tw
+(Otro uso de)Tj
+/TT8 1 Tf
+4.9331 0 TD
+0 Tw
+(lseek)Tj
+/TT6 1 Tf
+3.2562 0 TD
+0.0056 Tw
+[(es para obtener el of)25(fset. Basta con cambiar el of)25(fset a 0 bytes contando a partir del of)25(f-)]TJ
+-8.1893 -1.2 TD
+0 Tw
+[(set actual, y utilizar el v)25(alor que retorna)]TJ
+/TT8 1 Tf
+16.1068 0 TD
+(lseek)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(\(que es el nue)25(v)20(o)20( )-20(of)25(fset\). Por ejemplo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 444 Tm
+(off = lseek\(fd, 0, 1\);)Tj
+ET
+endstream
+endobj
+26 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+/TT10 17 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+30 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+31 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+32 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 722 0 0 0 0 611 0 0 389 0 0 0 0 0 778 
+0 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 333 500 556 278 333 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 27 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 121
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 250 0 250 0 
+0 500 500 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 611 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 278 500 500 278 0 444 278 722 500 500 
+500 500 389 389 278 500 0 667 444 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 28 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+500 500 500 500 500 500 500 0 0 500 278 0 0 0 0 444 
+0 722 667 667 722 611 556 722 722 333 0 0 611 889 722 722 
+556 722 667 556 611 722 722 0 722 722 0 0 278 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 29 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 600 600 600 600 0 0 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 
+0 600 0 600 600 600 0 0 0 0 0 600 600 0 600 600 
+600 0 600 600 600 600 0 600 0 600 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 0 600 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 30 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 31 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [500 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 32 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 23 0 R
+/Contents 22 0 R
+>>
+endobj
+24 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 26 0 R
+/Contents 25 0 R
+>>
+endobj
+33 0 obj
+<<
+/S /D
+>>
+endobj
+34 0 obj
+<<
+/Nums [0 33 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 18 0 R 21 0 R 24 0 R]
+/Count 6
+/MediaBox [0 0 612 792]
+>>
+endobj
+35 0 obj
+<<
+/CreationDate (D:20160905151712+02'00')
+/ModDate (D:20160905151712+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+36 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 34 0 R
+>>
+endobj
+xref
+0 37
+0000000000 65535 f 
+0000035251 00000 n 
+0000000016 00000 n 
+0000004283 00000 n 
+0000032559 00000 n 
+0000033219 00000 n 
+0000033639 00000 n 
+0000034406 00000 n 
+0000034905 00000 n 
+0000031232 00000 n 
+0000035820 00000 n 
+0000035332 00000 n 
+0000004422 00000 n 
+0000010315 00000 n 
+0000035416 00000 n 
+0000010444 00000 n 
+0000017348 00000 n 
+0000035079 00000 n 
+0000035500 00000 n 
+0000017501 00000 n 
+0000024186 00000 n 
+0000035584 00000 n 
+0000024339 00000 n 
+0000027655 00000 n 
+0000035668 00000 n 
+0000027784 00000 n 
+0000031090 00000 n 
+0000031372 00000 n 
+0000031574 00000 n 
+0000031774 00000 n 
+0000031971 00000 n 
+0000032162 00000 n 
+0000032359 00000 n 
+0000035752 00000 n 
+0000035780 00000 n 
+0000035937 00000 n 
+0000036060 00000 n 
+trailer
+<<
+/Size 37
+/Root 36 0 R
+/Info 35 0 R
+/ID [<bffcb3bbdad48ace4705c325130edc34><bffcb3bbdad48ace4705c325130edc34>]
+>>
+startxref
+36130
+%%EOF

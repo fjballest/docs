@@ -1,0 +1,1018 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4111
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 158.01 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Concurr)18(encia)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+[(1. )-250(Thr)18(eads y pr)18(ocesos)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0183 Tw
+(Hemos utilizado)Tj
+/TT8 1 Tf
+6.8686 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.6687 0 TD
+0.0182 Tw
+(para crear procesos, lo que hace que los procesos hijo)Tj
+/TT4 1 Tf
+21.868 0 TD
+0 Tw
+(no)Tj
+/TT6 1 Tf
+1.2682 0 TD
+0.0182 Tw
+(compartan recursos con el)Tj
+-32.6736 -1.2 TD
+0.2726 Tw
+[(padre: tienen su propia copia de los se)15(gmentos de memoria, descriptores de )]TJ
+/TT9 1 Tf
+33.6634 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.2726 Tw
+(chero, etc. Esa es la)Tj
+-34.2196 -1.2 TD
+0.0729 Tw
+[(abstracción, aunque en realidad, el se)15(gmento de te)15(xto se suele compartir \(dado que es de sólo lectura\). El)]TJ
+T*
+0.079 Tw
+[(resto de se)15(gmentos se comportan como si no se compartiesen, pero UNIX hace que el padre y el hijo los)]TJ
+T*
+0.1742 Tw
+[(compartan tras de)15(gradar sus permisos a sólo-lectura. Cuando un proceso intenta escribir en una de las)]TJ
+T*
+0.0299 Tw
+(páginas que "no comparten", UNIX comprueba que, en efecto, el proceso puede escribir en ella y hace una)Tj
+T*
+0.0091 Tw
+(copia de la página que comparten padre e hijo. Como en este punto cada proceso tiene su propia copia de la)Tj
+T*
+0.1113 Tw
+[(página, los permisos vuelv)15(en a dejarse como lectura-escritura, y el proceso puede completar su escritura)]TJ
+T*
+0 Tw
+(pensando que siempre ha tenido su propia copia. A esto se lo conoce como)Tj
+/TT2 1 Tf
+30.186 0 TD
+(copy on write)Tj
+/TT6 1 Tf
+5.7769 0 TD
+(.)Tj
+-35.9629 -2.4 TD
+0.0673 Tw
+[(Un proceso para el k)10(ernel es, principalmente, el )]TJ
+/TT9 1 Tf
+19.8536 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0672 Tw
+[(ujo de control \(su jue)15(go de re)15(gistros ya sea en el proce-)]TJ
+-20.4097 -1.2 TD
+0.0645 Tw
+[(sador o salv)25(ado en su pila de k)10(ernel y su pila, tanto la de usuario como la de k)10(ernel\). El resto de recursos)]TJ
+T*
+0 Tw
+(puede o no compartirlos con el proceso que lo ha creado.)Tj
+0 -2.4 TD
+0.0377 Tw
+[(A)-287.8(l)0(a)-287.8(vista de esto, resulta posible crear un nue)25(v)20(o)20( )-20.1(proceso que comparta la memoria con el padre. A esto se)]TJ
+0 -1.2 TD
+0.0533 Tw
+(lo suele denominar)Tj
+/TT2 1 Tf
+8.0188 0 TD
+0 Tw
+[(thr)18(ead)]TJ
+/TT6 1 Tf
+2.815 0 TD
+0.0534 Tw
+[(.)-303.3(E)0(l)-303.3(nombre procede de los tiempos en que el k)10(ernel no sabía nada de threads y)]TJ
+-10.8338 -1.2 TD
+0.0206 Tw
+(éstos eran)Tj
+/TT4 1 Tf
+4.2619 0 TD
+[(pr)45(ocesos lig)10(er)45(os de usuario)]TJ
+/TT6 1 Tf
+11.3153 0 TD
+0 Tw
+(o)Tj
+/TT4 1 Tf
+0.7705 0 TD
+(corutinas)Tj
+/TT6 1 Tf
+4.0483 0 TD
+0.0205 Tw
+(creadas por la librería de C \(u otra similar\) sin ayuda del)Tj
+-20.396 -1.2 TD
+0.136 Tw
+[(k)10(ernel. Desde hace años, los threads son procesos como cualquier otro y el k)10(ernel los plani)]TJ
+/TT9 1 Tf
+38.3144 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.136 Tw
+(ca como a)Tj
+-38.8706 -1.2 TD
+0.0408 Tw
+[(cualquier otro proceso. Lo único que sucede es que algunos procesos comparten se)15(gmentos de memoria \(y)]TJ
+T*
+0 Tw
+[(otros recursos\) con otros procesos.)-500(Eso es todo. Si piensas en los threads como en procesos todo irá bien.)]TJ
+0 -2.4 TD
+0.0042 Tw
+(Resulta más cómodo \(y es más portable\) crear un proceso que comparte los recursos con el padre utilizando)Tj
+0 -1.2 TD
+0 Tw
+(la)Tj
+/TT4 1 Tf
+1.0482 0 TD
+0.0765 Tw
+[(libr)37(ería de pthr)37(eads)]TJ
+/TT6 1 Tf
+8.405 0 TD
+(que está instalada en prácticamente todos los sistemas UNIX que utilizando la lla-)Tj
+-9.4532 -1.2 TD
+0 Tw
+[(mada al sistema in)40(v)20(olucrada \(que suele además v)25(ariar mucho de unos UNIX a otros\).)]TJ
+0 -2.4 TD
+(El siguiente programa crea tres threads que imprimen 5 mensajes cada uno.)Tj
+/TT11 1 Tf
+6.1 -1.8 TD
+([thr.c])Tj
+/TT6 1 Tf
+4.2007 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 227.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <pthread.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+/TT11 9 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+13 0 obj
+<<
+/Length 2430
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(static void*)Tj
+0 -1.5 TD
+(tmain\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(char *arg, *sts;)Tj
+0 -3 TD
+(arg = a;)Tj
+0 -1.5 TD
+(for\(i = 0; i < 5; i++\) {)Tj
+2.4 -1.5 TD
+(write\(2, arg, strlen\(arg\)\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(asprintf\(&sts, "end %s", strchr\(arg, ’t’\)\);)Tj
+T*
+(free\(arg\);)Tj
+T*
+(return sts;)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(pthread_t thr[3];)Tj
+T*
+(void *sts[3];)Tj
+T*
+(char tabs[10], *a;)Tj
+0 -3 TD
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(memset\(tabs, ’\\t’, sizeof tabs\);)Tj
+T*
+(tabs[i] = 0;)Tj
+T*
+(asprintf\(&a, "%st %d\\n", tabs, i\);)Tj
+T*
+(if\(pthread_create\(thr+i, NULL, tmain, a\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(pthread_join\(thr[i], sts+i\);)Tj
+T*
+(printf\("join %d: %s\\n", i, sts[i]\);)Tj
+T*
+(free\(sts[i]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 210 Tm
+[(El programa crea un nue)25(v)20(o)20( )-20(thread utilizando código como)]TJ
+/TT8 1 Tf
+8 0 0 8 133 192 Tm
+(pthread_t thr;)Tj
+T*
+(...)Tj
+T*
+(if \(pthread_create\(&thr, NULL, func, funcarg\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 126 Tm
+0.0632 Tw
+[(La llamada crea un proceso que comparte los recursos con el que hace la llamada y arre)15(gla las cosas para)]TJ
+0 -1.2 TD
+0.0265 Tw
+[(que el nue)25(v)20(o)20( )]TJ
+/TT9 1 Tf
+5.3939 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0265 Tw
+(ujo de control ejecute)Tj
+/TT8 1 Tf
+8.9913 0 TD
+0 Tw
+(func\(funcarg\))Tj
+/TT6 1 Tf
+7.8013 0 TD
+[(.)-276.5(Donde)]TJ
+/TT8 1 Tf
+3.469 0 TD
+(func)Tj
+/TT6 1 Tf
+2.6769 0 TD
+0.0265 Tw
+(es el)Tj
+/TT4 1 Tf
+2.1077 0 TD
+[(pr)45(o)10(g)0(r)15(ama principal)]TJ
+/TT6 1 Tf
+8.15 0 TD
+0 Tw
+[(o)-276.5(e)0(l)-276.5(punto)]TJ
+-39.1461 -1.2 TD
+[(de entrada del nue)25(v)20(o)20( )-20(thread y ha de tener una cabecera como)]TJ
+/TT8 1 Tf
+8 0 0 8 133 84 Tm
+(void *func\(void *arg\))Tj
+/TT6 1 Tf
+10 0 0 10 72 66 Tm
+0.0054 Tw
+[(El ar)18(gumento que pasamos al )]TJ
+/TT9 1 Tf
+12.0334 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0054 Tw
+(nal a)Tj
+/TT8 1 Tf
+2.1763 0 TD
+0 Tw
+(pthread_create)Tj
+/TT6 1 Tf
+8.6568 0 TD
+0.0054 Tw
+[(es el ar)18(gumento con que se llamará a dicho punto)]TJ
+ET
+endstream
+endobj
+14 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+16 0 obj
+<<
+/Length 4098
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+0.0805 Tw
+[(de entrada. Además, la función principal del thread de)25(vuelv)15(e)-330.5(u)0(n)]TJ
+/TT8 1 Tf
+26.5882 0 TD
+0 Tw
+(void*)Tj
+/TT6 1 Tf
+3.331 0 TD
+0.0804 Tw
+[(que hace las v)15(eces de)]TJ
+/TT4 1 Tf
+9.1878 0 TD
+[(e)20(xit status)]TJ
+/TT6 1 Tf
+-39.107 -1.2 TD
+0 Tw
+(para el thread.)Tj
+0 -2.4 TD
+0.0543 Tw
+[(El primer ar)18(gumento es un puntero a un)]TJ
+/TT2 1 Tf
+16.5785 0 TD
+0 Tw
+(tid)Tj
+/TT6 1 Tf
+1.4713 0 TD
+[(o)-304.3(identi)]TJ
+/TT9 1 Tf
+3.0816 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0543 Tw
+(cador de thread que utiliza la librería de threads para)Tj
+-21.6876 -1.2 TD
+0 Tw
+(identi)Tj
+/TT9 1 Tf
+2.2773 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.007 Tw
+[(car al thread en cuestión. Utilizarás este v)25(alor en sucesi)25(v)25(a)0(s)-257(llamadas que se re)]TJ
+/TT9 1 Tf
+31.0585 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.007 Tw
+(eran al thread que has)Tj
+-34.4481 -1.2 TD
+0.2214 Tw
+(creado. Es similar al)Tj
+/TT4 1 Tf
+9.2992 0 TD
+0 Tw
+(pid)Tj
+/TT6 1 Tf
+1.7492 0 TD
+0.2215 Tw
+(de un proceso. Piensa que aunque cada thread tiene un proceso, la librería)Tj
+-11.0484 -1.2 TD
+0 Tw
+(mantiene más información sobre cada thread y desea utilizar sus propios identi)Tj
+/TT9 1 Tf
+31.5176 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cadores.)Tj
+-32.0737 -2.4 TD
+(El programa puede después llamar a)Tj
+/TT8 1 Tf
+8 0 0 8 133 594 Tm
+(void *sts;)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(pthread_join\(thr, &sts\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 552 Tm
+0.0887 Tw
+[(para \(1\) esperar a que el thread termine y \(2\) obtener su estatus.)-588.7(Dicho de otro modo,)]TJ
+/TT8 1 Tf
+35.9964 0 TD
+0 Tw
+(pthread_join)Tj
+/TT6 1 Tf
+-35.9964 -1.2 TD
+[(hace las v)15(eces de)]TJ
+/TT4 1 Tf
+7.0919 0 TD
+(wait\(2\))Tj
+/TT6 1 Tf
+2.8887 0 TD
+(.)Tj
+-9.9806 -2.4 TD
+0.0437 Tw
+(Cuando no deseamos llamar a)Tj
+/TT8 1 Tf
+12.4651 0 TD
+0 Tw
+(pthread_join)Tj
+/TT6 1 Tf
+7.4949 0 TD
+0.0437 Tw
+(para un thread, debemos informar a la librería)Tj
+/TT4 1 Tf
+18.9249 0 TD
+0 Tw
+[(pthr)37(ead)]TJ
+/TT6 1 Tf
+3.3676 0 TD
+(de)Tj
+-42.2525 -1.2 TD
+0.0199 Tw
+(tal cosa \(¡Igual que sucedía con)Tj
+/TT8 1 Tf
+13.0027 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.6703 0 TD
+(y)Tj
+/TT8 1 Tf
+0.7699 0 TD
+(wait)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0198 Tw
+[(!\). Una b)20(uena forma de hacerlo es hacer que la función prin-)]TJ
+-18.8433 -1.2 TD
+0 Tw
+(cipal del thread llame a)Tj
+/TT8 1 Tf
+8 0 0 8 133 474 Tm
+(pthread_t me;)Tj
+0 -1.5 TD
+(me = pthread_self\(\);)Tj
+T*
+(pthread_detach\(me\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 432 Tm
+0.1174 Tw
+[(Pero observ)25(a)-367.4(que este código ejecuta en el nue)25(v)20(o)20( )-20(thread, no en el código del proceso padre. La función)]TJ
+/TT8 1 Tf
+0 -1.2 TD
+0 Tw
+(pthread_self)Tj
+/TT6 1 Tf
+7.4512 0 TD
+(es como)Tj
+/TT4 1 Tf
+3.5547 0 TD
+[(g)10(etpid\(2\))]TJ
+/TT6 1 Tf
+3.6555 0 TD
+[(,)-250(pero de)25(vuelv)15(e)-250(e)0(l)]TJ
+/TT4 1 Tf
+7.3179 0 TD
+[(thr)37(ead id)]TJ
+/TT6 1 Tf
+3.8517 0 TD
+0.25 Tc
+[(yn)250(oe)250(l)]TJ
+/TT4 1 Tf
+2.9717 0 TD
+0 Tc
+[(pr)45(ocess id)]TJ
+/TT6 1 Tf
+4.038 0 TD
+(.)Tj
+-32.8407 -2.4 TD
+0.0203 Tw
+[(Si ahora vuelv)15(es a leer el programa se)15(guramente entiendas las partes que antes te parecían oscuras. Cuando)]TJ
+0 -1.2 TD
+0 Tw
+[(lo ejecutamos, podemos v)15(er una salida parecida a esta:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 366 Tm
+(unix$ thr)Tj
+4.8 -1.5 TD
+0.6 Tc
+(t2)Tj
+T*
+(t2)Tj
+T*
+(t2)Tj
+T*
+(t2)Tj
+-2.4 -1.5 TD
+(t1)Tj
+-2.4 -1.5 TD
+(t0)Tj
+2.4 -1.5 TD
+(t1)Tj
+-2.4 -1.5 TD
+(t0)Tj
+T*
+(t0)Tj
+T*
+(t0)Tj
+T*
+(t0)Tj
+2.4 -1.5 TD
+(t1)Tj
+T*
+(t1)Tj
+T*
+(t1)Tj
+2.4 -1.5 TD
+(t2)Tj
+-4.8 -1.5 TD
+0 Tc
+(join 0: end t 0)Tj
+T*
+(join 1: end t 1)Tj
+T*
+(join 2: end t 2)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 108 Tm
+0.0379 Tw
+[(Siendo procesos distintos... ¡No sabemos en qué orden v)25(an a ejecutar!)-538(Lue)15(go la salida se)15(guramente di)]TJ
+/TT9 1 Tf
+41.4188 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(era)Tj
+-41.9749 -1.2 TD
+0.0227 Tw
+[(si repetimos la ejecución. Pero podemos v)15(er que los tres threads ejecutan concurrentemente que que el pro-)]TJ
+T*
+0.0175 Tw
+(grama principal puede esperar correctamente a que terminen y recuperar el estatus de salida de cada uno de)Tj
+T*
+0 Tw
+(ellos.)Tj
+ET
+endstream
+endobj
+17 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 314
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+0.005 Tw
+[(Se)15(guramente resultará instructi)25(v)20(o)20( )-20(que ahora intentes leer de nue)25(v)20(o)20( )-20(el)-255(programa trazando mentalmente cómo)]TJ
+0 -1.2 TD
+0 Tw
+(ha podido producir la salida que hemos visto.)Tj
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+10 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+21 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+22 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 0 0 0 389 0 0 0 0 0 778 
+0 0 0 556 667 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 556 278 0 0 0 833 556 500 
+556 0 444 389 333 556 500 722 0 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 21 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 237
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 0 0 0 
+0 0 500 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 500 500 278 0 0 278 722 500 500 
+500 0 389 389 278 500 0 667 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 22 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 500 500 500 500 500 0 0 0 0 278 0 0 0 0 0 
+0 722 0 667 722 611 0 0 722 333 0 0 611 0 722 0 
+556 0 667 556 0 722 0 0 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 23 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 0 600 0 
+600 600 600 600 0 600 0 0 0 0 600 600 600 600 600 0 
+0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 0 
+0 0 0 0 0 600 0 0 0 0 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 0 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 24 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 25 0 R
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 116
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 0 0 600 0 0 0 0 600 0 0 0 0 0 
+0 0 0 0 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 26 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+12 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 14 0 R
+/Contents 13 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 17 0 R
+/Contents 16 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+27 0 obj
+<<
+/S /D
+>>
+endobj
+28 0 obj
+<<
+/Nums [0 27 0 R ]
+>>
+endobj
+11 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 12 0 R 15 0 R 18 0 R]
+/Count 4
+/MediaBox [0 0 612 792]
+>>
+endobj
+29 0 obj
+<<
+/CreationDate (D:20160905151719+02'00')
+/ModDate (D:20160905151719+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+30 0 obj
+<<
+/Type /Catalog
+/Pages 11 0 R
+/PageLabels 28 0 R
+>>
+endobj
+xref
+0 31
+0000000000 65535 f 
+0000016071 00000 n 
+0000000016 00000 n 
+0000004179 00000 n 
+0000013029 00000 n 
+0000013683 00000 n 
+0000014328 00000 n 
+0000015061 00000 n 
+0000015572 00000 n 
+0000015746 00000 n 
+0000011699 00000 n 
+0000016472 00000 n 
+0000016152 00000 n 
+0000004331 00000 n 
+0000006814 00000 n 
+0000016236 00000 n 
+0000006944 00000 n 
+0000011095 00000 n 
+0000016320 00000 n 
+0000011236 00000 n 
+0000011602 00000 n 
+0000011840 00000 n 
+0000012042 00000 n 
+0000012242 00000 n 
+0000012439 00000 n 
+0000012630 00000 n 
+0000012827 00000 n 
+0000016404 00000 n 
+0000016432 00000 n 
+0000016575 00000 n 
+0000016698 00000 n 
+trailer
+<<
+/Size 31
+/Root 30 0 R
+/Info 29 0 R
+/ID [<7502eab6238204e15af2ffa6c11efa9f><7502eab6238204e15af2ffa6c11efa9f>]
+>>
+startxref
+16768
+%%EOF

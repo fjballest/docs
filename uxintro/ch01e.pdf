@@ -1,0 +1,1824 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4744
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 162.894 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Empezando)]TJ
+/TT4 1 Tf
+10 0 0 10 273.135 633 Tm
+(Clip 17)Tj
+-3.2055 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Usuarios)-250(y)-250(permisos)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0336 Tw
+(Cuando vimos cómo entrar al sistema, y al utilizar comandos para listar )Tj
+/TT7 1 Tf
+29.3119 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0336 Tw
+(cheros y directorios, hemos visto)Tj
+-29.868 -1.2 TD
+0.0581 Tw
+(que UNIX tiene idea de que hay usuarios en el sistema. La idea de ")Tj
+/TT4 1 Tf
+28.0175 0 TD
+0 Tw
+(usuario)Tj
+/TT6 1 Tf
+3.0562 0 TD
+0.0782 Tw
+[(")-308.2(e)0(s)-308.2(d)0(e)-308.2(nue)25(v)20(o)20( una )20(abstracción)]TJ
+-31.0737 -1.2 TD
+0.0056 Tw
+(del sistema. Concretamente, cada programa que ejecuta lo hace a nombre de un usuario. Dicho "nombre" es)Tj
+T*
+0 Tw
+(un número para UNIX. El comando)Tj
+/TT4 1 Tf
+14.5791 0 TD
+(id)Tj
+/TT6 1 Tf
+1.0278 0 TD
+(muestra el identi)Tj
+/TT7 1 Tf
+6.6646 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cador de usuario, o)Tj
+/TT4 1 Tf
+7.8584 0 TD
+(user id)Tj
+/TT6 1 Tf
+2.75 0 TD
+0.25 Tc
+(,o)Tj
+/TT4 1 Tf
+1.25 0 TD
+0 Tc
+(uid)Tj
+/TT6 1 Tf
+1.2778 0 TD
+(.)Tj
+/TT9 1 Tf
+8 0 0 8 133 503.4 Tm
+(unix$ id)Tj
+0 -1.5 TD
+(uid=501\(nemo\) gid=20\(staff\) groups=20\(staff\))Tj
+/TT6 1 Tf
+10 0 0 10 72 461.4 Tm
+0.0045 Tw
+[(P)15(ara crear un usuario en UNIX normalmente editamos v)25(arios )]TJ
+/TT7 1 Tf
+24.7422 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0045 Tw
+(cheros en)Tj
+/TT9 1 Tf
+4.0627 0 TD
+0 Tw
+(/etc)Tj
+/TT6 1 Tf
+2.6549 0 TD
+0.0045 Tw
+(para informar al sistema del)Tj
+-32.016 -1.2 TD
+0.0964 Tw
+[(nue)25(v)20(o)20( )-20(usuario. Esto suele hacerse utilizando comandos \(descritos en la sección 8 del manual\) para e)25(vitar)]TJ
+T*
+0.0385 Tw
+(cometer errores. Concretamente, hay que indicar al menos el nombre de usuario \(por ejemplo, ")Tj
+/TT9 1 Tf
+38.7939 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0385 Tw
+("\), el)Tj
+-41.1943 -1.2 TD
+0.1224 Tw
+(número que utiliza UNIX como nombre para el usuario \(por ejemplo, 501\)., y qué directorio utiliza ese)Tj
+T*
+0 Tw
+(usuario como casa.)Tj
+0 -2.4 TD
+0.173 Tw
+(Además, habrá que crear el directorio casa para el usuario y darle permisos para que pueda utilizarlo.)Tj
+0 -1.2 TD
+0.1405 Tw
+[(T)80(ambién se suele indicar qué shell pre)]TJ
+/TT7 1 Tf
+16.0906 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1405 Tw
+(ere utilizar dicho usuario, por ejemplo,)Tj
+/TT9 1 Tf
+16.6154 0 TD
+0 Tw
+(/bin/sh)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.1404 Tw
+[(,)-390.4(y)-390.4(otra infor)20(-)]TJ
+-37.4628 -1.2 TD
+0 Tw
+(mación administrat)Tj
+7.6924 0 TD
+-0.025 Tc
+(iva )Tj
+1.4217 0 TD
+0 Tc
+(incluyendo el nombre real del usuario.)Tj
+-9.1141 -2.4 TD
+0.0425 Tw
+[(En UNIX, los usuarios pertenecen a uno o más grupos de usuarios. Una v)15(ez más, para UNIX, un grupo de)]TJ
+0 -1.2 TD
+0.0975 Tw
+(usuarios es un número. En nuestro caso,)Tj
+/TT4 1 Tf
+16.9847 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.5135 0 TD
+0.0974 Tw
+(pertenece al grupo)Tj
+/TT4 1 Tf
+7.927 0 TD
+0 Tw
+[(staf)18(f)]TJ
+/TT6 1 Tf
+2.0521 0 TD
+0.0974 Tw
+(\(y UNIX lo conoce como 20\). El)Tj
+-29.4773 -1.2 TD
+0.0895 Tw
+(número que identi)Tj
+/TT7 1 Tf
+7.4549 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0895 Tw
+(ca al grupo de usuarios se denomina)Tj
+/TT4 1 Tf
+15.3722 0 TD
+[(gr)45(oup id)]TJ
+/TT6 1 Tf
+3.8012 0 TD
+0 Tw
+(o)Tj
+/TT4 1 Tf
+0.8396 0 TD
+(gid)Tj
+/TT6 1 Tf
+1.2778 0 TD
+0.0896 Tw
+[(.)-339.6(A)0(l)-339.6(crear un usuario también hay)]TJ
+-29.3019 -1.2 TD
+0 Tw
+(que decir a qué grupos pertenece.)Tj
+0 -2.4 TD
+0.2553 Tw
+[(Aunque la forma de crear un usuario v)25(aría mucho de un UNIX a otro, este comando se utiliza en)]TJ
+0 -1.2 TD
+0 Tw
+(OpenBSD:)Tj
+/TT9 1 Tf
+8 0 0 8 133 251.4 Tm
+(unix# adduser)Tj
+0 -1.5 TD
+(Enter username []: loser)Tj
+T*
+(Enter full name []: Mr Loser)Tj
+T*
+(Enter shell bash csh ksh nologin rc sh [ksh]: ksh)Tj
+T*
+(Uid [1005]:)Tj
+T*
+(Login group loser [loser]: staff)Tj
+T*
+(Login group is ‘‘staff’’. Invite loser into other groups: guest no)Tj
+T*
+([no]:)Tj
+T*
+(Enter password []:)Tj
+T*
+(Enter password again []:)Tj
+/TT6 1 Tf
+10 0 0 10 72 113.4 Tm
+0.0381 Tw
+(Su efecto es editar el )Tj
+/TT7 1 Tf
+8.7701 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0381 Tw
+(chero de cuentas)Tj
+/TT9 1 Tf
+7.0274 0 TD
+0 Tw
+(/etc/passwd)Tj
+/TT6 1 Tf
+6.8892 0 TD
+0.0382 Tw
+(\(y otros )Tj
+/TT7 1 Tf
+3.4094 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0382 Tw
+(cheros\) para guardar la información del)Tj
+-27.2084 -1.2 TD
+0.0146 Tw
+(usuario, de tal forma que)Tj
+/TT4 1 Tf
+10.2918 0 TD
+0 Tw
+[(lo)10(gin)]TJ
+/TT6 1 Tf
+2.3103 0 TD
+0.0146 Tw
+[(y)-264.6(otros programas puedan encontrarla.)-514.6(Por ejemplo, esta línea aparece en el)]TJ
+/TT7 1 Tf
+-12.602 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero de cuentas tras crear el usuario:)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 7928
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(loser:*:1005:50:Mr Loser:/home/loser:/bin/ksh)Tj
+/TT6 1 Tf
+10 0 0 10 72 690 Tm
+0.0182 Tw
+(Además, el comando ha creado el directorio)Tj
+/TT9 1 Tf
+18.0087 0 TD
+0 Tw
+(/home/loser)Tj
+/TT6 1 Tf
+6.8693 0 TD
+0.0183 Tw
+[(y)-268.3(h)0(a)-268.3(dado permisos al nue)25(v)20(o)20( )-20(usuario para uti-)]TJ
+-24.878 -1.2 TD
+0 Tw
+(lizarlo.)Tj
+0 -2.4 TD
+0.052 Tw
+(De hecho, los )Tj
+/TT7 1 Tf
+5.8767 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.052 Tw
+(cheros y directorios pertenecen a un usuario \(UNIX guarda el)Tj
+/TT4 1 Tf
+25.3989 0 TD
+0 Tw
+(uid)Tj
+/TT6 1 Tf
+1.5798 0 TD
+0.052 Tw
+(del dueño\) y a un grupo)Tj
+-33.4116 -1.2 TD
+0.224 Tw
+(de usuarios \(UNIX guarda el)Tj
+/TT4 1 Tf
+12.9219 0 TD
+0 Tw
+(gid)Tj
+/TT6 1 Tf
+1.2778 0 TD
+0.2241 Tw
+(\). El comando)Tj
+/TT4 1 Tf
+6.5595 0 TD
+0 Tw
+(adduser)Tj
+/TT6 1 Tf
+3.6963 0 TD
+0.2241 Tw
+(ha hecho que)Tj
+/TT9 1 Tf
+6.1977 0 TD
+0 Tw
+(/home/loser)Tj
+/TT6 1 Tf
+7.0752 0 TD
+0.2241 Tw
+(pertenezca al)Tj
+-37.7283 -1.2 TD
+0 Tw
+(usuario)Tj
+/TT9 1 Tf
+3.1938 0 TD
+(loser)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-250(y)-250(a)0(l)-250(grupo)]TJ
+/TT9 1 Tf
+4.8047 0 TD
+(staff)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(en nuestro ejemplo.)Tj
+-14.2495 -2.4 TD
+0.0777 Tw
+(Los programas en ejecución están ejecutando a nombre de un usuario \(con un)Tj
+/TT4 1 Tf
+32.3044 0 TD
+0 Tw
+(uid)Tj
+/TT6 1 Tf
+1.6054 0 TD
+0.0776 Tw
+(dado\). Cuando un pro-)Tj
+-33.9099 -1.2 TD
+0 Tw
+(grama crea )Tj
+/TT7 1 Tf
+4.6631 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros, estos )Tj
+/TT7 1 Tf
+5.3599 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros se crean a nombre del usuario que ejecuta el programa.)Tj
+-11.1353 -2.4 TD
+0.0176 Tw
+[(P)15(ara realizar cualquier operación o llamada al sistema el usuario debe tener permiso para ello. Por ejemplo,)]TJ
+0 -1.2 TD
+0.1658 Tw
+(normalmente no podrás ejecutar)Tj
+/TT4 1 Tf
+13.7692 0 TD
+0 Tw
+(adduser)Tj
+/TT6 1 Tf
+3.638 0 TD
+0.1657 Tw
+(para crear usuarios. Las llamadas al sistema que utiliza y los)Tj
+/TT7 1 Tf
+-17.4071 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0548 Tw
+(cheros que edita no es probable que estén accesibles con tu usuario. En UNIX, el usuario número 0 \(con)Tj
+/TT4 1 Tf
+-0.5562 -1.2 TD
+0 Tw
+(uid)Tj
+/TT6 1 Tf
+1.5365 0 TD
+0.0086 Tw
+[(0\) es especial. El k)10(ernel incluye cientos de comprobaciones que hacen que dicho usuario pueda efectuar)]TJ
+-1.5365 -1.2 TD
+-0.0001 Tc
+0.0706 Tw
+[(la llamada que haga)-320.6(y)-320.6(que, en otro caso, se compruebe si el usuario tiene permiso para hacerla. Por eso a)]TJ
+T*
+0 Tc
+0.2403 Tw
+(ese usuario se le llama)Tj
+/TT4 1 Tf
+10.4481 0 TD
+0 Tw
+(superusuario)Tj
+/TT6 1 Tf
+5.2783 0 TD
+0.2402 Tw
+[(.)-490.3(S)0(u)-490.2(nombre suele ser)]TJ
+/TT4 1 Tf
+10.0326 0 TD
+0 Tw
+[(r)45(oot)]TJ
+/TT6 1 Tf
+1.622 0 TD
+0.2402 Tw
+[(,)-490.2(pero UNIX lo conoce como)]TJ
+/TT4 1 Tf
+13.2986 0 TD
+0 Tw
+(uid)Tj
+/TT6 1 Tf
+1.768 0 TD
+(0.)Tj
+-42.4477 -1.2 TD
+0.1879 Tw
+[(Recuerda que el nombre es tan sólo te)15(xto que utilizan programas como)]TJ
+/TT4 1 Tf
+30.8419 0 TD
+0 Tw
+(ls)Tj
+/TT6 1 Tf
+1.105 0 TD
+0.188 Tw
+(para mostrar el nombre de)Tj
+-31.9469 -1.2 TD
+0.0397 Tw
+[(usuario. El k)10(ernel utiliza)]TJ
+/TT4 1 Tf
+10.2289 0 TD
+0 Tw
+(uids)Tj
+/TT6 1 Tf
+1.667 0 TD
+0.0396 Tw
+[(.)-289.7(E)0(l)-289.7(prompt del shell suele cambiar si el usuario es)]TJ
+/TT4 1 Tf
+20.7639 0 TD
+0 Tw
+[(r)45(oot)]TJ
+/TT6 1 Tf
+1.622 0 TD
+0.0396 Tw
+[(,)-289.6(para a)20(visarte de ello.)]TJ
+-34.2818 -1.2 TD
+0 Tw
+(En nuestro ejemplo el prompt era ")Tj
+/TT9 1 Tf
+14.0151 0 TD
+(unix#)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.25 Tc
+[("yn)250(o")]TJ
+/TT9 1 Tf
+3.0664 0 TD
+0 Tc
+(unix$)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(".)Tj
+-23.0825 -2.4 TD
+0.0416 Tw
+(Podemos cambiar de un usuario a otro utilizando el comando)Tj
+/TT4 1 Tf
+25.1318 0 TD
+0 Tw
+(su)Tj
+/TT6 1 Tf
+0.8892 0 TD
+0.2916 Tc
+(,\()Tj
+/TT4 1 Tf
+0.8746 0 TD
+0 Tc
+[(switc)15(h)-291.6(user)]TJ
+/TT6 1 Tf
+4.5544 0 TD
+0.0416 Tw
+[(\))-291.6(que ejecuta en shell a nom-)]TJ
+-31.45 -1.2 TD
+0 Tw
+(bre de otro usuario. Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 420 Tm
+(unix$ id)Tj
+0 -1.5 TD
+(id=501\(nemo\) gid=20\(staff\) groups=20\(staff\))Tj
+T*
+(unix$ su)Tj
+T*
+(Password: *******)Tj
+T*
+(unix# id)Tj
+T*
+(uid=0\(root\) gid=0\(wheel\) groups=0\(wheel\), 20\(staff\))Tj
+T*
+(unix# adduser)Tj
+T*
+(...)Tj
+T*
+(unix# exit)Tj
+T*
+(unix$ id)Tj
+T*
+(id=501\(nemo\) gid=20\(staff\) groups=20\(staff\))Tj
+/TT6 1 Tf
+10 0 0 10 72 270 Tm
+(Cada )Tj
+/TT7 1 Tf
+2.3856 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0809 Tw
+(chero en unix incluye información respecto a qué cosas puede hacer qué usuario con el mismo. A)Tj
+-2.9417 -1.2 TD
+0.0433 Tw
+(esto se le llama)Tj
+/TT4 1 Tf
+6.56 0 TD
+0.0434 Tw
+[(lista de contr)45(ol de acceso)]TJ
+/TT6 1 Tf
+10.3483 0 TD
+[(,)-293.4(\()0(o)-293.4(A)40(CL, por)]TJ
+/TT4 1 Tf
+5.7996 0 TD
+[(access contr)45(ol list)]TJ
+/TT6 1 Tf
+7.263 0 TD
+(\). Normalmente, UNIX guarda 9)Tj
+-29.971 -1.2 TD
+0.0131 Tw
+(bits al menos correspondientes a 9 permisos para cada )Tj
+/TT7 1 Tf
+22.0276 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0131 Tw
+(chero: 3 permisos para el dueño del )Tj
+/TT7 1 Tf
+14.559 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0131 Tw
+(chero, otros 3)Tj
+-37.6989 -1.2 TD
+0.02 Tw
+(para cualquier usuario que no sea el dueño, pero que pertenezca al grupo al que pertenece el )Tj
+/TT7 1 Tf
+37.3776 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.02 Tw
+(chero y otros)Tj
+-37.9338 -1.2 TD
+0.0192 Tw
+[(3)-269.3(permisos para cualquier otro usuario. Estos bits se guardan en la estructura de datos que utiliza el sistema)]TJ
+T*
+0.1 Tw
+[(operati)25(v)20(o)20( para )20(cada )]TJ
+/TT7 1 Tf
+8.2736 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.08 Tw
+(chero. Pues bien, los permisos son)Tj
+/TT4 1 Tf
+14.4785 0 TD
+0 Tw
+[(lectur)15(a)]TJ
+/TT6 1 Tf
+2.8175 0 TD
+(,)Tj
+/TT4 1 Tf
+0.58 0 TD
+[(escritur)15(a)]TJ
+/TT6 1 Tf
+3.9258 0 TD
+(y)Tj
+/TT4 1 Tf
+0.83 0 TD
+(ejecución)Tj
+/TT6 1 Tf
+3.8311 0 TD
+0.08 Tw
+[(.)-330(S)0(i)-330(miramos el lis-)]TJ
+-35.2927 -1.2 TD
+0 Tw
+[(tado lar)18(go de un )]TJ
+/TT7 1 Tf
+6.7022 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero podemos v)15(erlos:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 180 Tm
+(unix$ ls -l fich)Tj
+0 -1.5 TD
+(-rwxr-xr-- 1 nemo staff 1024 May 30 16:31 fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 150 Tm
+0.0533 Tw
+(Concretamente, ")Tj
+/TT9 1 Tf
+7.0142 0 TD
+0 Tw
+(rwxrwxr-x)Tj
+/TT6 1 Tf
+5.4009 0 TD
+0.0532 Tw
+[(")-303.3(son los 9 bits para permisos a los que nos hemos referido. Hay más bits y)]TJ
+-12.4151 -1.2 TD
+0.1137 Tw
+[(más permisos, pero los v)15(eremos más adelante. En el )]TJ
+/TT7 1 Tf
+22.0859 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1137 Tw
+(chero que hemos listado,)Tj
+/TT9 1 Tf
+10.6468 0 TD
+0 Tw
+(fich)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1138 Tw
+[(,)-363.8(los tres primeros)]TJ
+-35.6893 -1.2 TD
+0.0518 Tw
+(permisos \(esto es, ")Tj
+/TT9 1 Tf
+7.9513 0 TD
+0 Tw
+(rwx)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0518 Tw
+("\) se aplican al dueño del )Tj
+/TT7 1 Tf
+10.6594 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0518 Tw
+(chero \(esto es, a)Tj
+/TT4 1 Tf
+6.8986 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.166 0 TD
+0.0518 Tw
+[(,)-301.8(tal y como indica)]TJ
+/TT4 1 Tf
+7.9235 0 TD
+0 Tw
+(ls)Tj
+/TT6 1 Tf
+0.667 0 TD
+0.0518 Tw
+(\). Dicho de)Tj
+-38.6223 -1.2 TD
+0.0385 Tw
+(otro modo, cualquier programa que ejecute a nombre de)Tj
+/TT4 1 Tf
+23.0042 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.4545 0 TD
+0.0386 Tw
+[(e)-288.5(intente hacer llamadas al sistema para uti-)]TJ
+-25.4587 -1.2 TD
+0.0005 Tw
+(lizar el )Tj
+/TT7 1 Tf
+2.999 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0005 Tw
+(chero, estará sujeto a los permisos)Tj
+/TT9 1 Tf
+13.9156 0 TD
+0 Tw
+(rwx)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0004 Tw
+[(.)-250.5(P)15(ara cualquier usuario que, no siendo el dueño, pertenezca)]TJ
+-19.2711 -1.2 TD
+0.0151 Tw
+(al grupo)Tj
+/TT4 1 Tf
+3.5849 0 TD
+0 Tw
+[(staf)18(f)]TJ
+/TT6 1 Tf
+1.7047 0 TD
+0.0152 Tw
+[(,)-265.1(s)0(e)-265.1(aplicarán los siguientes tres permisos:)]TJ
+/TT9 1 Tf
+17.1023 0 TD
+0 Tw
+(r-x)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0152 Tw
+[(.)-265.2(Y)-265.2(para cualquier otro usuario, se aplicarán los)]TJ
+-24.1921 -1.2 TD
+0 Tw
+(últimos tres permisos:)Tj
+/TT9 1 Tf
+9.083 0 TD
+(r--)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 6664
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+0.1105 Tw
+(En cualquiera de los casos, la ")Tj
+/TT9 1 Tf
+13.0946 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1105 Tw
+[(")-360.5(indica permiso de lectura, la ")]TJ
+/TT9 1 Tf
+13.2802 0 TD
+0 Tw
+(w)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1104 Tw
+[(")-360.5(indica permiso de escritura y la ")]TJ
+/TT9 1 Tf
+14.6123 0 TD
+0 Tw
+(x)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(")Tj
+-42.7874 -1.2 TD
+0.0982 Tw
+(indica permiso de ejecución. En un )Tj
+/TT7 1 Tf
+14.89 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0982 Tw
+(chero, leer el contenido de )Tj
+/TT7 1 Tf
+11.3191 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0982 Tw
+(chero requiere permiso de lectura. Los)Tj
+-27.3214 -1.2 TD
+0.0319 Tw
+(comandos como)Tj
+/TT4 1 Tf
+6.8402 0 TD
+0 Tw
+(cat)Tj
+/TT6 1 Tf
+1.5036 0 TD
+(y)Tj
+/TT4 1 Tf
+0.7819 0 TD
+(cp)Tj
+/TT6 1 Tf
+1.2256 0 TD
+0.0318 Tw
+(leen el contenido de )Tj
+/TT7 1 Tf
+8.4016 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0318 Tw
+(cheros y requieren dicho permiso. Escribir el contenido del)Tj
+/TT7 1 Tf
+-19.3091 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero require permiso de escritura. Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 654 Tm
+(unix$ echo hola >fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 636 Tm
+0.0998 Tw
+(require permiso de escritura en)Tj
+/TT9 1 Tf
+13.1324 0 TD
+0 Tw
+(fich)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0999 Tw
+[(.)-349.9(E)0(l)-349.9(permiso de ejecución se utiliza para permitir que un )]TJ
+/TT7 1 Tf
+23.7019 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0999 Tw
+(chero se)Tj
+-39.7909 -1.2 TD
+0 Tw
+(ejecute \(por ejemplo, en respuesta a un comando que escribimos en el shell\).)Tj
+0 -2.4 TD
+0.0432 Tw
+(En el caso de los directorios, la ")Tj
+/TT9 1 Tf
+13.4289 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0431 Tw
+[(")-293.2(indica permiso para listar el contenido del directorio, o leer el directo-)]TJ
+-14.029 -1.2 TD
+0.0091 Tw
+(rio. La ")Tj
+/TT9 1 Tf
+3.3419 0 TD
+0 Tw
+(w)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0091 Tw
+[(")-259.1(indica permiso para modi)]TJ
+/TT7 1 Tf
+10.886 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0091 Tw
+(car el directorio, ya sea creando )Tj
+/TT7 1 Tf
+13.0194 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0091 Tw
+(cheros dentro o borrándolos o cam-)Tj
+-28.9598 -1.2 TD
+0.05 Tw
+(biando su nombre. Y la ")Tj
+/TT9 1 Tf
+10.2676 0 TD
+0 Tw
+(x)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0499 Tw
+[(")-300(indica permiso para entrar en el directorio \(cambiando de directorio dentro de)]TJ
+-10.8677 -1.2 TD
+0 Tw
+(él, por ejemplo\).)Tj
+0 -2.4 TD
+0.0945 Tw
+[(P)15(ara modi)]TJ
+/TT7 1 Tf
+4.162 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0945 Tw
+(car los permisos se utiliza el comando)Tj
+/TT4 1 Tf
+16.1293 0 TD
+0 Tw
+[(c)15(hmod)]TJ
+/TT6 1 Tf
+2.651 0 TD
+0.3445 Tc
+(,\()Tj
+/TT4 1 Tf
+0.9275 0 TD
+0 Tc
+[(c)15(hang)10(e)-344.5(mode)]TJ
+/TT6 1 Tf
+5.3732 0 TD
+0.0946 Tw
+[(\). Si primer ar)18(gumento se utiliza)]TJ
+-29.7992 -1.2 TD
+0.0397 Tw
+[(para dar o quitar permisos y el resto de ar)18(gumentos corresponden a los )]TJ
+/TT7 1 Tf
+28.9624 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0397 Tw
+(cheros a los que hay que ajustarle)Tj
+-29.5185 -1.2 TD
+0 Tw
+(los permisos. Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 498 Tm
+(unix$ chmod +x fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 480 Tm
+0.107 Tw
+(hace que)Tj
+/TT9 1 Tf
+3.9894 0 TD
+0 Tw
+(fich)Tj
+/TT6 1 Tf
+2.7574 0 TD
+0.107 Tw
+[(sea ejecutable. P)15(ara UNIX, cualquier )]TJ
+/TT7 1 Tf
+15.5962 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.107 Tw
+(chero con permiso de ejecución es un ejecutable.)Tj
+-22.8991 -1.2 TD
+0 Tw
+(Otra cosa será si cuando se intente ejecutar su contenido tiene sentido o no.)Tj
+0 -2.4 TD
+[(P)15(ara e)25(vitar escribir un )]TJ
+/TT7 1 Tf
+9.0118 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero por accidente, podemos quitar su permiso de escritura:)Tj
+/TT9 1 Tf
+8 0 0 8 133 426 Tm
+(unix$ chmod -w fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 408 Tm
+0.0434 Tw
+(Cuando utilizamos ")Tj
+/TT9 1 Tf
+8.2719 0 TD
+0 Tw
+(+)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0434 Tw
+(", damos permiso. Cuando utilizamos ")Tj
+/TT9 1 Tf
+15.8928 0 TD
+0 Tw
+(-)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0434 Tw
+(", lo quitamos. Detrás podemos escribir uno)Tj
+-25.3648 -1.2 TD
+0 Tw
+[(o)-250(más permisos:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 378 Tm
+(unix$ chmod +rx fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 348 Tm
+(En ocasiones, queremos dar permisos sólo para el usuario que es propietario del )Tj
+/TT7 1 Tf
+32.2129 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+/TT9 1 Tf
+8 0 0 8 133 330 Tm
+(unix$ chmod u+w fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 312 Tm
+0.1298 Tw
+(La ")Tj
+/TT9 1 Tf
+1.8427 0 TD
+0 Tw
+(u)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1298 Tw
+[(")-379.8(quiere decir)]TJ
+/TT4 1 Tf
+6.0448 0 TD
+0 Tw
+(user)Tj
+/TT6 1 Tf
+1.7222 0 TD
+0.1299 Tw
+[(.)-379.9(Igualmente, podemos quitar un permiso sólo para el grupo de usuarios al que)]TJ
+-10.2097 -1.2 TD
+0 Tw
+(pertenece el )Tj
+/TT7 1 Tf
+5.0518 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+/TT9 1 Tf
+8 0 0 8 133 282 Tm
+(unix$ chmod g-w fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 264 Tm
+0.0425 Tw
+(La ")Tj
+/TT9 1 Tf
+1.7554 0 TD
+0 Tw
+(g)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0425 Tw
+[(")-292.5(quiere decir)]TJ
+/TT4 1 Tf
+5.7828 0 TD
+0 Tw
+[(gr)45(oup)]TJ
+/TT6 1 Tf
+2.3442 0 TD
+0.0425 Tw
+[(.)-292.5(Del mismo modo podemos usar inicialmente una ")]TJ
+/TT9 1 Tf
+21.1056 0 TD
+0 Tw
+(o)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-292.5(\(por)]TJ
+/TT4 1 Tf
+2.6592 0 TD
+[(other)10(s)]TJ
+/TT6 1 Tf
+2.49 0 TD
+0.0425 Tw
+[(\))-292.5(para cambiar)]TJ
+-37.3374 -1.2 TD
+0 Tw
+(los permisos para el resto de usuarios.)Tj
+0 -2.4 TD
+0.0165 Tw
+[(En otros casos, resulta útil utilizar como ar)18(gumento para los permisos el número que guarda UNIX para los)]TJ
+0 -1.2 TD
+0.1119 Tw
+(mismos. Igual sucede al programar en C, donde hemos de utilizar una llamada al sistema que acepta un)Tj
+T*
+0.0122 Tw
+[(entero para indicar los permisos que deseamos. Es fácil si pensamos que estos nue)25(v)15(e)15( )-15(bits son tres grupos de)]TJ
+T*
+0.1059 Tw
+(tres bits. Cada grupo de permisos puede ir de "000" a "111". Escribiendo en base 8 podemos utilizar un)Tj
+T*
+0 Tw
+(sólo dígito para cada grupo de bits, y es justo lo que se hace. La )Tj
+/TT7 1 Tf
+25.7432 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gura 1 muestra el esquema. El comando)Tj
+/TT9 1 Tf
+8 0 0 8 133 162 Tm
+(unix$ chmod 755 fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 144 Tm
+0.104 Tw
+(dejaría los permisos de)Tj
+/TT9 1 Tf
+9.8579 0 TD
+0 Tw
+(fich)Tj
+/TT6 1 Tf
+2.7544 0 TD
+0.104 Tw
+(como ")Tj
+/TT9 1 Tf
+2.9839 0 TD
+0 Tw
+(rwxr-xr-x)Tj
+/TT6 1 Tf
+5.4009 0 TD
+0.1041 Tw
+(", dado que 7 es 111 en binario, con los tres bits a 1.)Tj
+-20.997 -1.2 TD
+0.0399 Tw
+[(Además, el se)15(gundo y tercer dígito en octal v)25(alen 5, por lo que los permisos para el grupo serían ")]TJ
+/TT9 1 Tf
+39.8651 0 TD
+0 Tw
+(r-x)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.2899 Tc
+[("\()289.9(4)]TJ
+-41.6654 -1.2 TD
+0 Tc
+(mas 1, o 101\) y lo mismo los permisos para el resto de usuarios.)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 2429
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT9 1 Tf
+-6.917 -5.14 TD
+(r)Tj
+ET
+1 i 
+216 651.6 m
+214.2 658.8 l
+217.8 658.8 l
+f
+0 G
+1 J 1 j 0.1 w 10 M []0 d
+216 651.6 m
+214.2 658.8 l
+217.8 658.8 l
+s
+0.4 w 
+216.03 687.63 m
+216.03 658.83 l
+S
+BT
+10 0 0 10 227.4 692.6 Tm
+(w)Tj
+ET
+230.4 651.6 m
+228.6 658.8 l
+232.2 658.8 l
+f
+0.1 w 
+230.4 651.6 m
+228.6 658.8 l
+232.2 658.8 l
+s
+0.4 w 
+230.43 687.63 m
+230.43 658.83 l
+S
+BT
+10 0 0 10 241.8 692.6 Tm
+(x)Tj
+ET
+244.8 651.6 m
+243 658.8 l
+246.6 658.8 l
+f
+0.1 w 
+244.8 651.6 m
+243 658.8 l
+246.6 658.8 l
+s
+0.4 w 
+244.83 687.63 m
+244.83 658.83 l
+S
+BT
+10 0 0 10 270.6 692.6 Tm
+(r)Tj
+ET
+273.6 651.6 m
+271.8 658.8 l
+275.4 658.8 l
+f
+0.1 w 
+273.6 651.6 m
+271.8 658.8 l
+275.4 658.8 l
+s
+0.4 w 
+273.63 687.63 m
+273.63 658.83 l
+S
+BT
+10 0 0 10 285 692.6 Tm
+(-)Tj
+ET
+288 651.6 m
+286.2 658.8 l
+289.8 658.8 l
+f
+0.1 w 
+288 651.6 m
+286.2 658.8 l
+289.8 658.8 l
+s
+0.4 w 
+288.03 687.63 m
+288.03 658.83 l
+S
+BT
+10 0 0 10 299.4 692.6 Tm
+(x)Tj
+ET
+302.4 651.6 m
+300.6 658.8 l
+304.2 658.8 l
+f
+0.1 w 
+302.4 651.6 m
+300.6 658.8 l
+304.2 658.8 l
+s
+0.4 w 
+302.43 687.63 m
+302.43 658.83 l
+S
+BT
+10 0 0 10 328.2 692.6 Tm
+(r)Tj
+ET
+331.2 651.6 m
+329.4 658.8 l
+333 658.8 l
+f
+0.1 w 
+331.2 651.6 m
+329.4 658.8 l
+333 658.8 l
+s
+0.4 w 
+331.23 687.63 m
+331.23 658.83 l
+S
+BT
+10 0 0 10 342.6 692.6 Tm
+(-)Tj
+ET
+345.6 651.6 m
+343.8 658.8 l
+347.4 658.8 l
+f
+0.1 w 
+345.6 651.6 m
+343.8 658.8 l
+347.4 658.8 l
+s
+0.4 w 
+345.63 687.63 m
+345.63 658.83 l
+S
+BT
+10 0 0 10 357 692.6 Tm
+(x)Tj
+ET
+360 651.6 m
+358.2 658.8 l
+361.8 658.8 l
+f
+0.1 w 
+360 651.6 m
+358.2 658.8 l
+361.8 658.8 l
+s
+0.4 w 
+360.03 687.63 m
+360.03 658.83 l
+S
+BT
+/TT6 1 Tf
+10 0 0 10 213.5 635 Tm
+0.94 Tc
+[(111)-1440(101)-1440(101)]TJ
+ET
+230.4 594 m
+228.6 601.2 l
+232.2 601.2 l
+f
+0.1 w 
+230.4 594 m
+228.6 601.2 l
+232.2 601.2 l
+s
+0.4 w 
+230.43 630.03 m
+230.43 601.23 l
+S
+BT
+10 0 0 10 227.9 584.6 Tm
+0 Tc
+(7)Tj
+ET
+288 594 m
+286.2 601.2 l
+289.8 601.2 l
+f
+0.1 w 
+288 594 m
+286.2 601.2 l
+289.8 601.2 l
+s
+0.4 w 
+288.03 630.03 m
+288.03 601.23 l
+S
+BT
+10 0 0 10 285.5 584.6 Tm
+(5)Tj
+ET
+345.6 594 m
+343.8 601.2 l
+347.4 601.2 l
+f
+0.1 w 
+345.6 594 m
+343.8 601.2 l
+347.4 601.2 l
+s
+0.4 w 
+345.63 630.03 m
+345.63 601.23 l
+S
+BT
+10 0 0 10 343.1 584.6 Tm
+(5)Tj
+/TT2 1 Tf
+-24.61 -2.8 TD
+(Figura 1:)Tj
+/TT4 1 Tf
+4.2217 0 TD
+(Los permisos en UNIX se codi)Tj
+/TT10 1 Tf
+12.1382 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(can como un númer)45(o)-250(e)0(n)-250(octal en muc)15(has ocasiones.)]TJ
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+/TT10 20 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+21 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+22 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 667 611 0 0 389 0 0 0 0 0 778 
+0 0 0 556 0 722 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 0 278 0 0 0 833 556 500 
+556 0 444 389 333 556 500 0 0 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 21 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 500 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 333 444 0 556 0 667 0 
+0 0 0 0 0 722 0 0 611 0 0 0 0 0 0 0 
+0 500 0 444 500 444 278 500 500 278 278 0 278 722 500 500 
+500 0 389 389 278 500 0 667 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 22 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+500 500 500 500 500 500 0 500 500 500 278 0 0 0 0 0 
+0 722 667 667 722 611 0 0 722 333 0 0 611 0 722 722 
+556 0 667 556 611 722 0 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 23 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 24 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 0 0 600 600 0 0 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 0 0 600 0 0 600 600 0 
+0 0 0 0 0 600 0 0 0 600 0 0 600 600 0 0 
+600 0 0 0 0 600 0 0 0 0 0 600 0 600 0 0 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 25 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [500 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 26 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+27 0 obj
+<<
+/S /D
+>>
+endobj
+28 0 obj
+<<
+/Nums [0 27 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R]
+/Count 4
+/MediaBox [0 0 612 792]
+>>
+endobj
+29 0 obj
+<<
+/CreationDate (D:20160905151709+02'00')
+/ModDate (D:20160905151709+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+30 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 28 0 R
+>>
+endobj
+xref
+0 31
+0000000000 65535 f 
+0000026792 00000 n 
+0000000016 00000 n 
+0000004812 00000 n 
+0000023858 00000 n 
+0000024514 00000 n 
+0000025198 00000 n 
+0000025943 00000 n 
+0000026113 00000 n 
+0000022531 00000 n 
+0000027193 00000 n 
+0000026873 00000 n 
+0000004951 00000 n 
+0000012932 00000 n 
+0000026957 00000 n 
+0000013061 00000 n 
+0000019778 00000 n 
+0000027041 00000 n 
+0000019907 00000 n 
+0000022389 00000 n 
+0000026620 00000 n 
+0000022671 00000 n 
+0000022873 00000 n 
+0000023073 00000 n 
+0000023270 00000 n 
+0000023467 00000 n 
+0000023658 00000 n 
+0000027125 00000 n 
+0000027153 00000 n 
+0000027296 00000 n 
+0000027419 00000 n 
+trailer
+<<
+/Size 31
+/Root 30 0 R
+/Info 29 0 R
+/ID [<2e0b39e3a782bf2f49b68fb8e95c3da8><2e0b39e3a782bf2f49b68fb8e95c3da8>]
+>>
+startxref
+27489
+%%EOF

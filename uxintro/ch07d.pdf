@@ -1,0 +1,2280 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 2457
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 158.01 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Concurr)18(encia)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Cierr)18(es )250(en )]TJ
+/TT5 1 Tf
+5.8966 0 TD
+0 Tw
+(Þ)Tj
+/TT2 1 Tf
+0.5562 0 TD
+[(cher)18(os)]TJ
+/TT7 1 Tf
+-6.4527 -1.56 TD
+0.0495 Tw
+(El siguiente programa incrementa un contador que tenemos escrito dentro de un )Tj
+/TT8 1 Tf
+32.8054 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0495 Tw
+(chero. Esto sucede en la)Tj
+-33.3616 -1.2 TD
+0.1256 Tw
+[(realidad en aplicaciones que deben numerar secuencialmente recursos cada v)15(ez que ejecuta determinado)]TJ
+T*
+0.0698 Tw
+(programa, por ejemplo. Si tenemos un )Tj
+/TT8 1 Tf
+15.971 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT10 1 Tf
+2.5404 0 TD
+(datafile)Tj
+/TT7 1 Tf
+5.1205 0 TD
+0.0697 Tw
+(que contiene ")Tj
+/TT10 1 Tf
+5.8787 0 TD
+0 Tw
+(3)Tj
+/TT7 1 Tf
+0.6001 0 TD
+0.0697 Tw
+[(")-319.7(y)-319.7(ejecutamos el programa, el)]TJ
+/TT8 1 Tf
+-30.6668 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero pasará a contener)Tj
+/TT10 1 Tf
+9.6606 0 TD
+(4)Tj
+/TT7 1 Tf
+0.6001 0 TD
+[(.)-250(E)0(l)-250(código del programa es simple:)]TJ
+/TT12 1 Tf
+-4.7169 -1.8 TD
+([incr.c])Tj
+/TT7 1 Tf
+4.8008 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 491.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <sys/file.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd, n, nb;)Tj
+T*
+(char buf[100];)Tj
+0 -3 TD
+(fd = open\("datafile", O_RDWR\);)Tj
+0 -1.5 TD
+(if\(fd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "open"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+[(n)-600(=)-600(read\(fd, buf, sizeof\(buf\)-1\);)]TJ
+T*
+(if\(n < 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buf[n] = 0;)Tj
+T*
+(nb = atoi\(buf\);)Tj
+T*
+(fprintf\(stderr, "nb is %d\\n", nb\);)Tj
+0 -3 TD
+(nb++;)Tj
+0 -1.5 TD
+(fprintf\(stderr, "set to %d\\n", nb\);)Tj
+T*
+(snprintf\(buf, sizeof buf, "%d", nb\);)Tj
+T*
+(lseek\(fd, 0, 0\);)Tj
+T*
+(if\(write\(fd, buf, strlen\(buf\)\) != strlen\(buf\)\) {)Tj
+2.4 -1.5 TD
+(err\(1, "write"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(fd\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT7 1 Tf
+10 0 0 10 72 65.4 Tm
+0.0098 Tw
+[(Hemos incluído multiples prints que no tendríamos normalmente para que v)15(eamos qué sucede al ejecutarlo.)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT5 6 0 R
+/TT7 7 0 R
+/TT8 8 0 R
+/TT10 9 0 R
+/TT12 10 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+14 0 obj
+<<
+/Length 3140
+>>
+stream
+BT
+/TT7 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+[(V)111(amos a hacerlo:)]TJ
+/TT10 1 Tf
+8 0 0 8 133 690 Tm
+(unix$ cat datafile)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(unix$ incr)Tj
+T*
+(nb is 3)Tj
+T*
+(set to 4)Tj
+T*
+(unix$ cat datafile)Tj
+T*
+(4)Tj
+T*
+(unix$)Tj
+/TT7 1 Tf
+10 0 0 10 72 588 Tm
+[(T)80(odo bien.)]TJ
+0 -2.4 TD
+-0.0003 Tc
+0.0003 Tw
+(Pero pongamos un)Tj
+/TT10 1 Tf
+7.6889 0 TD
+0 Tc
+0 Tw
+(sleep)Tj
+/TT7 1 Tf
+3.2505 0 TD
+(de tal forma que el código use ahora)Tj
+/TT10 1 Tf
+8 0 0 8 133 546 Tm
+(nb++;)Tj
+0 -1.5 TD
+(sleep\(5\);)Tj
+/TT7 1 Tf
+10 0 0 10 72 516 Tm
+-0.0002 Tc
+0.0002 Tw
+(en lugar de tan sólo incrementar)Tj
+/TT10 1 Tf
+13.101 0 TD
+0 Tc
+0 Tw
+(nb)Tj
+/TT7 1 Tf
+1.2002 0 TD
+[(.)-250(Y)-250(ahora ejecutemos dos v)15(eces el programa:)]TJ
+/TT10 1 Tf
+8 0 0 8 133 498 Tm
+(unix$ incr &)Tj
+0 -1.5 TD
+([1] 47846)Tj
+T*
+(nb is 4)Tj
+T*
+(unix$ incr)Tj
+T*
+(nb is 4)Tj
+T*
+(set to 5)Tj
+T*
+(set to 5)Tj
+T*
+(unix$ cat datafile)Tj
+T*
+(5)Tj
+T*
+(unix$)Tj
+/TT7 1 Tf
+10 0 0 10 72 372 Tm
+(¡Hemos perdido un incremento!)Tj
+0 -2.4 TD
+0.0131 Tw
+(Naturalmente, dos procesos que acceden al mismo )Tj
+/TT8 1 Tf
+20.5292 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0131 Tw
+(chero producen una condición de carrera por compartir)Tj
+-21.0854 -1.2 TD
+0 Tw
+(el )Tj
+/TT8 1 Tf
+1.0604 0 TD
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0887 Tw
+[(chero. Necesitamos un cierre.)-588.7(Si ambos procesos compartiesen memoria podríamos utilizar un cierre)]TJ
+-1.6165 -1.2 TD
+0.0333 Tw
+(como los que hemos antes sin ningún problema \(¡Aunque el recurso que cierran sea un )Tj
+/TT8 1 Tf
+35.4614 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0333 Tw
+(chero y esté fuera)Tj
+-36.0176 -1.2 TD
+0.0188 Tw
+[(de la memoria del proceso!\).)-518.9(Recuerda que todo esto es un con)40(v)15(enio. Hemos quedado en adquirir un cierre)]TJ
+T*
+0 Tw
+[(antes de entrar en la re)15(gión crítica, pero es tan sólo un acuerdo.)]TJ
+0 -2.4 TD
+0.0102 Tw
+(En este caso, por desgracia, los procesos no comparten memoria. Pero aún podemos solucionar el problema)Tj
+0 -1.2 TD
+0.0258 Tw
+(con la ayuda de UNIX. En UNIX es posible adquirir un cierre sobre un )Tj
+/TT8 1 Tf
+29.0467 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0258 Tw
+(chero e incluso sobre un rango de)Tj
+-29.6029 -1.2 TD
+0 Tw
+(bytes dentro de un )Tj
+/TT8 1 Tf
+7.6094 0 TD
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+[(chero. La llamada al sistema para conse)15(guirlo es)]TJ
+/TT13 1 Tf
+19.6159 0 TD
+(ß)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(oc)20(k\(2\))]TJ
+/TT7 1 Tf
+2.5337 0 TD
+[(.)-250(Concretamente,)]TJ
+/TT10 1 Tf
+8 0 0 8 133 234 Tm
+(flock\(fd, LOCK_EX\);)Tj
+/TT7 1 Tf
+10 0 0 10 72 216 Tm
+(echa el cierre en)Tj
+/TT10 1 Tf
+6.7725 0 TD
+(fd)Tj
+/TT7 1 Tf
+1.4502 0 TD
+[(de modo e)15(xclusi)25(v)20(o)20( )-20(\(como en los cierres que vimos antes\) y)]TJ
+/TT10 1 Tf
+8 0 0 8 133 198 Tm
+(flock\(fd, LOCK_UN\);)Tj
+/TT7 1 Tf
+10 0 0 10 72 180 Tm
+(libera el cierre. Si el proceso muere o cierra el descriptor de )Tj
+/TT8 1 Tf
+24.127 0 TD
+(Þ)Tj
+/TT7 1 Tf
+0.5561 0 TD
+(chero, el cierre se libera.)Tj
+-24.6831 -2.4 TD
+0.0801 Tw
+[(Sabiendo esto, el siguiente programa es la v)15(ersión correcta del programa anterior)40(,)-330.1(sin condiciones de car)20(-)]TJ
+0 -1.2 TD
+0 Tw
+(rera.)Tj
+ET
+endstream
+endobj
+15 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT7 7 0 R
+/TT8 8 0 R
+/TT10 9 0 R
+/TT13 16 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 2929
+>>
+stream
+BT
+/TT7 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT12 1 Tf
+-14.917 -3.6 TD
+([safeincr])Tj
+/TT7 1 Tf
+6.001 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 696 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <sys/file.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd, n, nb;)Tj
+T*
+(char buf[100];)Tj
+0 -3 TD
+(fd = open\("datafile", O_RDWR\);)Tj
+0 -1.5 TD
+(if\(fd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "open"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if\(flock\(fd, LOCK_EX\) != 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "lock"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+[(n)-600(=)-600(read\(fd, buf, sizeof\(buf\)-1\);)]TJ
+T*
+(if\(n < 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buf[n] = 0;)Tj
+T*
+(nb = atoi\(buf\);)Tj
+T*
+(fprintf\(stderr, "nb is %d\\n", nb\);)Tj
+0 -3 TD
+(nb++;)Tj
+T*
+(fprintf\(stderr, "set to %d\\n", nb\);)Tj
+0 -1.5 TD
+(snprintf\(buf, sizeof buf, "%d", nb\);)Tj
+T*
+(lseek\(fd, 0, 0\);)Tj
+T*
+(if\(write\(fd, buf, strlen\(buf\)\) != strlen\(buf\)\) {)Tj
+2.4 -1.5 TD
+(err\(1, "write"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if\(flock\(fd, LOCK_UN\) != 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "lock"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(fd\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT7 1 Tf
+10 0 0 10 72 174 Tm
+0.0472 Tw
+[(Recuerda que todo esto es un con)40(v)15(enio. ¡Podríamos echar el cierre en un )]TJ
+/TT8 1 Tf
+29.8814 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0472 Tw
+(chero para trabajar en otro! Así)Tj
+-30.4375 -1.2 TD
+0.0935 Tw
+(pues, tenemos ya la forma de trabajar con )Tj
+/TT8 1 Tf
+17.6577 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0935 Tw
+(cheros compartidos. Basta pensar dónde y cómo disponemos)Tj
+/TT8 1 Tf
+-18.2138 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.118 Tw
+(cheros que usamos como cierre. Por ejemplo, muchos programas de correo utilizan un )Tj
+/TT8 1 Tf
+36.2733 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5561 0 TD
+0.118 Tw
+(chero llamado)Tj
+/TT10 1 Tf
+-37.3856 -1.2 TD
+0 Tw
+(.LOCK)Tj
+/TT7 1 Tf
+3.3008 0 TD
+0.0503 Tw
+[(en el directorio que contiene los b)20(uzones de correo \(que son )]TJ
+/TT8 1 Tf
+24.7745 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0503 Tw
+[(cheros\). P)15(ara utilizar los )]TJ
+/TT8 1 Tf
+10.1549 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0503 Tw
+(cheros en)Tj
+-39.3426 -1.2 TD
+0.0253 Tw
+(dicho directorio, estos programas llaman a)Tj
+/TT10 1 Tf
+17.3964 0 TD
+0 Tw
+(flock)Tj
+/TT7 1 Tf
+3.2758 0 TD
+(sobre)Tj
+/TT10 1 Tf
+2.4413 0 TD
+(.LOCK)Tj
+/TT7 1 Tf
+3.2758 0 TD
+0.0254 Tw
+[(y)-275.3(lue)15(go trabajan con los b)20(uzones. Cuando)]TJ
+-26.3893 -1.2 TD
+0.07 Tw
+[(terminan de trabajar)40(,)-320(sueltan el cierre. No es muy diferente a lo que hicimos nosotros utilizando una v)25(ari-)]TJ
+T*
+0 Tw
+(able)Tj
+/TT10 1 Tf
+1.9155 0 TD
+(lock)Tj
+/TT7 1 Tf
+2.6504 0 TD
+[(para tener e)15(xclusión mutua en el acceso a un contador)]TJ
+/TT10 1 Tf
+21.8087 0 TD
+(cnt)Tj
+/TT7 1 Tf
+1.8003 0 TD
+(.)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT7 7 0 R
+/TT8 8 0 R
+/TT10 9 0 R
+/TT12 10 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 3035
+>>
+stream
+BT
+/TT7 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT2 1 Tf
+-21.017 -3.6 TD
+[(2. )-250(Cierr)18(es de lectura/escritura)]TJ
+/TT7 1 Tf
+0 -1.56 TD
+0.0258 Tw
+[(Como en ocasiones nos pre)15(guntamos qué v)25(alor tendrá el contador que incrementamos en el programa ante-)]TJ
+0 -1.2 TD
+0.061 Tw
+[(rior)40(,)-311(v)25(amos a realizar un programa para imprimirlo. Podríamos utilizar)]TJ
+/TT4 1 Tf
+29.0357 0 TD
+0 Tw
+(cat\(1\))Tj
+/TT7 1 Tf
+2.3877 0 TD
+0.061 Tw
+[(,)-311(naturalmente, pero v)25(amos a)]TJ
+-31.4234 -1.2 TD
+0 Tw
+[(hacer un programa que pueda v)15(er el v)25(alor sin condiciones de carrera.)]TJ
+/TT12 1 Tf
+6.1 -3 TD
+([safecat])Tj
+/TT7 1 Tf
+5.4009 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 626.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <sys/file.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd, n, nb;)Tj
+T*
+(char buf[100];)Tj
+0 -3 TD
+(fd = open\("datafile", O_RDONLY\);)Tj
+0 -1.5 TD
+(if\(fd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "open"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if\(flock\(fd, LOCK_EX\) != 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "lock"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+[(n)-600(=)-600(read\(fd, buf, sizeof\(buf\)-1\);)]TJ
+T*
+(if\(n < 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buf[n] = 0;)Tj
+T*
+(nb = atoi\(buf\);)Tj
+T*
+(fprintf\(stderr, "nb is %d\\n", nb\);)Tj
+T*
+(if\(flock\(fd, LOCK_UN\) != 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "lock"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(fd\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT7 1 Tf
+10 0 0 10 72 212.4 Tm
+(Podemos usarlo sin condiciones de carrera:)Tj
+/TT10 1 Tf
+8 0 0 8 133 194.4 Tm
+(unix$ safecat)Tj
+T*
+(nb is 5)Tj
+T*
+(unix$)Tj
+/TT7 1 Tf
+10 0 0 10 72 140.4 Tm
+0.1857 Tw
+(¿Qué sucede si ejecutamos tres)Tj
+/TT10 1 Tf
+13.618 0 TD
+0 Tw
+(safecat)Tj
+/TT7 1 Tf
+4.6364 0 TD
+0.4357 Tc
+[(yu)435.7(n)]TJ
+/TT10 1 Tf
+2.3714 0 TD
+0 Tc
+(safeinr)Tj
+/TT7 1 Tf
+4.6364 0 TD
+0.1857 Tw
+[(simultáneamente? T)80(odos ellos adquieren el)]TJ
+-25.2621 -1.2 TD
+0.0069 Tw
+(cierre sobre el )Tj
+/TT8 1 Tf
+5.9338 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.007 Tw
+[(chero para trabajar en él con e)14.9(xclusión mutua y)64.9(,)-257(aunque el orden en que consigan ejecutar y)]TJ
+-6.4899 -1.2 TD
+0 Tc
+0 Tw
+[(echar el cierre v)25(ariará, podríamos tener una ejecución como la que v)15(emos en la )]TJ
+/TT8 1 Tf
+31.8057 0 TD
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(gura 1.)Tj
+-32.3619 -2.4 TD
+0.1043 Tw
+[(Si hay muchos procesos le)15(yendo \(ejecutando)]TJ
+/TT10 1 Tf
+18.8281 0 TD
+0 Tw
+(safecat)Tj
+/TT7 1 Tf
+4.2007 0 TD
+0.1043 Tw
+[(\))-354.3(tardaremos mucho en ejecutarlo todo. Pero hay)]TJ
+-23.0288 -1.2 TD
+0.0192 Tw
+(una posibilidad de mejorar las cosas: puesto que los lectores sólo leen el )Tj
+/TT8 1 Tf
+29.3809 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0192 Tw
+(chero, es posible ejecutar más de)Tj
+-29.9371 -1.2 TD
+0.0842 Tw
+[(un lector a la v)15(ez sin e)15(xclusión mutua respecto a otros lectores. Dicho de otro modo, podríamos tener un)]TJ
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT7 7 0 R
+/TT8 8 0 R
+/TT10 9 0 R
+/TT12 10 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 12587
+>>
+stream
+BT
+/TT7 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-15.4 -6.22 TD
+(Escritor)Tj
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+171.03 684.03 m
+243.03 684.03 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 193.115 687.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6667 -1.2 TD
+(cerrado)Tj
+ET
+243.03 684.03 m
+246.63 684.03 l
+250.11 684.03 m
+253.71 684.03 l
+257.19 684.03 m
+260.79 684.03 l
+264.27 684.03 m
+267.87 684.03 l
+271.35 684.03 m
+274.95 684.03 l
+278.43 684.03 m
+282.03 684.03 l
+285.51 684.03 m
+289.11 684.03 l
+292.59 684.03 m
+296.19 684.03 l
+299.67 684.03 m
+303.27 684.03 l
+306.75 684.03 m
+310.35 684.03 l
+313.83 684.03 m
+317.43 684.03 l
+320.91 684.03 m
+324.51 684.03 l
+327.99 684.03 m
+331.59 684.03 l
+335.07 684.03 m
+338.67 684.03 l
+342.15 684.03 m
+345.75 684.03 l
+349.23 684.03 m
+352.83 684.03 l
+356.31 684.03 m
+359.91 684.03 l
+363.39 684.03 m
+366.99 684.03 l
+370.47 684.03 m
+374.07 684.03 l
+377.55 684.03 m
+381.15 684.03 l
+384.63 684.03 m
+388.23 684.03 l
+391.71 684.03 m
+395.31 684.03 l
+398.79 684.03 m
+402.39 684.03 l
+405.87 684.03 m
+409.47 684.03 l
+412.95 684.03 m
+416.55 684.03 l
+420.03 684.03 m
+423.63 684.03 l
+427.11 684.03 m
+430.71 684.03 l
+434.19 684.03 m
+437.79 684.03 l
+441.27 684.03 m
+444.87 684.03 l
+448.35 684.03 m
+451.95 684.03 l
+455.43 684.03 m
+459.03 684.03 l
+S
+BT
+10 0 0 10 127.2 645.8 Tm
+(Lector 1)Tj
+ET
+171.03 648.03 m
+174.63 648.03 l
+178.59 648.03 m
+182.19 648.03 l
+186.15 648.03 m
+189.75 648.03 l
+193.83 648.03 m
+197.43 648.03 l
+201.39 648.03 m
+204.99 648.03 l
+209.07 648.03 m
+212.67 648.03 l
+216.63 648.03 m
+220.23 648.03 l
+224.19 648.03 m
+227.79 648.03 l
+231.75 648.03 m
+235.35 648.03 l
+239.43 648.03 m
+315.03 648.03 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 265.115 651.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6667 -1.2 TD
+(cerrado)Tj
+ET
+315.03 648.03 m
+318.63 648.03 l
+322.11 648.03 m
+325.71 648.03 l
+329.07 648.03 m
+332.67 648.03 l
+336.03 648.03 m
+339.63 648.03 l
+343.11 648.03 m
+346.71 648.03 l
+350.07 648.03 m
+353.67 648.03 l
+357.15 648.03 m
+360.75 648.03 l
+364.23 648.03 m
+367.83 648.03 l
+371.19 648.03 m
+374.79 648.03 l
+378.15 648.03 m
+381.75 648.03 l
+385.23 648.03 m
+388.83 648.03 l
+392.19 648.03 m
+395.79 648.03 l
+399.27 648.03 m
+402.87 648.03 l
+406.35 648.03 m
+409.95 648.03 l
+413.31 648.03 m
+416.91 648.03 l
+420.39 648.03 m
+423.99 648.03 l
+427.35 648.03 m
+430.95 648.03 l
+434.31 648.03 m
+437.91 648.03 l
+441.39 648.03 m
+444.99 648.03 l
+448.47 648.03 m
+452.07 648.03 l
+455.43 648.03 m
+459.03 648.03 l
+S
+BT
+10 0 0 10 127.2 609.8 Tm
+(Lector 2)Tj
+ET
+171.03 612.03 m
+174.63 612.03 l
+177.99 612.03 m
+181.59 612.03 l
+185.07 612.03 m
+188.67 612.03 l
+192.03 612.03 m
+195.63 612.03 l
+199.11 612.03 m
+202.71 612.03 l
+206.19 612.03 m
+209.79 612.03 l
+213.15 612.03 m
+216.75 612.03 l
+220.23 612.03 m
+223.83 612.03 l
+227.19 612.03 m
+230.79 612.03 l
+234.15 612.03 m
+237.75 612.03 l
+241.23 612.03 m
+244.83 612.03 l
+248.31 612.03 m
+251.91 612.03 l
+255.27 612.03 m
+258.87 612.03 l
+262.35 612.03 m
+265.95 612.03 l
+269.31 612.03 m
+272.91 612.03 l
+276.39 612.03 m
+279.99 612.03 l
+283.35 612.03 m
+286.95 612.03 l
+290.31 612.03 m
+293.91 612.03 l
+297.39 612.03 m
+300.99 612.03 l
+304.47 612.03 m
+308.07 612.03 l
+311.43 612.03 m
+387.03 612.03 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 337.115 615.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6667 -1.2 TD
+(cerrado)Tj
+ET
+387.03 612.03 m
+390.63 612.03 l
+394.59 612.03 m
+398.19 612.03 l
+402.15 612.03 m
+405.75 612.03 l
+409.83 612.03 m
+413.43 612.03 l
+417.39 612.03 m
+420.99 612.03 l
+425.07 612.03 m
+428.67 612.03 l
+432.63 612.03 m
+436.23 612.03 l
+440.19 612.03 m
+443.79 612.03 l
+447.75 612.03 m
+451.35 612.03 l
+455.43 612.03 m
+459.03 612.03 l
+S
+BT
+10 0 0 10 127.2 573.8 Tm
+(Lector 3)Tj
+ET
+171.03 576.03 m
+174.63 576.03 l
+178.11 576.03 m
+181.71 576.03 l
+185.19 576.03 m
+188.79 576.03 l
+192.27 576.03 m
+195.87 576.03 l
+199.35 576.03 m
+202.95 576.03 l
+206.43 576.03 m
+210.03 576.03 l
+213.51 576.03 m
+217.11 576.03 l
+220.59 576.03 m
+224.19 576.03 l
+227.67 576.03 m
+231.27 576.03 l
+234.75 576.03 m
+238.35 576.03 l
+241.83 576.03 m
+245.43 576.03 l
+248.91 576.03 m
+252.51 576.03 l
+255.99 576.03 m
+259.59 576.03 l
+263.07 576.03 m
+266.67 576.03 l
+270.15 576.03 m
+273.75 576.03 l
+277.23 576.03 m
+280.83 576.03 l
+284.31 576.03 m
+287.91 576.03 l
+291.39 576.03 m
+294.99 576.03 l
+298.47 576.03 m
+302.07 576.03 l
+305.55 576.03 m
+309.15 576.03 l
+312.63 576.03 m
+316.23 576.03 l
+319.71 576.03 m
+323.31 576.03 l
+326.79 576.03 m
+330.39 576.03 l
+333.87 576.03 m
+337.47 576.03 l
+340.95 576.03 m
+344.55 576.03 l
+348.03 576.03 m
+351.63 576.03 l
+355.11 576.03 m
+358.71 576.03 l
+362.19 576.03 m
+365.79 576.03 l
+369.27 576.03 m
+372.87 576.03 l
+376.35 576.03 m
+379.95 576.03 l
+383.43 576.03 m
+459.03 576.03 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 409.115 579.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6666 -1.2 TD
+(cerrado)Tj
+/TT2 1 Tf
+-31.101 -3.28 TD
+0.0746 Tw
+(Figura 1:)Tj
+/TT4 1 Tf
+4.3709 0 TD
+[(Múltiples lector)37(es y escritor)37(es de un )]TJ
+/TT13 1 Tf
+15.1483 0 TD
+0 Tw
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+0.0747 Tw
+[(c)15(her)45(o)-324.7(con un cierr)37(e)-324.7(e)20(xclusivo. Sólo puede ejecutar)]TJ
+-20.0192 -1.2 TD
+0 Tw
+[(uno cada vez dentr)45(o)-250(d)0(e)-250(l)0(a)-250(r)37(e)40(gión crítica.)]TJ
+/TT7 1 Tf
+-2.5 -1.2 TD
+0.0018 Tw
+[(escritor o cualquier número de lectores, pero no ambas cosas. Existe un tipo de cierre que permite e)15(xclusión)]TJ
+T*
+0.0373 Tw
+[(mutua entre lectores y escritores. Permite lectores concurrentes en e)15(xclusión con escritores.)-537.3(Naturalmente,)]TJ
+T*
+0.113 Tw
+[(los escritores e)15(xcluyen otros escritores también. Si utilizamos este tipo de cierre, la ejecución podría ser)]TJ
+T*
+0.0261 Tw
+[(como se v)15(en la )]TJ
+/TT8 1 Tf
+6.3098 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.0261 Tw
+[(gura 2. Como puede v)15(erse, los procesos han de esperar en menos y)65(,)-276.1(conjuntamente, termi-)]TJ
+-6.866 -1.2 TD
+0 Tw
+(namos antes.)Tj
+5.617 -3.82 TD
+(Escritor)Tj
+ET
+171.03 426.99 m
+243.03 426.99 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 193.115 430.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6667 -1.2 TD
+(cerrado)Tj
+ET
+243.03 426.99 m
+246.63 426.99 l
+250.11 426.99 m
+253.71 426.99 l
+257.19 426.99 m
+260.79 426.99 l
+264.27 426.99 m
+267.87 426.99 l
+271.35 426.99 m
+274.95 426.99 l
+278.43 426.99 m
+282.03 426.99 l
+285.51 426.99 m
+289.11 426.99 l
+292.59 426.99 m
+296.19 426.99 l
+299.67 426.99 m
+303.27 426.99 l
+306.75 426.99 m
+310.35 426.99 l
+313.83 426.99 m
+317.43 426.99 l
+320.91 426.99 m
+324.51 426.99 l
+327.99 426.99 m
+331.59 426.99 l
+335.07 426.99 m
+338.67 426.99 l
+342.15 426.99 m
+345.75 426.99 l
+349.23 426.99 m
+352.83 426.99 l
+356.31 426.99 m
+359.91 426.99 l
+363.39 426.99 m
+366.99 426.99 l
+370.47 426.99 m
+374.07 426.99 l
+377.55 426.99 m
+381.15 426.99 l
+384.63 426.99 m
+388.23 426.99 l
+391.71 426.99 m
+395.31 426.99 l
+398.79 426.99 m
+402.39 426.99 l
+405.87 426.99 m
+409.47 426.99 l
+412.95 426.99 m
+416.55 426.99 l
+420.03 426.99 m
+423.63 426.99 l
+427.11 426.99 m
+430.71 426.99 l
+434.19 426.99 m
+437.79 426.99 l
+441.27 426.99 m
+444.87 426.99 l
+448.35 426.99 m
+451.95 426.99 l
+455.43 426.99 m
+459.03 426.99 l
+S
+BT
+10 0 0 10 127.2 388.8 Tm
+(Lector 1)Tj
+ET
+171.03 390.99 m
+171.03 390.99 l
+174.63 390.99 m
+174.63 390.99 l
+178.23 390.99 m
+178.23 390.99 l
+181.83 390.99 m
+181.83 390.99 l
+185.43 390.99 m
+185.43 390.99 l
+189.03 390.99 m
+189.03 390.99 l
+192.63 390.99 m
+192.63 390.99 l
+196.23 390.99 m
+196.23 390.99 l
+199.83 390.99 m
+199.83 390.99 l
+203.43 390.99 m
+203.43 390.99 l
+207.03 390.99 m
+207.03 390.99 l
+210.63 390.99 m
+210.63 390.99 l
+214.23 390.99 m
+214.23 390.99 l
+217.83 390.99 m
+217.83 390.99 l
+221.43 390.99 m
+221.43 390.99 l
+225.03 390.99 m
+225.03 390.99 l
+228.63 390.99 m
+228.63 390.99 l
+232.23 390.99 m
+232.23 390.99 l
+235.83 390.99 m
+235.83 390.99 l
+239.43 390.99 m
+239.43 390.99 l
+243.03 390.99 m
+315.03 390.99 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 265.115 394.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6667 -1.2 TD
+(cerrado)Tj
+ET
+315.03 390.99 m
+318.63 390.99 l
+322.11 390.99 m
+325.71 390.99 l
+329.07 390.99 m
+332.67 390.99 l
+336.03 390.99 m
+339.63 390.99 l
+343.11 390.99 m
+346.71 390.99 l
+350.07 390.99 m
+353.67 390.99 l
+357.15 390.99 m
+360.75 390.99 l
+364.23 390.99 m
+367.83 390.99 l
+371.19 390.99 m
+374.79 390.99 l
+378.15 390.99 m
+381.75 390.99 l
+385.23 390.99 m
+388.83 390.99 l
+392.19 390.99 m
+395.79 390.99 l
+399.27 390.99 m
+402.87 390.99 l
+406.35 390.99 m
+409.95 390.99 l
+413.31 390.99 m
+416.91 390.99 l
+420.39 390.99 m
+423.99 390.99 l
+427.35 390.99 m
+430.95 390.99 l
+434.31 390.99 m
+437.91 390.99 l
+441.39 390.99 m
+444.99 390.99 l
+448.47 390.99 m
+452.07 390.99 l
+455.43 390.99 m
+459.03 390.99 l
+S
+BT
+10 0 0 10 127.2 352.8 Tm
+(Lector 2)Tj
+ET
+171.03 354.99 m
+171.03 354.99 l
+174.63 354.99 m
+174.63 354.99 l
+178.23 354.99 m
+178.23 354.99 l
+181.83 354.99 m
+181.83 354.99 l
+185.43 354.99 m
+185.43 354.99 l
+189.03 354.99 m
+189.03 354.99 l
+192.63 354.99 m
+192.63 354.99 l
+196.23 354.99 m
+196.23 354.99 l
+199.83 354.99 m
+199.83 354.99 l
+203.43 354.99 m
+203.43 354.99 l
+207.03 354.99 m
+207.03 354.99 l
+210.63 354.99 m
+210.63 354.99 l
+214.23 354.99 m
+214.23 354.99 l
+217.83 354.99 m
+217.83 354.99 l
+221.43 354.99 m
+221.43 354.99 l
+225.03 354.99 m
+225.03 354.99 l
+228.63 354.99 m
+228.63 354.99 l
+232.23 354.99 m
+232.23 354.99 l
+235.83 354.99 m
+235.83 354.99 l
+239.43 354.99 m
+239.43 354.99 l
+243.03 354.99 m
+243.03 354.99 l
+246.63 354.99 m
+246.63 354.99 l
+250.23 354.99 m
+322.23 354.99 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 272.315 358.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6666 -1.2 TD
+(cerrado)Tj
+ET
+322.23 354.99 m
+325.83 354.99 l
+329.67 354.99 m
+333.27 354.99 l
+336.99 354.99 m
+340.59 354.99 l
+344.43 354.99 m
+348.03 354.99 l
+351.75 354.99 m
+355.35 354.99 l
+359.19 354.99 m
+362.79 354.99 l
+366.63 354.99 m
+370.23 354.99 l
+373.95 354.99 m
+377.55 354.99 l
+381.39 354.99 m
+384.99 354.99 l
+388.83 354.99 m
+392.43 354.99 l
+396.27 354.99 m
+399.87 354.99 l
+403.59 354.99 m
+407.19 354.99 l
+411.03 354.99 m
+414.63 354.99 l
+418.35 354.99 m
+421.95 354.99 l
+425.79 354.99 m
+429.39 354.99 l
+433.23 354.99 m
+436.83 354.99 l
+440.55 354.99 m
+444.15 354.99 l
+447.99 354.99 m
+451.59 354.99 l
+455.43 354.99 m
+459.03 354.99 l
+S
+BT
+10 0 0 10 127.2 316.8 Tm
+(Lector 3)Tj
+ET
+171.03 318.99 m
+171.03 318.99 l
+174.63 318.99 m
+174.63 318.99 l
+178.23 318.99 m
+178.23 318.99 l
+181.83 318.99 m
+181.83 318.99 l
+185.43 318.99 m
+185.43 318.99 l
+189.03 318.99 m
+189.03 318.99 l
+192.63 318.99 m
+192.63 318.99 l
+196.23 318.99 m
+196.23 318.99 l
+199.83 318.99 m
+199.83 318.99 l
+203.43 318.99 m
+203.43 318.99 l
+207.03 318.99 m
+207.03 318.99 l
+210.63 318.99 m
+210.63 318.99 l
+214.23 318.99 m
+214.23 318.99 l
+217.83 318.99 m
+217.83 318.99 l
+221.43 318.99 m
+221.43 318.99 l
+225.03 318.99 m
+225.03 318.99 l
+228.63 318.99 m
+228.63 318.99 l
+232.23 318.99 m
+232.23 318.99 l
+235.83 318.99 m
+235.83 318.99 l
+239.43 318.99 m
+239.43 318.99 l
+243.03 318.99 m
+243.03 318.99 l
+246.63 318.99 m
+246.63 318.99 l
+250.23 318.99 m
+250.23 318.99 l
+253.83 318.99 m
+253.83 318.99 l
+257.43 318.99 m
+329.43 318.99 l
+S
+BT
+/TT8 1 Tf
+10 0 0 10 279.515 322.8 Tm
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+(chero)Tj
+-0.6667 -1.2 TD
+(cerrado)Tj
+ET
+329.43 318.99 m
+333.03 318.99 l
+336.87 318.99 m
+340.47 318.99 l
+344.19 318.99 m
+347.79 318.99 l
+351.63 318.99 m
+355.23 318.99 l
+359.07 318.99 m
+362.67 318.99 l
+366.51 318.99 m
+370.11 318.99 l
+373.95 318.99 m
+377.55 318.99 l
+381.27 318.99 m
+384.87 318.99 l
+388.71 318.99 m
+392.31 318.99 l
+396.03 318.99 m
+399.63 318.99 l
+403.47 318.99 m
+407.07 318.99 l
+410.91 318.99 m
+414.51 318.99 l
+418.35 318.99 m
+421.95 318.99 l
+425.79 318.99 m
+429.39 318.99 l
+433.11 318.99 m
+436.71 318.99 l
+440.55 318.99 m
+444.15 318.99 l
+447.99 318.99 m
+451.59 318.99 l
+455.43 318.99 m
+459.03 318.99 l
+S
+BT
+/TT2 1 Tf
+10 0 0 10 97 278 Tm
+0.0509 Tw
+(Figura 2:)Tj
+/TT4 1 Tf
+4.3235 0 TD
+[(Con un cierr)37(e)-300.9(d)0(e)-300.9(tipo lector)37(es/escritor)37(es permitimos múltiples lector)37(es concurr)37(entes man-)]TJ
+-4.3235 -1.2 TD
+0 Tw
+[(teniendo la e)20(xclusión mutua de los escritor)37(es.)]TJ
+/TT7 1 Tf
+-2.5 -2.4 TD
+0.1148 Tw
+[(Otra forma de v)15(erlo \(que en realidad coincide con la implementación\) es pensar que los escritores com-)]TJ
+0 -1.2 TD
+0 Tw
+[(parten el mute)15(x)-250(con otros lectores cuando lo adquieren.)]TJ
+0 -2.4 TD
+0.101 Tw
+[(En nuestro programa podemos conse)15(guir este efecto haciendo que)]TJ
+/TT10 1 Tf
+27.5791 0 TD
+0 Tw
+(safecat)Tj
+/TT7 1 Tf
+4.5517 0 TD
+0.101 Tw
+(adquiera el cierre en modo)Tj
+/TT4 1 Tf
+-32.1307 -1.2 TD
+0 Tw
+(lector)Tj
+/TT7 1 Tf
+2.3325 0 TD
+0.3463 Tw
+[(.)-596.4(S)0(i)-596.4(hacemos tal cosa, estamos utilizando el cierre del )]TJ
+/TT8 1 Tf
+25.0115 0 TD
+0 Tw
+(Þ)Tj
+/TT7 1 Tf
+0.5562 0 TD
+0.3463 Tw
+(chero como un cierre de tipo lec-)Tj
+-27.9002 -1.2 TD
+0 Tw
+(tores/escritores, también llamado)Tj
+/TT2 1 Tf
+13.4956 0 TD
+[(r)18(ead/write lock)]TJ
+/TT7 1 Tf
+6.4522 0 TD
+(.)Tj
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT7 7 0 R
+/TT8 8 0 R
+/TT10 9 0 R
+/TT13 16 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+27 0 obj
+<<
+/Length 2403
+>>
+stream
+BT
+/TT7 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT12 1 Tf
+-14.917 -3.6 TD
+([safecatr])Tj
+/TT7 1 Tf
+6.001 0 TD
+(:)Tj
+/TT10 1 Tf
+8 0 0 8 133 696 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <sys/file.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd, n, nb;)Tj
+T*
+(char buf[100];)Tj
+0 -3 TD
+(fd = open\("afile", O_RDONLY\);)Tj
+0 -1.5 TD
+(if\(fd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "open"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if\(flock\(fd, LOCK_SH\) != 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "lock"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+[(n)-600(=)-600(read\(fd, buf, sizeof\(buf\)-1\);)]TJ
+T*
+(if\(n < 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buf[n] = 0;)Tj
+T*
+(nb = atoi\(buf\);)Tj
+T*
+(fprintf\(stderr, "nb is %d\\n", nb\);)Tj
+T*
+(if\(flock\(fd, LOCK_UN\) != 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "lock"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(fd\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT7 1 Tf
+10 0 0 10 72 282 Tm
+0.0912 Tw
+(Ahora tenemos algunos \(lectores\) que adquieren un cierre usando)Tj
+/TT10 1 Tf
+27.2832 0 TD
+0 Tw
+(LOCK_SH)Tj
+/TT7 1 Tf
+4.542 0 TD
+(\()Tj
+/TT4 1 Tf
+0.333 0 TD
+[(shar)37(ed)]TJ
+/TT7 1 Tf
+2.6852 0 TD
+0.0913 Tw
+[(\))-341.3(y)-341.3(otros \(escritores\))]TJ
+-34.8434 -1.2 TD
+0 Tw
+(que lo hacen usando)Tj
+/TT10 1 Tf
+8.3862 0 TD
+(LOCK_EX)Tj
+/TT7 1 Tf
+4.4507 0 TD
+(\()Tj
+/TT4 1 Tf
+0.333 0 TD
+[(e)20(xclusive)]TJ
+/TT7 1 Tf
+3.6441 0 TD
+(\).)Tj
+/TT2 1 Tf
+-16.814 -3.6 TD
+[(3. )-250(Cierr)18(es de lectura/escritura para thr)18(eads)]TJ
+/TT7 1 Tf
+0 -1.56 TD
+0.1124 Tw
+(La librería de)Tj
+/TT4 1 Tf
+5.9729 0 TD
+0 Tw
+[(pthr)37(eads)]TJ
+/TT7 1 Tf
+3.8254 0 TD
+0.1123 Tw
+(dispone de cierres de tipo lectura/escritura. Su uso es similar al que hemos visto)Tj
+-9.7983 -1.2 TD
+0 Tw
+[(para usar los mute)15(x)-250(d)0(e)]TJ
+/TT4 1 Tf
+9.2321 0 TD
+[(pthr)37(ead)]TJ
+/TT7 1 Tf
+3.0738 0 TD
+[(,)-250(pero las v)25(ariables de tipo cierre se declaran e inicializan como en)]TJ
+/TT10 1 Tf
+8 0 0 8 133 188.4 Tm
+(pthread_rwlock_t rwlock;)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(pthread_rwlock_init\(&rwlock\);)Tj
+/TT7 1 Tf
+10 0 0 10 72 146.4 Tm
+[(o)-250(bien)]TJ
+/TT10 1 Tf
+8 0 0 8 133 128.4 Tm
+(pthread_rwlock_t rwlock = PTHREAD_RWLOCK_INITIALIZER;)Tj
+/TT7 1 Tf
+10 0 0 10 72 98.4 Tm
+[(Un lector usaría estas llamadas para prote)15(ger su re)15(gión crítica:)]TJ
+ET
+endstream
+endobj
+28 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT7 7 0 R
+/TT10 9 0 R
+/TT12 10 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+30 0 obj
+<<
+/Length 882
+>>
+stream
+BT
+/TT7 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+/TT10 1 Tf
+8 0 0 8 133 708 Tm
+(pthread_rwlock_rdlock\(&rwlock\);)Tj
+2.4 -1.5 TD
+(... región crítica ...)Tj
+-2.4 -1.5 TD
+(pthread_rwlock_unlock\(&rwlock\);)Tj
+/TT7 1 Tf
+10 0 0 10 72 666 Tm
+[(Y)-250(u)0(n)-250(escritor estas otras:)]TJ
+/TT10 1 Tf
+8 0 0 8 133 648 Tm
+(pthread_rwlock_wrlock\(&rwlock\);)Tj
+2.4 -1.5 TD
+(... región crítica ...)Tj
+-2.4 -1.5 TD
+(pthread_rwlock_unlock\(&rwlock\);)Tj
+/TT7 1 Tf
+10 0 0 10 72 594 Tm
+[(Una v)15(ez deja de ser necesario el cierre hay que liberar sus recursos con)]TJ
+/TT10 1 Tf
+8 0 0 8 133 576 Tm
+(pthread_rwlock_destroy\(&rwlock\);)Tj
+/TT7 1 Tf
+10 0 0 10 72 546 Tm
+0.0382 Tw
+[(Si un proceso necesita un cierre como lector y posteriormente con)40(v)15(ertirse en escritor)40(,)-288.2(suele ser mejor man-)]TJ
+0 -1.2 TD
+0 Tw
+(tener el cierre como escritor todo el tiempo.)Tj
+ET
+endstream
+endobj
+31 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT7 7 0 R
+/TT10 9 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+11 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+32 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+33 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+34 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+35 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+36 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+37 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+38 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+39 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 278 
+0 500 500 500 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 611 0 0 389 0 0 0 0 0 778 
+0 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 556 278 0 556 278 833 556 500 
+556 0 444 389 333 556 500 722 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 32 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 250 278 
+0 500 500 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 833 0 0 
+0 0 0 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 500 444 0 500 500 278 278 444 278 722 500 500 
+500 0 389 389 278 500 444 0 444 444 389 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 33 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 34 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+0 500 500 500 500 500 500 500 0 0 278 0 0 0 0 444 
+0 722 667 667 722 611 0 0 722 333 0 0 611 0 722 722 
+556 722 667 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 35 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 36 0 R
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 600 
+600 600 0 600 600 600 600 600 600 0 0 600 600 600 600 0 
+0 600 0 600 600 600 0 0 600 600 0 600 600 0 600 600 
+600 0 600 600 600 600 0 600 600 600 600 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 0 
+0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 37 0 R
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 116
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 600 0 600 0 600 600 0 0 600 0 0 0 0 
+600 0 0 0 600 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 38 0 R
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [500 500 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 39 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 15 0 R
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+26 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 28 0 R
+/Contents 27 0 R
+>>
+endobj
+29 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 31 0 R
+/Contents 30 0 R
+>>
+endobj
+40 0 obj
+<<
+/S /D
+>>
+endobj
+41 0 obj
+<<
+/Nums [0 40 0 R ]
+>>
+endobj
+12 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 13 0 R 17 0 R 20 0 R 23 0 R 26 0 R 29 0 R]
+/Count 7
+/MediaBox [0 0 612 792]
+>>
+endobj
+42 0 obj
+<<
+/CreationDate (D:20160905151720+02'00')
+/ModDate (D:20160905151720+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+43 0 obj
+<<
+/Type /Catalog
+/Pages 12 0 R
+/PageLabels 41 0 R
+>>
+endobj
+xref
+0 44
+0000000000 65535 f 
+0000034269 00000 n 
+0000000016 00000 n 
+0000002525 00000 n 
+0000030556 00000 n 
+0000031220 00000 n 
+0000031914 00000 n 
+0000032083 00000 n 
+0000032834 00000 n 
+0000033004 00000 n 
+0000033757 00000 n 
+0000028824 00000 n 
+0000034922 00000 n 
+0000034350 00000 n 
+0000002690 00000 n 
+0000005883 00000 n 
+0000034093 00000 n 
+0000034434 00000 n 
+0000006027 00000 n 
+0000009009 00000 n 
+0000034518 00000 n 
+0000009142 00000 n 
+0000012230 00000 n 
+0000034602 00000 n 
+0000012385 00000 n 
+0000025026 00000 n 
+0000034686 00000 n 
+0000025181 00000 n 
+0000027637 00000 n 
+0000034770 00000 n 
+0000027781 00000 n 
+0000028715 00000 n 
+0000028965 00000 n 
+0000029167 00000 n 
+0000029367 00000 n 
+0000029569 00000 n 
+0000029766 00000 n 
+0000029963 00000 n 
+0000030154 00000 n 
+0000030356 00000 n 
+0000034854 00000 n 
+0000034882 00000 n 
+0000035046 00000 n 
+0000035169 00000 n 
+trailer
+<<
+/Size 44
+/Root 43 0 R
+/Info 42 0 R
+/ID [<51099cca5632b0ca025ccb8d6ee0d33a><51099cca5632b0ca025ccb8d6ee0d33a>]
+>>
+startxref
+35239
+%%EOF

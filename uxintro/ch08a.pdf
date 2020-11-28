@@ -1,0 +1,1593 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 5009
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 176.172 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: La r)18(e)0(d)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Sock)10(ets)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0131 Tw
+[(La red no e)15(xistía cuando hicieron UNIX. Cuando posteriormente las máquinas empezaron a interconectarse)]TJ
+0 -1.2 TD
+-0.0001 Tc
+0.1281 Tw
+[(\(antes de la lle)14.9(gada de Sk)14.9(ynet\) nue)24.9(v)24.9(a)-0.1(s)-378.2(abstracciones aparecieron para poder usar la red en UNIX. Igual)]TJ
+T*
+0 Tc
+0 Tw
+(sucedió con los terminales grá)Tj
+/TT7 1 Tf
+12.1074 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cos.)Tj
+-12.6636 -2.4 TD
+0.125 Tw
+[(El desmadre que puede apreciarse en los interf)10(aces \(y en gran parte de las implementaciones\) para usar)]TJ
+0 -1.2 TD
+0.0227 Tw
+(tanto la red como los grá)Tj
+/TT7 1 Tf
+10.0271 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0227 Tw
+[(cos en UNIX se debe en parte a que ni K)25(en Thompson ni Dennis Ritchie estaban)]TJ
+-10.5832 -1.2 TD
+0.0832 Tw
+[(ahí cuando los añadieron a UNIX. Mientras tanto, en Bell Labs añadieron interf)10(aces mas razonables para)]TJ
+T*
+0.0075 Tw
+[(ambas cosas \(primero en su v)15(ersión de UNIX y lue)15(go en Plan\), pero por desgracia las v)15(ersiones de los otros)]TJ
+T*
+0 Tw
+[(se e)15(xtendieron antes y tenemos que vi)25(vir con ello.)]TJ
+0 -2.4 TD
+0.049 Tw
+(La principal abstracción para utilizar la red se conoce como)Tj
+/TT2 1 Tf
+24.5895 0 TD
+0 Tw
+[(sock)10(et)]TJ
+/TT6 1 Tf
+2.656 0 TD
+0.0489 Tw
+[(.)-298.9(E)0(s)-298.9(como un descriptor de )]TJ
+/TT7 1 Tf
+11.2075 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0489 Tw
+(chero \(por)Tj
+-39.0091 -1.2 TD
+0.0752 Tw
+[(un e)15(xtremo\) y el otro e)15(xtremo es la red, con lo que para nosotros un sock)10(et es como un calcetín \(un tubo)]TJ
+T*
+0 Tw
+[(con un sólo e)15(xtemo\). De ahí el nombre.)]TJ
+0 -2.4 TD
+0.0395 Tw
+[(Una v)15(ez tenemos creado y con)]TJ
+/TT7 1 Tf
+12.4271 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0395 Tw
+[(gurado un sock)10(et podemos utilizarlo para leer y escribir)55(.)-289.5(Siendo un sock)10(et,)]TJ
+-12.9833 -1.2 TD
+0.1124 Tw
+[(cuando leemos recibimos datos de la red y cuando escribimos en)40(viamos datos a la red. Si utilizamos un)]TJ
+T*
+0.0267 Tw
+[(protocolo orientado a cone)15(xión entonces puede que v)25(arios writes se en)40(víen como un sólo mensaje de red, o)]TJ
+T*
+0.0624 Tw
+[(puede que parte de un write. Si utilizamos un protocolo orientado a datagramas entonces cada write en)40(vía)]TJ
+T*
+0 Tw
+[(un datagrama. Esta es la idea. El interf)10(az es algo más complicado, aunque no tanto.)]TJ
+0 -2.4 TD
+0.1523 Tw
+[(Los sock)10(ets pueden utilizarse tanto para TCP)111(,)-402.4(como para UDP)111(,)-402.4(como para otros protocolos que no son)]TJ
+0 -1.2 TD
+0.085 Tw
+[(TCP/IP \(que no son de internet\). De hecho, e)15(xisten los llamados)]TJ
+/TT4 1 Tf
+26.8319 0 TD
+0.0851 Tw
+[(unix domain soc)20(k)10(ets)]TJ
+/TT6 1 Tf
+8.5847 0 TD
+(que funcionan sólo)Tj
+-35.4166 -1.2 TD
+0.0745 Tw
+(dentro de una máquina. En la actualidad lo mas práctico es utilizar siempre TCP/IP en lugar de cualquier)Tj
+T*
+0 Tw
+[(otro tipo de sock)10(ets.)]TJ
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(2. Un)-250(cliente)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1348 Tw
+[(V)111(eamos cómo programar un)]TJ
+/TT2 1 Tf
+12.0913 0 TD
+0 Tw
+(cliente)Tj
+/TT6 1 Tf
+2.7764 0 TD
+0.1349 Tw
+[(,)-384.8(llamado así puesto que hace peticiones a un)]TJ
+/TT2 1 Tf
+19.4303 0 TD
+0 Tw
+[(ser)10(vidor)]TJ
+/TT6 1 Tf
+3.5447 0 TD
+0.1349 Tw
+[(,)-384.9(llamado así)]TJ
+-37.8427 -1.2 TD
+0 Tw
+[(puesto que sirv)15(e)-250(las peticiones de un cliente. Lo que debemos hacer es:)]TJ
+2.5 -1.56 TD
+[(•)-2150(Crear un sock)10(et, en este caso para usar TCP)111(,)-250(lue)15(go)]TJ
+T*
+[(•)-2150(construir la dirección a que queremos llamar)40(,)-250(y)-250(por último)]TJ
+T*
+[(•)-2150(establecer la cone)15(xión a dicha dirección.)]TJ
+-2.5 -2.4 TD
+-0.0001 Tc
+0.0191 Tw
+[(Una v)14.9(ez tengamos esto hecho, obtendremos un descriptor de )]TJ
+/TT7 1 Tf
+24.6437 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.019 Tw
+(chero conectado al servidor y podremos usar)Tj
+/TT9 1 Tf
+-25.1998 -1.2 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.6886 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7882 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2887 0 TD
+0.0382 Tw
+[(para hablar con el otro e)15(xtremo de la red. Casi como si fuese un pipe full-duple)15(x)-288.3(\(bidirec-)]TJ
+-6.7655 -1.2 TD
+0 Tw
+(cional\).)Tj
+0 -2.4 TD
+0.014 Tw
+[(V)111(amos a implementar una función llamada)]TJ
+/TT9 1 Tf
+17.4671 0 TD
+0 Tw
+(dial)Tj
+/TT6 1 Tf
+2.6644 0 TD
+0.014 Tw
+[(a)-264(l)0(a)-264(que daremos un string con la dirección del servidor y)]TJ
+-20.1315 -1.2 TD
+0.0009 Tw
+(un entero con el puerto en el servidor al que queremos conectarnos. Aunque ya has estudiado redes de orde-)Tj
+T*
+0.054 Tw
+[(nadores, recordamos que los puertos sirv)15(en para hablar con procesos dentro de una máquina y son enteros)]TJ
+T*
+0 Tw
+(que no di)Tj
+/TT7 1 Tf
+3.7217 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eren mucho de un apartado de correos.)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 3099
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(int)Tj
+0 -1.5 TD
+(dial\(char *host, int port\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(struct hostent *hent;)Tj
+T*
+(int sfd;)Tj
+T*
+(struct sockaddr_in addr;)Tj
+0 -6 TD
+(hent = gethostbyname\(host\);)Tj
+0 -1.5 TD
+(if \(hent == NULL\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(memset\(&addr, 0, sizeof\(addr\)\);)Tj
+T*
+(addr.sin_family = AF_INET;)Tj
+T*
+(addr.sin_port = htons\(port\);)Tj
+T*
+(memmove\(&addr.sin_addr.s_addr, hent->h_addr, hent->h_length\);)Tj
+0 -6 TD
+(sfd = socket\(AF_INET, SOCK_STREAM, 0\);)Tj
+0 -1.5 TD
+(if \(sfd < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(fprintf\(stderr, "dialing %s:%d...\\n", host, port\);)Tj
+T*
+(if \(connect\(sfd, \(struct sockaddr*\)&addr, sizeof\(addr\)\) < 0\) {)Tj
+2.4 -1.5 TD
+(close\(sfd\);)Tj
+T*
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return sfd;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 318 Tm
+0.0434 Tw
+[(T)80(odo el código al principio de la función llama a)]TJ
+/TT9 1 Tf
+20.1255 0 TD
+0 Tw
+(gethostbyname)Tj
+/TT6 1 Tf
+8.0947 0 TD
+0.0434 Tw
+(para obtener una dirección IP para el)Tj
+-28.2202 -1.2 TD
+0.0042 Tw
+[(nombre del host al que queremos conectarnos y construye una dirección en la v)25(ariable)]TJ
+/TT9 1 Tf
+34.7433 0 TD
+0 Tw
+(addr)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0042 Tw
+[(.)-254.2(T)70(en en cuenta)]TJ
+-37.1437 -1.2 TD
+0.0682 Tw
+[(que los sock)10(ets usan redes dispares y las direcciones deben soportar las distintas redes. En Plan 9 utilizan)]TJ
+T*
+0.0362 Tw
+[(strings como tipo de datos, lo que resulta más natural, pero en UNIX es preciso hacer con)40(v)15(ersiones de tipo)]TJ
+T*
+0.0656 Tw
+[(y)-315.6(m)0(o)15(v)15(e)0(r)-315.6(los bytes casi a mano. Cuidado así mismo con poner los bytes en el formato de red, como recor)20(-)]TJ
+T*
+0 Tw
+(darás de tus estudios de redes de ordenadores.)Tj
+0 -2.4 TD
+0.005 Tw
+[(El sock)10(et está dentro del k)10(ernel. En esta función)]TJ
+/TT9 1 Tf
+19.5182 0 TD
+0 Tw
+(sfd)Tj
+/TT6 1 Tf
+2.0553 0 TD
+0.005 Tw
+[(es el descriptor del sock)10(et y eso es todo lo que necesi-)]TJ
+-21.5735 -1.2 TD
+0 Tw
+(tamos. Lo creamos llamando a)Tj
+/TT9 1 Tf
+8 0 0 8 133 204 Tm
+(sfd = socket\(AF_INET, SOCK_STREAM, 0\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 186 Tm
+[(para crear un sock)10(et de TCP/IP \()]TJ
+/TT9 1 Tf
+13.0408 0 TD
+(AF_INET)Tj
+/TT6 1 Tf
+4.2007 0 TD
+[(\))-250(que hable TCP \()]TJ
+/TT9 1 Tf
+7.1094 0 TD
+(SOCK_STREAM)Tj
+/TT6 1 Tf
+6.6011 0 TD
+(\).)Tj
+-30.9519 -2.4 TD
+0.1566 Tw
+[(Una v)15(ez creado podemos llamar a)]TJ
+/TT9 1 Tf
+14.7519 0 TD
+0 Tw
+(connect)Tj
+/TT6 1 Tf
+4.6074 0 TD
+0.1567 Tw
+[(para conectarnos a la dirección que pasamos como ar)18(gu-)]TJ
+-19.3592 -1.2 TD
+0.0491 Tw
+[(mento. En ese momento, nuestro sock)10(et abstrae toda la pila de TCP/IP que tiene debajo para hablar con el)]TJ
+T*
+0 Tw
+[(servidor en el otro e)15(xtremo de la red.)]TJ
+0 -2.4 TD
+0.0032 Tw
+[(Con este código, es posible escribir un cliente para, por ejemplo, conectarse a un servidor)40(,)-253.3(escribir una línea)]TJ
+0 -1.2 TD
+0 Tw
+[(de comandos y leer la salida de la ejecución de dicho comando en el servidor)55(.)]TJ
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 1258
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT11 1 Tf
+-14.917 -3.6 TD
+([cli.c])Tj
+/TT6 1 Tf
+4.2007 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 696 Tm
+(#include <stdlib.h>)Tj
+0 -1.5 TD
+(#include <stdio.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <netdb.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <sys/types.h>)Tj
+T*
+(#include <sys/socket.h>)Tj
+T*
+(#include <netinet/in.h>)Tj
+T*
+(#include <netinet/tcp.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(dial\(char *host, int port\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(...como se muestra antes...)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char *argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd, port, nr;)Tj
+T*
+(char buf[16*1024];)Tj
+0 -3 TD
+(if \(argc != 4\) {)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "usage: %s addr port cmd\\n", argv[0]\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(port = atoi\(argv[2]\);)Tj
+0 -4.5 TD
+(fd = dial\(argv[1], port\);)Tj
+0 -1.5 TD
+(if \(fd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "dial %s:%d", argv[1], port\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(snprintf\(buf, sizeof buf, "%s\\n", argv[3]\);)Tj
+T*
+(buf[sizeof buf - 1] = 0;)Tj
+T*
+(if \(write\(fd, buf, strlen\(buf\)\) != strlen\(buf\)\) {)Tj
+2.4 -1.5 TD
+(close\(fd\);)Tj
+T*
+(err\(1, "write"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+/TT11 17 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 2577
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT9 1 Tf
+8 0 0 8 152.2 708 Tm
+(for\(;;\) {)Tj
+2.4 -1.5 TD
+(nr = read\(fd, buf, sizeof buf-1\);)Tj
+T*
+(if \(nr < 0\) {)Tj
+2.4 -1.5 TD
+(close\(fd\);)Tj
+T*
+(err\(1, "read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(nr == 0\) {)Tj
+2.4 -1.5 TD
+(break;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(write\(1, buf, nr\) != nr\) {)Tj
+2.4 -1.5 TD
+(close\(fd\);)Tj
+T*
+(err\(1, "write stdout"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(fd\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 486 Tm
+0.25 Tw
+[(3. Un)-250(ser)10(vidor)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0942 Tw
+[(P)15(ara programar un servidor necesitamos poder atender llamadas procedentes de clientes, lo que podemos)]TJ
+0 -1.2 TD
+0.0926 Tw
+[(hacer con un sock)10(et. Este sock)10(et es preciso con)]TJ
+/TT7 1 Tf
+19.5748 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0926 Tw
+(gurarlo con la dirección en que queremos escuchar \(que)Tj
+-20.131 -1.2 TD
+0.0624 Tw
+[(incluye el puerto en que escuchamos\). Dicho sock)10(et se queda escuchando hasta que un cliente se conecta.)]TJ
+T*
+0.0494 Tw
+[(Además, cada llamada que se acepta se procesa en otro sock)10(et distinto para permitir que el sock)10(et original)]TJ
+T*
+0.1061 Tw
+[(continúe escuchando. La siguiente función de)25(vuelv)15(e)-356.1(u)0(n)-356.1(sock)10(et que está escuchando en el puerto de TCP)]TJ
+T*
+0 Tw
+(que se indica \(en cualquier dirección que posea la máquina para dicho protocolo\).)Tj
+/TT9 1 Tf
+8 0 0 8 133 380.4 Tm
+(int)Tj
+0 -1.5 TD
+(listentcp\(int port\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int sfd;)Tj
+T*
+(struct sockaddr_in addr;)Tj
+0 -3 TD
+(memset\(&addr, 0, sizeof\(addr\)\);)Tj
+0 -1.5 TD
+(addr.sin_family = AF_INET;)Tj
+T*
+(addr.sin_addr.s_addr = INADDR_ANY;)Tj
+T*
+(addr.sin_port = htons\(port\);)Tj
+0 -3 TD
+(sfd = socket\(AF_INET, SOCK_STREAM, 0\);)Tj
+0 -1.5 TD
+(if \(sfd < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(bind\(sfd, \(struct sockaddr*\)&addr, sizeof\(addr\)\) < 0\) {)Tj
+2.4 -1.5 TD
+(close\(sfd\);)Tj
+T*
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(listen\(sfd, 30\) < 0\) {)Tj
+2.4 -1.5 TD
+(close\(sfd\);)Tj
+T*
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return sfd;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 74.4 Tm
+0.1146 Tw
+(Al principio construimos una dirección para con)Tj
+/TT7 1 Tf
+20.0152 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1146 Tw
+[(gurar el sock)10(et, que guarda el puerto en que queremos)]TJ
+-20.5714 -1.2 TD
+0.0154 Tw
+[(escuchar)55(.)-265.5(Usamos una dirección IP que indica que nos v)25(ale cualquier dirección IP)111(,)-265.4(l)0(o)-265.4(que en realidad quiere)]TJ
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+22 0 obj
+<<
+/Length 3446
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+-0.0001 Tc
+0.0001 Tw
+[(decir que queremos escuchar en todas las que tenga)-250.1(e)-0.1(l)-250.1(sistema.)]TJ
+0 -2.4 TD
+0 Tc
+0.0964 Tw
+[(Posteriormente creamos el sock)10(et como en el código del cliente, pero, esta v)15(ez hemos de llamar a)]TJ
+/TT9 1 Tf
+40.7936 0 TD
+0 Tw
+(bind)Tj
+/TT6 1 Tf
+-40.7936 -1.2 TD
+0.1551 Tw
+[(para darle una dirección al sock)10(et. En este punto podemos llamar a)]TJ
+/TT9 1 Tf
+28.813 0 TD
+0 Tw
+(listen)Tj
+/TT6 1 Tf
+4.0056 0 TD
+0.155 Tw
+(para ponerlo realmente a)Tj
+-32.8186 -1.2 TD
+0.1498 Tw
+[(escuchar)55(.)-399.7(T)35(ras la llamada, UNIX acepta peticiones de cone)15(xión \(realmente las recibe sin rechazarlas\) y)]TJ
+T*
+0.1448 Tw
+[(mantiene un máximo de 30 en cola \(se)15(gún indica el se)15(gundo ar)18(gumento\) mientras nuestro programa se)]TJ
+T*
+0 Tw
+(toma su tiempo para llamar a)Tj
+/TT9 1 Tf
+11.8848 0 TD
+(accept)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(.)Tj
+-15.4854 -2.4 TD
+0.2347 Tw
+[(Con esta llamada, tenemos el sock)10(et escuchando pero no estamos realmente aceptando peticiones de)]TJ
+0 -1.2 TD
+0.0573 Tw
+[(cone)15(xión. Esto es, estamos escuchando pero no)]TJ
+/TT4 1 Tf
+19.5756 0 TD
+0 Tw
+(descolgando)Tj
+/TT6 1 Tf
+5.362 0 TD
+-0.0001 Tc
+0.0574 Tw
+(el teléfono. La siguiente función "descuelga")Tj
+-24.9375 -1.2 TD
+0.0353 Tw
+[(cuando lle)14.9(ga una llamada pero aceptándola en otra "e)14.9(xtensión telefónica" \(en otro sock)9.9(et\) para que nuestro)]TJ
+T*
+0 Tc
+0 Tw
+[(sock)10(et pueda se)15(guir escuchando llamadas.)]TJ
+/TT9 1 Tf
+8 0 0 8 133 558 Tm
+(int)Tj
+0 -1.5 TD
+(acceptcall\(int listenfd, char caddr[], int ncaddr\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd, port;)Tj
+T*
+(struct sockaddr_in addr;)Tj
+T*
+(socklen_t alen;)Tj
+T*
+(char *cs;)Tj
+0 -4.5 TD
+(memset\(&addr, 0, sizeof\(addr\)\);)Tj
+0 -1.5 TD
+(alen = sizeof\(addr\);)Tj
+T*
+(fd = accept\(listenfd, \(struct sockaddr*\)&addr, &alen\);)Tj
+T*
+(if \(fd < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(cs = inet_ntoa\(addr.sin_addr\);)Tj
+T*
+(port = ntohs\(addr.sin_port\);)Tj
+T*
+(snprintf\(caddr, ncaddr, "%s#%d", cs, port\);)Tj
+T*
+(caddr[ncaddr-1] = 0;)Tj
+T*
+(return fd;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 300 Tm
+0.1025 Tw
+(La llamada a)Tj
+/TT9 1 Tf
+5.7211 0 TD
+0 Tw
+(accept)Tj
+/TT6 1 Tf
+3.9531 0 TD
+[(de)25(vuelv)15(e)]TJ
+/TT4 1 Tf
+3.9219 0 TD
+[(otr)45(o)]TJ
+/TT6 1 Tf
+1.9745 0 TD
+0.1025 Tw
+[(sock)10(et, cuyo descriptor es)]TJ
+/TT4 1 Tf
+10.9801 0 TD
+0 Tw
+(fd)Tj
+/TT6 1 Tf
+0.7778 0 TD
+0.1024 Tw
+[(,)-352.5(tras esperar una llamada en el sock)10(et)]TJ
+/TT9 1 Tf
+-27.3284 -1.2 TD
+0 Tw
+(listenfd)Tj
+/TT6 1 Tf
+5.218 0 TD
+0.1672 Tw
+(que procede del)Tj
+/TT4 1 Tf
+7.0817 0 TD
+0 Tw
+(listen)Tj
+/TT6 1 Tf
+2.1665 0 TD
+0.1673 Tw
+[(,)-417.2(y)-417.2( )417.2(aceptarla. Además, dicha llamada deja en)]TJ
+/TT9 1 Tf
+19.413 0 TD
+0 Tw
+(addr)Tj
+/TT6 1 Tf
+2.8177 0 TD
+0.1673 Tw
+(la dirección del)Tj
+-36.6969 -1.2 TD
+0.0939 Tw
+[(cliente que se ha conectado, lo que apro)15(v)15(echamos para hacer que la función deje en)]TJ
+/TT9 1 Tf
+35.0293 0 TD
+0 Tw
+(caddr[])Tj
+/TT6 1 Tf
+4.5445 0 TD
+0.0938 Tw
+(un string)Tj
+-39.5738 -1.2 TD
+0 Tw
+(con una cadena que corresponda a dicha dirección.)Tj
+0 -2.4 TD
+0.0598 Tw
+[(Y)100(a)100( )-100(tenemos todo lo necesario para programar el servidor)55(.)-309.8(Ahora basta ponerlo a escuchar y)65(,)-309.9(para cada lla-)]TJ
+0 -1.2 TD
+0 Tw
+[(mada, ejecutar un shell que ejecute el comando y escriba la respuesta desde el servidor)55(.)]TJ
+ET
+endstream
+endobj
+23 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+25 0 obj
+<<
+/Length 1471
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT11 1 Tf
+-14.917 -3.6 TD
+([xsrv.c])Tj
+/TT6 1 Tf
+4.8008 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 696 Tm
+(#include <stdlib.h>)Tj
+0 -1.5 TD
+(#include <stdio.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <fcntl.h>)Tj
+T*
+(#include <netdb.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <sys/types.h>)Tj
+T*
+(#include <sys/socket.h>)Tj
+T*
+(#include <netinet/in.h>)Tj
+T*
+(#include <netinet/tcp.h>)Tj
+T*
+(#include <arpa/inet.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(listentcp\(int port\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(...como se muestra antes...)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(int)Tj
+T*
+(acceptcall\(int listenfd, char caddr[], int ncaddr\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(...como se muestra antes...)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char *argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int lfd, cfd, infd, port, nr;)Tj
+T*
+(char buf[16*1024];)Tj
+0 -3 TD
+(if \(argc != 2\) {)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "usage: %s port\\n", argv[0]\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(port = atoi\(argv[1]\);)Tj
+T*
+(lfd = listentcp\(port\);)Tj
+T*
+(if \(lfd < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "listen *:%d", port\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(for\(;;\) {)Tj
+2.4 -1.5 TD
+(cfd = acceptcall\(lfd, buf, sizeof buf\);)Tj
+T*
+(fprintf\(stderr, "call from %s\\n", buf\);)Tj
+T*
+(switch\(fork\(\)\) {)Tj
+T*
+(case -1:)Tj
+2.4 -1.5 TD
+(close\(cfd\);)Tj
+T*
+(close\(lfd\);)Tj
+T*
+(err\(1, "fork"\);)Tj
+T*
+(break;)Tj
+ET
+endstream
+endobj
+26 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+/TT11 17 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+28 0 obj
+<<
+/Length 1519
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+/TT9 1 Tf
+8 0 0 8 171.4 708 Tm
+(case 0:)Tj
+2.4 -1.5 TD
+(close\(lfd\);)Tj
+T*
+(// should really read line by line)Tj
+T*
+(nr = read\(cfd, buf, sizeof buf-2\);)Tj
+T*
+(if \(nr < 0\) {)Tj
+2.4 -1.5 TD
+(close\(cfd\);)Tj
+T*
+(err\(1, "read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(nr == 0\) {)Tj
+2.4 -1.5 TD
+(close\(cfd\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buf[nr++] = ’\\n’;)Tj
+T*
+(buf[nr] = 0;)Tj
+T*
+(fprintf\(stderr, "exec %s", buf\);)Tj
+T*
+(infd = open\("/dev/null", O_RDONLY\);)Tj
+T*
+(if \(infd < 0\) {)Tj
+2.4 -1.5 TD
+(close\(cfd\);)Tj
+T*
+(err\(1, "open"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(dup2\(infd, 0\);)Tj
+T*
+(close\(infd\);)Tj
+T*
+(dup2\(cfd, 1\);)Tj
+T*
+(dup2\(cfd, 2\);)Tj
+T*
+(close\(cfd\);)Tj
+T*
+(execl\("/bin/sh", "sh", "-c", buf, NULL\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -4.5 TD
+(default:)Tj
+2.4 -1.5 TD
+(close\(cfd\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 270 Tm
+[(4. )-250(Usando)-250(el cliente y el ser)10(vidor)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+(Podemos ejecutar el servidor en un shell)Tj
+/TT9 1 Tf
+8 0 0 8 133 236.4 Tm
+(unix$ xsrv 4000)Tj
+/TT6 1 Tf
+10 0 0 10 72 218.4 Tm
+[(Y)-250(llamarlo con un cliente ejecutado en otro)]TJ
+/TT9 1 Tf
+8 0 0 8 133 200.4 Tm
+(unix$ cli localhost 4000 ls)Tj
+0 -1.5 TD
+(dialing localhost:4000...)Tj
+T*
+(cli)Tj
+T*
+(xsrv)Tj
+T*
+(cli.c)Tj
+T*
+(cli.o)Tj
+T*
+(xsrv.c)Tj
+T*
+(unix$ cli localhost 4000 date)Tj
+T*
+(dialing localhost:4000...)Tj
+T*
+(Wed Aug 31 19:40:05 CEST 2016)Tj
+T*
+(unix$)Tj
+ET
+endstream
+endobj
+29 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+31 0 obj
+<<
+/Length 1402
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-8-)Tj
+-21.017 -3.6 TD
+[(Esto puede v)15(erse en la v)15(entana del servidor mientras tanto...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 690 Tm
+(unix$ xsrv 4000)Tj
+0 -1.5 TD
+(call from 127.0.0.1#62961)Tj
+T*
+(exec ls)Tj
+0 -3 TD
+(call from 127.0.0.1#62962)Tj
+0 -1.5 TD
+(exec date)Tj
+/TT6 1 Tf
+10 0 0 10 72 600 Tm
+0.0327 Tw
+[(Con lo que hemos visto y el manual tienes todo lo necesario para programar servidores y clientes. Las her)20(-)]TJ
+0 -1.2 TD
+0.021 Tw
+[(ramientas que hemos aprendido a utilizar durante el curso, como v)15(erás, han resultado útiles para hacer nue-)]TJ
+T*
+0 Tw
+(stro trabajo.)Tj
+0 -2.4 TD
+0.0136 Tw
+(Además, en el futuro, basta con utilizar)Tj
+/TT9 1 Tf
+16.062 0 TD
+0 Tw
+(dial)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5136 0 TD
+(listentcp)Tj
+/TT6 1 Tf
+5.6645 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7636 0 TD
+(acceptcall)Tj
+/TT6 1 Tf
+6.2645 0 TD
+-0.0002 Tc
+0.0137 Tw
+(en lugar de tener que utilizar)Tj
+-31.6685 -1.2 TD
+0 Tc
+0.077 Tw
+[(directamente el interf)10(az de sock)10(ets. Acóstumbrate a implementar abstracciones como la que proporcionan)]TJ
+T*
+0.0644 Tw
+(estas tres funciones:)Tj
+/TT4 1 Tf
+8.4963 0 TD
+0.0643 Tw
+[(los soc)20(k)10(ets como llamadas de teléfono)]TJ
+/TT6 1 Tf
+15.5942 0 TD
+[(.)-314.3(T)70(e)-314.3(resultará cómodo para e)25(vitar repetir el tra-)]TJ
+-24.0906 -1.2 TD
+0 Tw
+[(bajo que tienes que hacer una y otra v)15(ez.)]TJ
+ET
+endstream
+endobj
+32 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+33 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+34 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+35 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+36 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+37 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+38 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 500 500 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 389 0 0 667 0 0 778 
+0 0 0 556 0 722 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 0 278 0 556 278 833 556 500 
+556 0 444 389 333 556 500 0 0 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 33 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 233
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 500 444 278 500 0 278 0 444 278 722 500 500 
+500 0 389 389 278 500 0 0 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 34 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+500 0 500 500 500 500 500 500 500 500 278 0 0 0 0 0 
+0 722 667 667 722 611 0 0 0 333 0 722 611 889 722 0 
+556 0 667 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 35 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 36 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 0 600 600 600 600 600 600 0 
+0 600 0 600 600 600 600 0 0 600 0 600 600 600 600 600 
+0 0 600 600 600 600 0 600 0 600 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 37 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 120
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 0 0 600 0 0 0 0 0 600 0 0 600 0 
+0 0 0 0 600 600 0 0 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 38 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 23 0 R
+/Contents 22 0 R
+>>
+endobj
+24 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 26 0 R
+/Contents 25 0 R
+>>
+endobj
+27 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 29 0 R
+/Contents 28 0 R
+>>
+endobj
+30 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 32 0 R
+/Contents 31 0 R
+>>
+endobj
+39 0 obj
+<<
+/S /D
+>>
+endobj
+40 0 obj
+<<
+/Nums [0 39 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 18 0 R 21 0 R 24 0 R 27 0 R 30 0 R]
+/Count 8
+/MediaBox [0 0 612 792]
+>>
+endobj
+41 0 obj
+<<
+/CreationDate (D:20160905151721+02'00')
+/ModDate (D:20160905151721+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+42 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 40 0 R
+>>
+endobj
+xref
+0 43
+0000000000 65535 f 
+0000025621 00000 n 
+0000000016 00000 n 
+0000005077 00000 n 
+0000022518 00000 n 
+0000023178 00000 n 
+0000023807 00000 n 
+0000024560 00000 n 
+0000024730 00000 n 
+0000021189 00000 n 
+0000026358 00000 n 
+0000025702 00000 n 
+0000005216 00000 n 
+0000008368 00000 n 
+0000025786 00000 n 
+0000008475 00000 n 
+0000009786 00000 n 
+0000025281 00000 n 
+0000025870 00000 n 
+0000009906 00000 n 
+0000012536 00000 n 
+0000025954 00000 n 
+0000012665 00000 n 
+0000016164 00000 n 
+0000026038 00000 n 
+0000016282 00000 n 
+0000017806 00000 n 
+0000026122 00000 n 
+0000017926 00000 n 
+0000019498 00000 n 
+0000026206 00000 n 
+0000019616 00000 n 
+0000021071 00000 n 
+0000021329 00000 n 
+0000021531 00000 n 
+0000021731 00000 n 
+0000021928 00000 n 
+0000022125 00000 n 
+0000022316 00000 n 
+0000026290 00000 n 
+0000026318 00000 n 
+0000026489 00000 n 
+0000026612 00000 n 
+trailer
+<<
+/Size 43
+/Root 42 0 R
+/Info 41 0 R
+/ID [<01868ce9e5e467386122eb015b221633><01868ce9e5e467386122eb015b221633>]
+>>
+startxref
+26682
+%%EOF

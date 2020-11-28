@@ -1,0 +1,2950 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 5681
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 162.894 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Empezando)]TJ
+/TT4 1 Tf
+10 0 0 10 261.19 633 Tm
+(Clips 14 a 16)Tj
+-2.011 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Dir)18(ectorios)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1346 Tw
+(Igual que la mayoría de sistemas, UNIX utiliza directorios para agrupar )Tj
+/TT7 1 Tf
+30.359 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1346 Tw
+[(cheros. Usuarios de W)40(indo)25(ws)]TJ
+-30.9152 -1.2 TD
+0.1025 Tw
+(suelen llamar "carpeta" a los directorios. Un directorio es tan sólo un )Tj
+/TT7 1 Tf
+29.0098 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.1025 Tw
+[(chero que agrupa v)25(arios )]TJ
+/TT7 1 Tf
+10.2141 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros.)Tj
+-40.3362 -1.2 TD
+0.0736 Tw
+(Aparentemente, un directorio contiene otros )Tj
+/TT7 1 Tf
+18.2503 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0736 Tw
+(cheros y directorios, pero esto es otra ilusión implementada)Tj
+-18.8065 -1.2 TD
+0.0446 Tw
+[(por el sistema operati)25(v)20(o)0(.)-294.6(T)80(odos los )]TJ
+/TT7 1 Tf
+14.3904 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0447 Tw
+(cheros y directorios están guardados en el disco \(en la mayoría de los)Tj
+-14.9465 -1.2 TD
+0.1545 Tw
+[(casos\), por separado. No obstante, podemos listar el contenido de un directorio y v)15(eremos una lista de)]TJ
+/TT7 1 Tf
+T*
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1226 Tw
+(cheros \(y directorios\). Dos )Tj
+/TT7 1 Tf
+11.404 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1226 Tw
+(cheros en dos directorios distintos siempre serán )Tj
+/TT7 1 Tf
+20.4925 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1226 Tw
+(cheros distintos aunque)Tj
+-33.5649 -1.2 TD
+-0.0002 Tc
+0.0002 Tw
+(tengan el mismo nombre.)Tj
+0 -2.4 TD
+0 Tc
+0.0056 Tw
+(En pocas palabras, los )Tj
+/TT7 1 Tf
+9.1586 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0056 Tw
+(cheros están agrupados en un árbol cuya raíz es un directorio \(el directorio raíz, lla-)Tj
+-9.7148 -1.2 TD
+0.0397 Tw
+(mado ")Tj
+/TT9 1 Tf
+2.9196 0 TD
+0 Tw
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.2897 Tc
+("o)Tj
+/TT4 1 Tf
+1.4876 0 TD
+0 Tc
+(slash)Tj
+/TT6 1 Tf
+2.3459 0 TD
+0.0397 Tw
+(en UNIX\). Dentro del raíz tenemos )Tj
+/TT7 1 Tf
+14.5942 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0397 Tw
+[(cheros y directorios, y así sucesi)25(v)25(amente. La )]TJ
+/TT7 1 Tf
+18.3607 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gura)Tj
+-41.4203 -1.2 TD
+[(1)-250(muestra parte del árbol de )]TJ
+/TT7 1 Tf
+11.3843 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros que puedes v)15(er en un sistema UNIX.)]TJ
+/TT9 1 Tf
+10.4396 -3.46 TD
+(/)Tj
+-7.08 -6.48 TD
+[(bin)-2219.7(home)-2219.6(tmp)-2519.7(usr)]TJ
+1.86 -6.48 TD
+[(nemo)-1919.6(root)-2219.6(elf)]TJ
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+288.63 394.83 m
+244.23 350.43 l
+294.27 391.35 m
+281.79 353.79 l
+303.39 391.35 m
+315.87 353.79 l
+308.91 394.83 m
+353.43 350.43 l
+272.67 326.55 m
+260.19 288.99 l
+281.79 326.55 m
+294.27 288.99 l
+287.31 330.03 m
+331.83 285.63 l
+255.63 261.03 m
+255.63 225.03 l
+S
+BT
+10 0 0 10 203.4 208.4 Tm
+[(bin)-2519.7(lib)-2519.7(tmp)]TJ
+ET
+247.59 263.43 m
+220.35 222.63 l
+263.55 263.43 m
+290.79 222.63 l
+S
+BT
+/TT2 1 Tf
+10 0 0 10 97 173.2 Tm
+(Figura 1:)Tj
+/TT4 1 Tf
+4.2217 0 TD
+(Ejemplo de árbol de )Tj
+/TT10 1 Tf
+8.3872 0 TD
+(Ş)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(c)15(her)45(os en UNIX.)]TJ
+/TT6 1 Tf
+-15.6089 -1.2 TD
+0.0862 Tw
+[(T)70(endrás muchos mas )]TJ
+/TT7 1 Tf
+8.881 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0862 Tw
+(cheros en cualquier sistema que utilices. El directorio raíz \()Tj
+/TT9 1 Tf
+24.4887 0 TD
+0 Tw
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0861 Tw
+[(\))-336.1(contiene directorios)]TJ
+-34.5259 -1.2 TD
+0 Tw
+(llamados)Tj
+/TT9 1 Tf
+3.8828 0 TD
+(bin)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5224 0 TD
+(home)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5224 0 TD
+(tmp)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5224 0 TD
+(usr)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0225 Tw
+[(,)-272.4(y)-272.4( )272.4(otros que no mostramos. El directorio)]TJ
+/TT9 1 Tf
+16.7883 0 TD
+0 Tw
+(bin)Tj
+/TT6 1 Tf
+2.0728 0 TD
+0.0225 Tw
+(suele contener el binario de)Tj
+-32.1123 -1.2 TD
+0.091 Tw
+[(comandos del sistema.)-591(El directorio)]TJ
+/TT9 1 Tf
+15.2568 0 TD
+0 Tw
+(home)Tj
+/TT6 1 Tf
+2.7413 0 TD
+0.0909 Tw
+(suele contener un directorio por cada usuario, para que dicho)Tj
+-17.9981 -1.2 TD
+0.1161 Tw
+(usuario pueda dejar sus )Tj
+/TT7 1 Tf
+10.0728 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1161 Tw
+(cheros dentro del mismo. El directorio)Tj
+/TT9 1 Tf
+16.3314 0 TD
+0 Tw
+(tmp)Tj
+/TT6 1 Tf
+2.1665 0 TD
+0.1162 Tw
+(suele utilizarse para crear )Tj
+/TT7 1 Tf
+10.9028 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+-40.5858 -1.2 TD
+0.1249 Tw
+(temporales, que queremos utilizar sólo durante un rato y borrar después. En nuestro ejemplo, el usuario)Tj
+/TT4 1 Tf
+T*
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.416 0 TD
+(ha creado directorios llamados)Tj
+/TT9 1 Tf
+12.4951 0 TD
+(bin)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5 0 TD
+(lib)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.25 Tc
+(,y)Tj
+/TT9 1 Tf
+1.25 0 TD
+0 Tc
+(tmp)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(dentro del directorio)Tj
+/TT9 1 Tf
+8.4136 0 TD
+(nemo)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-33.126 -2.4 TD
+(Cada )Tj
+/TT7 1 Tf
+2.3758 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0711 Tw
+[(chero o directorio tiene un nombre, escrito con te)15(xto en la )]TJ
+/TT7 1 Tf
+24.1475 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0711 Tw
+(gura. Pero para localizar un )Tj
+/TT7 1 Tf
+11.628 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0711 Tw
+(chero \(o)Tj
+-39.8197 -1.2 TD
+0.0478 Tw
+(directorio\) hay que decirle a UNIX cuál es el camino en el árbol de )Tj
+/TT7 1 Tf
+27.7683 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0002 Tc
+0.0479 Tw
+[(cheros para lle)14.8(gar)-297.9(hasta el )]TJ
+/TT7 1 Tf
+10.852 0 TD
+0 Tc
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0477 Tw
+(chero en)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+/TT10 9 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+13 0 obj
+<<
+/Length 6686
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.0338 Tw
+(cuestión. Por ejemplo, el camino para el directorio del usuario)Tj
+/TT4 1 Tf
+25.4411 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.4499 0 TD
+0.0339 Tw
+(sería ")Tj
+/TT9 1 Tf
+2.5798 0 TD
+0 Tw
+(/home/nemo)Tj
+/TT6 1 Tf
+6.001 0 TD
+0.0339 Tw
+(". Hemos escrito)Tj
+-36.4718 -1.2 TD
+0.0229 Tw
+(el cambio, o)Tj
+/TT4 1 Tf
+5.2337 0 TD
+0 Tw
+(path)Tj
+/TT6 1 Tf
+1.7778 0 TD
+0.0229 Tw
+[(,)-272.9(empezando por el directorio raíz, ")]TJ
+/TT9 1 Tf
+14.5393 0 TD
+0 Tw
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0228 Tw
+[(", y nombrando los directorios se)15(gún bajamos por el)]TJ
+-22.1509 -1.2 TD
+0 Tw
+(árbol, separados unos de otros por un ")Tj
+/TT9 1 Tf
+15.5718 0 TD
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(". La última componente del path es el nombre del )Tj
+/TT7 1 Tf
+20.4297 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-37.1577 -2.4 TD
+0.0059 Tw
+[(Puedes v)15(er que hay dos directorios llamados)]TJ
+/TT9 1 Tf
+18.0497 0 TD
+0 Tw
+(tmp)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0059 Tw
+[(.)-255.9(Uno es)]TJ
+/TT9 1 Tf
+3.5729 0 TD
+0 Tw
+(/tmp)Tj
+/TT6 1 Tf
+2.6564 0 TD
+0.006 Tw
+(\(el que está directamente dentro del raíz\) y)Tj
+-26.0793 -1.2 TD
+0.0907 Tw
+(otro es)Tj
+/TT9 1 Tf
+3.1252 0 TD
+0 Tw
+(/home/nemo/tmp)Tj
+/TT6 1 Tf
+8.4014 0 TD
+0.0906 Tw
+[(.)-340.7(Esto es: Empezamos en el raíz, y se)15(guimos por)]TJ
+/TT9 1 Tf
+20.4419 0 TD
+0 Tw
+(home)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(,)-340.6(lue)15(go)]TJ
+/TT9 1 Tf
+3.1379 0 TD
+(nemo)Tj
+/TT6 1 Tf
+2.741 0 TD
+(y)Tj
+/TT7 1 Tf
+0.8406 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nal-)Tj
+-41.6445 -1.2 TD
+(mente)Tj
+/TT9 1 Tf
+2.7517 0 TD
+(tmp)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0584 Tw
+[(.)-308.3(Ambos paths se denominan absolutos dado que comienzan por el raíz e identi)]TJ
+/TT7 1 Tf
+32.3065 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0584 Tw
+(can un )Tj
+/TT7 1 Tf
+3.0045 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5561 0 TD
+(chero)Tj
+-40.9752 -1.2 TD
+(\(o directorio\) sin duda alguna.)Tj
+0 -2.4 TD
+0.1149 Tw
+[(Sería incómodo tener que escribir paths absolutos cada v)15(ez que queremos nombrar un )]TJ
+/TT7 1 Tf
+36.0518 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1149 Tw
+(chero. Debido a)Tj
+-36.6079 -1.2 TD
+0.1641 Tw
+(esto, cada programa que ejecuta en UNIX está asociado a un directorio. Dicho directorio se denomina)Tj
+/TT4 1 Tf
+T*
+0 Tw
+[(dir)37(ectorio actual)]TJ
+/TT6 1 Tf
+6.962 0 TD
+(o)Tj
+/TT4 1 Tf
+0.75 0 TD
+[(dir)37(ectorio de tr)15(abajo)]TJ
+/TT6 1 Tf
+8.5862 0 TD
+(del programa en ejecución que consideremos.)Tj
+-16.2982 -2.4 TD
+0.1431 Tw
+(Cuando entramos al sistema y se ejecuta un shell para que podamos ejecutar comandos, el shell utiliza)Tj
+0 -1.2 TD
+0.1208 Tw
+(como directorio de trabajo un directorio que el administrador creó al crear nuestro usuario en UNIX \(al)Tj
+T*
+0.1309 Tw
+[(darnos de alta como usuario en el sistema o crear nuestra cuenta\).)-630.9(P)15(ara el usuario)]TJ
+/TT4 1 Tf
+34.8534 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.166 0 TD
+0.1309 Tw
+[(,)-380.9(ese directorio)]TJ
+-37.0194 -1.2 TD
+0 Tw
+(podría ser)Tj
+/TT9 1 Tf
+4.2207 0 TD
+(/home/nemo)Tj
+/TT6 1 Tf
+6.001 0 TD
+[(.)-250(Decimos que dicho directorio es el directorio)]TJ
+/TT4 1 Tf
+18.7993 0 TD
+(casa)Tj
+/TT6 1 Tf
+2.083 0 TD
+(\(o)Tj
+/TT4 1 Tf
+1.083 0 TD
+(home)Tj
+/TT6 1 Tf
+2.166 0 TD
+[(\))-250(d)0(e)-250(dicho usuario.)]TJ
+-34.353 -2.4 TD
+0.0269 Tw
+(Pues bien, utilizando el árbol del la )Tj
+/TT7 1 Tf
+14.5179 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0269 Tw
+(gura, el usuario)Tj
+/TT4 1 Tf
+6.5231 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+2.443 0 TD
+0.027 Tw
+(podría cambiar el directorio de trabajo del shell)Tj
+-24.0401 -1.2 TD
+0 Tw
+[(a)-250(otro directorio utilizando el comando que sigue:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 462 Tm
+(unix$ cd /tmp)Tj
+/TT6 1 Tf
+10 0 0 10 72 444 Tm
+(En este caso, el directorio ha pasado a ser)Tj
+/TT9 1 Tf
+16.8818 0 TD
+(/tmp)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-19.2822 -2.4 TD
+(¡Y ahora podemos crear)Tj
+/TT9 1 Tf
+9.8843 0 TD
+(/tmp/a)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(como sigue!)Tj
+/TT9 1 Tf
+8 0 0 8 133 402 Tm
+(unix$ touch a)Tj
+/TT6 1 Tf
+10 0 0 10 72 384 Tm
+(No ha sido preciso ejecutar)Tj
+/TT9 1 Tf
+8 0 0 8 133 366 Tm
+(unix$ touch /tmp/a)Tj
+/TT6 1 Tf
+10 0 0 10 72 348 Tm
+0.1418 Tw
+(Dado que)Tj
+/TT4 1 Tf
+4.3935 0 TD
+0 Tw
+[(touc)15(h)]TJ
+/TT6 1 Tf
+2.5985 0 TD
+0.1417 Tw
+(le ha pedido a UNIX que cree el )Tj
+/TT7 1 Tf
+14.2942 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1417 Tw
+(chero ")Tj
+/TT9 1 Tf
+3.0206 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1417 Tw
+(", y que el nombre de )Tj
+/TT7 1 Tf
+9.6725 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1417 Tw
+(chero \(el path\) no)Tj
+-35.6917 -1.2 TD
+0.0598 Tw
+(comienza por ")Tj
+/TT9 1 Tf
+6.1919 0 TD
+0 Tw
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0599 Tw
+(", UNIX entiende que el path hay que recorrerlo a partir del directorio actual o directorio)Tj
+-6.792 -1.2 TD
+0.0185 Tw
+(de trabajo. El comando)Tj
+/TT4 1 Tf
+9.5983 0 TD
+0 Tw
+[(touc)15(h)]TJ
+/TT6 1 Tf
+2.4751 0 TD
+0.0184 Tw
+[(ha "heredado" el directorio actual del shell, como se v)15(erá más adelante. Dado)]TJ
+-12.0734 -1.2 TD
+0 Tw
+(que el directorio era ")Tj
+/TT9 1 Tf
+8.6816 0 TD
+(/tmp)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(", el path resultante es ")Tj
+/TT9 1 Tf
+9.48 0 TD
+(/tmp/a)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(".)Tj
+-24.1626 -2.4 TD
+0.019 Tw
+[(Si piensas en los comandos que hemos ejecutado anteriormente, v)15(erás ahora como los paths que hemos uti-)]TJ
+0 -1.2 TD
+0.0899 Tw
+(lizado se han resuelto a partir del directorio de trabajo. Estos paths se denominan)Tj
+/TT4 1 Tf
+33.887 0 TD
+0 Tw
+[(r)37(elativos)]TJ
+/TT6 1 Tf
+3.8024 0 TD
+0.0899 Tw
+(\(no empiezan)Tj
+-37.6894 -1.2 TD
+0 Tw
+(desde el raíz\).)Tj
+0 -2.4 TD
+0.0785 Tw
+[(¿Y en qué directorio estamos? Es fácil v)15(erlo, utilizando el comando)]TJ
+/TT4 1 Tf
+28.1722 0 TD
+0 Tw
+(pwd)Tj
+/TT6 1 Tf
+1.9955 0 TD
+0.0786 Tw
+(que escribe su directorio de tra-)Tj
+-30.1677 -1.2 TD
+0 Tw
+(bajo.)Tj
+/TT9 1 Tf
+8 0 0 8 133 210 Tm
+(unix$ pwd)Tj
+0 -1.5 TD
+(/tmp)Tj
+/TT6 1 Tf
+10 0 0 10 72 180 Tm
+[(Y)-250(podemos cambiar el directorio de trabajo del shell utilizando el comando)]TJ
+/TT4 1 Tf
+30.3789 0 TD
+(cd)Tj
+/TT6 1 Tf
+0.9438 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 162 Tm
+(unix$ cd /)Tj
+0 -1.5 TD
+(unix$ pwd)Tj
+T*
+(/)Tj
+/TT6 1 Tf
+10 0 0 10 72 108 Tm
+0.015 Tw
+(Hay dos nombres de )Tj
+/TT7 1 Tf
+8.5029 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0149 Tw
+[(chero \(de directorio, en realidad\) que e)15(xisten en cada directorio del árbol de )]TJ
+/TT7 1 Tf
+30.7203 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros.)Tj
+-40.3355 -1.2 TD
+0.0485 Tw
+(Uso se llama ")Tj
+/TT9 1 Tf
+5.9692 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0485 Tw
+[(")-298.5(y)-298.5(e)0(l)-298.5(otro ")]TJ
+/TT9 1 Tf
+4.8429 0 TD
+0 Tw
+(..)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0486 Tw
+(". Corresponden al directorio en que están y al directorio que está arriba en)Tj
+-12.6124 -1.2 TD
+0 Tw
+[(el árbol, respecti)25(v)25(amente. Así pues,)]TJ
+ET
+endstream
+endobj
+14 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+16 0 obj
+<<
+/Length 4147
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ cd .)Tj
+/TT6 1 Tf
+10 0 0 10 72 690 Tm
+0.0957 Tw
+(no hace nada. Si el directorio actual es)Tj
+/TT9 1 Tf
+16.3979 0 TD
+0 Tw
+(/tmp)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.3457 Tc
+(,")Tj
+/TT9 1 Tf
+1.0039 0 TD
+0 Tc
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-345.7(signi)]TJ
+/TT7 1 Tf
+2.6987 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca)Tj
+/TT9 1 Tf
+1.2334 0 TD
+(/tmp/.)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0956 Tw
+[(,)-345.7(l)0(o)-345.6(cual signi)]TJ
+/TT7 1 Tf
+5.6751 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca)Tj
+/TT9 1 Tf
+1.2333 0 TD
+(/tmp)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0956 Tw
+[(.)-345.6(Así que el)]TJ
+-38.3561 -1.2 TD
+0 Tw
+(comando)Tj
+/TT4 1 Tf
+3.9155 0 TD
+(cd)Tj
+/TT6 1 Tf
+1.1938 0 TD
+(deja el directorio actual en el mismo sitio.)Tj
+-5.1094 -2.4 TD
+(Si ahora ejecutamos...)Tj
+/TT9 1 Tf
+8 0 0 8 133 636 Tm
+(unix$ pwd)Tj
+0 -1.5 TD
+(/tmp)Tj
+T*
+(unix$ cd ..)Tj
+T*
+(unix$ pwd)Tj
+T*
+(/)Tj
+/TT6 1 Tf
+10 0 0 10 72 570 Tm
+[(v)15(emos que ")]TJ
+/TT9 1 Tf
+4.9479 0 TD
+(..)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.25 Tc
+[("e)250(n)]TJ
+/TT9 1 Tf
+1.8521 0 TD
+0 Tc
+(/tmp)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(corresponde al directorio raíz. Si se)15(guimos insistiendo...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 552 Tm
+(unix$ cd ..)Tj
+0 -1.5 TD
+(unix$ pwd)Tj
+T*
+(/)Tj
+/TT6 1 Tf
+10 0 0 10 72 510 Tm
+[(v)15(emos que no es posible subir más arriba en el árbol. No hay nada fuera del raíz.)]TJ
+0 -2.4 TD
+0.1084 Tw
+(Es importante entener que cada programa que ejecuta tiene su propio directorio de trabajo. Por ejemplo,)Tj
+0 -1.2 TD
+0 Tw
+(podemos ejecutar un shell y cambiar su directorio)Tj
+/TT9 1 Tf
+8 0 0 8 133 456 Tm
+(unix$ pwd)Tj
+0 -1.5 TD
+(/home/nemo)Tj
+T*
+(unix$ sh)Tj
+T*
+(unix$ cd /)Tj
+T*
+(unix$ pwd)Tj
+T*
+(/)Tj
+/TT6 1 Tf
+10 0 0 10 72 378 Tm
+0.0513 Tw
+(Ahora, si escribimos el comando)Tj
+/TT4 1 Tf
+13.6422 0 TD
+0 Tw
+[(e)20(xit)]TJ
+/TT6 1 Tf
+1.4234 0 TD
+0.0513 Tw
+[(,)-301.3(que indica al shell que termine, v)20(olv)15(eremos al shell que teníamos al)]TJ
+-15.0656 -1.2 TD
+0 Tw
+(principio, cuyo directorio era)Tj
+/TT9 1 Tf
+11.9121 0 TD
+(/home/nemo)Tj
+/TT6 1 Tf
+6.001 0 TD
+(.)Tj
+/TT9 1 Tf
+8 0 0 8 133 348 Tm
+(unix$ exit)Tj
+0 -1.5 TD
+(unix$ pwd)Tj
+T*
+(unix$ /home/nemo)Tj
+/TT6 1 Tf
+10 0 0 10 72 294 Tm
+0.0151 Tw
+(El directorio)Tj
+/TT4 1 Tf
+5.3061 0 TD
+0 Tw
+(home)Tj
+/TT6 1 Tf
+2.4311 0 TD
+0.0151 Tw
+(es tan importante \(para cada usuario el suyo\) que el comando)Tj
+/TT4 1 Tf
+24.9069 0 TD
+0 Tw
+(cd)Tj
+/TT6 1 Tf
+1.209 0 TD
+0.0152 Tw
+(nos ll)Tj
+2.21 0 TD
+-0.025 Tc
+0.0652 Tw
+(eva a )Tj
+2.3119 0 TD
+0 Tc
+0.0152 Tw
+(dicho direc-)Tj
+-38.3751 -1.2 TD
+0.035 Tw
+[(torio \(cambia su directorio de trabajo al directorio casa\) si no le damos ar)18(gumentos. Es fácil a)20(v)15(eriguar cuál)]TJ
+T*
+0 Tw
+(es tu directorio)Tj
+/TT4 1 Tf
+6.248 0 TD
+(home)Tj
+/TT6 1 Tf
+2.166 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 252 Tm
+(unix$ cd)Tj
+0 -1.5 TD
+(unix$ pwd)Tj
+T*
+(/home/nemo)Tj
+/TT6 1 Tf
+10 0 0 10 72 198 Tm
+0.0669 Tw
+(Dispones del comando)Tj
+/TT4 1 Tf
+9.5601 0 TD
+0 Tw
+(mkdir)Tj
+/TT6 1 Tf
+2.6499 0 TD
+0.0669 Tw
+[(para crear nue)25(v)20(o)0(s)-316.9(directorios. Por ejemplo, es probable que el usuario)]TJ
+/TT4 1 Tf
+28.8206 0 TD
+0 Tw
+(nemo)Tj
+/TT6 1 Tf
+-41.0306 -1.2 TD
+(ejecutó un comando como)Tj
+/TT9 1 Tf
+8 0 0 8 133 168 Tm
+(unix$ mkdir bin)Tj
+/TT6 1 Tf
+10 0 0 10 72 150 Tm
+(para crear el directorio)Tj
+/TT9 1 Tf
+9.3271 0 TD
+(/home/nemo/bin)Tj
+/TT6 1 Tf
+8.6514 0 TD
+(que viste en el árbol de )Tj
+/TT7 1 Tf
+9.4966 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros de la )Tj
+/TT7 1 Tf
+5.0254 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gura 1.)Tj
+-33.6128 -2.4 TD
+(Puedes borrar directorios utilizando el comando)Tj
+/TT4 1 Tf
+19.4385 0 TD
+(rmdir)Tj
+/TT6 1 Tf
+2.2783 0 TD
+[(.)-500(Por ejemplo,)]TJ
+/TT9 1 Tf
+8 0 0 8 133 108 Tm
+(unix$ rmdir /home/nemo/bin)Tj
+/TT6 1 Tf
+10 0 0 10 72 90 Tm
+(borraría el directorio)Tj
+/TT9 1 Tf
+8.5234 0 TD
+(bin)Tj
+/TT6 1 Tf
+1.8003 0 TD
+[(.)-250(Esta v)15(ez hemos utilizado un path absoluto.)]TJ
+-10.3237 -2.4 TD
+0.0212 Tw
+(Los comandos)Tj
+/TT4 1 Tf
+6.0971 0 TD
+0 Tw
+(cp)Tj
+/TT6 1 Tf
+1.215 0 TD
+(y)Tj
+/TT4 1 Tf
+0.7712 0 TD
+(mv)Tj
+/TT6 1 Tf
+1.4372 0 TD
+0.0211 Tw
+(se comportan de un modo diferente cuando el destino es un directorios. En tal caso,)Tj
+ET
+endstream
+endobj
+17 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 3852
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+0.0779 Tw
+[(copian o mue)25(v)15(e)0(n)-327.9(los )]TJ
+/TT7 1 Tf
+8.7696 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0779 Tw
+(cheros origen hacia )Tj
+/TT7 1 Tf
+8.2576 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0779 Tw
+(cheros en dicho directorio. Por ejemplo, si empezamos en un)Tj
+-18.1396 -1.2 TD
+0 Tw
+[(directorio v)25(acío:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 678 Tm
+(unix$ mkdir fich)Tj
+0 -1.5 TD
+(unix$ touch a b)Tj
+T*
+(unix$ ls)Tj
+T*
+[(a)-2400(b)-2400(fich)]TJ
+T*
+(unix$ cp a b fich)Tj
+T*
+(unix$ ls fich)Tj
+T*
+2.4 Tc
+(ab)Tj
+/TT6 1 Tf
+10 0 0 10 72 588 Tm
+0 Tc
+0.0479 Tw
+(Esto es,)Tj
+/TT4 1 Tf
+3.4566 0 TD
+0 Tw
+(cp)Tj
+/TT6 1 Tf
+1.2417 0 TD
+0.0479 Tw
+(ha copiado tanto)Tj
+/TT9 1 Tf
+7.0026 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.898 0 TD
+(como)Tj
+/TT9 1 Tf
+2.5196 0 TD
+(b)Tj
+/TT6 1 Tf
+0.898 0 TD
+(a)Tj
+/TT7 1 Tf
+0.7417 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+/TT9 1 Tf
+2.9078 0 TD
+(fich/a)Tj
+/TT6 1 Tf
+3.8985 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7979 0 TD
+(fich/b)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0479 Tw
+[(.)-297.9(¿Entiendes ahora los caminos rela-)]TJ
+-28.5192 -1.2 TD
+0 Tw
+[(ti)25(v)20(os?)]TJ
+0 -2.4 TD
+[(Igualmente podemos mo)15(v)15(e)0(r)-250(uno o v)25(arios )]TJ
+/TT7 1 Tf
+16.5524 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros a un directorio:)Tj
+/TT9 1 Tf
+8 0 0 8 133 534 Tm
+(unix$ mv a b fich)Tj
+0 -1.5 TD
+(unix$ ls)Tj
+T*
+(fich)Tj
+T*
+(unix$ ls fich)Tj
+T*
+2.4 Tc
+(ab)Tj
+/TT6 1 Tf
+10 0 0 10 72 456 Tm
+0 Tc
+(Si ahora intentamos borrar el directorio...)Tj
+/TT9 1 Tf
+8 0 0 8 133 438 Tm
+(unix$ rmdir fich)Tj
+T*
+(rmdir: fich: Directory not empty)Tj
+/TT6 1 Tf
+10 0 0 10 72 408 Tm
+(el comando)Tj
+/TT4 1 Tf
+4.8872 0 TD
+(rmdir)Tj
+/TT6 1 Tf
+2.5283 0 TD
+(no se deja. Si se dejase, ¿Qué pasaría si ejecutas por accidente el siguiente comando?)Tj
+/TT9 1 Tf
+8 0 0 8 133 390 Tm
+(unix$ rmdir /)Tj
+/TT6 1 Tf
+10 0 0 10 72 372 Tm
+[(T)70(endrías di)25(v)15(ersión a raudales...)]TJ
+0 -2.4 TD
+0.0852 Tw
+[(P)15(ara borrar un directorio es preciso borrar antes los )]TJ
+/TT7 1 Tf
+21.494 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0852 Tw
+(cheros \(y directorios\) que contiene. El comando)Tj
+/TT4 1 Tf
+20.034 0 TD
+0 Tw
+(rm)Tj
+/TT6 1 Tf
+-42.0841 -1.2 TD
+(tiene la opción)Tj
+/TT9 1 Tf
+6.1367 0 TD
+(-r)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(\(recursi)25(v)20(o)0(\))-250(que hace justo eso:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 318 Tm
+(unix$ rm -r fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 300 Tm
+(¿Comprendes por qué no debes intentar en casa el siguiente par de comandos?)Tj
+/TT9 1 Tf
+8 0 0 8 133 282 Tm
+(unix$ cd)Tj
+0 -1.5 TD
+(unix$ rm -r .)Tj
+/TT2 1 Tf
+10 0 0 10 72 228 Tm
+0.25 Tw
+[(2. ¿Qué)-250(contienen )250(los )]TJ
+/TT11 1 Tf
+9.5557 0 TD
+0 Tw
+(Ş)Tj
+/TT2 1 Tf
+0.5562 0 TD
+[(cher)18(os?)]TJ
+/TT6 1 Tf
+-10.1118 -1.56 TD
+0.009 Tw
+(El UNIX, los )Tj
+/TT7 1 Tf
+5.5822 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.009 Tw
+(cheros contienen bytes. Eso es todo. UNIX no sabe qué signi)Tj
+/TT7 1 Tf
+24.4738 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.009 Tw
+[(can esos bytes ni para qué sir)20(-)]TJ
+-31.1683 -1.2 TD
+0.0479 Tw
+[(v)15(en. ¿Recuerdas el )]TJ
+/TT7 1 Tf
+7.9026 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0479 Tw
+[(chero fuente en C que escribimos? Podemos v)15(er el contenido del )]TJ
+/TT7 1 Tf
+26.6428 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0479 Tw
+(chero utilizando el)Tj
+-35.6577 -1.2 TD
+0 Tw
+(comando)Tj
+/TT4 1 Tf
+3.9155 0 TD
+(cat)Tj
+/TT6 1 Tf
+1.2217 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 170.4 Tm
+(unix$ cat hola.c)Tj
+0 -1.5 TD
+(#include <stdio.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char *argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(puts\("hola\\n"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 68.4 Tm
+0.0443 Tw
+(En realidad)Tj
+/TT4 1 Tf
+4.9197 0 TD
+0 Tw
+(puts)Tj
+/TT6 1 Tf
+1.9613 0 TD
+0.0443 Tw
+(escribe un )Tj
+/TT7 1 Tf
+4.4201 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0443 Tw
+(n de línea por su cuenta tras escribir el string que le pasamos, por lo que este)Tj
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+/TT11 21 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+23 0 obj
+<<
+/Length 8307
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+0.1438 Tw
+(programa deja una línea en blanco tras escribir ")Tj
+/TT9 1 Tf
+20.4946 0 TD
+0 Tw
+(hola)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1439 Tw
+(". Pero también podemos utilizar el comando)Tj
+/TT4 1 Tf
+19.2998 0 TD
+0 Tw
+(od)Tj
+/TT6 1 Tf
+-42.1948 -1.2 TD
+[(\(octal dump\) para que nos escriba el v)25(alor de los bytes del )]TJ
+/TT7 1 Tf
+23.4672 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+/TT9 1 Tf
+8 0 0 8 133 678 Tm
+(od -c hola.c)Tj
+0 -1.5 TD
+(0000000 )Tj
+6.6008 0 TD
+1.8 Tc
+(#include <stdio.)Tj
+-6.6008 -1.5 TD
+0 Tc
+1.8 Tw
+[(0000020 h)-1800(>)-1200(\\n)-1200(\\)]TJ
+13.8013 0 TD
+1.8 Tc
+-0.6 Tw
+[(nint)600(\\)1800(n)1800( m)1800( a)1800( i)1800( n)1800( \()1800( i)1800( n)1800( t)]TJ
+-13.8013 -1.5 TD
+0 Tc
+0 Tw
+(0000040 )Tj
+9.0008 0 TD
+1.8 Tc
+(argc, char *arg)Tj
+-9.0008 -1.5 TD
+0 Tc
+(0000060 )Tj
+6.6008 0 TD
+1.8 Tc
+-0.6 Tw
+[(v[]\))600(\\)1800(n)1800( {)600(\\)1800(n)1800( )600(\\)1800(tputs\("ho)]TJ
+-6.6008 -1.5 TD
+0 Tc
+0 Tw
+(0000100 )Tj
+6.6008 0 TD
+1.8 Tc
+-0.6 Tw
+[(la\\n"\);)600(\\)1800(n)1800( })600(\\)1800(n)1800( )600(\\)1800(n)]TJ
+-6.6008 -1.5 TD
+0 Tc
+0 Tw
+(0000113)Tj
+/TT6 1 Tf
+10 0 0 10 72 588 Tm
+0.0154 Tw
+(En cada línea,)Tj
+/TT4 1 Tf
+5.9319 0 TD
+0 Tw
+(od)Tj
+/TT6 1 Tf
+1.2654 0 TD
+0.0154 Tw
+(escribe unos cuantos bytes indicando al principio de la línea el número de byte \(en octal\).)Tj
+-7.1973 -1.2 TD
+0 Tw
+[(Cada línea contiene 16 bytes y por tanto la se)15(gunda línea comienza en la posición 20 \()]TJ
+/TT9 1 Tf
+34.4738 0 TD
+(2*8)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(\).)Tj
+-36.2741 -2.4 TD
+0.0437 Tw
+(La opción)Tj
+/TT9 1 Tf
+4.3638 0 TD
+0 Tw
+(-c)Tj
+/TT6 1 Tf
+1.4939 0 TD
+(de)Tj
+/TT4 1 Tf
+1.2375 0 TD
+(od)Tj
+/TT6 1 Tf
+1.2938 0 TD
+0.0438 Tw
+[(hace que se escriban los caracteres correspondientes al v)25(alor de cada byte. Pero pode-)]TJ
+-8.389 -1.2 TD
+0 Tw
+(mos pedirle a)Tj
+/TT4 1 Tf
+5.6372 0 TD
+(od)Tj
+/TT6 1 Tf
+1.25 0 TD
+[(que escriba además el v)25(alor de cada byte en he)15(xadecimal:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 522 Tm
+(unix$ od -c -t x1 hola.c)Tj
+0 -1.5 TD
+(0000000 )Tj
+6.6008 0 TD
+1.8 Tc
+(#include <stdio.)Tj
+-0.6008 -1.5 TD
+0 Tc
+0.6 Tw
+(23 69 6e 63 6c 75 64 65 20 3c 73 74 64 69 6f 2e)Tj
+-6 -1.5 TD
+1.8 Tw
+[(0000020 h)-1800(>)-1200(\\n)-1200(\\)]TJ
+13.8013 0 TD
+1.8 Tc
+-0.6 Tw
+[(nint)600(\\)1800(n)1800( m)1800( a)1800( i)1800( n)1800( \()1800( i)1800( n)1800( t)]TJ
+-7.8013 -1.5 TD
+0 Tc
+0.6 Tw
+(68 3e 0a 0a 69 6e 74 0a 6d 61 69 6e 28 69 6e 74)Tj
+-6 -1.5 TD
+0 Tw
+(0000040 )Tj
+9.0008 0 TD
+1.8 Tc
+(argc, char *arg)Tj
+-3.0008 -1.5 TD
+0 Tc
+0.6 Tw
+(20 61 72 67 63 2c 20 63 68 61 72 20 2a 61 72 67)Tj
+-6 -1.5 TD
+0 Tw
+(0000060 )Tj
+6.6008 0 TD
+1.8 Tc
+-0.6 Tw
+[(v[]\))600(\\)1800(n)1800( {)600(\\)1800(n)1800( )600(\\)1800(tputs\("ho)]TJ
+-0.6008 -1.5 TD
+0 Tc
+0.6 Tw
+(76 5b 5d 29 0a 7b 0a 09 70 75 74 73 28 22 68 6f)Tj
+-6 -1.5 TD
+0 Tw
+(0000100 )Tj
+6.6008 0 TD
+1.8 Tc
+-0.6 Tw
+[(la\\n"\);)600(\\)1800(n)1800( })600(\\)1800(n)1800( )600(\\)1800(n)]TJ
+-0.6008 -1.5 TD
+0 Tc
+0.6 Tw
+(6c 61 5c 6e 22 29 3b 0a 7d 0a 0a)Tj
+-6 -1.5 TD
+0 Tw
+(0000113)Tj
+/TT6 1 Tf
+10 0 0 10 72 372 Tm
+0.0127 Tw
+(Si te )Tj
+/TT7 1 Tf
+2.0811 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0127 Tw
+(jas en el )Tj
+/TT7 1 Tf
+3.5645 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0127 Tw
+(chero mostrado con)Tj
+/TT4 1 Tf
+8.1743 0 TD
+0 Tw
+(cat)Tj
+/TT6 1 Tf
+1.4844 0 TD
+0.0127 Tw
+[(y)-262.7(l)0(o)-262.7(comparas con la salida de)]TJ
+/TT4 1 Tf
+12.3902 0 TD
+0 Tw
+(od)Tj
+/TT6 1 Tf
+1.2627 0 TD
+0.0126 Tw
+[(podrás v)15(er qué contiene en reali-)]TJ
+-30.0694 -1.2 TD
+0.0442 Tw
+(dad el )Tj
+/TT7 1 Tf
+2.7539 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0442 Tw
+(chero con tu código fuente. Por ejemplo, tras el ")Tj
+/TT9 1 Tf
+19.9945 0 TD
+0 Tw
+(>)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0442 Tw
+[(")-294.2(d)0(e)-294.2(l)0(a)-294.2(primera línea, hay un byte cuyo v)25(alor es)]TJ
+-23.9047 -1.2 TD
+0.0122 Tw
+(10 \(o)Tj
+/TT9 1 Tf
+2.3573 0 TD
+0 Tw
+(0a)Tj
+/TT6 1 Tf
+1.4623 0 TD
+0.0121 Tw
+[(escrito en he)15(xadecimal\). Dicho byte se muestra como ")]TJ
+/TT9 1 Tf
+22.1209 0 TD
+0 Tw
+(\\n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0121 Tw
+[(")-262.1(s)0(i)-262.1(hemos pedido a)]TJ
+/TT4 1 Tf
+8.1621 0 TD
+0 Tw
+(od)Tj
+/TT6 1 Tf
+1.2621 0 TD
+0.0121 Tw
+(que escriba cada)Tj
+-36.5648 -1.2 TD
+0.0754 Tw
+[(byte como un carácter)55(.)-325.4(E)0(n)-325.4(e)0(l)-325.5(caso de ")]TJ
+/TT9 1 Tf
+15.8664 0 TD
+0 Tw
+(\\n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0755 Tw
+(", se trata del carácter que corresponde al )Tj
+/TT7 1 Tf
+17.3086 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0755 Tw
+(n de línea. Es ese el)Tj
+-34.9313 -1.2 TD
+0.0398 Tw
+[(carácter que hace que la se)15(gunda línea se muestre en otra línea cuando)]TJ
+/TT4 1 Tf
+28.9047 0 TD
+0 Tw
+(cat)Tj
+/TT6 1 Tf
+1.5115 0 TD
+0.0398 Tw
+(escribe el )Tj
+/TT7 1 Tf
+4.1328 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0398 Tw
+(chero en el terminal)Tj
+-35.1052 -1.2 TD
+0.0405 Tw
+[(\(en la pantalla o en la v)15(entana\). Si miras ahora el fuente, v)15(erás que hay una línea en blanco tras el)]TJ
+/TT4 1 Tf
+39.9997 0 TD
+0 Tw
+(include)Tj
+/TT6 1 Tf
+2.9434 0 TD
+(.)Tj
+-42.9431 -1.2 TD
+0.0021 Tw
+(En la salida de)Tj
+/TT4 1 Tf
+6.1173 0 TD
+0 Tw
+(od)Tj
+/TT6 1 Tf
+1.2521 0 TD
+0.0021 Tw
+[(v)15(emos que simplemente no hay nada entre el)]TJ
+/TT9 1 Tf
+18.218 0 TD
+0 Tw
+(\\n)Tj
+/TT6 1 Tf
+1.4522 0 TD
+0.002 Tw
+(que termina la primera línea y el)Tj
+/TT9 1 Tf
+13.2581 0 TD
+0 Tw
+(\\n)Tj
+/TT6 1 Tf
+1.4522 0 TD
+(que)Tj
+-41.7499 -1.2 TD
+[(termina la se)15(gunda.)]TJ
+0 -2.4 TD
+0.0441 Tw
+[(Otro detalle importante es que no e)15(xiste ningún carácter que marque el )]TJ
+/TT7 1 Tf
+29.0586 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0441 Tw
+(n del )Tj
+/TT7 1 Tf
+2.3099 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0441 Tw
+[(chero. No e)15(xiste)]TJ
+/TT4 1 Tf
+6.8928 0 TD
+0 Tw
+(eof)Tj
+/TT6 1 Tf
+1.2217 0 TD
+[(.)-294.2(Igual)]TJ
+-40.5953 -1.2 TD
+(que un libro, un )Tj
+/TT7 1 Tf
+6.5825 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero se termina cuando no tiene más datos que puedas leer)55(.)]TJ
+-7.1387 -2.4 TD
+0.037 Tw
+[(El fuente estaba tab)20(ulado, utilizando el carácter tab)20(ulador)40(,)-286.9(\()0(")]TJ
+/TT9 1 Tf
+24.4464 0 TD
+0 Tw
+(\\t)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0369 Tw
+[(", cuyo v)25(alor es 9\). Al mostrar ese carácter)40(,)]TJ
+-25.6466 -1.2 TD
+0.0412 Tw
+[(el terminal a)20(v)25(anza hasta que la columna en que escribe es un múltiplo de 8 \(puede cambiarse en ancho del)]TJ
+T*
+0.1184 Tw
+[(tab)20(ulador\). Por eso se llama)]TJ
+/TT4 1 Tf
+11.9577 0 TD
+0 Tw
+[(tab)20(ulador)]TJ
+/TT6 1 Tf
+3.9248 0 TD
+0.1183 Tw
+[(,)-368.4(por que sirv)15(e)-368.4(para tab)20(ular o escribir tablas o te)15(xto con forma de)]TJ
+-15.8826 -1.2 TD
+0 Tw
+[(tabla. Ho)10(y)-250(día se utiliza para sangrar el fuente más que para otra cosa.)]TJ
+0 -2.4 TD
+0.0017 Tw
+[(T)80(anto el )]TJ
+/TT7 1 Tf
+3.4776 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0017 Tw
+[(n de línea, como el tab)20(ulador y otros caracteres especiales, son especiales sólo por que los progra-)]TJ
+-4.0338 -1.2 TD
+0.0068 Tw
+(mas que los utilizan les dan un signi)Tj
+/TT7 1 Tf
+14.5178 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0067 Tw
+[(cado especial. Pero no tienen nada de especial.)-506.7(Siguen siendo un byte)]TJ
+-15.074 -1.2 TD
+0.0239 Tw
+[(con un v)25(alor dado. Eso si, si un editor o un terminal muestra un ")]TJ
+/TT9 1 Tf
+26.3242 0 TD
+0 Tw
+(\\n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.024 Tw
+[(", entiende que ha de se)15(guir mostrando)]TJ
+-27.5244 -1.2 TD
+0.0452 Tw
+[(el te)15(xto en la siguiente línea. Y si muestra un ")]TJ
+/TT9 1 Tf
+19.0903 0 TD
+0 Tw
+(\\t)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0451 Tw
+[(", el programa entenderá que hay que a)20(v)25(anzar para tab)20(u-)]TJ
+-20.2905 -1.2 TD
+0 Tw
+[(lar)55(.)-250(A)-250(estos caracteres se los denomina caracteres de control.)]TJ
+0 -2.4 TD
+0.0085 Tw
+(Otro carácter de control es ")Tj
+/TT9 1 Tf
+11.3062 0 TD
+0 Tw
+(\\b)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0085 Tw
+(", o)Tj
+/TT4 1 Tf
+1.6752 0 TD
+0 Tw
+[(bac)20(kspace)]TJ
+/TT6 1 Tf
+4.403 0 TD
+0.0086 Tw
+[(\(borrar\), que hace que se borre el carácter anterior)55(.)-258.6(D)0(e)-258.6(nue)25(v)20(o)0(,)]TJ
+-18.5846 -1.2 TD
+0.1121 Tw
+(es el programa que utiliza el carácter el que hace que sea especial. Por ejemplo, al escribir una línea de)Tj
+T*
+0.2127 Tw
+(comandos, ")Tj
+/TT9 1 Tf
+5.1756 0 TD
+0 Tw
+(\\b)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.2127 Tw
+[(")-462.7(borra el carácter anterior)55(.)-462.7(¡Pero no puedes borrar un)]TJ
+/TT4 1 Tf
+23.7201 0 TD
+0 Tw
+[(intr)45(o)]TJ
+/TT6 1 Tf
+2.3626 0 TD
+0.2128 Tw
+(si lo has escrito! Cuando)Tj
+ET
+endstream
+endobj
+24 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+26 0 obj
+<<
+/Length 6317
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+-21.017 -3.6 TD
+0.1237 Tw
+(escribes el )Tj
+/TT7 1 Tf
+4.6898 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1236 Tw
+[(n de línea, UNIX le da el te)15(xto al shell, con lo que UNIX \(el k)10(ernel\) no puede cancelar el)]TJ
+-5.2459 -1.2 TD
+0.0373 Tw
+[(último carácter que escribiste antes de borrar)55(.)-287.3(Eso si, si pulsas un carácter y lue)15(go)]TJ
+/TT4 1 Tf
+33.3944 0 TD
+0 Tw
+[(bac)20(kspace)]TJ
+/TT6 1 Tf
+4.1446 0 TD
+0.0374 Tw
+[(,)-287.4(e)0(l)-287.4(k)10(ernel tira)]TJ
+-37.5389 -1.2 TD
+0.0508 Tw
+[(ambos caracteres a la basura \(y actualiza el te)15(xto que v)15(es en el terminal\). La tecla de borrar borra también)]TJ
+T*
+0.0665 Tw
+[(en un editor de te)15(xto sólo debido a que el programa del editor interpreta que quieres borrar)40(,)-316.6(y)-316.6(actualiza el)]TJ
+T*
+0 Tw
+[(te)15(xto que hay escrito.)]TJ
+0 -2.4 TD
+0.039 Tw
+[(En este te)15(xto, y en la salida de comandos como)]TJ
+/TT4 1 Tf
+19.5083 0 TD
+0 Tw
+(od)Tj
+/TT6 1 Tf
+1 0 TD
+0.0389 Tw
+[(,)-288.9(s)0(e)-288.9(utiliza la sintaxis del lenguaje C para escribir carac-)]TJ
+-20.5083 -1.2 TD
+0 Tw
+(teres de control: Un)Tj
+/TT4 1 Tf
+8.1641 0 TD
+[(bac)20(kslash)]TJ
+/TT6 1 Tf
+4.1738 0 TD
+[(y)-250(una letra.)]TJ
+-12.3379 -2.4 TD
+0.0437 Tw
+(Hay algo más que debes saber sobre )Tj
+/TT7 1 Tf
+15.051 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0437 Tw
+[(cheros que contienen te)15(xto. Hace tiempo se codi)]TJ
+/TT7 1 Tf
+19.6175 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0438 Tw
+(caba cada carácter)Tj
+-35.7808 -1.2 TD
+0.1858 Tw
+(con un único byte, empleando la tabla ASCII \(7 bits por carácter\). El comando)Tj
+/TT4 1 Tf
+34.3131 0 TD
+0 Tw
+(ascii)Tj
+/TT6 1 Tf
+2.3245 0 TD
+0.1858 Tw
+[(e)15(xiste toda)20(vía e)]TJ
+-36.6376 -1.2 TD
+0 Tw
+(imprime la tabla:)Tj
+/TT9 1 Tf
+8 0 0 8 133 558 Tm
+(unix$ ascii)Tj
+0 -1.5 TD
+(|00 nul|01 soh|02 stx|03 etx|04 eot|05 enq|06 ack|07 bel|)Tj
+T*
+(|08 bs |09 ht |0a nl |0b vt |0c np |0d cr |0e so |0f si |)Tj
+T*
+(|10 dle|11 dc1|12 dc2|13 dc3|14 dc4|15 nak|16 syn|17 etb|)Tj
+T*
+(|18 can|19 em |1a sub|1b esc|1c fs |1d gs |1e rs |1f us |)Tj
+T*
+0.6 Tw
+[(|20 )600(sp )600(|21)-1200(!)-600(|22 ")-600(|23 #)-600(|24 $)-600(|25 %)-600(|26 &)-600(|27 ’)-600(|)]TJ
+T*
+[(|28 \()-600(|29 \))-600(|2a *)-600(|2b +)-600(|2c ,)-600(|2d -)-600(|2e .)-600(|2f /)-600(|)]TJ
+T*
+[(|30 0)-600(|31 1)-600(|32 2)-600(|33 3)-600(|34 4)-600(|35 5)-600(|36 6)-600(|37 7)-600(|)]TJ
+T*
+[(|38 8)-600(|39 9)-600(|3a :)-600(|3b ;)-600(|3c <)-600(|3d =)-600(|3e >)-600(|3f ?)-600(|)]TJ
+T*
+[(|40 @)-600(|41 A)-600(|42 B)-600(|43 C)-600(|44 D)-600(|45 E)-600(|46 F)-600(|47 G)-600(|)]TJ
+T*
+[(|48 H)-600(|49 I)-600(|4a J)-600(|4b K)-600(|4c L)-600(|4d M)-600(|4e N)-600(|4f O)-600(|)]TJ
+T*
+[(|50 P)-600(|51 Q)-600(|52 R)-600(|53 S)-600(|54 T)-600(|55 U)-600(|56 V)-600(|57 W)-600(|)]TJ
+T*
+[(|58 X)-600(|59 Y)-600(|5a Z)-600(|5b [)-600(|5c \\)-600(|5d ])-600(|5e ˆ)-600(|5f _)-600(|)]TJ
+T*
+[(|60 ‘)-600(|61 a)-600(|62 b)-600(|63 c)-600(|64 d)-600(|65 e)-600(|66 f)-600(|67 g)-600(|)]TJ
+T*
+[(|68 h)-600(|69 i)-600(|6a j)-600(|6b k)-600(|6c l)-600(|6d m)-600(|6e n)-600(|6f o)-600(|)]TJ
+T*
+[(|70 p)-600(|71 q)-600(|72 r)-600(|73 s)-600(|74 t)-600(|75 u)-600(|76 v)-600(|77 w)-600(|)]TJ
+T*
+[(|78 x)-600(|79 y)-600(|7a z)-600(|7b {)-600(|7c |)-600(|7d })-600(|7e ˜)-600(|7f )600(del|)]TJ
+/TT6 1 Tf
+10 0 0 10 72 348 Tm
+0 Tw
+(Compara el fuente y la salida de)Tj
+/TT4 1 Tf
+13.1338 0 TD
+(od)Tj
+/TT6 1 Tf
+1.25 0 TD
+[(con los v)25(alores de la tabla.)]TJ
+-14.3838 -2.4 TD
+[(Pero v)25(amos a crear un )]TJ
+/TT7 1 Tf
+9.1103 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero con el carácter ")Tj
+/TT12 1 Tf
+8.9 0 2.7732 8.9 258.2393 324 Tm
+<005f>Tj
+/TT6 1 Tf
+10 0 0 10 263.8539 324 Tm
+(".)Tj
+/TT9 1 Tf
+8 0 0 8 133 306 Tm
+(unix$ echo)Tj
+/TT12 1 Tf
+7.12 0 2.2186 7.12 185.8078 306 Tm
+<005f>Tj
+/TT9 1 Tf
+8 0 0 8 195.0995 306 Tm
+(>fich)Tj
+/TT6 1 Tf
+10 0 0 10 72 288 Tm
+[(Y)-250(ahora v)25(amos a v)15(er qué contiene el )]TJ
+/TT7 1 Tf
+14.7871 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+/TT9 1 Tf
+8 0 0 8 133 270 Tm
+(unix$ cat fich)Tj
+/TT12 1 Tf
+7.12 0 2.2186 7.12 133 258 Tm
+<005f>Tj
+/TT9 1 Tf
+8 0 0 8 133 246 Tm
+(unix$ od -c fich)Tj
+0 -1.5 TD
+0.6 Tw
+[(0000000 316)-600(261 \\n)]TJ
+T*
+0 Tw
+(0000003)Tj
+/TT6 1 Tf
+10 0 0 10 72 204 Tm
+0.1773 Tw
+(¡Contiene 3 bytes! En muchos casos, caracteres con tilde como ")Tj
+/TT9 1 Tf
+27.6451 0 TD
+0 Tw
+(ñ)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.4273 Tc
+("o")Tj
+/TT9 1 Tf
+2.171 0 TD
+0 Tc
+(ó)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1773 Tw
+(", o letras como ")Tj
+/TT12 1 Tf
+8.9 0 2.7732 8.9 458.7908 204 Tm
+0 Tw
+<005f>Tj
+/TT6 1 Tf
+10 0 0 10 464.4055 204 Tm
+0.1773 Tw
+(", y otras)Tj
+-39.2405 -1.2 TD
+0.0354 Tw
+(muchas no pueden escribirse en ASCII. Eso hizo que se utilizasen otros formatos para codi)Tj
+/TT7 1 Tf
+36.9023 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0353 Tw
+[(car te)15(xto. Ho)10(y)]TJ
+-37.4585 -1.2 TD
+0.1213 Tw
+[(día suele utilizarse Unicode como formato para guardar caracteres. Cada carácter)40(,)-371.3(llamado)]TJ
+/TT4 1 Tf
+37.8414 0 TD
+0 Tw
+(runa)Tj
+/TT6 1 Tf
+2.2605 0 TD
+(o)Tj
+/TT4 1 Tf
+0.8713 0 TD
+(code-)Tj
+-40.9731 -1.2 TD
+(point)Tj
+/TT6 1 Tf
+2.3889 0 TD
+0.0831 Tw
+[(en Unicode, corresponde a un v)25(alor que necesita en general v)25(arios bytes.)-583.1(P)15(ara guardar ese v)25(alor se)]TJ
+-2.3889 -1.2 TD
+0.0895 Tw
+(utiliza un formato de codi)Tj
+/TT7 1 Tf
+10.6881 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0895 Tw
+[(cación que hace que para las runas que e)15(xistían en ASCII se utilice el mismo)]TJ
+-11.2442 -1.2 TD
+0.0122 Tw
+[(v)25(alor que en ASCII \(por compatibilidad hacia atrás con programas que ya e)15(xistían\), y para las otras se utili-)]TJ
+T*
+0.0465 Tw
+(cen más bytes. De ese modo, ")Tj
+/TT9 1 Tf
+12.5173 0 TD
+0 Tw
+(\\n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0465 Tw
+[(")-296.5(sigue siendo un byte con v)25(alor 10 \(o)]TJ
+/TT9 1 Tf
+15.8269 0 TD
+0 Tw
+(0a)Tj
+/TT6 1 Tf
+1.4968 0 TD
+0.0466 Tw
+[(en he)15(xadecimal\), pero ")]TJ
+/TT12 1 Tf
+8.9 0 2.7732 8.9 478.8062 132 Tm
+0 Tw
+<005f>Tj
+/TT6 1 Tf
+10 0 0 10 484.4209 132 Tm
+[(")-296.6(no.)]TJ
+-41.2421 -1.2 TD
+(Si utilizamos como formato de codi)Tj
+/TT7 1 Tf
+14.3027 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cación UTF-8, corresponde con los bytes)Tj
+/TT9 1 Tf
+16.6899 0 TD
+(ce )Tj
+1.4503 0 TD
+(b1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 102 Tm
+(unix$ od -t x1 fich)Tj
+0 -1.5 TD
+1.2 Tw
+[(0000000 ce)-1200(b1 )600(0a)]TJ
+T*
+0 Tw
+(0000003)Tj
+ET
+endstream
+endobj
+27 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+/TT12 28 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+30 0 obj
+<<
+/Length 2610
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+-21.017 -3.6 TD
+0.0111 Tw
+[(En cualquier caso, siguen siendo bytes. T)80(an sólo recuerda que cada sistema utiliza una tabla de codi)]TJ
+/TT7 1 Tf
+40.0284 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cación)Tj
+-40.5845 -1.2 TD
+0.0451 Tw
+[(de caracteres que asigna a cada carácter un v)25(alor entero. Y para sistemas como Unicode, tienes además un)]TJ
+T*
+0.101 Tw
+(formato de codi)Tj
+/TT7 1 Tf
+6.5331 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.101 Tw
+[(cación que hace que sea posible escribir cada v)25(alor como uno o más bytes. Se hace así)]TJ
+-7.0892 -1.2 TD
+-0.0001 Tc
+0.0298 Tw
+[(para para que el te)14.9(xto que puede escribirse en ASCII siga)-279.8(codi)]TJ
+/TT7 1 Tf
+25.2139 0 TD
+0 Tc
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0298 Tw
+(cado como en ASCII, para permitir que los)Tj
+-25.7701 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(programas antiguos sigan funcionando igual.)Tj
+0 -2.4 TD
+0 Tc
+0.0427 Tw
+[(P)15(ara UNIX, los )]TJ
+/TT7 1 Tf
+6.5565 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0427 Tw
+(cheros contienen bytes. Pero para los programas que manipulan )Tj
+/TT7 1 Tf
+26.0987 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0426 Tw
+[(cheros con te)15(xto y para)]TJ
+-33.7674 -1.2 TD
+0.0138 Tw
+(los humanos los )Tj
+/TT7 1 Tf
+6.7362 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0138 Tw
+[(cheros de te)15(xto contienen bytes que corresponden a UTF-8 o algún otro formato de te)15(xto.)]TJ
+-7.2924 -2.4 TD
+0.1009 Tw
+(Los directorios contienen también bytes. Por cada )Tj
+/TT7 1 Tf
+20.9226 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1009 Tw
+(chero, contienen el nombre del )Tj
+/TT7 1 Tf
+13.1105 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1009 Tw
+(chero en cuestión y)Tj
+-35.1454 -1.2 TD
+0.0493 Tw
+[(algo de información e)15(xtra que permite localizar ese )]TJ
+/TT7 1 Tf
+21.148 0 TD
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0494 Tw
+[(chero en el disco. Pero para e)25(vitar que los usuarios y)]TJ
+-21.7041 -1.2 TD
+0.0258 Tw
+[(los programas rompan los datos que se guardan en los directorios, y causen problemas al k)10(ernel cuando los)]TJ
+T*
+0.0565 Tw
+(usa, UNIX no permite leer o escribir directamente los bytes que se guardan en un directorio. Hace tiempo)Tj
+T*
+0.0195 Tw
+[(lo permitía, pero los b)20(ugs en programas de usuario causaban muchos problemas y decidieron que era mejor)]TJ
+T*
+0.2119 Tw
+(utilizar otras llamadas al sistema para directorios, en lugar de las que se utilizan para leer y escribir)Tj
+/TT7 1 Tf
+T*
+0 Tw
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros. V)111(eremos esto cuando hablemos de )]TJ
+/TT7 1 Tf
+17.1336 0 TD
+(Ş)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros más adelante.)Tj
+ET
+endstream
+endobj
+31 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+>>
+/ExtGState <<
+/GS1 10 0 R
+>>
+>>
+endobj
+10 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+32 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 701
+/CapHeight 0
+/Descent -298
+/Flags 4
+/FontBBox [-167 -299 1094 827]
+/FontName /HOMMDN+Symbol
+/ItalicAngle 0
+/StemV 0
+/FontFile2 33 0 R
+>>
+endobj
+33 0 obj
+<<
+/Filter /FlateDecode
+/Length 18740
+/Length1 37832
+>>
+stream
+H‰äWtÅÿîŞí¯»½KÊó=¡	ïÑZ*PQR|1¥Hc -òØ»›Ë­ìí»{äB«¤FJø¢¤4¥1ZK£Õ”RJ)µH¡Iä‡Ø‚R-H@TJARLc€~goïr€ÏWëŸ™y»Ÿù|ç;3ßïwfvf€AørCşŞqç©ÅÅ‹ ˜Ñ(05h=0«ğU\dåW§!?ÀN‡Ì`ÑÛ'`ã\¬&Š•ÒwáKÇôĞ¹ï¬X|:@ÕcáxE´ıöÃ[~ÛC…V®=ÄX³ûüR„(¡7ºî=°¶ÛOˆ @ŞË®X‚ú02µ’kêËäİ ®¡%L‹ªï¨¡ãkZ,¨Œœ12P}2õQ%_“6a(ƒü(±”ñÍS¿…úßÇñ‡êJ”,ûÆ³:Àê»â‰_ÈÔ°´@¼7bñª}ó0u«¨}àr70õÀ›İÎ®ÀW¥9wB/d¥j€÷™ùïİT”âñ*Ã,÷\åš.7ğÍlˆ†5«Işuü3¤sp î†e°œ³¡æÁYf3¬eVÂf9ÖŞa3tà3ÆÀ|hqµA‚møÌe÷a‹0Œƒ!lÌ€rÔj–Æ&P¾i?;…meš¡‰]Â<s nu·A7|¶¸¢P Ï±óà!÷RÁV¹Œ‰Leg°¬Ô—Üá>n.l‡MĞQ×ivP=L"pNÀx˜È`5Øå°1[™#Ì[L{v3}Ì¦„£9ÌÜŒ´q[áv!à’‚[`
+¸]©ú¬ÏƒÛĞ~ú„Ñ÷}\3ú?“9‡­ÆÁzxåë¡„Û„¬Ñ5-)€w¡ómÈ‘Õp¥°Ö@âæ@Zø0?ß®ÛêÚÌ`©†ë`(otá‚w˜aü$á¾•Ç/Ã¾6q÷°GØJ¨Kl·…9«¹ŒÇ ¦‰«aL*&3 Œ[‰57adF ÎÅÉƒn®^dÆ°¹87Ïgbówš•ÙûøœåÎ1=ÌüøÍLl´1ãù{ )àw0“x?ÁqÁ¥ß»ºäQ0
+›‚NÏJX‰‹c$paà†]™„»é8°\	wÖ WY±÷reÈŠPÄOE+bqs1È º¢…í›½fYd<Ğ©¹—¦«¸„ÜKÿ`U4Óàê MŞ73ñäŠ ¾0`£‘JyOfb2—a;.œ©=&3÷gb‚»l<]'ÓzLÂZ&&€©å Ré@‰9<“Á _oÆëÑº< Ò1‘ğÎu®“™=&©[¥ç›ŸíøÍ¥g:†Ò[ĞWÆÌÊmÅì3ßHşx˜uåf=ó1¹ì› Lçgw.îcü¦áO@<ñ›' ®^\Ë™t¹ü£ÂÏ±¾ÉàCrŸİï§LÀ¤ï˜ª«y=f…Hø>ê`ƒ9¸ÔÁ:¸ÌÁZ—;¸ÂÁ•®rpµƒu®q°ŞÁÇ|ÂÁµ68ø#×9øcü‰ƒëü©ƒM>é`³ƒO9ø´{ZÂˆıLœ7U-¦{†ªzÂ"?—4bšdaBÑ6ˆaC	ZjLÿ…¨êaUW­ª>¬ÅUÖÔç„ªDñoî—ş’ÖóœWBäI1ŒXe fEZSE„­_	v1ßè±†ŠWÉ_§êC±J}"!¿‘âZÂ¤Ö˜›y“±ûßÊX¡XÄ°íÚ"Fš¥ÆµªßÉôW,fPm«76¨ŠRÃáßó„¦kR©!òı¶›¿èEP)Ñƒä^%}$íší"Ñ4bşÉk›µˆIîmA¿“äN©ªT 5VÂĞwqØS<Ò&ŞÑZ€’?‹eNi··’¨Ä0-C1Í=ş j5’¶ı/§Î¶‹$·ªLbuÈª~¢ÛÔ§N.¡#¼ä§n¢4A_ÄÚë7HX#É4ß'¡of"€ÅırZ•²rZ‘²—‚Ãİ:è¡±H•_á½B#+%¤¢ào>ƒT¨¦m„¡†ùƒø³kÏ•ÍûÑ›‰*Æ›¿*à€¡DĞzM íˆŠYQÅŠüİ£Å*¨G{=]VôĞ’SÿH…6Ğèb9šat½ó¤Y"ş¦/]¶-9Q¤§KĞb‹‰^ANH¶/´ñI9ã…¢›oùú@ú¶¯ß¤ïHf"Šc¤OÑ%DtÚƒ?İOHòL?	Xïú¸3+¥ø^6%É÷³iÀ:ë¥”¤Tÿ)gHTë¯
+XÿlB’ç9\“¹à±½±­ş@¤Ë§H»èI—¬xw¦L’ÿÎ”Ö%Ù¶ÕniÅ?Ìb$Ù“ÅÖü©nï5œ$?º†¬¾”ùöe_?Co®dU¬«Â—S_šô\ZŸÜ„é¾¶æúœjé®ÜAìô•Ë†Àså\9enûqX¾!»”wÒ,|^ìôÖyZ½uÒ^©] µxë¸rÏ`”õú¿â­óÖÉ¥Ş£â)))µ{=/—zÊämR;Wî{õj±·bÏ`»§3/Îæ¤®Xj¡©Pœm‚o©Eà¥BoÄÓ+¼Ïa£ë.a#Ê?ÑÃÿ%{ÏHg]İb'ÛJ£ ;)·5g¯ÔB>,vòÔoÇ›ò[ìÌ©%<µ¾Ñ^y[Î^¹T.õ¦oo$;S.o7øïõ¦õF¤l™é_8ÃÓz¹ÁáGögËÎò®ØğôÒ|c}jëíKäàÅá2ä@÷*û.”•Á§Oy]#Ì¿A‚?JEıŒùÄ.óÓÀÑf¨İÑµ¿¨sÈ‰Ú>#çüÿa"¦(¼^T”m†:6ºª36>rŠ–>ÈRZ²‹¾ºãÀ¹sóNîQä¯îu¢dU©<üâ®i\¨É,<ÿ@Ş‡“Q¥‹É9º0¯#¯§¯`Ûˆ¶ÓO]<¸sç…]rŞë¯Â	TR=¥}¦¯.»ûB¨í×à]nz1³Ó(€¯ı—ú²mâ<ãøó~Ø¾8—øìx`RÖœXQĞÒ.#Ç	£%£ Ò®IøÔº¶hZJÎÁPCƒHB(a R6©Cet­ª¡ÒÉù(´¥•`"št¥:t[“aì=w¶IŠè 	©Úûê>ü>ï=Ïïÿ¼w†qÕª)F"uÿïÌéz«:#pá’¬¦Ï€É*E‹_ªRzjÅÒ Ç]ĞX!ºÈîõl¢Ÿ`ËôgÛ}ÿsİ.s^¡Ê?N’;Ûf³(ºw·6Yšõ›ÑàF_’¦ŒN=ÌÃ½« ¿Õ‚F£^*|¡g!5ÈÈv­Ï,,8Œ‘Ê!¯ã÷²š21°İÏ‘ñçµŠÁè dTüÄƒ_§rá#µ Kg¤AÅÊ;"ùÇÉU­~¿¢ÌWš‘79F»&Œ\wŒƒÃâ8¬nVígH©ø‚ÎØb¤Ç7°·_æH›Aàr»òÅÎ4#TÉîùlGÎ"ë¯*n2JÖö¼uuËsCÈÈG=­>Ğ­jÚHO°¶!ôÇeRåµªãÕª‚ñsgq{¶
+6).dÌş¤æàÅI¿ìõØ'º>²ıımüğR‚ªˆŒuîj)E¹L€"¼HkÒı•»<gxŠÕ’ÏÅâõÓ×ve‡²M¥BĞÀ¡Š˜ìÊV¥¥Ã`ìJ2:ÄfëÚ3c­#dWTÌXZÕãzftÒ-yÇ6‡Cï¶TLøô0·ª[ÖE|:cnó'³Ç¿ñvù“3íÒÅÊØÕ9›òín% Pí}«êVDpÌ‘V­‡¬œ÷öK9±ˆÎø…ø©²x’ËÛ­Ê²ÃšÚ$!#ß&ÏÕ ËNÌãz¹g«Ü²õ:c¹˜[Öl¥.7#£Ã!ä–5ú‰õ.•ûjƒşÉ¿QµnÅ<>ä\VCšæÓÇÚ.µT8*=·Ú…®JW„Œ¥Jƒgé€*:jåºkƒıà×ßAª …{+êI,9§™çøk:ÓPeItÈ²}ì(ÓÙİ¾öAON¢=şxâ»ï‚ÜâFF%Éèkt†6•ĞqÇ¦ç&JZ.¥Pc!˜g_ìQ|ş¢eÈ(‡Z›«
+
+œ2"¦Ç`|­¼e¦§r¢cˆ1ğîŞ*óåÿ!qínÄ¡DÃ>_I<ÿZIÄ™‹:~±xÒ(adôÀVk½Mî1Å<şú§¾­ŠF<ö'óè­NZ4;ô<Ê¶sÁPóâ"d\€kf£ïjÖ×Œ„Œ“<ÉØXá@Æ	v»É›f|“zXT…=}ùñÁ¯¯§óHàõC%$Æõ±nhìrLi;:Æ»Uƒ1 kÖûAFÍjÏ7òxb“§up}>.H¯™ê “n<¹IÔ…EÛæœÈzç£*(Ë
+
+¼‚äÿë(j:{O¡»Zªåub·>îz~üÏ¼Ê=—/ùÉ¡¯œ;Çnô5ƒë»lİ…ù©ù¨/{ócRÙ€P$Ş{şÔÔ¶ãK²à@Xv”â|ìD¯r)X¥Nc>¾¬ï= èŒ³Ï'óbAgı†—#cÍ—ñèÓ«-5¸®gÇêûê½£§ÅV´o9:Ğ»kÅÉ’“ÙÙ_%ÎuÇºK¢ v>Ükö,EşÖU|üòk®_õ]YU×{O¤$¸ ÔäºöøëI\`š¤2B kjÍYÛØ[ò’ëº>´":£(„uM¹-Éµ·V¬èÚë%VØ¢©í^z“İ¸¹¹ä¨ïvRPN±AJmth3”o:€Tİô´§@ºh©K]dXİeŞ 2ª¼ÇƒŒBÚœîC77—ŒaŒŠ:cáFE®L2’!F;õM‘f´ IÜ2Œd<ÛZkU9$W¬Ò†ğ·+ÙúÉ[¤š#Ü`œ&×$a´!FuèéTçÂÛ†1Ü	k3Â/m;\}hwRXÁ#1Çã`"L‚)ğ0òyñ•=ƒ¹ğ$,€Åğ~×¬„5€—!› Ú öÂ>xŞƒøœ‚³p.Ãø7Ä‰…8È}$ŸüL!/©$sÈ|RK!+ÉKD#!ò
+i%;Éëdy‹$&İäùˆœ&}ä¹D®’ÿPB-ÔF4—ºéú }ˆª´‚Î¦óèSôg´š.¹õ9º’¾@tİB_¥íôwôMú.í¦Ó3ôsúÚOh‚™Yû»Él,›È¦²b6ƒùÙl[Êg«Y{…µ²vö{›b°“ì4‹°‹ì
+ä”‹|wó	|2ŸÂÌËù£ü)¾”?Ç_ä|#ßÌ·ó=|‡ÿ‰äïóNŞÅócüÿ˜Ÿâ}<ÂÿÎ/ñË<ÊÿÉÿÅùu7Q“Ù”aÊÂê$<qSI·àûá
+áÌD2ˆ…
+8s3‰™¢sj!eÆÁÑb!F¥7ÎEQ`¥f<2i†qd¤îĞµ+ÍÂ{«qº[-$cé½LØj"V¢GÊĞ}áX›±ú#&¼
+Éš²èWİ’‰Ş,º¬Lo¿…·Ñ\¨ÿ’ê44“aÅ(6’xè
+Ø‚a·¤É˜Í”AlÄÊDT"ê¹Ãì‰ØGW>ì@Å†ÙEÔ¢GÑ3aø§zê5ìØÏ<T9ÆâXÑf"Ül5£7j66ıLĞ†ÏÁ4éë89xºpY·ãÙŒmKîÑñ3nŠ=xõrI
+Æ¿Ñï¼·ï2¼¯ ¥îÍ¶¨µLîây‘Ïl±ÿ;-ÎáZ„BµÌëâRu«È¿#-ü¿îF‹g˜–l¡PE-ş2ÔÒxo´äÀ´[[„ôËşær—ZH"’î³p˜–ºø½Á»Ò2ú›}`KEëçÔÈÔÈ­U¦´¤Œ'ëîıvÿápZK~ùjÔ£kÉ–ı^_RKDØ>ØÉ4ã{ŒGËzÃùÑ¥_÷jøk%–ê»»bµR%º¦¸$~Ş—‰DØÖ›()Ihÿe¾şcÛ¸ê €ß{ûÚ^œs’™skœËf”éWiª…ú’¦i€ÀZ‰ı@‚éœT)…®uÙ Š’Kš8	rš„É¡…6¨6X»
+Áö=Çnœ‰ŒÄP‘Ğj+R‹h¥µĞTór¼w¶Ótı%`<K–}¾»w¿÷ı¾ïóZÌ‚S·ºÂ{wç¾ĞÚ2¬Fãèğ„î²äêÛö;–ã7÷ZWuë+O,1K c11€Í±ìEé›.lY„•–‰5›Jë_€¢hòºÖ™Îîc²yà¥+¼¨ÄúbÑjI%‡$Æ)®·û5½áĞRä¹M€óI—­¾,‹¨/?dšÕÄtS§—Ÿåj`–‡‡İ"´ØãÓa«=6¼B‚À…”¸ğƒÈG,\0,µú¡•Y®M´5×ä,Å	G-³Ğî‹VÍukWïéÖ,‹Gê”i=õKzƒÇáqöG$cÖoóù@Ù„#;w/[XaQØa7Y¼ ¨ ‘ZtMğ„¬_=ÌRÉN·İ±tgê©…vT˜õªe©ÆZ—ÍùeÃWX†8c^hõéÌrşÖÅeËå‹¶Ã3å:¬qJğjrY”Å=¥Ç¦¹¡Áã*wBDÒé]Ÿ=%Á¼‘³ ÙD§­1D¶èB0÷N'í7®|æCgÑÅ!j‘ÏÅÔ’ñn]Ìˆ"Ÿ“dÇ1Ÿ·ô„ªëùF}²´È>æøbÅB¶ïÄ	}~¾æ[»¸ŠnZ‡øãm‰í;fIš#Ë–¹JÙÑfo¬+=I-‚¡Ä$ÚK½60ŠµRğäFŸoL»°Ú].WÌ»§»CY[‘róóFÂÆ,¤öÒÑ’®W‹/İjLGbgûN¿}âÖûëlZrä{Ô¢~^óIeÛ‹2/ÒıeÈh€‡­HÿD6gy~¤s«x¡*(ğÑİtmZérôJ“ÎÃPéÔbWÑod´ÔWµ}§æ•¦&ßÖ\.jG,ËãDK$—Û°,•W´ıZu´×m*kj+£=@-f4î¡–Ú2f9·'¥)^Es/¾Ğ?hYlå³.wúõÑ±Ñ-Z:Lÿ!pñÒ;e.¢¶?dA‹…Rz¦ïÜY•“aDÇlÓt&»Òã‹(aY²i›}öò  ŞºŒ›hŒ©ÍºQÁÒ—˜U}&?±«´·L(ÔÒºÃä,Ëh„#‰&™÷½ÌR&j¶QÙ1ŸÒ@a›¤_²Æ%ÿ1–Õ:2K¨Š +¾Å ´æ˜Íw)é×&Ç¦Ü:µ¿¯d2{‰«:ÑmYÌÁ£âğ~ZÛ.éXeQÄ‘%~²!™7X–gõ¿ÎÎ¸.Ÿ,]Dı"µÃÜ7zòˆq)å-ìb/#»<Ì"ÑqIZÙf©=8½´öõÛ&µèÌF¥ıjL"CŸäÓÂJÎ²ÂeµâQkN-b%/.gáã‚òæk»¨%6ñ[–`Şb«>¨
+0ÇMóò-«XçûÌ„*ƒÖ,&ÍÌp–%Ş%õE£Á¿iÕ˜e€ZúÌA˜£sŒ®/sÃæËÛéÌòõW¦é£ÙaÈŠ—ËÂâgø}¯g‚K:.ÍšBuö°äWÂVìGãî~ìœoÅ>já[°`Ë[$jI[–àt¤.øÆ
+ª9b
+P7J-}ãWãR£ËHgãR’ŸcÆÁ”äoHVW÷««ä,j¡¯ê ?Ÿ§«ä†ü¸DÏ‹“m´vé/²,‰¶f!oPùùPÂ%é:Tò3eµu‰–ÓĞ­ó‘\NK1B-­œŒ9EPÚç©EÈYÊãµTM9ıecàÙ§'šª©¥G8Æâ¥¡Ô¸°Ç÷±xá?²9“‰ô Xs™‹×¥jiPŸ,#ê2nañÒ&Bˆæä‚¥/C"ÍÉ4İ3Ëù–VùÈTO½aHG“KÚşÖ Ğé¥yLA(ºÛMèZI-]RÃ¢b­•ö¬"Tô˜K‚àÑ:X[¥ÜİñJåØÏ}ë*Æ=şÿüf4¶PıÌ7.Ì‰ÑœZtï÷]c©ˆî4Bè¿ĞíY"ĞRÆğôúĞõ%¬®
+ƒfÛ-Ğ<¦È Ó.éÏ3 11ŸÇŠ0O×JÀ„¡k%ËÉ‚ªEhÍÃ;n;œ©%uÃ¼jì9³Ï{i_~ó°ù»€iÆã±…lc¯9=‘½ŞŠñl6`ÏšKŠ¬Öi€fş²ÉÑªŒ$cÅÿä½ÁñÍvˆÅ"¾á…ÔßéZ)ĞHgk%-ôEcßårõ˜eQ·ÅcO„¶Úİ*ßİWX_ÌE™Ö09K“˜__0æ½(ö-Ë!¾í%f¹³Ã"àÅÃÊÏh:XEHîL£@fËÂ“-üù“d}UMá|úHì±îÓ
+ucëGÉù/(ºë«ö)¹Í,§ÀÙÖÍ,â²…Öcÿ•¥C}¤åÁ·º×RbÒñ2uù¾§ê8Äµ)êqp¨‚®E´•î“Öìw[‚úı,(¥oÉ[Šr¯‚¥å‘½æ[®Sj	ƒ óÔÒe‹Uóÿ;Í{×½Hå¯Vïµzh1÷Ññ{,ØÑİÛ
+–²jYŠAVXş—í‘ûÊû7D+Tj^uüÿXşÃ†8>o>F¦áğ|’VóõğYh‚ítÇø4<K73Ğûá%èAˆÀËpNÁ«p~	¿‚s0áOğünÂZ…J‘=êP=jB_D_A{ÑwĞ GÇĞ)ôôk4ƒŞFï¢Ëèúº	¶ãR¼¯Ç
+nÀÍøsø)üşîÂßÄßÆ½xOà)<†ßÀoáş-ş#Nákø^"Ed5YCD"}¯*òiò©'¤…´“çHy"#$J¦ÉòùI’wÈ»ä=òWò>¹I²\çà\\·ÛÌ5s_àæ‚Üî»Ü7Éıˆûé¿h¯ ¨®+|î}÷½½»,îÛ…”Õ2³o—EÁFE´-D*›¢v€`´µ32ÄJ¦“‰¨M«S#lt—!
+¨£42jZéL£Ö‰I[@Q£1¢3™ÔÎ˜´Æ¤1v¢Œ?¯ç^EQ;æ=ïí»?ç|÷Üßı‘u³÷Ø‡ìcö/v‰İP¹š¨êu†Z ÎVKÔ…êbµJ©Qõ×êNµS}S}G=ª~ ö«Ÿ¨çÕêêeuH½¡MÕ4Í¥%iÉšWói´IÚdmºö”6C{Z+ĞŠ´y(ÏŠ—•;¨±7˜‘@¥‰+±œ cbÕ¤ªXb…Q"¾ˆJU°ÛpbƒxbGqøCâP5ˆÃ9Nü?„Ú0'ëpÌ±£;ÑY£-ÚÀN„-«´Å±¦h/râbŠ‚9\Z-ìÄJ­„Qlû0=|@ÿ…'ÑDÆĞ1R¨óP	Ç7—~ùO`¢.&ÊíŠƒÄc—è«ˆ 
+öH¡(â[ÆA'°1´BãhIÀõ¨O-§xbRŒ³‚‚%8
+^m©,ª,“O«¨›Bœi6ŠulŠcÍ¼ŒrªÛñ¿86Ëñÿ'·Ùõê‘ğ7æâÁ·ƒÛH‚S7}Ô¹ô $nœ-ò}}šÒ=Ö>Š§Ü{]ß‘µ”?	‘OIVCÑİœêŒ®Óï×àöMğV
+TÉ“Ç±›….Í#Ê€7ª£Ü¸ÇúSw©®‘¯¥àòŠ÷Â†<o¤C IêYpa”3Hš•ûı³H/¼½ÕÙæÚ9oÍö$:Ô×euÀ«Üˆ$Â„!qm‘÷5;©ì¶ìbPx ÔÌx“-vN2 }_£±ğPrsÕêKít$&ŞœœK7·!Ş‘"bÒSœMnbàş¬·*ÿyÑÜVöêõş"#o¬Õåò—4Gô®]í.‘ÛH:3xQM›³'>¬{AGZ•x0.RCo4"’£ã–J*2Šcq£´6üê"ï-$¥Áà¢ "™|N"IøëÕÌzºµÜmá½¡ºÛÍi¸Èæ_S›šî©·%&ê%å»jóÉ’?ø¦µÿü{©¯ï(èûË®ÂÖT«¡smRÓ¡Ö“†‰ìÔÄâ½¹£L–´,ÙğLEÆ¦w=}‡._¾ÒÏ
+VfÎ÷2ğê!?q•h™ïu7äåşW"Iêxö?ìP\×mícg¶«<¯Óõël9ÍuçZC{±=ñA¾^jüadókó*ê;×ù·¯X›YÚ’YŞi_qg®>Úß_mšN3â°ïJ1{¯ƒÅ¬ÉJ^Õ”¿l_bšnøó÷ó‚9ÁïÓ¿xÈÜm67ìn/qºæåH–&m.ößáè…´Íõ]
+‘ßœËŸåô7×ú£¢‰¶'şÖ}Æb£‰î.«ÿæ/+5U—HÒ¹6o+ m"&E2òË®r"Fg¡ıÅ¶ã™n·®»¹ÃÔÓW¯µ§‘Ò6G§´ì@;XEL$’u‰›¯¦NU¬ÒvY>úôÊó†¥·Èé]ƒH¼®¢q8:\÷é!¦K$‘Èá²úÎèm$N=—“î¤+}]bL$Ğ½³a_îMï\û‹sOWL—H"œ§és2Á;‚deÙîp
+$_ÏX^œšYÇÉo{§Öû·¸¿¸­]¯õ79]V1cºÏj„3/„`K$ò~a}g‘ß_z$ƒB éòúïF!% :ébíTW^¨,Âµ“–hş0³ôôp¼:‰zäèø‚AódÊğŒYğÙ‰W8•ÕY“W$˜p½úÓÌ>ºöù®.OäÓì“¹YË˜rÏ,„Š}³§E¢+2ŞNÙ4ã$_úşöåÇËvO·^CÅş{¬cà&«˜7€q~õ‘7<­ï&ô‰;¨›úªUˆ¢\ÌX»/'òÉø^$¶Ç6ìN÷ÙBÅ¦Q nnÈ5)ò©‘.ê÷6a1Ã±­äVşÊŒÊ3qåyŞhìÜi”¾î›$Ë“Hj‹Iùğ‡cPüî¶*4qãÁkJwhŒnğµ©Üíè†Z8"	Ä0ãh·x÷Cò D\‘ >åéšĞCÕÿæq#©y\H^â!¾)0Õ$È„l˜¬*ˆÇB2«xaì
+?ƒeÈ­^†_Â+PQx6!Ãê€NØo!¿:' O2¬OàsønïÍ.â&2LD¦•M‚¸qÍ!Ï’ùä'¤‚¼@ªÈËd©!¯’zd^[È6ÒJv’=äMò'ò6é!GÈ{ä4ùœ%ÿ$ÿ&É—ä1)PFmA\ÔŒÎKSèD:‰N§3$¯›OËi%]NWÑ5´Fèº…¶"³ÛÜn/İOÿLÓ#ô4=Cûéy:H‡Šì.QIVüÊ“Êt%G2³RäfåJ¥²ÙYU•&äh­J‡ò{å€Ò¥WN!K;£ OT®(×©cÈÖ¬ÌÎÌÅX2ó0Ï&°ï°),ƒMgY,›ı€X›…2”{ØòH\J¡LÜçÁ‚,ÁŠÜ	!È/&UÁ›¾w	Q0_Şê±oõÈ7¬8‹8Ú± 2ßÈ†™—Èå¢\03æ&’¨'ìqÉoj6Â'Ğ“ğ1Ì/Ti[´à¾—âh[ô†"›C9,’µYˆ}Ø¯TÑOÁ3cØˆ]±`aşgC#9ÜÅ;cı‡5-
+öAöGÚ—ªa¼FXªz[ÇjTŒVŒãy¨Š,“OQ¦áúµÜâRÈªÌ›‚·*¯£=±ñå<Ü0ókÊâò,“ş•å†¬De¥ìK-<¡aÇSĞWV½7)òìÈˆ}á±m¹uÔ@HŞğÑ¯c?¾ù¨†–«Òï€ô›û£Ì±îÔúMãİ¡×1(O¶„/^èÒòÑ‰¡¾+ÿøEÊÆ.^ü•ù¹eãKf¬6€Ó@ö~«Š©5äR‘ú<#u°Ÿ:YUƒ#`‡íèĞ>²—†ÖÏlG¿®4é·£xYÛioÌmB¦D~¼<­¡0ü?òË8Šêã¿÷Şf÷‚+·	A6˜ñp¤‰"]HúG²ÁÀ$j¤€ı·”Ö2NFQ
+¼#r4Ôˆ¡&0-áŸpûÇv†îå&L3¢mu¤õ°C5`;½H¼íïí^’K°S«v:ïİş}~¿ßçíoï»{g‡&4ÿ~Úâ'§—«'BûÚšö-å¦Úø¡ô¥8·¶Zhs&n×=\é+,¸ˆ4cThAm¶Ë¥ƒnÍ©ØQİ^œ{aDØ=–¸¯èD-Ô6.85ša­¨™tİígóçÖÜu(§ú€TxÁmÊ
+Âk÷´¿ñİâŠª›û–ğXşÃF§¯Ä0óŞ^Ñ8Lí‰x©ùËŒ¹}Jöá‚¢îÒ™™ëŞËô¿q ö:™­ñüÇn:º ¢½¸¨íNÒyëü×~iì…ÚÈşâyÁ“m¼¦+{uëÌÊ#Âî7İøßœ@&	’»İû‹¿>ójUñ³íVtSõÁcš:¯éüºîlM¼n×ƒŠci06ºuÒãVÃ!sc¶¶ãîµÙ|ì¸¾ä³—Ÿ;ôü‚òöâJa7ÔÆ[U=½o«mZ_¼ıÈÇú&MÄx+#«wæTï‘²T[ÊB»¡C¨:œSY{°=Ù‰M5İ-t{¥H÷äıœ‡C»û æØ‘¢ÃÍzĞ|1Ìœà_¾;{÷«2tŒ~åin¼ın¼¾êªc#lo)/ŞnlƒHáŠÆüÊP$´kÚâ½¡¬œ#Ñî”í÷>Yuè@%~‚Üˆv«;¶Eşùµ"^t×O•äË»üıƒcË#­9f¸ĞÜ˜cŞópÍ‚º§D¼[o<j¢°Í]ç­oÓÂWfœ eÛœM=ÛZëwoıÙé{é¡s½õì‰wß[õnÉ)”£³ğZQ{×Ô­Şöä¹[vİº´¹JJÁ7Kë›½/ŞoZùä‘o«y¦dåÙ1»İõMÖ…Law®ï)TÁ'ì(Î-*Œì+ğò73•‹¥0û*4©=™%FdÑNÌS“Ø©¾šH³
+Oˆi¢™Ä¸R20Ó˜-PŠviá+û
+4÷œ²›ïç$Š{Â®íÙ]9º^´©<âCvn–rÒ?b&ÑúøÌq´âtìœõ–>Añ”T6äB µTÁd¸ÕÔ(A=UŠzjTÁ0¢ú,…ep/¬€•¨§°~Û¡~ûá £ğjªã®¢:gàÔTïCÂÈ5$‹ŒGU5uU!¹•Õr)#sHùª«Eä;Ä"÷ûP_=HÖ’¤‘4‘fò*¬dé$O“£äW¨°~K‘ØgPO“ääOäMò69O.’KB©Ñê§9ôÔWô&jĞéô«Ô¤å´‚Î£µt!ı6]J—Ñûéjº–†i„¶Ğ'èÏQg=MÒßĞ(í¦'éé›4NÏÓ¿Ñ¿Ó+,ƒ]ËÆ ÖÏ¨¶¦°¨¶f³*VÃîbßbuì>VÏV±Õ¨¹akÙzT^lkb?AõÕŠú«XÛÃö³§X';ŒZì9ö<ÖÈUJjàùXJŠ ÄÿöÔ>÷(¡FÅ+Jİ‘¼Qq„ƒº‚zã¼±g¢MÔQî]¯Ev[2\!	£
+ÅÍÏ³áîE•¼£ĞKi-%Ÿ×íRaûÓ+)¡Ğc\
+è•[Ñ÷QØ‚•=RÒ|”i&í^|>šéúæUe º3yPq‰¸iŠf‚˜{TÊºhG2TªmáS“AO&)’˜Qbúâí3D‚A‹ÈcÆãîĞ!UãÜÑæÏæñù+VUgø¿	â‡jùR‚bãC×õ¥½¬YC%¨p;ìğKà$¾0,ªa8‹#ACÏ…|ïÛ÷¹bÁ?ÅØ&Æ‚AÃ'XHoA›ş¿,¬ÿzÿäÆˆP‡#XhªFì‹†ÿ%‹	PlğZÏ»ª‡ú@ı7Å¼ú–7IøG¦™ø‚LcA=ŒKAŞ4œ…ú1&,ƒJú?Õ‚,{ ¦™©±ñÁæS©x‰­)‚0ã(]‡îî§twêFòª‘CE—Ó¿22 …ßyÛc¡@:‹j˜õ%'oÂAv»M´ìzÂyevÊ{Ô^[Îôj¤?ê8~‡.½”ˆ”¨“ô7$KQyÄâ°ŞïœNlpğ#Ï	İ mE¾w`Æ {k ^Ršå-¢Óà×±îešÇ"|Š…ræ<õC?#W!`N€®4´Éé_/™,x‡^¿–y,d	Y4°è…YA²ªEµñ»K”‚%N0¥·Şio6RŞ0–p[“eVS©a[áy†¤şbm~u*ç$ö¨ó²uD¶Ad¡>ëÄ;Èú {ã_2[ğ¤Ğ–¥4·Y>-ä^Ñ,hXee1Xd°adÉà’eYu•ú0©÷ŸˆÃ¨>B‹œ•Ì!`cÔºš‹}òÔ¦UyŠQr¤[KyÏ¸aØ¼D¦¸5×ea&öäÉĞ-İ2¢Í²šÅ9wÃ¢%j:‹¼‘,$Ï?¿ÃEkrÛ0ı¸è´"- Oc1DO8Èºe3†n‘Í·4C| ‰¦¦Ÿí³Û(›,´‘,Âæ²™lÌ©á‹1W._Å¢ËÒí„ƒæNo)Vı*áÌx= ŒË×w	K D†¥º¥2•èQî±°T¨GSU‹¢l,¸>À"¡Om­œî?×%C-­F|ÃEµDéû°+à4ë¶"¦n"Y7€¹Ò¶\ÏËM—‚Ä™ô5ÃXÄ.HÖqà*ôİ$¸Şd Ÿ9[²ôL³2“çr=…à"Xpd17ÑSß•Smû\ãœÅÆç$/š:—ƒeÂØ¢\n¨×ã;Õe¡ƒ¥ä}Ú‚Å\bªÇ"£‰5yò ‹¾{£ä<®’¾„)¬qÍò˜¢®Z½r.÷}ƒ¬×OÕ‹j2pÅ9] êêò¶ã&²¨á><V)Ä¯Ä{SË+ŞJ£k“ÃXœ¾ Ö÷0%²¹Â¨¦Yá&ĞpİTIÇ\²Uü‹üú‹ã( şÍîvw®}{N0krÉmœ)‚1)‰+¥ºµBFä¡ ºN¢$Ô^xÁˆÊóÎ‡ä6 p…Dó€èkABâ±×K}­dÒöÍRûpÆ ”‡*U‹8nø¾İ½?®´M !1Şóİîììof¿ï×Oç†*“ŸB—ÊÍaG»àVJ§+SÃË~Çb£ßâÏ,ÛdkÁ((ş·İÄÂ9šE‹ÇVP•ƒ†ŸE³¨‘_Y…İÌŸ>¬º?*¬jgéœñw:»ÏBûşµSêÊ±/Wßıy-øÈàøÒàâÄµs3K:×³æ5²°ğ!t|ÿ›9vKŞjš8d²^’<ÛŒ@J¸fM¬ëÙ7¯sÎµİ¸mØŠÉñî—’ç–GK}.õH®[²—KãÚØğ2-²²ªy¥cñ'EóØ14¯zŸôğf+hÁÏ««¡uFÙ-|îÊúhQ'‹Ù³khÁ§FËÓU …ufë<ø,te6xp]ûüyçØø^×ĞgÄ_J©yŒm+*×¹µ&ĞÂÄ8WpWSïÈ÷Z6¸=ºçáCú&>ÎM©Ã€¼¡%³‹Væm‹‡-´0Gà[xšËx¢Ç é-óÒd-pµí2ÍyÙ˜—·´yº¥´]‡±´íD{²2(‰ÈbA Å”¢}A^†LF0DşlnXzÊttC„¦Ÿ2P6î EJZ+ëp-”Èâ…µšğ-xÔÔa¦=t	‚®Å:?2±n:HYÑÇ¯HÖp}ı	¿èÇ¹NérÅöÿ”·Û.ÅpšDÏ£yá¤„TÌJbñ¸úœuİòò³ÇåKöx-\ğmZ¸˜òÈBë³Ô#­Ó­$–MbF>ZLj¸.ÔÌE§Ïb°5}ïÒ…pß“sßbjg]8™(8K‹6xœ°ÉBm¡t,œ#ü;‰…Ô-–R¬Á}?ÜØ¨ÅáiàL\=ãV×nJ´ğ(·ãõ6­])˜Å”¤ÕÎ'O‚nÖ3"²pÌ2[,p¦²:×6±¾p‹ i-Ô#Yhne—İDÛÖíd]4N&¢c¡·fç‚Ï=Ù’!Z8#Çtk¼¶NQİ©·m\#h‘ÄÇ¹Y¸×âw$ ¨î…>uÅ™ğ/Y§ÆÈ"Øn Eú‡òUà:\uİÚ»²-‘ƒZ)'›dÁ
+ÊCzJÊpRRöÄ_„ò:PßyzG¼®…KR¶5´Ø‹TwúE)Ólzl¡º?¦u…‘$^4‹(^x•\È´ó…«jğÆNæŒ
+[ø­Ù&Ÿ8¬°r’G§^ÕZr/Ä±3`@J”TØbëb˜,NÙÑ§·YÌ,hÆë¢&#‹÷­‹E§<"ÀHâ…Zª¨ïã—)vŠ­x‘	ÖÂhÙ)‘®æ.è­‹«¿ÜƒLÁ´I,‰¶Ğµ0³j"Pƒqˆ,
+øpLw|ŸGñB wøÄA²ˆëÇ©	¯:h¹Æ95P"R _ïY8NŞŸµNí!‹üÎéJ;gìŠW{÷vkşuÙ‰‡NâC:ÚÔCdÑ‹¶Z˜¨ïÏ¿†9õ‹-ö Zx±fO«pâµ”Ù³p{ñÂù‰9§Ì->.Ã~8ƒÎ+¢‘XXã]ŸÅ»-&K°Ju'Yğj ª†åf,Ìh]Õè·˜àeG]µÆK3×õg^šlqì¤œ:š2Dum³™»òt'LòÈ³ìÌê
+“a/¸ºÑ€¥ú·†µÖuÌ"#@ü²çá‚Á¨Ö"‹]háMz}y¤pÒ*­åqÊÜ»[Ø¬ş*¼™‚Ã5,•ŸÓĞ" Š^‹óYà~-L4ÄYÄ5x`jh‘10Æv-~ÇßpÏj'ÑâëG3ü+N±lÍüt¯Êıã+OŒ×ó–5q­eà¨…ÅÂ¬ñT§¾(œ¨¾çĞµn­5ßoˆ¯O–±/cu±í±¾Q}1€,PŞgÑ«/Òl
+Kwœ`ğb‹İ;K‰…¥6\´àM¹_Ç+Š0¤Ï\ùÇ’:QÃÇ¯-Rİ‰÷ò,~Y¼
+õØÂòƒËk	×Š÷fA¶…©µ›2ğqöÙ=ÛÊ¿Á×F¦MçøóG‡üù›¬èll-;Ál.óbnn¾¼>×à´YAhß­;)XRİ‰µ^ÔpSEëÂ§7>cüŒöXêÃ¬é‚ ºSDuç Í&à‚öÉB£^]Ñ«;wÁ]FªüY¤c‹YÈ&Y,J?ÿŒÕÄTRëòV¨f!äÙç
+VP—aNÖ71ˆ·SÕf.%Õâ-¹)_Î55£ÚœKÃ\+sêm´Àßå*»"›x]ş­êrÊØ<k:Gšá[e¢T7gàC©ıC'²µ0íÍZ”5™ÈÑî£Wƒc}Q•øú±F¿…á¦­«»3Ğ‚–İ6ÁKõíG¤l)´‘êZôö#è2Ú(F»ì÷DI¼Yàt¨Ğmø2ØÚ|„–ÌÅ‹øƒÃ–ñ¶!GêWO©wV"Ï¯tşaı÷Òv¾CrÊ	€ƒïû%¸Ò÷•£ïĞC÷¼<YØ K"Œ,”-CÃÄYØÉ±g¡ÒW^ænŞ}ZÀv‹ÚI†ÇÜ\h†˜7…`&‹™-C³ÅW€m4÷lÑƒSë³0Å½,‚€õ,FûûúˆXJã_ÙŞòå\VÀö—"×Æ­ƒÈB¨[‡6°ó >lSÃäCÏBO‰{X¤DXîü7Üß×Z¾ßQzÉÑ>[(d±¼ÍbÇ5õá['ÆAÁE(ÈÂ »ß-^`ò2:uüîÙD÷Sæ~Gé%Ç°ø¶>‹iâÁ»p“£í^,4²¸úß´øßinr´]¿güZtšíÆï…øwZ¨úöáFé8œ†3ğ5ø&œ‡§ ckÙgáÇğx~¿‡:¼	oÁ_àüşÆdcYÆÙãlš}ƒ]bßÃ‚øGl…ıŠı–½ÂÖÙ;ì¶b(#Ê˜òiå„ò%å«Êå_´WT”Ç¾óø °»°(Š¡ÿò0H–F±š¢mYp1‚¯Áìš±.DI<M-_K(¬ÕğĞ$*¦Æ{ÀxºñDº6m}DGE­câ3i<ÖÆG<V$¸½ó³¨åTã9¦ÿıïü3÷ÎÜoîÌ?3w~…·×Zºœ¾M×ÓÍt;İOOÒ/éUÚÎ83°Ş,‘¥°Á,“a.æf¿`sÙBVÇV³õlÛÎZÙ§ì»ÊşÍÚX€‡~Ô‹ÇóDş$OãÃùXşÏäş:oâ›ø.~€åçøWü*¿-…K=%M²JOIÃ¥±R‘4E*—IÒÛÒ&é#éˆt^º.sÙ,'Èir¦ì'Ë/Êeò"ùuy½Ü"ï‘OÈÿ/È7¦D(ı”Ÿ(9Êdå%e–2GY¬¬RŞS>Tv`X»W9¬QN*g•/•*—”•©ªjTMjoUÃ^²:@¨¦«êp5© ä@·§K‚§óC<xU‰	ÂH83“(Úƒ¨D¥¢¤2Q^VP‹,ÒNÂYU \éAÂÁDŒ`5’H¬‚-iOÌG’(]j2¬EŒ:«<ë…UÔKaº­Pb@üİ6¦ºFB!-˜°‰†a%†½|ü5P$\a4’EêÜGŠA|d‚¸4Tï‡Àëê‘PFnF¹™Ç WQÄ¬{lê"Š¤—…®'5C¸N"Ï }Hz*8GÇ¢°~ˆ ĞIB%$Ôá,à`ÄQQBêQuúAÔŠu€ÀíÀóö–Ø=úö >@7 ¨âs´ÿ
+õ`òÊ¹VHx|ÿw£îkÜv=ØÖt”MîVúóuû2¾[UÜí =Ğu¡è{ÅöªíŞn©ƒVè(‡Ö­]·oà®Âµ`]±øä	,{ºe\CÇÍUu¯Û:gk{Ä·¿;³óè÷R±œşúM=*K±Ù6¦£”-YŠG—ÔpjÎß3…úZW~yAšûPR¼{ßÀÏç­,‡Aë'Å—d†LËÊ·oI®Ë5X–WUÒüKo“m$ğŠXOL¦¨­oFŞÄheq²iç	a<77Ùó›^Õ*L(èßxáó”_sÊ<¥jf@¢æˆ¯_}>Í}ì¨@Ù2î¹Ò*7øW–^·½S½¾À°|trS~ŞfGe]k	3Šß-ÙÛ’3*ãÄÅÒÅÇ¢SÔ±mÚkp_w%zğ•ÙÎ”[æšj\è¨LŒß¸yæ$¨›¿à™kÍ-G¥O^ïŞû~SÖÆ¿>s0¯z®ûİôÏçF®+Pë/&×ü(¯ª¶²Î²}YÖü|AŠ?Çz±$§ô½‰‰ÇÕÔ	@k­*9lñ¹ßïVi~Èo_¼…(µ‹ngmü€çväVx—ZZCÒÜ§÷_¢Î½ô·LÈ«Ï-NÌºN"Ì[Ôú{9¯*±Ò[]½Qê‹sR>h27ë(ÑtdÜ‘¯Ë=·ÏØ²‡ /†À§{Æ”='P*“+,•Ü.'¢/ßÔ/4šE±ºÂ†¡™Æı5+z7©[·ş1Ğ°ºmõåÓÎùËgÛš3L«j’Ä5ôßR¹lBúrÒ8ÛXi1Öª<óÊÍ
+úôÎ7iúÁ_­½Œórº-n6·ëób‰,?“€ó‚#¦ÿÉÔfüß?¾†Ñ·x2Q5ÚqÕ`‚ÕCp^î, spCgô?Y3RÜ­I‰Óö‰–Ä£éÕİQŠğİ~FßEa¦¥p7À»‹¢#ÎÅëÊ½Ëß”¹¾¤Ok·Á#?ØÇH?{­¤½üÑ£ƒèÖğFÑ÷¢hˆ…8t5’pÕZa Äıø)
+?ƒ,¹0ò0ŞšÏÂó8TnxJ1òš¯Â¨„XŠ±×JXï@üZ0Û»á †c‡ópş×¡Ú	*Îj<#¢IoGâII!?$ƒÈ2Œd;É!cÈx2‘L"…d*)!¥äe2‹”“ùµU‘…¤†,ù¨¼AVF²š¬Å8pña,ø'²ƒì%Éqò9M¾À¸ğ¹Jn6ò-%TÂ3/œši4}#ÅdšJÑ¡4ƒÚi.‡1£‹Ò©t±c‡ñc5]J—ÑUtEn >ê§Ûè.Œ%Ó£ôzŠ~A/ÒËôı†Ş môí FÃ3”…cœÉ¢X/Ö‡Å²8fañ,‰=Îú³'PÖ=Bè’Ğ‡Š§(Â0½’D”D9e(%F%ÆôT¢İˆë s½ÜILäl#ë2•bğ¨[­D¬!c{U¯',ÈA»<Xbw$÷Ú‚­¨.y(è¿°IÑ*ì2¥“ôÈFÖ™±—uå„ï!\xØéÂBôVmåÿ¢N¬«R‰KA©°/éÌ‘:GIÖóAb:s®Ï	•dI´ÂBÌH…q\¿R `Sd‰‹Øª}4)Çí³wj»]–Tk·¢fT48|áåš?p8y¬äòI}},Iõñ¤„³÷SMµr85?Q²íA³ÙEvNpbV”PŒòl{ªë(?Èçû„,uùI ÊöÇ¶à6Ã&¢ZµjZöt»a!ÄŠ‚æB­Ú„‘çLpi^Í›ãöj#´iSÜØ1ı‹Šb¯ëIìâçtLóŸÍ{'[ìrE;=„®ÛñºĞBiĞB©nt`¥0ë(ÍÇú9œã>=Ög³»b--Û·Íáôm³ÇZ\.¬~§§ø7=&Øçìsx
+fVpl±>py½¥‹ÏãõÆzÑ`ÙÛº	tØ‚?èYR¶ŸxºÊ“`‰‚K‚ûéƒlcŸ=µ¸RÅÑ#5v4â©1ñvsûgjEg¤xÏó1ß%zî³ø¡Íğ9‡À-¹*ät(Âr!rwÃ$Ô;‘khzàşbÃ× ÿ4˜„ür>r:ròhškË±½°á_¶æ¡Í|Áˆõ5;o‘•°F|ÿÃ{¹ÇUUeq|{î¹¼ÈãB oñ¢>’JBbÔÌ ñ]¡éG“Ê@ÔÆÌÔD´ÁF%²‡>bÊLCËtJ¥LmÊÔ|aÑP	ÌAóÎoÿ¸–şîÓ9Ÿõİk¯½÷Úï³ÏÖ{É³zµT#ß£F¦«z]å5¯‘r½YŠ`Ï´”£Ş\‰4%83,Ñ2	¶£æ\çYø»{¸¹^8+¿SåPÆ¢a,#d¦Ë×t†‡µPk½ä+Qº[¶ü~î¿ÕJŒBÓ£P–ûœ×ŒlI0–>æ³«ÄØ'£ãñ$AOA¾Pk(Â}cÄÊL„ÙğoÎ‡ì;ÊD$Ø,éH´Œn>éhÇ"=SLhc$uØÍŒy¥¬Aš§ê#â¢7Iô4H!òdè¥2R/u~i^ã¼ô^°û…ÎëhGºš#­UJáw…Å"ùÈAH	ú÷¹YÌkPŞí‹V¢ÆBõ»½ ­›û•(ãShÜ/™®´*”_bùQËÂ|Wãe)×bt»|ì’%ÈŸ:2±ğ#-}” ïv£Æy>’Ñ–éÈ“€¼K\­ÄZ¯¥èÍÚû—Qm!õI·Có5ÌõaSw7q¹Ê¡Ní&ä æúq%Öp­ÂJ¦ìÆøŒÃØ«µ¾ÍÎ­8-š¸öÛ‰k·t {Óˆn«êß¨-M‡-D>tMò{©ö‰.µÛ9œÎ]w†ÚåB”şø”i¹mºI*9w¨* K¿‡xa¯Giæd¿§/¿S~dcïŠíÃ·4¯èy¹©uøü{ŠÃ.•—ußÓ˜8-ä[ïjû²ìïÇg»š²í|`U˜#¸uTìğ¹7*ê~~Ëı‡‡Œ«ır~=W00ôJCuÇ±e›ªÖv]{*&ÊÚ;ÿÉšï"æ×´Öy·$+ù±¥;vùİüÄ¶© gDCx´ømÈ*vab—¸ÂâÉmE97Š7~Ôòfràø]“vî­K{hWní¸²oÒÊ·¸t¾á>¿õƒcV­şéèÑ/Ì¹:¯ğ~vØèÊ…9Ë^]tãY<zÃ„¨’‹İ:[œøòOîo•µøÄol8´ ÷÷'ëNÕN<şé„º	k7n	÷ì¹h`NëSö3óÎxÙO<pÜ÷”wM¤9Tôµ³Og¸Í÷jI)éÛkSt\Däüyï¥ôµM<ğ|ÅŠ¼¦g6ø_XùÃĞÆ÷æ÷Xt¢ÊöIÔœÄ“+Ó¾®|i¶×ÜŠ£#V-ïÿÆâ_?\ıÊYzâ›K?t?´u€‡ûŞé/Oynüìá)‘AckcÜ{¤-yñf\ê©~}Ÿh>š¾rÜ„‚·w×¿¶°×´äÄÃ>¾¬«yfæÂO»GwZdHõşİ¢ó6åÆd]M-8›¹e©÷½OîÏ™óÂ²··œl¹{VåĞÓSWWæEkE>Õ	ÿë\7uçV7ÇÎäs¯;ßÒ?}ªÛÚ¤ÏÆ•Å?‰£Ó¡m«æ%î­Vó‘‘2D’$V±D¼µš]ÎËWR)ãd°Ëâ+µËã'¤‡DI/8Êr~äï´H­fCAå¨ğ7GòşßgÁu7—¥£,—<üñüÍâ)kgñ’ñíª÷Æ-áN‹l×ü±m<Û´m§hªÓT¬rKtÍLêh†®™¨k¤(Š“¼EşJŞ$o­äuòòÙB6“?“MäUò
+y™l$"/‘¹Õ¨_Àu%W„*¦t]~¤~¬'Ï‘gÉ3äiòò$yœü<F~G~Kş—üW¨PÔöD"ö5m_C7Ë!ê_¹¨,_R¯#ûqÑÒåêŸ“ÿ!÷‘{ÙöÏ¨ï!?%w“µäÇäNrù¹]>”ah×ö¶˜ó+Ô¯,ºl“Ä)ÛÄŸ±b¤|€kŸ6•¢ƒƒ`{ŸÓK"X#óDOub©­Ãš4õ=æÛÊ¶°­›qÜôÍ´m’j™ƒ˜²©˜ª©ÚåA¥è ò°Q„şË¼M¾E¾IŸp•ÕåêU´¿ÎÚ+iYïò·^RSş”E—µ,÷OI_Ãœè²†¥+XÛ?¨¿J®VëXVI?°œ–•d=¬`ê+ärÖ¹Œ©K±’uy™y–0õ%r1çôEæYDş]º*:¯ m/Ğ²\àZ;°1uêº”b¤UJ™£”ó6ı)ÁøGJ	SJdRŠ¥µLÑA5ÂEØì`S):¨FDYÔnU%Ÿ'çÊsÌ5·-Æzc®giy†, ç°×O§¶íë||l£d~[Œ%•E—™2ƒ³?“)3ğÉQ³?ƒ³?ƒmË“§änØò8ûyl›²è2•e&“O’É'Èñä8r,9†-£¸×G36Šíü+õGÉ2›|„I>Ì™A}89ŒJş…Ì"$3œ§ĞÒè?–û¹£ï£F¦’ƒØ›êÉdr ÙŸ¼—LBikNé÷½É^d"™ ›.=©Ç“=Èîdœd€êİÈX²«Ä ¡ŠÅp…ŞM=šŒ/0R‚Á.XñºDĞŞc¤K8ó‡ÑJ=„Nm[Ad ëîÄ\¤?y—‹Ş?ñABeó;FÓ@¨j´»ÒìÜJ×Qæ©ÊzqwyÒÒ‘ô mdÒt#­Ò´àëªÏ(á%:iâŞ2Ñ³ÆöO@ï'ÀZïË ë ›!» VÑ´¬K´|ÇŸòÈŸSÍù„ªã¶íXıswÇ°Ø<¿ÿswÀ@›1YêP10 VØİÄÍÇ†Is·!½ì6¼V¸òğèé„×ŠÅˆ” 	²Û0MÁĞC$$Ì†é
+…&ağ.áğÓ¯Ë79»àµaYG"g^K?–®xlœXèñx[¬'ôŞ¼3ôÇÂ±a{ªa6«M¦ã?HğYz
+úl|¤DÆkÃÇP}ÎÖáÓhÃA³öZB6ô]õ~7^Áaı	,{ñŞ¾o˜dÒ­ró$£Š‹4`»—]7Ãd–øÇ$ˆ÷‘Gôôõ‰ğ‰ğ‰˜d–›ùzğÍú[åVÏëM³,±mw“tg£ù¨^ßÉÔ·S°G	ğëfñÕİ+|ƒõ
+˜ÍÁùq#Í#İF;òSb§Ù,şâL K`Tœ÷‘sGöø$ù$%Œïs‰Í{.yïmô±ÃbOê©õĞ"»Xîòóï•ø™12ó1²Ë1YæÆ¢"lÊJjê|@YSc#1qaæİ¾¢êşöÆÒ6Æp?Q3%?E]6uG× ÕÀ½‡ÿıeäÚÖ¿UÕ“ñåå^¼{iÓ¿s3\##µÅŠòsftV3Š^ÙÏ(·b£	¤_¥4¤á”aAù5£y¡¹˜SyÂf²¤@%'PD
+˜ß l&`^v„²A†?”ÍdgBÙl@v³‡¿¯¯‹ŸvpenR~n0cúke_`­ëÌ ÁÀ6J.C0kæ ëğT`{¡ÈJ¶Bp«#GìËãÀf$
+ «wAöŸrŒ`y ö]d®Ïoó•Q¬páÙ}±%×úßª¿s8°Í‡$Ô  9˜«t
+endstream
+endobj
+34 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+35 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+36 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+37 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+38 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+39 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+40 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 500 
+0 0 0 0 722 667 611 0 0 389 0 0 0 0 0 778 
+0 778 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 556 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 500 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 34 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 225
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 333 250 0 
+0 500 0 0 500 0 500 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 611 611 0 0 333 444 0 0 0 667 0 
+0 0 0 0 0 722 0 0 611 0 0 0 0 0 0 0 
+0 500 500 444 500 444 278 0 500 278 278 444 278 722 500 500 
+500 0 389 389 278 500 444 667 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 35 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+500 500 500 500 500 500 500 500 500 500 278 0 0 0 0 444 
+0 722 0 667 722 611 556 0 722 333 0 0 611 0 722 722 
+556 722 667 556 611 722 722 944 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 36 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 37 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 0 
+0 0 0 0 0 0 0 0 600 0 0 0 0 0 0 0 
+0 600 600 0 0 0 0 0 600 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 38 0 R
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [500 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 39 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 40 0 R
+>>
+endobj
+28 0 obj
+<<
+/Type /Font
+/Subtype /Type0
+/BaseFont /HOMMDN+Symbol
+/Encoding /Identity-H
+/DescendantFonts [ 41 0 R ]
+/ToUnicode 42 0 R
+>>
+endobj
+41 0 obj
+<<
+/Type /Font
+/Subtype /CIDFontType2
+/BaseFont /HOMMDN+Symbol
+/FontDescriptor 32 0 R
+/CIDSystemInfo<<
+/Registry (Adobe)
+/Ordering (Identity)
+/Supplement 0
+>>
+/DW 1000
+/W [
+95 [630]
+]
+>>
+endobj
+42 0 obj
+<<
+/Filter /FlateDecode
+/Length 218
+>>
+stream
+H‰TP=o„0İó+<¶º!@ï6ÄĞëÂĞÚ=—8\¤âD&üû&GÕÁ¶üì§÷lyn_Zrä{İaëÈ0N~fpÁÁ”§ãÖ­Y*€Län™"-Yu-ägN‘xèû²: ßÙ ;t¬¾¾ÒÍ!üàˆ¡€¦ƒVÈó«
+ojD7æÚ/¡ZûrS÷§ 4²¢¡.Š“mîÉüŸßY«¯ŠÅ¾ıô\6"moxæå«v#zfN×ÓW#Ù‚#Ü¿|Èj9Ä¯  ¿Fk€
+endstream
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+12 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 14 0 R
+/Contents 13 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 17 0 R
+/Contents 16 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+22 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 24 0 R
+/Contents 23 0 R
+>>
+endobj
+25 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 27 0 R
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<<
+/Type /Page
+/Parent 11 0 R
+/Resources 31 0 R
+/Contents 30 0 R
+>>
+endobj
+43 0 obj
+<<
+/S /D
+>>
+endobj
+44 0 obj
+<<
+/Nums [0 43 0 R ]
+>>
+endobj
+11 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 12 0 R 15 0 R 18 0 R 22 0 R 25 0 R 29 0 R]
+/Count 7
+/MediaBox [0 0 612 792]
+>>
+endobj
+45 0 obj
+<<
+/CreationDate (D:20160905151709+02'00')
+/ModDate (D:20160905151709+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+46 0 obj
+<<
+/Type /Catalog
+/Pages 11 0 R
+/PageLabels 44 0 R
+>>
+endobj
+xref
+0 47
+0000000000 65535 f 
+0000063492 00000 n 
+0000000016 00000 n 
+0000005749 00000 n 
+0000059483 00000 n 
+0000060151 00000 n 
+0000060792 00000 n 
+0000061553 00000 n 
+0000061723 00000 n 
+0000062514 00000 n 
+0000038933 00000 n 
+0000064145 00000 n 
+0000063573 00000 n 
+0000005901 00000 n 
+0000012640 00000 n 
+0000063657 00000 n 
+0000012770 00000 n 
+0000016970 00000 n 
+0000063741 00000 n 
+0000017100 00000 n 
+0000021005 00000 n 
+0000062685 00000 n 
+0000063825 00000 n 
+0000021159 00000 n 
+0000029519 00000 n 
+0000063909 00000 n 
+0000029649 00000 n 
+0000036019 00000 n 
+0000062855 00000 n 
+0000063993 00000 n 
+0000036162 00000 n 
+0000038825 00000 n 
+0000039074 00000 n 
+0000039264 00000 n 
+0000058094 00000 n 
+0000058296 00000 n 
+0000058496 00000 n 
+0000058693 00000 n 
+0000058890 00000 n 
+0000059081 00000 n 
+0000059281 00000 n 
+0000062998 00000 n 
+0000063201 00000 n 
+0000064077 00000 n 
+0000064105 00000 n 
+0000064269 00000 n 
+0000064392 00000 n 
+trailer
+<<
+/Size 47
+/Root 46 0 R
+/Info 45 0 R
+/ID [<1fa3ed2978c07246b5fff8f4be0f40b2><1fa3ed2978c07246b5fff8f4be0f40b2>]
+>>
+startxref
+64462
+%%EOF

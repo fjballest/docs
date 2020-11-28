@@ -1,0 +1,2032 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4589
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 117.792 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Comunicación entr)18(e)-250(P)0(r)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+(1. Pipelines)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0882 Tw
+(Hace tiempo, UNIX disponía de las redirecciones que hemos visto y los usuarios combinaban programas)Tj
+0 -1.2 TD
+0.0238 Tw
+[(e)15(xistentes para procesar )]TJ
+/TT7 1 Tf
+9.8572 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0238 Tw
+(cheros. Pero era habitual procesar un )Tj
+/TT7 1 Tf
+15.1643 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0238 Tw
+[(chero con un comando y lue)15(go procesar la)]TJ
+-26.1338 -1.2 TD
+0.0595 Tw
+[(salida que éste dejaba con otro comando, y así sucesi)25(v)25(amente. Por ejemplo, si queremos contar el número)]TJ
+T*
+0.1464 Tw
+[(de v)15(eces que aparece la palabra "f)10(ailed" en un )]TJ
+/TT7 1 Tf
+19.9039 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1464 Tw
+(chero, sin tener en cuenta si está en mayúsculas o no,)Tj
+-20.4601 -1.2 TD
+0.0202 Tw
+[(podríamos con)40(v)15(ertir nuestro )]TJ
+/TT7 1 Tf
+11.5306 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0202 Tw
+[(chero a minúsculas, quedarnos con las líneas que contienen "f)10(ailed" y contar)20(-)]TJ
+-12.0868 -1.2 TD
+0 Tw
+(las:)Tj
+/TT9 1 Tf
+8 0 0 8 133 479.4 Tm
+(unix$ tr A-Z a-z fich >/tmp/out1)Tj
+0 -1.5 TD
+(unix$ grep failed <tmp/out1 >/tmp/out2)Tj
+T*
+(unix$ wc -l </tmp/out2)Tj
+T*
+(1)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 413.4 Tm
+0.0006 Tw
+(Hemos utilizado el comando)Tj
+/TT4 1 Tf
+11.7216 0 TD
+0 Tw
+[(gr)37(ep\(1\))]TJ
+/TT6 1 Tf
+3.2126 0 TD
+0.0007 Tw
+[(que escribe aquellas líneas que contienen la e)15(xpresión que hemos indi-)]TJ
+-14.9343 -1.2 TD
+0 Tw
+[(cado como ar)18(gumento. )-250(Más)-250(adelante v)20(olv)15(eremos a usarlo.)]TJ
+0 -2.4 TD
+0.0294 Tw
+[(Pero a Doug McIlro)10(y)-279.4(s)0(e)-279.4(l)0(e)-279.4(ocurrió que deberían poderse usar los programas para recolectar datos, como en)]TJ
+0 -1.2 TD
+0.0486 Tw
+(un jardín, haciendo que los datos pasen de un programa a otro. En ese momento introdujeron en UNIX un)Tj
+T*
+0.0574 Tw
+[(nue)25(v)20(o)20( artef)10(acto, )20(el)]TJ
+/TT2 1 Tf
+7.7197 0 TD
+0 Tw
+(pipe)Tj
+/TT6 1 Tf
+2.1213 0 TD
+(o)Tj
+/TT4 1 Tf
+0.7873 0 TD
+(tubería)Tj
+/TT6 1 Tf
+2.8887 0 TD
+0.0373 Tw
+[(,)-287.3(y)-287.3(cambiaron todos los programas para que utilizasen la entrada estándar)]TJ
+-13.517 -1.2 TD
+0 Tw
+(si no recibían un nombre de )Tj
+/TT7 1 Tf
+11.3857 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero como ar)18(gumento.)]TJ
+-11.9419 -2.4 TD
+(El resultado es que podemos escribir)Tj
+/TT9 1 Tf
+8 0 0 8 133 299.4 Tm
+(unix$ cat fich | tr A-Z a-z | grep failed | wc -l)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 257.4 Tm
+-0.0001 Tc
+0.0304 Tw
+[(en lugar de toda la secuencia anterior)54.9(.)-280.4(Cada ")]TJ
+/TT9 1 Tf
+18.2766 0 TD
+0 Tc
+0 Tw
+(|)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0303 Tw
+[(")-280.3(que hemos utilizado es una)]TJ
+/TT4 1 Tf
+11.9206 0 TD
+0 Tw
+(tubería)Tj
+/TT6 1 Tf
+3.169 0 TD
+0.0304 Tw
+(\(un pipe\) que hace que)Tj
+-33.9663 -1.2 TD
+0.0779 Tw
+(los bytes que escribe el comando anterior en su salida sean la entrada del comando siguiente. Es como si)Tj
+T*
+0.1698 Tw
+[(conectásemos todos estos comandos en una tubería. Lo que v)15(emos en la salida es la salida del último)]TJ
+T*
+0 Tw
+(comando \(y claro, todo lo que escriban en sus salidas de error estándar\).)Tj
+0 -2.4 TD
+0.1028 Tw
+(Por cierto, que si hubiésemos leído)Tj
+/TT4 1 Tf
+14.8644 0 TD
+0 Tw
+[(gr)37(ep\(1\))]TJ
+/TT6 1 Tf
+2.962 0 TD
+0.1027 Tw
+[(,)-352.8(podríamos haber descubierto el )]TJ
+/TT7 1 Tf
+13.787 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2965 0 TD
+(-i)Tj
+/TT6 1 Tf
+1.5529 0 TD
+0.1027 Tw
+(que hace que)Tj
+/TT9 1 Tf
+5.7773 0 TD
+0 Tw
+(grep)Tj
+/TT6 1 Tf
+-40.7964 -1.2 TD
+(ignore la capitalización, consiguiendo el mismo efecto con)Tj
+/TT9 1 Tf
+8 0 0 8 133 167.4 Tm
+(unix$ grep -i failed fich | wc -l)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 125.4 Tm
+[(que con el comando anterior)55(.)-250(¡El manual es tu amigo!)]TJ
+0 -2.4 TD
+(La )Tj
+/TT7 1 Tf
+1.4149 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1102 Tw
+(gura 1 muestra cómo los procesos en esta última línea de comandos quedan interconectados por un)Tj
+-1.971 -1.2 TD
+0 Tw
+(pipe.)Tj
+T*
+0.1491 Tw
+(En la )Tj
+/TT7 1 Tf
+2.6307 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1491 Tw
+(gura hemos representado los descriptores como )Tj
+/TT7 1 Tf
+20.1109 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1491 Tw
+(echas y utilizado números para indicar de qué)Tj
+-23.8539 -1.2 TD
+0 Tw
+(descriptor se trata en cada caso.)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 4545
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+ET
+1 i 
+158.4 673.2 m
+151.2 671.4 l
+151.2 675 l
+f
+0 G
+1 J 1 j 0.1 w 10 M []0 d
+158.4 673.2 m
+151.2 671.4 l
+151.2 675 l
+s
+0.4 w 
+122.43 673.23 m
+151.23 673.23 l
+S
+BT
+10 0 0 10 137.9 677 Tm
+(0)Tj
+ET
+215.94 673.2 m
+215.94 657.302 203.038 644.4 187.14 644.4 c
+171.242 644.4 158.34 657.302 158.34 673.2 c
+158.34 689.098 171.242 702 187.14 702 c
+203.038 702 215.94 689.098 215.94 673.2 c
+s
+BT
+/TT9 1 Tf
+10 0 0 10 175.2 671 Tm
+(grep)Tj
+ET
+252 673.2 m
+244.8 671.4 l
+244.8 675 l
+f
+0.1 w 
+252 673.2 m
+244.8 671.4 l
+244.8 675 l
+s
+0.4 w 
+216.03 673.23 m
+244.83 673.23 l
+S
+BT
+/TT6 1 Tf
+10 0 0 10 229 677 Tm
+(1)Tj
+ET
+252 666 72 14.4 re
+S
+BT
+10 0 0 10 279.39 671 Tm
+(pipe)Tj
+ET
+360 673.2 m
+352.8 671.4 l
+352.8 675 l
+f
+0.1 w 
+360 673.2 m
+352.8 671.4 l
+352.8 675 l
+s
+0.4 w 
+324.03 673.23 m
+352.83 673.23 l
+S
+BT
+10 0 0 10 342 677 Tm
+(0)Tj
+ET
+417.54 673.2 m
+417.54 657.302 404.638 644.4 388.74 644.4 c
+372.842 644.4 359.94 657.302 359.94 673.2 c
+359.94 689.098 372.842 702 388.74 702 c
+404.638 702 417.54 689.098 417.54 673.2 c
+s
+BT
+/TT9 1 Tf
+10 0 0 10 382.8 671 Tm
+(wc)Tj
+ET
+453.6 673.2 m
+446.4 671.4 l
+446.4 675 l
+f
+0.1 w 
+453.6 673.2 m
+446.4 671.4 l
+446.4 675 l
+s
+0.4 w 
+417.63 673.23 m
+446.43 673.23 l
+S
+BT
+/TT6 1 Tf
+10 0 0 10 433.1 677 Tm
+(1)Tj
+/TT2 1 Tf
+-33.61 -5.56 TD
+(Figura 1:)Tj
+/TT4 1 Tf
+4.2217 0 TD
+[(Utilizando un pipe par)15(a)-250(e)0(n)40(viar la salida de)]TJ
+/TT9 1 Tf
+17.4997 0 TD
+(grep)Tj
+/TT4 1 Tf
+2.6504 0 TD
+[(a)-250(l)0(a)-250(entr)15(ada de)]TJ
+/TT9 1 Tf
+6.3175 0 TD
+(wc)Tj
+/TT4 1 Tf
+1.2002 0 TD
+(.)Tj
+/TT6 1 Tf
+-34.3895 -1.2 TD
+0.1347 Tw
+(Debes pensar en el pipe como en un )Tj
+/TT7 1 Tf
+15.7392 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1347 Tw
+[(chero peculiar que tiene dos e)15(xtremos, uno para leer y otro para)]TJ
+-16.2954 -1.2 TD
+0.0204 Tw
+[(escribir)55(.)-270.5(O)-270.5(puedes pensar que los bytes son agua y el pipe es una tubería. Los pipes ni leen ni escriben. Son)]TJ
+T*
+0 Tw
+[(los procesos los que leen y escriben bytes. Otra cosa es dónde v)25(an esos bytes o de dónde proceden.)]TJ
+0 -2.4 TD
+[(P)15(ara crear un pipe puedes utilizar código como este)]TJ
+/TT9 1 Tf
+8 0 0 8 133 543.4 Tm
+(int fd[2];)Tj
+0 -1.5 TD
+(if \(pipe\(fd\) < 0\) {)Tj
+2.4 -1.5 TD
+(// pipe ha fallado)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 489.4 Tm
+0.0239 Tw
+(que rellena el array)Tj
+/TT9 1 Tf
+8.0351 0 TD
+0 Tw
+(fd)Tj
+/TT6 1 Tf
+1.4741 0 TD
+0.0239 Tw
+(con dos descriptores de )Tj
+/TT7 1 Tf
+9.704 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0239 Tw
+(chero. En)Tj
+/TT9 1 Tf
+4.1294 0 TD
+0 Tw
+(fd[0])Tj
+/TT6 1 Tf
+3.2745 0 TD
+0.024 Tw
+(tienes el descriptor del que hay que leer)Tj
+-27.1732 -1.2 TD
+0.0075 Tw
+(para leer de la tubería y en)Tj
+/TT9 1 Tf
+10.9075 0 TD
+0 Tw
+(fd[1])Tj
+/TT6 1 Tf
+3.258 0 TD
+0.0074 Tw
+[(tienes el que puedes utilizar para escribir en la tubería. Una b)20(uena forma)]TJ
+-14.1655 -1.2 TD
+0 Tw
+(de recordarlo es pensar que)Tj
+/TT9 1 Tf
+11.189 0 TD
+(0)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(era la entrada y)Tj
+/TT9 1 Tf
+6.3848 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(la salida.)Tj
+/TT2 1 Tf
+-19.2739 -3.6 TD
+[(2. )-250(J)15(uegos con pipes)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+-0.0001 Tc
+0.0363 Tw
+[(Antes de programar algo que consiga)-286.3(e)-0.1(l)-286.3(efecto de la línea de comandos que hemos visto, v)24.9(amos a jugar un)]TJ
+0 -1.2 TD
+0 Tc
+0.0587 Tw
+[(poco con los pipes para v)15(er si conse)15(guimos entenderlos correctamente. Aquí tenemos un primer programa)]TJ
+T*
+0 Tw
+(que utiliza)Tj
+/TT9 1 Tf
+4.4429 0 TD
+(pipe)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+/TT9 1 Tf
+8 0 0 8 133 371.8 Tm
+(#include <stdlib.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd[2], nr;)Tj
+T*
+(char buf[1024];)Tj
+0 -3 TD
+(if \(pipe\(fd\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "pipe failed"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(write\(fd[1], "Hello!\\n", 7\);)Tj
+T*
+(nr = read\(fd[0], buf, sizeof\(buf\)\);)Tj
+T*
+(write\(1, buf, nr\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 149.8 Tm
+(Cuando lo ejecutamos, sucede lo siguiente:)Tj
+/TT9 1 Tf
+8 0 0 8 133 131.8 Tm
+(unix$ pipe1)Tj
+T*
+(Hello!)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 89.8 Tm
+0.0223 Tw
+[(T)35(ras llamar a)]TJ
+/TT9 1 Tf
+5.5568 0 TD
+0 Tw
+(pipe)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0223 Tw
+[(,)-272.3(e)0(l)-272.3(programa escribe 7 bytes en el pipe y lue)15(go lee del pipe. Como puedes v)15(e)0(r)40(,)-272.4(ha)-272.4(leído)]TJ
+-7.9572 -1.2 TD
+0 Tw
+(lo mismo que ha escrito. Eso quiere decir que lo que escribes en un pipe es lo que se lee del mismo.)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 2965
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+-0.0001 Tc
+0.0001 Tw
+[(Cambiemos ahora el programa para que haga)-250.1(dos writes en el pipe usando)]TJ
+/TT9 1 Tf
+8 0 0 8 133 690 Tm
+0 Tc
+0 Tw
+(if \(pipe\(fd\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "pipe failed"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(write\(fd[1], "Hello!\\n", 7\);)Tj
+T*
+(write\(fd[1], "Hello!\\n", 7\);)Tj
+T*
+(nr = read\(fd[0], buf, sizeof\(buf\)\);)Tj
+T*
+(write\(1, buf, nr\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 600 Tm
+[(¿Qué escribirá ahora? Si lo ejecutamos podremos v)15(erlo:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 582 Tm
+(unix$ pipe2)Tj
+T*
+(Hello!)Tj
+T*
+(Hello!)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 528 Tm
+0.0716 Tw
+(¡Un sólo)Tj
+/TT9 1 Tf
+3.8654 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.722 0 TD
+0.0715 Tw
+(ha leído lo que escribimos con los dos)Tj
+/TT9 1 Tf
+16.0696 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0715 Tw
+(s! Dicho de otro modo, los pipes de UNIX)Tj
+-25.6574 -1.2 TD
+0.0701 Tw
+[(\(en general\) no delimitan mensajes. O, no preserv)25(an los límites de los writes. Sucede igual que en cone)15(x-)]TJ
+T*
+0.0542 Tw
+[(iones de red. Una v)15(ez los bytes están en el pipe da igual si se escribieron en un único)]TJ
+/TT9 1 Tf
+35.171 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.3046 0 TD
+[(o)-304.1(e)0(n)-304.1(v)25(arios.)]TJ
+-38.4755 -1.2 TD
+(Cuando un)Tj
+/TT9 1 Tf
+4.6108 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(lea del pipe, leerá lo que pueda.)Tj
+-7.2612 -2.4 TD
+[(V)111(amos a intentar escribir todo lo que podamos dentro de un pipe en este otro programa:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 450 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd[2], nw;)Tj
+T*
+(char buf[1024];)Tj
+0 -3 TD
+(if \(pipe\(fd\) < 0\))Tj
+2.4 -1.5 TD
+(err\(1, "fork failed"\);)Tj
+-2.4 -1.5 TD
+(for\(;;\){)Tj
+2.4 -1.5 TD
+(nw = write\(fd[1], buf, sizeof buf\);)Tj
+T*
+(fprintf\(stderr, "wrote %d bytes\\n", nw\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 216 Tm
+(Cuando lo ejecutamos)Tj
+/TT9 1 Tf
+8 0 0 8 133 198 Tm
+(unix$ fillpipe)Tj
+T*
+(wrote 1024 bytes)Tj
+T*
+(wrote 1024 bytes)Tj
+T*
+(...)Tj
+T*
+(wrote 1024 bytes)Tj
+/TT6 1 Tf
+10 0 0 10 72 132 Tm
+0.0376 Tw
+[(v)15(emos 64 mensajes impresos y el programa no termina. El programa está dentro de una llamada a)]TJ
+/TT9 1 Tf
+39.945 0 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+-42.9455 -1.2 TD
+(intentando escribir más en el pipe, ¡pero no puede!)Tj
+0 -2.4 TD
+0.1652 Tw
+[(Los pipes tienen algo de b)20(u)0(f)25(fer \(son sólo un b)20(u)0(f)25(fer en el k)10(ernel que tiene asociados dos descriptores\).)]TJ
+0 -1.2 TD
+0.0716 Tw
+[(Cuando escribimos en un pipe los bytes se copian al b)20(u)0(f)25(fer del pipe. Cuando leemos de un pipe los bytes)]TJ
+T*
+0.0493 Tw
+[(proceden de dicho b)20(u)0(f)25(fer)55(.)-299.3(Pero si llenamos el pipe, UNIX detiene al proceso que intenta escribir hasta que)]TJ
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 3743
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+0.0549 Tw
+[(se lea algo del pipe y vuelv)25(a)-304.9(a)-304.9(e)15(xistir espacio libre en el b)20(u)0(f)25(fer del pipe. Como puedes v)15(e)0(r)40(,)-305(en)-305(nuestro sis-)]TJ
+0 -1.2 TD
+0 Tw
+(tema UNIX resulta que los pipes pueden almacenar 64KiB, pero no más.)Tj
+0 -2.4 TD
+0.0282 Tw
+[(Y)-278.3(aún nos f)10(alta por v)15(er un último efecto curioso que puede producirse si escribimos en un pipe. Observ)25(a)-278.2(e)0(l)]TJ
+0 -1.2 TD
+0 Tw
+(siguiente programa.)Tj
+/TT9 1 Tf
+8 0 0 8 133 642 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd[2];)Tj
+0 -3 TD
+(if \(pipe\(fd\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "pipe failed"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(fd[0]\);)Tj
+T*
+(fprintf\(stderr, "before\\n"\);)Tj
+T*
+(write\(fd[1], "Hello!\\n", 7\);)Tj
+T*
+(fprintf\(stderr, "after\\n"\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 408 Tm
+[(Si esta v)15(ez lo ejecutamos...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 390 Tm
+(unix$ closedpipe)Tj
+T*
+(before)Tj
+T*
+(15131: signal: sys: write on closed pipe)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 336 Tm
+0.0676 Tw
+[(UNIX mata el proceso en cuanto intenta escribir)55(.)-317.7(V)111(eremos cómo cambiar este comportamiento, pero es el)]TJ
+0 -1.2 TD
+0 Tw
+[(comportamiento normal en UNIX cuando escribimos en un pipe del que nadie puede leer)55(.)]TJ
+0 -2.4 TD
+0.0098 Tw
+(Piensa en una línea de comandos en que utilizas un pipeline y el último comando termina pronto. Por ejem-)Tj
+0 -1.2 TD
+0 Tw
+(plo, escribiendo los dos primeros strings que contiene el disco duro y que son imprimibles:)Tj
+/TT9 1 Tf
+8 0 0 8 133 270 Tm
+(unix# cat /dev/rdisk0s1 | strings | sed 2q)Tj
+0 -1.5 TD
+0.6 Tw
+(BSD 4.4)Tj
+T*
+4.2 Tw
+(gEFI FAT32)Tj
+T*
+0 Tw
+(unix#)Tj
+/TT6 1 Tf
+10 0 0 10 72 216 Tm
+0.0773 Tw
+(¿Querrías que)Tj
+/TT9 1 Tf
+5.9852 0 TD
+0 Tw
+(cat)Tj
+/TT6 1 Tf
+2.1276 0 TD
+0.0773 Tw
+[(continuase le)15(yendo)]TJ
+/TT4 1 Tf
+8.0815 0 TD
+0 Tw
+(todo)Tj
+/TT6 1 Tf
+2.1051 0 TD
+0.0773 Tw
+[(el disco una v)15(ez has encontrado lo que b)20(uscas? \(El comando)]TJ
+/TT4 1 Tf
+-18.2994 -1.2 TD
+0 Tw
+(strings\(1\))Tj
+/TT6 1 Tf
+4.1886 0 TD
+0.0494 Tw
+(escribe en la salida los bytes de la entrada que corresponden a strings imprimibles, ignorando el)Tj
+-4.1886 -1.2 TD
+0 Tw
+(resto de lo que lee\).)Tj
+0 -2.4 TD
+0.0212 Tw
+[(Una v)15(e)0(z)]TJ
+/TT9 1 Tf
+3.5811 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+2.0715 0 TD
+0.0212 Tw
+[(imprime las dos primeras líneas que lee, termina. Esto tiene como efecto que el se)15(gundo pipe)]TJ
+-5.6526 -1.2 TD
+0.0475 Tw
+(deja de tener descriptores abiertos para leer del mismo. El efecto es que cuando)Tj
+/TT9 1 Tf
+32.6792 0 TD
+0 Tw
+(strings)Tj
+/TT6 1 Tf
+4.4982 0 TD
+0.0475 Tw
+(intenta escribir)Tj
+-37.1773 -1.2 TD
+0.0249 Tw
+(tras la muerte de)Tj
+/TT9 1 Tf
+6.9853 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0249 Tw
+[(,)-274.9(UNIX mata a)]TJ
+/TT9 1 Tf
+6.2363 0 TD
+0 Tw
+(strings)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.025 Tw
+[(.)-274.9(A)-274.9(s)0(u)-275(v)15(ez, esto hace que el primer pipe deje de tener abier)20(-)]TJ
+-19.2226 -1.2 TD
+0.0541 Tw
+(tos descriptores para leer del mismo. En ese momento, si)Tj
+/TT9 1 Tf
+23.5351 0 TD
+0 Tw
+(cat)Tj
+/TT6 1 Tf
+2.1044 0 TD
+0.0541 Tw
+[(intenta escribir)40(,)-304.1(UNIX lo mata y termina la)]TJ
+-25.6395 -1.2 TD
+0 Tw
+(ejecución de nuestra línea de comandos.)Tj
+0 -2.4 TD
+0.0087 Tw
+[(Nos f)10(alta por v)15(er qué sucede si leemos repetidamente de un pipe.)-508.8(Podemos modi)]TJ
+/TT7 1 Tf
+32.5525 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0088 Tw
+(car uno de los programas)Tj
+-33.1086 -1.2 TD
+0 Tw
+[(anteriores para v)15(erlo de forma controlada:)]TJ
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 3245
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd[2], nr;)Tj
+T*
+(char buf[5];)Tj
+0 -3 TD
+(if \(pipe\(fd\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "pipe failed"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(write\(fd[1], "Hello!\\n", 7\);)Tj
+T*
+(close\(fd[1]\);)Tj
+T*
+(do {)Tj
+2.4 -1.5 TD
+(nr = read\(fd[0], buf, sizeof\(buf\)-1\);)Tj
+T*
+(if \(nr < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "pipe read failed"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buf[nr] = 0;)Tj
+T*
+(printf\("got %d bytes ’%s’\\n", nr, buf\);)Tj
+-2.4 -1.5 TD
+[(})-600(while\(nr > 0\);)]TJ
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 390 Tm
+[(¡V)111(amos a ejecutarlo!)]TJ
+/TT9 1 Tf
+8 0 0 8 133 372 Tm
+(unix$ piperd)Tj
+T*
+(got 4 bytes ’Hell’)Tj
+T*
+(got 3 bytes ’o!)Tj
+T*
+(’)Tj
+T*
+(got 0 bytes ’’)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 294 Tm
+0.0416 Tw
+(El primer)Tj
+/TT9 1 Tf
+4.1374 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.692 0 TD
+0.0415 Tw
+[(obtiene 4 bytes \(que es cuanto le dejamos leer por el tamaño del b)20(u)0(f)25(fer\). Observ)25(a)-291.5(que ter)20(-)]TJ
+-6.8294 -1.2 TD
+0 Tw
+(minamos los bytes que leemos con un byte a cero para que C lo pueda entender como un string.)Tj
+0 -2.4 TD
+0.0412 Tw
+[(El se)15(gundo)]TJ
+/TT9 1 Tf
+4.7891 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.6916 0 TD
+0.0412 Tw
+(consigue leer los 3 bytes restantes que habíamos escrito. Pero el tercer)Tj
+/TT9 1 Tf
+28.8461 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.6917 0 TD
+0.0413 Tw
+(recibe una)Tj
+-39.0184 -1.2 TD
+0.0224 Tw
+(indicación de)Tj
+/TT4 1 Tf
+5.6537 0 TD
+0 Tw
+(EOF)Tj
+/TT6 1 Tf
+2.2162 0 TD
+0.0223 Tw
+(\(0 bytes leídos\). Esto es natural si pensamos que nadie puede escribir en el pipe \(hemos)Tj
+-7.8699 -1.2 TD
+0.1057 Tw
+[(cerrado el descriptor para escribir en el pipe y nadie más lo tiene\) y que hemos v)25(aciado ya el b)20(u)0(f)25(fer del)]TJ
+T*
+0 Tw
+(pipe.)Tj
+0 -2.4 TD
+0.0403 Tw
+[(Así pues, cuando ningún proceso tiene abierto un descriptor para poder escribir en un pipe y su b)20(u)0(f)25(fer está)]TJ
+0 -1.2 TD
+0 Tw
+[(v)25(acío,)]TJ
+/TT9 1 Tf
+2.6479 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6578 0 TD
+0.0074 Tw
+[(siempre de)25(vuelv)15(e)-257.4(una indicación de EOF)80(.)-257.4(E)0(s)-257.4(importante por esto que cierres todos los descrip-)]TJ
+-5.3057 -1.2 TD
+0.0725 Tw
+[(tores en cuanto dejen de ser útiles. En este ejemplo v)15(es que si hubiésemos dejado abierto el descriptor de)]TJ
+/TT9 1 Tf
+T*
+0 Tw
+(fd[1])Tj
+/TT6 1 Tf
+3.2505 0 TD
+(el programa nunca terminaría.)Tj
+/TT2 1 Tf
+-3.2505 -3.6 TD
+0.25 Tw
+(3. Pipeto)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0842 Tw
+[(V)111(amos a utilizar ahora los pipes para hacer un par de funciones útiles. La primera nos dejará \(en un pro-)]TJ
+0 -1.2 TD
+0.0492 Tw
+[(grama en C\) ejecutar un comando e)15(xterno de tal forma que podamos escribir cosas en su entrada estándar)55(.)]TJ
+T*
+0 Tw
+[(Hay mucho usos para esta función. Uno de ellos es en)40(viar correo electrónico.)]TJ
+0 -2.4 TD
+0.179 Tw
+(El comando)Tj
+/TT4 1 Tf
+5.4122 0 TD
+0 Tw
+(mail\(1\))Tj
+/TT6 1 Tf
+3.3728 0 TD
+0.179 Tw
+[(es capaz de leer un mensaje de correo \(te)15(xto\) de su entrada y en)40(viarlo. Podemos)]TJ
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 3386
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+-21.017 -3.6 TD
+0.0324 Tw
+(utilizar el )Tj
+/TT7 1 Tf
+4.1185 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2262 0 TD
+(-s)Tj
+/TT6 1 Tf
+1.4826 0 TD
+0.0324 Tw
+(para indicar un)Tj
+/TT4 1 Tf
+6.3442 0 TD
+0 Tw
+(subject)Tj
+/TT6 1 Tf
+3.1148 0 TD
+0.0323 Tw
+[(y)-282.3(suministrar como ar)18(gumento la dirección de)]TJ
+/TT4 1 Tf
+18.8414 0 TD
+0 Tw
+(email)Tj
+/TT6 1 Tf
+2.504 0 TD
+0.0323 Tw
+[(a)-282.3(que quere-)]TJ
+-38.1879 -1.2 TD
+0.002 Tw
+[(mos en)40(viar el mensaje. Por ejemplo, si tenemos las notas de una asignatura en un )]TJ
+/TT7 1 Tf
+32.6774 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0021 Tw
+[(chero llamado "NO)40(T)93(AS")]TJ
+-33.2336 -1.2 TD
+0 Tw
+[(y)-250(e)0(n)-250(cada línea tenemos la dirección de email y las notas de un alumno, podríamos ejecutar)]TJ
+/TT9 1 Tf
+8 0 0 8 133 666 Tm
+(unix$ EMAIL=geek@geekland.com)Tj
+0 -1.5 TD
+(unix$ grep $EMAIL NOTAS | mail -s ’tus notas’ $EMAIL)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 624 Tm
+[(para en)40(viar las notas al alumno con su email en)]TJ
+/TT9 1 Tf
+19.1202 0 TD
+($EMAIL)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(.)Tj
+-22.7207 -2.4 TD
+(Estaría bien poder hacer lo mismo desde C y poder programar algo como)Tj
+/TT9 1 Tf
+8 0 0 8 133 582 Tm
+(fd = pipeto\("mail -s ’tus notas’ geek@geekland.com"\);)Tj
+0 -1.5 TD
+(if \(fd < 0\) {)Tj
+2.4 -1.5 TD
+(// pipeto failed)Tj
+T*
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(nw = write\(fd, mailtext, strlen\(mailtext\)\);)Tj
+T*
+(...)Tj
+T*
+(close\(fd\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 480 Tm
+0.1918 Tw
+[(para en)40(viar el mensaje desde un programa en C. En este caso queremos que la función)]TJ
+/TT9 1 Tf
+37.7655 0 TD
+0 Tw
+(pipeto)Tj
+/TT6 1 Tf
+4.0423 0 TD
+(nos)Tj
+-41.8078 -1.2 TD
+0.0068 Tw
+[(de)25(vuelv)25(a)-256.8(u)0(n)-256.8(descriptor que podamos utilizar para escribir algo que lle)15(gue a la entrada estándar del comando)]TJ
+T*
+0 Tw
+(que ejecuta)Tj
+/TT9 1 Tf
+4.7749 0 TD
+(pipeto)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(.)Tj
+-8.3755 -2.4 TD
+(Esta es la función:)Tj
+/TT9 1 Tf
+8 0 0 8 133 414 Tm
+(int)Tj
+0 -1.5 TD
+(pipeto\(char* cmd\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int fd[2];)Tj
+0 -3 TD
+(pipe\(fd\);)Tj
+0 -1.5 TD
+(switch\(fork\(\)\){)Tj
+T*
+(case -1:)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(case 0:)Tj
+2.4 -1.5 TD
+(close\(fd[1]\);)Tj
+T*
+(dup2\(fd[0], 0\);)Tj
+T*
+(close\(fd[0]\);)Tj
+T*
+(execl\("/bin/sh", "sh", "-c", cmd, NULL\);)Tj
+T*
+(err\(1, "execl"\);)Tj
+-2.4 -1.5 TD
+(default:)Tj
+2.4 -1.5 TD
+(close\(fd[0]\);)Tj
+T*
+(return fd[1];)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 156 Tm
+0.1013 Tw
+[(Como puedes v)15(e)0(r)40(,)-351.3(llamamos a)]TJ
+/TT9 1 Tf
+12.7821 0 TD
+0 Tw
+(pipe)Tj
+/TT6 1 Tf
+2.7517 0 TD
+0.1013 Tw
+(antes de hacer el)Tj
+/TT9 1 Tf
+7.29 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1012 Tw
+[(.)-351.3(Esto hace que tras el)]TJ
+/TT9 1 Tf
+9.576 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.7516 0 TD
+0.1012 Tw
+(tanto el padre)Tj
+-37.5518 -1.2 TD
+0.0538 Tw
+(como el hijo tengan los descriptores para leer y escribir en el pipe. El padre cierra el descriptor por el que)Tj
+T*
+0.0681 Tw
+[(se lee del pipe \(no lee nunca del pipe\) y retorna el descriptor que se usa para escribir)55(.)-568.2(E)0(n)-318.2(cambio, el hijo)]TJ
+T*
+0 Tw
+(cierra el descriptor por el que se escribe en el pipe y a continuación ejecuta)Tj
+/TT9 1 Tf
+8 0 0 8 133 102 Tm
+(dup2\(fd[0], 0\);)Tj
+0 -1.5 TD
+(close\(fd[0]\);)Tj
+T*
+(execl\("/bin/sh", "sh", "-c", cmd, NULL\);)Tj
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+27 0 obj
+<<
+/Length 5113
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+-21.017 -3.6 TD
+(para ejecutar)Tj
+/TT9 1 Tf
+5.3848 0 TD
+(cmd)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(como un comando en un shell cuya entrada estándar procede del pipe.)Tj
+-7.4351 -2.4 TD
+[(El efecto de ejecutar)40(,)-250(por ejemplo,)]TJ
+/TT9 1 Tf
+8 0 0 8 133 666 Tm
+(fd = pipeto\("grep foo"\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 648 Tm
+[(puede v)15(erse en la )]TJ
+/TT7 1 Tf
+7.1481 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gura 2.)Tj
+ET
+1 i 
+158.184 601.2 m
+150.984 599.4 l
+150.984 603 l
+f
+0 G
+1 J 1 j 0.1 w 10 M []0 d
+158.184 601.2 m
+150.984 599.4 l
+150.984 603 l
+s
+0.4 w 
+122.19 601.23 m
+150.99 601.23 l
+S
+BT
+/TT9 1 Tf
+10 0 0 10 137.184 605 Tm
+(0)Tj
+ET
+215.82 601.2 m
+215.82 585.302 202.918 572.4 187.02 572.4 c
+171.122 572.4 158.22 585.302 158.22 601.2 c
+158.22 617.098 171.122 630 187.02 630 c
+202.918 630 215.82 617.098 215.82 601.2 c
+s
+BT
+/TT6 1 Tf
+10 0 0 10 171.154 605 Tm
+(Proceso)Tj
+0.452 -1.2 TD
+[(P)15(adre)]TJ
+ET
+251.784 601.2 m
+244.584 599.4 l
+244.584 603 l
+f
+0.1 w 
+251.784 601.2 m
+244.584 599.4 l
+244.584 603 l
+s
+0.4 w 
+215.79 601.23 m
+244.59 601.23 l
+S
+BT
+/TT9 1 Tf
+10 0 0 10 230.784 605 Tm
+(1)Tj
+ET
+260.64 627.48 m
+254.448 623.376 l
+253.224 626.76 l
+f
+0.1 w 
+260.64 627.48 m
+254.448 623.376 l
+253.224 626.76 l
+s
+0.4 w 
+214.11 610.95 m
+253.83 625.11 l
+S
+BT
+10 0 0 10 234.384 623 Tm
+(2)Tj
+ET
+279.36 544.824 m
+272.16 543.024 l
+272.16 546.624 l
+f
+0.1 w 
+279.36 544.824 m
+272.16 543.024 l
+272.16 546.624 l
+s
+0.4 w 
+207.36 580.824 m
+225.36 562.824 l
+237.36 550.824 249.24 544.824 261 544.824 c
+278.64 544.824 l
+S
+BT
+10 0 0 10 237.36 560.624 Tm
+(fd)Tj
+ET
+279.36 537.624 36 14.4 re
+S
+BT
+/TT6 1 Tf
+10 0 0 10 288.75 542.624 Tm
+(pipe)Tj
+ET
+351.36 544.824 m
+344.16 543.024 l
+344.16 546.624 l
+f
+0.1 w 
+351.36 544.824 m
+344.16 543.024 l
+344.16 546.624 l
+s
+0.4 w 
+315.39 544.83 m
+344.19 544.83 l
+S
+BT
+/TT9 1 Tf
+10 0 0 10 330.36 548.624 Tm
+(0)Tj
+ET
+408.96 544.8 m
+408.96 528.902 396.058 516 380.16 516 c
+364.262 516 351.36 528.902 351.36 544.8 c
+351.36 560.698 364.262 573.6 380.16 573.6 c
+396.058 573.6 408.96 560.698 408.96 544.8 c
+s
+BT
+10 0 0 10 374.16 542.624 Tm
+(sh)Tj
+ET
+444.96 544.824 m
+437.76 543.024 l
+437.76 546.624 l
+f
+0.1 w 
+444.96 544.824 m
+437.76 543.024 l
+437.76 546.624 l
+s
+0.4 w 
+408.99 544.83 m
+437.79 544.83 l
+S
+BT
+10 0 0 10 423.96 548.624 Tm
+(1)Tj
+ET
+453.816 571.176 m
+447.624 567.072 l
+446.4 570.456 l
+f
+0.1 w 
+453.816 571.176 m
+447.624 567.072 l
+446.4 570.456 l
+s
+0.4 w 
+407.31 554.55 m
+447.03 568.71 l
+S
+BT
+10 0 0 10 427.56 566.624 Tm
+(2)Tj
+/TT2 1 Tf
+-33.056 -7.36 TD
+(Figura 2:)Tj
+/TT4 1 Tf
+4.2217 0 TD
+[(Descriptor)37(es tr)15(as la llamada a pipeto mientr)15(as ejecutan ambos pr)45(ocesos.)]TJ
+/TT6 1 Tf
+-6.7217 -2.4 TD
+0.0968 Tw
+[(P)15(ara poder ejecutar comandos de shell la función ejecuta un shell al que se le indica como ar)18(gumento el)]TJ
+0 -1.2 TD
+0.058 Tw
+[(comando que queremos ejecutar)55(.)-308.1(S)0(i)-308.1(s)0(e)-308.1(desea ejecutar un sólo comando o no se requiere poder utilizar sin-)]TJ
+T*
+0 Tw
+(taxis de shell podríamos ejecutar directamente el programa que deseemos.)Tj
+0 -2.4 TD
+0.0771 Tw
+(Un detalle importante es que si no hubiésemos cerrado en el hijo el descriptor por el que se escribe en el)Tj
+0 -1.2 TD
+0 Tw
+[(pipe, el comando nunca terminaría si lee la entrada estándar hasta EOF)80(.)-250(¿Puedes v)15(er por qué?)]TJ
+0 -2.4 TD
+0.0456 Tw
+(Otro detalle curioso es que redirigimos la entrada del proceso hijo \(para que lea del pipe\) pero)Tj
+/TT4 1 Tf
+38.6219 0 TD
+0 Tw
+(no)Tj
+/TT6 1 Tf
+1.2956 0 TD
+(redirigi-)Tj
+-39.9175 -1.2 TD
+(mos la salida del padre para escribir en el pipe. ¿Qué te parece esto?)Tj
+0 -2.4 TD
+0.0177 Tw
+(¡Naturalmente!, el hijo hará un)Tj
+/TT9 1 Tf
+12.6945 0 TD
+0 Tw
+(exec)Tj
+/TT6 1 Tf
+2.6681 0 TD
+0.0177 Tw
+[(y)-267.7(e)0(l)-267.7(programa que ejecutemos)]TJ
+/TT4 1 Tf
+12.3336 0 TD
+(no sabe)Tj
+/TT6 1 Tf
+3.3685 0 TD
+(que ha de leer de ningún pipe.)Tj
+-31.0647 -1.2 TD
+0.0049 Tw
+[(Simplemente v)25(a)-254.9(a)-254.9(leer de su entrada estándar)55(.)-254.9(Por ello hemos de conse)15(guir que el descriptor)]TJ
+/TT9 1 Tf
+36.9985 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.855 0 TD
+0.0049 Tw
+(en dicho pro-)Tj
+-37.8535 -1.2 TD
+0.0379 Tw
+[(ceso sea el e)15(xtremo del pipe por el que se lee del mismo. Pero el código del padre es harina de otro costal.)]TJ
+T*
+0.0464 Tw
+(El padre)Tj
+/TT4 1 Tf
+3.7022 0 TD
+0 Tw
+(sabe)Tj
+/TT6 1 Tf
+2.1294 0 TD
+0.0464 Tw
+[(que tiene que escribir en el descriptor que de)25(vuelv)15(e)]TJ
+/TT9 1 Tf
+21.1744 0 TD
+0 Tw
+(pipeto)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0463 Tw
+[(.)-296.3(Así pues, ¿por qué habríamos)]TJ
+-30.6065 -1.2 TD
+0 Tw
+(de redirigir nada para escribir en el pipe?)Tj
+0 -2.4 TD
+0.0142 Tw
+[(Además, una v)15(ez rediriges la salida estándar)40(,)-264.2(has perdido el v)25(alor anterior del descriptor y no puedes v)20(olv)15(er)]TJ
+0 -1.2 TD
+0.0551 Tw
+[(a)-305.1(recuperar la salida estándar anterior)55(.)-305.1(N)0(i)-305.1(siquieres podrías abriendo)]TJ
+/TT9 1 Tf
+27.9564 0 TD
+0 Tw
+(/dev/tty)Tj
+/TT6 1 Tf
+4.8008 0 TD
+0.055 Tw
+[(,)-305(dado que quizá tu salida)]TJ
+-32.7572 -1.2 TD
+0 Tw
+(estándar no era)Tj
+/TT9 1 Tf
+6.3022 0 TD
+(/dev/tty)Tj
+/TT6 1 Tf
+4.8008 0 TD
+(.)Tj
+ET
+endstream
+endobj
+28 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+30 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+31 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+32 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+33 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 500 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 611 0 0 389 500 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 29 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 237
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 722 611 611 0 0 0 444 0 0 0 0 722 
+0 0 0 0 0 722 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 500 0 278 278 0 278 722 500 500 
+500 0 389 389 278 500 444 0 444 0 389 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 30 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+500 500 500 500 500 500 500 500 0 0 278 0 0 0 0 444 
+0 722 667 667 722 611 556 0 722 333 0 722 611 889 722 722 
+556 722 0 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 31 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 32 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 600 600 600 600 600 0 0 600 600 600 0 600 600 600 600 
+600 600 600 600 600 600 0 600 0 0 600 600 600 600 600 0 
+600 600 600 0 600 600 600 0 600 600 0 0 600 600 600 600 
+0 0 0 600 600 600 0 0 0 0 600 600 600 600 0 0 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 33 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+26 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 28 0 R
+/Contents 27 0 R
+>>
+endobj
+34 0 obj
+<<
+/S /D
+>>
+endobj
+35 0 obj
+<<
+/Nums [0 34 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R 26 0 R]
+/Count 7
+/MediaBox [0 0 612 792]
+>>
+endobj
+36 0 obj
+<<
+/CreationDate (D:20160905151716+02'00')
+/ModDate (D:20160905151716+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+37 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 35 0 R
+>>
+endobj
+xref
+0 38
+0000000000 65535 f 
+0000032807 00000 n 
+0000000016 00000 n 
+0000004657 00000 n 
+0000030012 00000 n 
+0000030672 00000 n 
+0000031329 00000 n 
+0000032090 00000 n 
+0000032264 00000 n 
+0000028885 00000 n 
+0000033460 00000 n 
+0000032888 00000 n 
+0000004796 00000 n 
+0000009394 00000 n 
+0000032972 00000 n 
+0000009534 00000 n 
+0000012552 00000 n 
+0000033056 00000 n 
+0000012659 00000 n 
+0000016455 00000 n 
+0000033140 00000 n 
+0000016584 00000 n 
+0000019882 00000 n 
+0000033224 00000 n 
+0000020011 00000 n 
+0000023450 00000 n 
+0000033308 00000 n 
+0000023579 00000 n 
+0000028745 00000 n 
+0000029025 00000 n 
+0000029227 00000 n 
+0000029427 00000 n 
+0000029624 00000 n 
+0000029821 00000 n 
+0000033392 00000 n 
+0000033420 00000 n 
+0000033584 00000 n 
+0000033707 00000 n 
+trailer
+<<
+/Size 38
+/Root 37 0 R
+/Info 36 0 R
+/ID [<a18c9f3ffeb4fc873d9a4474bd342f93><a18c9f3ffeb4fc873d9a4474bd342f93>]
+>>
+startxref
+33777
+%%EOF

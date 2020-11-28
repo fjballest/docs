@@ -1,0 +1,1922 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4134
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.342 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Ficher)18(os)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Lectura)-250(de )250(dir)18(ectorios)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0769 Tw
+(Los directorios en UNIX son )Tj
+/TT7 1 Tf
+12.2434 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0769 Tw
+(cheros que contienen una tabla de )Tj
+/TT7 1 Tf
+14.2334 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0769 Tw
+(cheros pertenecientes al directorio. En)Tj
+-27.5891 -1.2 TD
+0 Tw
+(cada entrada de la tabla hay dos cosas:)Tj
+2.5 -1.56 TD
+[(•)-2150(U)0(n)-250(nombre de )]TJ
+/TT7 1 Tf
+8.4708 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+-9.027 -1.56 TD
+[(•)-2150(U)0(n)-250(número \(de)]TJ
+/TT4 1 Tf
+8.8038 0 TD
+(i-nodo)Tj
+/TT6 1 Tf
+2.6108 0 TD
+[(\))-250(que identi)]TJ
+/TT7 1 Tf
+4.5542 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca al )Tj
+/TT7 1 Tf
+2.1094 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-21.6905 -1.2 TD
+0.0297 Tw
+(Cuando se crea un )Tj
+/TT7 1 Tf
+7.7272 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0297 Tw
+(chero con)Tj
+/TT9 1 Tf
+4.224 0 TD
+0 Tw
+(creat)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5297 0 TD
+(open)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.2797 Tc
+(,o)Tj
+/TT9 1 Tf
+1.3095 0 TD
+0 Tc
+(mkdir)Tj
+/TT6 1 Tf
+3.2803 0 TD
+0.0298 Tw
+(se añade automáticamente la entrada de directorio)Tj
+-23.0277 -1.2 TD
+0.1113 Tw
+(para el )Tj
+/TT7 1 Tf
+3.165 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1113 Tw
+(chero o directorio que se ha creado. Recordarás que)Tj
+/TT9 1 Tf
+21.9363 0 TD
+0 Tw
+(link)Tj
+/TT6 1 Tf
+2.7617 0 TD
+(\(o)Tj
+/TT9 1 Tf
+1.1943 0 TD
+(ln)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.1113 Tw
+[(\))-361.3(puede usarse para establecer)]TJ
+-30.8136 -1.2 TD
+0.0765 Tw
+[(nue)25(v)20(o)0(s)-326.5(enlaces para )]TJ
+/TT7 1 Tf
+8.4306 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0765 Tw
+[(cheros que e)15(xisten \(nue)25(v)25(a)0(s)-326.6(entradas de directorio con el número de un )]TJ
+/TT7 1 Tf
+29.1767 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0766 Tw
+[(chero e)15(xis-)]TJ
+-38.7196 -1.2 TD
+0 Tw
+(tente\) y que)Tj
+/TT9 1 Tf
+4.9702 0 TD
+(unlink)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(o)Tj
+/TT9 1 Tf
+0.75 0 TD
+(rmdir)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(pueden utilizarse para eliminar nombres.)Tj
+-12.8213 -2.4 TD
+0.1594 Tw
+(Hace tiempo UNIX permitía utilizar)Tj
+/TT9 1 Tf
+15.5416 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.8098 0 TD
+(y)Tj
+/TT9 1 Tf
+0.9094 0 TD
+(write)Tj
+/TT6 1 Tf
+3.4099 0 TD
+0.1594 Tw
+(para leer y escribir directorios. No obstante, esto)Tj
+-22.6707 -1.2 TD
+0.0523 Tw
+[(causó tantos problemas cada v)15(ez un usuario escribía incorrectamente la tabla que desde hace tiempo no se)]TJ
+T*
+0 Tw
+(puede utilizar)Tj
+/TT9 1 Tf
+5.7197 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(o)Tj
+/TT9 1 Tf
+0.75 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(para leer una tabla de directorio.)Tj
+-12.3706 -2.4 TD
+-0.0005 Tc
+0.024 Tw
+(En lugar de)Tj
+/TT4 1 Tf
+4.9249 0 TD
+0 Tc
+0 Tw
+[(r)37(ead\(2\))]TJ
+/TT6 1 Tf
+2.962 0 TD
+0.0235 Tw
+[(,)-273.5(para directorios tenemos la llamada al sistema)]TJ
+/TT4 1 Tf
+19.3754 0 TD
+0 Tw
+[(g)10(etdir)37(entries\(2\))]TJ
+/TT6 1 Tf
+6.2294 0 TD
+0.0234 Tw
+[(.)-273.4(N)0(o)-273.4(obstante, es mucho)]TJ
+-33.4917 -1.2 TD
+0.0061 Tw
+(más fácil utilizar las funciones)Tj
+/TT4 1 Tf
+12.4984 0 TD
+0 Tw
+(opendir\(3\))Tj
+/TT6 1 Tf
+4.2769 0 TD
+(,)Tj
+/TT4 1 Tf
+0.5062 0 TD
+[(r)37(eaddir\(3\))]TJ
+/TT6 1 Tf
+4.3852 0 TD
+(y)Tj
+/TT4 1 Tf
+0.7562 0 TD
+(closedir\(3\))Tj
+/TT6 1 Tf
+4.6439 0 TD
+0.0062 Tw
+(que tenemos en la librería de C. No sólo)Tj
+-27.0667 -1.2 TD
+0.0045 Tw
+[(es más fácil. Es más portable. Piensa que el formato e)15(xacto de una entrada de directorio depende del tipo de)]TJ
+T*
+0.0407 Tw
+(sistema de )Tj
+/TT7 1 Tf
+4.5248 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0407 Tw
+(cheros que utilices \(del programa que implementa los )Tj
+/TT7 1 Tf
+21.9853 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0407 Tw
+(cheros en esa partición o donde quiera)Tj
+-27.6223 -1.2 TD
+0 Tw
+(que estén los )Tj
+/TT7 1 Tf
+5.4155 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros, y que forma parte del k)10(ernel\).)]TJ
+-5.9717 -2.4 TD
+(Aquí tienes un ejemplo de cómo listar un directorio en C.)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 2942
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <sys/dir.h>)Tj
+T*
+(#include <dirent.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(DIR *d;)Tj
+T*
+(struct dirent *de;)Tj
+0 -3 TD
+[(d)-600(=)-600(opendir\("."\);)]TJ
+0 -1.5 TD
+(if\(d == NULL\) {)Tj
+2.4 -1.5 TD
+(err\(1, "opendir"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(while\(\(de = readdir\(d\)\) != NULL\) {)Tj
+2.4 -1.5 TD
+(printf\("%s\\n", de->d_name\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(closedir\(d\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "closedir"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 402 Tm
+(Este programa lista el contenido del directorio actual. Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 384 Tm
+(unix$ lsdot)Tj
+T*
+(.)Tj
+T*
+(..)Tj
+T*
+(lsdot.c)Tj
+T*
+(lsdot)Tj
+T*
+(ch03e.w)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 294 Tm
+[(Como v)15(erás, aparecen tanto ")]TJ
+/TT9 1 Tf
+11.7496 0 TD
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-250(como ")]TJ
+/TT9 1 Tf
+3.5381 0 TD
+(..)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(".)Tj
+-17.088 -2.4 TD
+0.0693 Tw
+(Cada llamada a)Tj
+/TT9 1 Tf
+6.6215 0 TD
+0 Tw
+(readdir)Tj
+/TT6 1 Tf
+4.52 0 TD
+0.0693 Tw
+[(de)25(vuelv)15(e)-319.3(una estructura de tipo)]TJ
+/TT9 1 Tf
+13.0516 0 TD
+(struct dirent)Tj
+/TT6 1 Tf
+7.8706 0 TD
+0.0692 Tw
+[(.)-319.3(Dicha estructura no debes)]TJ
+-32.0636 -1.2 TD
+0.0024 Tw
+[(liberarla, se)15(gún indica el manual, y si llamas de nue)25(v)20(o)20( )-20(a)]TJ
+/TT9 1 Tf
+22.5977 0 TD
+0 Tw
+(readdir)Tj
+/TT6 1 Tf
+4.4531 0 TD
+0.0024 Tw
+(la estructura antigua se sobreescribe con)Tj
+-27.0508 -1.2 TD
+-0.025 Tc
+0.025 Tw
+[(l)-25(a)-25( n)-25(u)-25(eva )]TJ
+3.5594 0 TD
+0 Tc
+0 Tw
+(muy posiblemente.)Tj
+-3.5594 -2.4 TD
+0.0595 Tw
+(Esta estructura cambia mucho de un tipo de UNIX a otro, aunque en la mayoría las entradas de directorio)Tj
+0 -1.2 TD
+0 Tw
+(son similares. Por ejemplo, esta es la que utiliza Linux:)Tj
+/TT9 1 Tf
+8 0 0 8 160.8 192 Tm
+(struct dirent {)Tj
+2.4 -1.5 TD
+[(ino_t )-5400(d_ino;)-4200(/* inode number */)]TJ
+T*
+[(off_t )-5400(d_off;)-4200(/* not an offset; see NOTES */)]TJ
+T*
+[(unsigned short d_reclen;)-2400(/* length of this record */)]TJ
+T*
+[(unsigned char)-1200(d_type; )-3000(/*)-600(type of file; not supported)]TJ
+18.6 -1.5 TD
+(by all filesystem types */)Tj
+-18.6 -1.5 TD
+[(char )-6000(d_name[256];)-600(/* filename */)]TJ
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 78 Tm
+0.1132 Tw
+(Normalmente, siempre tienes el campo)Tj
+/TT9 1 Tf
+16.4494 0 TD
+0 Tw
+(d_name)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.1133 Tw
+[(.)-363.3(E)0(n)-363.3(Linux y sistemas BSD tienes)]TJ
+/TT9 1 Tf
+14.4591 0 TD
+0 Tw
+(d_type)Tj
+/TT6 1 Tf
+3.9639 0 TD
+0.1133 Tw
+(también. El)Tj
+-38.473 -1.2 TD
+0.0323 Tw
+[(resto de campos suelen v)25(ariar de nombre y tal v)15(ez no estén en tu UNIX. Si utilizas algo más que)]TJ
+/TT9 1 Tf
+39.3457 0 TD
+0 Tw
+(d_name)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(,)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 3862
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+[(se)15(guramente tu código deje de ser portable a otros tipos de UNIX.)]TJ
+0 -2.4 TD
+0.0665 Tw
+(Cuando tienes)Tj
+/TT9 1 Tf
+6.0764 0 TD
+0 Tw
+(d_type)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0665 Tw
+[(,)-316.5(este campo v)25(ale)]TJ
+/TT9 1 Tf
+7.3767 0 TD
+0 Tw
+(DT_DIR)Tj
+/TT6 1 Tf
+3.9171 0 TD
+0.0665 Tw
+(para directorios,)Tj
+/TT9 1 Tf
+6.8802 0 TD
+0 Tw
+(DT_REG)Tj
+/TT6 1 Tf
+3.9172 0 TD
+(para )Tj
+/TT7 1 Tf
+2.0373 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0666 Tw
+(cheros \()Tj
+/TT7 1 Tf
+3.2595 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0666 Tw
+[(cheros re)15(gu-)]TJ
+-38.1772 -1.2 TD
+0 Tw
+[(lares o normales\) y otros v)25(alores para otros tipos de )]TJ
+/TT7 1 Tf
+20.8583 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero que v)15(eremos más adelante.)]TJ
+-21.4145 -2.4 TD
+0.2385 Tw
+(Naturalmente, nunca se escribe un directorio, este se actualiza creando, borrando y renombrando los)Tj
+/TT7 1 Tf
+0 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0327 Tw
+[(cheros que contiene. Y)100(a)-282.7(conoces todo lo necesario, salv)20(o)-282.8(por cómo renombrar )]TJ
+/TT7 1 Tf
+31.7616 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0328 Tw
+(cheros. La llamada al sis-)Tj
+-32.8739 -1.2 TD
+0 Tw
+(tema en cuestión es)Tj
+/TT4 1 Tf
+8.0527 0 TD
+[(r)37(ename\(2\))]TJ
+/TT6 1 Tf
+4.128 0 TD
+(.)Tj
+-12.1808 -2.4 TD
+(Este programa renombra un )Tj
+/TT7 1 Tf
+11.3848 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero, similar al uso más sencillo del comando)Tj
+/TT4 1 Tf
+18.9673 0 TD
+(mv\(1\))Tj
+/TT6 1 Tf
+2.332 0 TD
+(.)Tj
+/TT9 1 Tf
+8 0 0 8 133 582 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -3 TD
+(if \(argc != 3\) {)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "usage: %s old new\\n", argv[0]\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(rename\(argv[1], argv[2]\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "rename %s", argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 360 Tm
+[(Podemos usarlo para mo)15(v)15(e)0(r)-250(u)0(n)]TJ
+/TT7 1 Tf
+12.6062 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero a notro nombre:)Tj
+/TT9 1 Tf
+8 0 0 8 133 342 Tm
+(unix$ echo hola >a)Tj
+0 -1.5 TD
+(unix$ cat a)Tj
+T*
+(hola)Tj
+T*
+(unix$ mvf a b)Tj
+T*
+(unix$ ls -l a b)Tj
+T*
+(ls: a: No such file or directory)Tj
+T*
+0.6 Tw
+[(-rw------- 1)-600(nemo staff 5)-600(Aug )600(20 )600(22:13 )600(b)]TJ
+T*
+0 Tw
+(unix$ cat b)Tj
+T*
+(hola)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 204 Tm
+0.0197 Tw
+(Has de tener en cuenta que si el )Tj
+/TT7 1 Tf
+13.0409 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0197 Tw
+[(chero de destino e)15(xiste, se borra \(su nombre\) durante el)]TJ
+/TT4 1 Tf
+22.5906 0 TD
+0 Tw
+[(r)37(ename)]TJ
+/TT6 1 Tf
+2.962 0 TD
+[(.)-269.6(Además,)]TJ
+-39.1497 -1.2 TD
+0.0153 Tw
+(es un error hacer un)Tj
+/TT4 1 Tf
+8.2669 0 TD
+0 Tw
+[(r)37(ename)]TJ
+/TT6 1 Tf
+3.2273 0 TD
+0.0153 Tw
+[(hacia un directorio no v)25(acío. Y otra cosa, si recuerdas el comando)]TJ
+/TT4 1 Tf
+26.7593 0 TD
+0 Tw
+(mv\(1\))Tj
+/TT6 1 Tf
+2.332 0 TD
+[(,)-265.4(v)15(erás)]TJ
+-40.5856 -1.2 TD
+(que)Tj
+/TT9 1 Tf
+8 0 0 8 133 162 Tm
+(unix$ mv a /tmp)Tj
+/TT6 1 Tf
+10 0 0 10 72 144 Tm
+0.015 Tw
+[(mue)25(v)15(e)15( el)]TJ
+/TT7 1 Tf
+3.8472 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT9 1 Tf
+2.4707 0 TD
+(a)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(a)Tj
+/TT9 1 Tf
+0.6938 0 TD
+(/tmp/a)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(.)-250(N)0(o)-250(obstante,)]TJ
+/TT9 1 Tf
+8 0 0 8 133 126 Tm
+(unix$ mvf a /tmp)Tj
+0 -1.5 TD
+(mvf: rename a: Permission denied)Tj
+/TT6 1 Tf
+10 0 0 10 72 96 Tm
+0.039 Tw
+(nuestro programa no es tan listo e intenta hacer que)Tj
+/TT9 1 Tf
+21.2162 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.8891 0 TD
+-0.0003 Tc
+0.0393 Tw
+[(tenga)-289.3(como nombre)]TJ
+/TT9 1 Tf
+8.3039 0 TD
+0 Tc
+0 Tw
+(/tmp)Tj
+/TT6 1 Tf
+2.6894 0 TD
+0.039 Tw
+(\(que es un directorio que)Tj
+-33.0986 -1.2 TD
+0 Tw
+[(ya e)15(xiste\).)]TJ
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 5288
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT2 1 Tf
+-21.017 -3.6 TD
+0.25 Tw
+[(2. Glob)10(bing)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.002 Tw
+(Dado que gran parte de las "palabras" que escribimos en una línea de comandos corresponden a nombres de)Tj
+/TT7 1 Tf
+0 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1102 Tw
+[(chero, el shell da f)10(acilidades para e)15(xpresar de un modo compacto nombres de )]TJ
+/TT7 1 Tf
+32.6176 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1102 Tw
+(chero que tienen cierto)Tj
+-33.7299 -1.2 TD
+0.0884 Tw
+[(aspecto. Dicho de otro modo, el shell permite utilizar e)15(xpresiones que)]TJ
+/TT4 1 Tf
+29.1434 0 TD
+0 Tw
+[(g)10(ener)15(an)]TJ
+/TT6 1 Tf
+3.5903 0 TD
+0.0884 Tw
+(nombres de )Tj
+/TT7 1 Tf
+5.0645 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0884 Tw
+(chero o que)Tj
+/TT4 1 Tf
+-38.3543 -1.2 TD
+0 Tw
+(encajan)Tj
+/TT6 1 Tf
+3.4155 0 TD
+(con nombres de )Tj
+/TT7 1 Tf
+6.5815 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero. A esta herramienta se la conoce como)Tj
+/TT4 1 Tf
+18.1304 0 TD
+(globbing)Tj
+/TT6 1 Tf
+3.5557 0 TD
+(.)Tj
+-32.2393 -2.4 TD
+0.0362 Tw
+[(Y)100(a)100( )-100.1(sabes que en general una b)20(uena forma de saber cómo funcionan las cosas es e)15(xperimentar con ellas, así)]TJ
+0 -1.2 TD
+0 Tw
+[(que v)25(amos a crear un directorio con ciertos )]TJ
+/TT7 1 Tf
+17.4677 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros dentro para e)15(xperimentar)40(,)-250(tal y como harías tu.)]TJ
+/TT9 1 Tf
+8 0 0 8 133 602.4 Tm
+(unix$ mkdir -p /tmp/d/d2/d3)Tj
+0 -1.5 TD
+(unix$ touch /tmp/d/a /tmp/d/ab /tmp/d/abc)Tj
+T*
+(unix$ touch /tmp/d/d2/j /tmp/d/d2/k)Tj
+T*
+[(unix$ touch /tmp/d/d2/d3/x)-1200(/tmp/d/d2/d3/y)]TJ
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 536.4 Tm
+(El )Tj
+/TT7 1 Tf
+1.1883 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2434 0 TD
+(-p)Tj
+/TT6 1 Tf
+1.4998 0 TD
+(de)Tj
+/TT9 1 Tf
+1.2434 0 TD
+(mkdir)Tj
+/TT6 1 Tf
+3.3001 0 TD
+0.0496 Tw
+[(hace que se cree el directorio indicado como ar)18(gumento y los directorios padre si es)]TJ
+-9.0312 -1.2 TD
+0 Tw
+[(que no e)15(xisten.)]TJ
+0 -2.4 TD
+0.038 Tw
+(Podemos utilizar el comando)Tj
+/TT4 1 Tf
+12.0382 0 TD
+0 Tw
+(du\(1\))Tj
+/TT6 1 Tf
+2.454 0 TD
+(\()Tj
+/TT4 1 Tf
+0.333 0 TD
+0.038 Tw
+[(disk usa)10(g)10(e)]TJ
+/TT6 1 Tf
+4.2118 0 TD
+[(\))-288(para que liste el árbol de )]TJ
+/TT7 1 Tf
+10.8997 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0379 Tw
+[(cheros que hemos creado.)-537.9(Este)]TJ
+-30.4929 -1.2 TD
+0.0391 Tw
+(comando en realidad lista cuándo disco consumen )Tj
+/TT7 1 Tf
+20.573 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0391 Tw
+(cheros y directorios, pero es una forma práctica de lis-)Tj
+-21.1292 -1.2 TD
+0 Tw
+(tar árboles de )Tj
+/TT7 1 Tf
+5.6362 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros \(¡Más práctica que utilizando)Tj
+/TT9 1 Tf
+14.855 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(!\).)Tj
+/TT9 1 Tf
+8 0 0 8 133 458.4 Tm
+(unix$ du -a /tmp/d)Tj
+0 -1.5 TD
+[(0)-2400(/tmp/d/1)]TJ
+T*
+[(0)-2400(/tmp/d/2)]TJ
+T*
+[(0)-2400(/tmp/d/a)]TJ
+T*
+[(0)-2400(/tmp/d/ab)]TJ
+T*
+[(0)-2400(/tmp/d/abc)]TJ
+T*
+[(0)-2400(/tmp/d/d2/d3/x)]TJ
+T*
+[(0)-2400(/tmp/d/d2/d3/y)]TJ
+T*
+[(0)-2400(/tmp/d/d2/d3)]TJ
+T*
+[(0)-2400(/tmp/d/d2/j)]TJ
+T*
+[(0)-2400(/tmp/d/d2/k)]TJ
+T*
+[(0)-2400(/tmp/d/d2)]TJ
+T*
+[(0)-2400(/tmp/d)]TJ
+/TT6 1 Tf
+10 0 0 10 72 296.4 Tm
+(El )Tj
+/TT7 1 Tf
+1.1387 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(-a)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(de)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(du)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(hace que liste no sólo los directorios, sino también los )Tj
+/TT7 1 Tf
+21.8574 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros.)Tj
+-29.3965 -2.4 TD
+0.0747 Tw
+[(Pero continuemos. Cuando el shell v)15(e)-324.8(que un nombre en la línea de comandos contiene ciertos caracteres)]TJ
+0 -1.2 TD
+0.0329 Tw
+(especiales, intenta encontrar paths de )Tj
+/TT7 1 Tf
+15.269 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0329 Tw
+[(chero que encajan con dicho nombre y)65(,)-282.9(si)-282.9(los encuentra, cambia ese)]TJ
+-15.8251 -1.2 TD
+0.0992 Tw
+(nombre los pos paths, separados por espacio. En realidad, deberíamos llamar)Tj
+/TT4 1 Tf
+32.0818 0 TD
+0 Tw
+[(e)20(xpr)37(esión)]TJ
+/TT6 1 Tf
+4.1798 0 TD
+0.0991 Tw
+[(a)-349.1(l)0(o)-349.1(que estamos)]TJ
+-36.2616 -1.2 TD
+0 Tw
+(llamando "nombre".)Tj
+0 -2.4 TD
+(Por ejemplo, en este comando)Tj
+/TT9 1 Tf
+8 0 0 8 133 194.4 Tm
+(unix$ echo /tmp/d/*)Tj
+0 -1.5 TD
+(/tmp/d/1 /tmp/d/2 /tmp/d/a /tmp/d/ab /tmp/d/abc /tmp/d/d2)Tj
+/TT6 1 Tf
+10 0 0 10 72 164.4 Tm
+0.0594 Tw
+(el shell ha tomado ")Tj
+/TT9 1 Tf
+8.1995 0 TD
+0 Tw
+(/tmp/d/*)Tj
+/TT6 1 Tf
+4.8008 0 TD
+0.0595 Tw
+[(")-309.4(y)65(,)-309.5(como puedes v)15(er por la salida de)]TJ
+/TT9 1 Tf
+15.47 0 TD
+0 Tw
+(echo)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0595 Tw
+[(,)-309.5(l)0(o)-309.5(h)0(a)-309.5(cambiado por los nom-)]TJ
+-30.8707 -1.2 TD
+0 Tw
+(bres de )Tj
+/TT7 1 Tf
+3.1099 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero en ")Tj
+/TT9 1 Tf
+4.0728 0 TD
+(/tmp/d)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(".)Tj
+-11.3394 -2.4 TD
+(Pero mira este otro comando:)Tj
+/TT9 1 Tf
+8 0 0 8 133 110.4 Tm
+(unix$ echo /tmp/d/a*)Tj
+0 -1.5 TD
+(/tmp/d/a /tmp/d/ab /tmp/d/abc)Tj
+/TT6 1 Tf
+10 0 0 10 72 80.4 Tm
+(Aquí el shell ha cambiado ")Tj
+/TT9 1 Tf
+11.0996 0 TD
+(/tmp/d/a*)Tj
+/TT6 1 Tf
+5.4009 0 TD
+[(")-250(por los nombres de )]TJ
+/TT7 1 Tf
+8.5459 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero en)Tj
+/TT9 1 Tf
+3.6646 0 TD
+(/tmp/d)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(que comienzan por ")Tj
+/TT9 1 Tf
+8.2661 0 TD
+(a)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(".)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 5224
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+[(V)111(eamos otro más...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 690 Tm
+(unix$ echo /*/ls)Tj
+0 -1.5 TD
+(/bin/ls)Tj
+/TT6 1 Tf
+10 0 0 10 72 660 Tm
+[(El shell ha b)20(uscado en ")]TJ
+/TT9 1 Tf
+9.5801 0 TD
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-250(cualquier )]TJ
+/TT7 1 Tf
+4.6284 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(chero que sea un directorio y contenga)-250.1(u)-0.1(n)]TJ
+/TT7 1 Tf
+16.933 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero llamado ")Tj
+/TT9 1 Tf
+6.3501 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(".)Tj
+-40.4042 -2.4 TD
+[(Las e)15(xpresiones de globbing son fáciles de entender:)]TJ
+2.5 -1.56 TD
+0.139 Tw
+[(•)-2150(E)0(l)-389(shell las recorre componente a componente mirando cada una de las sube)15(xpresiones que)]TJ
+2.5 -1.2 TD
+0 Tw
+(corresponden a nombres de directorio en el path.)Tj
+-2.5 -1.56 TD
+[(•)-2150(Naturalmente, ")]TJ
+/TT9 1 Tf
+8.8502 0 TD
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-250(separa unos componentes de otros.)]TJ
+-9.4503 -1.56 TD
+0.1732 Tw
+[(•)-2150(E)0(n)-423.1(cada componente intenta encontrar todos los )]TJ
+/TT7 1 Tf
+23.1226 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1732 Tw
+[(cheros cuyo nombre encaja en la sube)15(x-)]TJ
+-21.1787 -1.2 TD
+0 Tw
+(presión para dicho componente.)Tj
+-2.5 -1.56 TD
+[(•)-2150(E)0(n)-250(cada componente podemos tener caracteres normales o alguna de estas e)15(xpresiones:)]TJ
+2.5 -1.56 TD
+2.15 Tc
+(•")Tj
+/TT9 1 Tf
+2.9083 0 TD
+0 Tc
+(*)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-250(encaja con cualquier string, incluso con el string v)25(acío.)]TJ
+-3.5084 -1.56 TD
+2.15 Tc
+(•")Tj
+/TT9 1 Tf
+2.9083 0 TD
+0 Tc
+([...])Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.2225 Tw
+[(")-472.6(encaja con cualquier carácter contenido en los corchetes. Aquí es posible)]TJ
+-3.4088 -1.2 TD
+0 Tw
+(indicar rangos de caracteres como en ")Tj
+/TT9 1 Tf
+15.4561 0 TD
+([a-z])Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(")-250(\(las letras de la ")]TJ
+/TT9 1 Tf
+7.3413 0 TD
+(a)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.25 Tc
+[("al)250(a")]TJ
+/TT9 1 Tf
+2.7319 0 TD
+0 Tc
+(z)Tj
+/TT6 1 Tf
+0.6001 0 TD
+("\).)Tj
+-32.23 -1.56 TD
+2.15 Tc
+(•")Tj
+/TT9 1 Tf
+2.9083 0 TD
+0 Tc
+(?)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-250(encaja con un sólo carácter)55(.)]TJ
+-8.5084 -2.4 TD
+(Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 448.8 Tm
+(unix$ cd /tmp/d)Tj
+0 -1.5 TD
+(unix$ ls)Tj
+T*
+2.4 Tc
+[(12aa)2400(b)]TJ
+12.6005 0 TD
+0 Tc
+1.8 Tw
+(abc d2)Tj
+-12.6005 -1.5 TD
+0 Tw
+(unix$ echo [12]*)Tj
+T*
+0.6 Tc
+(12)Tj
+T*
+0 Tc
+(unix$ echo [ab]*)Tj
+T*
+0.6 Tc
+[(aa)600(ba)600(b)600(c)]TJ
+T*
+0 Tc
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 346.8 Tm
+0.031 Tw
+[(La primera e)15(xpresión quiere decir: "un)]TJ
+/TT9 1 Tf
+15.9059 0 TD
+0 Tw
+(1)Tj
+/TT6 1 Tf
+0.8811 0 TD
+0.281 Tc
+[(ou)281(n)]TJ
+/TT9 1 Tf
+2.062 0 TD
+0 Tc
+(2)Tj
+/TT6 1 Tf
+0.8811 0 TD
+0.031 Tw
+[(y)-281(lue)15(go cualquier cosa" La se)15(gunda quiere decir: "una)]TJ
+/TT9 1 Tf
+22.0844 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.8811 0 TD
+(o)Tj
+-42.6956 -1.2 TD
+(una)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(b)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(y)-250(lue)15(go cualquier cosa".)]TJ
+-2.5439 -2.4 TD
+(Otro ejemplo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 292.8 Tm
+(unix$ ls /tmp/*/d*/?)Tj
+0 -1.5 TD
+1.8 Tw
+(/tmp/d/d2/j /tmp/d/d2/k)Tj
+/TT6 1 Tf
+10 0 0 10 72 262.8 Tm
+0.0069 Tw
+(Esto es, dentro de ")Tj
+/TT9 1 Tf
+7.7952 0 TD
+0 Tw
+(/tmp)Tj
+/TT6 1 Tf
+2.4004 0 TD
+-0.0001 Tc
+0.0069 Tw
+[(", cualquier nombre de directorio que tenga)-256.9(dentro un directorio que comience por)]TJ
+-10.1956 -1.2 TD
+0 Tc
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(d)Tj
+/TT6 1 Tf
+0.6001 0 TD
+-0.0004 Tc
+0.0004 Tw
+[(")-250.4(y)-250.4(tenga)-250.4(dentro un )]TJ
+/TT7 1 Tf
+7.8734 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero cuyo nombre sea un sólo carácter y nada más.)Tj
+-9.4379 -2.4 TD
+(Quizá el uso más común sea en comandos como)Tj
+/TT9 1 Tf
+8 0 0 8 133 208.8 Tm
+(unix$ ls *.[ch])Tj
+/TT6 1 Tf
+10 0 0 10 72 190.8 Tm
+0.0272 Tw
+(para listar los fuentes en C \()Tj
+/TT7 1 Tf
+11.3819 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0272 Tw
+[(cheros cuyo nombre es cualquier cosa, lue)15(go un ")]TJ
+/TT9 1 Tf
+20.021 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0273 Tw
+[(")-277.3(y)-277.3(lue)15(go o bien una ")]TJ
+/TT9 1 Tf
+8.8524 0 TD
+0 Tw
+(c)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.2773 Tc
+("o)Tj
+-42.0117 -1.2 TD
+0 Tc
+(una ")Tj
+/TT9 1 Tf
+2.1021 0 TD
+(h)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(", y como)Tj
+/TT9 1 Tf
+8 0 0 8 133 160.8 Tm
+(unix$ rm *.o)Tj
+/TT6 1 Tf
+10 0 0 10 72 142.8 Tm
+(para borrar todos los )Tj
+/TT7 1 Tf
+8.4976 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros objeto \(cualquier nombre terminado en ")Tj
+/TT9 1 Tf
+19.1235 0 TD
+(.o)Tj
+/TT6 1 Tf
+1.2002 0 TD
+("\).)Tj
+-29.3774 -2.4 TD
+0.027 Tw
+(Recuerda que ninguno de estos comandos sabe nada respecto a globbing, ni entienden qué quiere decir ")Tj
+/TT9 1 Tf
+42.1874 0 TD
+0 Tw
+(*)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(")Tj
+-42.7875 -1.2 TD
+0.0842 Tw
+[(ni lo v)15(en siquiera.)-584.2(Es el shell cuando analiza la línea de comandos el que detecta que hay una e)15(xpresión)]TJ
+T*
+0.0297 Tw
+[(que contiene caracteres de globbing, y cambia dicha e)15(xpresión por los nombres de los )]TJ
+/TT7 1 Tf
+34.9726 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0297 Tw
+(cheros que encajan)Tj
+-35.5287 -1.2 TD
+0.0647 Tw
+[(en la e)15(xpresión. )-250(Los)-314.7(comandos simplemente reciben los ar)18(gumentos con los paths y se limitan a hacer su)]TJ
+T*
+0 Tw
+(trabajo.)Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 1595
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+-21.017 -3.6 TD
+-0.0001 Tc
+0.0001 Tw
+[(En ocasiones resultará útil hacer que el shell no haga)-250.1(globbing, como en esta sesión:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 690 Tm
+0 Tc
+0 Tw
+(unix$ touch ’*’)Tj
+/TT6 1 Tf
+10 0 0 10 72 672 Tm
+0.042 Tw
+(Hemos creado un )Tj
+/TT7 1 Tf
+7.3736 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.042 Tw
+(chero llamado ")Tj
+/TT9 1 Tf
+6.4341 0 TD
+0 Tw
+(*)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.042 Tw
+[(". Esta v)15(ez a sabiendas, pero podría haber sido por error)55(.)-292(P)15(ara hacerlo)]TJ
+-14.9639 -1.2 TD
+0.0033 Tw
+(simplemente utilizamos las comillas simples para hacer que el shell tome)Tj
+/TT4 1 Tf
+29.5558 0 TD
+0 Tw
+[(liter)15(almente)]TJ
+/TT6 1 Tf
+5.0703 0 TD
+0.0034 Tw
+[(y)-253.3(sin cambiar nada lo)]TJ
+-34.6262 -1.2 TD
+0 Tw
+(que incluyen las comillas \(y como una sóla palabra\).)Tj
+0 -2.4 TD
+[(Y)-250(ahora tenemos el dilema.)]TJ
+/TT9 1 Tf
+8 0 0 8 133 606 Tm
+(unix$ ls)Tj
+0 -1.5 TD
+2.4 Tc
+[(*12aa)2400(b)]TJ
+15.6006 0 TD
+0 Tc
+1.8 Tw
+(abc d2)Tj
+-15.6006 -1.5 TD
+0 Tw
+(unix$ echo *)Tj
+T*
+0.6 Tc
+[(*12aa)600(b)]TJ
+6.6006 0 TD
+0 Tc
+(abc d2)Tj
+/TT6 1 Tf
+10 0 0 10 72 552 Tm
+(Si utilizamos)Tj
+/TT9 1 Tf
+8 0 0 8 133 534 Tm
+(unix$ rm *)Tj
+/TT6 1 Tf
+10 0 0 10 72 516 Tm
+(para eliminar ")Tj
+/TT9 1 Tf
+5.9609 0 TD
+(*)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(", ¡borraremos todos los )Tj
+/TT7 1 Tf
+9.8789 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros! y no es lo que queremos. Pero podemos hacer esto:)Tj
+/TT9 1 Tf
+8 0 0 8 133 498 Tm
+(unix$ rm ’*’)Tj
+0 -1.5 TD
+(unix$ ls)Tj
+T*
+2.4 Tc
+[(12aa)2400(b)]TJ
+12.6005 0 TD
+0 Tc
+1.8 Tw
+(abc d2)Tj
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+30 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 611 778 0 389 0 0 667 0 0 778 
+0 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 500 556 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 26 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 0 0 
+0 500 500 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 500 0 278 278 444 278 722 500 500 
+500 0 389 389 278 500 444 0 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 27 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 0 500 500 500 500 500 0 0 0 278 0 0 0 0 0 
+0 722 667 667 722 611 0 0 722 333 0 0 611 889 722 722 
+556 722 667 556 0 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 28 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 29 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 600 600 600 600 600 0 0 600 600 600 0 600 600 600 600 
+600 600 600 600 0 600 600 0 0 0 600 600 600 600 600 600 
+0 600 0 0 600 600 0 600 0 600 0 0 600 0 600 600 
+600 0 600 600 600 600 0 0 0 0 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 30 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+31 0 obj
+<<
+/S /D
+>>
+endobj
+32 0 obj
+<<
+/Nums [0 31 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R]
+/Count 6
+/MediaBox [0 0 612 792]
+>>
+endobj
+33 0 obj
+<<
+/CreationDate (D:20160905151712+02'00')
+/ModDate (D:20160905151712+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+34 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 32 0 R
+>>
+endobj
+xref
+0 35
+0000000000 65535 f 
+0000028051 00000 n 
+0000000016 00000 n 
+0000004202 00000 n 
+0000025267 00000 n 
+0000025927 00000 n 
+0000026593 00000 n 
+0000027340 00000 n 
+0000027514 00000 n 
+0000024140 00000 n 
+0000028620 00000 n 
+0000028132 00000 n 
+0000004341 00000 n 
+0000007336 00000 n 
+0000028216 00000 n 
+0000007443 00000 n 
+0000011358 00000 n 
+0000028300 00000 n 
+0000011487 00000 n 
+0000016828 00000 n 
+0000028384 00000 n 
+0000016968 00000 n 
+0000022245 00000 n 
+0000028468 00000 n 
+0000022363 00000 n 
+0000024011 00000 n 
+0000024280 00000 n 
+0000024482 00000 n 
+0000024682 00000 n 
+0000024879 00000 n 
+0000025076 00000 n 
+0000028552 00000 n 
+0000028580 00000 n 
+0000028737 00000 n 
+0000028860 00000 n 
+trailer
+<<
+/Size 35
+/Root 34 0 R
+/Info 33 0 R
+/ID [<9ac912872d252a62e3e754abaefc29a7><9ac912872d252a62e3e754abaefc29a7>]
+>>
+startxref
+28930
+%%EOF

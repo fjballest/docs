@@ -1,0 +1,1538 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4296
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.012 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Pr)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+[(1. )-250(V)92(ariables de entor)15(no)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0593 Tw
+[(Otra forma de darle información a un proceso \(además de usando sus ar)18(gumentos\) es utilizar las llamadas)]TJ
+/TT2 1 Tf
+0 -1.2 TD
+0 Tw
+[(v)10(ariables de entor)15(no)]TJ
+/TT6 1 Tf
+8.6967 0 TD
+[(.)-250(Cada proceso tiene un array de strings de tal forma que cada string tiene el aspecto)]TJ
+-6.1967 -1.2 TD
+(")Tj
+/TT4 1 Tf
+0.4082 0 TD
+[(nombr)37(e)]TJ
+/TT8 1 Tf
+3.0182 0 TD
+(=)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(valor)Tj
+/TT6 1 Tf
+2.1108 0 TD
+(")Tj
+-8.6373 -1.2 TD
+0.25 Tc
+[(yd)250(e)]TJ
+/TT9 1 Tf
+1.6938 0 TD
+0 Tc
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(ne una v)25(ariable de entorno con nombre ")]TJ
+/TT4 1 Tf
+16.2382 0 TD
+[(nombr)37(e)]TJ
+/TT6 1 Tf
+3.0182 0 TD
+[(")-250(y)-250(v)25(alor ")]TJ
+/TT4 1 Tf
+4.0961 0 TD
+(valor)Tj
+/TT6 1 Tf
+2.1108 0 TD
+(".)Tj
+-27.7133 -2.4 TD
+0.0368 Tw
+[(Cuando UNIX inicializa la memoria para un nue)25(v)20(o)20( )-20(programa se ocupa de que dicho array esté inicializado)]TJ
+0 -1.2 TD
+0.0618 Tw
+[(con las v)25(ariables de entorno que se han indicado en la llamada al sistema utilizada para ejecutar un nue)25(v)20(o)]TJ
+T*
+0 Tw
+(programa. Además de)Tj
+/TT8 1 Tf
+9.0522 0 TD
+(argv)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(,)-250(ahora tienes que considerar que tienes un array de v)25(ariables de entorno.)]TJ
+-11.4526 -2.4 TD
+0.0561 Tw
+[(El propósito de estas v)25(ariables es de)]TJ
+/TT9 1 Tf
+14.7522 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0562 Tw
+(nir elementos que se desea que estén disponibles para los programas)Tj
+-15.3084 -1.2 TD
+0.055 Tw
+[(que ejecutas sin tener que pasar dichos elementos como ar)18(gumento todas las v)15(eces. Naturalmente, tanto el)]TJ
+T*
+0.0055 Tw
+[(nombre de las v)25(ariables como su v)25(alor son strings, dado que esta abstracción \(v)25(ariables de entorno\) consiste)]TJ
+T*
+0 Tw
+(en el array de strings que hemos descrito.)Tj
+0 -2.4 TD
+(Podemos de)Tj
+/TT9 1 Tf
+4.8608 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(nir v)25(ariables de entorno utilizando el shell. Por ejemplo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 371.4 Tm
+(unix$ v=33)Tj
+/TT6 1 Tf
+10 0 0 10 72 353.4 Tm
+0.0484 Tw
+[(Cuando el shell v)15(e)-298.5(que una palabra en una línea de comandos comienza por un ")]TJ
+/TT8 1 Tf
+32.8584 0 TD
+0 Tw
+($)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0484 Tw
+(", entiende que se desea)Tj
+-33.4585 -1.2 TD
+0.0266 Tw
+[(utilizar el v)25(alor de la v)25(ariable de entorno cuyo nombre sigue y cambia dicha palabra por el v)25(alor de la v)25(ari-)]TJ
+T*
+0 Tw
+(able \(¡que siempre es un string!\).)Tj
+0 -2.4 TD
+0.121 Tw
+(Por ejemplo, ya conoces)Tj
+/TT4 1 Tf
+10.5089 0 TD
+0 Tw
+[(ec)15(ho\(1\))]TJ
+/TT6 1 Tf
+3.4097 0 TD
+0.121 Tw
+[(y)-371(sabes que simplemente escribe sus ar)18(gumentos tal cual los recibe en)]TJ
+/TT8 1 Tf
+-13.9186 -1.2 TD
+0 Tw
+(argv)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(,)-250(sin ningún tipo de magia. Pues bien, mira lo que escribe)]TJ
+/TT4 1 Tf
+23.1343 0 TD
+[(ec)15(ho)]TJ
+/TT6 1 Tf
+1.8727 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 275.4 Tm
+(unix$ v=33)Tj
+0 -1.5 TD
+(unix$ echo $v)Tj
+T*
+(33)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 209.4 Tm
+0.1057 Tw
+[(T)70(e)70( )-69.9(resultará útil de)]TJ
+/TT9 1 Tf
+7.7714 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1057 Tw
+[(nir v)25(ariables para nombres que utilices a menudo. Por ejemplo, si sueles cambiar de)]TJ
+-8.3276 -1.2 TD
+0 Tw
+[(directorio a un directorio dado, puedes utilizar una v)25(ariable de entorno para escribir menos:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 179.4 Tm
+(unix$ d=/un/path/muy/largo)Tj
+0 -1.5 TD
+(unix$ cd $d)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 125.4 Tm
+0.0552 Tw
+(Es tan habitual utilizar el directorio)Tj
+/TT4 1 Tf
+14.715 0 TD
+0 Tw
+(home)Tj
+/TT6 1 Tf
+2.4712 0 TD
+0.0552 Tw
+(de un usuario, que cuando haces un)Tj
+/TT4 1 Tf
+14.8262 0 TD
+0 Tw
+[(lo)10(gin)]TJ
+/TT6 1 Tf
+2.3508 0 TD
+0.0551 Tw
+(se de)Tj
+/TT9 1 Tf
+2.082 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0551 Tw
+[(ne una v)25(ariable)]TJ
+-37.0013 -1.2 TD
+0 Tw
+(de entorno)Tj
+/TT8 1 Tf
+4.4985 0 TD
+(HOME)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(que contiene el path de tu directorio)Tj
+/TT4 1 Tf
+14.6333 0 TD
+(home)Tj
+/TT6 1 Tf
+2.166 0 TD
+[(.)-250(Así pues:)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 3362
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ cd $HOME)Tj
+0 -1.5 TD
+(unix$ pwd)Tj
+T*
+(/home/nemo)Tj
+T*
+(unix$ cd)Tj
+T*
+(unix$ pwd)Tj
+T*
+(/home/nemo)Tj
+/TT6 1 Tf
+10 0 0 10 72 618 Tm
+0.0628 Tw
+[(El shell e)15(xpande v)25(ariables de entorno \(reemplaza)]TJ
+/TT8 1 Tf
+20.3078 0 TD
+0 Tw
+($x)Tj
+/TT6 1 Tf
+1.5131 0 TD
+0.0629 Tw
+[(por el v)25(alor de la v)25(ariable)]TJ
+/TT8 1 Tf
+10.8225 0 TD
+0 Tw
+(x)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0629 Tw
+[(\))-312.9(e)0(n)-312.9(cualquier sitio de la)]TJ
+-33.2435 -1.2 TD
+0 Tw
+(línea de comandos. Fíjate en esto:)Tj
+/TT8 1 Tf
+8 0 0 8 133 588 Tm
+(unix$ p=pwd)Tj
+0 -1.5 TD
+(unix$ $p)Tj
+T*
+(/home/nemo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 522 Tm
+(Pero, si intentamos utilizar este truco para ejecutar ")Tj
+/TT8 1 Tf
+20.8726 0 TD
+(ls -l)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(")-250(nos lle)25(v)25(amos una sorpresa...)]TJ
+/TT8 1 Tf
+8 0 0 8 133 504 Tm
+(unix$ l=ls -l)Tj
+0 -1.5 TD
+(sh: -l: command not found)Tj
+/TT6 1 Tf
+10 0 0 10 72 462 Tm
+0.0881 Tw
+(Necesitamos escribir)Tj
+/TT4 1 Tf
+8.7841 0 TD
+[(una sóla palabr)15(a)]TJ
+/TT6 1 Tf
+7.3333 0 TD
+(tras el operador ")Tj
+/TT8 1 Tf
+7.1417 0 TD
+0 Tw
+(=)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.088 Tw
+(". Esta es la sintaxis del shell para de)Tj
+/TT9 1 Tf
+15.4691 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.088 Tw
+[(nir v)25(ari-)]TJ
+-39.8845 -1.2 TD
+0 Tw
+(ables. Como hay un espacio entre ")Tj
+/TT8 1 Tf
+14.0986 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.25 Tc
+("y")Tj
+/TT8 1 Tf
+1.8164 0 TD
+0 Tc
+(-l)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(", el shell ha intentado ejecutar ")Tj
+/TT8 1 Tf
+13.0059 0 TD
+(-l)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(")-250(como uno comando.)]TJ
+-32.5215 -2.4 TD
+(¿Y si probamos...?)Tj
+/TT8 1 Tf
+8 0 0 8 133 408 Tm
+(unix$ l=ls-l)Tj
+0 -1.5 TD
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 378 Tm
+(¡Ha funcionado!, ¿O no?)Tj
+/TT8 1 Tf
+8 0 0 8 133 360 Tm
+(unix$ $l)Tj
+T*
+(sh: ls-l: command not found)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 318 Tm
+0.0486 Tw
+[(¿Comprendes lo que ha sucedido? Se)15(guro que sí, y)65(,)-298.7(si)-298.7(no)-298.7(es)-298.7(así, piensa... ¿Cuál es el nombre del comando)]TJ
+0 -1.2 TD
+0 Tw
+(que has ejecutado?)Tj
+0 -2.4 TD
+0.0081 Tw
+[(La solución a nuestro problema es utilizar sintaxis de shell para indicarle que cierto te)15(xto que escribimos en)]TJ
+0 -1.2 TD
+0 Tw
+[(la línea de comandos ha de entenderse como una sóla palabra. V)111(eámoslo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 252 Tm
+(unix$ l=’ls -l’)Tj
+0 -1.5 TD
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 222 Tm
+[(Y)-250(ahora podemos...)]TJ
+/TT8 1 Tf
+8 0 0 8 133 204 Tm
+(unix$ $l)Tj
+T*
+(total 240)Tj
+T*
+[(drwxr-xr-x )-1200(2)-600(nemo )-600(staff)-1800(1156 Jul 25 12:36 zxbib)]TJ
+T*
+[(drwxr-xr-x )-1200(5)-600(nemo )-600(staff)-1800(1734 Jul 25 13:01 zxdoc)]TJ
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 126 Tm
+0.1764 Tw
+[(V)111(amos a utilizar nuestro programa)]TJ
+/TT8 1 Tf
+14.9053 0 TD
+0 Tw
+(eco2)Tj
+/TT6 1 Tf
+2.8268 0 TD
+0.1764 Tw
+[(para v)15(er qué ar)18(gumentos pasa el shell cuando utilizamos las)]TJ
+-17.7321 -1.2 TD
+0 Tw
+(comillas.)Tj
+/TT8 1 Tf
+8 0 0 8 133 96 Tm
+(unix$ eco2 -v ’ls -l’ ls -l)Tj
+0 -1.5 TD
+([ls -l] [ls] [-l])Tj
+/TT6 1 Tf
+10 0 0 10 72 66 Tm
+0.0988 Tw
+[(Lo escrito entre comillas simples está en un sólo string en el v)15(ector)]TJ
+/TT8 1 Tf
+28.3455 0 TD
+0 Tw
+(argv)Tj
+/TT6 1 Tf
+2.7491 0 TD
+(de)Tj
+/TT8 1 Tf
+1.2925 0 TD
+(eco2)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0987 Tw
+[(.)-348.7(Esto es, el shell ha)]TJ
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 2334
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+0.0638 Tw
+[(tomado literalmente lo que hay entre comillas simples como una sóla palabra. Y)100(a)-313.8(lo)-313.9(sabías si recuerdas el)]TJ
+0 -1.2 TD
+0 Tw
+(primer tema de este curso.)Tj
+0 -2.4 TD
+0.0023 Tw
+[(T)80(ambién podemos utilizar comillas dobles para hacer que el shell tome su contenido como una sóla palabra.)]TJ
+0 -1.2 TD
+0.1068 Tw
+[(La diferencia entre estas y las simples radica en que el shell, en el caso de las comillas dobles, e)15(xpande)]TJ
+T*
+0 Tw
+[(v)25(ariables de entorno dentro de ellas. Por ejemplo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 630 Tm
+(unix$ cmd=ls)Tj
+0 -1.5 TD
+(unix$ arg=-l)Tj
+T*
+(unix$ line="$cmd $arg")Tj
+T*
+(unix$ $line)Tj
+T*
+(total 240)Tj
+T*
+[(drwxr-xr-x )-1200(2)-600(nemo )-600(staff)-1800(1156 Jul 25 12:36 zxbib)]TJ
+T*
+[(drwxr-xr-x )-1200(5)-600(nemo )-600(staff)-1800(1734 Jul 25 13:01 zxdoc)]TJ
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 516 Tm
+(En cambio...)Tj
+/TT8 1 Tf
+8 0 0 8 133 498 Tm
+(unix$ cmd=ls)Tj
+T*
+(unix$ arg=-l)Tj
+T*
+(unix$ line=’$cmd $arg’)Tj
+T*
+(unix$ $line)Tj
+T*
+(sh: $cmd: command not found)Tj
+T*
+(unix$ echo $line)Tj
+T*
+($cmd $arg)Tj
+/TT6 1 Tf
+10 0 0 10 72 396 Tm
+0.0351 Tw
+[(En un programa en C podemos consultar v)25(ariables de entorno llamando a)]TJ
+/TT4 1 Tf
+29.9986 0 TD
+0 Tw
+[(g)10(eten)40(v\(3\))]TJ
+/TT6 1 Tf
+3.7254 0 TD
+0.035 Tw
+[(.)-285(Por ejemplo, este pro-)]TJ
+-33.724 -1.2 TD
+0.0532 Tw
+(grama cambia su directorio actual al directorio casa e imprime el path de dicho directorio antes de contin-)Tj
+T*
+0 Tw
+(uar con su trabajo.)Tj
+/TT8 1 Tf
+8 0 0 8 133 354 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(char *home;)Tj
+0 -3 TD
+(home = getenv\("HOME"\);)Tj
+0 -1.5 TD
+(if \(home == NULL\){)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "we are homeless\\n"\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(chdir\(home\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "can’t cd to home"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("working at home: %s\\n", home\);)Tj
+0 -3 TD
+(// ... do some other things...)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 72 Tm
+(Si lo tenemos compilado en)Tj
+/TT8 1 Tf
+11.3594 0 TD
+(env)Tj
+/TT6 1 Tf
+2.0503 0 TD
+[(y)-250(l)0(o)-250(ejecutamos, podemos v)15(er lo que hace...)]TJ
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 3501
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ env)Tj
+0 -1.5 TD
+(working at home: /home/nemo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 654 Tm
+0.0252 Tw
+[(Si la v)25(ariable no está de)]TJ
+/TT9 1 Tf
+9.6256 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nida,)Tj
+/TT8 1 Tf
+2.2469 0 TD
+(getenv)Tj
+/TT6 1 Tf
+3.8758 0 TD
+[(de)25(vuelv)15(e)]TJ
+/TT8 1 Tf
+3.8446 0 TD
+(NULL)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0252 Tw
+[(.)-275.2(Esto no es un error)40(,)-275.2(y)]TJ
+/TT8 1 Tf
+9.4401 0 TD
+0 Tw
+(errno)Tj
+/TT6 1 Tf
+3.2757 0 TD
+0.0252 Tw
+(no se actualizará en)Tj
+-35.2652 -1.2 TD
+0.0331 Tw
+[(tal caso. Simplemente la v)25(ariable puede no estar de)]TJ
+/TT9 1 Tf
+20.7046 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0332 Tw
+(nida. O dicho de otro modo... puede que ningún string)Tj
+-21.2607 -1.2 TD
+0.0127 Tw
+[(en tu v)15(ector de v)25(ariables de entorno comience por ")]TJ
+/TT8 1 Tf
+20.6685 0 TD
+0 Tw
+(HOME=)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0127 Tw
+[(")-262.7(\(aunque no es lo que uno espera en UNIX para)]TJ
+-23.669 -1.2 TD
+0 Tw
+[(la v)25(ariable)]TJ
+/TT8 1 Tf
+4.4169 0 TD
+(HOME)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(\).)Tj
+-6.8173 -2.4 TD
+(¿Qué haría el programa si lo cambiamos para que ejecute)Tj
+/TT8 1 Tf
+8 0 0 8 133 576 Tm
+(home = getenv\("$HOME"\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 558 Tm
+-0.0001 Tc
+0.0283 Tw
+[(en lugar de hacer que hacía antes? ¡Pruébalo! ¿Puedes v)14.9(er por qué?)-528.4(¿Cómo se llama la v)24.9(ariable? Recuerda)]TJ
+0 -1.2 TD
+0 Tc
+0.0177 Tw
+(que ")Tj
+/TT8 1 Tf
+2.1198 0 TD
+0 Tw
+($HOME)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0177 Tw
+[(")-267.7(e)0(s)-267.7(sintaxis del shell. ¿Ejecuta el shell en algún caso cuando tu programa en C ejecuta la línea)]TJ
+-5.1202 -1.2 TD
+0 Tw
+[(anterior? ¡Desde lue)15(go que no!)]TJ
+0 -2.4 TD
+(¿Y qué haría si lo cambiamos para que utilice)Tj
+/TT8 1 Tf
+8 0 0 8 133 492 Tm
+(if \(chdir\("$HOME"\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "can’t cd to home"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 450 Tm
+[(o)-250(para que utilice)]TJ
+/TT8 1 Tf
+8 0 0 8 133 432 Tm
+(if \(chdir\("HOME"\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "can’t cd to home"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 390 Tm
+-0.0001 Tc
+0.0001 Tw
+(en lugar de lo que teníamos antes?)Tj
+0 -2.4 TD
+0 Tc
+0.0231 Tw
+[(P)15(ara de)]TJ
+/TT9 1 Tf
+2.9788 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0231 Tw
+[(nir una v)25(ariable de entorno en el proceso en que ejecutamos un programa en C podemos utilizar la)]TJ
+-3.535 -1.2 TD
+0 Tw
+(función)Tj
+/TT4 1 Tf
+3.3383 0 TD
+[(puten)40(v\(3\))]TJ
+/TT6 1 Tf
+4.0751 0 TD
+(o)Tj
+/TT4 1 Tf
+0.7836 0 TD
+[(seten)40(v\(3\))]TJ
+/TT6 1 Tf
+3.6245 0 TD
+0.0335 Tw
+[(.)-283.6(Ambas están descritas en)]TJ
+/TT4 1 Tf
+10.9977 0 TD
+0 Tw
+[(g)10(eten)40(v\(3\))]TJ
+/TT6 1 Tf
+3.7254 0 TD
+0.0335 Tw
+[(,)-283.5(así que si has se)15(guido con la b)20(uena cos-)]TJ
+-26.5447 -1.2 TD
+0.0465 Tw
+[(tumbre de leer la página de manual de cada llamada la primera v)15(ez que la usas, ya las conoces. Esto es un)]TJ
+T*
+0 Tw
+(ejemplo en cualquier caso:)Tj
+/TT8 1 Tf
+8 0 0 8 133 312 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(char *temp;)Tj
+0 -3 TD
+(putenv\("tempdir=/tmp"\);)Tj
+0 -1.5 TD
+(temp = getenv\("tempdir"\);)Tj
+T*
+(if \(temp == NULL\){)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "no temp dir\\n"\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("temp dir is: %s\\n", temp\);)Tj
+0 -3 TD
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 90 Tm
+[(Y)-250(esta es su ejecución:)]TJ
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 3319
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ penv)Tj
+0 -1.5 TD
+(temp dir is: /tmp)Tj
+/TT6 1 Tf
+10 0 0 10 72 666 Tm
+0.0095 Tw
+[(Naturalmente, sería absurdo utilizar la v)25(ariable de entorno)]TJ
+/TT8 1 Tf
+23.5696 0 TD
+0 Tw
+(tempdir)Tj
+/TT6 1 Tf
+4.4602 0 TD
+0.0095 Tw
+(como lo hemos hecho si no pensamos)Tj
+-28.0298 -1.2 TD
+0.1667 Tw
+[(ejecutar nue)25(v)20(o)0(s)-416.7(procesos desde nuestro programa en C. Si tan sólo queremos de)]TJ
+/TT9 1 Tf
+33.9188 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1667 Tw
+[(nir una v)25(ariable para)]TJ
+-34.4749 -1.2 TD
+0 Tw
+[(guardar el path de un directorio temporal, C ya tiene v)25(ariables.)]TJ
+0 -2.4 TD
+[(Hasta ahora todo bien. Pero... ¿Puedes e)15(xplicar esto?)]TJ
+/TT8 1 Tf
+8 0 0 8 133 600 Tm
+(unix$ penv)Tj
+0 -1.5 TD
+(temp dir is: /tmp)Tj
+T*
+(unix$ echo $tempdir)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 534 Tm
+0.1041 Tw
+(Resulta que tras ejecutar nuestro programa en C que de)Tj
+/TT9 1 Tf
+23.0121 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.104 Tw
+[(ne una v)25(ariable de entorno, ¡el shell no la tiene)]TJ
+-23.5682 -1.2 TD
+0 Tw
+(de)Tj
+/TT9 1 Tf
+0.9438 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0722 Tw
+[(nida! Pero esto es normal. Piensa que la v)25(ariable la de)]TJ
+/TT9 1 Tf
+22.2734 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0723 Tw
+(ne el proceso que ejecuta el programa en C, y)Tj
+-24.3295 -1.2 TD
+0 Tw
+[(que el shell es otro proceso. Cada proceso tiene sus propias v)25(ariables de entorno. ¿Lo v)15(es normal ahora?)]TJ
+0 -2.4 TD
+0.0378 Tw
+(Cuando no entiendas algo, piensa que no hay magia y piensa en qué programas intervienen en lo que estás)Tj
+0 -1.2 TD
+0.0709 Tw
+[(haciendo y qué hace cada uno paso a paso. Si sigues sin poder e)15(xplicar el resultado es que te estás perdi-)]TJ
+T*
+0.0011 Tw
+(endo algo respecto a lo que hace cada programa. Recurre al manual y haz programas de prueba que intenten)Tj
+T*
+0 Tw
+[(e)15(xplicar tus hipótesis respecto a qué está pasando.)]TJ
+0 -2.4 TD
+(En relación con esto, resulta interesante mirar lo que sucede en este otro caso:)Tj
+/TT8 1 Tf
+8 0 0 8 133 408 Tm
+(unix$ x=foo)Tj
+0 -1.5 TD
+(unix$ echo $x)Tj
+T*
+(foo)Tj
+T*
+(unix$ sh)Tj
+T*
+(unix$ echo $x)Tj
+0 -3 TD
+(unix$ exit)Tj
+0 -1.5 TD
+(unix$ echo $x)Tj
+T*
+(foo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 282 Tm
+0.0406 Tw
+(Hemos ejecutado un shell \(ejecutando el comando)Tj
+/TT8 1 Tf
+20.6383 0 TD
+0 Tw
+(sh)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0407 Tw
+[(\))-290.7(y)-290.7(dicho shell no tiene de)]TJ
+/TT9 1 Tf
+10.5748 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0407 Tw
+[(nida la v)25(ariable)]TJ
+/TT8 1 Tf
+6.5107 0 TD
+0 Tw
+(x)Tj
+/TT6 1 Tf
+0.8908 0 TD
+(\()Tj
+/TT8 1 Tf
+0.333 0 TD
+($x)Tj
+/TT6 1 Tf
+1.4909 0 TD
+(no)Tj
+-42.1948 -1.2 TD
+0.0755 Tw
+(tiene nada\). Cuando terminamos dicho shell con)Tj
+/TT8 1 Tf
+20.0788 0 TD
+0 Tw
+(exit)Tj
+/TT6 1 Tf
+2.7259 0 TD
+0.0754 Tw
+[(v)20(olv)15(emos al shell original y ahí si que tenemos la)]TJ
+-22.8047 -1.2 TD
+0 Tw
+[(v)25(ariable de entorno de)]TJ
+/TT9 1 Tf
+8.8876 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nida.)Tj
+-9.4438 -2.4 TD
+0.0406 Tw
+[(Es como si las v)25(ariables que de)]TJ
+/TT9 1 Tf
+12.7154 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0407 Tw
+(nes fuesen locales al shell y los comandos que ejecutamos desde ese shell)Tj
+-13.2715 -1.2 TD
+0 Tw
+[(ya no las tienen. V)111(amos a comprobarlo con un programa en C:)]TJ
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 2107
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(char *x;)Tj
+0 -3 TD
+[(x)-600(=)-600(getenv\("x"\);)]TJ
+0 -1.5 TD
+(if \(x == NULL\){)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "no x\\n"\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("%s\\n", x\);)Tj
+0 -3 TD
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 498 Tm
+(Si lo compilamos y dejamos el ejecutable en)Tj
+/TT8 1 Tf
+18.0508 0 TD
+(penvx)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(podemos v)15(er lo que sucede:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 480 Tm
+(unix$ x=foo)Tj
+0 -1.5 TD
+(unix$ penvx)Tj
+T*
+(no x)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 414 Tm
+0.0596 Tw
+[(Efecti)25(v)25(amente, el shell no ha pedido a UNIX que ejecute)]TJ
+/TT8 1 Tf
+23.5646 0 TD
+0 Tw
+(penvx)Tj
+/TT6 1 Tf
+3.3101 0 TD
+0.0596 Tw
+[(con la v)25(ariable)]TJ
+/TT8 1 Tf
+6.2895 0 TD
+0 Tw
+(x)Tj
+/TT6 1 Tf
+0.9097 0 TD
+(de)Tj
+/TT9 1 Tf
+0.9438 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0596 Tw
+(nida en el entorno.)Tj
+-35.5739 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(Pero hay formas de hacer que lo haga:)Tj
+/TT8 1 Tf
+8 0 0 8 133 384 Tm
+0 Tc
+0 Tw
+(unix$ export x)Tj
+0 -1.5 TD
+(unix$ penvx)Tj
+T*
+(foo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 318 Tm
+0.0904 Tw
+(El comando)Tj
+/TT8 1 Tf
+5.235 0 TD
+0 Tw
+(export)Tj
+/TT6 1 Tf
+3.941 0 TD
+0.0905 Tw
+(es un comando construido dentro del shell. Es una)Tj
+/TT4 1 Tf
+21.1436 0 TD
+0 Tw
+(primitiva)Tj
+/TT6 1 Tf
+4.007 0 TD
+(o)Tj
+/TT4 1 Tf
+0.8405 0 TD
+[(b)20(uiltin)]TJ
+/TT6 1 Tf
+2.9318 0 TD
+0.0905 Tw
+(del shell. Su)Tj
+-38.0989 -1.2 TD
+0.045 Tw
+(propósito es indicarle al shell que)Tj
+/TT4 1 Tf
+13.9331 0 TD
+0 Tw
+[(e)20(xporte)]TJ
+/TT6 1 Tf
+3.2735 0 TD
+0.0449 Tw
+[(una o más v)25(ariables de entorno a los procesos que ejecute dicho)]TJ
+-17.2066 -1.2 TD
+0 Tw
+[(shell para ejecutar nue)25(v)20(o)0(s)-250(comandos.)]TJ
+0 -2.4 TD
+[(Ho)10(y)-250(día suele ser habitual hacer ambas cosas a la v)15(ez:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 252 Tm
+(unix$ export x=foo)Tj
+0 -1.5 TD
+(unix$ penvx)Tj
+T*
+(foo)Tj
+T*
+(unix$)Tj
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+30 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 722 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 0 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 26 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 0 0 0 
+0 500 0 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 0 444 0 500 500 278 0 0 278 722 500 500 
+500 0 389 389 278 500 444 0 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 27 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 0 500 500 500 500 500 0 0 0 278 0 0 0 0 444 
+0 722 0 667 722 611 556 0 722 333 0 0 611 0 722 722 
+556 722 667 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 28 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 0 600 600 600 600 0 0 600 600 600 0 600 600 600 600 
+600 600 600 600 600 600 600 600 0 0 600 600 600 600 600 0 
+0 0 0 0 0 600 0 0 600 0 600 0 600 600 600 600 
+0 0 0 0 0 600 0 0 0 0 0 600 600 600 0 0 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 29 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 30 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+31 0 obj
+<<
+/S /D
+>>
+endobj
+32 0 obj
+<<
+/Nums [0 31 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R]
+/Count 6
+/MediaBox [0 0 612 792]
+>>
+endobj
+33 0 obj
+<<
+/CreationDate (D:20160905151710+02'00')
+/ModDate (D:20160905151710+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+34 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 32 0 R
+>>
+endobj
+xref
+0 35
+0000000000 65535 f 
+0000023889 00000 n 
+0000000016 00000 n 
+0000004364 00000 n 
+0000021141 00000 n 
+0000021793 00000 n 
+0000022451 00000 n 
+0000023196 00000 n 
+0000023719 00000 n 
+0000020014 00000 n 
+0000024458 00000 n 
+0000023970 00000 n 
+0000004503 00000 n 
+0000007918 00000 n 
+0000024054 00000 n 
+0000008047 00000 n 
+0000010434 00000 n 
+0000024138 00000 n 
+0000010552 00000 n 
+0000014106 00000 n 
+0000024222 00000 n 
+0000014235 00000 n 
+0000017607 00000 n 
+0000024306 00000 n 
+0000017725 00000 n 
+0000019885 00000 n 
+0000020154 00000 n 
+0000020356 00000 n 
+0000020556 00000 n 
+0000020753 00000 n 
+0000020944 00000 n 
+0000024390 00000 n 
+0000024418 00000 n 
+0000024575 00000 n 
+0000024698 00000 n 
+trailer
+<<
+/Size 35
+/Root 34 0 R
+/Info 33 0 R
+/ID [<f99d66c19e4f624780b7c9659ef348f2><f99d66c19e4f624780b7c9659ef348f2>]
+>>
+startxref
+24768
+%%EOF

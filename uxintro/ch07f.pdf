@@ -1,0 +1,1123 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3801
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 158.01 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Concurr)18(encia)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Semáf)25(or)18(os)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.104 Tw
+(Quizá la abstracción más conocida para sincronizar procesos en programación concurrente y controlar el)Tj
+0 -1.2 TD
+0.0423 Tw
+(acceso a los recursos sean los)Tj
+/TT2 1 Tf
+12.3051 0 TD
+0 Tw
+[(semáf)25(or)18(os)]TJ
+/TT6 1 Tf
+4.289 0 TD
+0.0423 Tw
+[(.)-292.3(U)0(n)-292.3(semáforo es en realidad un contador que indica cuántos)]TJ
+/TT4 1 Tf
+24.8457 0 TD
+0 Tw
+[(tic)20(k-)]TJ
+-41.4398 -1.2 TD
+(ets)Tj
+/TT6 1 Tf
+1.5156 0 TD
+0.1547 Tw
+(tenemos disponibles para acceder a determinado recurso. No son muy diferentes de un contador de)Tj
+-1.5156 -1.2 TD
+0.1733 Tw
+(entradas para acceder al cine. Si no hay entradas, no se puede entrar al cine. Del mismo modo, si un)Tj
+T*
+0 Tw
+(semáforo está a)Tj
+/TT8 1 Tf
+6.4692 0 TD
+(0)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(,)-250(n)0(o)-250(s)0(e)-250(puede acceder al recurso de que se trate.)]TJ
+-7.0693 -2.4 TD
+(La parte interesante del semáforo es que dispone de dos operaciones:)Tj
+/TT8 1 Tf
+8 0 0 8 133 467.4 Tm
+(down\(sem\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 449.4 Tm
+(y)Tj
+/TT8 1 Tf
+8 0 0 8 133 431.4 Tm
+(up\(sem\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 413.4 Tm
+[(que \(respecti)25(v)25(amente\) adquieren un)]TJ
+/TT4 1 Tf
+14.4988 0 TD
+[(tic)20(k)10(e)0(t)]TJ
+/TT6 1 Tf
+2.385 0 TD
+[(y)-250(l)0(o)-250(liberan.)]TJ
+-14.3839 -1.56 TD
+[(•)-2150(L)0(a)-399.4(primera,)]TJ
+/TT8 1 Tf
+7.713 0 TD
+(down)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1494 Tw
+[(,)-399.4(toma un tick)10(et del semáforo \(cuyo v)25(alor se decrementa\) cuando e)15(xisten)]TJ
+-7.6133 -1.2 TD
+0.1482 Tw
+[(tick)10(ets \(el v)25(alor es positi)25(v)20(o\). De no haber tick)10(ets disponibles \(cuando el semáforo es cero\),)]TJ
+/TT8 1 Tf
+T*
+0 Tw
+(down)Tj
+/TT4 1 Tf
+2.6504 0 TD
+[(esper)15(a)]TJ
+/TT6 1 Tf
+2.901 0 TD
+[(a)-250(que e)15(xistan tick)10(ets libres y entonces toma uno.)]TJ
+-8.0514 -1.56 TD
+[(•)-2150(L)0(a)-444.8(llamada)]TJ
+/TT8 1 Tf
+7.6094 0 TD
+(up)Tj
+/TT6 1 Tf
+1.6449 0 TD
+0.1947 Tw
+[(simplemente libera un tick)10(et. Si alguien estaba esperando en un)]TJ
+/TT8 1 Tf
+27.5679 0 TD
+0 Tw
+(down)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.4447 Tc
+[(,l)444.7(o)]TJ
+-36.7226 -1.2 TD
+0 Tc
+0.0971 Tw
+[(adquiere y continúa.)-597.1(Si nadie estaba esperando en un)]TJ
+/TT8 1 Tf
+22.5052 0 TD
+0 Tw
+(down)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0972 Tw
+[(,)-347.1(e)0(l)-347.2(tick)10(et queda en el semáforo,)]TJ
+-24.9056 -1.2 TD
+0 Tw
+(que pasa a incrementarse.)Tj
+-5 -2.4 TD
+0.0313 Tw
+[(A)-281.4(l)0(a)-281.4(abstracción se la denomina semáforo puesto que su in)40(v)15(entor pensó en semáforos ferro)15(viarios que con-)]TJ
+0 -1.2 TD
+0 Tw
+(trolan el acceso a las vías. Por cierto que en muchas implementaciones se utilizan los nombres)Tj
+/TT8 1 Tf
+8 0 0 8 133 280.2 Tm
+(P\(sem\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 262.2 Tm
+(y)Tj
+/TT8 1 Tf
+8 0 0 8 133 244.2 Tm
+(V\(sem\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 226.2 Tm
+-0.0005 Tc
+0.0005 Tw
+(en lugar de)Tj
+/TT8 1 Tf
+4.6874 0 TD
+0 Tc
+0 Tw
+(down)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(y)Tj
+/TT8 1 Tf
+0.75 0 TD
+(up)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(,)-250(y)-250(e)0(n)-250(otras implementaciones se utiliza)]TJ
+/TT8 1 Tf
+8 0 0 8 133 208.2 Tm
+(wait\(sem\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 190.2 Tm
+(y)Tj
+/TT8 1 Tf
+8 0 0 8 133 172.2 Tm
+(signal\(sem\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 154.2 Tm
+-0.0002 Tc
+0.0002 Tw
+[(en su lugar)54.8(.)-250.2(Nosotros usaremos)]TJ
+/TT8 1 Tf
+12.7159 0 TD
+0 Tc
+0 Tw
+(down)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(y)Tj
+/TT8 1 Tf
+0.75 0 TD
+(up)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(para e)25(vitar confusiones con otras operaciones.)]TJ
+-17.5665 -2.4 TD
+[(Dado un semáforo, podemos implementar un mute)15(x)-250(utilizando código como)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+11 0 obj
+<<
+/Length 2230
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(Sem sem = 1;)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(down\(sem\);)Tj
+T*
+(...región crítica...)Tj
+T*
+(up\(sem\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 642 Tm
+0.2071 Tw
+[(Puesto que sólo hay un tick)10(et en el semáforo, sólo un proceso puede adquirirlo, con lo que tenemos)]TJ
+0 -1.2 TD
+0 Tw
+[(e)15(xclusión mutua.)]TJ
+/TT2 1 Tf
+0 -3.6 TD
+[(2. )-250(Semáf)25(or)18(os en UNIX)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1285 Tw
+[(Existen di)25(v)15(ersas implementaciones de semáforos en UNIX. Normalmente tienes disponible una denomi-)]TJ
+0 -1.2 TD
+0 Tw
+(nada)Tj
+/TT4 1 Tf
+2.1377 0 TD
+[(posix semaphor)37(es)]TJ
+/TT6 1 Tf
+7.1012 0 TD
+[(,)-250(que puedes combinar con los threads de la librería de)]TJ
+/TT4 1 Tf
+21.9922 0 TD
+[(pthr)37(ead\(3\))]TJ
+/TT6 1 Tf
+4.2399 0 TD
+(.)Tj
+-35.4709 -2.4 TD
+0.0226 Tw
+[(Así pues... ¡Cuidado! Es posible que si usas determinado tipo de semáforos estos sólo e)15(xistan en tu sistema)]TJ
+0 -1.2 TD
+0.0313 Tw
+[(y)-281.3(n)0(o)-281.3(e)0(n)-281.3(otros UNIX. Por ejemplo, Linux dispone de semáforos con nombre y sin nombre, pero OS X sum-)]TJ
+T*
+0.0581 Tw
+(inistra semáforos con nombre y no dispone del otro tipo de semáforos. Nosotros usaremos sólo semáforos)Tj
+T*
+0 Tw
+[(con nombre que tenemos disponibles en gran parte de los sistemas UNIX ho)10(y)-250(e)0(n)-250(día.)]TJ
+0 -2.4 TD
+[(V)111(eamos el siguiente programa:)]TJ
+/TT10 1 Tf
+6.1 -1.8 TD
+([semcnt.c])Tj
+/TT6 1 Tf
+6.001 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 452.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <pthread.h>)Tj
+T*
+(#include <semaphore.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include <string.h>)Tj
+0 -3 TD
+(static int cnt;)Tj
+0 -1.5 TD
+(static sem_t *sem;)Tj
+0 -3 TD
+(enum { Nloops = 10 };)Tj
+0 -1.5 TD
+(static int nloops = Nloops;)Tj
+0 -4.5 TD
+(static void*)Tj
+0 -1.5 TD
+(tmain\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+0 -3 TD
+(for\(i = 0; i < nloops; i++\) {)Tj
+2.4 -1.5 TD
+(if \(sem_wait\(sem\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "down"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(cnt++;)Tj
+T*
+(if \(sem_post\(sem\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "up"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+12 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT10 13 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 2732
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int i;)Tj
+T*
+(pthread_t thr[3];)Tj
+T*
+(void *sts;)Tj
+T*
+(char name[1024];)Tj
+0 -3 TD
+(if\(argc > 1\) {)Tj
+2.4 -1.5 TD
+(nloops = atoi\(argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(snprintf\(name, sizeof name, "/sem.%s.%d", argv[0], getpid\(\)\);)Tj
+T*
+(sem = sem_open\(name, O_CREAT, 0644, 1\);)Tj
+T*
+(if \(sem == NULL\) {)Tj
+2.4 -1.5 TD
+(err\(1, "sem creat"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("sem ’%s’ created\\n", name\);)Tj
+T*
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(if\(pthread_create\(thr+i, NULL, tmain, &cnt\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(for\(i = 0; i < 3; i++\) {)Tj
+2.4 -1.5 TD
+(pthread_join\(thr[i], &sts\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(sem_close\(sem\) < 0\) {)Tj
+2.4 -1.5 TD
+(warn\("sem close"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(sem_unlink\(name\);)Tj
+0 -3 TD
+(printf\("cnt is %d\\n", cnt\);)Tj
+0 -1.5 TD
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 294 Tm
+0.0313 Tw
+[(Se trata una v)15(ez más de nuestro programa para incrementar un contador en tres threads el número indicado)]TJ
+0 -1.2 TD
+0 Tw
+[(de v)15(eces, y podemos comprobar que funciona sin condiciones de carrera:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 264 Tm
+(unix$ semcnt 10000)Tj
+0 -1.5 TD
+(sem ’/sem.semcnt.49029’ created)Tj
+T*
+(cnt is 30000)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 198 Tm
+0.1934 Tw
+(Lo primero que hemos de tener en cuenta es que estos semáforos)Tj
+/TT4 1 Tf
+28.5342 0 TD
+[(tienen nombr)37(e)]TJ
+/TT6 1 Tf
+6.3483 0 TD
+0.1935 Tw
+[(y)-443.4(e)15(xisten como una)]TJ
+-34.8825 -1.2 TD
+0.2818 Tw
+[(abstracción que suministra el k)10(ernel. UNIX mantendrá un record dentro con la implementación del)]TJ
+T*
+0 Tw
+(semáforo. Eso quiere decir que hemos de destruirlo cuando no sean útil.)Tj
+0 -2.4 TD
+0.0962 Tw
+(Puesto que tienen nombre, hemos de tener cuidado de no utilizar nombres que usen otros programas. En)Tj
+0 -1.2 TD
+0.0035 Tw
+(nuestro caso optamos por construir un nombre a partir de ")Tj
+/TT8 1 Tf
+23.5482 0 TD
+0 Tw
+(sem)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0035 Tw
+[(")-253.5(\(el nombre de nuestra v)25(ariable\),)]TJ
+/TT8 1 Tf
+13.6483 0 TD
+0 Tw
+(argv[0])Tj
+/TT6 1 Tf
+-38.9968 -1.2 TD
+(\(el nombre de nuestro programa\) y)Tj
+/TT8 1 Tf
+14.1616 0 TD
+(getpid\(\))Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(.)-250(Por ejemplo,)]TJ
+/TT8 1 Tf
+8 0 0 8 133 108 Tm
+(/sem.semcnt.49029)Tj
+/TT6 1 Tf
+10 0 0 10 72 90 Tm
+0.105 Tw
+[(es el nombre del semáforo que hemos creado en la ejecución anterior)55(.)-605.1(Haciéndolo así, es imposible que)]TJ
+0 -1.2 TD
+0 Tw
+(colisionemos con otros nombres de semáforo de nuestro programa o de otros.)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 4503
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+(El semáforo lo ha creado la llamada)Tj
+/TT8 1 Tf
+8 0 0 8 133 690 Tm
+(sem = sem_open\(name, O_CREAT, 0644, 1\);)Tj
+0 -1.5 TD
+(if \(sem == NULL\) {)Tj
+2.4 -1.5 TD
+(err\(1, "sem creat"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 636 Tm
+0.0719 Tw
+(que es similar a)Tj
+/TT4 1 Tf
+6.7856 0 TD
+0 Tw
+(open\(2\))Tj
+/TT6 1 Tf
+3.4318 0 TD
+0.0719 Tw
+(cuando se usa para crear )Tj
+/TT11 1 Tf
+10.3815 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0719 Tw
+[(chero. Esta v)15(ez creamos un semáforo y no un )]TJ
+/TT11 1 Tf
+19.0144 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-40.7256 -1.2 TD
+0.101 Tw
+[(T)35(ras los permisos se indica)]TJ
+/TT4 1 Tf
+11.5511 0 TD
+[(qué númer)45(o)-351(d)0(e)-351.1(tic)20(k)10(ets)]TJ
+/TT6 1 Tf
+9.3263 0 TD
+(queremos inicialmente en el semáforo. En este caso)Tj
+/TT8 1 Tf
+21.7175 0 TD
+0 Tw
+(1)Tj
+/TT6 1 Tf
+-42.5948 -1.2 TD
+[(dado que es un mute)15(x.)]TJ
+0 -2.4 TD
+(Cuando todo termine, necesitamos cerrar y destruir el semáforo utilizando)Tj
+/TT8 1 Tf
+8 0 0 8 133 570 Tm
+(if \(sem_close\(sem\) < 0\) {)Tj
+2.4 -1.5 TD
+(warn\("sem close"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(sem_unlink\(name\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 504 Tm
+0.0021 Tw
+[(Una v)15(ez creado, podemos compartir el semáforo con otros procesos que no compartan memoria. Basta abrir)]TJ
+0 -1.2 TD
+0 Tw
+(el semáforo en ellos utilizando)Tj
+/TT8 1 Tf
+8 0 0 8 133 474 Tm
+(sem = sem_open\(semname, 0\);)Tj
+0 -1.5 TD
+(if \(sem == NULL\) {)Tj
+2.4 -1.5 TD
+(// no existe!)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 420 Tm
+0.0236 Tw
+(después de haberlo creado. No obstante, es mejor utilizar en ellos la misma llamada que usamos en nuestro)Tj
+0 -1.2 TD
+0 Tw
+(programa, indicando)Tj
+/TT8 1 Tf
+8.5249 0 TD
+(O_CREAT)Tj
+/TT6 1 Tf
+4.4507 0 TD
+[(para que el semáforo se cree si no e)15(xiste.)]TJ
+/TT2 1 Tf
+-12.9756 -3.6 TD
+[(3. )-250(¿Y)-250(si algo falla?)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0376 Tw
+[(Un problema con este tipo de semáforos es que siguen e)15(xistiendo hasta que se llame a)]TJ
+/TT8 1 Tf
+35.1876 0 TD
+0 Tw
+(sem_unlink)Tj
+/TT6 1 Tf
+6.2885 0 TD
+(para)Tj
+-41.4761 -1.2 TD
+0.0303 Tw
+[(borrarlos. Si nuestro programa f)10(alla, el semáforo se)15(guirá e)15(xistiendo en el k)10(ernel hasta que rearranquemos o)]TJ
+T*
+0.0184 Tw
+(detengamos el sistema. Lamentablemente, no disponemos de comando alguno para listar los semáforos que)Tj
+T*
+0 Tw
+[(e)15(xisten y es posible que dejemos semáforos perdidos si nuestro programa f)10(alla.)]TJ
+0 -2.4 TD
+0.0614 Tw
+[(Un remedio paliati)25(v)20(o)20( )-20(es)-311.4(usar como nombre del semáforo uno que no incluya el)]TJ
+/TT4 1 Tf
+32.6398 0 TD
+0 Tw
+(pid)Tj
+/TT6 1 Tf
+1.5893 0 TD
+0.0615 Tw
+(del proceso y tan sólo)Tj
+-34.2292 -1.2 TD
+0.1481 Tw
+(use el nombre de nuestra aplicación y escribir un programa que borre el semáforo \(o borrarlo antes de)Tj
+T*
+0 Tw
+(crearlo por si habíamos dejado alguno en ejecuciones anteriores.)Tj
+0 -2.4 TD
+[(Otro problema importante es que si un proceso muere mientras tiene un tick)10(et el tick)10(et se pierde.)]TJ
+T*
+0.0088 Tw
+[(En conclusión, si se desea un mute)15(x)-258.8(e)0(s)-258.8(mucho mejor utilizar un cierre en un )]TJ
+/TT11 1 Tf
+30.7191 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0088 Tw
+(chero si hemos de sincronizar)Tj
+-31.2752 -1.2 TD
+0 Tw
+(procesos distintos que no forman parte del mismo programa.)Tj
+0 -2.4 TD
+0.0029 Tw
+(Este problema afecta a muchos otros semáforos y abstracciones disponibles en UNIX. Presta atención a qué)Tj
+0 -1.2 TD
+0.0536 Tw
+[(hace el sistema ante una muere prematura de un proceso que tiene un mute)15(x. Lo deseable es que el mute)15(x)]TJ
+T*
+0.1054 Tw
+(se libere, pero posiblemente no suceda tal cosa. Los cierres en )Tj
+/TT11 1 Tf
+26.2331 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1054 Tw
+(cheros con)Tj
+/TT8 1 Tf
+4.7645 0 TD
+0 Tw
+(flock)Tj
+/TT6 1 Tf
+3.3559 0 TD
+0.1054 Tw
+(si que se comportan)Tj
+-34.9097 -1.2 TD
+0.1302 Tw
+[(correctamente y es por ello que son populares a la hora de conse)15(guir un mute)15(x)-380.2(para compartir recursos)]TJ
+T*
+0 Tw
+(entre procesos totalmente distintos.)Tj
+0 -2.4 TD
+0.0506 Tw
+[(Cuando los procesos forman parte del mismo programa basta con que los mute)15(x)-300.6(que creamos se liberen si)]TJ
+0 -1.2 TD
+0.0776 Tw
+[(el programa muere. Si uno de los procesos del programa muere prematuramente, esto se debe a un b)20(ug y)]TJ
+T*
+0.0724 Tw
+(dado que es el mismo programa no afecta a otras aplicaciones, por lo que no es un problema en realidad:)Tj
+T*
+0 Tw
+(habrá que depurar el error y listo.)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT11 20 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+22 0 obj
+<<
+/Length 70
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+ET
+endstream
+endobj
+23 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+8 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 500 0 0 0 0 0 0 333 0 0 0 0 500 
+0 0 0 722 0 0 0 0 0 389 0 0 0 0 722 778 
+0 0 0 556 0 722 0 0 722 722 0 0 0 0 0 0 
+0 500 0 444 556 444 333 500 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 500 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 24 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 0 0 
+0 0 500 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 0 500 278 0 444 278 722 500 500 
+500 500 389 389 278 500 0 0 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 25 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 0 500 500 500 500 0 0 0 0 278 0 0 0 0 0 
+0 722 667 667 722 611 0 0 722 333 0 0 611 0 722 722 
+556 722 0 556 611 722 722 0 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 26 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 0 600 600 
+600 600 600 600 600 0 600 0 0 600 0 600 600 600 600 0 
+0 600 0 600 0 600 0 0 0 0 0 0 600 0 600 600 
+600 0 600 600 600 600 600 0 0 0 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 0 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 0 
+0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 27 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 116
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 0 0 600 0 600 0 0 0 0 0 0 0 600 
+600 0 0 0 0 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 28 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 29 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+10 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 12 0 R
+/Contents 11 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 23 0 R
+/Contents 22 0 R
+>>
+endobj
+30 0 obj
+<<
+/S /D
+>>
+endobj
+31 0 obj
+<<
+/Nums [0 30 0 R ]
+>>
+endobj
+9 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 10 0 R 14 0 R 17 0 R 21 0 R]
+/Count 5
+/MediaBox [0 0 612 792]
+>>
+endobj
+32 0 obj
+<<
+/CreationDate (D:20160905151720+02'00')
+/ModDate (D:20160905151720+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+33 0 obj
+<<
+/Type /Catalog
+/Pages 9 0 R
+/PageLabels 31 0 R
+>>
+endobj
+xref
+0 34
+0000000000 65535 f 
+0000018894 00000 n 
+0000000016 00000 n 
+0000003869 00000 n 
+0000015569 00000 n 
+0000016239 00000 n 
+0000016917 00000 n 
+0000017656 00000 n 
+0000014240 00000 n 
+0000019374 00000 n 
+0000018974 00000 n 
+0000003997 00000 n 
+0000006280 00000 n 
+0000018393 00000 n 
+0000019057 00000 n 
+0000006422 00000 n 
+0000009207 00000 n 
+0000019140 00000 n 
+0000009325 00000 n 
+0000013881 00000 n 
+0000018723 00000 n 
+0000019223 00000 n 
+0000014023 00000 n 
+0000014144 00000 n 
+0000014380 00000 n 
+0000014582 00000 n 
+0000014782 00000 n 
+0000014979 00000 n 
+0000015170 00000 n 
+0000015372 00000 n 
+0000019306 00000 n 
+0000019334 00000 n 
+0000019483 00000 n 
+0000019606 00000 n 
+trailer
+<<
+/Size 34
+/Root 33 0 R
+/Info 32 0 R
+/ID [<e2a51d2294e60b5bd59879a44f59c86a><e2a51d2294e60b5bd59879a44f59c86a>]
+>>
+startxref
+19675
+%%EOF

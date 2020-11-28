@@ -1,0 +1,1181 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3046
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.012 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Pr)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+[(1. )-250(Cuando)-250(las cosas se tuer)18(cen...)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0253 Tw
+[(De v)15(ez en cuando un proceso ejecutará un programa que tendrá un error y no hará lo que esperamos o hará)]TJ
+0 -1.2 TD
+0.0345 Tw
+[(algo demasiado gra)20(v)15(e)15( )-15(que casuse que UNIX lo mate \(por ejemplo, accediendo a una dirección de memoria)]TJ
+T*
+0.0896 Tw
+[(a)-339.7(l)0(a)-339.7(que no tiene permiso para acceder por estar fuera de un se)15(gmento o por ser una escritura de un se)15(g-)]TJ
+T*
+0 Tw
+(mento de sólo lectura\).)Tj
+0 -2.4 TD
+0.0237 Tw
+(En la mayoría de los errores, incluir algún)Tj
+/TT8 1 Tf
+17.2672 0 TD
+0 Tw
+(printf)Tj
+/TT6 1 Tf
+3.8743 0 TD
+0.0237 Tw
+[(para depurar tras pensar en qué puede estar f)10(allando es)]TJ
+-21.1415 -1.2 TD
+0.0401 Tw
+[(la mejor herramienta. En otros casos, necesitaremos ayuda para v)15(er qué sucede.)-540.1(P)15(ara eso podemos utilizar)]TJ
+T*
+-0.0001 Tc
+0.0367 Tw
+[(un depurador)54.9(.)-286.7(Cuando un programa hace algo que cause que UNIX lo mate, UNIX permite que se haga)-286.8(u)-0.1(n)]TJ
+T*
+0 Tc
+0.0247 Tw
+[(v)20(olcado del estado de la memoria del proceso a un )]TJ
+/TT9 1 Tf
+20.664 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0246 Tw
+[(chero \(y del v)25(alor de los re)15(gistros en el momento de la)]TJ
+-21.2202 -1.2 TD
+0.1653 Tw
+(muerte\). Dicho )Tj
+/TT9 1 Tf
+6.6338 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1653 Tw
+(chero suele llamarse)Tj
+/TT8 1 Tf
+8.9085 0 TD
+0 Tw
+(core)Tj
+/TT6 1 Tf
+2.8157 0 TD
+0.1653 Tw
+[(dado que es un v)20(olcado de la memoria y)65(,)-415.3(cuando se hizo)]TJ
+-18.9142 -1.2 TD
+0.0135 Tw
+[(UNIX, la memoria podía ser de núcleos \(o "cores"\) de ferrita!\).)-513.5(Se)15(gún una de las personas que hizo UNIX,)]TJ
+T*
+0 Tw
+[(¡las cosas empezaron a ir mal cuando los bits dejaron de v)15(erse a simple vista!)]TJ
+0 -2.4 TD
+[(V)111(amos a hacer un programa que se comporte mal.)]TJ
+/TT8 1 Tf
+8 0 0 8 133 383.4 Tm
+(#include <stdlib.h>)Tj
+0 -3 TD
+(static void)Tj
+0 -1.5 TD
+(clearstr\(char *p\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(p[0] = 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(char *p;)Tj
+0 -3 TD
+[(p)-600(=)-600(NULL;)]TJ
+T*
+(clearstr\(p\);)Tj
+0 -1.5 TD
+(// ... do other things here...)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 149.4 Tm
+[(Y)-250(v)25(amos a ejecutarlo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 131.4 Tm
+(unix$ bad)Tj
+T*
+(Segmentation fault: 11)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 77.4 Tm
+0.0124 Tw
+[(El programa ha intentado utilizar una dirección de memoria que no tiene y la causado una violación de se)15(g-)]TJ
+0 -1.2 TD
+0.025 Tw
+[(mento. Cuando pasa esto, el hardw)10(are el)]TJ
+16.3011 0 TD
+-0.025 Tc
+0 Tw
+(eva )Tj
+1.6127 0 TD
+0 Tc
+0.025 Tw
+[(una e)15(xcepción al intentar traducir la dirección de memoria y el)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 3599
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.0033 Tw
+[(manejador de la e)15(xcepción \(el k)10(ernel\) v)15(e)-253.4(que el proceso no debería hacer eso. Como resultado, el k)10(ernel ter)20(-)]TJ
+0 -1.2 TD
+0.1466 Tw
+(mina la ejecución del proceso. En nuestro caso, el shell se ha dado cuenta de lo que ha sucedido y ha)Tj
+T*
+0 Tw
+(impreso un mensaje para informar de ello.)Tj
+0 -2.4 TD
+0.1443 Tw
+[(P)15(ara conse)15(guir un)]TJ
+/TT8 1 Tf
+7.8175 0 TD
+0 Tw
+(core)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1443 Tw
+[(,)-394.3(hemos de cambiar uno de los límites que tiene el proceso. Concretamente, el)]TJ
+-10.2178 -1.2 TD
+0.0302 Tw
+(límite que indica el tamaño máximo de)Tj
+/TT8 1 Tf
+16.0678 0 TD
+0 Tw
+(core)Tj
+/TT6 1 Tf
+2.6806 0 TD
+0.0301 Tw
+[(que queremos obtener)55(.)-280.2(Una v)15(ez más, los límites son también)]TJ
+-18.7484 -1.2 TD
+0.0343 Tw
+[(atrib)20(utos del proceso. Desde C puedes usar)]TJ
+/TT4 1 Tf
+17.66 0 TD
+0 Tw
+(setrlimit\(2\))Tj
+/TT6 1 Tf
+4.7838 0 TD
+0.0343 Tw
+(para cambiar un límite y)Tj
+/TT4 1 Tf
+10.1955 0 TD
+0 Tw
+[(g)10(etrlimit\(2\))]TJ
+/TT6 1 Tf
+4.8848 0 TD
+0.0344 Tw
+(para consultar)Tj
+-37.5241 -1.2 TD
+0 Tw
+[(el v)25(alor actual. Desde el shell podemos v)15(er los límites que tenemos con el comando)]TJ
+/TT4 1 Tf
+33.6172 0 TD
+(ulimit\(1\))Tj
+/TT6 1 Tf
+3.4995 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 606 Tm
+(unix$ ulimit -a)Tj
+0 -1.5 TD
+[(core file size)-6000(\(blocks, -c\) 0)]TJ
+T*
+[(data seg size)-6600(\(kbytes, -d\) unlimited)]TJ
+T*
+[(file size)-9000(\(blocks, -f\) unlimited)]TJ
+T*
+[(max locked memory)-4200(\(kbytes, -l\) unlimited)]TJ
+T*
+[(max memory size)-5400(\(kbytes, -m\) unlimited)]TJ
+T*
+[(open files)-13200(\(-n\) 256)]TJ
+T*
+[(pipe size)-7200(\(512 bytes, -p\) 1)]TJ
+T*
+[(stack size)-8400(\(kbytes, -s\) 8192)]TJ
+T*
+[(cpu time)-9000(\(seconds, -t\) unlimited)]TJ
+T*
+[(max user processes)-8400(\(-u\) 709)]TJ
+T*
+[(virtual memory)-6000(\(kbytes, -v\) unlimited)]TJ
+/TT6 1 Tf
+10 0 0 10 72 444 Tm
+[(Y)-250(cambiar el tamaño máximo de core como sigue:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 426 Tm
+(unix$ ulimit -c unlimited)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 396 Tm
+[(Ahora podemos ejecutar nuestro programa roto una v)15(ez más:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 378 Tm
+(unix$ bad)Tj
+T*
+(Segmentation fault: 11 \(core dumped\))Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 324 Tm
+-0.0002 Tc
+0.0942 Tw
+(El lugar en que UNIX guarda los )Tj
+/TT9 1 Tf
+14.1213 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+/TT8 1 Tf
+2.9539 0 TD
+(core)Tj
+/TT6 1 Tf
+2.7444 0 TD
+0.0939 Tw
+[(v)25(aría de un UNIX a otro. Hace tiempo era el directorio)]TJ
+-20.3757 -1.2 TD
+0.0306 Tw
+[(actual del proceso que muere. Ho)10(y)-280.6(día depende mucho del tipo de UNIX. Por ejemplo, en MacOS \(OS X\),)]TJ
+T*
+0 Tw
+(el manual dice...)Tj
+/TT8 1 Tf
+8 0 0 8 133 282 Tm
+[(CORE\(5\) )-12000(BSD)-600(File Formats Manual)-12000(CORE\(5\))]TJ
+0 -3 TD
+(NAME)Tj
+3 -1.5 TD
+(core -- memory image file format)Tj
+-3 -3 TD
+(SYNOPSIS)Tj
+3 -1.5 TD
+(#include <sys/param.h>)Tj
+-3 -3 TD
+(DESCRIPTION)Tj
+3 -1.5 TD
+[(A)-600(small number of signals which cause abnormal termination of a process)]TJ
+T*
+(also cause a record of the process’s in-core state to be written to disk)Tj
+T*
+[(for later examination by one of the available debuggers.)-1200(\(See)]TJ
+T*
+[(sigaction\(2\).\) )-600(This)-600(memory image is written to a file named by default)]TJ
+T*
+(core.pid, where pid is the process ID of the process, in the /cores)Tj
+T*
+(directory, provided the terminated process had write permission in the)Tj
+T*
+(directory, and the directory existed.)Tj
+/TT6 1 Tf
+10 0 0 10 72 84 Tm
+(Así pues, en este sistema:)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 5507
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ ls -l /cores)Tj
+0 -1.5 TD
+(total 1234232)Tj
+T*
+0.6 Tw
+[(-r-------- 1)-600(nemo admin 631926784)-600(Aug )600(19 )600(15:25 )600(core.92367)]TJ
+/TT6 1 Tf
+10 0 0 10 72 666 Tm
+0 Tw
+(Donde)Tj
+/TT8 1 Tf
+2.916 0 TD
+(92367)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(era el)Tj
+/TT4 1 Tf
+2.4424 0 TD
+(pid)Tj
+/TT6 1 Tf
+1.5278 0 TD
+(del proceso que murió.)Tj
+-10.1367 -2.4 TD
+0.0771 Tw
+[(Podemos utilizar un depurador para v)15(er un v)20(olcado de la pila en el momento de la muerte. Esto suele ser)]TJ
+0 -1.2 TD
+0 Tw
+(mas que su)Tj
+/TT9 1 Tf
+4.4438 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(ciente para a)20(v)15(er)18(güar la causa del problema:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 612 Tm
+(unix$ lldb -c /cores/core.92367)Tj
+0 -1.5 TD
+(\(lldb\) target create --core "/cores/core.92433")Tj
+T*
+(Core file ’/cores/core.92433’ \(x86_64\) was loaded.)Tj
+T*
+(\(lldb\) bt)Tj
+T*
+[(*)-600(thread #1: tid = 0x0000, 0x0000000105a53f6c)]TJ
+2.4 -1.5 TD
+(bad‘clearstr\(p=0x0000000000000000\) + 12)Tj
+T*
+(at bad.c:10, stop reason = signal SIGSTOP)Tj
+-1.2 -1.5 TD
+[(*)-600(frame #0: 0x0000000105a53f6c)]TJ
+1.2 -1.5 TD
+(bad‘clearstr\(p=0x0000000000000000\) + 12)Tj
+T*
+(at bad.c:10)Tj
+T*
+(frame #1: 0x0000000105a53f57)Tj
+T*
+(bad‘main\(argc=1, argv=0x00007fff5a1acb20\) + 39)Tj
+T*
+(at bad.c:20)Tj
+T*
+(frame #2: 0x00007fff94ad65ad libdyld.dylib‘start + 1)Tj
+-2.4 -1.5 TD
+(\(lldb\) q)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 402 Tm
+0.0487 Tw
+(Hemos utilizado el depurador)Tj
+/TT4 1 Tf
+12.3022 0 TD
+0 Tw
+(lldb\(1\))Tj
+/TT6 1 Tf
+2.7217 0 TD
+0.0487 Tw
+[(,)-298.7(que tiene la opción)]TJ
+/TT8 1 Tf
+8.5741 0 TD
+0 Tw
+(-c)Tj
+/TT6 1 Tf
+1.4989 0 TD
+0.0488 Tw
+(para indicarle que queremos inspeccionar un)Tj
+/TT4 1 Tf
+-25.0969 -1.2 TD
+0 Tw
+[(cor)37(e)-378.1(dump)]TJ
+/TT6 1 Tf
+4.7182 0 TD
+(\(un )Tj
+/TT9 1 Tf
+1.7111 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT8 1 Tf
+2.5988 0 TD
+(core)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(\).)Tj
+/TT4 1 Tf
+1.2111 0 TD
+(LLdb)Tj
+/TT6 1 Tf
+2.4904 0 TD
+0.128 Tw
+[(es un shell en el que podemos escribir comandos para depurar)55(.)-378(E)0(l)]TJ
+-15.6862 -1.2 TD
+0 Tw
+(comando)Tj
+/TT4 1 Tf
+3.9155 0 TD
+(bt)Tj
+/TT6 1 Tf
+1.0278 0 TD
+[(imprime un v)20(olcado o)]TJ
+/TT4 1 Tf
+9.0337 0 TD
+[(bac)20(ktr)15(ace)]TJ
+/TT6 1 Tf
+4.1574 0 TD
+(de la pila. El comando)Tj
+/TT4 1 Tf
+9.2192 0 TD
+(q)Tj
+/TT6 1 Tf
+0.75 0 TD
+[(termina la ejecución del depurador)55(.)]TJ
+-28.1037 -2.4 TD
+0.059 Tw
+[(Como podrás v)15(e)0(r)40(,)-309(el)-309(program ha muerto en la función)]TJ
+/TT8 1 Tf
+22.2787 0 TD
+0 Tw
+(clearstr)Tj
+/TT6 1 Tf
+5.1098 0 TD
+0.059 Tw
+(del ejecutable)Tj
+/TT8 1 Tf
+5.8924 0 TD
+0 Tw
+(bad)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.059 Tw
+[(.)-559(Concretamente en)]TJ
+-35.0811 -1.2 TD
+0.0824 Tw
+(la línea 10. A dicha función la ha llamado)Tj
+/TT8 1 Tf
+17.7357 0 TD
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.7328 0 TD
+0.0824 Tw
+(en el ejecutable)Tj
+/TT8 1 Tf
+6.7155 0 TD
+0 Tw
+(bad)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0824 Tw
+[(,)-332.4(desde la línea 20 de)]TJ
+/TT8 1 Tf
+9.13 0 TD
+0 Tw
+(bad.c)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.3323 Tc
+(.Ya)Tj
+/TT8 1 Tf
+-41.1148 -1.2 TD
+0 Tc
+(main)Tj
+/TT6 1 Tf
+2.852 0 TD
+0.2016 Tw
+(lo ha llamado una función llamada)Tj
+/TT8 1 Tf
+15.3161 0 TD
+0 Tw
+(start)Tj
+/TT6 1 Tf
+3.4522 0 TD
+-0.0001 Tc
+0.2018 Tw
+[(dentro del car)17.9(gador de librerías dinámicas \(mira el)]TJ
+-21.6203 -1.2 TD
+0 Tc
+0 Tw
+(capítulo de introducción si no recuerdas lo que es una librería dinámica\).)Tj
+0 -2.4 TD
+(Pues bien, la línea 10 de)Tj
+/TT8 1 Tf
+9.9697 0 TD
+(bad.c)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(es:)Tj
+/TT8 1 Tf
+8 0 0 8 133 276 Tm
+(p[0] = 0;)Tj
+/TT6 1 Tf
+10 0 0 10 72 258 Tm
+0.0126 Tw
+[(Y)-262.6(podemos v)15(er que el ar)18(gumento de)]TJ
+/TT8 1 Tf
+14.8008 0 TD
+0 Tw
+(clearstr)Tj
+/TT6 1 Tf
+4.8008 0 TD
+(,)Tj
+/TT8 1 Tf
+0.5126 0 TD
+(p)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0126 Tw
+[(,)-262.6(tiene como v)25(alor)]TJ
+/TT8 1 Tf
+7.4951 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0126 Tw
+[(.)-262.6(Lue)15(go sucede que)]TJ
+/TT8 1 Tf
+8.0046 0 TD
+0 Tw
+(p)Tj
+/TT6 1 Tf
+0.8627 0 TD
+(es)Tj
+/TT8 1 Tf
+1.0956 0 TD
+(NULL)Tj
+/TT6 1 Tf
+2.663 0 TD
+0.2626 Tc
+[(yn)262.6(o)]TJ
+-41.4354 -1.2 TD
+0 Tc
+0.0136 Tw
+[(podemos atra)20(v)15(esar dicho puntero. Ese es el problema. Ahora habría que pensar en por qué ha sucedido y en)]TJ
+T*
+0 Tw
+[(qué deberíamos hacer para arre)15(glarlo.)]TJ
+0 -2.4 TD
+0.0141 Tw
+(Un detalle importante es que para que el depurador pueda saber qué )Tj
+/TT9 1 Tf
+27.5466 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0141 Tw
+(cheros fuente y líneas corresponden a)Tj
+-28.1028 -1.2 TD
+0.0497 Tw
+(cada contador de programa, hay que pedir al compilador que incluya información de depuración en el eje-)Tj
+T*
+0.0991 Tw
+(cutable \(que incluya una tabla con la correspondencia de nombre de )Tj
+/TT9 1 Tf
+28.4949 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0991 Tw
+(chero fuente y línea a contador de)Tj
+-29.051 -1.2 TD
+0.0429 Tw
+[(programa, y tal v)15(ez otra información como nombres de función y v)25(ariables\). Habitualmente, el )]TJ
+/TT9 1 Tf
+38.6864 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT8 1 Tf
+1.2368 0 TD
+(-g)Tj
+/TT6 1 Tf
+1.4932 0 TD
+(del)Tj
+-41.9726 -1.2 TD
+[(compilador de C consigue dicho efecto.)-500(Esto es, hemos compilado como sigue:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 144 Tm
+(unix$ cc -g -o bad bad.c)Tj
+/TT6 1 Tf
+10 0 0 10 72 114 Tm
+0.1453 Tw
+(Si no incluimos la información de depuración, el depurador no puede hacer magia. Podemos utilizar el)Tj
+T*
+0 Tw
+(comando)Tj
+/TT4 1 Tf
+3.9155 0 TD
+(strip\(1\))Tj
+/TT6 1 Tf
+3.25 0 TD
+[(que elimina la información de depuración de un ejecutable y v)15(er el resultado:)]TJ
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 2579
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ strip bad)Tj
+0 -1.5 TD
+(unix$ bad)Tj
+T*
+(Segmentation fault: 11 \(core dumped\))Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 654 Tm
+[(Y)-250(ahora...)]TJ
+/TT8 1 Tf
+8 0 0 8 133 636 Tm
+(unix$ ls /cores)Tj
+T*
+(core.92473)Tj
+T*
+(unix$ lldb -c /cores/core.92473)Tj
+T*
+(\(lldb\) target create --core "/cores/core.92473")Tj
+T*
+(Core file ’/cores/core.92473’ \(x86_64\) was loaded.)Tj
+T*
+(\(lldb\) bt)Tj
+T*
+[(*)-600(thread #1: tid = 0x0000, 0x00000001014c4f6c)]TJ
+2.4 -1.5 TD
+(bad‘clearstr + 12, stop reason = signal SIGSTOP)Tj
+-1.2 -1.5 TD
+[(*)-600(frame #0: 0x00000001014c4f6c)]TJ
+1.2 -1.5 TD
+(bad‘clearstr + 12)Tj
+T*
+(frame #1: 0x00000001014c4f57)Tj
+T*
+(bad‘main + 39)Tj
+T*
+(frame #2: 0x00007fff94ad65ad libdyld.dylib‘start + 1)Tj
+/TT6 1 Tf
+10 0 0 10 72 474 Tm
+0.1457 Tw
+[(Como v)15(erás, sólo podemos v)15(er el contador de programa en cada llamada re)15(gistrada en la pila \(en cada)]TJ
+/TT4 1 Tf
+0 -1.2 TD
+0 Tw
+[(r)37(e)40(gistr)45(o)-286.3(d)0(e)-286.3(activación)]TJ
+/TT6 1 Tf
+9.0128 0 TD
+0.0363 Tw
+(de la pila\). Concretamente, el programa murió en)Tj
+/TT8 1 Tf
+20.2268 0 TD
+(bad‘clearstr + 12)Tj
+/TT6 1 Tf
+10.2741 0 TD
+[(.)-286.2(Esto es,)]TJ
+-39.5137 -1.2 TD
+0.0466 Tw
+(12 posiciones más allá del comienzo de)Tj
+/TT8 1 Tf
+16.4048 0 TD
+0 Tw
+(clearstr)Tj
+/TT6 1 Tf
+5.0974 0 TD
+0.0466 Tw
+(en el )Tj
+/TT9 1 Tf
+2.2587 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0466 Tw
+(chero ejecutable)Tj
+/TT8 1 Tf
+6.8666 0 TD
+0 Tw
+(bad)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0467 Tw
+[(.)-546.7(Pero claro, no sabemos)]TJ
+-32.984 -1.2 TD
+0 Tw
+(ni el )Tj
+/TT9 1 Tf
+1.9995 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero fuente ni la línea.)Tj
+-2.5557 -2.4 TD
+(Lo más aconsejable es compilar siempre con)Tj
+/TT8 1 Tf
+18.1323 0 TD
+(-g)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(y)-250(dejar la información de depuración en los ejecutables.)]TJ
+-19.5825 -2.4 TD
+0.128 Tw
+(Otro depurador muy popular es)Tj
+/TT8 1 Tf
+13.4422 0 TD
+0 Tw
+(gdb)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.1279 Tw
+[(.)-378(L)0(o)-378(mejor es que utilizes el manual o)]TJ
+/TT4 1 Tf
+16.4247 0 TD
+0 Tw
+[(goo)10(gle)]TJ
+/TT6 1 Tf
+3.0896 0 TD
+0.1279 Tw
+[(para a)20(v)15(erigüar cómo)]TJ
+-34.7569 -1.2 TD
+0.1071 Tw
+[(obtener un v)20(olcado de pila de un )]TJ
+/TT9 1 Tf
+14.031 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT8 1 Tf
+2.5778 0 TD
+(core)Tj
+/TT6 1 Tf
+2.7575 0 TD
+0.1071 Tw
+[(con tu depurador)40(,)-357.1(y)-357.1(que localices el directorio en que tu)]TJ
+-19.9224 -1.2 TD
+0 Tw
+(UNIX deja los)Tj
+/TT4 1 Tf
+6.082 0 TD
+[(cor)37(e)-250(dumps)]TJ
+/TT6 1 Tf
+4.6012 0 TD
+(.)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+20 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+21 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+22 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 0 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 20 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 0 0 0 
+0 500 500 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 556 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 500 0 278 0 444 278 722 500 500 
+500 500 389 389 278 500 444 0 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 21 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 252
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+500 500 500 500 500 0 0 0 0 0 278 0 0 0 0 0 
+0 722 0 667 722 611 0 0 722 333 0 0 611 889 722 722 
+556 0 0 556 0 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 22 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 0 600 600 600 0 0 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 
+0 600 600 600 600 600 600 600 0 600 0 0 600 600 600 600 
+600 0 600 600 600 600 0 0 0 600 0 600 0 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 23 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 24 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+25 0 obj
+<<
+/S /D
+>>
+endobj
+26 0 obj
+<<
+/Nums [0 25 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R]
+/Count 4
+/MediaBox [0 0 612 792]
+>>
+endobj
+27 0 obj
+<<
+/CreationDate (D:20160905151711+02'00')
+/ModDate (D:20160905151711+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+28 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 26 0 R
+>>
+endobj
+xref
+0 29
+0000000000 65535 f 
+0000019397 00000 n 
+0000000016 00000 n 
+0000003114 00000 n 
+0000016611 00000 n 
+0000017261 00000 n 
+0000017925 00000 n 
+0000018672 00000 n 
+0000019223 00000 n 
+0000015484 00000 n 
+0000019798 00000 n 
+0000019478 00000 n 
+0000003253 00000 n 
+0000006905 00000 n 
+0000019562 00000 n 
+0000007034 00000 n 
+0000012594 00000 n 
+0000019646 00000 n 
+0000012723 00000 n 
+0000015355 00000 n 
+0000015624 00000 n 
+0000015826 00000 n 
+0000016026 00000 n 
+0000016223 00000 n 
+0000016414 00000 n 
+0000019730 00000 n 
+0000019758 00000 n 
+0000019901 00000 n 
+0000020024 00000 n 
+trailer
+<<
+/Size 29
+/Root 28 0 R
+/Info 27 0 R
+/ID [<5776df822efeaa4e0e923692d92f63f7><5776df822efeaa4e0e923692d92f63f7>]
+>>
+startxref
+20094
+%%EOF

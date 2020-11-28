@@ -1,0 +1,552 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3736
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 158.01 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Concurr)18(encia)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+(1. Deadlocks)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0932 Tw
+[(Rara v)15(ez necesitaremos un único cierre. O, dicho de otro modo, rara v)15(ez necesitaremos un único recurso)]TJ
+0 -1.2 TD
+0.0972 Tw
+[(compartido. Lo normal es compartir di)25(v)15(ersos recursos. En principio cada recurso puede utilizar un cierre)]TJ
+T*
+0.0575 Tw
+[(distinto y los procesos que necesitan acceder al recurso pueden adquirir su cierre durante la re)15(gión crítica.)]TJ
+T*
+0 Tw
+(Pero piensa lo que sucede si un proceso ejecuta)Tj
+/TT8 1 Tf
+8 0 0 8 133 503.4 Tm
+(lock\(a\);)Tj
+0 -1.5 TD
+(lock\(b\);)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 461.4 Tm
+[(y)-250(otro en cambio ejecuta)]TJ
+/TT8 1 Tf
+8 0 0 8 133 443.4 Tm
+(lock\(b\);)Tj
+T*
+(lock\(a\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 401.4 Tm
+0.0295 Tw
+(Si ejecutamos el primer)Tj
+/TT8 1 Tf
+9.8373 0 TD
+0 Tw
+(lock)Tj
+/TT6 1 Tf
+2.68 0 TD
+0.0296 Tw
+(de cada proceso, ninguno podrá continuar jamás. Cada uno tiene un cierre y)Tj
+-12.5173 -1.2 TD
+0.0427 Tw
+[(necesita el que tiene el otro. El efecto neto es que los procesos se quedan bloqueados de por vida y no ter)20(-)]TJ
+T*
+0.1931 Tw
+(minan. A esto lo denominamos)Tj
+/TT2 1 Tf
+13.6862 0 TD
+0 Tw
+(deadlock)Tj
+/TT6 1 Tf
+4.2771 0 TD
+(o)Tj
+/TT2 1 Tf
+0.9431 0 TD
+(interbloqueo)Tj
+/TT6 1 Tf
+5.4448 0 TD
+0.1932 Tw
+[(.)-443.1(¿Recuerdas qué sucedía si un proceso deja)]TJ
+-24.3512 -1.2 TD
+0 Tw
+[(abierto un descriptor de escritura en un pipe y se pone a leer del mismo? Efecti)25(v)25(amente, es un deadlock.)]TJ
+0 -2.4 TD
+0.0452 Tw
+[(En el caso de cierres, para e)25(vitar el problema suele bastar )]TJ
+/TT9 1 Tf
+23.6275 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0452 Tw
+(jar un)Tj
+/TT2 1 Tf
+2.645 0 TD
+0 Tw
+(orden)Tj
+/TT6 1 Tf
+2.7951 0 TD
+0.0451 Tw
+[(a)-295.1(l)0(a)-295.1(hora de adquirir los recursos.)]TJ
+-29.6237 -1.2 TD
+0.11 Tw
+(Si todos adquieren los cierres que necesitan siguiendo el orden acordado, no tenemos interbloqueos. Por)Tj
+T*
+0.0047 Tw
+(ejemplo, podemos acordar que el cierre de)Tj
+/TT8 1 Tf
+17.2473 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.8548 0 TD
+0.0047 Tw
+(ha de tomarse antes que el de)Tj
+/TT8 1 Tf
+12.0002 0 TD
+0 Tw
+(b)Tj
+/TT6 1 Tf
+0.8548 0 TD
+0.2547 Tc
+[(ye)254.7(ld)254.7(e)]TJ
+/TT8 1 Tf
+2.9296 0 TD
+0 Tc
+(b)Tj
+/TT6 1 Tf
+0.8548 0 TD
+0.0046 Tw
+(antes que el de)Tj
+/TT8 1 Tf
+6.1825 0 TD
+0 Tw
+(c)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.2546 Tc
+[(.D)254.6(e)]TJ
+-41.524 -1.2 TD
+0 Tc
+(ser así, podríamos tener código para un proceso que ejecute)Tj
+/TT8 1 Tf
+8 0 0 8 133 287.4 Tm
+(lock\(a\);)Tj
+0 -1.5 TD
+(lock\(c\);)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 245.4 Tm
+(otro que ejecute)Tj
+/TT8 1 Tf
+8 0 0 8 133 227.4 Tm
+(lock\(a\);)Tj
+T*
+(lock\(b\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 197.4 Tm
+[(y)-250(otro)]TJ
+/TT8 1 Tf
+8 0 0 8 133 179.4 Tm
+(lock\(b\);)Tj
+T*
+(lock\(c\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 149.4 Tm
+0.0613 Tw
+[(y)-311.2(e)0(n)-311.3(ningún caso tendríamos un bloqueo. Si alguien necesita un cierre nadie puede tenerlo y además estar)]TJ
+0 -1.2 TD
+0 Tw
+(esperando los que ya tenemos nosotros: no hay deadlocks.)Tj
+0 -2.4 TD
+0.0198 Tw
+(Esto puede resultar complicado y en ocasiones se opta por usar un único cierre para todos los recursos, a lo)Tj
+0 -1.2 TD
+0.0211 Tw
+(que se suele denominar)Tj
+/TT4 1 Tf
+9.6923 0 TD
+[(giant loc)20(k)]TJ
+/TT6 1 Tf
+4.2434 0 TD
+[(o)-271.1("cierre gordo". Pero naturalmente se limita la concurrencia y se reduce)]TJ
+-13.9357 -1.2 TD
+0.0491 Tw
+(el rendimiento. No obstante, hay menos posibilidades de tener condiciones de carrera por olvidar echar un)Tj
+T*
+0 Tw
+(cierre en el momento adecuado.)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 1273
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.03 Tw
+[(Hay v)15(eces en que se opta por dejar que suceda el deadlock y)65(,)-280(tras detectarlo o comprobar que estamos ante)]TJ
+0 -1.2 TD
+0.068 Tw
+[(un posible deadlock, soltar todos los cierres y v)20(olv)15(erlo a intentar)55(.)-318(Esto no es realmente una solución dado)]TJ
+T*
+0.0677 Tw
+[(que podríamos v)20(olv)15(er a caer en el interbloqueo una v)15(ez tras otra \(aunque no es 100% se)15(guro que siempre)]TJ
+T*
+0.0738 Tw
+(suceda tal cosa\). A este tipo de bloqueos \(que podrían romperse con cierta probabilidad\) se los denomina)Tj
+/TT2 1 Tf
+T*
+0 Tw
+[(li)10(v)10(elock)]TJ
+/TT6 1 Tf
+3.2573 0 TD
+(.)Tj
+-3.2573 -2.4 TD
+-0.0001 Tc
+0.1016 Tw
+[(Lo que es más, puede que algún proceso tenga)-351.6(mala suerte y)64.9(,)-351.6(si)-351.6(aplica esta estrate)14.9(gia, nunca consiga)-351.6(los)]TJ
+0 -1.2 TD
+0 Tc
+0.0585 Tw
+(cierres que necesita porque siempre gane otro proceso al obtener uno de los cierres que necesita. El pobre)Tj
+T*
+0 Tw
+[(proceso continuaría sin poder trabajar)40(,)-250(a)-250(l)0(o)-250(que se denomina)]TJ
+/TT2 1 Tf
+24.2569 0 TD
+[(star)10(v)10(ation)]TJ
+/TT6 1 Tf
+4.313 0 TD
+0.25 Tc
+(,o)Tj
+/TT2 1 Tf
+1.25 0 TD
+0 Tc
+(hambruna)Tj
+/TT6 1 Tf
+4.5015 0 TD
+(.)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+14 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+15 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+16 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+17 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+18 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 722 0 0 0 0 389 0 0 0 0 0 778 
+0 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 0 556 278 0 556 278 833 556 500 
+556 556 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 14 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 120
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 0 444 0 500 0 278 0 444 278 0 500 500 
+500 0 389 389 278 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 15 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 408 0 0 833 0 0 333 333 0 0 250 333 250 0 
+500 500 500 0 0 0 0 0 0 0 278 0 0 0 0 444 
+0 722 0 667 722 611 0 0 722 0 0 0 611 0 722 722 
+556 0 667 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 0 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 16 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 40
+/LastChar 111
+/Widths [600 600 0 0 0 0 600 0 0 0 0 0 0 0 0 0 
+0 0 0 600 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 600 600 600 0 0 0 0 
+0 0 0 600 600 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 17 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 18 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+19 0 obj
+<<
+/S /D
+>>
+endobj
+20 0 obj
+<<
+/Nums [0 19 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R]
+/Count 2
+/MediaBox [0 0 612 792]
+>>
+endobj
+21 0 obj
+<<
+/CreationDate (D:20160905151720+02'00')
+/ModDate (D:20160905151720+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+22 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 20 0 R
+>>
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000008768 00000 n 
+0000000016 00000 n 
+0000003804 00000 n 
+0000006503 00000 n 
+0000007161 00000 n 
+0000007547 00000 n 
+0000008270 00000 n 
+0000008598 00000 n 
+0000005376 00000 n 
+0000009001 00000 n 
+0000008849 00000 n 
+0000003943 00000 n 
+0000005269 00000 n 
+0000005516 00000 n 
+0000005718 00000 n 
+0000005918 00000 n 
+0000006115 00000 n 
+0000006306 00000 n 
+0000008933 00000 n 
+0000008961 00000 n 
+0000009090 00000 n 
+0000009213 00000 n 
+trailer
+<<
+/Size 23
+/Root 22 0 R
+/Info 21 0 R
+/ID [<028324d749186fe4ce9d5067801a9024><028324d749186fe4ce9d5067801a9024>]
+>>
+startxref
+9283
+%%EOF

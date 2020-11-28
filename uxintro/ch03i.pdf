@@ -1,0 +1,1591 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 2920
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.342 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Ficher)18(os)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Entrada/salida)-250(y)-250(b)20(uffering)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0375 Tw
+[(El interf)10(az proporcionado por)]TJ
+/TT8 1 Tf
+12.2464 0 TD
+0 Tw
+(open)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(,)Tj
+/TT8 1 Tf
+0.5375 0 TD
+(close)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT8 1 Tf
+0.5375 0 TD
+(read)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(,)Tj
+/TT8 1 Tf
+0.5374 0 TD
+(write)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0374 Tw
+[(,)-287.4(etc. es su)]TJ
+/TT9 1 Tf
+4.2499 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0374 Tw
+[(ciente la mayoría de las v)15(eces. Lo)]TJ
+-29.4666 -1.2 TD
+0.0607 Tw
+(que es más, en muchas ocasiones es el más adecuado. Por ejemplo,)Tj
+/TT4 1 Tf
+27.8037 0 TD
+0 Tw
+(cat\(1\))Tj
+/TT6 1 Tf
+2.6985 0 TD
+0.0608 Tw
+[(debería utilizar un b)20(u)0(f)25(fer cierto)]TJ
+-30.5022 -1.2 TD
+0.0431 Tw
+(tamaño \(8KiB, quizá\) y usar)Tj
+/TT8 1 Tf
+11.8234 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.6935 0 TD
+(y)Tj
+/TT8 1 Tf
+0.7931 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2936 0 TD
+0.0431 Tw
+(para hacer su trabajo. Es lo más simple y además lo más e)Tj
+/TT9 1 Tf
+23.7042 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(-)Tj
+-42.864 -1.2 TD
+[(ciente la mayoría de las v)15(eces.)]TJ
+0 -2.4 TD
+0.1057 Tw
+(No obstante, hay ocasiones en que deseamos leer carácter a carácter o línea a línea, o deseamos escribir)Tj
+0 -1.2 TD
+0.078 Tw
+(poco a poco la salida del programa o escribir con cierto formato. En estos casos es mucho más adecuado)Tj
+T*
+0.1045 Tw
+(utilizar la librería de C que las llamadas al sistema. Además, dicha librería suministra entrada/salida con)Tj
+T*
+0 Tw
+[(b)20(u)0(f)25(fering, lo que hace que el programa sea mucho mas e)]TJ
+/TT9 1 Tf
+22.5292 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ciente si leemos o escribimos poco a poco.)Tj
+-23.0854 -2.4 TD
+0.0088 Tw
+[(V)111(eamos un programa que copia un )]TJ
+/TT9 1 Tf
+14.1596 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0088 Tw
+[(chero en otro, pero byte a byte.)-508.8(Esta v)15(ersión utiliza las llamadas al sis-)]TJ
+-14.7157 -1.2 TD
+0 Tw
+(tema que hemos visto.)Tj
+/TT8 1 Tf
+8 0 0 8 108 407.4 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <fcntl.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int sfd, dfd, nr;)Tj
+T*
+(char buf[1];)Tj
+0 -3 TD
+(if\(argc != 3\) {)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "usage: %s src dst\\n", argv[0]\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(sfd = open\(argv[1], O_RDONLY\);)Tj
+0 -1.5 TD
+(if\(sfd < 0\){)Tj
+2.4 -1.5 TD
+(err\(1, "open: %s", argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(dfd = creat\(argv[2], 0664\);)Tj
+T*
+(if\(dfd < 0\){)Tj
+2.4 -1.5 TD
+(close\(sfd\);)Tj
+T*
+(err\(1, "creat: %s", argv[2]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 3608
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT8 1 Tf
+8 0 0 8 127.2 708 Tm
+(for\(;;\){)Tj
+2.4 -1.5 TD
+(nr = read\(sfd, buf, sizeof buf\);)Tj
+T*
+(if\(nr == 0\){)Tj
+2.4 -1.5 TD
+(break;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if\(nr < 0\){)Tj
+2.4 -1.5 TD
+(close\(sfd\);)Tj
+T*
+(close\(dfd\);)Tj
+T*
+(err\(1, "read: %s:", argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if\(write\(dfd, buf, nr\) != nr\){)Tj
+2.4 -1.5 TD
+(close\(sfd\);)Tj
+T*
+(close\(dfd\);)Tj
+T*
+(err\(1, "write: %s:", argv[2]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(sfd\);)Tj
+T*
+(if \(close\(dfd\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "close: %s:", argv[2]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 426 Tm
+0.0007 Tw
+(Podemos crear un )Tj
+/TT9 1 Tf
+7.4167 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0007 Tw
+(chero de 10MiB utilizando el comando)Tj
+/TT4 1 Tf
+15.8891 0 TD
+0 Tw
+(dd\(1\))Tj
+/TT6 1 Tf
+2.166 0 TD
+0.0008 Tw
+[(.)-250.8(Basta pedirle que copie 10240 bloques de)]TJ
+-26.0279 -1.2 TD
+0 Tw
+(1024 bytes desde)Tj
+/TT8 1 Tf
+7.1377 0 TD
+(/dev/zero)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(\(una fuente ilimitada de ceros\) hasta el )Tj
+/TT9 1 Tf
+15.7432 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero en cuestión:)Tj
+/TT8 1 Tf
+8 0 0 8 133 396 Tm
+(unix$ dd if=/dev/zero of=/tmp/10m bs=1024 count=10240)Tj
+0 -1.5 TD
+(10240+0 records in)Tj
+T*
+(10240+0 records out)Tj
+T*
+(10485760 bytes transferred in 0.028481 secs \(368166762 bytes/sec\))Tj
+T*
+(unix$ ls -l /tmp/10m)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo wheel 10485760)-600(Aug )600(21 )600(22:06 )600(/tmp/10m)]TJ
+/TT6 1 Tf
+10 0 0 10 72 318 Tm
+0.0711 Tw
+(Este comando se llama así por usarse hace tiempo para copiar)Tj
+/TT4 1 Tf
+25.7445 0 TD
+[(de)15(vice to de)15(vice)]TJ
+/TT6 1 Tf
+6.4965 0 TD
+[(,)-321.1(e)0(n)-321.1(los tiempos en que las)]TJ
+-32.241 -1.2 TD
+0 Tw
+(cintas magnéticas eran muy puntillosas respecto a qué tamaños de lectura y escritura admitían.)Tj
+0 -2.4 TD
+[(Ahora v)15(eamos cuánto tarda nuestro programa en copiar nuestro nue)25(v)20(o)20( )]TJ
+/TT9 1 Tf
+28.2632 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+/TT8 1 Tf
+8 0 0 8 133 264 Tm
+(unix$ time cp1 /tmp/10m /tmp/10mbis)Tj
+0 -1.5 TD
+1.8 Tw
+(real 0m16.850s)Tj
+T*
+(user 0m1.563s)Tj
+T*
+(sys 0m15.230s)Tj
+T*
+0 Tw
+(unix$ ls -l /tmp/10mbis)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo wheel 10485760)-600(Aug )600(21 )600(22:06 )600(/tmp/1mbis)]TJ
+/TT6 1 Tf
+10 0 0 10 72 186 Tm
+0.1008 Tw
+[(¡Un total de 16.8 se)15(gundos! ¡Un eón! Y para sólo 10MiB de datos. Esto quiere decir que copiar un sólo)]TJ
+0 -1.2 TD
+0 Tw
+[(MiB tardaría aproximadamente 1.68 se)15(gundos. Muchísimo tiempo para las máquinas de ho)10(y)-250(día.)]TJ
+0 -2.4 TD
+0.127 Tw
+(Por cierto, el comando)Tj
+/TT4 1 Tf
+9.8107 0 TD
+0 Tw
+(time\(1\))Tj
+/TT6 1 Tf
+3.2647 0 TD
+0.1269 Tw
+[(que hemos utilizado ejecuta la línea de ar)18(gumentos como un comando e)]TJ
+-13.0754 -1.2 TD
+0.1515 Tw
+[(imprime, como has podido v)15(e)0(r)40(,)-401.6(cuánto tiempo ha empleado dicho comando en total, cuánto ejecutando)]TJ
+T*
+0.0428 Tw
+[(código de usuario y cuánto ejecutado código del k)10(ernel en su f)10(a)20(v)20(o)0(r)55(.)55( )-55.1(Es)-292.8(una herramienta indispensable para)]TJ
+T*
+0 Tw
+[(v)15(e)0(r)-250(s)0(i)-250(cuándo haces un cambio en un programa has mejorado realmente las cosas o las has empeorado.)]TJ
+0 -2.4 TD
+0.1057 Tw
+[(V)111(eamos ahora el mismo programa, pero esta v)15(ez escrito on)]TJ
+/TT4 1 Tf
+24.8392 0 TD
+0 Tw
+(stdio)Tj
+/TT6 1 Tf
+1.9448 0 TD
+0.1057 Tw
+[(,)-355.7(l)0(a)-355.7(librería estándar de C con b)20(u)0(f)25(fering)]TJ
+-26.784 -1.2 TD
+0 Tw
+[(para entrada/salida. Igual que antes, v)25(amos a copiar byte a byte.)]TJ
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 3137
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(FILE *in, *out;)Tj
+T*
+(char buf[1];)Tj
+T*
+(size_t nr;)Tj
+0 -3 TD
+(if\(argc != 3\) {)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "usage: %s src dst\\n", argv[0]\);)Tj
+T*
+(exit\(1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(in = fopen\(argv[1], "r"\);)Tj
+0 -1.5 TD
+(if\(in == NULL\){)Tj
+2.4 -1.5 TD
+(err\(1, "%s", argv[1]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(out = fopen\(argv[2], "w"\);)Tj
+T*
+(if\(out == NULL\){)Tj
+2.4 -1.5 TD
+(err\(1, "%s", argv[2]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(for\(;;\){)Tj
+2.4 -1.5 TD
+(nr = fread\(buf, sizeof buf, 1, in\);)Tj
+T*
+(if\(nr == 0\){)Tj
+2.4 -1.5 TD
+(if\(ferror\(in\)\) {)Tj
+2.4 -1.5 TD
+(err\(1, "read"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(break;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if\(fwrite\(buf, nr, 1, out\) != nr\){)Tj
+2.4 -1.5 TD
+(err\(1, "write"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(fclose\(in\);)Tj
+T*
+(fclose\(out\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 186 Tm
+0.0077 Tw
+(En este caso, hemos utilizado)Tj
+/TT4 1 Tf
+12.0906 0 TD
+0 Tw
+(fopen\(3\))Tj
+/TT6 1 Tf
+3.6453 0 TD
+-0.0005 Tc
+0.0081 Tw
+(en lugar de)Tj
+/TT4 1 Tf
+4.7102 0 TD
+0 Tc
+0 Tw
+(open\(2\))Tj
+/TT6 1 Tf
+3.3675 0 TD
+0.0076 Tw
+(para obtener un ")Tj
+/TT8 1 Tf
+6.9002 0 TD
+0 Tw
+(FILE*)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0076 Tw
+(". Esta estructura repre-)Tj
+-33.7143 -1.2 TD
+0.056 Tw
+[(senta un b)20(u)0(f)25(fer \(quizá\) para operar en un descriptor de )]TJ
+/TT9 1 Tf
+22.5047 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.056 Tw
+(chero que la estructura mantiene internamente. Si)Tj
+-23.0609 -1.2 TD
+0 Tw
+(lees)Tj
+/TT4 1 Tf
+1.8284 0 TD
+(fopen\(3\))Tj
+/TT6 1 Tf
+3.6614 0 TD
+0.0236 Tw
+[(v)15(erás que hay llamadas para construir un)]TJ
+/TT8 1 Tf
+16.7273 0 TD
+0 Tw
+(FILE*)Tj
+/TT6 1 Tf
+3.2741 0 TD
+0.0236 Tw
+[(a)-273.6(partir de un descriptor de )]TJ
+/TT9 1 Tf
+11.1372 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0003 Tc
+0.0239 Tw
+(chero, en lugar)Tj
+-37.1846 -1.2 TD
+0 Tc
+0 Tw
+(de un path.)Tj
+0 -2.4 TD
+0.0215 Tw
+(En realidad ya conoces este tipo de datos. Anteriormente hemos utilizado)Tj
+/TT8 1 Tf
+29.8381 0 TD
+0 Tw
+(stderr)Tj
+/TT6 1 Tf
+3.8721 0 TD
+0.0215 Tw
+(para imprimir mensajes)Tj
+-33.7101 -1.2 TD
+0.0933 Tw
+(de error con)Tj
+/TT8 1 Tf
+5.3605 0 TD
+0 Tw
+(fprintf)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.0933 Tw
+[(.)-343.3(Pues bien,)]TJ
+/TT8 1 Tf
+5.1407 0 TD
+0 Tw
+(stderr)Tj
+/TT6 1 Tf
+3.9439 0 TD
+0.0933 Tw
+(es un)Tj
+/TT8 1 Tf
+2.5196 0 TD
+0 Tw
+(FILE*)Tj
+/TT6 1 Tf
+3.3438 0 TD
+0.0933 Tw
+(para el descriptor)Tj
+/TT8 1 Tf
+7.4708 0 TD
+0 Tw
+(2)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0933 Tw
+[(.)-343.3(¿Resulta claro ahora por)]TJ
+-32.5801 -1.2 TD
+0 Tw
+(qué utilizamos)Tj
+/TT8 1 Tf
+8 0 0 8 133 84 Tm
+(fprintf\(stderr, "usage: %s [-n]\\n", argv[0]\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 66 Tm
+0.0486 Tw
+(para informar del uso de un programa? Igualmente tienes)Tj
+/TT8 1 Tf
+23.5673 0 TD
+0 Tw
+(stdin)Tj
+/TT6 1 Tf
+3.2991 0 TD
+0.0486 Tw
+(para la entrada estándar y)Tj
+/TT8 1 Tf
+10.7094 0 TD
+0 Tw
+(stdout)Tj
+/TT6 1 Tf
+3.8993 0 TD
+(para)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 6471
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+[(la salida estándar)55(.)]TJ
+0 -2.4 TD
+0.0485 Tw
+(La función)Tj
+/TT8 1 Tf
+4.7064 0 TD
+0 Tw
+(printf\(...\))Tj
+/TT6 1 Tf
+6.8996 0 TD
+0.0485 Tw
+[(es equi)25(v)25(alente a)]TJ
+/TT8 1 Tf
+6.7312 0 TD
+0 Tw
+(fprintf\(stdout,...\))Tj
+/TT6 1 Tf
+11.4019 0 TD
+[(.)-298.4(L)0(a)-298.4(librería)]TJ
+/TT4 1 Tf
+5.0871 0 TD
+(stdio)Tj
+/TT6 1 Tf
+2.2432 0 TD
+0.0484 Tw
+(tiene funciones)Tj
+-37.0694 -1.2 TD
+0.0216 Tw
+(que comienzan por ")Tj
+/TT8 1 Tf
+8.3309 0 TD
+0 Tw
+(f)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0217 Tw
+[(")-271.7(y)-271.7(tienen nombres similares a funciones que ya conoces, como)]TJ
+/TT8 1 Tf
+25.8061 0 TD
+0 Tw
+(fopen)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT8 1 Tf
+0.5217 0 TD
+(fread)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-271.7(etc.)]TJ
+-41.2598 -1.2 TD
+(Naturalmente, operan sobre)Tj
+/TT8 1 Tf
+11.3286 0 TD
+(FILE*)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(y)-250(n)0(o)-250(sobre descriptores de )]TJ
+/TT9 1 Tf
+10.6914 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero: para eso están.)Tj
+-25.8267 -2.4 TD
+[(Pero v)20(olv)25(amos a nuestro e)15(xperimento. V)111(amos a v)15(er cuánto tarda este programa en hacer el mismo trabajo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 618 Tm
+(unix$ time 8.bcp2 /tmp/1m /tmp/1mbis)Tj
+0 -3 TD
+1.8 Tw
+(real 0m0.912s)Tj
+0 -1.5 TD
+(user 0m0.881s)Tj
+T*
+(sys 0m0.022s)Tj
+/TT6 1 Tf
+10 0 0 10 72 552 Tm
+0.0679 Tw
+[(Hemos tardado menos de un se)15(gundo. Bastante más rápido que antes. Y hay que decir que la máquina en)]TJ
+0 -1.2 TD
+0.0107 Tw
+[(que hemos hecho este e)15(xperimento posee un disco SSD que en realidad es memoria de estado sólido, por lo)]TJ
+T*
+0.0231 Tw
+[(que la diferencia de tiempos no es tanta como sería utilizando un disco duro magnético. ¡La última v)15(ez que)]TJ
+T*
+0.0026 Tw
+(probamos con discos magnéticos pudimos hacer el descanso de una clase mientras el primero de los progra-)Tj
+T*
+0 Tw
+(mas terminaba su trabajo!)Tj
+0 -2.4 TD
+0.0424 Tw
+[(¿Cómo ha podido tardar menos esta se)15(gunda v)15(ersión? La respuesta radica en que se utiliza un b)20(u)0(f)25(fer inter)20(-)]TJ
+0 -1.2 TD
+0.0309 Tw
+(medio dentro del)Tj
+/TT8 1 Tf
+7.1186 0 TD
+0 Tw
+(FILE*)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0309 Tw
+[(.)-280.9(L)0(a)-280.9(primera v)15(ez que se llama a)]TJ
+/TT8 1 Tf
+12.976 0 TD
+0 Tw
+(fread)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT4 1 Tf
+0.531 0 TD
+(stdio)Tj
+/TT6 1 Tf
+2.2258 0 TD
+0.031 Tw
+(lee una cantidad razonable de bytes)Tj
+-28.8523 -1.2 TD
+0.1628 Tw
+(con una llamada a)Tj
+/TT8 1 Tf
+8.1478 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1628 Tw
+[(.)-412.8(S)0(i)-412.8(s)0(e)-412.8(estaba le)15(yendo un sólo byte no importa, el resto ya están en el b)20(u)0(f)25(fer)]TJ
+-10.5482 -1.2 TD
+0.0253 Tw
+(esperando que los leas en el futuro. Las llamadas a procedimiento son mucho más rápidas que las llamadas)Tj
+T*
+0.0487 Tw
+[(al sistema, dado que éstas han de entrar y salir del k)10(ernel y dado que el k)10(ernel comprueba cada v)15(ez que lo)]TJ
+T*
+0 Tw
+[(llamas que todos tus ar)18(gumentos son correctos y que todo está en orden para hacer la llamada.)]TJ
+0 -2.4 TD
+0.0913 Tw
+(En las escrituras sucede lo mismo, cuando escribes con)Tj
+/TT8 1 Tf
+23.1485 0 TD
+0 Tw
+(fwrite)Tj
+/TT6 1 Tf
+3.942 0 TD
+0.0914 Tw
+(\(o con)Tj
+/TT8 1 Tf
+2.9597 0 TD
+0 Tw
+(fprintf)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.0914 Tw
+(\), los bytes se quedan)Tj
+-34.2508 -1.2 TD
+0.0801 Tw
+[(normalmente en el b)20(u)0(f)25(fer)55(.)-330.1(Sólo cuando el b)20(u)0(f)25(fer se llena o cierras el)]TJ
+/TT8 1 Tf
+28.3293 0 TD
+0 Tw
+(FILE*)Tj
+/TT6 1 Tf
+3.3305 0 TD
+0.08 Tw
+(se escriben los bytes con un)Tj
+/TT8 1 Tf
+-31.6598 -1.2 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0343 Tw
+[(.)-284.2(Eso quiere decir que aunque escribamos byte a byte, en realidad estamos haciendo muchos menos)]TJ
+/TT8 1 Tf
+-3.0005 -1.2 TD
+0 Tw
+(write)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(y)-250(estos escriben muchos bytes a la v)15(ez.)]TJ
+-3.2505 -2.4 TD
+0.1344 Tw
+[(Un detalle importante cuando se utiliza b)20(u)0(f)25(fering, es llamar a)]TJ
+/TT8 1 Tf
+26.0403 0 TD
+0 Tw
+(fclose)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.1344 Tw
+[(,)-384.4(dado que, si hemos escrito, los)]TJ
+-29.6409 -1.2 TD
+0.0783 Tw
+[(bytes pueden estar en el b)20(u)0(f)25(fer y no haberse escrito en absoluto en el )]TJ
+/TT9 1 Tf
+28.7631 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0783 Tw
+(chero. Por esta razón)Tj
+/TT8 1 Tf
+8.9486 0 TD
+0 Tw
+(stderr)Tj
+/TT6 1 Tf
+3.929 0 TD
+(no)Tj
+-42.1968 -1.2 TD
+[(utiliza b)20(u)0(f)25(fering en absoluto, para que los mensajes de error aparezcan inmediatamente en el terminal.)]TJ
+0 -2.4 TD
+(La función)Tj
+/TT8 1 Tf
+4.6094 0 TD
+(fflush)Tj
+/TT6 1 Tf
+3.8506 0 TD
+[(vuelca el b)20(u)0(f)25(fer de un)]TJ
+/TT8 1 Tf
+8.9228 0 TD
+(FILE*)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-250(por ejemplo,)]TJ
+/TT8 1 Tf
+8 0 0 8 133 270 Tm
+(if \(fflush\(out\) < 0\) {)Tj
+2.4 -1.5 TD
+(// el flush ha fallado \(fallo en write?\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 228 Tm
+0.1164 Tw
+[(escribe lo que pueda haber en el b)20(u)0(f)25(fer de)]TJ
+/TT8 1 Tf
+17.9665 0 TD
+0 Tw
+(out)Tj
+/TT6 1 Tf
+2.1667 0 TD
+0.1163 Tw
+(en el descriptor de )Tj
+/TT9 1 Tf
+8.0731 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1163 Tw
+(chero que hay bajo)Tj
+/TT8 1 Tf
+8.2953 0 TD
+0 Tw
+(out)Tj
+/TT6 1 Tf
+1.8003 0 TD
+[(.)-366.3(Sabiendo)]TJ
+-38.858 -1.2 TD
+0.0014 Tw
+(esto... ¿Cuánto crees que tardaría el programa si haces un)Tj
+/TT8 1 Tf
+23.1991 0 TD
+0 Tw
+(fflush)Tj
+/TT6 1 Tf
+3.8521 0 TD
+0.0015 Tw
+[(en cada iteración del b)20(ucle)]TJ
+/TT8 1 Tf
+10.8981 0 TD
+0 Tw
+(for)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.2515 Tc
+[(?¿)251.5(Yp)251.5(o)251.5(r)]TJ
+-39.7496 -1.2 TD
+0 Tc
+(qué crees tal cosa?)Tj
+0 -2.4 TD
+0.0531 Tw
+(Hay otras muchas funciones y utilidades en)Tj
+/TT4 1 Tf
+18.006 0 TD
+0 Tw
+(stdio\(3\))Tj
+/TT6 1 Tf
+3.4139 0 TD
+0.053 Tw
+(que deberías conocer para programar en C. Por ejem-)Tj
+-21.4199 -1.2 TD
+0.1209 Tw
+[(plo, un par de funciones para leer línea a línea entre otras. Pero nosotros v)25(amos a continuar e)15(xplorando)]TJ
+T*
+0 Tw
+(UNIX.)Tj
+/TT2 1 Tf
+0 -3.6 TD
+[(2. )-250(Buffering)-250(en el k)10(e)0(r)15(nel)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1133 Tw
+[(Hemos visto hace poco que los dispositi)25(v)20(o)0(s)-363.4(d)0(e)-363.4(modo bloque utilizan una cache de bloques en el k)10(ernel.)]TJ
+0 -1.2 TD
+0.0178 Tw
+(Esto implica que cuando escribes un )Tj
+/TT9 1 Tf
+14.9359 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0178 Tw
+(chero lo habitual es que tus datos aún no estén en el disco. Lo que es)Tj
+-15.4921 -1.2 TD
+0 Tw
+(más, incluso )Tj
+/TT9 1 Tf
+5.2495 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros que has creado o borrado podrían no haberse actualizado en el disco.)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 4698
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+0.0747 Tw
+(Dependiendo del tipo de sistema de )Tj
+/TT9 1 Tf
+14.9443 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0747 Tw
+(cheros que utilices, es posible que incluso si copias el disco en este)Tj
+-15.5004 -1.2 TD
+0.0914 Tw
+[(momento \(utilizando su dispositi)25(v)20(o)20( )-20(crudo o de modo carácter\) las estructuras de datos sean incoherentes.)]TJ
+T*
+-0.0001 Tc
+0.1436 Tw
+[(Por ejemplo, puede que un directorio contenga)-393.7(una entrada de directorio con un número de)]TJ
+/TT4 1 Tf
+38.7463 0 TD
+0 Tc
+0 Tw
+(i-nodo)Tj
+/TT6 1 Tf
+3.0043 0 TD
+(que)Tj
+-41.7507 -1.2 TD
+[(toda)20(vía aparece como libre en el disco.)]TJ
+0 -2.4 TD
+0.0338 Tw
+[(Una v)15(ez UNIX sincroniza su cache en disco, el sistema de )]TJ
+/TT9 1 Tf
+23.9047 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0339 Tw
+(cheros en el disco será coherente, hasta que se)Tj
+-24.4608 -1.2 TD
+-0.0004 Tc
+0.0951 Tw
+(hagan más modi)Tj
+/TT9 1 Tf
+6.7386 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0947 Tw
+(caciones. La llamada al sistema)Tj
+/TT4 1 Tf
+13.3567 0 TD
+0 Tw
+(sync\(2\))Tj
+/TT6 1 Tf
+2.9429 0 TD
+[(,)-344.6(y)-344.6(e)0(l)-344.6(comando)]TJ
+/TT4 1 Tf
+6.5156 0 TD
+(sync\(1\))Tj
+/TT6 1 Tf
+3.2875 0 TD
+0.0946 Tw
+(se utilizan precisamente)Tj
+-33.3974 -1.2 TD
+0 Tw
+(para edir a UNIX que sincronice la cache en disco. Por ejemplo,)Tj
+/TT8 1 Tf
+8 0 0 8 133 606 Tm
+(unix$ sync ; sync)Tj
+0 -1.5 TD
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 576 Tm
+0.0602 Tw
+[(es una b)20(uena forma de ase)15(gurarse de que las escrituras se han realizado, si pensamos hacer algo peligroso)]TJ
+0 -1.2 TD
+0 Tw
+[(que podría hacer que el sistema f)10(allase estrepitosamente.)]TJ
+0 -2.4 TD
+0.048 Tw
+[(Hemos ejecutado dos v)15(eces)]TJ
+/TT8 1 Tf
+11.4509 0 TD
+0 Tw
+(sync)Tj
+/TT6 1 Tf
+2.6984 0 TD
+0.0479 Tw
+(puesto que lo normal es que UNIX continúe sincronizando el disco tras)Tj
+-14.1493 -1.2 TD
+0.1755 Tw
+(la llamada a)Tj
+/TT4 1 Tf
+5.6071 0 TD
+0 Tw
+(sync\(2\))Tj
+/TT6 1 Tf
+2.9429 0 TD
+0.1755 Tw
+[(.)-425.5(L)0(a)-425.5(s)0(e)15(gunda v)15(ez que ejecutamos este comando ha de esperar a que acabe la sin-)]TJ
+-8.5499 -1.2 TD
+0 Tw
+[(cronización anterior antes de empezar)55(.)]TJ
+0 -2.4 TD
+0.0305 Tw
+(Disponemos de otra llamada,)Tj
+/TT4 1 Tf
+12.0356 0 TD
+0 Tw
+(fsync\(2\))Tj
+/TT6 1 Tf
+3.2207 0 TD
+0.0305 Tw
+[(,)-280.5(a)-280.5(l)0(a)-280.5(que podemos pasar un descriptor de )]TJ
+/TT9 1 Tf
+17.047 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0305 Tw
+(chero para sincronizar las)Tj
+-32.8594 -1.2 TD
+0.0103 Tw
+(escrituras de ese )Tj
+/TT9 1 Tf
+6.8331 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0103 Tw
+(chero. Lo habitual es utilizarla tras escrituras en )Tj
+/TT9 1 Tf
+19.4911 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0103 Tw
+(cheros importantes que queremos man-)Tj
+-27.4365 -1.2 TD
+0.0863 Tw
+[(tener coherentes en el disco aunque f)10(alle la alimentación y el sistema muera de repente antes de que sin-)]TJ
+T*
+0 Tw
+(cronice su cache.)Tj
+0 -2.4 TD
+0.0288 Tw
+(Normalmente no es preciso utilizar)Tj
+/TT8 1 Tf
+14.4449 0 TD
+0 Tw
+(sync)Tj
+/TT6 1 Tf
+2.6793 0 TD
+0.0289 Tw
+[(dado que UNIX lo hace cada 30 se)15(gundos \(o cada poco tiempo\).)]TJ
+-17.1242 -1.2 TD
+0.0138 Tw
+(Además, cuando se detiene la operación del sistema usando)Tj
+/TT4 1 Tf
+24.2272 0 TD
+0 Tw
+(shutdown\(8\))Tj
+/TT6 1 Tf
+5.2638 0 TD
+(o)Tj
+/TT4 1 Tf
+0.7638 0 TD
+(halt\(8\))Tj
+/TT6 1 Tf
+2.9855 0 TD
+0.0138 Tw
+(UNIX sincroniza los sis-)Tj
+-33.2403 -1.2 TD
+0 Tw
+(temas de )Tj
+/TT9 1 Tf
+3.7764 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros.)Tj
+-4.3325 -2.4 TD
+0.0547 Tw
+(Además, es posible que utilicemos un sistema de )Tj
+/TT9 1 Tf
+20.2394 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0547 Tw
+(cheros que presta atención al orden de las escrituras en)Tj
+-20.7955 -1.2 TD
+0.1008 Tw
+(el disco de tal forma que el estado del sistema de )Tj
+/TT9 1 Tf
+20.9076 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1008 Tw
+(cheros en el disco es siempre coherente, lo que hace)Tj
+-21.4638 -1.2 TD
+0 Tw
+(menos necesario utilizar esta llamada.)Tj
+0 -2.4 TD
+0.1403 Tw
+[(Si todo f)10(alla y el sistema de )]TJ
+/TT9 1 Tf
+12.2758 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1404 Tw
+[(cheros se corrompe en el disco tras un apagón o un f)10(allo del sistema, el)]TJ
+-12.832 -1.2 TD
+0 Tw
+(comando)Tj
+/TT4 1 Tf
+4.1105 0 TD
+[(fsc)20(k\(8\))]TJ
+/TT6 1 Tf
+3.1457 0 TD
+0.195 Tw
+(ejecutará durante el siguiente arranque del sistema y tratará de dejar los sistemas de)Tj
+/TT9 1 Tf
+-7.2562 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0002 Tc
+0.2246 Tw
+[(cheros coherentes de nue)24.8(v)19.8(o... ¡Si es que puede! Si lle)14.8(ga ese caso... ¡prepárate para perder )]TJ
+/TT9 1 Tf
+39.1414 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros!)Tj
+-40.2537 -1.2 TD
+(Recuerda mantener tus backups al día.)Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 278 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 667 0 0 667 611 0 0 389 0 0 0 0 0 778 
+0 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 333 500 556 278 0 556 278 833 556 500 
+556 0 444 389 333 556 500 0 0 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 23 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 121
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 0 0 
+0 500 500 500 0 0 0 0 500 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 500 444 278 0 500 278 0 444 278 722 500 500 
+500 0 389 389 278 500 444 667 444 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 24 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+500 500 500 500 500 500 500 0 500 0 278 0 0 0 0 444 
+0 722 667 667 722 611 0 0 722 333 0 722 611 889 722 0 
+556 0 667 556 0 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 25 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 600 600 600 600 600 0 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+0 600 0 0 600 600 600 0 0 600 0 0 600 0 600 600 
+0 0 600 0 0 600 0 0 0 600 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 600 600 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 26 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 27 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+28 0 obj
+<<
+/S /D
+>>
+endobj
+29 0 obj
+<<
+/Nums [0 28 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R]
+/Count 5
+/MediaBox [0 0 612 792]
+>>
+endobj
+30 0 obj
+<<
+/CreationDate (D:20161017083547+02'00')
+/ModDate (D:20161017083547+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+31 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 29 0 R
+>>
+endobj
+xref
+0 32
+0000000000 65535 f 
+0000025411 00000 n 
+0000000016 00000 n 
+0000002988 00000 n 
+0000022907 00000 n 
+0000023575 00000 n 
+0000023991 00000 n 
+0000024746 00000 n 
+0000025241 00000 n 
+0000021780 00000 n 
+0000025896 00000 n 
+0000025492 00000 n 
+0000003127 00000 n 
+0000006788 00000 n 
+0000025576 00000 n 
+0000006917 00000 n 
+0000010107 00000 n 
+0000025660 00000 n 
+0000010236 00000 n 
+0000016760 00000 n 
+0000025744 00000 n 
+0000016900 00000 n 
+0000021651 00000 n 
+0000021920 00000 n 
+0000022122 00000 n 
+0000022322 00000 n 
+0000022519 00000 n 
+0000022710 00000 n 
+0000025828 00000 n 
+0000025856 00000 n 
+0000026006 00000 n 
+0000026129 00000 n 
+trailer
+<<
+/Size 32
+/Root 31 0 R
+/Info 30 0 R
+/ID [<519a07f87d521035aad997757e6f3cbb><519a07f87d521035aad997757e6f3cbb>]
+>>
+startxref
+26199
+%%EOF

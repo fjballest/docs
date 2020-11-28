@@ -1,0 +1,1669 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3314
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 117.792 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Comunicación entr)18(e)-250(P)0(r)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+(1. Señales)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.0258 Tw
+[(Otro mecamismo de intercomunicación de procesos es la posibilidad de en)40(viar mensajes a un proceso dado)]TJ
+0 -1.2 TD
+0.1074 Tw
+[(y)-357.4(l)0(a)-357.4(posibilidad de actuar cuando recibimos un mensaje en un proceso. Si estás pensando en la red o en)]TJ
+T*
+0 Tw
+[(TCP/IP)111(,)-250(n)0(o)-250(nos referimos a eso.)]TJ
+0 -2.4 TD
+0.0203 Tw
+[(UNIX permite en)40(viar mensajes consistentes en números enteros concretos a un proceso dado. A estos men-)]TJ
+0 -1.2 TD
+0.018 Tw
+(sajes se los denomina)Tj
+/TT2 1 Tf
+8.9592 0 TD
+0 Tw
+(señales)Tj
+/TT6 1 Tf
+3.268 0 TD
+(\()Tj
+/TT4 1 Tf
+0.333 0 TD
+(signals)Tj
+/TT6 1 Tf
+3.102 0 TD
+0.0181 Tw
+(en inglés\). Cada mensaje tiene un signi)Tj
+/TT7 1 Tf
+15.7434 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0181 Tw
+(cado concreto y tiene asoci-)Tj
+-31.9617 -1.2 TD
+0 Tw
+(ada una acción por defecto.)Tj
+0 -2.4 TD
+0.0047 Tw
+[(Cuando un proceso entra al k)10(ernel \(o sale\) UNIX comprueba si tiene señales pendientes y el código del k)10(e)0(r)20(-)]TJ
+0 -1.2 TD
+0.0653 Tw
+(nel hace que cada proceso procese sus propias señales. Así es como funciona, aunque puedes ignorar este)Tj
+T*
+0 Tw
+(detalle. La recepción de una señal)Tj
+2.5 -1.56 TD
+[(•)-2150(puede ignorarse,)]TJ
+T*
+[(•)-2150(puede hacer que ejecute un manejador para la misma, o)]TJ
+T*
+[(•)-2150(puede matar al proceso.)]TJ
+-2.5 -1.2 TD
+[(En bre)25(v)15(e)15( )-15(v)25(amos a v)15(er qué supone esto en realidad.)]TJ
+0 -2.4 TD
+0.0209 Tw
+[(El comando de shell capaz de en)40(viar una señal a otro proceso es)]TJ
+/TT4 1 Tf
+26.0823 0 TD
+0 Tw
+(kill\(1\))Tj
+/TT6 1 Tf
+2.7143 0 TD
+0.0209 Tw
+[(y)-270.9(l)0(a)-270.9(llamada al sistema para hacerlo)]TJ
+-28.7965 -1.2 TD
+0 Tw
+(desde C es)Tj
+/TT4 1 Tf
+4.5269 0 TD
+(kill\(2\))Tj
+/TT6 1 Tf
+2.4434 0 TD
+[(.)-250(Estos son algunos de los v)25(alores se)15(gún indica)]TJ
+/TT4 1 Tf
+18.9019 0 TD
+(kill\(1\))Tj
+/TT6 1 Tf
+2.4434 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 324.6 Tm
+(unix$ man kill)Tj
+0 -1.5 TD
+(...)Tj
+7.8 -1.5 TD
+(Some of the more commonly used signals:)Tj
+-4.8 -1.5 TD
+[(1)-4200(HUP \(hang up\))]TJ
+T*
+[(2)-4200(INT \(interrupt\))]TJ
+T*
+[(3)-4200(QUIT \(quit\))]TJ
+T*
+[(6)-4200(ABRT \(abort\))]TJ
+T*
+[(9)-4200(KILL \(non-catchable, non-ignorable kill\))]TJ
+T*
+3 Tw
+[(14 ALRM)-600(\(alarm )3000(clock\))]TJ
+T*
+0 Tw
+[(15 )-3000(TERM)-600(\(software termination signal\))]TJ
+-3 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 174.6 Tm
+(Por ejemplo, tras ejecutar)Tj
+/TT9 1 Tf
+8 0 0 8 133 156.6 Tm
+(unix$ sleep 3600 &)Tj
+T*
+([1] 15984)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 114.5999 Tm
+(podemos ejecutar)Tj
+/TT9 1 Tf
+7.2749 0 TD
+(kill)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(para en)40(viarle la señal)]TJ
+/TT9 1 Tf
+8.6773 0 TD
+(TERM)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(\(simplemente ")Tj
+/TT9 1 Tf
+6.1011 0 TD
+(15)Tj
+/TT6 1 Tf
+1.2002 0 TD
+("\) al proceso con pid)Tj
+/TT9 1 Tf
+8.5444 0 TD
+(15984)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 96.5999 Tm
+(unix$ kill 15984)Tj
+0 -1.5 TD
+0.6 Tw
+[([1]+ Terminated:)-600(15 )-4800(sleep)-600(3600)]TJ
+T*
+0 Tw
+(unix$)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 5096
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.1108 Tw
+[(Como puedes v)15(e)0(r)40(,)-360.8(por omisión, la señal)]TJ
+/TT9 1 Tf
+16.8012 0 TD
+0 Tw
+(TERM)Tj
+/TT6 1 Tf
+2.7612 0 TD
+0.1109 Tw
+[(hace que UNIX mate el proceso que la recibe \(salv)20(o)-360.9(que)]TJ
+-19.5624 -1.2 TD
+0 Tw
+(dicho proceso cambie la acción por defecto para esta señal\).)Tj
+0 -2.4 TD
+0.1028 Tw
+(Incluso si un comando pide a UNIX que ignore la señal)Tj
+/TT9 1 Tf
+23.5971 0 TD
+0 Tw
+(TERM)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1027 Tw
+[(,)-352.8(e)0(s)-352.8(imposible ignorar la señal)]TJ
+/TT9 1 Tf
+12.8078 0 TD
+0 Tw
+(KILL)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(.)-352.7(Así)]TJ
+-41.2057 -1.2 TD
+(pues,)Tj
+/TT9 1 Tf
+8 0 0 8 133 642 Tm
+(unix$ kill -9 15984)Tj
+/TT6 1 Tf
+10 0 0 10 72 624 Tm
+0.2161 Tw
+[(es más e)15(xpediti)25(v)20(o)20( )-20(que el comando anterior)40(,)-466.2(y)-466.2(pide a UNIX que mate el proceso con pid)]TJ
+/TT9 1 Tf
+38.7857 0 TD
+0 Tw
+(15984)Tj
+/TT6 1 Tf
+3.4667 0 TD
+(en)Tj
+-42.2524 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(cualquier caso \(supuesto que tengamos permisos para hacer tal cosa, claro está\).)Tj
+0 -2.4 TD
+0 Tc
+0.0767 Tw
+(Cuando UNIX inicia un)Tj
+/TT4 1 Tf
+10.1383 0 TD
+0 Tw
+(shutdown)Tj
+/TT6 1 Tf
+4.1607 0 TD
+-0.0001 Tc
+0.0767 Tw
+(\(el administrador decide apagarlo, o pulsas el botón de encendido/apa-)Tj
+-14.299 -1.2 TD
+-0.0002 Tc
+0.0183 Tw
+[(gado\) primero en)39.8(vía la señal)]TJ
+/TT9 1 Tf
+11.6798 0 TD
+0 Tc
+0 Tw
+(TERM)Tj
+/TT6 1 Tf
+2.6685 0 TD
+0.0181 Tw
+[(a)-268.1(todos los procesos. Esto permite a dichos procesos enterarse de que el)]TJ
+-14.3483 -1.2 TD
+0.0345 Tw
+[(sistema está terminando de operar y podrían salv)25(ar )]TJ
+/TT7 1 Tf
+20.7993 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0345 Tw
+[(cheros que necesiten salv)25(ar o terminar ordenadamente)]TJ
+-21.3555 -1.2 TD
+0 Tw
+(si es preciso. Aquellos procesos a los que no importa esto simplemente habrán dejado que)Tj
+/TT9 1 Tf
+36.2134 0 TD
+(TERM)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(los mate.)Tj
+-38.8638 -2.4 TD
+0.0194 Tw
+[(P)15(asados unos se)15(gundos, UNIX en)40(vía la señal)]TJ
+/TT9 1 Tf
+18.3408 0 TD
+0 Tw
+(KILL)Tj
+/TT6 1 Tf
+2.6699 0 TD
+0.0195 Tw
+[(a)-269.5(todos los los procesos vi)25(v)20(os, lo que efecti)25(v)25(amente los)]TJ
+-21.0107 -1.2 TD
+0.0812 Tw
+(mata. Puedes pensar que)Tj
+/TT9 1 Tf
+10.4048 0 TD
+0 Tw
+(TERM)Tj
+/TT6 1 Tf
+2.7315 0 TD
+(signi)Tj
+/TT7 1 Tf
+1.9448 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0811 Tw
+(ca ")Tj
+/TT4 1 Tf
+1.627 0 TD
+[(por favor)111(,)-331.1(muér)37(ete)]TJ
+/TT6 1 Tf
+7.4849 0 TD
+0 Tw
+[(")-331.1(y)-331.1(que)]TJ
+/TT9 1 Tf
+3.3454 0 TD
+(KILL)Tj
+/TT6 1 Tf
+2.7315 0 TD
+0.0811 Tw
+(es una puñalada trapera por la)Tj
+-30.826 -1.2 TD
+0 Tw
+(espalda.)Tj
+0 -2.4 TD
+0.0167 Tw
+[(Otra señal que se)15(guramente has utilizado es)]TJ
+/TT9 1 Tf
+17.8457 0 TD
+0 Tw
+(INT)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0168 Tw
+[(.)-266.8(S)0(e)-266.8(utiliza para interrumpir la ejecución de un proceso. Es)]TJ
+-19.6459 -1.2 TD
+0.0926 Tw
+(de hecho la señal que se utiliza cuando pulsas)Tj
+/TT4 1 Tf
+19.3549 0 TD
+0 Tw
+[(Contr)45(ol)]TJ
+/TT6 1 Tf
+3.4094 0 TD
+[(y)-342.6(l)0(a)-342.6(tecla)]TJ
+/TT9 1 Tf
+4.1367 0 TD
+(c)Tj
+/TT6 1 Tf
+0.9427 0 TD
+0.0926 Tw
+(antes de soltar)Tj
+/TT4 1 Tf
+6.248 0 TD
+[(Contr)45(ol. Normalmente)]TJ
+-34.0917 -1.2 TD
+0 Tw
+(decimos ")Tj
+/TT6 1 Tf
+3.9468 0 TD
+(control-c" o escribimos)Tj
+/TT9 1 Tf
+9.6001 0 TD
+(ˆC)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(para representar esto.)Tj
+-14.9971 -2.4 TD
+-0.0001 Tc
+0.2258 Tw
+[(V)110.9(eámoslo. Pero primero hagamos un programa que podamos modi)]TJ
+/TT7 1 Tf
+28.4894 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.2257 Tw
+[(car lue)15(go para v)15(er qué hacen las)]TJ
+-29.0456 -1.2 TD
+0 Tw
+(señales.)Tj
+/TT9 1 Tf
+8 0 0 8 133 402 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "pid %d sleeping...\\n", getpid\(\)\);)Tj
+T*
+(if\(sleep\(3600\) != 0\) {)Tj
+2.4 -1.5 TD
+(warn\("sleep"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(fprintf\(stderr, "done"\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 216 Tm
+0.0564 Tw
+(Este programa duerme una hora tras imprimir un mensaje informando de su)Tj
+/TT4 1 Tf
+31.2232 0 TD
+0 Tw
+(pid)Tj
+/TT6 1 Tf
+1.2778 0 TD
+0.0564 Tw
+[(.)-306.4(Además, hemos compro-)]TJ
+-32.501 -1.2 TD
+0 Tw
+(bado si)Tj
+/TT9 1 Tf
+3.1108 0 TD
+(sleep)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(ha f)10(allado e imprimimos un mensaje tras dormir)55(.)-500(S)0(i)-250(l)0(o)-250(ejecutamos)]TJ
+/TT9 1 Tf
+8 0 0 8 133 186 Tm
+(unix$ signal1)Tj
+0 -1.5 TD
+(pid 16056 sleeping...)Tj
+/TT6 1 Tf
+10 0 0 10 72 156 Tm
+0.1658 Tw
+[(v)15(emos que no obtenemos el prompt del shell. El proceso está en)]TJ
+/TT9 1 Tf
+27.8296 0 TD
+0 Tw
+(sleep)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.1659 Tw
+[(.)-415.8(S)0(i)-415.8(pulsamos ahora)]TJ
+/TT4 1 Tf
+8.7459 0 TD
+0 Tw
+[(contr)45(ol-c)]TJ
+/TT6 1 Tf
+-39.576 -1.2 TD
+[(v)15(emos que la ejecución del programa se interrumpe.)]TJ
+/TT9 1 Tf
+8 0 0 8 133 126 Tm
+(unix$ signal1)Tj
+0 -1.5 TD
+(pid 16056 sleeping...)Tj
+T*
+(ˆC)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 72 Tm
+(Obtenemos igual resultado si desde otro shell ejecutamos)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 3535
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ kill -INT 16056)Tj
+/TT6 1 Tf
+10 0 0 10 72 690 Tm
+0.0378 Tw
+[(El programa termina igualmente. Si en cambio le en)40(víamos una señal)]TJ
+/TT9 1 Tf
+28.367 0 TD
+0 Tw
+(TERM)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0377 Tw
+[(,)-287.8(s)0(e)-287.8(nos informa de que el pro-)]TJ
+-30.7674 -1.2 TD
+0 Tw
+(ceso ha terminado, aunque el proceso muere igualmente.)Tj
+/TT9 1 Tf
+8 0 0 8 133 660 Tm
+(unix$ signal1)Tj
+0 -1.5 TD
+(pid 16102 sleeping...)Tj
+/TT6 1 Tf
+10 0 0 10 72 630 Tm
+[(Y)-250(ejecutando en otro shell)]TJ
+/TT9 1 Tf
+8 0 0 8 133 612 Tm
+(unix$ kill -TERM 16102)Tj
+/TT6 1 Tf
+10 0 0 10 72 594 Tm
+[(v)15(emos que en shell original el proceso muere:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 576 Tm
+(unix$ signal1)Tj
+T*
+(pid 16102 sleeping...)Tj
+T*
+(Terminated: 15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 510 Tm
+0.0358 Tw
+(Cambiemos nuestro programa para pedirle a UNIX que la acción al recibir la señal)Tj
+/TT9 1 Tf
+33.8767 0 TD
+0 Tw
+(INT)Tj
+/TT6 1 Tf
+2.0861 0 TD
+0.0358 Tw
+[(no sea morir)40(,)-285.8(sino)]TJ
+-35.9628 -1.2 TD
+0 Tw
+(ignorar la señal.)Tj
+/TT9 1 Tf
+8 0 0 8 133 480 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(signal\(SIGINT, SIG_IGN\);)Tj
+T*
+(fprintf\(stderr, "pid %d sleeping...\\n", getpid\(\)\);)Tj
+T*
+(if\(sleep\(3600\) != 0\) {)Tj
+2.4 -1.5 TD
+(warn\("sleep"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(fprintf\(stderr, "done"\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 282 Tm
+0.0582 Tw
+(Esto lo hacemos utilizando)Tj
+/TT4 1 Tf
+11.286 0 TD
+0 Tw
+(signal\(3\))Tj
+/TT6 1 Tf
+3.919 0 TD
+0.0582 Tw
+(para pedir que acción por defecto sea ignorar la señal que indicamos)Tj
+-15.2051 -1.2 TD
+0 Tw
+(\()Tj
+/TT9 1 Tf
+0.333 0 TD
+(SIGINT)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(simplemente es un)Tj
+/TT9 1 Tf
+7.6929 0 TD
+(2)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(\). La constante)Tj
+/TT9 1 Tf
+6.1641 0 TD
+(SIG_IGN)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(indica que queremos ignorar dicha señal.)Tj
+-23.0913 -2.4 TD
+[(Ahora v)20(olv)15(emos a ejecutar el programa en un shell y pulsar)]TJ
+/TT4 1 Tf
+24.0402 0 TD
+[(contr)45(ol-c)]TJ
+/TT6 1 Tf
+3.8705 0 TD
+[(v)25(arias v)15(eces...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 228 Tm
+(unix$ signal2)Tj
+0 -1.5 TD
+(pid 16058 sleeping...)Tj
+T*
+(ˆCˆC)Tj
+/TT6 1 Tf
+10 0 0 10 72 186 Tm
+[(Esta v)15(ez el programa sigue ejecutando como si tal cosa. Podemos utilizar otro shell para ejecutar)]TJ
+/TT9 1 Tf
+8 0 0 8 133 168 Tm
+[(unix$ kill)-1200(16058)]TJ
+/TT6 1 Tf
+10 0 0 10 72 150 Tm
+[(y)-250(matar el proceso \(por omisión,)]TJ
+/TT9 1 Tf
+13.2466 0 TD
+(kill)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(en)40(vía la señal)]TJ
+/TT9 1 Tf
+5.6519 0 TD
+(TERM)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(\).)Tj
+-23.9493 -2.4 TD
+0.0749 Tw
+[(No es muy amable por parte del programa ignorar la señal de interrupción. Se)15(guramente el usuario acabe)]TJ
+0 -1.2 TD
+0 Tw
+(frustrado sin poder interrumpir el programa y lo mate de todos modos.)Tj
+0 -2.4 TD
+0.0046 Tw
+(Algo más habitual es utilizar)Tj
+/TT4 1 Tf
+11.7701 0 TD
+0 Tw
+(signal)Tj
+/TT6 1 Tf
+2.6994 0 TD
+0.0046 Tw
+[(para pedir que cuando se nos en)40(víe la señal)]TJ
+/TT9 1 Tf
+17.5224 0 TD
+0 Tw
+(INT)Tj
+/TT6 1 Tf
+2.0548 0 TD
+0.0045 Tw
+(el programa ejecute un)Tj
+-34.0467 -1.2 TD
+0.123 Tw
+[(manejador para atender dicha señal. Esto es prácticamente lo que sucede con una interrupción softw)10(are,)]TJ
+T*
+0.2769 Tw
+(pero las señales son una abstracción de UNIX para hablar con los procesos, no son interrupciones)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 4686
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+(realmente.)Tj
+0 -2.4 TD
+0.1345 Tw
+(Esta nu)Tj
+3.1062 0 TD
+-0.025 Tc
+0.1845 Tw
+[(eva v)]TJ
+2.2072 0 TD
+0 Tc
+0.1345 Tw
+(ersión del programa pide a UNIX que cuando el proceso reciba la señal)Tj
+/TT9 1 Tf
+30.5424 0 TD
+0 Tw
+(INT)Tj
+/TT6 1 Tf
+2.1848 0 TD
+0.1345 Tw
+(se ejecute la)Tj
+-38.0406 -1.2 TD
+0 Tw
+(función)Tj
+/TT9 1 Tf
+3.3047 0 TD
+(handleint)Tj
+/TT6 1 Tf
+5.4009 0 TD
+(.)Tj
+/TT9 1 Tf
+8 0 0 8 133 654 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(static void)Tj
+0 -1.5 TD
+(handleint\(int no\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(fprintf\(stderr, "hndlr got %d\\n", no\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(signal\(SIGINT, handleint\);)Tj
+T*
+(fprintf\(stderr, "pid %d sleeping...\\n", getpid\(\)\);)Tj
+T*
+(if\(sleep\(3600\) != 0\) {)Tj
+2.4 -1.5 TD
+(warn\("sleep"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(fprintf\(stderr, "done\\n"\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 372 Tm
+0.022 Tw
+(Si lo ejecutamos y pulsamos)Tj
+/TT4 1 Tf
+11.7477 0 TD
+0 Tw
+[(contr)45(ol-c)]TJ
+/TT6 1 Tf
+3.8925 0 TD
+[(o)-272(utilizamos)]TJ
+/TT9 1 Tf
+5.21 0 TD
+(kill)Tj
+/TT6 1 Tf
+2.6723 0 TD
+0.0219 Tw
+[(desde otro shell para en)40(viar la señal)]TJ
+/TT9 1 Tf
+14.6353 0 TD
+0 Tw
+(INT)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0219 Tw
+[(,)-271.9(esto es)]TJ
+-39.9581 -1.2 TD
+0 Tw
+(lo que sucede:)Tj
+/TT9 1 Tf
+8 0 0 8 133 342 Tm
+(unix$ signal3)Tj
+0 -1.5 TD
+(pid 16150 sleeping...)Tj
+T*
+(ˆC)Tj
+T*
+(hndlr got 2)Tj
+T*
+(signal3: sleep: Interrupted system call)Tj
+T*
+(done)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 252 Tm
+0.1349 Tw
+[(Lo primero que v)15(emos es que)]TJ
+/TT4 1 Tf
+12.9023 0 TD
+0 Tw
+[(mientr)15(as)]TJ
+/TT6 1 Tf
+3.8699 0 TD
+0.1349 Tw
+(el programa estaba dentro de)Tj
+/TT9 1 Tf
+12.4749 0 TD
+0 Tw
+(sleep)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.135 Tw
+[(,)-385(e)0(l)-385(proceso ha recibido la)]TJ
+-32.2476 -1.2 TD
+0.0328 Tw
+[(señal. )-250.1(Considerando)-282.9(la llamada a)]TJ
+/TT9 1 Tf
+13.8541 0 TD
+0 Tw
+(signal)Tj
+/TT6 1 Tf
+3.8834 0 TD
+0.0328 Tw
+(que hemos hecho, UNIX ajusta la pila \(de usuario\) del proceso)Tj
+-17.7375 -1.2 TD
+0.0252 Tw
+(para que cuando continúe ejecutando ejecute en realidad)Tj
+/TT9 1 Tf
+23.0235 0 TD
+0 Tw
+(handleint)Tj
+/TT6 1 Tf
+5.4009 0 TD
+0.0253 Tw
+[(.)-275.3(Por eso v)15(emos que lo siguiente que)]TJ
+-28.4244 -1.2 TD
+0.0116 Tw
+(sucede es que)Tj
+/TT9 1 Tf
+5.7824 0 TD
+0 Tw
+(handleint)Tj
+/TT6 1 Tf
+5.6625 0 TD
+0.0115 Tw
+[(imprime su mensaje. Una v)15(e)0(z)]TJ
+/TT9 1 Tf
+12.1499 0 TD
+0 Tw
+(handleint)Tj
+/TT6 1 Tf
+5.6624 0 TD
+0.0115 Tw
+(\(el manejador de la señal\) termina,)Tj
+-29.2571 -1.2 TD
+0.0488 Tw
+[(su retorno hace que v)20(olv)25(amos a llamar a UNIX. Esto lo ha conse)15(guido UNIX ajustando la pila de usuario,)]TJ
+T*
+0.1164 Tw
+[(nosotros no hemos hecho nada especial en el código como puedes v)15(e)0(r)55(.)-366.4(El)-366.4(k)10(ernel hace ahora que el pro-)]TJ
+T*
+0.0692 Tw
+(grama continúe por donde estaba cuando recibió la señal. En nuestro caso estábamos dentro de)Tj
+/TT9 1 Tf
+39.1913 0 TD
+0 Tw
+(sleep)Tj
+/TT6 1 Tf
+3.3197 0 TD
+-0.065 Tc
+(y,)Tj
+-42.511 -1.2 TD
+0 Tc
+0.0787 Tw
+(dado que lo hemos interrumpido,)Tj
+/TT9 1 Tf
+13.8911 0 TD
+0 Tw
+(sleep)Tj
+/TT6 1 Tf
+3.3292 0 TD
+0.0787 Tw
+[(f)10(alla y retorna)]TJ
+/TT9 1 Tf
+6.084 0 TD
+0 Tw
+(-1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0787 Tw
+[(.)-328.7(Puedes v)15(er el mensaje de error que imprime)]TJ
+/TT9 1 Tf
+-24.5045 -1.2 TD
+0 Tw
+(warn)Tj
+/TT6 1 Tf
+2.7632 0 TD
+0.1128 Tw
+[(en nuestro código justo detrás del mensaje que ha impreso el manejador)55(.)-362.8(Por último, el programa)]TJ
+-2.7632 -1.2 TD
+0 Tw
+(escribe)Tj
+/TT9 1 Tf
+3.0815 0 TD
+(done)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(y)-250(termina.)]TJ
+-5.7319 -2.4 TD
+0.0973 Tw
+(Es preciso tener cuidado con el código que programamos en los manejadores de señal. Dado que el pro-)Tj
+0 -1.2 TD
+0.0346 Tw
+(grama podría estar ejecutando cualquier cosa cuando UNIX hace que se interrumpa y ejecute el manejador)Tj
+T*
+0.0956 Tw
+(de la señal, sólo deberíamos utilizar funciones)Tj
+/TT2 1 Tf
+19.3855 0 TD
+0 Tw
+[(r)18(eentrantes)]TJ
+/TT6 1 Tf
+5.2143 0 TD
+0.0955 Tw
+(dentro de los manejadores de señal. Decimos)Tj
+-24.5998 -1.2 TD
+0.0561 Tw
+(que una función es)Tj
+/TT4 1 Tf
+7.9998 0 TD
+0 Tw
+[(r)37(eentr)15(ante)]TJ
+/TT6 1 Tf
+4.4196 0 TD
+0.0561 Tw
+(si es posible llamarla antes de que una llamada en curso termine. Por ejem-)Tj
+-12.4194 -1.2 TD
+0.068 Tw
+[(plo, las funciones que utilizan v)25(ariables globales \(o almacenamiento)]TJ
+/TT4 1 Tf
+28.1334 0 TD
+0 Tw
+(estático)Tj
+/TT6 1 Tf
+3.4284 0 TD
+0.068 Tw
+(en el sentido de)Tj
+/TT9 1 Tf
+6.77 0 TD
+0 Tw
+(static)Tj
+/TT6 1 Tf
+3.9186 0 TD
+(en)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 5303
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-21.017 -3.6 TD
+-0.0001 Tc
+0.0813 Tw
+[(C\) no son reentrantes. En pocas palabras, cuanto menos haga)-331.3(u)-0.1(n)-331.3(manejador de señal mejor)54.9(.)-331.4(L)-0.1(a)-331.4(página de)]TJ
+0 -1.2 TD
+0 Tc
+0 Tw
+(manual)Tj
+/TT4 1 Tf
+3.2944 0 TD
+(sigaction\(2\))Tj
+/TT6 1 Tf
+5.1835 0 TD
+0.351 Tc
+[(yl)351(ad)351(e)]TJ
+/TT4 1 Tf
+3.2185 0 TD
+0 Tc
+(signal\(3\))Tj
+/TT6 1 Tf
+3.9617 0 TD
+0.1009 Tw
+(suelen tener mas detalles respecto a qué funciones puede utilizarse)Tj
+-15.6581 -1.2 TD
+0 Tw
+(dentro de un manejador y cuales no.)Tj
+0 -2.4 TD
+0.1031 Tw
+[(Cada v)15(ez que se llama a)]TJ
+/TT9 1 Tf
+10.4879 0 TD
+0 Tw
+(signal)Tj
+/TT6 1 Tf
+3.9537 0 TD
+0.1032 Tw
+(para una señal se cambia el efecto de dicha señal en nuestro proceso.)Tj
+-14.4416 -1.2 TD
+0.0313 Tw
+[(P)15(ara hacer que)]TJ
+/TT9 1 Tf
+6.2142 0 TD
+0 Tw
+(INT)Tj
+/TT6 1 Tf
+2.0816 0 TD
+0.0313 Tw
+[(recupere su comportamiento por defecto tras haber instalado un manejador)40(,)-281.2(podríamos)]TJ
+-8.2957 -1.2 TD
+0 Tw
+(ejecutar la llamada)Tj
+/TT9 1 Tf
+8 0 0 8 133 618 Tm
+(signal\(SIGINT, SIG_DFL\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 600 Tm
+0.0104 Tw
+[(y)-260.4(UNIX olvidaría que antes teníamos un manejador instalado. La constante)]TJ
+/TT9 1 Tf
+30.4387 0 TD
+0 Tw
+(SIG_DFL)Tj
+/TT6 1 Tf
+4.4612 0 TD
+0.0105 Tw
+(indica que queremos)Tj
+-34.8999 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+[(que la señal en cuestión tenga)-250.1(l)-0.1(a)-250.1(acción por defecto.)]TJ
+0 -2.4 TD
+0 Tc
+0.0095 Tw
+[(Los manejadores de señal que tenemos instalados \(incluyendo si consisten en ignorar la señal\) son atrib)20(utos)]TJ
+0 -1.2 TD
+0.0067 Tw
+(del proceso. Cada proceso tiene los suyos. Un cambio en un proceso a este respecto no afecta a otros proce-)Tj
+T*
+0 Tw
+(sos.)Tj
+0 -2.4 TD
+0.1058 Tw
+(La página de manual)Tj
+/TT4 1 Tf
+9.0306 0 TD
+0 Tw
+(signal\(3\))Tj
+/TT6 1 Tf
+3.9665 0 TD
+0.1057 Tw
+(detalla la lista completa de señales, qué acción por defecto tienen y si se)Tj
+-12.9972 -1.2 TD
+0 Tw
+(pueden ignorar o no.)Tj
+0 -2.4 TD
+0.2123 Tw
+[(Las llamadas al sistema interrumpidas por una señal suelen de)25(v)20(olv)15(er una indicación de error y dejan)]TJ
+/TT9 1 Tf
+0 -1.2 TD
+0 Tw
+(errno)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(al v)25(alor)]TJ
+/TT9 1 Tf
+3.2514 0 TD
+(EINTR)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(\(normalmente\), que signi)Tj
+/TT7 1 Tf
+10.0806 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca ")Tj
+/TT4 1 Tf
+1.5459 0 TD
+(interrupted)Tj
+/TT6 1 Tf
+4.4995 0 TD
+(".)Tj
+-26.4345 -2.4 TD
+(Pero)Tj
+/TT9 1 Tf
+2.0977 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6651 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7647 0 TD
+(write)Tj
+/TT6 1 Tf
+3.2652 0 TD
+0.0146 Tw
+[(tienen un comportamiento especial. Cuando se interrumpen por el en)40(vío de una señal,)]TJ
+-8.7927 -1.2 TD
+0.0224 Tw
+(UNIX re-inicia las llamadas al sistema tras la interrución \(y tras la ejecución del manejador si lo hay\). Nat-)Tj
+T*
+0.0869 Tw
+[(uralmente, salv)20(o)-336.9(que la acción de la señal en cuestión sea matar al proceso. Eso quiere decir que nuestro)]TJ
+T*
+0.0532 Tw
+(programa continuaría ejecutando)Tj
+/TT9 1 Tf
+13.5702 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.7036 0 TD
+0.0532 Tw
+(si es que)Tj
+/TT9 1 Tf
+3.8534 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.7036 0 TD
+0.0532 Tw
+(se ha interrumpido, tras ejecutar el manejador que)Tj
+-22.8309 -1.2 TD
+0 Tw
+(hemos instalado antes para)Tj
+/TT9 1 Tf
+10.9966 0 TD
+(INT)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-12.7969 -2.4 TD
+0.0983 Tw
+[(P)15(ara cambiar este comportamiento, podemos utilizar)]TJ
+/TT4 1 Tf
+21.873 0 TD
+0 Tw
+(siginterrupt\(3\))Tj
+/TT6 1 Tf
+6.2369 0 TD
+0.0982 Tw
+[(y)-348.2(pedir que una señal interrumpa las)]TJ
+-28.1099 -1.2 TD
+0.1278 Tw
+(llamadas al sistema que pueden re-iniciarse tras una señal, esto es,)Tj
+/TT9 1 Tf
+28.1461 0 TD
+0 Tw
+(read)Tj
+/TT6 1 Tf
+2.7783 0 TD
+(y)Tj
+/TT9 1 Tf
+0.8779 0 TD
+(write)Tj
+/TT6 1 Tf
+3.3784 0 TD
+0.1279 Tw
+(principalmente. Por)Tj
+-35.1807 -1.2 TD
+0 Tw
+(ejemplo, ejecutando)Tj
+/TT9 1 Tf
+8 0 0 8 133 330 Tm
+(siginterrupt\(SIGINT, 1\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 312 Tm
+(incluso)Tj
+/TT9 1 Tf
+3.1387 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(se interrumpirá y dejará en)Tj
+/TT9 1 Tf
+10.9673 0 TD
+(errno)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(el v)25(alor)]TJ
+/TT9 1 Tf
+3.2514 0 TD
+(EINTR)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(.)-250(E)0(n)-250(cambio, tras)]TJ
+/TT9 1 Tf
+8 0 0 8 133 294 Tm
+(siginterrupt\(SIGINT, 0\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 276 Tm
+(las llamadas a)Tj
+/TT9 1 Tf
+5.8589 0 TD
+(read)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(interrumpidas v)20(olv)15(erán a reiniciarse automáticamente.)]TJ
+-8.5093 -2.4 TD
+0.0488 Tw
+(Dos señales útiles son)Tj
+/TT9 1 Tf
+9.2499 0 TD
+0 Tw
+(USR1)Tj
+/TT6 1 Tf
+2.6991 0 TD
+(y)Tj
+/TT9 1 Tf
+0.7987 0 TD
+(USR2)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0487 Tw
+[(.)-548.7(Suelen estar disponibles para lo que nos plazca. Un uso habitual es)]TJ
+-15.1481 -1.2 TD
+0.0861 Tw
+[(hacer que el programa vuelque información de depuración, por ejemplo, cuando se le en)40(víe)]TJ
+/TT9 1 Tf
+37.9282 0 TD
+0 Tw
+(USR1)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(,)-336.2(o)-336.2(que)]TJ
+-40.3286 -1.2 TD
+0.0587 Tw
+(relea la con)Tj
+/TT7 1 Tf
+4.7253 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0587 Tw
+[(guración.)-558.7(T)80(ambién suele utilizarse la señal)]TJ
+/TT9 1 Tf
+17.821 0 TD
+0 Tw
+(HUP)Tj
+/TT6 1 Tf
+2.109 0 TD
+0.0586 Tw
+(para que el programa relea la con)Tj
+/TT7 1 Tf
+13.6773 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(guración,)Tj
+-39.4449 -1.2 TD
+(aunque esta señal no es precisamente para eso.)Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 0 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 556 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 23 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 233
+/Widths [250 0 420 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 500 500 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 667 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 500 444 278 500 500 278 0 444 278 722 500 500 
+500 0 389 389 278 500 444 667 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 0 0 0 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 24 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 0 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+0 0 500 500 500 500 0 0 0 0 278 0 0 0 0 0 
+0 722 0 667 722 611 0 0 0 333 0 0 611 0 722 722 
+556 0 0 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 25 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 26 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 136
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 0 
+600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 0 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 0 
+600 600 600 600 600 600 0 0 0 0 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 0 600 0 600 0 0 
+0 0 0 0 0 0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 27 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+28 0 obj
+<<
+/S /D
+>>
+endobj
+29 0 obj
+<<
+/Nums [0 28 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R]
+/Count 5
+/MediaBox [0 0 612 792]
+>>
+endobj
+30 0 obj
+<<
+/CreationDate (D:20160905151717+02'00')
+/ModDate (D:20160905151717+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+31 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 29 0 R
+>>
+endobj
+xref
+0 32
+0000000000 65535 f 
+0000026733 00000 n 
+0000000016 00000 n 
+0000003382 00000 n 
+0000023985 00000 n 
+0000024637 00000 n 
+0000025294 00000 n 
+0000026031 00000 n 
+0000026201 00000 n 
+0000022858 00000 n 
+0000027218 00000 n 
+0000026814 00000 n 
+0000003521 00000 n 
+0000008670 00000 n 
+0000026898 00000 n 
+0000008799 00000 n 
+0000012387 00000 n 
+0000026982 00000 n 
+0000012505 00000 n 
+0000017244 00000 n 
+0000027066 00000 n 
+0000017373 00000 n 
+0000022729 00000 n 
+0000022998 00000 n 
+0000023200 00000 n 
+0000023400 00000 n 
+0000023597 00000 n 
+0000023794 00000 n 
+0000027150 00000 n 
+0000027178 00000 n 
+0000027328 00000 n 
+0000027451 00000 n 
+trailer
+<<
+/Size 32
+/Root 31 0 R
+/Info 30 0 R
+/ID [<1067b90280d3df70bdc95a7a27dab7c7><1067b90280d3df70bdc95a7a27dab7c7>]
+>>
+startxref
+27521
+%%EOF

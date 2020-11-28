@@ -1,0 +1,760 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3004
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 157.734 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: P)10(adr)18(es e hijos)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Ejecutando)-250(un )250(nue)15(v)10(o)10( )240(pr)18(ograma)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.032 Tw
+(Hemos visto antes cómo es el proceso que ejecuta nuestro código. UNIX ha creado este proceso cuando se)Tj
+0 -1.2 TD
+0.1083 Tw
+[(lo hemos pedido utilizando el shell y)65(,)-358.3(hasta el momento, sólo hemos utilizado el shell para crear nue)25(v)20(o)0(s)]TJ
+T*
+0 Tw
+(procesos.)Tj
+0 -2.4 TD
+0.0341 Tw
+[(V)111(amos a v)15(er ahora cómo crear nue)25(v)20(o)0(s)-284.1(procesos y ejecutar nue)25(v)20(o)0(s)-284.1(programas pidiéndoselo a UNIX directa-)]TJ
+0 -1.2 TD
+0 Tw
+(mente. Aunque en otros sistemas tenemos llamadas similares a)Tj
+/TT8 1 Tf
+8 0 0 8 133 479.4 Tm
+(spawn\("/bin/ls"\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 461.4 Tm
+(para ejecutar)Tj
+/TT8 1 Tf
+5.3848 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(en un nue)25(v)20(o)20( )-20(proceso, ese)]TJ
+/TT4 1 Tf
+10.2294 0 TD
+(no)Tj
+/TT6 1 Tf
+1.25 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(es el caso en UNIX. En su lugar)39.9(,)-250.1(tenemos dos llamadas:)]TJ
+-15.8144 -1.56 TD
+0 Tc
+0 Tw
+[(•)-2150(Una sirv)15(e)-250(para crear un nue)25(v)20(o)20( )-20(proceso)]TJ
+T*
+[(•)-2150(Otra sirv)15(e)-250(para ejecutar un nue)25(v)20(o)20( )-20(programa.)]TJ
+-2.5 -1.2 TD
+0.127 Tw
+[(Las razones principales para esto es que podríamos querer un nue)25(v)20(o)20( )-20.1(proceso que ejecute el mismo pro-)]TJ
+T*
+0.0125 Tw
+(grama que estamos ejecutando y que podríamos querer con)Tj
+/TT9 1 Tf
+23.7582 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0125 Tw
+[(gurar el entorno para un nue)25(v)20(o)20( )-20(programa en un)]TJ
+-24.3144 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+[(nue)24.9(v)19.9(o)19.9( )-20(proceso antes de car)17.9(gar)-250.1(dicho programa.)]TJ
+0 -2.4 TD
+0 Tc
+0.1015 Tw
+[(Antes de v)15(er dichas llamadas detenidamente, v)15(eamos un ejemplo completo. En este programa utilizamos)]TJ
+/TT4 1 Tf
+0 -1.2 TD
+0 Tw
+(fork\(2\))Tj
+/TT6 1 Tf
+3.0511 0 TD
+0.0241 Tw
+[(para crear un nue)25(v)20(o)20( )-20.1(proceso y hacemos que dicho proceso ejecute)]TJ
+/TT8 1 Tf
+26.8475 0 TD
+0 Tw
+(/bin/ls)Tj
+/TT6 1 Tf
+4.4748 0 TD
+0.0241 Tw
+(mediante una llamada)Tj
+-34.3733 -1.2 TD
+0 Tw
+(a)Tj
+/TT4 1 Tf
+0.6938 0 TD
+[(e)20(xecl\(3\))]TJ
+/TT6 1 Tf
+3.1992 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 328.2 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <stdlib.h>)Tj
+T*
+(#include <unistd.h>)Tj
+T*
+(#include <err.h>)Tj
+0 -3 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(switch\(fork\(\)\){)Tj
+T*
+(case -1:)Tj
+2.4 -1.5 TD
+(err\(1, "fork failed"\);)Tj
+T*
+(break;)Tj
+-2.4 -1.5 TD
+(case 0:)Tj
+2.4 -1.5 TD
+(execl\("/bin/ls", "ls", "-l", NULL\);)Tj
+T*
+(err\(1, "exec failed"\);)Tj
+T*
+(break;)Tj
+-2.4 -1.5 TD
+(default:)Tj
+2.4 -1.5 TD
+(printf\("ls started\\n"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 4979
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.1044 Tw
+(El programa empieza su ejecución como cualquier otro proceso y continúa hasta la llamada a)Tj
+/TT8 1 Tf
+39.0787 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.3544 Tc
+[(.E)354.4(n)]TJ
+-41.4791 -1.2 TD
+0 Tc
+0.0208 Tw
+(este punto sucede algo curioso: se crea un)Tj
+/TT4 1 Tf
+17.1605 0 TD
+[(clon e)20(xacto del pr)45(oceso)]TJ
+/TT6 1 Tf
+9.7369 0 TD
+[(y)-270.8(tanto el proceso original \(llamado)]TJ
+/TT4 1 Tf
+14.6199 0 TD
+0 Tw
+[(pr)45(o-)]TJ
+-41.5174 -1.2 TD
+0.0557 Tw
+[(ceso padr)37(e)]TJ
+/TT6 1 Tf
+4.3786 0 TD
+[(\))-305.7(como el nue)25(v)20(o)20( )-20(proceso \(llamadado)]TJ
+/TT4 1 Tf
+15.1173 0 TD
+[(pr)45(oceso hijo)]TJ
+/TT6 1 Tf
+4.9824 0 TD
+[(\))-305.7(continúan su ejecución normalmente a partir)]TJ
+-24.4783 -1.2 TD
+0 Tw
+(de dicha llamada. Dicho de otro modo,)Tj
+2.5 -1.56 TD
+[(•)-2150(hay una única llamada a)]TJ
+/TT8 1 Tf
+12.4122 0 TD
+(fork)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(\(en el proceso padre\),)Tj
+-15.0626 -1.56 TD
+[(•)-2150(pero)]TJ
+/TT8 1 Tf
+4.527 0 TD
+(fork)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(retorna dos v)15(eces: una v)15(ez en el proceso padre y otra en el hijo.)]TJ
+-9.6773 -1.2 TD
+-0.0001 Tc
+0.1047 Tw
+[(Ambos procesos son totalmente independientes, y ejecutarán se)14.9(gún obtengan procesador \(no sabemos en)]TJ
+T*
+0 Tc
+0 Tw
+(qué orden\).)Tj
+0 -2.4 TD
+0.0301 Tw
+(En el proceso padre)Tj
+/TT8 1 Tf
+8.2835 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.6805 0 TD
+0.0301 Tw
+[(retorna un número positi)25(v)20(o)20( )-20(\(a)-280.1(menos que)]TJ
+/TT8 1 Tf
+16.8561 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.6805 0 TD
+0.0301 Tw
+[(f)10(alle, en cuyo caso retorna)]TJ
+/TT8 1 Tf
+10.9131 0 TD
+0 Tw
+(-1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(\).)Tj
+-42.6139 -1.2 TD
+0.0191 Tw
+[(Lue)15(go el padre continúa su ejecución en el)]TJ
+/TT8 1 Tf
+17.464 0 TD
+0 Tw
+(default)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.019 Tw
+[(,)-269.1(imprime su mensaje y lue)15(go termina en la llamada a)]TJ
+/TT8 1 Tf
+-21.6647 -1.2 TD
+0 Tw
+(exit)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-2.4004 -2.4 TD
+0.0614 Tw
+(En el proceso hijo)Tj
+/TT8 1 Tf
+7.7436 0 TD
+0 Tw
+(fork)Tj
+/TT6 1 Tf
+2.7118 0 TD
+0.0615 Tw
+(siempre retorna)Tj
+/TT8 1 Tf
+6.6201 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0615 Tw
+[(,)-311.5(con lo que el hijo entra en el)]TJ
+/TT8 1 Tf
+12.6604 0 TD
+0 Tw
+(case)Tj
+/TT6 1 Tf
+2.7119 0 TD
+(para)Tj
+/TT8 1 Tf
+2.0322 0 TD
+(0)Tj
+/TT6 1 Tf
+0.9116 0 TD
+[(y)-311.5(ejecuta)]TJ
+/TT8 1 Tf
+3.9541 0 TD
+(execl)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(.)Tj
+-42.9463 -1.2 TD
+0.0645 Tw
+(Esta llamada)Tj
+/TT4 1 Tf
+5.5157 0 TD
+0 Tw
+[(borr)15(a)]TJ
+/TT6 1 Tf
+2.5778 0 TD
+-0.0002 Tc
+0.0651 Tw
+[(por completo el contenido de la memoria del proceso hijo y car)17.8(ga un)-314.6(nue)24.8(v)19.8(o)19.8( )-19.5(programa)]TJ
+-8.0935 -1.2 TD
+0 Tc
+0 Tw
+(desde)Tj
+/TT8 1 Tf
+2.5337 0 TD
+(/bin/ls)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.0069 Tw
+[(,)-256.9(saltando a la dirección de memoria en que está su punto de entrada \()]TJ
+/TT8 1 Tf
+27.8915 0 TD
+0 Tw
+(main)Tj
+/TT6 1 Tf
+2.6573 0 TD
+(para)Tj
+/TT8 1 Tf
+1.9776 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(\))-256.9(y)-256.9(uti-)]TJ
+-40.4609 -1.2 TD
+0.0064 Tw
+[(lizando una pila que tiene ar)18(gumentos)]TJ
+/TT8 1 Tf
+15.4598 0 TD
+0 Tw
+(argc)Tj
+/TT6 1 Tf
+2.6567 0 TD
+(y)Tj
+/TT8 1 Tf
+0.7563 0 TD
+(argv)Tj
+/TT6 1 Tf
+2.6567 0 TD
+0.0063 Tw
+(para dicha llamada)Tj
+/TT4 1 Tf
+7.8202 0 TD
+0 Tw
+(copiados)Tj
+/TT6 1 Tf
+3.8671 0 TD
+0.0063 Tw
+[(a)-256.3(partir de los que se han)]TJ
+-33.2167 -1.2 TD
+0 Tw
+(suministrado a)Tj
+/TT8 1 Tf
+6.1104 0 TD
+(execl)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(.)Tj
+-9.1108 -2.4 TD
+0.005 Tw
+[(Si todo v)25(a)-255(bien,)]TJ
+/TT8 1 Tf
+6.5223 0 TD
+0 Tw
+(execl)Tj
+/TT4 1 Tf
+3.2555 0 TD
+0.005 Tw
+[(no r)37(etorna)]TJ
+/TT6 1 Tf
+4.218 0 TD
+0.0051 Tw
+[(.)-505(¡Normal!, el programa original que hizo la llamada ya no está y no hay)]TJ
+-13.9958 -1.2 TD
+0.0262 Tw
+[(nadie a quién retornar)55(.)-276.3(Estamos ejecutando un nue)25(v)20(o)20( )-20.1(programa desde el comienzo, y este terminará cuando)]TJ
+T*
+0 Tw
+(llame a)Tj
+/TT8 1 Tf
+3.165 0 TD
+(exit)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(\(o)Tj
+/TT8 1 Tf
+1.083 0 TD
+(main)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(retorne y se llame a)Tj
+/TT8 1 Tf
+8.0796 0 TD
+(exit)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(\).)Tj
+-20.0288 -2.4 TD
+[(Si ejecutamos el programa, podemos v)15(er una salida similar a esta:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 406.8 Tm
+(unix$)Tj
+0 -1.5 TD
+(ls started)Tj
+T*
+(total 112)Tj
+T*
+[(-rw-r--r-- )-600(1)-600(nemo )-600(staff)-2400(10 Oct 21)-1200(2014 afile)]TJ
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 1018)-600(Oct )600(28)-1200(2014 )600(guide)]TJ
+T*
+0 Tw
+[(-rw-r--r-- )-600(1)-600(nemo )-600(staff)-1800(363 Aug 25 12:11 runls.c)]TJ
+T*
+0.6 Tw
+[(-rwxr-xr-x 1)-600(nemo staff 8600)-600(Aug )600(25 )600(12:11 )600(runls)]TJ
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 304.8 Tm
+0.135 Tw
+[(La pre)15(gunta es... ¿tendremos siempre esta salida? Piensa que son procesos independientes, así pues ¿no)]TJ
+0 -1.2 TD
+0 Tw
+(podría aparecer el mensaje ")Tj
+/TT8 1 Tf
+11.3462 0 TD
+(ls started)Tj
+/TT6 1 Tf
+6.001 0 TD
+[(")-250(del proceso padre en otro sitio?)-500(Piénsalo.)]TJ
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+14 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+15 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+16 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+17 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+18 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 667 0 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 556 278 333 0 0 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 14 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 120
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 0 0 
+0 0 500 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 278 0 500 278 278 444 278 0 500 500 
+500 0 389 389 278 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 15 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 0 
+0 0 500 0 0 0 0 0 0 0 278 0 0 0 0 444 
+0 722 0 0 722 611 0 0 722 333 0 0 611 0 722 722 
+556 0 0 556 0 722 722 0 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 0 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 16 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 0 600 600 600 0 0 0 600 600 600 0 600 600 600 600 
+600 600 600 600 600 600 600 0 600 0 600 600 600 0 600 0 
+0 600 0 0 0 0 0 0 0 0 0 0 600 0 600 600 
+0 0 0 0 0 600 0 0 0 0 0 600 600 600 0 0 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 0 600 600 600 600 600 600 600 0 0 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 17 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 18 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+19 0 obj
+<<
+/S /D
+>>
+endobj
+20 0 obj
+<<
+/Nums [0 19 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R]
+/Count 2
+/MediaBox [0 0 612 792]
+>>
+endobj
+21 0 obj
+<<
+/CreationDate (D:20160905151714+02'00')
+/ModDate (D:20160905151714+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+22 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 20 0 R
+>>
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000011904 00000 n 
+0000000016 00000 n 
+0000003072 00000 n 
+0000009488 00000 n 
+0000010142 00000 n 
+0000010546 00000 n 
+0000011271 00000 n 
+0000011734 00000 n 
+0000008361 00000 n 
+0000012137 00000 n 
+0000011985 00000 n 
+0000003211 00000 n 
+0000008243 00000 n 
+0000008501 00000 n 
+0000008703 00000 n 
+0000008903 00000 n 
+0000009100 00000 n 
+0000009291 00000 n 
+0000012069 00000 n 
+0000012097 00000 n 
+0000012226 00000 n 
+0000012349 00000 n 
+trailer
+<<
+/Size 23
+/Root 22 0 R
+/Info 21 0 R
+/ID [<f80b2c6268480329ca9327a6800eecf0><f80b2c6268480329ca9327a6800eecf0>]
+>>
+startxref
+12419
+%%EOF

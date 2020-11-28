@@ -1,0 +1,1422 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3422
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 154.89 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Usando el shell)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Líneas)-250(y)-250(campos)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0313 Tw
+[(T)70(enemos toda una plétora de comandos que saben trabajar con )]TJ
+/TT7 1 Tf
+25.5667 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0313 Tw
+(cheros suponiendo que tienen líneas y que)Tj
+-26.1229 -1.2 TD
+0.0074 Tw
+[(cada una tiene una serie de campos.)-507.5(Muchos de los comandos que trabajan con líneas no requieren siquiera)]TJ
+T*
+0.0054 Tw
+[(que tengan campos o cualquier otra estructura predeterminada. V)111(amos a continuar nuestro script de ejemplo)]TJ
+T*
+0 Tw
+(centrándonos ahora en este tipo de tarea: procesar líneas y campos.)Tj
+0 -2.4 TD
+[(T)70(eníamos ya, para nuestro )]TJ
+/TT7 1 Tf
+10.7318 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT9 1 Tf
+8 0 0 8 133 479.4 Tm
+(shell /bin/sh)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+/TT6 1 Tf
+10 0 0 10 72 425.4 Tm
+(un comando capaz de escribir las líneas que corresponden a directorios:)Tj
+/TT9 1 Tf
+8 0 0 8 133 407.4 Tm
+(unix$)Tj
+T*
+(unix$ egrep ’ˆ[a-z]+dir ’ config)Tj
+T*
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 317.4 Tm
+0.0425 Tw
+(Ahora nos gustaría tener la lista de directorios mencionados en dichas líneas. Lo primero que tenemos que)Tj
+0 -1.2 TD
+0.0673 Tw
+(hacer es pensar que la entrada que tenemos es un )Tj
+/TT7 1 Tf
+20.4977 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0673 Tw
+(chero con líneas que tienen dos campos separados por)Tj
+-21.0539 -1.2 TD
+0.0182 Tw
+[(blanco. En tal caso basta con utilizar un programa capaz de escribir el se)15(gundo campo. Hay muchas formas)]TJ
+T*
+0.003 Tw
+(de hacer esto. Una es utilizar)Tj
+/TT4 1 Tf
+11.8183 0 TD
+0 Tw
+(cut\(1\))Tj
+/TT6 1 Tf
+2.3877 0 TD
+0.253 Tc
+[(.E)253(l)]TJ
+/TT7 1 Tf
+1.6447 0 TD
+0 Tc
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.1968 0 TD
+(-f)Tj
+/TT6 1 Tf
+1.4532 0 TD
+(de)Tj
+/TT9 1 Tf
+1.1968 0 TD
+(cut)Tj
+/TT6 1 Tf
+2.0533 0 TD
+0.003 Tw
+[(admite como ar)18(gumento el número de campo que se)]TJ
+-22.307 -1.2 TD
+0 Tw
+(desea, comenzando a contar desde)Tj
+/TT9 1 Tf
+13.9932 0 TD
+(1)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(.¡Pero atención!)Tj
+/TT9 1 Tf
+8 0 0 8 133 251.4 Tm
+(unix$ egrep ’ˆ[a-z]+dir ’ config | cut -f2)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 185.4 Tm
+0.0828 Tw
+(Por omisión)Tj
+/TT9 1 Tf
+5.2774 0 TD
+0 Tw
+(cut)Tj
+/TT6 1 Tf
+2.1331 0 TD
+0.0828 Tw
+[(utiliza el tab)20(ulador como carácter separador de campos y)65(,)-332.9(en)-332.9(nuestro caso, teníamos un)]TJ
+-7.4105 -1.2 TD
+0 Tw
+[(espacio en blanco y no un tab)20(ulador separando los campos. En realidad queremos)]TJ
+/TT9 1 Tf
+8 0 0 8 133 155.4 Tm
+(unix$ egrep ’ˆ[a-z]+dir ’ config | cut ’-d ’ -f2)Tj
+0 -1.5 TD
+(/usr/lib)Tj
+T*
+(/usr/bin)Tj
+T*
+(/log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 89.4 Tm
+0.0244 Tw
+(que utiliza la opción)Tj
+/TT9 1 Tf
+8.4838 0 TD
+0 Tw
+(-d)Tj
+/TT6 1 Tf
+1.4746 0 TD
+(de)Tj
+/TT9 1 Tf
+1.2182 0 TD
+(cut)Tj
+/TT6 1 Tf
+2.0747 0 TD
+0.0244 Tw
+(para indicarle que el carácter escrito tras la opción es el que deseamos uti-)Tj
+-13.2514 -1.2 TD
+0 Tw
+[(lizar como separador)55(.)-250(¡)0(Y)100(a)100( )-100(tenemos una lista de directorios!)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 4745
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.0203 Tw
+(No obstante,)Tj
+/TT9 1 Tf
+5.3453 0 TD
+0 Tw
+(cut)Tj
+/TT6 1 Tf
+2.0706 0 TD
+0.0203 Tw
+(no es la mejor opción en la mayoría de los casos. Pensemos en obtener la lista de dueños)Tj
+-7.4159 -1.2 TD
+0 Tw
+(de los )Tj
+/TT7 1 Tf
+2.6108 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros del directorio actual... Sabiendo que podemos usar un listado lar)18(go en)]TJ
+/TT9 1 Tf
+30.9454 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(como en)Tj
+/TT9 1 Tf
+8 0 0 8 133 678 Tm
+(unix$ ls -l config)Tj
+0 -1.5 TD
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 58)-600(Aug )600(28 )600(11:27 )600(config)]TJ
+/TT6 1 Tf
+10 0 0 10 72 648 Tm
+0 Tw
+(podríamos intentar usar algo como)Tj
+/TT9 1 Tf
+8 0 0 8 133 630 Tm
+(unix$ ls -l config | cut -f3)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 58)-600(Aug )600(28 )600(11:27 )600(config)]TJ
+/TT6 1 Tf
+10 0 0 10 72 600 Tm
+0 Tw
+(¡Pero)Tj
+/TT9 1 Tf
+2.416 0 TD
+(cut)Tj
+/TT6 1 Tf
+2.0503 0 TD
+[(escribiría todos los campos! El problema de nue)25(v)20(o)20( )-20(es)-250(el)-250(separador entre un campo y otro.)]TJ
+-4.4663 -2.4 TD
+0.0323 Tw
+(El programa que menos problemas suele dar para seleccionar campos es)Tj
+/TT4 1 Tf
+29.4827 0 TD
+0 Tw
+(awk\(1\))Tj
+/TT6 1 Tf
+2.7769 0 TD
+0.0323 Tw
+[(.)-282.3(E)0(s)-282.3(u)0(n)-282.3(lenguaje de progra-)]TJ
+-32.2596 -1.2 TD
+0.0808 Tw
+(mación para manipular )Tj
+/TT7 1 Tf
+9.7107 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0808 Tw
+(cheros con aspecto de tabla, pero tiene muchos programas de una sóla línea que)Tj
+-10.2668 -1.2 TD
+0 Tw
+(resultan útiles. En este caso,)Tj
+/TT9 1 Tf
+8 0 0 8 133 534 Tm
+(unix$ ls -l config | awk ’{print $3}’)Tj
+0 -1.5 TD
+(nemo)Tj
+/TT6 1 Tf
+10 0 0 10 72 504 Tm
+[(consigue el efecto que b)20(uscamos. El programa signi)]TJ
+/TT7 1 Tf
+20.7515 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca ")Tj
+/TT4 1 Tf
+1.5459 0 TD
+[(en todas las líneas, imprime el ter)37(cer campo)]TJ
+/TT6 1 Tf
+17.7379 0 TD
+(".)Tj
+-40.5914 -2.4 TD
+0.1382 Tw
+[(Lo b)20(ueno de)]TJ
+/TT9 1 Tf
+5.6431 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.1885 0 TD
+0.1381 Tw
+[(es que utiliza una e)15(xpresión re)15(gular como separador de campos. Y puedes cambiarla)]TJ
+-7.8316 -1.2 TD
+0 Tw
+[(escribiendo la que quieras como ar)18(gumento de la opción)]TJ
+/TT9 1 Tf
+22.7799 0 TD
+(-F)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 450 Tm
+(awk ’-F[: ]+’ ’{print $3}’)Tj
+/TT6 1 Tf
+10 0 0 10 72 432 Tm
+0.0056 Tw
+(imprime el tercer campo suponiendo que un campo está separado de otro por uno o mas caracteres que sean)Tj
+0 -1.2 TD
+0 Tw
+(bien un espacio en blanco o bien dos puntos.)Tj
+0 -2.4 TD
+0.0271 Tw
+[(V)129(olviendo a nuestro problema, una v)15(ez tenemos los directorios mencionados en nuestro )]TJ
+/TT7 1 Tf
+35.5884 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0271 Tw
+(chero de con)Tj
+/TT7 1 Tf
+5.1626 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gu-)Tj
+-41.8633 -1.2 TD
+0.0436 Tw
+[(ración, estaría bien tenerlos ordenados y sin tener duplicados en la lista. P)15(ara conse)15(guirlo podemos utilizar)]TJ
+T*
+0.0067 Tw
+(el comando)Tj
+/TT4 1 Tf
+4.9006 0 TD
+0 Tw
+(sort\(1\))Tj
+/TT6 1 Tf
+2.9789 0 TD
+0.0066 Tw
+[(que sabe ordenar líneas utilizando campos como cla)20(v)15(e)15( )-15(\(o)-256.6(la)-256.6(línea entera\). Otro comando)]TJ
+-7.8795 -1.2 TD
+0 Tw
+(relacionado es)Tj
+/TT9 1 Tf
+5.9971 0 TD
+(uniq\(1\))Tj
+/TT6 1 Tf
+4.2007 0 TD
+[(,)-250(que elimina duplicados de una entrada ya ordenada. Así pues,)]TJ
+/TT9 1 Tf
+8 0 0 8 133 342 Tm
+(unix$ egrep ’ˆ[a-z]+dir ’ config | awk ’{print $1}’ | sort | uniq)Tj
+0 -1.5 TD
+(bindir)Tj
+T*
+(libdir)Tj
+T*
+(logdir)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 276 Tm
+(escribe los directorios ordenados y sin duplicados.)Tj
+0 -2.4 TD
+0.0388 Tw
+[(Esto resulta útil también al recolectar nombres o v)25(alores que aparecen en cualquier otro sitio. Por ejemplo,)]TJ
+0 -1.2 TD
+0 Tw
+(para obtener la lista de dueños de )Tj
+/TT7 1 Tf
+13.5781 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros en el directorio actual:)Tj
+/TT9 1 Tf
+8 0 0 8 133 222 Tm
+(unix$ ls -l * | awk ’{print $3}’ | sort -u)Tj
+0 -1.5 TD
+(nemo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 180 Tm
+(El )Tj
+/TT7 1 Tf
+1.2437 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2988 0 TD
+(-u)Tj
+/TT6 1 Tf
+1.5552 0 TD
+(de)Tj
+/TT9 1 Tf
+1.2988 0 TD
+(sort)Tj
+/TT6 1 Tf
+2.7554 0 TD
+0.105 Tw
+(hace lo mismo que)Tj
+/TT9 1 Tf
+8.1958 0 TD
+0 Tw
+(uniq)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1049 Tw
+[(.)-354.9(¡)0(Y)100(a)100( )-100(tenemos algo que podríamos incluso guardar en una)]TJ
+-19.3043 -1.2 TD
+0 Tw
+[(v)25(ariable de entorno!)]TJ
+/TT9 1 Tf
+8 0 0 8 133 150 Tm
+(unix$ owners=‘ls -l * | awk ’{print $3}’ | sort -u‘)Tj
+0 -1.5 TD
+(unix$ echo $owners)Tj
+T*
+(nemo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 84 Tm
+[(De hecho, v)25(amos a hacer justo con nuestros directorios, y ya podemos v)15(er si e)15(xisten o no...)]TJ
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 2632
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ dirs=‘egrep ’ˆ[a-z]+dir ’ config | awk ’{print $1}’ | sort | uniq‘)Tj
+0 -1.5 TD
+(unix$ for d in $dirs ; do)Tj
+T*
+[(>)-2400(i)0(f)-600(test ! -d $d ; then)]TJ
+T*
+[(>)-4800(echo no dir $d)]TJ
+T*
+2.4 Tc
+[(>f)2400(i)]TJ
+T*
+0 Tc
+[(>)-2400(done)]TJ
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 618 Tm
+[(¡Bien, todos los directorios e)15(xisten!, ¡Problema resuelto!)]TJ
+0 -2.4 TD
+0.0228 Tw
+(Recuerda que es el shell el que escribe los ")Tj
+/TT9 1 Tf
+17.6901 0 TD
+0 Tw
+(>)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0229 Tw
+[(")-272.8(para indicarnos que es preciso escribir más líneas para com-)]TJ
+-18.2902 -1.2 TD
+0.0632 Tw
+[(pletar el comando. Hemos usado el b)20(ucle)]TJ
+/TT9 1 Tf
+17.1392 0 TD
+0 Tw
+(for)Tj
+/TT6 1 Tf
+2.1135 0 TD
+0.0632 Tw
+(que vimos anteriormente y que ejecuta los comandos entre)Tj
+/TT9 1 Tf
+-19.2527 -1.2 TD
+0 Tw
+(do)Tj
+/TT6 1 Tf
+1.5445 0 TD
+(y)Tj
+/TT9 1 Tf
+0.8443 0 TD
+(done)Tj
+/TT6 1 Tf
+2.7447 0 TD
+0.0943 Tw
+(para cada palabra que sigue a)Tj
+/TT9 1 Tf
+12.5591 0 TD
+0 Tw
+(in)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0944 Tw
+[(.)-594.4(E)0(n)-344.4(cada iteración, la v)25(ariable cuyo nombre precede a)]TJ
+/TT9 1 Tf
+23.1021 0 TD
+0 Tw
+(in)Tj
+/TT6 1 Tf
+-41.9949 -1.2 TD
+[(toma como v)25(alor cada una de las palabras que siguen a)]TJ
+/TT9 1 Tf
+22.161 0 TD
+(in)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-23.3612 -2.4 TD
+[(T)80(ambién hemos utilizado el comando)]TJ
+/TT9 1 Tf
+15.2213 0 TD
+(if)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(que ejecuta en este caso)Tj
+/TT9 1 Tf
+8 0 0 8 133 516 Tm
+(test ! -d $d)Tj
+/TT6 1 Tf
+10 0 0 10 72 498 Tm
+0.0022 Tw
+[(como condición y)65(,)-252.2(de)-252.2(ser cierta, ejecuta los comandos en el)]TJ
+/TT9 1 Tf
+23.9226 0 TD
+0 Tw
+(then)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0021 Tw
+[(.)-252.2(Aunque no lo hemos necesitado, es posi-)]TJ
+-26.323 -1.2 TD
+0 Tw
+(ble escribir)Tj
+/TT9 1 Tf
+8 0 0 8 133 468 Tm
+(if ....)Tj
+0 -1.5 TD
+(then)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(else)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(fi)Tj
+/TT6 1 Tf
+10 0 0 10 72 390 Tm
+(como comando.)Tj
+0 -2.4 TD
+0.0383 Tw
+(El comando)Tj
+/TT9 1 Tf
+5.1308 0 TD
+0 Tw
+(sort)Tj
+/TT6 1 Tf
+2.6887 0 TD
+0.0384 Tw
+(merece que le dediquemos algo más de tiempo. Sabe ordenar la entrada asumiendo que)Tj
+-7.8195 -1.2 TD
+0 Tw
+[(son cadenas de te)15(xto o bien ordenarla se)15(gun su v)25(alor numérico \(y de algunas otras formas\).)-500(Por ejemplo,)]TJ
+/TT9 1 Tf
+8 0 0 8 133 336 Tm
+(unix$ seq 10 | sort)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(10)Tj
+T*
+(2)Tj
+T*
+(3)Tj
+T*
+(4)Tj
+T*
+(5)Tj
+T*
+(6)Tj
+T*
+(7)Tj
+T*
+(8)Tj
+T*
+(9)Tj
+/TT6 1 Tf
+10 0 0 10 72 198 Tm
+[(no produce el efecto que podrías esperar)55(.)-250(Ahora bien...)]TJ
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 3539
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 10 | sort -n)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(2)Tj
+T*
+(3)Tj
+T*
+(4)Tj
+T*
+(5)Tj
+T*
+(6)Tj
+T*
+(7)Tj
+T*
+(8)Tj
+T*
+(9)Tj
+T*
+(10)Tj
+/TT6 1 Tf
+10 0 0 10 72 570 Tm
+(con la opción)Tj
+/TT9 1 Tf
+5.6372 0 TD
+(-n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5 0 TD
+(sort)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(ordena numéricamente.)Tj
+-9.9878 -2.4 TD
+[(Sea numérica o alf)10(abéticamente, podemos pedir una ordenación en orden in)40(v)15(erso:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 528 Tm
+(unix$ seq 5 | sort -nr)Tj
+0 -1.5 TD
+(5)Tj
+T*
+(4)Tj
+T*
+(3)Tj
+T*
+(2)Tj
+T*
+(1)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 438 Tm
+0.0044 Tw
+(Aquí utilizamos ambos )Tj
+/TT7 1 Tf
+9.5401 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0044 Tw
+[(ags para indicar que se desea una ordenación numérica y además en orden in)40(v)15(erso.)]TJ
+-10.0962 -2.4 TD
+0.043 Tw
+(Además podemos pedir a)Tj
+/TT9 1 Tf
+10.5582 0 TD
+0 Tw
+(sort)Tj
+/TT6 1 Tf
+2.6934 0 TD
+0.043 Tw
+[(que utilice como cla)20(v)15(e)15( )-15.1(para ordenar sólo alguno de los campos, por ejem-)]TJ
+-13.2516 -1.2 TD
+0 Tw
+(plo)Tj
+/TT9 1 Tf
+8 0 0 8 133 384 Tm
+(sort -k3,5)Tj
+/TT6 1 Tf
+10 0 0 10 72 366 Tm
+0.0842 Tw
+(ordena utilizando los campos del 3 al 5 \(contando desde uno\). Consulta su página de manual en lugar de)Tj
+T*
+0 Tw
+(recordar todo esto.)Tj
+0 -2.4 TD
+(¿Recuerdas el comando)Tj
+/TT4 1 Tf
+9.7456 0 TD
+(du\(1\))Tj
+/TT6 1 Tf
+2.166 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(?)-250.1(!Podemos v)14.9(er dónde estamos gastando el espacio en disco!)]TJ
+/TT9 1 Tf
+8 0 0 8 133 312 Tm
+0 Tc
+0 Tw
+(unix$ du -s * | sort -nr | sed 5q)Tj
+0 -1.5 TD
+1.8 Tw
+(23824 zx-spe)Tj
+T*
+(6088 wr_pic1.eps)Tj
+T*
+(6088 inkdump.eps)Tj
+T*
+(6088 clive_pic3.eps)Tj
+T*
+(5768 zx)Tj
+/TT6 1 Tf
+10 0 0 10 72 234 Tm
+0.0521 Tw
+(Primero, hacemos que)Tj
+/TT9 1 Tf
+9.3204 0 TD
+0 Tw
+(du)Tj
+/TT6 1 Tf
+1.5023 0 TD
+0.0521 Tw
+(liste el total \(opción)Tj
+/TT9 1 Tf
+8.4286 0 TD
+0 Tw
+(-s)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT4 1 Tf
+0.5521 0 TD
+(summary)Tj
+/TT6 1 Tf
+3.6665 0 TD
+0.0522 Tw
+[(\))-302.1(para todos los )]TJ
+/TT7 1 Tf
+6.5964 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0522 Tw
+(cheros y directorios. Orden-)Tj
+-31.8226 -1.2 TD
+0.0023 Tw
+[(amos entonces su salida numéricamente en orden in)40(v)15(erso y nos quedamos con las 5 primeras líneas. Son los)]TJ
+T*
+0 Tw
+(5)Tj
+/TT7 1 Tf
+0.7752 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0252 Tw
+(cheros o directorios en que estamos usando más disco. Ahora podemos pensar qué hacemos con ellos si)Tj
+-1.3314 -1.2 TD
+0 Tw
+(necesitamos espacio...)Tj
+0 -2.4 TD
+(¿Y si queremos los que menos espacio usan? Podríamos quedarnos con las últimas 5 líneas, por ejemplo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 156 Tm
+(unix$ du -s * | sort -nr | tail -5)Tj
+/TT6 1 Tf
+10 0 0 10 72 138 Tm
+(utiliza)Tj
+/TT4 1 Tf
+2.8145 0 TD
+(tail\(1\))Tj
+/TT6 1 Tf
+2.815 0 TD
+0.0655 Tw
+(que escribe las últimas)Tj
+/TT4 1 Tf
+9.5926 0 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.8155 0 TD
+0.0654 Tw
+(líneas de un )Tj
+/TT7 1 Tf
+5.2226 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0654 Tw
+[(chero. Aunque habría sido mejor no in)40(v)15(ertir la orde-)]TJ
+-21.8163 -1.2 TD
+0 Tw
+(nación en sort:)Tj
+/TT9 1 Tf
+8 0 0 8 133 108 Tm
+(unix$ du -s * | sort -n | sed 5q)Tj
+/TT6 1 Tf
+10 0 0 10 72 78 Tm
+0.0262 Tw
+(El comando)Tj
+/TT9 1 Tf
+5.1066 0 TD
+0 Tw
+(tail)Tj
+/TT6 1 Tf
+2.6766 0 TD
+0.0262 Tw
+(tiene otro uso para imprimir las últimas líneas pero empezando a contar desde el princi-)Tj
+-7.7832 -1.2 TD
+0 Tw
+(pio. Esto es útil, por ejemplo, para eliminar las primeras líneas de un )Tj
+/TT7 1 Tf
+27.7148 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 2705
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 5 | tail +3)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(4)Tj
+T*
+(5)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 630 Tm
+0.0276 Tw
+[(T)80(ambién es posible seleccionar determinados campos y/o reordenarlos.)-527.6(Por ejemplo, con la opción)]TJ
+/TT9 1 Tf
+40.2673 0 TD
+0 Tw
+(-l)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5276 0 TD
+(ps)Tj
+/TT6 1 Tf
+-41.9951 -1.2 TD
+[(produce un listado lar)18(go...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 600 Tm
+(unix$ man ps)Tj
+0 -1.5 TD
+(...)Tj
+3 -1.5 TD
+[(-l )-3000(Display)-600(information associated with the following keywords:)]TJ
+4.8 -1.5 TD
+(uid, pid, ppid, flags, cpu, pri, nice, vsz=SZ, rss, wchan,)Tj
+T*
+(state=S, paddr=ADDR, tty, time, and command=CMD.)Tj
+-7.8 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 522 Tm
+0.0521 Tw
+[(P)15(ara cada item,)]TJ
+/TT9 1 Tf
+6.527 0 TD
+0 Tw
+(ps)Tj
+/TT6 1 Tf
+1.5023 0 TD
+0.0521 Tw
+(produce una columna separada de las demás por espacio en blanco. Así pues podemos)Tj
+-8.0293 -1.2 TD
+0 Tw
+(utilizar)Tj
+/TT9 1 Tf
+3.0847 0 TD
+(awk)Tj
+/TT6 1 Tf
+2.053 0 TD
+0.0027 Tw
+(para imprimir el pid, tamaño de la memoria física \()Tj
+/TT4 1 Tf
+20.4613 0 TD
+[(r)37(esident set size)]TJ
+/TT6 1 Tf
+6.3009 0 TD
+[(,)-252.7(o)-252.7(rss\) y nombre de los pro-)]TJ
+-31.9 -1.2 TD
+0 Tw
+(cesos utilizando)Tj
+/TT9 1 Tf
+8 0 0 8 133 480 Tm
+(unix$ ps -l | awk ’{printf\("%s\\t%s\\t%s\\n", $2, $15, $9\);}’)Tj
+0 -1.5 TD
+1.8 Tw
+(PID CMD RSS)Tj
+T*
+(448 -bash 372)Tj
+T*
+(519 acme 28)Tj
+T*
+(526 \(fontsrv\) 0)Tj
+T*
+(527 acme 104)Tj
+T*
+(528 acme 5576)Tj
+T*
+(534 9pserve 24)Tj
+T*
+0 Tw
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 354 Tm
+0.0278 Tw
+[(Como puedes v)15(e)0(r)40(,)]TJ
+/TT9 1 Tf
+7.5269 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.0781 0 TD
+0.0278 Tw
+(dispone de)Tj
+/TT9 1 Tf
+4.6103 0 TD
+0 Tw
+(printf)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0278 Tw
+[(.)-277.8(Dicha función se utiliza prácticamente como la de C. En nue-)]TJ
+-17.8159 -1.2 TD
+0.0796 Tw
+(stro caso optamos por imprimir las columnas 2, 15, y 9 en ese orden. Utilizar)Tj
+/TT9 1 Tf
+32.2428 0 TD
+0 Tw
+(cut)Tj
+/TT6 1 Tf
+2.1299 0 TD
+0.0796 Tw
+(sería más complicado)Tj
+-34.3727 -1.2 TD
+0 Tw
+(dado que hay múltiples blancos entre un campo y el siguiente.)Tj
+0 -2.4 TD
+0.0067 Tw
+(¿Qué proceso está utilizando más memoria? Bastar ordenar numéricamente por el tercer campo, de mayor a)Tj
+0 -1.2 TD
+0 Tw
+(menor y quedarse con la primera línea.)Tj
+/TT9 1 Tf
+8 0 0 8 133 276 Tm
+(unix$ ps -l | awk ’{printf\("%s\\t%s\\t%s\\n", $2, $15, $9\);}’ | \\)Tj
+0 -1.5 TD
+[(>)-2400(sort -nr -k3 | sed 1q)]TJ
+T*
+1.8 Tw
+(91136 acme 52920)Tj
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 222 Tm
+[(P)15(arece que)]TJ
+/TT9 1 Tf
+4.5934 0 TD
+(acme)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(,)-250(con el pid 91136.)]TJ
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 0 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 389 0 0 667 0 0 778 
+0 0 0 556 0 722 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 0 556 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 23 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 237
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 250 0 0 0 
+0 500 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 500 444 0 0 0 278 0 444 278 722 500 500 
+500 0 389 389 278 500 0 667 444 444 389 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 24 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+0 500 500 500 500 500 500 0 0 500 278 0 0 0 0 444 
+0 722 667 667 722 611 0 0 722 0 0 0 611 889 722 722 
+556 722 667 556 611 722 722 0 0 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 0 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 25 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 26 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 600 600 0 600 600 0 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 0 600 600 0 
+0 600 0 600 600 0 600 0 0 600 0 0 0 600 0 0 
+600 0 600 600 0 0 0 0 0 0 600 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 0 
+0 0 0 0 0 0 0 0 600 0 0 0 0 0 0 0 
+0 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 27 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+28 0 obj
+<<
+/S /D
+>>
+endobj
+29 0 obj
+<<
+/Nums [0 28 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R]
+/Count 5
+/MediaBox [0 0 612 792]
+>>
+endobj
+30 0 obj
+<<
+/CreationDate (D:20160905151718+02'00')
+/ModDate (D:20160905151718+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+31 0 obj
+<<
+/Type /Catalog
+/Pages 10 0 R
+/PageLabels 29 0 R
+>>
+endobj
+xref
+0 32
+0000000000 65535 f 
+0000021841 00000 n 
+0000000016 00000 n 
+0000003490 00000 n 
+0000019072 00000 n 
+0000019728 00000 n 
+0000020375 00000 n 
+0000021126 00000 n 
+0000021300 00000 n 
+0000017945 00000 n 
+0000022326 00000 n 
+0000021922 00000 n 
+0000003629 00000 n 
+0000008427 00000 n 
+0000022006 00000 n 
+0000008556 00000 n 
+0000011241 00000 n 
+0000022090 00000 n 
+0000011348 00000 n 
+0000014940 00000 n 
+0000022174 00000 n 
+0000015069 00000 n 
+0000017827 00000 n 
+0000018085 00000 n 
+0000018287 00000 n 
+0000018487 00000 n 
+0000018684 00000 n 
+0000018881 00000 n 
+0000022258 00000 n 
+0000022286 00000 n 
+0000022436 00000 n 
+0000022559 00000 n 
+trailer
+<<
+/Size 32
+/Root 31 0 R
+/Info 30 0 R
+/ID [<d17879fb7a5a63fdfdc9f84517e9efb0><d17879fb7a5a63fdfdc9f84517e9efb0>]
+>>
+startxref
+22629
+%%EOF

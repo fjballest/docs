@@ -1,0 +1,2076 @@
+%PDF-1.3
+%גדֿ׃
+2 0 obj
+<<
+/Length 4452
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 171.012 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducciףn a Sistemas Operati)10(v)10(os: Pr)18(ocesos)]TJ
+/TT4 1 Tf
+10 0 0 10 273.135 633 Tm
+(Clip 19)Tj
+-3.2055 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+[(1. )-250(Pr)18(ogramas y pr)18(ocesos)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0412 Tw
+[(A)-291.2(u)0(n)-291.2(programa en ejecuciףn se lo denomina)]TJ
+/TT4 1 Tf
+18.2124 0 TD
+0 Tw
+[(pr)45(oceso)]TJ
+/TT6 1 Tf
+3.121 0 TD
+[(.)-291.2(E)0(l)-291.2(nombre)]TJ
+/TT4 1 Tf
+5.067 0 TD
+[(pr)45(o)10(g)0(r)15(ama)]TJ
+/TT6 1 Tf
+4.2217 0 TD
+0.0411 Tw
+(no se utiliza para referirse a un)Tj
+-30.6221 -1.2 TD
+0.0449 Tw
+(programa que estב ejecutando dado que ambos conceptos \(programa y proceso\) son diferentes. La diferen-)Tj
+T*
+-0.0001 Tc
+0.0346 Tw
+(cia es la misma que hay entre una receta de cocina para hacer galletas y una galleta hecha con la receta. El)Tj
+T*
+0 Tc
+0.0126 Tw
+[(programa es תnicamente una serie de datos \(con las instrucciones y datos para ejecutarlo\) y no es algo vi)25(v)20(o)0(.)]TJ
+T*
+0.0461 Tw
+[(Por otro lado, un proceso es un programa que estב vi)25(v)20(o)0(.)-296.2(T)35(iene una serie de re)15(gistros, incluyendo un conta-)]TJ
+T*
+0.0727 Tw
+(dor de programa, y utiliza una pila para hacer llamadas a procedimiento \(y al sistema\). Esto signi)Tj
+/TT7 1 Tf
+39.983 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0727 Tw
+(ca que)Tj
+-40.5392 -1.2 TD
+0 Tw
+(un proceso tiene un)Tj
+/TT8 1 Tf
+8.0532 0 TD
+(ß)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(ujo de contr)45(ol)]TJ
+/TT6 1 Tf
+5.8154 0 TD
+(que ejecuta una instrucciףn tras otra, como ya sabes.)Tj
+-14.3686 -2.4 TD
+0.0598 Tw
+[(La diferencia queda clara si consideras que puedes ejecutar a la v)15(ez el mismo programa, v)25(arias v)15(eces. Por)]TJ
+0 -1.2 TD
+0 Tw
+(ejemplo, la )Tj
+/TT7 1 Tf
+4.6929 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(gura 1 muestra v)25(arias v)15(entanas que estבn ejecutando un shell.)]TJ
+ET
+q
+235 0 0 136 170.5 301.4 cm
+/Im1 Do
+Q
+BT
+/TT2 1 Tf
+10 0 0 10 97 289.4 Tm
+0.018 Tw
+(Figura 1:)Tj
+/TT4 1 Tf
+4.2577 0 TD
+[(V)111(arias ventanas ejecutando un shell. Hay solo un pr)45(o)10(g)0(r)15(ama per)45(o)-268(tenemos varios pr)45(ocesos.)]TJ
+/TT6 1 Tf
+-6.7577 -2.4 TD
+0.136 Tw
+(En ambos casos ejecutan el mismo programa: el que estב en)Tj
+/TT10 1 Tf
+25.6825 0 TD
+0 Tw
+(/bin/sh)Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.136 Tw
+[(.)-386(Pero, aunque hay un sףlo pro-)]TJ
+-29.8832 -1.2 TD
+0.129 Tw
+[(grama, tenemos v)25(arios procesos. Por ejemplo, si cambiamos de directorio en uno de ellos, el otro sigue)]TJ
+T*
+0.0196 Tw
+[(inalterado. Cada proceso tiene sus propias v)25(ariables en la memoria. Y)129(,)-269.6(aunque el programa es el mismo, los)]TJ
+T*
+0.0122 Tw
+[(v)25(alores de las v)25(ariables serבn en general diferentes en cada proceso.)-512.3(Esto es ob)15(vio si piensas que cada shell)]TJ
+T*
+0.0304 Tw
+(estarב haciendo una cosa distinta en un momento dado. No obstante, el programa tiene תnicamente un con-)Tj
+T*
+0 Tw
+[(junto de v)25(ariables declaradas.)]TJ
+0 -2.4 TD
+0.0039 Tw
+[(¿Quי es entonces un proceso? Piensa en los programas que has hecho.)-503.9(Elige uno de ellos. Cuando lo ejecu-)]TJ
+0 -1.2 TD
+0.0489 Tw
+(tas, comienza a ejecutar)Tj
+/TT4 1 Tf
+9.9954 0 TD
+0 Tw
+(independientemente)Tj
+/TT6 1 Tf
+8.2955 0 TD
+0.0488 Tw
+[(del resto de programas en el ordenador)55(.)-298.8(A)0(l)-298.8(programarlo, ¿has)]TJ
+-18.2909 -1.2 TD
+0.1242 Tw
+[(tenido que tener en cuenta otros programas como el shell, el sistema de v)15(entanas, el reloj, el na)]TJ
+40.008 0 TD
+-0.015 Tc
+0 Tw
+(veg )Tj
+1.4088 0 TD
+0 Tc
+(ador)Tj
+-41.4168 -1.2 TD
+0.0458 Tw
+[(web, ...? ¡Por supuesto que no! Harםa f)10(alta un cerebro del tamaסo de la luna para tener todo eso en cuenta.)]TJ
+T*
+0.096 Tw
+[(Dado que no e)15(xisten esos cerebros, el Sistema Operati)25(v)20(o)20( )-20.1(se)-346.1(ocupa de darte como abstracciףn el)]TJ
+/TT4 1 Tf
+39.8245 0 TD
+0 Tw
+[(pr)45(oceso)]TJ
+/TT6 1 Tf
+3.121 0 TD
+(.)Tj
+-42.9455 -1.2 TD
+0.0938 Tw
+(Gracias a esa abstracciףn puedes programar y ejecutar un programa olvidando el resto de programas que)Tj
+T*
+0.0466 Tw
+(tienes en el sistema: Los procesos son programas que ejecutan independientemente del resto de programas)Tj
+T*
+0 Tw
+(que estבn ejecutando en el sistema.)Tj
+0 -2.4 TD
+0.0547 Tw
+[(Cada proceso viene con la ilusiףn de tener su propio procesador)55(.)-554.8(Naturalmente, esto es mentira y es parte)]TJ
+0 -1.2 TD
+0.0201 Tw
+(de la abstracciףn. Cuando escribes un programa piensas que la mבquina ejecuta una instrucciףn tras otra. Y)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text /ImageC ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT8 8 0 R
+/TT10 9 0 R
+>>
+/XObject <<
+/Im1 10 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+14 0 obj
+<<
+/Length 9972
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-21.017 -3.6 TD
+0.0332 Tw
+(piensas que toda la mבquina es tuya. Bueno, en realidad, que toda la mבquina es del programa que ejecuta.)Tj
+0 -1.2 TD
+0 Tw
+(La implementaciףn de la abstracciףn)Tj
+/TT4 1 Tf
+14.9658 0 TD
+[(pr)45(oceso)]TJ
+/TT6 1 Tf
+3.371 0 TD
+[(es responsable de esta f)10(antasםa.)]TJ
+-18.3368 -2.4 TD
+0.073 Tw
+[(Cuando e)15(xisten v)25(arios procesadores o CPUs, v)25(arios programas pueden ejecutarse realmente a la v)15(ez, o)]TJ
+/TT4 1 Tf
+42.2517 0 TD
+0 Tw
+(en)Tj
+-42.2517 -1.2 TD
+[(par)15(alelo)]TJ
+/TT6 1 Tf
+3.3737 0 TD
+0.2804 Tw
+[(.)-530.5(H)0(o)10(y)10( )-10.1(en)-530.5(dםa, la mayorםa de los ordenadores disponen de mתltiples procesadores.)-780.4(Pero, en)]TJ
+-3.3737 -1.2 TD
+0.0108 Tw
+[(cualquier caso, se)15(guramente ejecutes mבs programas que procesadores tienes. ¡Al mismo tiempo! Cuenta el)]TJ
+T*
+0.0713 Tw
+[(nתmero de v)15(entanas que tienes abiertas y piensa que hay al menos un programa ejecutando por cada v)15(en-)]TJ
+T*
+0 Tw
+[(tana. Se)15(guro que no tienes tantos procesadores.)]TJ
+0 -2.4 TD
+0.024 Tw
+(Lo que sucede es que el sistema hace los ajustes necesarios para que cada programa pueda ejecutar durante)Tj
+0 -1.2 TD
+0 Tw
+(un tiempo. La )Tj
+/TT7 1 Tf
+5.832 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(gura 2 muestra la memoria del sistema con v)25(arios procesos ejecutando.)]TJ
+1.8768 -4.9 TD
+(...)Tj
+-1.75 -1.44 TD
+(addl bx, di)Tj
+0.0555 -1.44 TD
+(addl bx, si)Tj
+-0.028 -1.44 TD
+(subl $4, di)Tj
+-0.27 -1.44 TD
+[(mo)15(vl bx, cx)]TJ
+1.9925 -1.44 TD
+(...)Tj
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+122.43 462.03 m
+126.03 462.03 l
+129.99 462.03 m
+133.59 462.03 l
+137.55 462.03 m
+141.15 462.03 l
+145.23 462.03 m
+148.83 462.03 l
+152.79 462.03 m
+156.39 462.03 l
+160.47 462.03 m
+164.07 462.03 l
+168.03 462.03 m
+171.63 462.03 l
+175.59 462.03 m
+179.19 462.03 l
+183.15 462.03 m
+186.75 462.03 l
+190.83 462.03 m
+194.43 462.03 l
+194.43 465.63 l
+194.43 468.87 m
+194.43 472.47 l
+194.43 475.83 m
+194.43 479.43 l
+194.43 482.79 m
+194.43 486.39 l
+194.43 489.63 m
+194.43 493.23 l
+194.43 496.47 m
+194.43 500.07 l
+194.43 503.43 m
+194.43 507.03 l
+194.43 510.27 m
+194.43 513.87 l
+194.43 517.23 m
+194.43 520.83 l
+194.43 524.19 m
+194.43 527.79 l
+194.43 531.03 m
+194.43 534.63 l
+194.43 537.87 m
+194.43 541.47 l
+194.43 544.83 m
+194.43 548.43 l
+190.83 548.43 l
+186.75 548.43 m
+183.15 548.43 l
+179.19 548.43 m
+175.59 548.43 l
+171.63 548.43 m
+168.03 548.43 l
+164.07 548.43 m
+160.47 548.43 l
+156.39 548.43 m
+152.79 548.43 l
+148.83 548.43 m
+145.23 548.43 l
+141.15 548.43 m
+137.55 548.43 l
+133.59 548.43 m
+129.99 548.43 l
+126.03 548.43 m
+122.43 548.43 l
+122.43 544.83 l
+122.43 541.47 m
+122.43 537.87 l
+122.43 534.63 m
+122.43 531.03 l
+122.43 527.79 m
+122.43 524.19 l
+122.43 520.83 m
+122.43 517.23 l
+122.43 513.87 m
+122.43 510.27 l
+122.43 507.03 m
+122.43 503.43 l
+122.43 500.07 m
+122.43 496.47 l
+122.43 493.23 m
+122.43 489.63 l
+122.43 486.39 m
+122.43 482.79 l
+122.43 479.43 m
+122.43 475.83 l
+122.43 472.47 m
+122.43 468.87 l
+122.43 465.63 m
+122.43 462.03 l
+S
+BT
+10 0 0 10 225.955 509 Tm
+(sh)Tj
+-2.0685 -1.2 TD
+(\(proceso #1\))Tj
+15.818 4.2 TD
+(...)Tj
+-1.7225 -1.44 TD
+(cmpl si, di)Tj
+0.528 -1.44 TD
+(jls label)Tj
+-0.798 -1.44 TD
+[(mo)15(vl bx, cx)]TJ
+0.298 -1.44 TD
+(addl bx, si)Tj
+1.6945 -1.44 TD
+(...)Tj
+ET
+331.23 462.03 m
+334.83 462.03 l
+338.79 462.03 m
+342.39 462.03 l
+346.35 462.03 m
+349.95 462.03 l
+354.03 462.03 m
+357.63 462.03 l
+361.59 462.03 m
+365.19 462.03 l
+369.27 462.03 m
+372.87 462.03 l
+376.83 462.03 m
+380.43 462.03 l
+384.39 462.03 m
+387.99 462.03 l
+391.95 462.03 m
+395.55 462.03 l
+399.63 462.03 m
+403.23 462.03 l
+403.23 465.63 l
+403.23 468.87 m
+403.23 472.47 l
+403.23 475.83 m
+403.23 479.43 l
+403.23 482.79 m
+403.23 486.39 l
+403.23 489.63 m
+403.23 493.23 l
+403.23 496.47 m
+403.23 500.07 l
+403.23 503.43 m
+403.23 507.03 l
+403.23 510.27 m
+403.23 513.87 l
+403.23 517.23 m
+403.23 520.83 l
+403.23 524.19 m
+403.23 527.79 l
+403.23 531.03 m
+403.23 534.63 l
+403.23 537.87 m
+403.23 541.47 l
+403.23 544.83 m
+403.23 548.43 l
+399.63 548.43 l
+395.55 548.43 m
+391.95 548.43 l
+387.99 548.43 m
+384.39 548.43 l
+380.43 548.43 m
+376.83 548.43 l
+372.87 548.43 m
+369.27 548.43 l
+365.19 548.43 m
+361.59 548.43 l
+357.63 548.43 m
+354.03 548.43 l
+349.95 548.43 m
+346.35 548.43 l
+342.39 548.43 m
+338.79 548.43 l
+334.83 548.43 m
+331.23 548.43 l
+331.23 544.83 l
+331.23 541.47 m
+331.23 537.87 l
+331.23 534.63 m
+331.23 531.03 l
+331.23 527.79 m
+331.23 524.19 l
+331.23 520.83 m
+331.23 517.23 l
+331.23 513.87 m
+331.23 510.27 l
+331.23 507.03 m
+331.23 503.43 l
+331.23 500.07 m
+331.23 496.47 l
+331.23 493.23 m
+331.23 489.63 l
+331.23 486.27 m
+331.23 482.67 l
+331.23 479.43 m
+331.23 475.83 l
+331.23 472.47 m
+331.23 468.87 l
+331.23 465.63 m
+331.23 462.03 l
+S
+BT
+10 0 0 10 434.755 509 Tm
+(sh)Tj
+-2.0685 -1.2 TD
+(\(proceso #3\))Tj
+ET
+129.6 512.4 m
+122.4 510.6 l
+122.4 514.2 l
+f
+0.1 w 
+129.6 512.4 m
+122.4 510.6 l
+122.4 514.2 l
+s
+0.4 w 
+122.43 512.43 m
+100.83 512.43 l
+S
+BT
+10 0 0 10 109.085 516.2 Tm
+(PC)Tj
+ET
+338.4 483.6 m
+331.2 481.8 l
+331.2 485.4 l
+f
+0.1 w 
+338.4 483.6 m
+331.2 481.8 l
+331.2 485.4 l
+s
+0.4 w 
+331.23 483.63 m
+309.63 483.63 l
+S
+BT
+10 0 0 10 317.885 487.4 Tm
+(PC)Tj
+-7.6835 -7.08 TD
+(...)Tj
+-1.75 -1.44 TD
+(addl bx, di)Tj
+0.0555 -1.44 TD
+(addl bx, si)Tj
+-0.028 -1.44 TD
+(subl $4, di)Tj
+-0.27 -1.44 TD
+[(mo)15(vl bx, cx)]TJ
+1.9925 -1.44 TD
+(...)Tj
+ET
+208.83 339.63 m
+212.43 339.63 l
+216.39 339.63 m
+219.99 339.63 l
+223.95 339.63 m
+227.55 339.63 l
+231.63 339.63 m
+235.23 339.63 l
+239.19 339.63 m
+242.79 339.63 l
+246.87 339.63 m
+250.47 339.63 l
+254.43 339.63 m
+258.03 339.63 l
+261.99 339.63 m
+265.59 339.63 l
+269.55 339.63 m
+273.15 339.63 l
+277.23 339.63 m
+280.83 339.63 l
+280.83 343.23 l
+280.83 346.47 m
+280.83 350.07 l
+280.83 353.43 m
+280.83 357.03 l
+280.83 360.27 m
+280.83 363.87 l
+280.83 367.23 m
+280.83 370.83 l
+280.83 374.07 m
+280.83 377.67 l
+280.83 381.03 m
+280.83 384.63 l
+280.83 387.87 m
+280.83 391.47 l
+280.83 394.83 m
+280.83 398.43 l
+280.83 401.67 m
+280.83 405.27 l
+280.83 408.63 m
+280.83 412.23 l
+280.83 415.47 m
+280.83 419.07 l
+280.83 422.43 m
+280.83 426.03 l
+277.23 426.03 l
+273.15 426.03 m
+269.55 426.03 l
+265.59 426.03 m
+261.99 426.03 l
+258.03 426.03 m
+254.43 426.03 l
+250.47 426.03 m
+246.87 426.03 l
+242.79 426.03 m
+239.19 426.03 l
+235.23 426.03 m
+231.63 426.03 l
+227.55 426.03 m
+223.95 426.03 l
+219.99 426.03 m
+216.39 426.03 l
+212.43 426.03 m
+208.83 426.03 l
+208.83 422.43 l
+208.83 419.07 m
+208.83 415.47 l
+208.83 412.23 m
+208.83 408.63 l
+208.83 405.27 m
+208.83 401.67 l
+208.83 398.43 m
+208.83 394.83 l
+208.83 391.47 m
+208.83 387.87 l
+208.83 384.63 m
+208.83 381.03 l
+208.83 377.67 m
+208.83 374.07 l
+208.83 370.83 m
+208.83 367.23 l
+208.83 363.99 m
+208.83 360.39 l
+208.83 357.03 m
+208.83 353.43 l
+208.83 350.07 m
+208.83 346.47 l
+208.83 343.23 m
+208.83 339.63 l
+S
+BT
+10 0 0 10 312.355 386.6 Tm
+(sh)Tj
+-2.0685 -1.2 TD
+(\(proceso #2\))Tj
+ET
+216 375.6 m
+208.8 373.8 l
+208.8 377.4 l
+f
+0.1 w 
+216 375.6 m
+208.8 373.8 l
+208.8 377.4 l
+s
+0.4 w 
+208.83 375.63 m
+187.23 375.63 l
+S
+BT
+10 0 0 10 195.485 379.4 Tm
+(PC)Tj
+ET
+72 318 432 252 re
+S
+BT
+10 0 0 10 456.87 348.8 Tm
+(Memoria)Tj
+-0.403 -1.2 TD
+(del sistema)Tj
+/TT2 1 Tf
+-35.584 -4.18 TD
+(Figura 2:)Tj
+/TT4 1 Tf
+4.2217 0 TD
+[(Ejecuciףn concurr)37(ente de varios pr)45(ocesos en el mismo sistema.)]TJ
+/TT6 1 Tf
+-6.7217 -1.2 TD
+0.0201 Tw
+[(Cada uno tiene su propio jue)15(go de re)15(gistros, incluyendo el contador de programa. Ademבs, cada uno tendrב)]TJ
+T*
+0.0079 Tw
+(su propia pila. La )Tj
+/TT7 1 Tf
+7.2796 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0079 Tw
+(gura es tan solo una imagen de la memoria en un momento dado. Durante algתn tiempo,)Tj
+-7.8358 -1.2 TD
+0.1055 Tw
+(el proceso 1 que ejecuta)Tj
+/TT10 1 Tf
+10.3839 0 TD
+0 Tw
+(sh)Tj
+/TT6 1 Tf
+1.5557 0 TD
+-0.0001 Tc
+0.1055 Tw
+[(estarב ejecutando en el procesador \(sin que el Sistema Operati)24.9(v)19.9(o)19.9( )-20(interv)14.9(enga)]TJ
+-11.9396 -1.2 TD
+0 Tc
+0.0184 Tw
+[(mientras tanto\). Despuיs, un temporizador hardw)10(are arrancado anteriormente por el sistema interrumpirב la)]TJ
+T*
+0.0347 Tw
+(ejecuciףn de dicho programa. En ese momento el sistema puede decidir que el proceso 1 ya ha tenido su)Tj
+/TT7 1 Tf
+42.3048 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+(-)Tj
+-42.8609 -1.2 TD
+0.0123 Tw
+(ciente tiempo de ejecuciףn por el momento, y en tal caso puede)Tj
+/TT4 1 Tf
+25.777 0 TD
+0 Tw
+(saltar)Tj
+/TT6 1 Tf
+2.5963 0 TD
+0.0123 Tw
+(para continuar ejecutando \(por ejem-)Tj
+-28.3733 -1.2 TD
+0.1442 Tw
+(plo\), el proceso 2. Este proceso puede estar tambiיn ejecutando)Tj
+/TT10 1 Tf
+27.0436 0 TD
+0 Tw
+(sh)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.1442 Tw
+[(,)-394.2(o)-394.2(cualquier otro programa. P)15(asado)]TJ
+-28.2438 -1.2 TD
+0.0373 Tw
+[(cierto tiempo, otra interrupciףn de reloj lle)15(garב y una v)15(ez mבs se interrumpirב la ejecuciףn del proceso que)]TJ
+T*
+0.1381 Tw
+(ejecuta. En este caso, el sistema \(donde estב el cףdigo del programa que atiende la interrupciףn\) puede)Tj
+T*
+0.0239 Tw
+[(decidir que ya es hora de v)20(olv)15(er a ejecutar el proceso 1. De ser asם, saltarב al punto por el que estaba ejecu-)]TJ
+T*
+0 Tw
+[(tando dicho proceso la תltima v)15(ez que ejecutף.)]TJ
+0 -2.4 TD
+0.0216 Tw
+[(T)80(odo esto sucede detrבs del telףn. El sistema sabe que hay tan solo un )]TJ
+/TT7 1 Tf
+28.4651 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0216 Tw
+[(ujo de control por cada procesador)40(,)]TJ
+-29.0212 -1.2 TD
+0.0546 Tw
+[(y)-304.6(salta de un programa a otro utilizando dicho )]TJ
+/TT7 1 Tf
+19.1247 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0546 Tw
+(ujo. Pero, para los usuarios del sistema, lo que importa es)Tj
+-19.6809 -1.2 TD
+0.0179 Tw
+(que cada proceso parece estar ejecutando de forma independiente del resto. ¡Como si tuviera un procesador)Tj
+T*
+0 Tw
+(dedicado para el solo!)Tj
+0 -2.4 TD
+0.0344 Tw
+(Como todos los procesos aparentan ejecutar de forma simultבnea, decimos que ejecutan)Tj
+/TT4 1 Tf
+35.762 0 TD
+0 Tw
+[(concurr)37(entemente)]TJ
+/TT6 1 Tf
+7.1822 0 TD
+(.)Tj
+-42.9443 -1.2 TD
+0.0669 Tw
+[(O)-316.9(dicho de otro modo, decimos que son procesos concurrentes. En algunos casos, realmente ejecutan a la)]TJ
+ET
+endstream
+endobj
+15 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT10 9 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+17 0 obj
+<<
+/Length 8140
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+0.1155 Tw
+[(v)15(e)0(z)-365.4(\(cada uno en un procesador\). De ser asם, decimos que ejecutan)]TJ
+/TT4 1 Tf
+28.137 0 TD
+0 Tw
+[(par)15(alelamente)]TJ
+/TT6 1 Tf
+5.7614 0 TD
+0.1155 Tw
+[(.)-365.5(E)0(n)-365.5(l)0(a)-365.5(mayorםa de los)]TJ
+-33.8984 -1.2 TD
+0.2183 Tw
+(casos compartirבn procesador \(un tiempo cada uno\) y diremos que son)Tj
+/TT4 1 Tf
+30.8647 0 TD
+0 Tw
+[(pseudo-par)15(alelos)]TJ
+/TT6 1 Tf
+6.9288 0 TD
+0.2182 Tw
+[(.)-468.3(Pero, en la)]TJ
+-37.7935 -1.2 TD
+0.0116 Tw
+(prבctica, da igual si ejecutan de un modo u otro y simplemente los consideramos concurrentes. A la hora de)Tj
+T*
+0 Tw
+(programar y de utilizar el sistema esto es todo lo que importa.)Tj
+0 -2.4 TD
+0.0833 Tw
+[(En este tema v)25(amos a e)15(xplorar el proceso que obtenemos cuando ejecutamos un programa. Pero antes de)]TJ
+0 -1.2 TD
+0.0377 Tw
+[(hacer esto es importante v)15(er quי hay en un programa y quי hay en un proceso, cosa que haremos a contin-)]TJ
+T*
+0 Tw
+(uaciףn.)Tj
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+(2. Plani)Tj
+/TT11 1 Tf
+3.4727 0 TD
+0 Tw
+(Þ)Tj
+/TT2 1 Tf
+0.5562 0 TD
+[(caciףn)-250(y)-250(estados de plani)]TJ
+/TT11 1 Tf
+10.501 0 TD
+(Þ)Tj
+/TT2 1 Tf
+0.5562 0 TD
+(caciףn)Tj
+/TT6 1 Tf
+-15.0859 -1.56 TD
+-0.0001 Tc
+0.1002 Tw
+[(Supongamos que hay sףlo un procesador)54.9(.)-350.3(D)-0.1(e)-350.3(haber v)24.9(arios, lo que v)24.9(amos a decir se aplica a cada uno de)]TJ
+0 -1.2 TD
+0 Tc
+0.0195 Tw
+(ellos sin mבs complicaciףn. Cada proceso aparenta ejecutar de forma independiente, con su )Tj
+/TT7 1 Tf
+37.045 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0195 Tw
+(ujo de control)Tj
+-37.6012 -1.2 TD
+0 Tw
+(propio, aunque el procesador sףlo implementa un )Tj
+/TT7 1 Tf
+19.9946 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ujo de control.)Tj
+-20.5508 -2.4 TD
+0.0602 Tw
+[(Lo que sucede es que cuando un proceso entra al k)10(ernel, ya sea por una interrupciףn procedente del hard-)]TJ
+0 -1.2 TD
+[(w)10(are o por que hace una llamada al sistema, el sistema tiene almacenado el estado del proceso que estaba)]TJ
+T*
+0.024 Tw
+[(ejecutando \(normalmente en la pila en que se ha salv)25(ado el estado en la interrupciףn o al entrar al sistema\).)]TJ
+T*
+0.0433 Tw
+(Gracias a esto, el sistema puede decidir que hay que saltar hacia otro proceso y puede)Tj
+/TT4 1 Tf
+35.1513 0 TD
+0 Tw
+[(r)37(etornar)]TJ
+/TT6 1 Tf
+3.6456 0 TD
+0.0434 Tw
+[(de la inter)20(-)]TJ
+-38.7969 -1.2 TD
+0.0278 Tw
+(rupciףn o llamada al sistema utilizando el estado que se salvף anteriormente para)Tj
+/TT4 1 Tf
+32.9888 0 TD
+0 Tw
+[(otr)45(o)]TJ
+/TT6 1 Tf
+1.8998 0 TD
+0.0278 Tw
+(proceso distinto. Por)Tj
+-34.8886 -1.2 TD
+0.0675 Tw
+(ejemplo, se puede cambiar la pila por la de otro proceso de tal forma que cuando se retorne sea hacia ese)Tj
+T*
+0.0443 Tw
+[(otro proceso. De este modo, a cada proceso se le da un tiempo de procesador y)65(,)-294.3(despuיs, el sistema salta a)]TJ
+T*
+0.0464 Tw
+(otro distinto. A esta cantidad de tiempo se la denomina)Tj
+/TT4 1 Tf
+22.7086 0 TD
+0 Tw
+(cuanto)Tj
+/TT6 1 Tf
+2.7217 0 TD
+0.0464 Tw
+[(,)-296.4(y)-296.4(puede ser del orden de 100ms \(lo que es)]TJ
+-25.4303 -1.2 TD
+0 Tw
+(una enormidad de tiempo para la mבquina\).)Tj
+0 -2.4 TD
+0.0028 Tw
+[(A)-252.8(transferir el control de un proceso a otro, salv)25(ando el estado del antiguo y recar)18(gando el estado del nue)25(v)20(o)0(,)]TJ
+0 -1.2 TD
+0.0146 Tw
+(lo denominamos)Tj
+/TT4 1 Tf
+6.9174 0 TD
+[(cambio de conte)20(xto)]TJ
+/TT6 1 Tf
+7.7841 0 TD
+[(.)-264.6(Esto es ob)15(vio si pensamos que cambiamos el)]TJ
+/TT4 1 Tf
+18.8356 0 TD
+0 Tw
+[(conte)20(xto)]TJ
+/TT6 1 Tf
+3.6318 0 TD
+0.0146 Tw
+[(\(re)15(gistros, pila,)]TJ
+-37.1689 -1.2 TD
+0.053 Tw
+[(etc.\) de un proceso a otro.)-553.1(Es de notar que es el k)10(ernel el que hace estos cambios de conte)15(xto. )-250(¡T)45(u)-303(nunca)]TJ
+T*
+0 Tw
+(incluyes saltos en tus programas para que otros programas ejecuten!)Tj
+0 -2.4 TD
+0.0131 Tw
+[(La parte del k)10(ernel responsable de decidir quי proceso es el siguiente que ejecuta en un cambio de conte)15(xto)]TJ
+0 -1.2 TD
+0.0033 Tw
+(se denomina)Tj
+/TT4 1 Tf
+5.283 0 TD
+0 Tw
+(plani)Tj
+/TT8 1 Tf
+2.0557 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+(cador)Tj
+/TT6 1 Tf
+2.333 0 TD
+0.2533 Tc
+(,o)Tj
+/TT4 1 Tf
+1.2566 0 TD
+0 Tc
+[(sc)15(heduler)]TJ
+/TT6 1 Tf
+3.8727 0 TD
+0.0032 Tw
+[(.)-253.3(E)0(s)-253.3(fבcil si pensamos en que plani)]TJ
+/TT7 1 Tf
+13.797 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0032 Tw
+(ca la ejecuciףn de los procesos. A)Tj
+-29.6541 -1.2 TD
+0.2059 Tw
+(las decisiones del plani)Tj
+/TT7 1 Tf
+9.8653 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.2059 Tw
+(cador las conocemos como)Tj
+/TT4 1 Tf
+11.8754 0 TD
+0 Tw
+(plani)Tj
+/TT8 1 Tf
+2.0557 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+(caciףn)Tj
+/TT6 1 Tf
+2.6655 0 TD
+0.4559 Tc
+(,o)Tj
+/TT4 1 Tf
+1.6618 0 TD
+0 Tc
+[(sc)15(heduling)]TJ
+/TT6 1 Tf
+4.3175 0 TD
+0.206 Tw
+[(.)-705.9(¡Sorprendente! En la)]TJ
+-33.4973 -1.2 TD
+0.0585 Tw
+[(mayorםa de sistemas el k)10(ernel puede sacar del procesador a un proceso incluso si este no hace llamadas al)]TJ
+T*
+0.0577 Tw
+[(sistema \(por ejemplo, mientras ejecuta un b)20(ucle\). Se suelen utilizar las interrupciones de reloj a tal efecto.)]TJ
+T*
+0.1209 Tw
+(En este tipo de plani)Tj
+/TT7 1 Tf
+8.6482 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1209 Tw
+(caciףn, decimos que tenemos un plani)Tj
+/TT7 1 Tf
+15.8223 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1208 Tw
+[(cador e)15(xpulsi)25(v)20(o)20( )-20(\(o, en Inglיs,)]TJ
+/TT4 1 Tf
+12.6242 0 TD
+0 Tw
+[(pr)37(eemptive)]TJ
+/TT6 1 Tf
+4.4054 0 TD
+(\).)Tj
+-42.6123 -1.2 TD
+0.1174 Tw
+(Cuando el plani)Tj
+/TT7 1 Tf
+6.5668 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1174 Tw
+[(cador no utiliza interrupciones para e)15(xpulsar procesos decimos que tenemos un plani)]TJ
+/TT7 1 Tf
+35.1828 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(-)Tj
+-42.8619 -1.2 TD
+(cador)Tj
+/TT4 1 Tf
+2.5351 0 TD
+[(cooper)15(ativo)]TJ
+/TT6 1 Tf
+4.7614 0 TD
+0.0643 Tw
+[(.)-314.4(Pero, en este תltimo caso, un programa que entre en un b)20(ucle in)]TJ
+/TT7 1 Tf
+26.6969 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0643 Tw
+(nito sin llamar al sis-)Tj
+-34.5495 -1.2 TD
+0 Tw
+[(tema puede con)40(v)15(ertir la mבquina en un pisapapeles.)]TJ
+0 -2.4 TD
+0.1232 Tw
+[(Con un תnico procesador)40(,)-373.2(sףlo un proceso puede ejecutar en cada momento. El resto en general pueden)]TJ
+0 -1.2 TD
+0 Tw
+(estar)Tj
+/TT4 1 Tf
+2.1691 0 TD
+0.0314 Tw
+[(listos par)15(a)-281.4(ejecutar)]TJ
+/TT6 1 Tf
+8.1065 0 TD
+0 Tw
+(\()Tj
+/TT4 1 Tf
+0.333 0 TD
+[(r)37(eady)]TJ
+/TT6 1 Tf
+2.2399 0 TD
+0.0314 Tw
+[(\))-281.4(pero no estarבn ejecutando. Y)100(a)-281.4(conoces dos estados de plani)]TJ
+/TT7 1 Tf
+24.8995 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(caciףn:)Tj
+/TT4 1 Tf
+3.1686 0 TD
+(listo)Tj
+/TT6 1 Tf
+-41.4728 -1.2 TD
+(y)Tj
+/TT4 1 Tf
+0.7534 0 TD
+(ejecutando)Tj
+/TT6 1 Tf
+4.3872 0 TD
+0.0035 Tw
+[(.)-253.4(U)0(n)-253.4(proceso ejecutando pasa a estar listo para ejecutar si lo e)15(xpulsan del procesador cuando su)]TJ
+-5.1406 -1.2 TD
+0.0297 Tw
+[(tiempo termina.)-529.8(En ese momento, el k)10(ernel ha de ele)15(gir a un proceso de entre los que estבn listos para eje-)]TJ
+T*
+0 Tw
+[(cutar y ha de ponerlo a ejecutar)55(.)]TJ
+0 -2.4 TD
+0.0508 Tw
+(Los estados de plani)Tj
+/TT7 1 Tf
+8.2896 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0508 Tw
+(caciףn son tan sףlo constantes que de)Tj
+/TT7 1 Tf
+15.2452 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0508 Tw
+(ne el sistema para guardarlas en los)Tj
+/TT4 1 Tf
+14.7668 0 TD
+0 Tw
+[(r)37(ecor)37(ds)]TJ
+/TT6 1 Tf
+3.2821 0 TD
+(o)Tj
+/TT4 1 Tf
+-42.6961 -1.2 TD
+(structs)Tj
+/TT6 1 Tf
+2.9551 0 TD
+0.038 Tw
+[(con los que implementa los procesos y saber asם si puede ele)15(gir un proceso para ejecutarlo o no. La)]TJ
+/TT7 1 Tf
+-2.9551 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gura 3 muestra los estados de plani)Tj
+/TT7 1 Tf
+13.9966 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(caciףn de un proceso.)Tj
+-15.1089 -3.6 TD
+0.0071 Tw
+[(En algunos casos un proceso leerב de teclado o de una cone)15(xiףn de red o cualquier otro dispositi)25(v)20(o)0(.)-257.2(Cuando)]TJ
+0 -1.2 TD
+0.0055 Tw
+[(esto ocurre, el proceso habrב de esperar a que el usuario pulse una tecla, a que lle)15(guen datos, o a que suceda)]TJ
+T*
+0.2575 Tw
+[(alguna otra cosa. El proceso podrםa esperar entrando en un b)20(ucle, pero eso serםa un desperdicio de)]TJ
+ET
+endstream
+endobj
+18 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT8 8 0 R
+/TT11 19 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 7166
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+334.8 676.8 m
+334.8 662.89 323.51 651.6 309.6 651.6 c
+295.69 651.6 284.4 662.89 284.4 676.8 c
+284.4 690.71 295.69 702 309.6 702 c
+323.51 702 334.8 690.71 334.8 676.8 c
+s
+BT
+10 0 0 10 287.105 674.6 Tm
+(Ejecutando)Tj
+ET
+291.54 590.4 m
+291.54 576.49 280.25 565.2 266.34 565.2 c
+252.43 565.2 241.14 576.49 241.14 590.4 c
+241.14 604.31 252.43 615.6 266.34 615.6 c
+280.25 615.6 291.54 604.31 291.54 590.4 c
+s
+BT
+10 0 0 10 256.12 588.2 Tm
+(Listo)Tj
+ET
+291.6 590.4 m
+298.8 592.2 l
+298.8 588.6 l
+f
+0.1 w 
+291.6 590.4 m
+298.8 592.2 l
+298.8 588.6 l
+s
+0.4 w 
+298.83 590.43 m
+327.63 590.43 l
+377.94 590.4 m
+377.94 576.49 366.65 565.2 352.74 565.2 c
+338.83 565.2 327.54 576.49 327.54 590.4 c
+327.54 604.31 338.83 615.6 352.74 615.6 c
+366.65 615.6 377.94 604.31 377.94 590.4 c
+s
+BT
+10 0 0 10 331.135 588.2 Tm
+(Bloqueado)Tj
+ET
+298.296 654.264 m
+296.712 646.992 l
+293.472 648.576 l
+f
+0.1 w 
+298.296 654.264 m
+296.712 646.992 l
+293.472 648.576 l
+s
+277.704 612.936 m
+279.288 620.208 l
+282.528 618.624 l
+f
+277.704 612.936 m
+279.288 620.208 l
+282.528 618.624 l
+s
+0.4 w 
+295.11 647.91 m
+280.83 619.47 l
+S
+341.496 612.936 m
+336.672 618.552 l
+339.912 620.136 l
+f
+0.1 w 
+341.496 612.936 m
+336.672 618.552 l
+339.912 620.136 l
+s
+0.4 w 
+320.91 654.27 m
+338.31 619.47 l
+S
+241.2 590.4 m
+234 588.6 l
+234 592.2 l
+f
+0.1 w 
+241.2 590.4 m
+234 588.6 l
+234 592.2 l
+s
+0.4 w 
+234.03 590.43 m
+205.23 590.43 l
+S
+BT
+10 0 0 10 154.87 588.2 Tm
+(Nacimiento)Tj
+ET
+370.8 676.8 m
+363.6 675 l
+363.6 678.6 l
+f
+0.1 w 
+370.8 676.8 m
+363.6 675 l
+363.6 678.6 l
+s
+0.4 w 
+334.83 676.83 m
+363.63 676.83 l
+S
+BT
+10 0 0 10 383.08 674.6 Tm
+(Muerto)Tj
+/TT2 1 Tf
+-28.608 -13.24 TD
+(Figura 3:)Tj
+/TT4 1 Tf
+4.2217 0 TD
+(Estados de plani)Tj
+/TT8 1 Tf
+6.6665 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(caciףn de un pr)45(oceso.)]TJ
+/TT6 1 Tf
+-13.8882 -1.2 TD
+-0.0001 Tc
+0.0499 Tw
+[(procesador)54.9(.)-299.9(E)-0.1(n)-299.9(lugar de eso, cuando un proceso llama al sistema y el k)9.9(ernel v)14.9(e)-299.9(que no puede continuar)39.9(,)-299.8(s)-0.1(e)]TJ
+T*
+0 Tc
+0 Tw
+(le marca como)Tj
+/TT4 1 Tf
+6.1357 0 TD
+(bloqueado)Tj
+/TT6 1 Tf
+4.4717 0 TD
+(\(otro estado de plani)Tj
+/TT7 1 Tf
+8.1919 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(caciףn\) para que el k)9.9(ernel no lo ponga)-250.1(a)-250.1(ejecutar)54.9(.)]TJ
+-19.3555 -2.4 TD
+0 Tc
+0.0483 Tw
+[(Los dispositi)25(v)20(o)0(s)-298.3(e)0(n)-298.3(entrada/salida son tan lentos en comparaciףn con el procesador que es posible ejecutar)]TJ
+0 -1.2 TD
+0.0101 Tw
+(multitud de cosas mientras un proceso espera a que su entrada/salida termine. A hacer tal cosa se la denom-)Tj
+T*
+0 Tw
+(ina)Tj
+/TT4 1 Tf
+1.4717 0 TD
+[(multipr)45(o)10(g)0(r)15(amaciףn)]TJ
+/TT6 1 Tf
+7.7078 0 TD
+(.)Tj
+-9.1795 -2.4 TD
+0.0933 Tw
+[(P)15(asado cierto tiempo, un proceso bloqueado v)20(olv)15(erב a marcarse como listo para ejecutar si el e)25(v)15(ento que)]TJ
+0 -1.2 TD
+0.002 Tw
+[(estaba esperando el proceso sucede. Por ejemplo, si el proceso llamף al k)10(ernel para leer de teclado y)65(,)-252(debido)]TJ
+T*
+0.0179 Tw
+[(a)-267.9(eso, se bloqueף, en el momento en que escribimos algo en el teclado y el k)10(ernel puede dבrselo el proceso,)]TJ
+T*
+0.0705 Tw
+[(dicho proceso pasarב a estar listo para ejecutar)55(.)-320.5(L)0(a)-320.5(siguiente v)15(ez que el plani)]TJ
+/TT7 1 Tf
+31.3892 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0705 Tw
+(cador ejecute, el proceso es)Tj
+-31.9453 -1.2 TD
+0 Tw
+[(un candidato a ejecutar)55(.)]TJ
+0 -2.4 TD
+0.1062 Tw
+[(Otra forma de dib)20(ujar el estado de los procesos a lo lar)18(go del tiempo es utilizar un)]TJ
+/TT4 1 Tf
+34.7856 0 TD
+[(dia)10(gr)15(ama de plani)]TJ
+/TT8 1 Tf
+7.5763 0 TD
+0 Tw
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+(-)Tj
+-42.8619 -1.2 TD
+(caciףn)Tj
+/TT6 1 Tf
+2.6655 0 TD
+0.0853 Tw
+[(.)-335.3(S)0(e)-335.3(trata de dib)20(ujar una lםnea para cada proceso de tal forma que indicamos en quי estado estב en)]TJ
+-2.6655 -1.2 TD
+0.0832 Tw
+[(cada momento \(cambiando la forma o el color de la lםnea\). Naturalmente, si tenemos un procesador)40(,)-333.3(sףlo)]TJ
+T*
+0.0804 Tw
+[(podrב e)15(xistir un proceso ejecutando en cada momento. Y ademבs, ya sabes que en realidad el salto de un)]TJ
+T*
+0.0078 Tw
+(proceso a otro sucede utilizando el mecanismo que hemos descrito antes. Un ejemplo de diagrama de plani-)Tj
+/TT7 1 Tf
+T*
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0476 Tw
+[(caciףn podrםa ser el que puede v)15(erse en la )]TJ
+/TT7 1 Tf
+17.3221 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0476 Tw
+(gura 4. En dicha )Tj
+/TT7 1 Tf
+6.9936 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0476 Tw
+[(gura, hay dos procesos ejecutando concur)20(-)]TJ
+-25.9842 -1.2 TD
+0 Tw
+[(rentemente en un sףlo procesador)55(.)-250(Uno ejecuta)]TJ
+/TT10 1 Tf
+18.9377 0 TD
+(sh)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(y)-250(e)0(l)-250(otro)]TJ
+/TT10 1 Tf
+3.5825 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-19.1351 -3.82 TD
+(sh)Tj
+ET
+163.83 266.19 m
+214.23 266.19 l
+S
+BT
+10 0 0 10 167.34 270 Tm
+(ejecutando)Tj
+ET
+214.23 266.19 m
+217.83 266.19 l
+220.95 266.19 m
+224.55 266.19 l
+227.55 266.19 m
+231.15 266.19 l
+234.27 266.19 m
+237.87 266.19 l
+240.87 266.19 m
+244.47 266.19 l
+247.59 266.19 m
+251.19 266.19 l
+254.31 266.19 m
+257.91 266.19 l
+261.03 266.19 m
+264.63 266.19 l
+S
+BT
+10 0 0 10 230.785 270 Tm
+(listo)Tj
+ET
+264.63 266.19 m
+318.63 266.19 l
+321.75 266.19 m
+325.35 266.19 l
+328.35 266.19 m
+331.95 266.19 l
+335.07 266.19 m
+338.67 266.19 l
+341.67 266.19 m
+345.27 266.19 l
+348.39 266.19 m
+351.99 266.19 l
+355.11 266.19 m
+358.71 266.19 l
+361.83 266.19 m
+415.83 266.19 l
+S
+466.2 266.2 m
+459 264.4 l
+459 268 l
+f
+0.1 w 
+466.2 266.2 m
+459 264.4 l
+459 268 l
+s
+0.4 w 
+415.83 266.19 m
+419.43 266.19 l
+422.43 266.19 m
+426.03 266.19 l
+429.03 266.19 m
+432.63 266.19 l
+435.63 266.19 m
+439.23 266.19 l
+442.23 266.19 m
+445.83 266.19 l
+448.83 266.19 m
+452.43 266.19 l
+455.43 266.19 m
+459.03 266.19 l
+S
+BT
+10 0 0 10 133.465 192 Tm
+(ls)Tj
+ET
+163.83 194.19 m
+167.43 194.19 l
+170.55 194.19 m
+174.15 194.19 l
+177.15 194.19 m
+180.75 194.19 l
+183.87 194.19 m
+187.47 194.19 l
+190.47 194.19 m
+194.07 194.19 l
+197.19 194.19 m
+200.79 194.19 l
+203.91 194.19 m
+207.51 194.19 l
+210.63 194.19 m
+214.23 194.19 l
+S
+BT
+10 0 0 10 180.385 198 Tm
+(listo)Tj
+ET
+214.23 194.19 m
+264.63 194.19 l
+S
+BT
+10 0 0 10 217.74 198 Tm
+(ejecutando)Tj
+ET
+264.63 194.19 m
+268.23 194.19 l
+271.35 194.19 m
+274.95 194.19 l
+277.95 194.19 m
+281.55 194.19 l
+284.67 194.19 m
+288.27 194.19 l
+291.27 194.19 m
+294.87 194.19 l
+297.99 194.19 m
+301.59 194.19 l
+304.71 194.19 m
+308.31 194.19 l
+311.43 194.19 m
+369.03 194.19 l
+372.15 194.19 m
+375.75 194.19 l
+378.75 194.19 m
+382.35 194.19 l
+385.47 194.19 m
+389.07 194.19 l
+392.07 194.19 m
+395.67 194.19 l
+398.79 194.19 m
+402.39 194.19 l
+405.51 194.19 m
+409.11 194.19 l
+412.23 194.19 m
+415.83 194.19 l
+S
+466.2 194.2 m
+459 192.4 l
+459 196 l
+f
+0.1 w 
+466.2 194.2 m
+459 192.4 l
+459 196 l
+s
+0.4 w 
+415.83 194.19 m
+459.03 194.19 l
+S
+BT
+/TT2 1 Tf
+10 0 0 10 97 153.2 Tm
+(Figura 4:)Tj
+/TT4 1 Tf
+4.2217 0 TD
+[(Dia)10(gr)15(ama de plani)]TJ
+/TT8 1 Tf
+7.5858 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+(caciףn. El tiempo )Tj
+/TT8 1 Tf
+7.2759 0 TD
+(ß)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(uye hacia la der)37(ec)15(ha en la )]TJ
+/TT8 1 Tf
+10.7776 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+[(gur)15(a.)]TJ
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT8 8 0 R
+/TT10 9 0 R
+>>
+/ExtGState <<
+/GS1 11 0 R
+>>
+>>
+endobj
+10 0 obj
+<<
+/Type /XObject
+/Subtype /Image
+/Width 235
+/Height 136
+/BitsPerComponent 8
+/ColorSpace /DeviceRGB
+/Length 95881
+>>
+stream
+ûûûתתתתתתתתתששששששררררררקקקרררףףףקקקרררפפפצצצפפפץץץפפפפפפףףףףףףעעעססססססססססססססססססננננננננננננןןןןןןןןןןןןןןןןןןןןןןןןמממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממממנוןמינלכםםןךמסךםעםךסןךנםכנלכנכךןלךןמיןמיןןטןסטםףטזםךוייבםזÞןהÞליגוךדדטגיוגכזדחטדדטהזזהךזחוזךÜטטווווווההההההההההההדדדדדדגגגגגגגגגגגגגגגבבבבבבבבבגגגגגגגגגגגגבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבײולÙדלÛגלאאךגßךוÝטחÝטחÝזוÞזהßוגאובבדבבדגאבגאבגאבבבßאגßÞגבÞגבאבדהßדחÞדטÝבחÞבגבßÝדßתתתתתתתתתששששששרררררררררקקקץץץצצצץץץפפפצצצץץץסססעעעעעעעעעססססססננננננןןןןןןןןןןןןמממממממממממממממםםםםםםםםםםםםםםםלללללללללללללללללללללללללללללללללככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככככטלכככככיליךלחכלךךךלטחןחוםטוךיוייחטטךטחלטחםטחםטחןחוזגטהßיבדואטהבוחגßטדאזגיוהכגדחדגההגחבבטÝבוßדאהחבבבבבבבבבאאאאאאאאאßßßßßßאאאאאאאאאאאאßßßßßßßßßßßßßßßßßßßßßÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞÞ׳בא״באÛßאÞÞאßÝאבÜאבÜאבÜאßÝאÞÞאÞÞאÞÞאßÝגבÜגגÛגהÚגÞÞÜÝßÜÛßÞÛßÞÝÞאßÝאהÛאוÚÞהÛÞßÞÜÛאÜתתתתתתששששששררררררקקקקקקשששעעערררץץץננננננכככלללככככככךךךךךךייייייטטטטטטחחחחחחחחחחחחחחחזזזזזזזזזזזזזזזזזזזזזזזזזזזווווווווווווווווווווווווווווווהההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההההדדדגדודגחהגחדדוגהדגגאדגÝוגÛדדÛגדÛאדÜאגßÞגבÞגוÝבהÝאוÝאו׳דדױדדÙגבßאגÛבב׳דבÙגבÜÚÝßÙÛßÛÜÝÜÚגÙÚד׳Ûא׳ÚÚÚÚÚÚÚÚÚÚÚÚÚÙÙÙÙÙÙ״״״״״״״״״ײײײײײײײײײײײײײײײײײײײײײײײײױױױױױױױױױױױױױױױױױױװװװװװװװװװװװװװװװװװװװװװװװװװװװװװװױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױױ׳ּױ׳ּײײ־״ױ־Ùװ־״ױ׀״ױ׀ײױׁױױ׃װײ׃ׂײױװױ׳ױװÙײװÙ״׃ÚÙׂÚײױ׃ױױױׂײױׁ׳׳ׂײ׳ױױ׳״׃׳ÛׂױÙ׃ױײױ׃ׂ׳׃שששששששששרררקקקקקקצצצצצצץץץפפפפפפלללהההאאא״״״ײײײװװװװװװװװװװװװ׃׃׃׃׃׃׃׃׃׃׃׃ׁׁׁׁׁׁׁׁׁׁׁׁׁׁׁׂׂׂׂׂׂׂׂׂ־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־־ֻּּּּּּּּּּּּּּּּּּֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֽֿÊ׀ÊÊ־ÊֻּÊֻֻֻֻÊִֶַָָָֻֻּּּּ־ִֶ־ִִֶֶֶֶָֹֻֻֽÊֳִָָֹֻ׃ֱֵָָׁ־ִַ־ֲֵֶַּÊ¾ְָָֹÊֵֶÊÊֳִֵֵֹ¾ֱֱֱֲ¿ֲֲֳִֵַ½ֳ¿ְְְְְְְְְֱֱֱֱֱֱֲֲֲֲֲֲ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾¾ֲ¾µֲ¾µֲ¾µִ½·ִ½·ֲ½¹ֱ¾¹¾¿¹½¿÷»ְ÷÷ְ¼¸ֱ¼÷ְ¾÷ְְ»¿ְ»¿ֱֲ½¾¿½¾½¿¾÷ְְ÷ְְ½¾ְ¿½ְֱ¼ְֱ½¾¿¾¼½¿¼שששררררררקקקצצצצצצץץץץץץףףףפפפהההÜÜÜהההנננתתתûûûתתתתתתתתתתתתשששששששששששששששששששששששששששרררררררררûûûûûûûûûûûûתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתשששששששששששש‎רעüשפüרץשרצשקתקרüפש‎עת‎סשûסתשףשץףרסץרןצרכצצךרצי‎ןüצנתעסשעןרפןצנןץלספםספממנלךםויטבךחדיחזטובחדÛטבההההההההההההדדדדדדגגגגגגגגגגגגגגגגגגבבבבבבבבבבבבגגגגגגבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבבאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאאהÞÞהÞÞהÞאדßאדßאבאÞßבÞÝגÞÜדÜÚהÜÙהÜÙהÜÚהÜÚדÞÚדÞÜגÞזÝאדßאאאאÝבגÜגגÝבגßאגבßגדßאבßאאאÞררררררקקקצצצצצצץץץפפפפפפצצצמממבבבךךךצצצץץץרררקקקקקקצצצצצצצצצצצצצצצצצצצצצקקקקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץעקףנצעסצעפפערעפקסץפעקףעקףעקףספעענעףמנףלסעךנסיןעישךןץלסןםנןךננכסןםנכלמייייוזבÝÞױ׳ײֿױױֽׁ׀ֻֻֻÊֹֻֻֻֻֻֻֻֻֻֻֻֻֻֻֻֻֻּּּּׂÊÊÊÊÊÊֵֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶֶַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַַָָָָָָָָָָָָָָָָָָָָָָָָÊֵַÊְֲֵֵֶֶַָֻֻֻÊ¿ֹÊ¿ָֹ¿Êֶ¿ÊְִÊֲֲֲֲֳִִֵֵֶֶֶֶֶַַָֹֽÊֲֲֳֳִֵֵֵֵֶֶֶֶֶֶֶֶֶֶֶֶַַַַַַָָרררקקקקקקצצצץץץפפפפפפףףףסססßßßאאאץץץûûûפפפפפפקקקץץץץץץץץץץץץץץץץץץץץץץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץץץץלקשךררלרצףץפתנסתןףקסףפעץץנפצנפץןסעסןןסנןסנלנסכנףץלחףמךמןךללךםםםממליךוובÞÛ׃ׁוÜÝןכלץץקתרû‎שת‎שרתשץתתתתתתתתתתתתתתתתתתתתתתתתûûûûûûûûûûûûתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתתשששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששששרשûצת‎ץת‎ףû‏עü‏עü‎ףû‎ץûûצתששששתרשüרש‎קûÿץ‎ÿץ‎ÿץשÿצקüרקרתקצתשץûשצתשרתששששתרשתרשקקקקקקצצצצצצץץץפפפףףףףףףמממßßßםםםרררףףףץץץקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצקקקקקקקקקקקקקקקקקקקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץףפשמצרםרפפפעשנףקסץןפריצüךפ‎מע‎מסתםערםנץממצןםרממרעכדעםחמןךךליךליכלחזדÞÜ׳ׁיבÞתענÿü‎קקשףעקררתשרצפףןצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץקקקקקקקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקרנקרעצרףצרקקקשקצûתץûûץש‎פש‏ףק‏ףק‎פקתץשרצûצקüפק‏ÿףק‎פץתצץקקץפשץףשץףשץפרקצרקקקשרצשקקקצצצץץץץץץפפפףףףעעעסססללל׃׃׃קקקצצצצצצקקקצצצצצצףףףשששפפפרררץץץצצצפפפצצצצצצפפפצצצץץץרררפפפשששףףףצצצףףףצצצצצצרררקקקץץץפפפצצצץץץצצצקקקקקקצצצץץץצצצפפפץץץקקקרררצצצצצצףףףצצצףףףשששפפפרררץץץצצצפפפצצצצצצפפפצצצץץץרררפפפשששףףףצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץץץץÿןעשףףעפןצעןתפרןףü±־ײ×ׂÞ¥ÊÜ­ÊÜ®ֵױ³ַׂÊ׳אככקףן‎ןטרןלחןמלכםלהילזלליכךÞÝÙבÜײüקסקףנרררעצשןפקעûתפשץץקעקקקצצצץץץץץץקקקרררצצצפפפץץץצצצרררקקקפפפצצצרררפפפקקקץץץצצצףףףפפפקקקפפפץץץצצצףףףץץץקקקצצצצצצקקקצצצרררץץץקקקצצצפפפקקקרררצצצקקקצצצץץץץץץקקקרררצצצפפפץץץצצצרררקקקפפפצצצרררפפפצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצתתנצצמצץסשקרקעצתףת‎עתÿסר‏םףÿפקÿנףשסןשרצףקצלצץלתת‎פקרעפשץפץץףקשפףרעעקףףרפףץפץץקצפשקקקצצצץץץפפפפפפףףףסססנננכככ׃׃׃צצצצצצצצצקקקצצצצצצûûûצצצפפפצצצנננזזזÚÚÚׂׂׂׂׂׂÚÚÚזזזנננצצצפפפצצצûûûצצצץץץקקקצצצץץץקקקקקקצצצסססההה׳׳׳ׂׂׂׂׂׂ׳׳׳הההסססצצצקקקקקקץץץצצצקקקץץץצצצûûûצצצפפפצצצנננזזזÚÚÚׂׂׂׂׂׂÚÚÚזזזנננצצצפפפצצצûûûצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץץץץÿךס‎סספףמףןלץןףטץ‎«ױב¦הף­חû°אק¶בפ¶Ûכ¹ױדׂßנחמÿטםÿדספגןץßנרÛןרÙםפײהח׳ÛÚזובûרףפץנצקשעצשןקשעûתעקףצקסצצצצצצקקקקקקצצצץץץצצצרררצצצצצצצצצצצצצצצקקקרררקקקצצצףףףשששûûûקקקפפפצצצתתתץץץשששרררץץץפפפקקקקקקץץץקקקצצצצצצץץץץץץקקקצצצץץץצצצצצצקקקקקקצצצץץץצצצרררצצצצצצצצצצצצצצצקקקרררקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצתצףצץףרשûנץשסתÿעûÿסרÿספûרקüקףפüקפ‎רפרץנרקעצרףנץסקצûצץתרררפפעפץנץקעפצסץקפרתשצצרצפשצצצץץץפפפפפפףףףעעעסססנננךךךׂׂׂצצצצצצצצצקקקצצצצצצצצצץץץצצצכככÜÜÜװװװÙÙÙÛÛÛÛÛÛÙÙÙװװװÜÜÜכככצצצץץץצצצצצצקקקצצצץץץפפפקקקץץץםםםÚÚÚ׳׳׳ÙÙÙßßßßßßÙÙÙ׳׳׳ÚÚÚםםםץץץקקקפפפץץץצצצקקקצצצצצצץץץצצצכככÜÜÜװװװÙÙÙÛÛÛÛÛÛÙÙÙװװװÜÜÜכככצצצץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץץץץÿכררףקסצעצץסûעץךץû ּױ”ײה׀ה—ֿז׀ו›׀א›ÊÚ ֶÛ₪ֶב¨Êז¡ּױַ׃ַ׳ֹÙ¢ּ״«ָ׀ָײÙץקצקרףץץףקץרץפתצקüקרתקףנ‏ףןץץץפפפפפפקקקקקקצצצץץץצצצקקקקקקצצצץץץצצצצצצץץץצצצץץץצצצפפפפפפצצצקקקקקקפפפרררץץץףףףפפפצצצץץץפפפצצצצצצצצצץץץץץץקקקצצצצצצץץץץץץפפפפפפקקקקקקצצצץץץצצצקקקקקקצצצץץץצצצצצצץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץףרףצûמûÿ¿ײÞ®־Ù¢Êװ¥ֽױ®ױÜ®ֽ׀Êßאלררצרקץסנ‎ףפÿףקÿץשםר‏נש‏צûÿקרתץץףשתץקרףצרץפצץץץקקץתצצצץץץפפפףףףעעעסססנננןןןטטטׁׁׁץץץצצצצצצקקקצצצקקקץץץצצצןןןÝÝÝÙÙÙÛÛÛגגגבבבבבבגגגÛÛÛÙÙÙÝÝÝןןןצצצץץץצצצקקקפפפץץץצצצשששלללÝÝÝÝÝÝÞÞÞאאאאאאאאאאאאÞÞÞÝÝÝÝÝÝלללשששצצצץץץפפפקקקצצצץץץצצצןןןÝÝÝÙÙÙÛÛÛגגגבבבבבבגגגÛÛÛÙÙÙÝÝÝןןןצצצץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץפפפפפפûן‎נץשיץסעףמתןףןףü¡ֹ׃•װד–װכ›׃מ˜ׂט”ױח˜Ùכ™׃י“ּח’ֿל˜׳ט”ׁז’־ז־ו‘ÊÝ•½ֹ¼ֿײעררץקפקקקשפתרףתרץüרצשûףסÿעמרררןןןהההÙÙÙׁׁׁ׀׀׀ÙÙÙדדדםםםפפפקקקצצצצצצץץץפפפץץץפפפûûûצצצפפפקקקןןןגגגÚÚÚֿֿֿׁׁׁ׳׳׳ווונננצצצררררררץץץרררץץץצצצרררצצצצצצקקקרררןןןהההÙÙÙׁׁׁ׀׀׀ÙÙÙדדדםםםפפפקקקצצצצצצץץץפפפץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצרש‏מץ‎זתÿ®ׂÞµזפ±לת®םü­כר´םצ¬״בּםפי‎ÿמרÿףקÿפףÿנןÿז‏ÿחûÿיצ‏פש‎ףףףרקץץפנצקעץץףררתצפשץץץפפפףףףעעעעעענננןןןמממחחח׀׀׀ץץץצצצצצצצצצצצצקקקקקקצצצדדד׳׳׳ßßßדדדאאאÛÛÛÛÛÛאאאדדדßßß׳׳׳דדדצצצקקקץץץקקקץץץץץץצצצרררגגגױױױßßßאאאßßßÝÝÝÝÝÝßßßאאאßßßױױױגגגרררצצצץץץץץץקקקץץץקקקצצצדדד׳׳׳ßßßדדדאאאÛÛÛÛÛÛאאאדדדßßß׳׳׳דדדצצצקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץפפפפפפתןקןרץטשןףפמרלנםס‎ֹÙÜע—״ר˜׃ץ˜ױע’Ùםױח’ױט”ײמ‹׃כ׀ך‘־כ“׀ן׀מ‘ֽו‘»ֻ¼־״ףקתפצףקשצקצûצץ‎ףצ‎עררקצע‏ףםךךךßßßײײײ׳׳׳ÝÝÝßßßÚÚÚױױױÞÞÞכככץץץצצצץץץצצצקקקקקקץץץצצצרררקקקםםםÜÜÜױױױ״״״אאאÞÞÞÝÝÝÙÙÙÚÚÚיייקקקץץץץץץשששצצצצצצקקקץץץקקקצצצךךךßßßײײײ׳׳׳ÝÝÝßßßÚÚÚױױױÞÞÞכככץץץצצצץץץצצצקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצףפצםקשך‏ÿ¥ֹױ§״יײל•ױמ”װם™ױםׂט¦ױי₪ֿג¨ׁו«ױכ£ֽד§װכ¨ֿÞ¯ׁÝ¾װßךפ‎קרüûשתקףנפףן½½»דבגשפרפפפףףףעעעעעעסססנננמממםםםוווֿֿֿץץץצצצצצצצצצצצצקקקפפפץץץÙÙÙÙÙÙאאאÝÝÝÜÜÜאאאאאאÜÜÜÝÝÝאאאÙÙÙÙÙÙץץץפפפץץץררררררצצצץץץצצצÛÛÛÚÚÚבבבÞÞÞÝÝÝÞÞÞÞÞÞÝÝÝÞÞÞבבבÚÚÚÛÛÛצצצץץץצצצררררררץץץפפפץץץÙÙÙÙÙÙאאאÝÝÝÜÜÜאאאאאאÜÜÜÝÝÝאאאÙÙÙÙÙÙץץץפפפצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץפפפפפפפפפûןסןשניûכץצמüםעמסÿ–ֳ״ױףױü˜׃‎–ױר׳ם“״ט—ײח–׃ז׃ז•ׂן™ֿס˜־ע‘ּמ“ֻה‘¶ָ¿ּױץץץץצסקשפצקשףצ‎מקüלתתףתףעןטÙÙÙÝÝÝבבבגגגבבבßßßאאאבבב״״״בבבןןןצצצצצצץץץקקקצצצצצצעעעקקקמממÚÚÚÙÙÙßßßגגגÞÞÞÞÞÞבבבßßßÙÙÙאאאמממצצצץץץשששצצצקקקצצצץץץרררןןןÙÙÙÝÝÝבבבגגגבבבßßßאאאבבב״״״בבבןןןצצצצצצץץץקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצקרףסתשכüÿ¨ֵ׃×װך¢ױע ״ש ״û£Ûüׁנ ׳ץÚפ˜״ס•Ýץ‘ßצבק¡Ùך¦װה®ֻÛחץÿפק‏רףקצעסץסמ¸·³חזהרפץפפפףףףעעעסססנננןןןםםםלללוווֿֿֿץץץצצצצצצצצצץץץצצצצצצץץץׁׁׁÞÞÞדדדÞÞÞÛÛÛÚÚÚÚÚÚÛÛÛÞÞÞדדדÞÞÞׁׁׁץץץצצצץץץקקקרררץץץצצצצצצ׃׃׃ßßßÞÞÞÜÜÜÜÜÜÞÞÞÞÞÞÜÜÜÜÜÜÞÞÞßßß׃׃׃צצצצצצץץץרררקקקץץץצצצץץץׁׁׁÞÞÞדדדÞÞÞÛÛÛÚÚÚÚÚÚÛÛÛÞÞÞדדדÞÞÞׁׁׁץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץפפפפפפףףףתןץלקןבצחסעךûלססףÿ˜ֳײ‘ײף•ײü ׳ÿ™ׁפ‘ׁך›Úלײך˜׀חײמ’־ט–ֽל—ּמ“ּך–ּה“´ֲֳֻׂרפףשצןרקעקץרקצ‏מק‏םûûסקףחגÞײײײÜÜÜאאאßßßÝÝÝÞÞÞßßßßßßÞÞÞÙÙÙוווץץץקקקץץץצצצץץץצצצצצצשששדדדײײײבבבאאאÛÛÛגגגÞÞÞÝÝÝבבבÞÞÞײײײאאארררצצצרררץץץקקקץץץצצצצצצדדדײײײÜÜÜאאאßßßÝÝÝÞÞÞßßßßßßÞÞÞÙÙÙוווץץץקקקץץץצצצץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצרפףףקתכשÿ«ָ״©ױמײץÚ‏״‎Ùü₪ßÿ¢Ýû™ױס˜״ף˜Þק“Ýצ‘ßצ™Ûס¡״ם£ָÛטשÿצתÿרףשתפפצען¹µ²םיזקסספפפףףףעעעסססנננןןןםםםלללההה־־־ץץץצצצץץץץץץץץץצצצצצצקקק־־־ÞÞÞÝÝÝÝÝÝßßßÜÜÜÜÜÜßßßÝÝÝÝÝÝÞÞÞ־־־קקקצצצקקקצצצקקקפפפרררקקק־־־ÞÞÞßßßאאאÞÞÞÛÛÛÛÛÛÞÞÞאאאßßßÞÞÞ־־־קקקרררפפפקקקצצצקקקצצצקקק־־־ÞÞÞÝÝÝÝÝÝßßßÜÜÜÜÜÜßßßÝÝÝÝÝÝÞÞÞ־־־קקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץפפפפפפףףףפסüךתשדûמפץםûכמףסüֱׁ›Ùנ›ײצ¡ׁק ׂף״נ™ײכ™ֿי™־ם˜׃ף”ױכ–ׂל–ֿם‘־ך–ֿד³¿ֲֹֿûצעûקמתץסשףץתפ‏עץ‏עת‎פפפג׳ױÛÛÛßßßאאאÝÝÝÜÜÜÞÞÞßßßÝÝÝדדדׂׂׂÛÛÛףףףשששצצצקקקצצצץץץשששץץץÙÙÙ׳׳׳דדדÙÙÙßßßÜÜÜÝÝÝÚÚÚßßßדדדÙÙÙÛÛÛפפפקקקקקקפפפקקקצצצקקקץץץÙÙÙÛÛÛßßßאאאÝÝÝÜÜÜÞÞÞßßßÝÝÝדדדׂׂׂÛÛÛףףףשששצצצקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצ‎פקץצûחרÿ¨ֻÞ£׳ן˜Ùק•Þÿ‘Üü•Üü™Úר Üר§Ýק¥״ף¢ױנ¥״ף¢״פ–ÞצÛףֶÚותÿףקÿץנצûץץצסמ÷¶³׳׃׀ִ¼÷עעעסססנננןןןמממםםםכככךךךהההÊÊÊצצצץץץקקקקקקקקקצצצץץץץץץ׳׳׳׳׳׳דדדÛÛÛÞÞÞÜÜÜÜÜÜÞÞÞÛÛÛדדד׳׳׳׳׳׳ץץץץץץקקקפפפûûûףףףקקקץץץÙÙÙÛÛÛבבבÝÝÝÜÜÜÞÞÞÞÞÞÜÜÜÝÝÝבבבÛÛÛÙÙÙץץץקקקףףףûûûפפפקקקץץץץץץ׳׳׳׳׳׳דדדÛÛÛÞÞÞÜÜÜÜÜÜÞÞÞÛÛÛדדד׳׳׳׳׳׳ץץץץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץפפפפפפפפפפפפשפûןץץלצםףניצעסדר‎ִ׀—Ûע™Ùü–׳קÚסÝך—Ùחװו–ױז‰Ûי—׀ה›ֿח˜ֽל”׀ל•ֿד‹±¾¾ֹֿתצףתצםתץןÿצקקנרףצ‎ןשûפרקװּֿÞÞÞÝÝÝÝÝÝÝÝÝÝÝÝÜÜÜÝÝÝßßßÞÞÞבבבׂׂׂץץץקקקקקקףףףצצצצצצקקקצצצ׃׃׃ÞÞÞאאאאאאÜÜÜÝÝÝÝÝÝÝÝÝßßßÝÝÝßßß־־־רררצצצצצצשששףףףצצצצצצקקק׀׀׀ÞÞÞÝÝÝÝÝÝÝÝÝÝÝÝÜÜÜÝÝÝßßßÞÞÞבבבׂׂׂץץץקקקקקקףףףצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצüףצצקüךרÿ¦ַ״£ױל¢ßüÜüÞÿÜ‎¢Ûש₪Úצ¥״ץ¢״ע¡ÚץÜרÜרÙס¥׳מ¥ֶÙכûÿצקüûץץשפנצץנ·¹´¬²°ÜבהעעעסססנננןןןמממםםםכככךךךדדדÊÊÊצצצץץץקקקקקקצצצצצצפפפקקקההה״״״ÞÞÞאאאאאאÝÝÝÝÝÝאאאאאאÞÞÞ״״״הההקקקפפפקקקץץץצצצץץץרררצצצדדדײײײßßßאאאßßßÞÞÞÞÞÞßßßאאאßßßײײײדדדצצצרררץץץצצצץץץקקקפפפקקקההה״״״ÞÞÞאאאאאאÝÝÝÝÝÝאאאאאאÞÞÞ״״״הההקקקפפפצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץפפפפפפפפפפפפקנרנפץנץמקנךרמןיצ‏‘¿־׳ע ײü׃ת™ײף—״מ ׂי¥ֽח־ט“׃ל˜ׂט›ׁם˜ֿמ‘־כ’ֿה‰°¿¼ֻׂקצפשצןרץנ‏ץררסשפק‏ןשתףרפײֽׁאאאאאאÝÝÝÛÛÛÛÛÛÞÞÞÝÝÝÛÛÛאאאÙÙÙׂׂׂפפפקקקקקקקקקקקקףףףתתתפפפׁׁׁÜÜÜßßßÝÝÝÝÝÝÛÛÛÙÙÙÜÜÜאאאאאאÞÞÞׂׂׂץץץצצצץץץרררפפפקקקצצצצצצׂׂׂאאאאאאÝÝÝÛÛÛÛÛÛÞÞÞÝÝÝÛÛÛאאאÙÙÙׂׂׂפפפקקקקקקקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצרףקסצüיûÿ₪ַÚ¢ײמß‎™אÿ˜Þÿ›Ýÿ Ü‏£Üת¢Ùק¡ÚקÜשÝû˜Ýת¡ßר§Ûס ֳײחשÿףצ‎שץצתץסקפן¸÷µÚÞÝסצשעעעסססןןןממממממלללךךךייידדדֹֹֹצצצץץץקקקצצצצצצצצצקקקצצצןןןÛÛÛÙÙÙבבבÞÞÞßßßßßßÞÞÞבבבÙÙÙÛÛÛןןןצצצקקקקקקצצצפפפקקקצצצץץץסססÛÛÛÝÝÝßßßßßßßßßßßßßßßßßßÝÝÝÛÛÛסססץץץצצצקקקפפפצצצקקקקקקצצצןןןÛÛÛÙÙÙבבבÞÞÞßßßßßßÞÞÞבבבÙÙÙÛÛÛןןןצצצקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץץץץפפפפפפפפפפפפשןרעעפעףמתנמשםסכף‏–½־¥״ץ¨ױ‏¦׃üװצײס¥ׁל«ּם₪ּן™ׂנ׃מ—־ל–־ןֿמ“ֿי„­¿¹ÊװץצררקףץפנתפצרףתפקüןקשפצףÞ׳ׁÚÚÚאאאבבבÝÝÝÛÛÛÞÞÞßßßÞÞÞהההױױױÙÙÙפפפצצצץץץקקקץץץץץץשששעעע״״״ÜÜÜגגגÜÜÜÚÚÚßßßÜÜÜßßßאאאאאאÙÙÙÚÚÚצצצקקקפפפצצצץץץקקקץץץץץץ״״״ÚÚÚאאאבבבÝÝÝÛÛÛÞÞÞßßßÞÞÞהההױױױÙÙÙפפפצצצץץץקקקץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצשקתנץûי‎ÿ ֵױ¦Úנ¡ב‎דÿ•ÜüÞÿÞ‎¢Ýû¢Ûר ÛשÞתßü™א‏Þצ₪Üףֳײחתÿפקÿשפרüפעץנם¶µ³הזוקרüסססנננןןןמממםםםכככיייטטטבבבֹֹֹצצצץץץקקקצצצצצצצצצץץץץץץתתתכככÛÛÛ״״״׳׳׳בבבבבב׳׳׳״״״ÛÛÛכככתתתץץץץץץץץץקקקץץץשששץץץפפפשששללל״״״׳׳׳ÙÙÙÞÞÞÞÞÞÙÙÙ׳׳׳״״״לללשששפפפץץץשששץץץקקקץץץץץץץץץתתתכככÛÛÛ״״״׳׳׳בבבבבב׳׳׳״״״ÛÛÛכככתתתץץץץץץצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץפפפפפפפפפפפפפפפשעתנסףןסלתעןרםסטעû–½ּ₪׳ע₪ײש£ױת›ײפ˜Ùן װל₪׀םׁנ’ױעׂל—Êח—ּמ“־מ•־י‚«½µַ׃פרûקקץפפעשפרקפûפקüןרקץקעיגÜÙÙÙÝÝÝאאאÞÞÞÜÜÜÝÝÝßßßאאאאאא׳׳׳הההץץץקקקפפפצצצפפפרררץץץפפפוווÙÙÙßßßבבבßßßÝÝÝÞÞÞדדדßßßÞÞÞײײײדדדפפפקקקפפפצצצצצצקקקץץץצצצדדדÙÙÙÝÝÝאאאÞÞÞÜÜÜÝÝÝßßßאאאאאא׳׳׳הההץץץקקקפפפצצצפפפצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצתצףעצקכüÿ ְֻ¬Ûם¥ßץ¡בü›Üרßת£ßש¥Ýצ₪Üץ£Ýץ¡ßראתßתגû§בקֶÚזüÿעצÿקער‎פץתענ¼¸·בßאקצûנננןןןמממםםםלללךךךטטטחחחאאאָָָצצצץץץקקקצצצצצצצצצשששעעעפפפצצצנננווו׳׳׳־־־־־־׳׳׳ווונננצצצפפפעעעשששץץץצצצקקקשששצצצץץץררררררנננההה״״״ׂׂׂׂׂׂ״״״הההנננררררררץץץצצצשששקקקצצצץץץשששעעעפפפצצצנננווו׳׳׳־־־־־־׳׳׳ווונננצצצפפפעעעשששצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץץץץפפפפפפפפפפפפףףףנןקםףףמפנףעםסםמהףר¢ֽײ®דץ¬ßת«Þû£בצ גע¦ßנ©Üס£Ýף˜בפ¬׳ך×װל«׳ע£ױנ¢ׂט”µֶ¸ֶׁףקתצצפץץףרצשרץüעץתנצצרשפצןי׳׳׳ÚÚÚßßßהההדדדßßßÞÞÞאאאÙÙÙÝÝÝןןןץץץרררץץץקקקקקקצצצפפפקקקןןןÚÚÚÙÙÙÝÝÝדדדאאאאאאבבבÙÙÙÜÜÜÝÝÝסססרררצצצץץץקקקקקקץץץפפפרררנננ׳׳׳ÚÚÚßßßהההדדדßßßÞÞÞאאאÙÙÙÝÝÝןןןץץץרררץץץקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצפףןףקצכ‎ÿ ¾ָ­Ûך¥Üנ¡Ýץ¢אש¢Þר¦Þק§Ýץ¦Üפ¥Ýפ¥ßק¢אשאת›ßצ¢Üנֳױהתÿעצÿרףשüףצשנס½··³¯°זהחנננןןןםםםלללכככיייטטטזזזßßßַַַצצצצצצקקקצצצצצצצצצקקקקקקצצצקקקפפפפפפשששררררררשששפפפפפפקקקצצצקקקקקקצצצץץץץץץקקקשששצצצףףףקקקפפפצצצקקקצצצצצצקקקצצצפפפקקקףףףצצצשששקקקץץץץץץצצצקקקקקקצצצקקקפפפפפפשששררררררשששפפפפפפקקקצצצקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץפפפפפפפפפפפפףףףףףףפק‏םקרךץןןנכפףסטףץ¥ֶֻ¸ִ“¸ֻ“¸ֻ÷ַ‹÷ֲ‘·ֲ•µֲµֵ†·ֵ–±¼—±ְ”±ֳˆ«¾°ֱ˜°¼¸ֱָרררקצעצץףרצשקצûעצשסקקקשפûצעםםםÞÞÞׂׂׂײײײÞÞÞßßßÙÙÙװװװÝÝÝךךךצצצצצצקקקצצצץץץקקקקקקקקקצצצץץץךךךÞÞÞײײײ״״״ÞÞÞÜÜÜÚÚÚ׳׳׳אאאחחחצצצףףףצצצץץץקקקקקקץץץץץץרררקקקםםםÞÞÞׂׂׂײײײÞÞÞßßßÙÙÙװװװÝÝÝךךךצצצצצצקקקצצצץץץקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצפשüנûÿהûÿֱֽ®Ýן¨אקÝצ¡Þת¢Þת¥Þש¦Þק¦Üצ¥Ýצ£ßש אûßû¦הש¨Ýןִײורÿסץÿûצüûעץרןנ»µµ״װױ¹´¸ןןןמממםםםלללךךךיייחחחוווÞÞÞַַַצצצצצצקקקצצצצצצצצצףףףפפפצצצצצצץץץקקקקקקפפפפפפקקקקקקץץץצצצצצצפפפףףףצצצצצצפפפץץץרררצצצפפפפפפקקקקקקצצצפפפפפפצצצקקקקקקפפפפפפצצצרררץץץפפפצצצצצצףףףפפפצצצצצצץץץקקקקקקפפפפפפקקקקקקץץץצצצצצצפפפףףףצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץפפפפפפפפפפפפףףףףףףךןץכץצןרץןמךץםכמןסײטל׀הםׁÞמװÝל׀ÞחֿÜגװÙßÙ׳גװ״דֻ״בÊװױּױÚֹײÞֱ׃Ýְ׃Úֵ׀ײֲֳֵשץעתץסשץעקץצקצûעצשעררצרץרקףצצצןןןוווÚÚÚׁׁׁׁׁׁÚÚÚהההלללצצצקקקקקקץץץץץץפפפפפפרררקקקצצצצצצרררםםםבבבÛÛÛֿֿֿ׃׃׃ÙÙÙדדדןןןקקקüüüקקקצצצצצצצצצקקקץץץצצצקקקקקקצצצןןןוווÚÚÚׁׁׁׁׁׁÚÚÚהההלללצצצקקקקקקץץץץץץפפפפפפצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצנûÿךרÿהüÿ©ֽÝµגק¶ךÿ°יÿ°יÿ¯חÿ±חÿ´חÿ³זÿ³זÿ±יÿ°יÿ­יÿ³טר²אן­Ê״כשÿנףתûצתתספüצצûקצצעףרףקןןןמממםםםכככךךךטטטזזזוווÞÞÞַַַצצצצצצקקקצצצצצצצצצקקקץץץשששצצצצצצרררפפפקקקקקקפפפרררצצצצצצשששץץץקקקץץץשששץץץץץץץץץץץץתתתצצצקקקפפפץץץררררררץץץפפפקקקצצצתתתץץץץץץץץץץץץשששץץץקקקץץץשששצצצצצצרררפפפקקקקקקפפפרררצצצצצצשששץץץקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץפפפפפפפפפפפפפפפףףףףףףפףûלנףסףעץםכ‎ןמעלללנסךןףםלפסלףםכמםיטנזופהונהזיוזכחÞזדÞßבאÝגוÛאד״ÙÛֱ½¼ûףנ‎צנתץסצץףץצרףקתץשתץקצץץףצצצצצצצצצץץץץץץצצצצצצץץץצצצתתתףףףקקקפפפקקקקקקצצצצצצפפפרררצצצקקקץץץשששףףףקקקצצצפפפצצצצצצץץץץץץפפפקקקצצצץץץצצצצצצרררצצצץץץצצצצצצצצצץץץץץץצצצצצצץץץצצצתתתףףףקקקפפפקקקקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצעקתםצûכüÿ®ֶׂ¡ֱ׀¿ׁ•¾׀—ְװ—½׀¿ׁ›¾ׁ›¿ֿ›¾ׁ›ְׂְ׃–¿ׁ™ֱֽ£ֳ־¯ֳ־עûÿצץûüרשץןןתצץץפעתרשץףפןןןמממלללכככךךךטטטזזזהההÝÝÝִִִץץץפפפקקקץץץקקקפפפצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצףףףצצצקקקץץץףףףץץץקקקרררקקקפפפרררףףףרררקקקצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץצצצקקקץץץקקקשששצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץפפפפפפפפפףףףףףףעןצססףעסןקןלרםכץםכממלכןמםםםןכךכךוךךגלטßמוÞךוßוזאךאײןזßגßÚאßÝאÞß׳׃ְֵׂ½‎ץעüפסתץעקצפץצרףקרץצרץקצץקפצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצ‏צףשץעףףףחןסÝכמ׳טןײינ׳ךס״ינÚימÛילÝטלÝטלÛילÚימÚימׁךס׳ךסדמפןעקקץצשץפקצעקרףץקפצצצקץצןןןמממלללכככיייטטטזזזהההÝÝÝִִִרררפפפשששפפפשששצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצקקקקקקרררררררררקקקץץץףףףשששקקקרררץץץץץץץץץûûûףףףצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצרררקקקצצצףףףףףףרררצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצצץץץץץץץץץץץץץץץפפפפפפפפפףףףףףףףףףעעפסףעססןפסלפןכנןךכנךכנללמכלםטילוזלגיךגטיבוטבבטבמוÞבÜײדגÞאÞßÝ״ÜÚ״Ù¿½¾קףעשפסרפףץץץעצץפץקץץץץץץפצףץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץÿעך‏ףםüפסרפספפעףץפףקרצרקצצפקצפשץעשצסשצסשצסקצעקצעןת‏נרûץצתשקרûץץשץעץצספצסעקףעצץץץץמממםםםלללךךךיייחחחוווהההÙÙÙֶֶֶ¹¹¹¸¸¸¸¸¸µµµµµµ¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸···¶¶¶¶¶¶···¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¶¶¶¸¸¸¶¶¶······¹¹¹¶¶¶¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸···¸¸¸¶¶¶¹¹¹···¶¶¶»»»µµµ¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸¸··················¶¶¶¶¶¶µµµµµµµµµµ·´³¸´³¸²µ¶±µ´°³´¯±³°¯´°±±¯°°®¯¯­®®¬®­«­¬××××¨©«×¦¥¨×©¨¬­¥¦×§₪«™‘ץצררצקרצקצרקפרקצרקרצקרצקקקץקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקקüפעתץעתצץרצקקקשצצרצצרצצצקץצשץפתץעתץעתץסתץעתץעתץעצקשצצצרפףûףסשפסרץנפקנףתףףשץפרקקקקמממםםםכככךךךטטטחחחהההדדדÛÛÛֵֵֵüüüÿÿÿ‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎‎‎‏‏‏ÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿûûûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüüüüשתץשתץשתץררצקקץצצפץץץץץץץףצצסץץנפפןףףמפעםףנכעןךסחכמזמסßיכדטמדגךÛÛדִֹֿןפרץפשצפקפצץסקץץץץרפץרפץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץץצקûץצתץצתצקüקר‎קר‎ץצûפץשקקשקקשרצקרצקרצקרצקרצקרצקקצפשץפ‎ץף‎ץףûצףרקףץקעערפסקףעצץץץץמממלללכככיייטטטזזזהההגגגÜÜÜ¿¿¿ÿÿÿüüüÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿüüü‏‏‏‏‏‏ûûûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüüüüüüüÿתקÿתק‏תש‎שתתרששקתרצשקץרקץרץץקףעקעסצנסצןנץםםץללפחלנגלמÚוידטמאßחÞÞז¼ֳֹ¸½ֱ¹¸½÷¸»¶÷¹µ»·¹¹·½·¹¼¸¹¸÷¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹¹µ¹÷¶·»µ¶÷¶·»¸·¼¹¹»¸¸÷¸¶¹¹·¸¹·¸¹·¸¹·¸¹·¸¹·¸¹·÷¹·÷¸·³»·´½¸µ¿·µ½¸µ÷¹··¹¶³¹µµ»¹¸÷¹÷¸¹םםםלללךךךיייחחחווודדדבבבÝÝÝֲֲֲüüüÿÿÿ‏‏‏ÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿ‏‏‏‎‎‎ÿÿÿüüüÿÿÿתתת‎‎‎ÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‎‎‎‏‏‏‏‏‏ÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüüüüÿקצÿקר‎קשתרûקצûצץתץץקץץקףפצנפץמעףםסעיסףחסעוןנוםןזחיהםלאיטזוךחאחÛÙÞֱֶֹקû‏ÿ‏ÿÿ‏ÿ‏ÿ‎ûÿ‎ÿÿ‎ÿ‎ÿÿ‎ÿüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏ÿ‎ÿÿ‎ÿÿ‎ÿ‏üÿ‏‎ÿ‏ûÿ‏ûÿ‎תÿ‎תÿ‎תÿ‏תÿ‏üÿ‏üÿ‎‏ÿ‎‏ÿ‎‏‏‏üÿÿ‎ÿ‏‎ÿ‏‎ÿ‏ÿÿÿÿ‏ÿÿüÿÿüÿÿÿÿÿÿ‎ÿםםםלללךךךטטטחחחווודדדבבב׳׳׳¿¿¿ÿÿÿÿÿÿÿÿÿûûûÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿתתתÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿתתתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿ‏‏‏תתתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‏‏‏‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûûûûüûש‏תûüת‎קû‏ץת‏פקüץצתצצרפצץףץעעענססןןסמכנללמכלםטםיזוחגחיהיהביÝßא׳Úֲֲֲ‏ÿÿÿ‏ÿÿ‎‎‏ÿ‎ûÿ‎ÿÿ‎ÿ‎ÿÿ‎ÿüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüÿ‎‎ÿü‏ÿתÿ‏תÿ‏ûÿ‏ûÿ‏ûÿ‏ûÿ‏ûÿÿûÿÿ‎‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿûÿÿüÿÿÿÿÿÿ‎ÿ‏üÿ‏‏ÿ‎‏ÿת‏ÿ‏ÿÿÿ‏ÿÿ‎ÿםםםלללךךךטטטחחחוווגגגבבבÛÛÛֲֲֲ‏‏‏ÿÿÿ©©©­­­‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÜÜÜמממ‏‏‏ÿÿÿ‎‎‎‏‏‏ÿÿÿ‏‏‏ÿÿÿüüüÿÿÿüüüÿÿÿ‏‏‏ÜÜÜ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎‎‎ÿÿÿ‎‎‎ÿÿÿזזזÝÝÝ‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏ÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎üüüüüüק‎ûרüûצû‏עü‏נû‎סשüץצתץץץץפעצעןקןםקםלץםךףכטףךוץחהןטגזזÞטטאלדÞםÛÛד׳׳ֳִ¿ÿÿ‎ÿ‎‎ÿ‎ûÿÿûûÿûÿÿ‎ÿ‎ÿÿ‏ÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿשÿÿûÿÿüÿÿ‏ÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎‏ÿÿüÿÿûÿÿûÿÿשÿÿשÿÿûÿÿûÿÿרÿ‏ûÿÿ‏ÿÿÿÿÿÿ‏ÿÿ‏ÿ‏ÿÿ‎‏ÿÿ‏ÿÿ‏ÿÿ‎ÿםםםכככךךךטטזזזההההגגגאאג״״Úְְֲÿÿÿÿÿÿ©×¥ÿÿתÿÿרÿÿצüÿ‎üüÿÿûÿÿשתÿÿןקÿערÿÿÿüÿÿüתÿÿןפÿפףÿÿÿüÿÿשÿÿ‏שנÿצ.+¸¬¬ÿ‏תûÿÿרÿÿüûÿÿüןÿשוÿ‎רץÿÿםÿÿפÿשÿÿהÿתג{ghüמÿשÿרשÿÿרתÿÿÿ‎ÿÿףÿÿר‏ש‎ÿ‏ÿÿÿתרüûü‎ÿüüÿ‏‏ÿÿÿצÿÿסÿ‏ץפÿÿü‏ÿÿתÿÿשצ”“witJץÿבשÿףש‎üüÿÿרשûÿ‎‎ÿת‎ÿתÿש‏ÿמÿÿתÿÿÿûר³KFJקקשÿצמÿםה´‘˜ְׁכÝÿÿמÿÿÿשןÿü‎ףûÿקûÿÿשץשרÿתüûתüמשתעצקüקשÿפרקףשכספיקצûמלתףעÿממצלללללהםםבחזכךהזיהאגוÞÛהבײÙÞִ¾ָÿ‏ÿ‏ÿûüÿצÿüרÿ‎ÿüÿÿרÿÿüÿÿÿ‏ûקÿÿת‏ÿÿ‏ÿÿÿûרÿסתÿףüÿתûÿÿûÿÿ‏ÿרÿ‎סÿ‏ר‏‎ÿשÿÿûÿÿÿÿÿרÿדר‏תÿתÿÿרÿÿ‎רüÿןüÿפÿ‎‏ÿשÿÿ‏ÿתÿÿקÿÿüÿÿûשת‏ÿÿץ‎ÿÿ‏ÿ‏ÿתüÿת‎ÿשü‏ûüÿ‎שÿרüÿרÿ‏שÿüÿÿüÿ‏‎û‏ÿרüÿפ‏ÿת‏ÿÿקÿÿÿש‎ÿתןÿ‎פÿ‏ÿû‎ÿ‏‏ÿרÿ‏פÿתקÿרÿÿץÿתתÿתÿÿüÿÿû‎ÿüן‏ûÿ‏ÿÿ‏ÿÿÿ‏ÿÿ‏ÿ‎‎ÿתÿÿûÿÿÿÿÿÿ‎ÿÿ‏ÿתÿûשÿרשÿצ‏ÿÿÿüÿעÿÿת‏‎ÿü‎ÿ‏ûÿÿûÿ‏תÿü‎ÿ‏ÿשÿÿקÿÿשÿÿ‏ÿÿ‏ÿÿüÿÿÿ‏ÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿםםםכככךךךטטזזזההההגגגאאג״״Úְְֲÿÿÿÿÿÿ©×¥ÿÿתÿÿרü‏ףפתÿÿ‏ûÿüף‏‎ûצÿÿשÿÿÿשÿÿתפÿ‎צףüשעÿÿץÿÿû‏ÿÿ‏ÿÿûץÿÿסקבצעסÿצÿÿÿ‏רÿקנÿצק‏‏ÿקÿÿש‎ÿûü‏צüרüÿרױ־¾   ”×רÿÿ‏ÿ‎ÿ‏‎ÿûü‏ü‎üÿ‎ק‎‎ש‎ÿÿÿ‎ÿÿפÿûכÿ‏צÿ‏ÿקûÿצ‏ÿÿÿß‏ÿן‎תÿÿüÿ¨y}‎ÿץ‎‎ץÿÿ‎ûÿÿûÿÿ‏ÿ‎ÿתקÿüû‏ÿÿפÿÿÿ‎ד‏סט»ֲׂÿÿÿÿפלÿסך<!´¾Êוÿÿמÿÿ‎üרÿקשÿûÿü‎ÿקüץÿסÿששûס‎ןצ‏ףשץצ‏ץתפפעלקףלקשללצצןקנכןןעקהכסמנםכהÚחחייוזיהבבדÞÝדבײÙÞִ¾ָÿ‏ÿ‏ÿû«®¥¬©₪ÿü‏ÿ‏ÿשÿÿש‎üÿ‎üרÿ‎û‏ÿÿ‎ÿÿûקÿÿסשÿפקÿÿ‏ÿÿ‏תשÿÿתתÿûÿÿÿÿקצד״ײםמעןÿÿןÿÿÿÿצÿüנÿ‎ÿû‏ÿüÿÿ‎שםÿ‏נÿÿÿûüÿÿ‏ûÞÙ׃שÿÿעÿÿק‏ÿÿ‏ר‎üÿÿÿÿ‎‎ûÿÿû‏ÿÿüÿÿר‎ÿü‎ÿÿ‏ÿÿûûÿ‎‎‎üתû‎ת‎ÿ‏‏ÿÿ‎‏ÿÿÿײנםÚ׳Úברÿÿת‎ÿÿüÿÿûÿת‏ÿץÿ‎קÿץÿÿפÿשצÿÿ‎שûצÿ‏פÿשנסÿÿרÿÿ‎תÿּֽׂפש‎ר‎ÿÿÿ‎ÿûץÿ‎תש‏ÿרÿÿûÿÿÜ׳Ûשןםÿששÿûÿרÿÿ‎‎‎ÿששÿ‏‎‎ÿüÿ‏üÿ‎ÿÿ‎‏ûÿÿרÿÿüÿÿÿÿÿ‏ÿÿüÿÿÿ‏ÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿלללכככיייטטזזזההההבבבאאג׳׳Ùֱֱֳÿÿÿÿÿÿ©×¥ÿÿת‏ÿקרתןKUyרמוÿר׳גßÚVcûשÿÿמתeH6{wl  "־װאשÿÿשÿÿÜ׳װG.'_G_ֹֻאפÿÿÿשןÿÚַ3Þדקךÿÿ¯¾ׁ>=;ûקכתרל"ֹµ·o}ױֽו¹ֲßשÿÿ‎ÿשÿ‏‎ÿüÿ‎üÿûÿûתÿ‏‏‏ÿÿüüÿûא‰}W  x›מÿÿÿÿֳִֻ₪  &  %|™ÿüÿÿ‎ûÿ‏ÿקüÿשÿÿüÿ‎ÿÿרÿ‎תÿûתת‏‎ÿקֳ¶¨›,Cדûÿצûÿטֱּ3   $$$76ƒ צ‏ÿֲ´´   [kh)'KFJהץוחףיWLPfQV
+ ++ּÜכמסÿתןץץמטםסנזסקוילסךגזחייוזטהבגגאÝבא״ÙÝֲ¿ֶÿ‏ÿ‎ÿü¦©¢üûקÿ‎ÿÿ‎ÿ‏ÿÿ‎ÿ‏‏ÿ‎üÿÿûûÿÿ‎ÿÿשפÿתךÿÿרüÿÿÿ‏ÿÿ‏ÿצüתרÿÿÿ‎ÿÿקנ9#­®²חÿÿץÿÿÿÿרÿ‏לÿשקü‎ÿ‎üÿÿÿתÿÿף‎ÿתÿ‎ÿÿצעticןתÿםÿÿצÿÿÿתכתüÿÿ‏ÿÿ‏ÿÿÿ‎û‎תüÿÿ‏‏ÿÿ‏ÿÿ‎ÿÿ‏‎‏‎ûÿ‏ÿÿ‎ÿ‏‏ÿûüÿÿÿÿÿÿ¦nXr‹זÿÿקÿÿÿשüÿץÿÿ‎ÿרÿÿüÿצÿÿצÿÿ‎רÿûûÿסÿûז¾¡“+QRשÿÿÿםס	 Üךכסÿÿÿÿÿÿררÿ‎תרÿÿעÿÿû‎ÿ&'ֱ­¶ÿקקÿ‎פÿÿ‎ÿüûÿ‏ÿ‏ÿÿüÿÿ‏ÿÿÿ‏ÿÿÿÿûÿÿûÿÿÿÿÿÿ‏ÿÿÿÿüÿÿÿÿÿÿ‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿלללכככיייחחוזזהדדדבבבßßב׳׳Ùֱֱֳÿÿÿÿÿÿ©×¥ÿÿת‎‏צץקלEםגאÿüװ״־ִ@רנÿÿךü*y|sיÿÿam…pn{üûÿש‏ÿÿרÿÿהי1+ֳ¼ִ‏ÿÿ‏ü‎ÿשק 0%!ּֽׂ ִ־Úר‎ש‏ûך#ֵ³³ˆx…ÿףÿקÿÿק‏ÿר‎ÿ‎‏ÿÿ‏ÿÿ‏ÿÿÿ‎ÿûתÿ‎ÿÿ‎תsk`KC6ךחאלנף¡©´ףÿÿקאÚ  ¼ָָדףÿ#=‰˜ÿתÿÿ‏‎üÿÿרÿÿש‏ÿÿ‏üÿ‎ûÿü‎ÿ‏ÿÿ‏ÿÿכַ)©¾׃גÿÿפÿÿÿקיÿÞֿEµ¯±Þקü״ץûרÿÿ”m_Rֲֳֶ#סּמ,"!Ýכװונך!…m{üןח‡„0@Oולÿץסÿעכוןמךךםפטכנלםחזטחחזהטהדדבגßאג׳״Úְֲֳÿ‏ÿ‏ÿ‎£¨₪ÿÿ‎ÿששÿûÿ‏רü‏ÿÿקÿ‎ÿûÿÿüÿÿüשÿ‏פÿüצÿררÿקÿÿ‎ÿץÿÿעÿÿüÿÿÿתצÿצספאßלץ‏דÿÿÿÿןü‏ÿשפÿÿרÿÿתףÿÿץסÿÿףÿÿÿûתדֶ¸   	 —¡¢ÿÿûÿ‏ûûÿÿ‎ûÿÿûÿÿ‏ÿüÿת‏ÿצÿ‏עÿ‏ץÿÿתüÿ‎‎‏ÿתצÿÿüÿ‏‎ÿ‏ÿתÿÿסÿק±¥‘]„¥׳ÿÿקÿ‎ÿ‎םÿש‏ÿüÿüתÿÿ‏תÿûרשÿÿעÿÿשÿרüןÜ/ ¦ֶ׃ÿש‎ÿטא-
+ßעניÿÿפתÿÿשÿÿüûצ‎םûÿפÿÿ‎מדסצנ‏ÿ‏ÿüüפÿקרÿüû‏ÿÿקÿÿצ‎ÿת‎ÿÿ‏ÿ‎‏ÿüÿÿÿÿÿÿ‏ÿÿ‎ÿÿ‏ÿ‏ÿÿ‏ÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿלללכככיייחחווודדדדבבבßßבײײ״ֱֱֳÿÿÿÿÿÿ©©§ÿÿת‎‏צץצמWפהוÿשׁגױֵ9üפÿÿזÿ+ÝזדכÿÿֱֵאD3Cÿתÿüÿÿÿ‏ÿÿצתSDAֹ·«ÿתפקÿÿןÿÿ‏‏צˆkI  ³²÷ז‏ÿמÿÿÿ‏י׃ֳ©'
+ ´ֲֿץÿÿר‏ÿת‎ÿ‎üקÿ‏רÿשûÿûתÿתנתףכ$ֲִ״ûÿÿûÿתûÿצûÿ‎הֲפ'ס‎שןÿק₪zttÿ‎ûÿÿÿרÿÿרÿÿ‎‏ÿÿ‎ÿÿשÿÿüÿÿüÿÿûפֻ×µץ‎ÿדÿÿמÿÿÿüיÿף׳e;-½¹ַךÿÿםÿÿפ‏ף˜›€~€rהÝם0IÿזÿfWP״גַךעפ5ל׀יÿסו׳Úֵ ־Ûûנעÿעללץםככטסךםעגלבזטדזזהודהגאדßßב״״Úֱֱֱÿ‏ÿÿÿÿ£§¦üÿ‎ÿ‎‎ÿןףbQWםםןףÿÿב׃קndlÿ‏םûשםVGLlv ֳÜעיÿÿ‎üרס׀¿R+&]KWֳ׀אזÿÿÿÿֿÝאףTקÚצÿקÚְַ¨<HטשÿÿםמB ֵ³³i{‘ֳײÝ־ּ½ÿüפû‏ÿקÿפÿ‏‎ÿûÿ‏‎ÿשÿרü‏טÿÿהÿקדz{s  „ÿקüÿÿת¼¿¶  1  	 ^…¦אÿÿרÿסÿÿגÿÿר‏‎ÿÿתÿÿשÿÿ‏ÿצÿÿץÿÿÿ‎ÿ´¥¢:% ךüÿÿקûÿךÙ. La\ 2ה׳סÿ‎ÿ‏ÿםÜÚֱ@4(UOSִÊ״פÿÿתÿüÿםן^NOqvy 	 ׂװאû‏ÿüÿÿ‏ÿ‎ÿ‏‎ÿüÿÿ‎ÿÿ‏ÿ‏ÿÿüÿ‎üÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿלללךךךיייחחווודדדדבבבßßבײײ״ְְֲÿÿÿÿÿÿ©©§ÿÿû‏ÿקקרנCÿו״ÿתֶ¼·£*Uקרÿÿטÿ-אטכמÿÿׂÊס&
+!‎פקץÿ‎üÿפÿץטR@6ֽ½°‏ûצץÿÿפÿÿ‎תכqV8  ™םÿÿמÿÿÿÿםÿüהÿרס€qx¼¶ִ ßםÿפשÿÿ‎ÿÿ‎תÿüצÿûשÿ‎צÿÿןשקךֹֻ׳ûûÿüÿ‎ק‎שרÿÿה¼ס%/פÿתנÿפ–§•yzrÿüüÿ‎ÿû‏ÿ‏ÿÿÿ‏ÿÿ‏ÿû‏ÿ‎üÿÿ‎פÿרבL¼«ֻÿ‎ÿףÿÿכÿ‏ÿüחÿצֿ];"ִֵװגקÿעÿÿקüץ‚k}qץלÿU,fÿחÿcRJÚטֿחנק 6נ־חÿףהװÙֳ ׀ÝÿםמÿרנמפכמליתוךמזןÜזיגוודודזהßואÞב״״״ְְ¾ÿÿ‎ÿÿÿ§­­ר‏üÿ‎‎ÿיםךטכמÿÿÛָץתשה‎שנ$ ’rÿןנolsZmךÿÿש‎‏ÿשבÿÝׁ;(´¿ׁÝÿÿüÿל‏שÿ…?$-׳־¿  ÷׳ßרÿÿÿץס/	 ֹ´½v{‘נüÿק‎שÿÿÿÿ‎ÿûÿסÿ‏ûÿקÿû‎ÿשÿÿÿÿסÿצÞn_BFGÜעÿÛכרµ´¯ÿרגכהׁ  »¾בÿגÙ%2pµהÿÿרÿףÿÿהÿÿף‏‏ÿÿתÿÿרÿûÿÿשÿûÿ‎רÿףק$&··ÙעÿÿÿרקÿךÚ"m€חüÿ›•¯3$7ץר‎פÿתû‏כûחÜ8!'ֱ¾ֹרÿÿשÿÿÿבה'tלÿÿdm~efxüÿÿûÿÿ‏ÿ‎ÿ‏ûÿüÿÿ‎ÿÿ‏ÿ‏ÿÿüÿ‎ûÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככךךךטטטחחווודדדדאאאßßß׳׳Ù¿¿ֱÿÿÿÿÿÿ©©§ÿÿûÿÿתûüפ6ׁ²–ÿפ÷ns_ Bpכףÿÿךÿ3זינכ‎ÿ״ּת*'ÿüûןÿץתÿטÿק׳ZA:µµ·פÿÿû‎רÿüט…s_GC@ױÛח ¹¿½תÿץףץט¹§£‎דז~ˆ½ְֿ .גמÿü‏ÿÿüÿÿתÿÿü‎ÿÿצ‏ÿץûüפÿÿפc^Kg`MתףםשקÿֶּגנÿÿשײÚ  ֽײ׃ןÿÿAUT}…‡ÿ‎ÿÿüÿÿüÿÿüÿ‏üÿקÿÿפÿÿרÿüÿ‎טׁ­‹
+Wתעÿÿûÿü‎קשÿûÿÿכÿ‎ײyfH‰נשÿפרÿûÿÿo€xקםÿS(]ÿאתcULײט׀בןע$/£‘ÿףו›¥.אםÿןלץץלדסםמילÿחלעךםÚזיגהזדודטהÝוגÝד׳׳ױְֱ¼ÿÿ‎‏‏ÿ₪©¬שÿÿÿûרÿןף0ךטכיÿÿÚָעÿÿךתנס/6נױזÿüלֲֶ¹28\ךשÿץÿÿÿרÜÿפװg99¶¹ּײÿÿםÿÿÿûמÿצ׃~iT 
+›´Êûÿÿÿ‎ףÿûןֱֱׁ, 	$¨ֲÙףÿÿÿתרûÿףÿ‏ûÿתÿû‏ÿץÿÿÿ‎תÿמד,ֲֶׁיÿÿמÿÿÿÿןÿÿ׃Ù׀³0קץÿÿקֶ¦¢£`{×חÿÿשÿÿÿÿם‏üןÿ‎‏üûÿשÿÿעÿ‎ÿÿמÿקÛ־₪”*ßשÿםÿÿÿשפÿןד׃טםעÿÿךÝח גיןיÿÿקÿûÿנל^6>־³ֲÿ‏ÿץÿקÿהח%Ýםםלÿÿ»ֳ״<8Oצרÿשÿÿ‏ÿûÿ‏ûÿü‎ÿ‎ÿÿ‏ÿ‏ÿÿüÿ‎ûÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככךךךטטטחחווודדדבאאאßßß׳׳Ù¿¿ֱ‏‏ÿÿÿÿ©©§‏ÿתÿÿת‏ÿש™¡    []P0Jeףרÿÿך‎1וילנÿÿװ׀כ7%5רקץפÿר_cL      ֵּ½ֿ­’ גןÿטÿÿֲֵײגא׃קüר}v~ 
+ ¼ֲגשÿÿ‏ÿÿ‏üÿÿ‎ÿ‎‎ÿûÿשüÿûÿÿÿÿûק‎ץÞQH)	  FMgמ‎ÿÿ‎Ü¬    ~‰‹‎‏ÿÿ‎ÿÿûÿÿתÿÿüÿüÿÿץÿÿרÿףÿקא> ₪¬Ûûüÿÿתÿÿüשÿ‏ץÿÿמÿÿהׂ׀·  }|ש‏ÿ”xxשעתYCZÿחÿcVN׳וֻיפל"   	÷ֻßיץÿסעצףםßסםךלכשייסטכאזיאהזדהדטהÜחדÜד״׳ױ¿ֱ¼ÿÿ‎‏‏ÿ₪¬®רÿÿÿ‎תÿםן2ןםנטÿÿ¿¯ײ+)תÿßרע‏"=צßףÿ‏ÛÙ״÷:יעÿקüÿÿ‏Ýÿעֲc;/¿ְװÛÿÿנÿÿÿûםÿקֽeZ< 	‰´‏‏ÿÿûשÿÿפÿüץÿעפoƒ²´Û 9אנÿÿûסתÿץÿüשÿûÿת‎ÿקÿÿÿüתÿטÙ( ֲַÊזÿÿלÿÿÿ‎רÿÿÚ״ֿ°)סנÿÿÿ×ˆa~×וÿÿרÿÿÿשעÿüרÿ‏‎תÿüעÿ‎עÿ‎ÿ‏סÿןװC ·±½ÝÿÿמÿÿÿûףÿךÝ%
+ײטלמÿÿחהםטזססÿÿרÿרÿשןc?Cֿ´ֳÿüÿץÿ‎ÿדו*ײטךםÿÿּ׀י,ûשÿûÿÿ‏ÿûÿ‏תÿ‎‎ÿÿÿ‏ÿÿÿÿÿ‏ÿ‎üÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככךךךטטטזזהוודגגאאאאÞÞÞÙÙÛֱֱֳÿÿÿüüü­­«©×¥ÿÿתÿÿתü‎ÿÿףףÿססÿתש‏ÿÿÿÿÿÿûüÿü‎üÿÿקÿÿשÿÿÿÿ‎ÿ‏ÿÿ‏ÿÿ‏תÿüפÿ‎רû‏ÿûÿÿÿüÿÿûנÿ‏ץץÿÿץÿÿÿüÿÿקû‏ÿ‎צÿÿ‏ÿÿÿקÿs‚שץÿÿ‎ÿ‏ÿÿüÿÿתÿüûÿ‎ק‎שüÿÿ‎‏ÿÿ‏ÿÿü‏ÿ‏תÿûץשצסקקקת‎ÿûÿÿÿÿזÿשנ‏עüרקÿצÿ‏רÿûûÿûûÿ‏‏ÿÿÿ‎ÿÿתÿÿü‏תÿצüÿףֶ¼°,ש‎ÿק‏ÿת‎ÿÿüüÿüףÿÿףûÿץתÿק‏ÿשÿ‎‏‎ûÿüûÿ‎תÿÿתת‏ûצתüקÿנÿÿרן‎‏ßכןא!,גÜךןייןמךןף‏טףÿיעקןנטףכטףטמכימולווטßדוגדגחוÝטגÛג׳ײװ¾ְ»ÿÿ‎‎‎ÿ¥­¯קÿÿÿ‏ûÿןס>"²°³זÿÿnc…@?+תÿÝעפÿGקגףÿ‏ֿÙÛ´=ךסÿÿתÿÿת׃ÿקָXE>±´ַמÿÿÿÿזÿûש|p|IB8Þדֳ  ±¾ׁש‎ÿ‎ףס¶¢ÿךהtְֳמ $לף‎üüüרÿרÿ‏תÿש‎‏‏ÿרÿÿÿüנÿץ״t^9ZcPגÿÿך‎ÿַֻ״ÿüןךדֹ  ֽׁךÿת³SR>l‰§דÿÿרÿÿÿשקÿת‏ÿ‎ÿקÿ‎ץÿתשÿûÿûתׁ«¨/צפץזÿÿע‏ÿÿרףÿך׃0 •›וÿÿ®ֵ%ÿפÿÿüקÿÿטÿרÞPA<¼´ֳצ‏ÿעÿÿÿהו'Ùםמכÿÿ׀ׂכ.רפÿüÿÿ‏ÿûÿÿתÿÿ‎‏ÿÿüÿÿÿÿÿÿÿ‎ÿÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככךךךטטטזזהההגגגאאאאÞÞÞײײ״¸¸÷ÿÿÿ‏‏‏‎‎‎‏‏üÿÿû‎‏רÿÿÿ‎תÿÿקÿÿתÿÿüרÿÿס‏ÿף‏ÿ‎‏ÿÿûÿûקÿצרÿתÿÿÿÿתÿÿûÿÿ‎ÿ‏‎רÿ‏תÿ‎ת‎üÿרÿÿקÿÿ‎ÿףÿ‏פÿûÿÿ‏ÿרÿÿקÿÿ‎‏ÿÿûÿ½³¼ÿש‎‏ÿתûüÿü‎ÿü‏ש‏ÿפ‏ÿר‏ÿÿ‏ÿÿ‏ÿ‎‏ÿÿ‏‏ÿ‏‎ÿüûÿ‎‎ץÿÿצÿ‎שÿÿÿÿתÿÿק‏ÿüקתÿץשÿרüÿ‎üÿ‎שÿש‎ÿüÿüÿÿתÿÿûרשüףÿ‏ûÿץÿ‎ÿפתÿשתÿ‏‎ÿüÿ‏שÿ‏ש‏‏ÿû‏ÿûÿÿ‎ÿש‏‏פÿüרÿרüÿש‏ת‎צפÿנûרÿÿûנÿûגמלא  ÛבןףפצרץמפףסלףשטףשכןעףךםפטלםיטהלבוטבדוגהגחוÞזבÜגײײװ¿ְ»ÿÿ‎‏‏ÿ£¨«שÿÿÿ‏ûÿץש© ]XnDE5רÿזערÿAכאטÿÿÚױױ½#+Oעקÿ‏רÿp^:    ֵׂ¸¸ְ<נםצÿ‎װֶֽ¬ ׃גÿÿררt^   %ִֵֹשתüץÿÿץÿ‎‎שצÿתûÿ‏ÿשÿÿÿÿףÿ‎ב‎םֻIN8 
+  LHcÿרüÿÿס£¥˜      z מÿÿשÿÿÿÿתÿ‏ÿקשÿûÿÿÿÿ‎ÿ‎פÿרת-.´¥¼ÿ‏ÿקÿצ‏‎ÿÿתףÿם׃0   ֲ־ÞÿüÿÿûרgVB   	 »ִֹÿוו'Ûםןסÿÿ׳ױם0"<ÿתÿü‎ÿüÿûÿÿת‏ÿ‎üÿÿüÿÿÿÿÿÿÿ‎ÿÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככךךךטטטזזהההגגגאאאאÞÞÞ׳׳Ùֲֲִ‎‎ÿÿÿÿÿÿÿ‏‏üתûצÿÿûÿ‎‎ÿ‏‎ÿ‏ÿÿ‎ÿ‏‎ÿÿÿ‎ÿÿנÿÿפÿ‎ÿ‏‏ÿרÿÿץÿ‎שÿÿÿ‎ÿÿüÿÿ‎צÿ‏ÿÿûץÿ‎סüÿ‎קÿÿרÿ‏ÿÿףÿüעÿ‏üûÿÿשÿ‎תÿרÿÿÿÿüÿ‏ש‎ÿÿרצÿ‏ש‏ÿÿÿÿÿ‎תÿ‎ףÿ‎צ‏ÿ‎ץ‏שקÿûרÿ‎ûÿÿÿ‏ÿÿ‎ÿÿ‎‎ÿ‎‎ÿûÿÿ‎ÿÿûÿÿ‎תüÿתקÿ‎ûÿÿÿ‎ÿÿ‏‎üÿרüÿûÿתÿÿתÿÿ‏ÿרüûÿ‎ÿÿקÿûÿק‎ÿץ‎ÿקתÿüûÿÿÿ‎‏ÿûÿÿûÿת‏ÿקÿ‏‎ÿכÿ‏טÿתף‎תÿתûÿר‏פר‎קû‎עûשלתשפױ״ÝןףüעקתעפןףפמסףנםסעםםץמכצמינםיזיךÚוטבההגהגוהßוßÝאײײײ¿¿½ÿÿ‎ÿÿÿ ¦¦¨®¬ÿששÿקûÿק‎ףספבתקüÿÿת‎צ‏ÿûשüÿü‏ÿ‏ÿתÿÿןÿתת‏ץÿ‏üÿüÿרÿÿטÿתצÿפÿüצÿץÿפÿÿז‏ÿÿערÿ‏‏ÿÿÿפרûנפÿÿקÿÿÿ‏תÿקףÿתÿqp‚ץרÿ‏ÿרüÿÿקÿÿעÿÿÿ‏ÿÿש‎ÿü‎תÿ‏‏ÿ‎ÿשףÿûפÿÿתונעמצÿ‏‏ÿתרûÿÿ‎ÿÿÿקס‎ÿסüÿ‎ÿרÿÿץ‏ÿüÿÿüÿרץ‏ûרÿÿ‏ûÿÿûÿÿüןֵ¼µ*צצÿüשÿ‏תןÿ‏ÿÿÿףÿ‎כÿûרÿשÿסןüןûûפÿÿûÿÿ‏פÿÿתûÿ‎ס‏üנ‎‎‎‏‎ÿÿ‎ÿÿפפÿüתץÿÿפÿÿÿüÿÿץÿÿרÿÿÿÿüÿû‏ÿûüÿ‎ûÿÿüÿÿ‏ÿÿÿÿ‎ÿ‏ûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככךךךטטטזזהההגגגאאאÞÞÞÞװװײ¿¿ֱÿÿÿ‏‏ÿ‎‎‎‎‎ûÿÿû‏ÿתÿûûÿÿףÿÿררÿÿץÿÿשÿÿÿÿפÿÿףÿûÿÿתÿü‏ÿשÿÿרÿÿûÿÿÿÿûÿÿם‏ûÿÿÿÿÿÿרÿÿצÿÿת‎‎ûתÿÿרÿÿתÿÿÿ‏שÿ‎סÿÿרÿ‏ÿûשÿÿ‏ÿ‏‏פץÿÿûÿÿ‎üקÿüתÿüûÿ‎תûÿûץÿÿפÿÿרÿ‎‎ÿץÿÿפÿüתÿûÿÿüÿ‎üÿÿüשÿ‎רÿÿתרÿÿץÿÿ‎üÿÿשÿÿüû‎ÿשת‏‎ÿûÿÿשÿ‎‎ÿקÿÿ‏ÿÿÿשÿשÿÿ‏ÿûÿÿרüÿÿû‏ÿÿûÿÿשüÿתÿת‏ÿצÿÿשÿס‏ÿט‎‎ףûûÿûשÿÿרÿץüפקüץשתפקרףצרקןףצץת‎נצצףףסץעםףןלמםעךםפךכנכךטלטÝוחגההגהגדבßגÞÞאײײ״¿¿¿ÿ‏ÿ‏‏‏üÿÿüÿ‎ÿ‎‎ÿרüÿפתÿÿÿפÿÿתÿץüÿÿ‏üÿ‎תÿüÿûפÿעשÿ‎ÿûÿÿרÿÿ‎ÿשÿרûÿרÿûÿÿצÿÿ‎ÿסÿפ‏‏ÿÿ‏ûÿ‏ר‏ÿÿקÿÿרÿÿ‎‏שÿÿס‏ÿקÿ‏ÿÿתÿֱ¸½‏‎רתÿששÿÿר‎ÿעÿÿÿ‏ÿÿערÿûÿü‏‎ûÿÿÿ‎ÿÿתÿÿüÿûüÿ‎ÿת‏ÿרתÿרüÿÿüשÿÿשÿÿüÿ‏‎ÿ‏üÿÿ‏ÿ‏‏üשÿשקÿÿצÿÿÿ‎ÿÿששÿüלÿ‏עü‏ÿרüÿ‏‎ÿÿü‎‏ÿשרÿקצÿרÿ‏ÿÿצÿÿקרÿÿסץÿנשÿÿ‏üÿÿüÿÿתקÿ‎ףÿüצÿרüÿ‎ÿÿקצÿ‏ûרÿÿקÿÿÿ‎ÿÿתÿÿûÿ‎‎‎üÿûüÿûüÿ‎üÿÿüÿÿ‏ÿÿÿ‏ÿÿ‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייטטטזזהההגגגאאאÞÞÞÞ״״Ú¼¼¾ûû‎ÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿûÿששÿ‏תüÿÿשÿÿקÿÿרÿÿûÿתÿÿ‎ÿתÿÿשÿÿüÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿ‎üÿפÿ‎ÿ‎‏ÿÿÿ‎ÿüשÿשתÿ‏ÿקÿÿס‏ÿ‎‏ÿÿüûÿüרÿ‏‎‎‎ÿ‏‏ÿÿ‎ÿÿ‏ûרûÿ‏ÿ‎ÿÿר‎‏רÿÿÿüÿÿקÿÿרÿÿûÿÿÿ‏ÿÿ‏קÿ‏נÿ‎ץÿüÿ‏‏ÿûÿÿÿÿצÿÿצÿ‎‏û‏ÿש‏ÿÿüÿÿüתÿÿרשÿÿüÿÿÿפûÿתÿ‏‏ÿעÿÿרÿÿÿ‎ûרÿÿûÿÿ‏ÿ‎ÿ‏ÿÿûÿÿתÿÿûתÿ‎ת‎‏ÿרÿÿצÿûקÿצר‏תûûÿÿקÿÿץÿצÿÿץתצÿ‎פüשנרתקףû‏םעצפפצצעספנןסןנםןמלמיכלחךטייחלוחזוהגזגבבßאÝÞאױײ״ְ¾ֱÿ‏ÿ‏ÿ‎ר‎שÿÿ‎ÿ‎‎ÿûÿÿûÿ‏ÿÿרÿ‏שÿר‏ÿÿÿüÿ‏‎ÿûÿÿקÿשüÿû‏תûÿûÿÿ‎ÿ‎‎‎ÿÿ‎‎שצÿ‎תÿÿ‎üÿÿקÿÿÿ‏ÿÿר‏ÿ‎ÿסûÿרÿÿÿ‏ÿÿ‎תÿÿûש‎ü‏ÿÿ‏תשÿ‏‎ÿÿûüÿûשÿשףÿצ‎‎ûÿûÿÿüÿ‏ÿûתÿתשתüÿüÿ‏רÿÿ‏ÿÿÿר‏ÿףûÿץüÿ‎‎üÿÿûÿûÿÿ‏ÿÿÿ‎רÿ‎פÿÿרש‏רץ‏ûûÿÿüüתÿ‏רÿ‏פÿ‎שÿ‎ÿÿ‏ÿתûÿ‏ÿû‏ÿש‏ÿתÿÿ‎üק‏ÿûÿÿ‏ÿüÿצ‏ÿרÿüÿÿüÿüÿÿ‏ÿרÿ‎םÿ‎פüתÿקÿÿÿתשÿ‎üüÿÿûÿÿüüÿÿ‎ÿÿ‎ÿÿ‏ÿüÿ‎üÿ‎ÿÿÿÿÿÿ‏ÿÿüÿÿÿÿÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייטטטזזהההגגגאאאÞÞÞÞױױ׳¿¿ֱÿÿÿ‏‏ÿ¬¬¬¡¡ÿÿ‎‎‏שÿ‎ûÿ‏ÿûÿÿ‏ÿÿÿÿצüÿפרÿÿûÿÿÿ‎ÿÿü‎ÿ‎תÿ‏ÿÿ‎ÿÿ‎ÿüÿÿקÿ‎Ú״ומלסÿû‎ÿûÿÿüÿû‏ÿקÿÿüÿ‎ÿ‎ÿÿקÿÿûÿüü‏‏ÿÿÿÿÿÝ״Ü‎פשÿ‏ÿ‎‎‎üÿ‎שÿ‎צÿüשÿÿת‎ÿÿ‎ÿÿûÿÿüÿÿ‎ÿÿ‏ûÿÿת‏ÿתûÿתûÿ‎שÿ‎ÿÿûÿ‎ÿ‏ûÿÿüÿÿüûÿÿןüÿרץÿÿÿÿÿÿשכרו׳ײÚוכÿÿנ‎ÿÿÿפûÿÿûÿÿüÿÿÿüÿÿשÿÿûÿÿ‎תÿÿקÿ‏ת‎‏ÿקÿÿץÿÿצ‏ÿüûÿÿרÿÿש‎נתÿשûרûץיתצםרשûםפüעץתרעעתנסץמץןןקכנלםןגללאייכוזרוזטחדהזגßאאÞÛßÞװױÙ¿¼ֳÿ‏ÿ‏ÿ‎‎ÿשÿ‏תÿ‎ÿÿüÿ‏ÿÿ‏ÿÿ‎ÿüûÿÿÿ‏üÿüüÿÿÿש‏ÿüÿÿ‏‎רÿÿר‏ÿÿ‏‎ÿÿûÿÿשת‏ÿצצÿצûÿÿÿקÿ‏ÿל‏‏ÿÿתÿ‏תÿÿÿרüÿצüÿÿûקÿÿüÿÿÿףûÿץûÿÿÿ‎ÿÿüÿÿÿתשÿת‏ÿצÿÿûÿ‏ÿתתת‏ÿת‏ÿפÿÿפÿÿרÿ‏ÿÿ‏ÿûשüÿÿ‎ü‎קüÿצ‏ÿרüÿרת‏ÿü‏ûÿÿצÿÿףÿÿצ‏ÿ‎ü‎ÿÿÿ‎ÿÿר‎‏רü‏‎‎üÿÿ‎ÿÿ‎תÿÿצקÿפ‎‎ÿÿüשÿתצÿתתÿ‏ÿרÿÿפÿÿ‎‎ÿÿתÿÿתÿü‏ששÿפüÿס‏ÿקתÿÿפÿÿÿ‏ÿÿûüÿ‏ÿת‏ÿûÿÿתתתÿ‏ÿÿÿ‎‏ÿ‎‏ÿ‎ÿ‏ÿÿ‏ÿÿÿÿüÿÿ‏ÿÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךךליייחחחזזהההגגגאßßÝÞÞÞÙÙÙ¾¾ְüü‏ÿÿÿ₪₪₪ÿÿÿ‎‎ûÿÿû‏ÿûÿ‏ÿ‏‏ÿüÿÿüÿצÿÿצÿ‏‎ÿ‎ÿÿÿûÿÿצÿ‏רÿ‎ÿÿ‏ÿüÿÿ‏ÿ‎ÿÿת1$+³¯°ÿÿÿ‎תÿÿûÿÿ‏ÿתüקÿÿפÿüפÿüÿüûÿ‏ÿÿÿ‏רÿרמqif‏ÿÿק‏ÿשÿÿש‏ÿ‏ÿÿÿÿ‎‎‎‎‎ûÿÿ‎ÿÿüÿÿ‎ÿÿ‎ÿÿ‏ÿÿÿ‎‏ÿûûÿüûÿÿûÿÿ‏ÿתÿÿÿ‏‎ÿÿ‎ÿÿ‏רÿÿן‏ÿ‎שÿÿÿ‎ןÿ‏ׁ˜hZlxדÿÿעÿÿÿ‎חÿÿûüÿûüÿÿ‏‎ÿÿûÿÿüÿ‎ÿת‏ÿשÿ‏תÿ‏üü‏‎ש‏ÿûûÿ‎תÿüûשרÿןקüÿרתק‎üרûצתץע‎פףûצצפקפםקססץמצעלצמממלןזטמהטיםטזפווחחדהזבÞßבÜÚאÞׂױÚֱ»ֵÿ‏ÿ‏ÿû‏ÿרÿ‏שÿ‎ÿ‏‎ÿשÿÿüÿÿÿ‎üûÿÿÿ‎ÿÿûתÿ‎‎‏ÿÿûÿÿ‏ÿÿûüצÿÿתÿ‎ÿÿüÿÿתÿ‏ÿתûÿצûÿÿ‏‏ÿÿÿסüÿÿ‏‎ÿÿ‎ÿÿ‎שÿÿת‎‏ÿ‏‏ÿÿü‎ÿÿףÿÿפ‏ÿÿשרÿ‏ûÿÿ‏‎‎‎סÿ‎û‏‏üצÿüשÿÿüÿ‎שרףÿÿצ‏‏פü‏ûûüÿÿ‎ÿÿ‎ÿÿüüÿÿרüÿצרÿצ‏ÿÿ‏ÿûÿÿרÿÿûÿ‏ÿÿÿÿ‎ÿתÿ‏ûÿתüÿ‎ÿשüÿûÿÿ‎‏שÿ‏ת‏‎רüÿûשÿÿ‏ÿÿÿ‏תÿüûÿ‏ÿûÿÿרÿÿ‏ÿ‎ÿüûÿü‎ÿÿÿרÿÿרÿûûÿû‏ÿÿüüÿשÿÿÿ‏ÿÿû‎ÿÿ‎קÿשûÿû‏‎ûÿÿ‎‏ÿ‎‏ÿÿÿ‎ÿÿüÿÿ‏ÿûÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךךליייחחחזזהההגגגאßßÝÞÞÞױױױ¼¼¾ÿÿÿÿÿÿ©©©‏‏‏‎‎ûÿÿ‎שÿתÿ‏קÿ‎ררÿ‎עÿÿ‏ÿÿÿרתÿתפÿÿףשÿרÿ‏ÿÿûÿשÿÿעÿÿ‏ÿצÿתםקÞבצץףצÿÿûÿÿÿü‎ÿü‎ÿÿתÿÿףÿÿסÿ‎צüÿÿû‎üÙֱֽ	   ¢°עÿÿü‏ÿÿקÿÿûÿÿתüÿ‎‎‏ÿ‎üÿû‏ÿתÿ‏שÿüרÿ‏ûÿÿÿש‏ÿרÿÿ‏ÿשÿÿפüÿתשÿÿû‏ÿÿ‎‎ÿüץÿüÿÿ‎ÿÿ‏גÿ‏¸××taÜÿÿעÿÿÿ‎Üÿÿפÿÿצûÿת‎‏ÿ‏‎ÿ‏‏‏‎ÿת‎ÿ‏‏‏ÿÿ‏ü‏‏צÿüûÿשÿ‎תÿר‎צפÿהûרסץתצק‏ÿצץÿÿפÿ‏סרûצנןץכסףעקםצשיףעלמזןלדןןוךםלולוהיטגהזבÝßגÛ״בÞׂױÚֱ»ֵÿ‎ÿ‏ÿû§×¡®©¥ÿû‎üÿÿקÿÿת‏‎ÿ‏ûתÿÿÿ‎ÿÿשÿÿûר‏ûפרÿÿרÿÿÿ‎ÿÿתפÿ‏צתÿÿרÿÿÿ‏ÿÝײ־מנםעÿÿüÿÿ‎ÿץ‎ÿכ‏ÿתÿüÿÿûÿÿ‎ÿ‎‏רûÿ‎ÿÿ‎ÿûףגÚ׳ü‏ÿרÿÿ‎üÿÿüןÿרÿÿÿÿץÿ‎ףÿÿüÿÿÿ‎ÿÿ‎ÿÿ‏ÿüÿÿû‏ÿ‎ûÿÿûÿÿü‎ÿüשש‏תץÿÿ‎üÿ‏ÿû‏ÿûÿüÿÿüÿ‏ÿÿ‎ÿקÿÿתעזפÞׂךüÿÿקÿתרÿץÿÿ‎ÿûÿÿüÿעÿÿעÿÿצÿÿÿÿÿÿ‎ÿÿתתÿÿרüÿעÿÿצÿ‎ÿ‏‎ÿשÿÿפ‏ÿ‏ÿûÿ‎רÿתתשÿÿÿ‏ÿÿû‏ÿÿûרÿתשÿת‎‏שÿÿ‎ÿÿÿÿÿÿÿ‎ÿÿûÿÿ‏ÿûÿÿשÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכךןייכטטטחטדהואגדÞאאÞÝÝÝװװײְ¿ִÿ‎ÿÿ‎‏¬«¦‏‏עÿÿןרתוJH‘‏וטÿüÊאßÊSe“צףÿÿטÿoI2wz[ 	 )ֿׁט‏ûÿ‏ÿÿßÛ׀D1 `AkֲÊסנÿÿÿתןÿׂ÷5
+Úגÿהÿÿ°ְÙ8;0מüדלüן'ױ©÷m‚ּֿבְֲּשÿÿûÿÿûûÿ‏ÿÿ‏‏‏ÿ‏ÿÿ‏ÿÿ‏ר‎עמWFPgVh '(*Ûוהחשש]9;םÞûû‎ÿÿ‏הÿÿֶ½¬˜‹±חÿÿ¹¿½  '    h„©ßÿÿסÿÿÿûÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדחזודהטßגהÞאÜÞÝֿ״׃¹ֲ½ÿÿ‎ÿ‏‎­§©ÿü‏ÿüÿÿûÿÿûÿתÿÿץÿÿÿÿסÿ‎ÿÿשÿÿתÿÿ‎תüüפ‏ÿÿÿüÿÿ‎ÿ‏ÿÿשÿÿÿÿרÿרך7!°²¾זÿÿק‎ÿÿüצÿ‎ה‏ÿצעÿÿÿקÿÿץÿÿ‏סעÿסצÿסÿען†`oסץÿßÿÿנÿÿÿתהÿü‎ת‏ÿקÿÿû‎ÿÿשÿ‏‏ÿצÿÿתÿÿÿת‏ÿצעÿÿםצÿןנÿררÿÿ‏ÿûÿÿקÿקÿÿרûÿÿםüÿרר‎ÿ‎תÿÿûÿÿ‎ד‘”ifvOסÿנצÿÿÿ‎ÿÿûÿÿ‎רüÿסÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכךןייכטטטחחוהואגדÞאאÞÝÝÝ׳׳Ù¹¸½ÿ‏ÿÿ‎‏­¬§ûûןÿÿסעפßKשßךÿשÜױ־ֶBפצÿÿוü1 €{eךÿÿ^pˆln‡üûÿ‏ÿÿÿüרüטב36ֱ½ּץתÿÿ‎üÿקף­‚8'ֹׁװ ¹װחעÿÿ‏‎כ*ֻ­«v†ÿצÿפÿÿרÿÿü‏ÿÿÿ‎ÿÿףüüת‏‏ÿקרüÿÿעתעח$ƒp†ÿץü’‡3??לüÿH@W²®¿ÿûÿרב׃ÿץ״tV: ¢ֹחÿ #ֿ¿ּÿהß4 p†›ßÿÿןÿÿÿתםÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטגטזודהטßגהÞאÜÞÝֿ״ױ»ֱ½ÿÿ‎‏‎û¬×«ÿü‎ÿûÿÿצ‎ÿûÿשÿÿסÿÿÿר‎ÿ‏ÿרתשÿÿ‎ÿשרÿû‎ÿתÿÿ‏ÿûÿÿרÿÿתÿקÿüנÿקףרÝהןעÿבÿÿÿÿßÿ‏ÿתתÿÿשÿÿ‎ןÿÿףקÿÿר‏ÿÿ‎עÞּ¶    —¢‏ÿû‏ÿ‎ÿûÿ‏ÿתûÿרפ‏ץשÿ‎üÿûÿÿףÿ‎סÿû‎ÿüÿקÿÿûÿÿÿüרÿüףשûתמÿÿÿרעÿÿרüÿררÿסÿÿףÿ‎ûÿתÿÿ‎ÿ¢¢r}uשÿ‎üÿÿÿ‎ÿÿ‏ÿÿÿ‎ÿÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכךןייכטטטחחוהואגדÞאאÞÝÝÝ׃ׂ׳ִֵֹ‎üÿÿ‏ÿ©¨₪ÿÿצÿÿסץצהLתÜזÿצßÚֿׂBמשÿÿכÿ0יד׳ףÿÿ¼ֱב:3Rתשÿקÿÿÿ‏שÿקסPBBֹ¼´ÿ‏ûקÿÿûÿÿÿפÜl8  »ֶÛÿÿכ‏ÿÿ‎ךÙְ¢) ³ֱÛר‏ÿûûÿÿÿףÿÿלÿÿ‎ü‏ÿûÿÿ‎ÿלüצט&"מ׳כÿûצÞßֽ Úךÿ°xwuÛֱָ ÿÞו>#אÙ­ֲÚÚ Qצצÿÿנז·vh{Ûÿÿכÿÿÿûדÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטגטזודהטßגהÞאÜÞÝׁ׳ױ¾ְ½ÿÿ‎ÿÿ‎¦×©‏ÿÿÿûÿÿלץaMVךננכÿÿם׃מeabרÿףסשלXMS‹p Ê״דנÿÿקÿעלÙÊN$&gEVÊ׀אאÿÿÿÿֱÙßםTנÝûÿרײֱֹ₪"EKחצÿÿנכ8 ֳ½¿bw–ֶֻß׳ִ½ÿüצטÿÿÿ‎ÿÿÿצÿÿלרÿףעÿû‏ÿצÿל׳lL7^TS !)Uהßÿÿטם`5,טיכÙÿÿÿÿלÿÿû±²´’ƒÿÿג¿¸¥ 
+*  "‚€•ÿüÿÿ‎ÿתÿÿץüÿ‎‏ÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםייכטטטחחוהואגדÞאאÞÝÝÝ׳ײÛ÷¹¾‏‎ÿÿ‏ÿ©¨₪ÿÿרûüמרשיCÿוÚÿץִ÷¹§3`כשÿÿטÿ3
+טטזסÿÿװֽק%*רקüסÿûüÿסÿקאQE/ַ¾µüüÿעüÿÿÿרÿûױw\- ‡¢­הÿÿקÿÿÿקםÿûלÿשץt|ַµֳ 3חמÿÿÿÿÿ‏מÿüסÿ‎ÿüÿÿקÿפüÿלתצם& קßלÿץכחוײ ׳וÿױײֶE4"„ms.ˆˆ®#ÿצֵֽ׃ֵCשפÿÿצז·nk€ױÿÿכÿÿÿרחÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטאיזודהטßגהÞאÜÞÝׂײױְ¿½ÿ‏‎‏ÿ‎¡­©ûÿÿÿשÿÿךצ'	זללדÿ‏בֵםעÿחלרך!m‚ÿנרvko]o{וÿÿצÿÿÿץיÿÝײG!²÷ַ׳ÿÿÿÿדÿ‏ÿ–ˆ=,2ׁ־¿ 	 ¸׃Üû‏ÿÿנג. ְ´ְ|€£פץÿÿ‎û‏ÿ‎סÿÿû‎üÿüתÿ‎ררÿÿמÿÿÿÿ‎ÿםח3€|Ýÿÿx›¯@3Dÿילh93¯³²ÙÿÿÞטס‏‏ÿdVe©”›ףוה  ¸ֶֹדנÿ$$>ƒ–ÿר‎ûüקרÿÿקÿÿüûÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםיייטטטחחוהואגגאאאÞÝÝß׃ׂ׳ְֱֵ‏‎ÿ‏‏ÿ××¨ÿÿרÿÿפûüמ :ֿ±•ÿû½mqV?dםקÿÿטÿ5זללםÿÿַׂן*#üרץמÿפעÿבÿשװSE(±µ¶ץÿÿÿ‎ÿÿûה†rQCD6׀דך »ֱֱÿüץûצע°§¬ףחסˆz‡ָ¼Ê 	<חםÿ‏ÿתÿüעÿü‎ÿ‎ÿתÿששÿלûÿךקפם –ÿûפ¬©¢,םתÿÿץ¿6%ַװÿ 0\knÿÿזךאװ  	Ý־ױÿנÝcI2s‹ׂÿÿםÿÿÿפץÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטאיזודהטßגדßאÜÞÝװײױֳ½¿ÿü‎ת‏‎±«קÿ‏ÿץûÿטק0טלכßÿ‏אֹץ‎ÿוםקן2מױכÿפכ׀ְ±0?Rßÿÿסÿÿÿפהÿן׃d2)¼ֲׂװÿÿםÿÿÿשםÿרװsgO 	—µֿûÿÿÿûכÿ‎הֶֿ½&  %±ֲײן‏ÿÿÿûûÿרÿצשÿרÿûüÿקÿÿÿשÿÿהם0Üגאחÿÿ׃טד ÿגײ§‘„txw»ׂÚ.ךזÿ-0טֽמÙָל+ףÿÿקÿר ™|stÿ‏ת‏ÿצרÿתשÿÿ‏‎ÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםיייטטטחחוההגגגאאאאÝÝßװ׃״»÷¿ÿ‏ÿÿÿÿ©©§ûüצÿÿר‏‏פ”™    VXJ2L]ףשÿÿךש*זטחס‏ÿײ׃ט8(5תשץףÿע\aJ  
+   
+ ֲָֻֽ«!אסשיÿÿְַׁ םבױרתץux}  »ִדש‏ÿÿ‏ÿÿ‎üÿüÿ‏ûÿû‎תüÿל‎ÿדרפי$'   
+ֹׁÞע‏ÿÿתÊnTG‰€›ל‏ÿ*D¦µ¼ÿ‏ûÿüר¦˜      }–Ýÿÿעÿÿÿשÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטגטזודהזאגבßאÚÞÝױױױֵ¼¿ÿüÿûÿÿ›°©ץÿ‎ÿשÿÿטר7דחזגÿÿ»«Ü0)ר‎ױסצתEפÞףÿûײא׃±
+7אתÿנ‎ÿÿתÜÿסֵj;1·¼׀ײÿÿנÿÿÿתמÿקױj`G 	§¹üüÿÿüצÿÿןÿÿףÿףץ‹o†´¯׳ 2הץÿÿÿסûÿפÿû‏ÿשÿ‏üÿרשÿÿרÿÿלל)ÜזחנÿÿÚ״וףחֿ״Þִ9;:zm‰
+ ;קמÿװֵל#רשףקÿס˜₪–y~xÿ‏û‎üקûÿשתÿü‏ÿÿ‏ש‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייטטטחחוההגגגאאאאÝÝßÙ״Ý¾½ֲüûÿÿÿÿ©©©×«¦ÿÿת‎‏צÿÿפשןמÿןשÿ‎ÿüÿÿüÿÿÿ‎ÿÿûÿÿ‎‎‏ÿ‎ûÿÿת‏ÿתÿÿ‏ÿ‎ÿ‏רÿûפÿüשüÿ‎תÿÿÿת‏ÿשÿÿתÿנ‎ÿץÿÿÿ‎‏ÿששÿ‏ררÿףתÿקÿ‏‎}q‏נÿשÿÿצתÿ‏‎ÿÿ‏ÿ‎‎ÿÿ‏ÿÿ‏ÿû‎ןÿÿזüשך"ץטÿקןüשתפûÿÿצüÿÿתסÿ‎‎üÿÿצ‎ÿüÿÿÿ‏ÿÿüÿÿ‏ÿÿÿ‎ûצעתנמÿ‎üצÿÿפÿÿצûÿÿשÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזהההדבגאאאÚÞÝײװױֶ»¿ÿüÿûÿÿ›®¨רÿÿÿר‏ÿיק6 ¸÷¹דÿûse˜>;,ÿÿÚפקÿFצדצÿ‎ּÝÙ´	?טקÿששÿÿצ־ÿץֻZ<>®³ַהÿÿÿÿךÿ‎‎|n}J@?Ýגּ 	 ®¿ַü‎ÿÿןע÷¥”תלב~z‹ֳִכ%םסתûÿצתÿפÿ‏רÿרû‏‏ÿüÿÿÿûצÿנÜ% ‹“•פ‏ÿ© ֿ !‎‎ום‎Ù(
+<כׂ³Nc€נÿÿבÜג  ב־ÊרûÿFY`vƒ‰‎ûÿÿüÿ‎‎‎ûÿ‎שûצÿ‏‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייטטטחחוההגגגאאאאÝÝßׂׂװ½¼ֱÿ‏ÿÿÿÿ‏‏‏‏‏üÿÿûÿÿת‎‎ףÿ‏ÿûצÿÿûÿÿ‎תÿÿû‎üÿÿüÿÿüÿüüפרÿÿסÿÿשÿÿÿûÿÿק‏ÿתûÿתÿ‏ûפ‏ÿפüÿÿר‎ÿשÿÿ‏ÿÿÿ‏פÿûרÿü‏ûÿ‎צÿפÿÿפÿשק½³»ûתÿ‎ÿק‏ÿÿרתÿüÿÿüÿÿü‎ÿÿ‎ÿÿ‏‎ÿ‏עצעי חßצÿ‎ÿ‏ÿ‎שûרüÿÿÿ‎ÿû‏ÿר‏תÿÿץÿ‎פÿüתÿ‎ÿ‏ÿÿת‏ÿ‏ÿÿ‏ÿÿת‏‎üÿû‏ÿû‏‏‏ÿ‎ÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגÝבאÚÞÝײװױֵ¼¿ÿ‎ÿüÿÿ ¬¨ûÿÿÿûÿÿנû°–    
+]QyIF=ûÿדספש6נßיÿÿßׁײְ-PןפÿÿשÿuZ<      ׀ָ´·¼	4מטצÿ‏דֵÊ¬ ױבûÿפüqc    &ֱָ׃ÿ‏ÿפÿÿüÿתÿ‎קÿ‏רûÿ‎צÿתÿ‎ףÿםÙ+   #5״־חÿ‏סüÿל`]dsÿתÛ! ¡¸ֶמÿÿÿÿל­™~      ‚‰™ÿÿÿÿüשüÿÿשÿÿ‎ÿüÿ‏צÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוודההגגגגßßßÝÝßױױ׳¾½ֲÿ‏ÿÿÿÿÿÿÿÿÿÿ‏‏üÿÿ‎ÿ‏ÿÿÿÿתüû‏ÿÿ‏ûÿÿüÿÿתÿÿûÿ‏üÿûÿÿץÿÿצÿÿ‏‎ÿÿצÿÿûÿÿüקÿרÿÿûüüÿצשÿûקÿÿרÿÿÿ‏ÿÿüתÿתקÿ‏ûץÿûצÿüÿû‎ÿרÿÿûüקÿרÿÿר‏ÿ‎üÿÿüÿÿüÿÿ‏ÿÿÿ‏ÿÿ‎ÿÿüÿÿûÿבßא‎‎ÿ‎üÿ‏ÿÿ‏ÿÿüÿצÿüÿÿÿÿûÿÿûÿûÿÿ‎ÿ‏ÿÿ‎ÿÿ‏‎ÿÿ‎ÿÿÿüÿÿüÿÿüÿת‏ÿצÿÿ‎ÿ‎ÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטיוזהההßדגÜגאÚÞÝ״װױֲ¼¾ÿ‏ÿ‎ÿ‏¨®¬₪¦¥ÿü‎ÿת‎ÿשüףעננשפÿüÿ‎ûü‏ÿרת‏‎ÿ‎ÿÿü‎ÿÿצתÿ‏ץÿÿ‏üÿÿצÿÿרעÿ‏פשÿÿשÿÿÿÿרÿÿך‏ÿÿרÿÿ‏‏ÿÿ‎רÿ‏רüÿÿשÿÿ‏‎ûÿüרÿûÿrp}קûÿûÿÿ‏ÿÿÿ‏ÿûÿûÿ‎‎ÿüÿת‏ÿרÿÿÿ‎תÿךך2כזלטשÿסÿÿ‎‏ÿÿ‏ûÿÿתÿûÿÿתÿÿתÿÿ‏ÿûÿÿûÿתÿÿמÿ‎טûרןץףÿ‏üÿÿ‎ÿÿÿפüÿסקÿ‎רÿÿÿ‏ÿÿüףÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגßßßÝÝßױױ׳¾¾ְÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿקרÿÿצûÿפרÿ‎ת‏ÿÿ‎ÿÿüÿÿ‎û‏‏‏קÿÿףÿÿûÿÿÿüÿÿתÿתרשרÿתÿתÿûûÿüÿûü‎ץÿÿתüÿÿשÿÿ‏‎ÿÿשüÿ‏תשÿשûÿÿÿתÿÿףÿÿü‎ץÿצ‏ÿû‏ÿû‏ÿ‎‏ÿÿÿÿ‎ÿÿûÿÿÿÿ‏ÿÿüÿÿ‎ÿרקףÿÿת‏ü‎‏‎ÿ‏‏‏‏ÿרÿ‎פÿÿתüÿÿקÿÿקÿÿüÿÿÿ‏ÿÿ‎תÿ‏רÿÿû‏ÿÿ‏ÿ‎üÿתüÿתÿÿÿÿ‎ÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטלדזהההÞהגÚדאÜÞÝײװױֱ½¾ÿ‏ÿ‏‏‏ÿÿÿÿ‎‏ÿ‏‎‎שרÿ‏‎ÿ‏‎ÿûû‎ÿ‏ÿ‏ÿÿ‏ÿ‎ÿüüÿתתüקÿÿÿüÿÿש‏ÿÿ‏ÿÿשÿÿשÿÿÿתרÿפûÿר‎שרÿ‏ÿÿÿû‏ÿרûÿÿÿ‎ÿÿתÿÿûûÿÿצרÿ‎רÿÿÿûÿֱ¶÷תüשץÿÿûÿÿÿתÿפ‏ףÿ‏ÿÿתÿÿ‎ÿש‎ÿÿ‎‎ûחנ נםצעÿצפÿעתÿעÿÿ‎ÿ‎ÿÿüÿÿ‏ûתûÿ‏‎ÿÿ‏‎ÿ‏ûÿ‎‎ÿÿ‎תÿתשÿûÿÿ‎ÿ‎צÿÿםûÿןפÿûקÿÿÿ‏ÿÿתתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךליייחחחחוווהההגגגßßßÝÝÝױױ׳¾¾ְÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿûרÿÿרתÿתצÿ‏üÿÿüÿû‎ÿףÿÿפÿ‏ûÿÿÿרÿ‎ûÿרÿ‎רÿת‎ÿÿÿןÿÿרüÿüÿÿÿÿûÿ‎רÿתש‎üÿרÿÿצÿÿüÿÿÿ‎‏ÿüÿÿüÿÿûÿÿ‏ÿ‏ÿÿק‎‎üÿת‏ÿÿÿÿÿÿ‏ûÿÿצÿÿת‏ÿÿüÿÿûÿÿ‏ÿ‎ÿÿ‎ÿ‏‎ÿ‎üÿÿû‎ÿüüÿÿ‏ÿפÿÿתÿÿÿ‏‏ÿ‏‎ÿÿ‏ÿÿ‏ûÿÿתÿÿÿüÿÿüÿת‏ÿרÿÿûÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטלדזהההÞהגÜגאÜÞÝײװױ¿½¾ÿÿÿÿ‏ÿÿ‎ÿÿ‎‎‎‎ûûÿ‎ש‏תÿüüÿת‎üÿûשקרÿ‎ÿÿÿÿקÿ‎שÿ‎‏ÿûüûקÿ‏ÿÿתÿÿשÿÿת‏ÿÿרתÿףצûפÿÿÿÿÿ‎ÿÿ‎üÿÿüÿÿÿ‎ÿÿתÿÿתתÿ‏ûשÿÿקÿÿ‏ÿÿ‎שצ‎‏שûÿÿ‎‏ÿÿ‎ÿקÿצש‎ÿÿûÿ‏ץÿÿ‎ÿÿüצÿûרבÛוקקÿûÿÿûÿרüÿפÿÿ‎ÿ‏ÿ‏‏ÿÿÿ‎ÿÿתüÿÿüÿÿÿ‎ÿÿתÿÿûÿ‏ÿÿקÿÿרÿתÿÿפÿ‎פÿ‏ûרÿÿקÿÿ‏ÿÿÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךליטךחזטחוווהההגגגßßßÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏ÿÿÿÿÿûüÿüרÿ‏רÿ‎‎üÿÿףÿÿןÿק‏ÿצÿררÿתûתשץתÿשÿ‎תÿûÿÿ‏ÿפÿÿקÿûשüףÿתץÿû‎ÿüÿ‏ÿÿשÿ‎רÿרשÿתÿÿÿÿûÿÿתÿÿÿÿûÿÿרüÿÿ‎ÿûÿת‏ÿÿÿ‏ÿÿ‏ûÿ‏רÿÿû‏ÿÿûÿÿûÿרשÿץÿ‏ÿÿרÿÿ‎ÿÿÿר‏ÿûû‏ÿץÿÿרÿ‎ÿÿÿÿûÿÿשÿÿûûÿÿתüÿÿשÿÿרÿÿשÿצ‏ÿפÿ‏ÿÿûÿÿ‎ÿÿÿרÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטךהזהההßדגÝבאÝÝÝױױױ¾¾¾‏ÿÿÿ‏ÿÿû‎ÿ‎‎‎ÿüרÿ‎שÿ‎ÿ‏ûÿצקÿÿûÿ‏ש‎‎ûû‏ÿשÿÿשÿ‎ת‎עÿÿרÿ‏ÿÿ‎ÿÿ‎ÿÿÿרÿÿר‏ÿûüÿÿûÿ‏ÿÿףüÿÿש‏ÿ‏‎ÿÿ‎‎ÿ‎רÿ‎ÿÿ‎ÿÿ‏ÿüÿ‎צÿקûÿûÿÿûÿûüÿ‏ÿûÿÿץÿרצüתÿ‎ÿÿתÿÿ‎תÿÿפ‎ÿעûÿüתÿÿûÿÿ‏‏ÿ‏‎ÿÿ‏ÿÿ‏ÿ‎‏ÿûÿÿÿÿהûÿתקÿÿ‏‏ÿÿתתÿרתÿüÿפÿÿעÿÿüÿûÿûÿÿתÿÿ‎ÿשÿÿüÿÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךליטךחזטחהזודוהגגגßßßÝÝÝױױױ¾¾¼ÿÿ‎ÿÿÿÿÿÿÿÿÿ‏‏ÿÿÿÿץÿÿÿ‎פÿרßµ£™CJZו‏ÿסÿÿ‏‎û¬™Ýָׁÿתÿÿ‏üüÿÿת‎ÿüÿÿ‎ÿץרÿיÿÿפÿ‏‎ÿתÿÿ‎ÿ‏‏‏‏ÿתר‏נûÿנ‏ÿרûü‏‏ÿÿץצתÿÿ‎‏ÿת‏‏üûÿ‎‏ÿ‎ÿ‏ÿÿ‎ÿÿüÿÿ‏ÿ‏ÿûûÿצûÿצüÿûÿÿÿÿüÿÿüÿÿûüÿÿ‎‏ÿÿץÿÿרÿÿÿÿÿÿûûÿשרÿûתÿ‏ÿשÿÿשÿÿûÿûûÿצüÿתÿ‎ÿÿûÿÿ‎ÿ‏ÿרÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההבדגאאאÝÝÝױױױ½¿¾‏ÿÿÿ‎‏ÿ‎ÿÿ‎üüÿ‎רÿ‎שÿשÿûרÿûûÿתקÿÿûüÿ‎ûÿÿ‏ÿÿÿÿÿÿÿ‎קשצÿÿÿûשüÿ‏ûÿ‏רÿ‎תüת‎üÿÿצÿÿÿÿû‏ÿÿ‏‏ÿÿ‏ÿÿ‏ÿÿÿ‎ÿ‎ÿÿ‎ÿÿ‎ÿüÿ‎צÿקש‏רÿ‏‎ÿü‎ÿ‏ÿûÿÿûÿÿ‏ÿÿ‎üרÿÿתÿÿרÿÿקÿÿתÿÿ‎ûÿÿשÿÿûÿÿÿüÿÿתÿÿ‎ÿûÿ‏פÿ‏ûÿץûÿת‏ÿÿÿ‏‎ÿ‎רÿüתÿ‏ÿשÿÿרÿÿüÿÿÿ‎ÿÿûÿÿûÿÿüÿ‏ÿÿ‏ÿצÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךליטךחזטחהזודוהגגהßßßÝÝÝױױ׃¾¾¼ÿÿ‎ÿÿ‎ÿÿÿÿÿÿ‏‏ÿÿÿÿןÿÿÿ‎םÿנֻ%²¼׳םÿÿשÿÿÿרר2!)ָ»ֽÿתÿÿü‎ÿÿûץûûüÿ‎ÿÿעÿÿןûÿÿרÿÿÿ‎ÿÿüתÿüץü‏ûשÿÿûÿûüÿצרÿשרÿÿÿ‏ÿÿüÿÿÿרûÿף‏ÿÿÿÿתÿÿתÿ‎ÿÿüÿÿ‎ÿÿÿפ‏ÿסûÿשüÿÿ‏ÿÿÿÿÿÿ‏ÿûרÿÿ‏ÿÿÿצ‏ÿû‏ÿÿÿ‏ÿÿ‏ûÿ‎רÿ‏ÿüÿÿûÿÿ‏ÿ‎ÿÿפÿÿר‏ÿÿ‏ÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדחזדוהדבגדßאÞÜÝװײױ»¿¾‏ÿÿ‏‏‏ÿ‏ÿ‏‏üתÿûשÿû‏ÿûÿüשÿ‎ûÿ‎ÿÿÿÿüÿûü‏ש׃ׂ׀קפûÿ‎ÿÿ‏ÿ‏ÿשÿÿתÿÿ‎ÿûûÿûתגײײםמףעÿÿûÿÿÿÿ‎ÿÿפÿÿûשÿÿüÿÿÿ‎ÿÿ‏û‏‏üüÿÿ‏ÿתÿ‏ש‏‎û‏ÿÿת‏ÿ‏ÿûÿ‎ÿüת‎‏ÿûüÿתקüצÿ‏ÿÿüÿÿüÿüÿ‎רÿûûÿ‎ÿüÿÿתÿÿüÿûÿüפÿקקÿÿ‏ÿÿÿ‏פÿ‎פÿÿûüÿÿüÿÿÿ‏ÿÿ‎ÿÿ‏ÿüÿ‎üÿÿÿ‎ÿÿûÿÿ‏ÿ‏ÿסÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךליטךחזטחהזודהזבגהßßßÝÝÝױױ׃¾¾¼ÿÿûÿÿ‎ÿÿ‎ÿÿÿ‏‏ÿÿÿÿרÿתÿ‎ן¹“7(/ץתÿצ‏ÿÞױ־
+  !5'+6™•ÿ‏טְ·¦   
+uer
+%CQlנם‏ÿסנaI=WWU ,@Ýבלÿÿûüûצÿ‏ÿÿüÿüüתüÿףÿ‏ûÿÿתÿÿ‎‏‏ÿ‏‏ÿÿ‏ÿÿÿתÿÿצ‎‏ש‎‏ÿקüÿûÿÿüÿÿÿ‏ÿÿ‎ÿÿ‎ץÿ‏ÿÿ‏ÿÿ‏‎ÿÿת‏ÿתüÿÿûÿÿüÿÿÿÿ‎ÿ‏ûÿü‎ÿ‎ÿüÿÿûÿÿ‏ÿÿÿ‏ÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטאיזדוהזאגזÝאÞÜÝװײױ»¿¾‏ÿÿ‎ÿ‏û‎üש‏ת‏ÿ‎‎‏שÿÿûÿÿûÿÿû§§³CB@ÿÿנצןו אדפü‏ÿÿ‎תÿ‏פ‏ÿûפ‎ÿÿ‏ÿÿרע9 °®¹יÿÿüÿÿÿ‏‎ÿ‏תÿÿ‎ûÿÿשÿÿüÿÿÿ‏ÿÿ‏ÿÿÿ‎ÿÿצÿÿר‎‎‎üÿÿûÿÿ‏ÿתÿתÿÿüÿüÿÿקÿÿשÿÿÿ‎ÿÿüÿÿ‎ÿüÿ‎ûÿ‎ÿÿ‎ÿ‎‎ÿ‏‎‏ÿ‎ûÿûüÿûü‏ÿÿÿÿÿÿרÿÿת‏ÿÿüÿÿÿÿÿÿ‏ûÿ‏ûÿÿûûÿûûÿû‏ÿ‎ÿ‏ÿÿÿ‎ÿÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿךליטךחזטחהזודהזבגהßßßÝÝÝױױ׃¾¿÷ÿÿûÿÿ‎ÿÿ‎ÿÿÿ‏‏ÿÿÿÿÿÿÝ‎פם#0÷³ׂÿ‏ÿÿÿטÿüÙÿך״/"+¢­¿ט‎ÿףקאÿüׂ±’ulff¶ֻט-Úßÿ&Gכדתÿחל4|}wאÿÿu”ְ59^ÿף‎ÿüףÿ‏תשÿÿûÿÿ‎‏צÿ‏פÿ‏‎‏ÿÿûÿÿûÿÿ‏ÿÿÿ‏ÿÿ‎ÿÿ‏û‏ÿ‎ûÿÿרÿÿק‏ÿ‏ÿÿÿ‎תÿüתÿüÿÿ‎ÿÿ‏צÿÿצüÿûüÿ‎‏ÿ‎‏ÿÿ‏ÿÿÿüÿÿûÿÿü‎üÿûרÿ‎üÿÿÿ‎ÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטßךזדוהטßגחÜאאÜÝׂײױ»¿¾‏ÿÿ‎ÿ‏üÿÿûÿ‎ü‏ûÿÿûÿ‏û‏‎שפצס,ֱִ¼ÿüגÿקל'טעÿש‎ÿÿ‎סÿשמüÿÿסÿÿ‏ÿÿÿרךÿÝװצעÿגÿÿÿÿןÿÿÿ‏‎ÿÿ‎ÿÿÿפשÿסץÿÿû‏ÿÿתÿÿתשÿÿס‏ÿצ‏ÿÿ‎ûÿ‏ÿÿתÿשÿשÿÿ‎ÿקÿÿףÿÿרÿÿÿ‏üÿ‎קÿÿרüÿÿÿ‏ÿÿתÿÿüÿûÿץצÿףûÿûÿûÿÿ‎פÿÿ‎קÿÿצÿÿûÿ‏ÿü‏ÿûÿÿ‎‎ÿÿרüÿרüÿûüÿתüÿף‏ÿסÿÿûÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחווודההגגגאאאÞÝÝÝ׳׳Ù½¼ֱÿ‏ÿÿ‏ÿüתÿÿ‏ÿÿ‏ÿÿ‏ÿÿק¶÷¬¡	;עשÿ‎שÿÿüüÿ‏תÿûשRBBֱ¹¶‎ÿקÿÿזÿ‎ֽ×’fz†|·ןÿ*"UÿקÿiTgÿײÚÿימ&ׁדקשÿÿן״׀Üזןהÿÿלÿÿÿÿסÿüףÿûÿÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎ÿ‏ÿüתûÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוטÝהההבבכÜבחÜÞÛÙװ׀ֵ÷¾ÿ‎ÿצÿÿצÿשÿÿûÿתÿÿüÿÿüÿÿûדÊ p0aח‎ÿ‏ÿםÿנא,iN] *ֽßÿןÿÿÿÿפעװ¼Y'(gBaֵÊחאÿÿÿÿÚףצםZO_‰ku  	ֶ׳ץכÿÿשÿÿÿ‏רÿ‎ÿשÿÿשÿÿÿÿםÿÿףÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוודההגגגאאאÞÝÝÝ׃׃ױ¼¼¾üûÿÿÿÿÿ‏ÿÿ‏ÿ‏ü‎‏‎ûÿפ׀'¦³ױץüÿÿüÿ‏‏ÿרÿÿÿûûV:/״ֶ¼רÿÿתÿקÿü׀¹”_v~qֶÿÿ<6dתסÿbLpÿÛךÿםכ״ךמקÿÿלÚנ וטקיÿÿסÿûÿÿעÿרתÿתÿÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎‏‏üûתרÿ‎‏ÿ‏ÿüת‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטגטההההדבהבßאÝÝÛײװ׳¿¼ֵ‏‏ÿüÿÿ‏ÿר‎תףÿ‏ÿ‏‏ÿÿûüÿףדA £¿העÿÿÿÿכ‎מח& r‚ÿצק/Hדתÿצ‎ÿÿשזÿÛֹ@÷ֱװÛÿÿûÿ׃ûüק ,‹o{ÿסוwml^k‹מÿÿרÿÿÿÿרÿ‏ûüÿÿשÿÿ‏ÿפÿÿצÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםייכחחחוודההגגגאאאÞÝÝÝױױױֱֱֳÿÿÿÿÿÿÿ‎‏ÿ‏üÿÿûÿÿûױ£¬#נ‎ÿüÿÿÿÿףשÿÿסÿÿûשת„cP‘wjפ‎ÿנ‎ÿÿüÚ½•avynִÿÿ>9a‎ץÿ^LvüÙםÿלß% ˆ•‹ףÿÿ×¢ׁ2‎תÿץÿשפÿף‏ÿתÿüÿÿצÿÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏ÿÿ‎ÿÿ‎ÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטאיטדוגזבÝהßÜÞÜבׂױÞ÷¾ֹûÿÿ‏‏ü‎תץÿÿרÿÿרÿÿתÿ‎ק¾©¨+לÿÿפÿקÿÿזÿצץ'ךׂגÿûזזאֶ ׁיÿפÿÿÿקוÿץÊd:!¹¿ֻ׃ÿÿ‎ÿׂץפת ;פÜךÿ‎ßְֶ°/7[כקÿק‏ÿÿÿפÿÿסÿ‏ÿûÿÿüÿûÿÿתÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםייכחחחוווההגגגאאאÞÝÝÛװװװֱֱֱתתתÿÿ‎ÿÿû‎üק‏‏צ‎‎ץ6>µ«ֶצÿ‏‏ÿםÿÿכר‎ÿס‎ÿÿ‏ÿÝָ·"ˆÿüי±zƒ~׳ÿÿGDcüרÿ^SqקÝזÿםÝ%    +ױֻםÿûÿû‏קשÿפתüש‏‎ÿÿ‎ÿÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿ‎תתרתתת‎‎‎üüüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחהדואדגÞדÞגÞÛזׂױÞ¸ְֲüÿ‎‎‎‎ÿ‏ÿÿÿÿÿÿןÿ‏וÿרך)'¼­ײץשÿûÿףÿÿבקעמ (üאלÿûÜמיֹ ׂטÿץÿÿÿ‎Ýÿץ¿a@!¹ְÊÜÿÿÿÿׁץפÿFץאןÿ‏ײÝ׳½>ךפÿק‏ÿÿÿןÿÿם‏ÿÿ‏‏ÿÿÿûÿÿתÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכךןייכחחיוווהההגגאאאÞÝÝÛ׳׳׳»»¹ÿÿ‎ÿÿûשרףÿÿר‏‏פֲֲ¸Dץןÿ‏ÿר‎ÿטÿÿףÿ‎ÿÿ‎ÿüûשÿ‎עÿûץÿüÿÿ‏ÿÿÿ‎ÿÿתûÿÿק‏ÿÿüÿרתÿûüÿÿûצÿםג'ךנלהצתנשÿÿ‎ÿÿüÿÿÿ‎ÿÿûÿÿû‏ÿÿקÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüüüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטךוגהוßßהאßאוÞÚטױװÚ½¿÷‏ÿרÿÿÿשûÿרüÿÿÿםÿüÝֻ¯£(לסÿÿקÿ‏ÿפüÿßûשך"§ÿתג¯­ /מûÿüÿÿÿüֿÿ‎ֿO=/³÷ִךÿÿÿÿױןנÿHסבלÿ‏ײ׳ׁ»@לקÿרÿÿÿÿםÿÿףü‏ÿÿ‏ÿÿÿצÿÿתü‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכךןייכחחיוווהההגגאאאÞÝÝÝׂׂׂ¿¿¿‏‏üÿÿûÿÿת‏‏צÿÿצÿÿצצשÿû‏ÿû‏ק‎‏מÿ‏רÿûÿÿתÿÿ‏ÿûÿ‎üÿתÿÿû‏‏ÿרÿÿףüÿÿÿÿÿתקÿ‏‎üÿûüÿרÿüפ‏ללÜגגקÿ‎ûÿק‎תףÿÿ‎û‎üÿ‏שÿ‏ר‎ÿתקÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüüüÿÿÿ‏‏‏ûûûÿÿÿתתתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטםגזההגÜואÝבגÝÜהײװÙ¾¾¼ÿÿרÿÿ‎ûÿÿûÿÿÿ‏פÿמב< ®¦¾םÿÿÿרÿü‎ק‏ÿטץפא-    ִֽלפתÿÿÿםe^2
+     	  ַָ©רתÿ6סחנÿ‎זÝװֽ$)Iלרÿרÿÿÿÿסÿÿûÿ‎ÿÿ‎ÿÿÿפÿÿתü‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםייכחחיוווהההגגגאאאÝÝÝ״״״¿¿¿ûûû‎‎ûÿÿûÿÿת‏‏צÿÿצפÿÿף‎ÿ‏ÿÿÿüרÿûשÿûÿÿתÿÿ‎ÿ‏ÿÿש‏קûÿ‎רÿÿקÿÿüÿÿÿתתÿתףÿÿר‏ÿר‏ÿûÿûüÿûÿÛÚגûÿÿ‏ÿ‎ÿ‏ûÿ‏ûשûרüÿûÿÿתÿתקÿÿÿקÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎üüüÿÿÿ‎‎‎ÿÿÿ‎‎‎‏ÿÿ‎ÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטידםדהזבדÞאבÛÞÜÝױװÙ½¾ְÿÿ‎ÿÿרü‎ץ‎ÿתÿ‏ÿ־÷ֵ#קפÿסÿÿÿ‎ÿÿ‎‏ÿÿרÿ‏פÿ‎פÿ‎רסלערקÿü‎ÿ‏ÿÿÿÿסÿÿםÿüשÿ‎ÿ‏ÿÿû‏ף‎ÿע‏ÿÿ‏‎ÿÿתÿÿתûÿûÿü‎ÿקÿÿקÿÿüÿûÿ‎ÿÿûÿÿ‎ÿÿÿתÿÿ‎ÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםיייחחחוווהההגגגאאאÝÝÝױױ׳»»½ÿÿÿÿÿÿÿ‏üÿÿûÿÿתÿÿתפÿÿרÿÿÿ‏ÿÿ‎ÿÿ‎‎‏ü‎ÿ‎ÿÿתÿÿ‎ÿ‏ÿ‎רÿ‎צÿÿûÿÿÿ‏ÿÿ‏ûÿ‏רü‎ÿÿÿ‎ÿ‎üÿ‏ÿûÿÿק‏ÿ‏ÿÿÿûÿÿתÿ‏ûÿüÿ‎‎ÿשÿ‎üÿûÿÿ‏ÿש‏ÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎‏‏ü”””•••‘‘‘‘“’’”“’”“ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטגחךדהטדבגהßÜאÜÙװײ׃÷ְ¾ÿÿ‎ÿ‏תÿ‏צÿ‏שÿ‏ÿÿüÿ‏שÿÿ‏ÿüÿת‎ÿקÿ‏ÿÿתÿÿ‎ÿ‏‎û‏ÿÿÿ‏ÿÿ‎ÿÿ‏ÿ‎ÿü‏ÿ‎‎üÿÿüÿÿûÿÿÿ‎‏ÿר‏ÿÿ‎ÿתתüשÿ‏ÿÿשÿÿתÿÿ‏ÿרÿתקÿ‎ûÿÿÿüÿÿûÿÿ‎ÿ‏ÿÿ‏ÿÿÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוודההגגגגאאאÝÝßױװÙ¿¾ֳÿ‏ÿÿ‏ÿÿ‏ÿÿ‎‏ÿ‏üÿÿûשÿרû‎ת‎ûÿÿ‏ÿüÿÿתÿת‏ÿÿÿ‎ÿÿüÿ‏ÿÿüÿû‏ÿתÿÿ‎ÿ‏ÿÿÿ‎üÿרû‏ÿÿüÿÿ‏רûûûרÿÿרÿÿÿ‏ÿÿתÿÿûÿ‏‎ÿ‏ÿÿÿÿû‏שÿÿüÿ‎üÿÿÿת‏ÿÿ‏ÿÿתû‎‏‏‏ÿÿ‎ÿÿû‏ÿת‏‏üÿÿ‎’’’‏‏‏ÿÿÿÿÿÿ‏ÿÿ‎ÿ‏‘“’ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטאךגדהזוßידÞהÞÝÙױ׳ּ¾¿¹ÿÿ‎ÿ‏‎ÿ‎ûÿû‎‎‎ÿרÿÿץÿÿü‏ûÿÿן‏ÿקÿÿ‎‏üÿÿ‏ÿüÿÿüÿÿתשÿÿ‏ÿÿÿ‎üÿÿת‎ÿÿ‎ÿÿûÿÿשÿÿÿ‎üÿרÿ‏ÿ‏ÿûüÿû‏‏ÿÿתÿÿûÿü‎רשÿצשÿû‏ÿÿÿ‎ÿÿר‎ÿ‎ÿÿ‏ÿ‎‏ÿ‏ÿש‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüüüÿÿÿüüüÿÿÿ‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככיייחחחווודההגגגגאאגÝÝßױװÙ¾½ֳÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‎‏ÿÿ‎ÿתנÿ‏ÿüÿÿרÿÿשÿשüÿצû‏ק‏ÿÿ‏‏ÿ‎û‏ÿ‏תÿ‏תÿ‏ÿתתüüÿ‎ûÿרׂװדענףÿÿצÿ‎תûüÿüÿÿתüקÿÿתÿÿÿÿ‏ÿ‎û‏ÿ‏‎ÿ‎ÿÿ‏ÿÛÚײüüנ‏‏ÿü‎ÿ‏ÿÿ‏ÿÿ‏‏üÿÿûÿÿûÿÿûÿÿ‎’’’‏‏ÿÿÿÿÿÿÿÿÿÿ‎ÿ‏‘“ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדיßדוהגביßאוÜÞÛÙװ־ֵ»¹ÿ‎ÿ‏‏ÿÿ‏ÿÿ‏ÿ‏‏ÿס‏ÿפÿÿשüץÿ‎לÿüÿתüקשÿרקÿûüÿÿתשÿÿ‏ÿüÿÿשÿÿüÿÿÿÿÿÿ‎ÿÿשÿÿüÿÿ‎ÿÿÿצÿתתüÿ‎קÿÿ‏ÿÿÿשÿÿüÿüÿûשÿתû‎רÿ‏‎ÿ‎‎ÿ‏ÿÿ‎ÿ‏üÿÿÿÿüÿû‏‏‏ÿÿÿ‎‎‎‎‎‎‏‏‏‏‏‏“““•••’’’”””‘‘‘ÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככיייחחחווודההגגגגאאגÝÜבװ׃Ù½¼ֲÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿתתÿüÿץ‏ÿשÿÿÿ‏תÿÿצû‏קûÿ‎ûÿתÿÿתÿשûÿüÿÿüÿÿÿÿ‏ÿתצ‏ן.)-©­®ü‏‎ÿü‎ÿתûÿתרשÿתקÿתüÿûÿ‏ÿÿ‎ÿûקצÿûסÿ‎סqmdצרקü‏ÿüÿÿרש‏‏ÿÿ‎ÿü‎‏שÿÿû‏ÿתÿÿ‎“‘’‏‏ÿÿÿÿÿÿÿÿÿÿ‎ÿü‘“ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזחגההגßדגÚדÞÚßÛÛׂ׳ֹ¸ֲÿûÿ‏ÿÿש‏רÿ‏ת‎üÿקÿÿעÿÿ‏ÿרÿ‎םÿüÿüÿûקÿערÿף‏‏üÿ‎ÿÿ‏ÿצÿÿקÿÿרüûÿÿצÿ‎רÿתÿÿüÿÿ‏ÿü‏ףÿüü‏ÿÿûÿÿÿÿÿÿ‏ûÿ‏û‏ÿ‎ûÿÿÿÿ‎ÿתקÿ‎ûÿüûÿÿÿ‎‏ÿ‏ÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿתתתÿÿÿ•••‎‎‎‏‏‏ÿÿÿÿÿÿüüü”””ÿÿÿשששÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככיייחחחווודההגגגגאאגÝÝßױװÙ½¼ֲÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ü‏‎שÿשÿÿ‎ÿ‏‎ûûüÿÿ‎ÿÿשÿÿ‏רÿÿלûÿמשÿ‎ü‏ÿ‏שÿÿüÿÿ‎ÿÿÿצ‎ÿנלאאעק‎קÿÿÿü‎ÿקןÿתפקÿÿנÿÿשÿÿ‎רץÿÿתÿÿצֹׂ÷     —™¦ü‏ÿüÿÿ‏ÿÿû‎תÿÿûÿÿûÿÿûÿÿ‎“‘”ÿ‎ÿÿÿÿÿÿÿÿÿÿ‏‏ü’’ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהואבהÛÜדÛÚÞß״ׂÜֵ¸ֹÿûÿ‎‎‎‏ÿשÿÿתüüתקÿÿעÿ‎‏ÿûÿשצüÿÿüÿÿ‎ÿץ‏ÿף‎ÿפ‎‎ûüÿÿרÿÿשÿÿüÿת‏ûפÿûûÿש‏ßײÛנסףרÿÿ‏ÿÿÿ‎‏ÿü‏‏‏üüÿ‎ÿÿûÿ‏שüüתüÿÿÿ‏ÿÿûûאױ׃‏ÿÿץÿÿûÿÿÿתûÿÿÿûûûüüüÿÿÿÿÿÿÿÿÿ‘‘‘ÿÿÿÿÿÿ‎‎‎‎‎‎ÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחווודההגגגגאאאÝÝßײײ״¾½ֲÿÿÿÿÿÿÿÿ‎ÿÿûÿ‏שתתעFOxפזזÿתדÝױ׃`h‎שÿÿןמcP0t~f 'ÙֽוÿתÿüÿÿײÙ׀<7#`LU־ֿבנüÿÿüתרÙַ+וחצסÿÿ¶½ֿ9:5ףקזרûט%װ·»nֽֽיֵָ׳רüÿû‏ÿüÿÿתüûü‏שÿÿû‎‏שÿ‏ÿ“‘”ÿ‎ÿÿ‏ÿÿÿÿÿÿÿ‏‏ü’“ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדטגהואובÞבßאÜÝבװױÚ¾½ֳÿ‏ÿÿ‎ÿÿüÿÿüÿ‏ÿשרÿצףÿצ‏ÿÿÿשÿרÿÿÿÿÿÿת‎ÿ‏רÿÿפתÿשתûÿ‏‏ÿüÿתץÿקüÿÿÿשÿÿקת4!©­¬םÿÿר‎ÿÿüÿÿשüÿ‎‏ץ‏û‏ÿûÿ‏רÿ‎‎ת‏ÿÿ‏ÿÿעפzhhר‏‏לÿÿרÿÿÿת‎ÿÿÿÿÿÿÿÿÿ‎‎‎‎‎‎‏‏‏———‎‎‎‎‎‎ÿÿÿÿÿÿÿÿÿ•••‎‎‎ÿÿÿתתתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝײײ״¾¾¾ÿÿÿÿÿ‎ÿ‏שÿÿר‏‏עררל NקגßÿצֿÙÊֵJססÿÿךנ2 s~pאÿÿdmxgyÿתÿף‏ÿûÿûצךװ32ְ¹ֹüÿÿÿ‏רÿתכ¥ƒ1$-ÊÊה  ִׂױרÿףüûז'ּ­¼sûץÿû‏ÿת‎ÿת‏ÿצש‏‏ÿÿ‏ÿûü‎רÿÿûÿ‏ÿ“‘”ÿ‎ÿÿ‏ÿÿ‏ÿÿÿÿ‏‏ü’“ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוטßהואואהדÞוÜÝגֿ״׳·ֲ÷üÿ‎ÿשÿÿרÿÿûÿÿÿתüÿסüÿר‏‏ÿ‎ûÿתÿÿÿ‎ÿÿûÿÿüשÿÿרÿÿûÿü‎ÿüÿûÿÿנÿÿקÿÿÿרûÿףסרÙײנרûßÿÿÿÿרÿתÿÿשÿÿüÿûüצ‏ÿר‎‎‎ÿ‏ÿÿ‏‎װַֹ	  	שÿÿÿתû‎‎‎ÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿ‘‘‘ÿÿÿÿÿÿÿÿÿ‎‎‎üüü‘‘‘‎‎‎‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿככםייכחחיוווהההגגגאאאÝÝÝײײײ½½»ÿÿûÿÿתÿÿץÿÿפÿÿנקרזPקßßÿפֻו׳ּ>קצÿÿטÿ*Þדחםÿÿ¿ֲבC2Bÿû‎פÿÿûÿûÿשכPATַ¶¼ÿüתÿ‏ÿÿÿûÿüך„iN  §´ַזÿÿףÿÿÿ‏יÛִ²# ·¼ֿצüÿûÿÿüÿÿüÿÿ‏ÿ‎ÿÿû‎‎ûÿ‏ÿ“‘”ÿ‎ÿÿ‏ÿÿ‏ÿÿ‏ÿ‏‏ü’“ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטךוגוהגגגהאßהÜÝבֿ״ױ·ֲ¼üÿ‎ÿ‏ÿÿüÿÿüÿÿששÿץץWKOלןרסÿÿד׃רg`hÿÿפתüסTNNƒqq  ָװליÿÿפÿ‎ךױְZ%mDTִּבױÿÿÿüÞÝßל?זÙךÿüט½»¬.@Jמרÿÿףל4ַ÷ֳjqÊױחֱֶַÿÿצûÿÿÿÿÿÿÿÿÿÿÿüüü‏‏‏ÿÿÿ‏‏‏üüüÿÿÿÿÿÿ‏‏‏‘‘‘ÿÿÿ‏‏‏‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכךןייכחחיוווהההגגגאאאÝÝÝױױ׃¼¼÷ÿÿתÿÿרÿÿףÿÿסÿÿמצרדIûזכÿתÜ¿³¥&)Jûףÿÿיÿ*$יטרףתÿװֿם!תשקרÿ‎רÿקÿüץHAI׀¹±ÿקן‏‏ÿץÿÿÿÿהyU  «אÿÿסÿÿÿüחÿüÚÿüסn~ֶ¬ַחם‎רüÿתÿÿüÿÿ‎ÿüÿÿûÿÿ‎ÿ‏ÿ“‘”ÿ‎ÿÿ‏ÿÿ‏ÿÿ‏ÿ‏‏ü’“ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטנאךחדהÞוÞÚהÜÚÞÝׁײÙ÷¿ֲ‏ÿÿÿÿû‎‏ר‏ÿûÿתÿÿי‎&
+ וחףזÿÿÞ¾ÿ#$נ‎ßמתזqvÿןםwj{\m›הÿÿעÿנÿûׂÿÝױ?6¶ְדֿÿÿÿ‏ֿףûÿ€‘ֹ6'<ךַ© ±ׂוםÿÿÿנג9 ¿µְj‚®ךצÿÿüןÿüלסÿÿÿÿÿûûûÿÿÿ‎‎‎ÿÿÿüüü“““ÿÿÿ‏‏‏‏‏‏‎‎‎ÿÿÿ”””üüüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝײײײ½½½ÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‎‎‎%+ָ²ÿת½ppX$>cץפÿÿזÿ+ױלפיÿÿÚֵ‎3ÿ‏הכÿÜûÿחÿנכP@M´µ·שÿרÿÿףÿüףzwr<HHײÝח ִ·ֱü‏שן‎מ××¢üלן‚v‚ֱִ׃הכץûÿÿש‏ÿüÿÿ‏ÿÿ‏ÿÿÿÿ‎ÿÿû’“ÿÿ‎ûûשÿÿÿ‏‏ÿÿ‏ÿ‘•ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדחזחדהטßגאאאײבÝֿ״ױֲ¼¾ÿתÿÿ‏ÿפÿÿצÿ‏ÿשÿÿדף9חחחדÿÿײÊנüÿהצץ‎8עÝנÿתא־¿¨6;YדקÿפÿÿÿרÝÿץÊf8)»½ÊÙÿÿנÿÿÿ‏Ýÿû¯{rG ·אתûÿÿÿהÿÿנֲּֽ,! ©ַבןÿÿÿתÿÿÿÿûûûÿÿÿ‎‎‎ÿÿÿüüü“““ÿÿÿ‏‏‏‏‏‏‎‎‎ÿÿÿ”””üüüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝײײײ½½½ÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‎‎‎•™¢    \ZK7Fcרקÿÿךü#ÜםפנÿÿÜ־ס?#/‏רטפÿל`cR       ֵַ¸ֱ´¬	זנסשÿÿÊ¿ֿהזדףÿףzzr
+   
+¾ֵֿשÿÿש‎ÿûÿÿûÿÿûü‏ÿÿÿüüת‏‏ü’’üüתÿÿÿÿÿÿÿÿÿÿ‏ÿ“”˜ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדחזחדהטßגאאא׳אÝׁ׳ױֲ¼¾ÿûÿûûûץÿÿפÿüÿק‎ÿחצ7םםםגÿ‎»¯ß1/"üÿ״צץ‎EסÞעÿ‏ײßװ¶;כשÿפüÿÿÿ׃ÿסֹb8<½¾׃ßÿÿûÿÿÿ‏ןÿקÜg]D  ‰¦פÿÿüûÿÿüצÿתסÿצצ~r€°¶׀,הם‏ÿ‎ÿÿÿÿÿÿÿÿÿÿüüü‏‏‏ÿÿÿ‏‏‏üüüÿÿÿÿÿÿ‏‏‏‘‘‘ÿÿÿ‏‏‏‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ½½½ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿתÿûנךÿצוÿ‏ûûÿÿ‎‎ÿÿ‏‎ÿÿתש‏ÿר‏ÿÿüÿÿ‎ûÿÿתÿÿÿüרקÿûרÿשÿÿÿÿתÿשÿ‏ץÿשעÿ‏ûצÿ‏ûÿÿÿûÿÿתÿ‏ÿ‎עüףÿÿתÿû‎|r{ףץÿûÿÿש‎ÿûÿÿüÿÿûÿÿ‏ÿÿÿÿÿ‏‏üüüת”“‘ÿÿ‎‎‎‎‎‎‎ÿÿÿÿÿÿ‘ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדחזחדהטßגבßא׳אÝׁ׳ױֱ½¾ÿüÿÿÿÿצÿ‏שÿÿÿשÿÿנ‏3²´³חÿÿnd–<;)‎ÿױפסת!KףגץÿÿװÜױ¸?ךסÿשÿÿÿ‎ֹÿצ׳\6K´´ּדÿÿÿÿבÿÿÿxu†I>8חÞ½  ®ַÝף‎ÿÿמף¼ƒ‏מÞz}ֲָטללצשÿÿ‎‎‎ÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿ‘‘‘ÿÿÿÿÿÿÿÿÿ‎‎‎üüü‘‘‘‎‎‎‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ½½½ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿתÿÿ‏ÿüûÿ‎ûÿÿ‎‏ÿÿתûÿררÿרÿÿÿ‏‎ש‏ÿרקüץÿ‏ÿÿרÿÿûÿ‏ü‎ÿתÿÿÿÿüÿûÿÿקÿ‏רûתצûÿÿת‎ÿÿ‎ÿÿתÿü‏ûûÿûÿÿûÿצש¼µ¼üüÿר‎ÿûÿÿüÿÿש‎ÿ‏ÿÿתû‎‏‏‏üüüÿÿ‎’‘‏‏üÿÿÿûûûÿÿÿ‎‏ÿ”•—ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדחזודהזאגבßאÚÞÝׂײױ¿½¾ÿ‎ÿ‏ÿÿרÿÿשÿ‎ÿקüÿפÿ©— 
+ \WwDD:ÿÿחףמפ#:מגמÿüוÚ׳ָ'&Fץרÿ‎‏ÿf[;      
+ײָ«±¶¹&פכמÿüהֹÊ¼ ׂגüÿר‏’q`   	 	ֱֵ׀ÿüÿקÿÿÿÿÿÿÿÿÿÿÿ‎‎‎‎‎‎‏‏‏———‎‎‎‎‎‎ÿÿÿÿÿÿÿÿÿ•••‎‎‎ÿÿÿתתתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ½½½ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿתתÿü‏ÿÿ‏ÿÿ‏ר‎ÿעשÿתתÿ‏‏‎שÿÿצק‎סûÿ‎ÿ‏ÿÿûÿÿ‎ÿü‎ÿÿûÿÿ‏ÿûûש‏‎שÿ‏û‎‎ûרüûüÿÿÿÿÿÿ‏ÿ‎ÿ‏û‎תüüתÿ‎‏ÿ‎ÿ‏‎ÿüÿÿüÿÿרüÿ‎‏ÿ‏ÿÿ‏‏ÿÿÿÿÿ‏ÿÿ‎‏–”•’’’•••’’’’‘“•”ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטדחזודהזאגבßאÜÞÝׂײױ¾¾¾ÿ‏ÿü‏‎ûÿÿ‏ÿÿÿûÿÿץ‏ÿשÿעצץד‎פתûÿÿÿÿÿü‎ÿ‎‏ÿ‎‏ÿûûÿ‎ÿÿ‎ÿûûÿ‏‏ÿÿ‏ÿÿûקÿûףÿüרש‎‏עÿÿÿשעüÿ‎קÿÿ‏ש‎ÿץרÿ‏ÿפÿÿץÿÿÿת‎ÿשרÿûשpvtצÿÿüÿÿ‏‎ÿ‏ÿÿÿÿÿûûûüüüÿÿÿÿÿÿÿÿÿ‘‘‘ÿÿÿÿÿÿ‎‎‎‎‎‎ÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝײײײ½½½ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎‏שÿ‏ÿ‎‎ÿÿÿÿü‎ץ‏ÿûûüÿ‏ÿÿ‏ÿת‏ÿק‏ÿÿ‏ÿÿ‎‏ÿ‏ÿתÿÿÿ‎‎ÿ‏‎ûÿ‏ÿÿ‏ÿ‎‎‎üüüÿÿÿÿÿÿ‏ÿÿü‏‎‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏ÿÿ‎‏‎‏ÿ‏ÿÿ‏ÿÿ‏ÿÿתתüÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿ‎ûüÿ‏ÿÿÿÿ‏‏‏üüü‏ÿÿ‎ÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזהההובגדßאÝÝÝװײױ½¿¾‏ÿÿüÿÿüÿÿ‏ü‎ÿûÿÿר‏ÿש‎üÿÿפÿÿÿÿרשרÿ‏תÿÿ‎üÿÿףÿÿתÿ‎ÿüûÿÿÿÿûתץÿת‏ÿûÿÿ‎‎‎‎ף‏ÿûûÿÿ‏ÿÿ‏ÿת‏‎שÿ‏ÿ‏ûÿÿ‏ÿ‎‎‎‏ÿûÿ‎‏ÿשÿÿ‎ÿ¼»¶סרנשÿ‎‎‏ÿÿûÿÿÿÿÿÿÿ‏‏‏ÿÿÿתתתÿÿÿ•••‎‎‎‏‏‏ÿÿÿÿÿÿüüü”””ÿÿÿשששÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝײײײ½½½ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿûÿת‎‎‎ÿת‏‏ÿûûÿת‎‏ÿÿûÿÿ‎ÿüÿתüÿûüתÿÿûÿÿÿ‎ûÿףüÿרÿ‎ÿ‏ÿûÿÿ‎ÿת‏ÿ‏ÿûÿÿ‏ÿÿ‏‎û‏ÿתüÿûüÿ‎ÿÿÿÿתÿÿ‏ÿ‎‏ÿüüתÿ‏û‏ÿÿ‎‎‎üüüÿÿÿÿÿÿÿ‏ÿüת‎ÿ‏ÿ‏üÿÿ‏ÿÿÿÿשששÿÿÿÿÿ‎‏ÿ‎ü‏ûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזהההובגדßאÞÜÝװײױ»¿¾ûÿÿüÿÿü‏‎ÿ‏ÿÿüÿÿצתÿ‏ÿצתשקÿÿÿÿתÿÿÿ‏ÿÿ‎‎ûÿÿרÿÿû‏‏ÿשüÿ‎‎ÿÿ‏ûÿü‎ÿתÿ‎‏ÿשÿ‎û‎תÿÿ‎צÿרÿÿÿÿüÿÿüÿüÿÿרשûÿü‏ÿ‎ÿÿÿÿüÿÿü‏ûÿ‏תÿÿתר‎ק‏ÿÿÿûÿ‏‏‏ÿÿÿ‎‎‎‎‎‎‏‏‏‏‏‏“““•••’’’”””‘‘‘ÿÿÿÿÿÿ‎‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝײײײ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿשÿûÿÿÿÿü‎‏ÿûûÿû‎‏ÿÿûÿÿתÿüÿרüÿ‎ÿüÿÿûÿ‏ÿתשÿסתÿקÿüÿûÿתÿ‏‎ÿ‎ÿûתÿûÿÿûü‏ÿ‏‎ÿÿתûÿתûÿ‎‎‎ÿÿ‎ÿüûÿûÿÿ‏ÿ‎ÿ‏תüüתÿÿ‎ÿÿ‎ÿÿÿÿ‎‏ÿ‎‏ÿ‏ÿ‏üÿÿ‏ÿ‎û‏ÿÿÿÿÿÿûûûÿÿ‎‎ÿü‎ÿüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזהההדבגדßאאÜÝױױױ÷ְ¾שÿÿüÿÿÿÿÿÿü‏ÿ‎ÿÿ‏ÿ‏ÿÿüÿÿשÿ‎ÿ‏‎‏‏üûÿ‎ûÿ‏‎‎‎ÿ‏ÿû‎üüÿÿ‏ÿÿÿ‎ÿÿתשÿ‏‎ûÿÿרÿÿüÿÿÿ‎צקÿת‎‏ÿÿתÿÿ‎ÿתû‎‏ÿ‎ÿ‎ÿÿתÿÿ‎ÿר‏תרÿ‎ר‎שÿÿûÿ‏‎ÿ‏ÿ‏ÿÿ‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüüüÿÿÿüüüÿÿÿ‏‏‏‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿüÿ‎ÿÿÿÿ‏ÿÿÿ‎‏ÿûÿ‏ÿÿ‎ÿÿ‎ÿÿÿûÿÿûÿ‏ÿÿ‎ÿÿÿÿüÿר‏ÿûÿ‏ÿûÿתÿ‏‎ÿüÿ‏‏ÿשÿÿüÿÿÿ‏‎ÿÿתûÿתשÿ‎ÿÿÿÿüÿÿ‏ÿûÿÿüÿûÿ‏רÿÿûÿÿ‎ÿÿ‎ÿÿ‎ÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎‏ÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזהההדבגדßאאÜÝױױױ÷ְ¾שÿÿüÿÿÿ‏ÿÿ‎ÿÿ‏ÿÿÿÿüÿÿüÿÿ‏ÿÿÿü‎ÿÿûשÿ‎שÿÿÿÿÿÿ‏ÿÿÿÿüÿ‎‏ÿÿÿ‏ÿÿüÿÿ‏ÿשÿÿרÿÿüÿÿÿ‏ûרÿÿüÿ‎ÿÿתÿ‏ÿÿ‏ÿÿ‏ÿÿ‏‎ÿ‎ûÿ‏ÿûÿÿקÿÿשÿ‎ÿ‏ûÿüÿÿ‎ÿüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿ‏ÿÿ‏ÿÿÿ‏ÿÿ‏ûÿ‏ûÿÿ‎ÿ‏ÿÿ‏ûÿ‏תÿÿ‎ÿÿÿÿÿÿÿ‏ÿÿÿÿ‏ÿÿûÿתÿ‏‎ÿüÿ‏‏ÿשÿÿüÿÿÿ‎‎ÿÿתûÿתשÿûÿ‏ÿÿüÿÿ‏ÿשÿÿüÿûÿ‏רÿÿûÿÿ‎ÿÿ‎ÿÿ‎ÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎‏ÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזדוהגגגדßאאÜÝױױױ»¿¾ûÿÿüÿÿÿ‏ÿÿ‏ÿÿ‏ÿ‏ÿÿûÿÿüÿÿÿÿÿÿüûÿÿ‎רÿ‎רÿÿ‏ÿÿÿ‎ÿÿÿÿüÿûüÿûÿ‏ÿÿûÿÿ‏ÿûÿÿרÿ‎üÿ‎ÿ‏ÿשÿÿüÿתÿÿןÿÿת‏‏ÿÿüÿÿü‎ÿÿצ‏ÿ‎שÿÿשÿÿ‏ÿ‎ÿÿ‎ÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿ‏ÿ‏ÿÿ‏ÿÿÿ‏ÿÿ‏‎ÿ‏ûÿÿûÿÿ‎ÿ‎‎ÿ‏ûÿÿûÿÿ‎ÿ‏ÿÿ‏ÿÿ‏ÿ‏ÿÿûÿתÿ‏‎ÿüÿ‏ÿÿשÿÿ‏ÿÿÿ‎‎ÿÿתûÿתûÿ‎ÿ‏ÿÿüÿÿ‏ÿûÿÿüÿûÿ‏תÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזדוהגגגבßאÞÜÝױױױ½¿¾üÿÿ‏ÿÿÿÿÿÿ‏ÿÿÿÿüÿÿüÿÿ‏ÿÿÿÿÿÿûÿÿÿûרÿתרÿÿ‏ÿÿÿ‎ÿÿÿûüÿרüÿûÿ‏ÿÿüÿÿ‎ÿüÿ‎שÿ‎üÿÿÿ‏ÿûÿÿ‏ÿûÿÿףüÿרüÿÿÿüÿÿûÿÿ‏ûשÿ‎רÿÿÿÿÿÿ‎ÿÿ‏ÿûÿÿ‏ÿÿÿüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏‎ÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿüÿûÿÿ‎ÿ‎ÿÿ‏ÿûÿÿ‏ÿÿÿ‏‎ÿ‏ûüÿתüÿ‎ÿ‏ÿÿüÿÿ‏ÿûÿÿ‏ÿ‎ÿÿתÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזהההגגגאאאÞÜÝױױױ¾¾¾‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿûÿÿÿûûÿצûÿ‎ÿ‏ÿÿ‎ÿÿÿûüÿרüÿ‎ÿ‎ÿÿüÿÿ‏‎‏ÿûûÿÿ‏ÿÿÿ‏ÿ‏ÿÿÿÿÿ‏ÿûüÿתÿÿתÿ‎ÿÿûÿÿ‏ÿרÿ‎ûÿûÿ‎‎ÿûÿ‏‏ÿרÿÿ‏ÿÿÿü‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿ‏ÿÿÿÿûÿÿתÿÿ‎‏ÿÿÿ‏ÿÿüÿÿ‏ÿÿÿÿ‏ÿÿÿ‎ÿÿüÿÿÿ‎üÿת‏ÿûÿ‏ÿ‏ÿûÿÿ‎ÿ‎ÿÿ‏ÿüÿÿÿÿÿÿ‏‎ÿÿû‏ÿûüÿ‎ÿ‏ÿÿ‎ÿÿ‏ÿüÿÿ‏ÿ‎ÿ‏ûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטוחזהההגגגאאאÝÝÝױױױ¿½¾ÿ‏ÿÿÿÿ‏ÿÿüÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüÿÿÿ‎‏ÿר‏ÿûÿ‏ÿÿ‏ÿ‏ÿÿûÿûüÿ‎ÿ‏ÿÿ‎ÿÿ‏ÿ‏ÿ‎üÿÿ‏ÿÿÿ‏ÿÿ‎ÿ‏ÿÿûÿ‎‏ÿתÿÿתÿ‎‎ÿÿÿûÿÿüÿ‎ÿÿûÿ‎‎ÿ‏ÿüÿÿûÿÿÿÿÿÿ‎‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿ‏ÿ‎ÿÿ‎ÿ‏ûÿÿûüÿÿ‏ÿÿÿ‎ÿÿ‏ÿ‏ÿ‎üÿÿÿ‎ÿÿ‎ÿÿÿ‎üÿר‏ÿתÿ‎ÿ‏ÿ‎ÿ‏ÿÿ‏ÿÿÿÿ‏ÿÿÿÿÿÿ‏ÿÿÿ‎ÿÿ‎‏ÿÿÿ‏ÿÿ‏ÿÿÿÿ‏ÿÿÿÿÿÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגßבאÜÞÝױױױֱ½¾ÿ‏ÿÿ‏ÿüÿÿûÿÿüÿÿÿ‏ÿÿ‏ÿÿ‏ÿ‏ÿÿ‏‏ÿÿÿÿÿÿûÿÿתÿÿ‎‏ÿÿûÿÿûÿÿ‏ÿ‎ÿ‏‎ÿü‎ÿ‏ÿ‏ÿÿüÿÿ‏ÿÿÿ‏ÿÿüÿÿÿÿüÿתÿÿûÿ‎ÿÿÿÿשÿ‎ûÿ‎ÿ‏ÿÿüÿÿ‎ÿ‏ÿÿ‏ÿÿÿÿÿÿ‏ÿÿÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿûÿÿÿÿ‏ÿÿÿ‎‏ÿû‏ÿÿÿ‏ÿÿÿÿ‏ÿûüÿûÿ‏ÿÿ‏ÿÿÿÿ‏ÿתÿÿûÿ‏ÿÿÿ‎ÿÿÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿ‎‏ÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגßבאÚÞÝױױױֲ¼¾ÿüÿÿ‏ÿûÿÿשÿÿüÿÿÿ‏ÿÿ‎ÿÿ‏ÿ‏ÿÿûÿÿÿÿÿÿ‏רÿ‏רÿ‏‎üÿÿרÿÿשÿÿÿÿÿÿ‎ûÿ‎תÿ‏û‏ÿÿüÿÿ‏ÿÿÿÿûÿ‏ÿÿ‏ÿÿ‎ÿÿ‎ÿÿÿ‎ûÿ‎רÿ‎‏ÿÿÿüÿÿûÿÿ‏ÿ‏ÿÿÿÿÿÿÿ‎ÿÿ‎üÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿûÿ‏ÿ‏‏ÿÿÿÿÿÿר‏ÿûüÿÿüÿÿ‏ÿû‏ÿר‏ÿÿüÿÿ‏ÿÿÿÿûÿÿ‎ÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿÿ‏ÿ‎‏ÿ‎‏ÿ‎ÿÿ‎ÿÿ‎ÿÿ‎ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגßבאÚÞÝױױױֲ¼¾ÿüÿÿ‏ÿûÿÿרÿÿüÿÿÿ‏ÿÿüÿÿ‏ÿ‏ÿÿשÿÿÿÿÿÿ‎פÿüצÿ‎ÿûÿÿקÿÿשÿÿÿ‏ÿÿüÿÿ‎צÿÿצ‏ÿÿü‏ÿ‏ÿÿÿÿצ‏ÿתÿüÿÿשÿÿûÿüÿרקÿצשÿÿÿ‎ÿÿüÿÿ‎ûÿÿ‎‏ÿÿÿ‏ÿÿÿûÿÿתüÿûÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿכככיייחחחוווהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‎‎‎‎üüüüüüûûûûûûתתתששששששרררקקקצצצץץץפפפעעעסססנננמממםםםכככיייטטטזזזהההגגגאאאÝÝÝױױױ¾¾¾ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+endstream
+endobj
+11 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+23 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+24 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+25 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+26 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+27 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+28 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+29 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 500 500 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 0 0 0 611 0 0 389 0 0 0 0 0 778 
+611 0 0 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 556 444 0 500 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 23 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 333 250 0 
+0 500 0 0 0 0 0 0 0 500 0 0 0 0 0 0 
+0 0 611 667 722 611 611 0 722 0 444 0 0 0 0 0 
+0 0 0 0 0 0 611 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 0 500 500 278 278 0 278 722 500 500 
+500 500 389 389 278 500 444 0 444 444 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 24 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 0 500 500 0 0 0 333 333 0 0 250 333 250 278 
+500 500 500 500 500 0 0 0 0 0 278 0 0 0 0 444 
+0 722 667 667 722 611 0 722 722 333 0 0 611 889 722 722 
+556 722 0 556 611 722 0 0 0 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 25 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 26 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [500 500 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 27 0 R
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 47
+/LastChar 115
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 600 0 0 0 0 0 600 600 0 0 600 0 600 
+0 0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 28 0 R
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 29 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 15 0 R
+/Contents 14 0 R
+>>
+endobj
+16 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 18 0 R
+/Contents 17 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 12 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+30 0 obj
+<<
+/S /D
+>>
+endobj
+31 0 obj
+<<
+/Nums [0 30 0 R ]
+>>
+endobj
+12 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 13 0 R 16 0 R 20 0 R]
+/Count 4
+/MediaBox [0 0 612 792]
+>>
+endobj
+32 0 obj
+<<
+/CreationDate (D:20160905151709+02'00')
+/ModDate (D:20160905151709+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+33 0 obj
+<<
+/Type /Catalog
+/Pages 12 0 R
+/PageLabels 31 0 R
+>>
+endobj
+xref
+0 34
+0000000000 65535 f 
+0000131077 00000 n 
+0000000016 00000 n 
+0000004520 00000 n 
+0000128155 00000 n 
+0000128815 00000 n 
+0000129489 00000 n 
+0000130242 00000 n 
+0000130416 00000 n 
+0000130591 00000 n 
+0000030593 00000 n 
+0000126625 00000 n 
+0000131478 00000 n 
+0000131158 00000 n 
+0000004707 00000 n 
+0000014732 00000 n 
+0000131242 00000 n 
+0000014874 00000 n 
+0000023067 00000 n 
+0000130907 00000 n 
+0000131326 00000 n 
+0000023221 00000 n 
+0000030440 00000 n 
+0000126766 00000 n 
+0000126968 00000 n 
+0000127168 00000 n 
+0000127365 00000 n 
+0000127562 00000 n 
+0000127762 00000 n 
+0000127953 00000 n 
+0000131410 00000 n 
+0000131438 00000 n 
+0000131581 00000 n 
+0000131704 00000 n 
+trailer
+<<
+/Size 34
+/Root 33 0 R
+/Info 32 0 R
+/ID [<1bf6383a82e138ace197b3bab3afe92c><1bf6383a82e138ace197b3bab3afe92c>]
+>>
+startxref
+131774
+%%EOF

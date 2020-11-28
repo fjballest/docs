@@ -1,0 +1,1956 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 2701
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 158.01 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Concurr)18(encia)]TJ
+/TT4 1 Tf
+10 0 0 10 269.53 633 Tm
+(Clips xxx)Tj
+-2.845 -1.2 TD
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Monitor)18(es)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0434 Tw
+[(Existe otra abstracción básica para conse)15(guir la sincronización entre procesos a la hora de acceder a recur)20(-)]TJ
+0 -1.2 TD
+0 Tw
+(sos compartidos. Se trata del)Tj
+/TT2 1 Tf
+11.7197 0 TD
+(monitor)Tj
+/TT6 1 Tf
+3.4438 0 TD
+(.)Tj
+-15.1636 -2.4 TD
+0.0131 Tw
+(Un monitor es una abstracción que, en teoría, suministra el lenguaje de programación y presenta un aspecto)Tj
+0 -1.2 TD
+0.0128 Tw
+[(similar a un módulo o paquete.)-512.9(La diferencia con respecto a un módulo \(o paquete\) radica en que se garan-)]TJ
+T*
+0.0256 Tw
+(tiza que)Tj
+/TT4 1 Tf
+3.4384 0 TD
+[(sólo un pr)45(oceso puede ejecutar dentr)45(o)-275.7(del monitor en un momento dado)]TJ
+/TT6 1 Tf
+29.0486 0 TD
+[(.)-275.7(Dicho de otro modo, ten-)]TJ
+-32.4871 -1.2 TD
+0 Tw
+[(emos e)15(xclusión mutua en el acceso al monitor)55(.)]TJ
+0 -2.4 TD
+0.1231 Tw
+(Los datos compartidos se declararían dentro del monitor y sólo pueden ser utilizados llamando a opera-)Tj
+0 -1.2 TD
+0 Tw
+[(ciones del monitor)55(.)]TJ
+0 -2.4 TD
+0.1239 Tw
+(Así pues, podríamos utilizar un contador compartido sin tener condiciones de carrera si escribimos algo)Tj
+0 -1.2 TD
+0 Tw
+(como:)Tj
+/TT8 1 Tf
+8 0 0 8 133 395.4 Tm
+(monitor sharedcnt;)Tj
+0 -1.5 TD
+(static int cnt;)Tj
+T*
+(void)Tj
+T*
+(incr\(int delta\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(cnt += delta;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(int)Tj
+T*
+(get\(void\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(return cnt;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 233.4 Tm
+[(La idea es que desde fuera del monitor)40(,)-250(podemos utilizar llamadas del estilo a)]TJ
+/TT8 1 Tf
+8 0 0 8 133 215.4 Tm
+(sharedcnt c;)Tj
+T*
+(c.incr\(+3\);)Tj
+T*
+(printf\("val is %d\\n", c.get\(\)\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 173.4 Tm
+(sin tener que preocuparlos por la programación concurrente.)Tj
+0 -2.4 TD
+0.0548 Tw
+(Esta abstracción es tan simple de usar y suele entenderse tan bien que habitualmente siempre se programa)Tj
+0 -1.2 TD
+-0.0001 Tc
+0.0785 Tw
+[(pensando en ella. ¡T)69.9(engamos monitores o no! De hecho, rara v)14.9(ez tenemos monitores de v)14.9(erdad. )-250(Normal-)]TJ
+T*
+0 Tc
+0.0531 Tw
+(mente tenemos las herramientas para implementarlos y para programar pensando en ellos, y ese es el caso)Tj
+T*
+0 Tw
+(en UNIX.)Tj
+0 -2.4 TD
+[(P)15(ara implementar un monitor basta con declarar un mute)15(x)-250(para el monitor y)]TJ
+2.5 -1.56 TD
+[(•)-2150(adquirir el mute)15(x)-250(a)0(l)-250(principio de cada operación del monitor y)]TJ
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+11 0 obj
+<<
+/Length 2075
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-18.517 -3.6 TD
+[(•)-2150(soltar el mute)15(x)-250(a)0(l)]TJ
+/TT9 1 Tf
+9.6496 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(nal de cada operación del monitor)55(.)]TJ
+-12.7058 -1.2 TD
+[(T)80(a)0(n)-250(sencillo como eso.)]TJ
+0 -2.4 TD
+0.0406 Tw
+(Por ejemplo, para el caso del contador compartido podríamos implementar el monitor como una estructura)Tj
+0 -1.2 TD
+0.0927 Tw
+[(que contiene el contador y el mute)15(x)-342.7(del monitor: Una v)15(ez más, v)25(amos a describir el código en el mismo)]TJ
+T*
+0 Tw
+(orden en que aparece en el )Tj
+/TT9 1 Tf
+10.8823 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero en C del programa.)Tj
+/TT11 1 Tf
+-5.3385 -3 TD
+([cntmon.c])Tj
+/TT6 1 Tf
+6.001 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 606 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <pthread.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include "sem.h")Tj
+0 -3 TD
+(typedef struct Cnt Cnt;)Tj
+0 -1.5 TD
+(struct Cnt {)Tj
+2.4 -1.5 TD
+(Sem mutex;)Tj
+T*
+(int val;)Tj
+-2.4 -1.5 TD
+(};)Tj
+T*
+(static Cnt cnt;)Tj
+/TT6 1 Tf
+10 0 0 10 72 420 Tm
+0.0885 Tw
+(En este caso,)Tj
+/TT8 1 Tf
+5.7079 0 TD
+0 Tw
+(cnt)Tj
+/TT6 1 Tf
+2.1388 0 TD
+0.0885 Tw
+[(es nuestro monitor)55(.)-338.5(Pero necesitamos programar las operaciones del monitor)55(.)-338.5(Primero,)]TJ
+-7.8467 -1.2 TD
+0 Tw
+(una para inicializarlo)Tj
+/TT8 1 Tf
+8 0 0 8 133 390 Tm
+(static int)Tj
+0 -1.5 TD
+(cntinit\(Cnt *c\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(memset\(c, 0, sizeof *c\);)Tj
+T*
+(if \(semcreat\(&c->mutex, 1\) < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 276 Tm
+[(y)-250(otra para terminar su operación)]TJ
+/TT8 1 Tf
+8 0 0 8 133 258 Tm
+(static void)Tj
+T*
+(cntterm\(Cnt *c\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(semclose\(&c->mutex\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 180 Tm
+0.0371 Tw
+[(Después, una función para cada operación del monitor teniendo cuidado de mantener el mute)15(x)-287.1(del monitor)]TJ
+0 -1.2 TD
+0 Tw
+(cerrado durante toda la función.)Tj
+ET
+endstream
+endobj
+12 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 13 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+16 0 obj
+<<
+/Length 1864
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(static int)Tj
+0 -1.5 TD
+(cntincr\(Cnt *c, int delta\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(if \(semdown\(&c->mutex\) < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(c->val += delta;)Tj
+T*
+(if \(semup\(&c->mutex\) < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+([verb)Tj
+T*
+(static int)Tj
+T*
+(cntget\(Cnt *c, int *valp\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(if \(semdown\(&c->mutex\) < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(*valp = c->val;)Tj
+T*
+(if \(semup\(&c->mutex\) < 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 390 Tm
+[(Y)-250(y)0(a)-250(tenemos implementado el monitor)55(.)-250(Ahora podemos declararlo:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 372 Tm
+(static Cnt c;)Tj
+/TT6 1 Tf
+10 0 0 10 72 342 Tm
+(Un thread que desee incrementar el contador utiliza la operación del monitor correspondiente para hacerlo:)Tj
+/TT8 1 Tf
+8 0 0 8 133 324 Tm
+(static void*)Tj
+T*
+(tincr\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(if \(cntincr\(&c, 1\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cntintr"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 222 Tm
+0.1116 Tw
+(Nótese como podemos utilizar)Tj
+/TT8 1 Tf
+12.8878 0 TD
+0 Tw
+(cntintr)Tj
+/TT6 1 Tf
+4.5623 0 TD
+0.1116 Tw
+(casi como en un programa secuencial, sin pensar mucho en la)Tj
+-17.4501 -1.2 TD
+0 Tw
+(programación concurrente.)Tj
+0 -2.4 TD
+0.0205 Tw
+[(El programa principal v)25(a)-270.6(a)-270.6(inicializar el monitor)40(,)-270.6(crear v)25(arios threads que incrementen el contador que con-)]TJ
+0 -1.2 TD
+0 Tw
+[(tiene y por último imprimir cuánto v)25(ale dicho contador utilizando la operación)]TJ
+/TT8 1 Tf
+31.6322 0 TD
+(cntget)Tj
+/TT6 1 Tf
+3.8506 0 TD
+[(del monitor)55(.)]TJ
+ET
+endstream
+endobj
+17 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 2647
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(pthread_t thr[10];)Tj
+T*
+(void *sts;)Tj
+T*
+(int i, val;)Tj
+0 -3 TD
+(if \(cntinit\(&c\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cntinit"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(for \(i = 0; i < 10; i++\) {)Tj
+2.4 -1.5 TD
+(if \(pthread_create\(&thr[i], NULL, tincr, NULL\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(for\(i = 0; i < 10; i++\) {)Tj
+2.4 -1.5 TD
+(pthread_join\(thr[i], &sts\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(cntget\(&c, &val\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cntget"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(printf\("val %d\\n", val\);)Tj
+T*
+(cntterm\(&c\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 390 Tm
+(Si ejecutamos el programa podemos utilizar el contador compartido sin condiciones de carrera:)Tj
+/TT8 1 Tf
+8 0 0 8 133 372 Tm
+(unix$ cntmon)Tj
+T*
+(val 10)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 318 Tm
+(¿Podríamos entonces programar)Tj
+/TT8 1 Tf
+8 0 0 8 133 300 Tm
+(if \(cntget\(&c, &val\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cntget"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(val > 0\) {)Tj
+2.4 -1.5 TD
+(if \(cntincr\(&c, -1\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cntincr"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 198 Tm
+0.106 Tw
+[(para decrementar un contador sólo si es positi)25(v)20(o)0(?)-356(E)0(n)-356(teoría el monitor nos permite solucionar las condi-)]TJ
+0 -1.2 TD
+0 Tw
+(ciones de carrera... ¿No? ¡Lo que no impide es que cometamos estupideces!)Tj
+0 -2.4 TD
+0.013 Tw
+(Pensemos. La llamada a)Tj
+/TT8 1 Tf
+9.9656 0 TD
+0 Tw
+(cntget)Tj
+/TT6 1 Tf
+3.8636 0 TD
+0.013 Tw
+(funciona correctamente, y deja en)Tj
+/TT8 1 Tf
+13.8355 0 TD
+0 Tw
+(val)Tj
+/TT6 1 Tf
+2.0633 0 TD
+0.013 Tw
+[(el v)25(alor del contador)55(.)-263(Igualmente,)]TJ
+-29.728 -1.2 TD
+0.0392 Tw
+(la llamada a)Tj
+/TT8 1 Tf
+5.1982 0 TD
+0 Tw
+(cntincr)Tj
+/TT6 1 Tf
+4.4899 0 TD
+0.0392 Tw
+(incrementa el contador \(en)Tj
+/TT8 1 Tf
+11.0958 0 TD
+0 Tw
+(-1)Tj
+/TT6 1 Tf
+1.4894 0 TD
+0.0392 Tw
+(en este caso\). Lo que ocurre es que entre una y otra)Tj
+-22.2732 -1.2 TD
+0.0744 Tw
+[(llamadas podría ser que otro proceso entre y decremente el contador)55(.)-324.5(Este es el problema de no mantener)]TJ
+T*
+0 Tw
+(cerrado el recurso durante)Tj
+/TT4 1 Tf
+10.6606 0 TD
+[(toda la r)37(e)40(gión crítica)]TJ
+/TT6 1 Tf
+8.4499 0 TD
+(.)Tj
+-19.1105 -2.4 TD
+0.0766 Tw
+(En este ejemplo, todo el código debería formar parte de una operación del monitor:)Tj
+/TT4 1 Tf
+34.588 0 TD
+0 Tw
+[(decr)37(ementar)20(-si-pode-)]TJ
+-34.588 -1.2 TD
+(mos)Tj
+/TT6 1 Tf
+1.6113 0 TD
+(.)Tj
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+22 0 obj
+<<
+/Length 4622
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT2 1 Tf
+-21.017 -3.6 TD
+0.25 Tw
+[(2. V)92(ariables )250(condición)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1192 Tw
+[(V)111(amos a implementar el problema del b)20(u)0(f)25(fer acotado utilizando monitores. Al contrario que cuando uti-)]TJ
+0 -1.2 TD
+0.0356 Tw
+(lizamos semáforos, aquí la idea es poder tener operaciones en el monitor que podamos llamar olvidando la)Tj
+T*
+0 Tw
+(concurrencia.)Tj
+0 -2.4 TD
+0.0476 Tw
+[(En principio tendríamos una operación para poner un ítem en el b)20(u)0(f)25(fer y otra para consumirlo. Ambas uti-)]TJ
+0 -1.2 TD
+0.0102 Tw
+[(lizarían un b)20(u)0(f)25(fer declarado)]TJ
+/TT4 1 Tf
+11.3231 0 TD
+0 Tw
+[(dentr)45(o)]TJ
+/TT6 1 Tf
+2.8261 0 TD
+0.0103 Tw
+[(del monitor y ambas tendrían el cierre \(o el mute)15(x\) del monitor mientras)]TJ
+-14.1493 -1.2 TD
+0 Tw
+[(ejecutan. Lue)15(go no habría condiciones de carrera en el acceso al b)20(u)0(f)25(fer)55(.)]TJ
+0 -2.4 TD
+0.0509 Tw
+[(El problema viene en cuanto v)15(emos que para implementar)]TJ
+/TT8 1 Tf
+23.9626 0 TD
+0 Tw
+(put)Tj
+/TT6 1 Tf
+2.1012 0 TD
+0.0509 Tw
+(necesitamos esperar a tener un hueco para)Tj
+-26.0638 -1.2 TD
+0 Tw
+[(poder continuar)55(.)-250(D)0(e)-250(tener monitores, nos gustaría poder escribir)]TJ
+/TT8 1 Tf
+8 0 0 8 133 566.4 Tm
+(void)Tj
+0 -1.5 TD
+(put\(int item\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(if\(buffer lleno\) {)Tj
+2.4 -1.5 TD
+(wait until\(tenemos hueco\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buffer[nitems++] = item;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 464.4 Tm
+0.0124 Tw
+(El código se entiende, ¿No? Dentro de)Tj
+/TT8 1 Tf
+15.748 0 TD
+0 Tw
+(put)Tj
+/TT6 1 Tf
+2.0628 0 TD
+0.0125 Tw
+[(tenemos el mute)15(x)-262.5(del monitor)40(,)-262.5(n)0(o)-262.5(t)0(e)-262.5(preocupes por condiciones)]TJ
+-17.8108 -1.2 TD
+0 Tw
+(de carrera. Habría bastado)Tj
+/TT8 1 Tf
+8 0 0 8 133 434.4 Tm
+(buffer[nitems++] = item;)Tj
+/TT6 1 Tf
+10 0 0 10 72 416.4 Tm
+0.0435 Tw
+[(si el b)20(u)0(f)25(fer nunca se llena. El problema es que si el b)20(u)0(f)25(fer puede llenarse hay que esperar a tener un hueco)]TJ
+T*
+0 Tw
+(antes de consumirlo.)Tj
+0 -2.4 TD
+(Igualmente, el consumidor podría utilizar una operación como la que sigue:)Tj
+/TT8 1 Tf
+8 0 0 8 133 362.4 Tm
+(int)Tj
+0 -1.5 TD
+(get\(void\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(if\(buffer vacio\) {)Tj
+2.4 -1.5 TD
+(wait until\(tenemos un item\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return buffer[--nitems];)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 260.4 Tm
+0.048 Tw
+[(Primero esperamos si es que el b)20(u)0(f)25(fer está v)25(acío a que deje de estarlo y lue)15(go consumimos uno de los ele-)]TJ
+0 -1.2 TD
+0 Tw
+[(mentos del b)20(u)0(f)25(fer)55(.)]TJ
+0 -2.4 TD
+0.0532 Tw
+[(P)15(ara poder esperar hasta que se cumpla determinada condición que necesitamos)]TJ
+/TT4 1 Tf
+32.7517 0 TD
+0 Tw
+[(dentr)45(o)-303.1(d)0(e)-303.1(u)0(n)-303.1(monitor)]TJ
+/TT6 1 Tf
+8.8891 0 TD
+(ten-)Tj
+-41.6408 -1.2 TD
+(emos)Tj
+/TT2 1 Tf
+2.3608 0 TD
+[(v)10(ariables condición)]TJ
+/TT6 1 Tf
+8.2405 0 TD
+[(.)-250(Son v)25(ariables que representan una condición y tienen dos operaciones:)]TJ
+-8.1013 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(wait)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(:)-250(espera incondicionalmente a que se cumpla la condición)]TJ
+-4.9005 -1.56 TD
+(•)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(signal)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(:)-250(a)20(visa de que la condición se cumple.)]TJ
+-8.6007 -2.4 TD
+0.1393 Tw
+(Nótese que estamos comprobando con un)Tj
+/TT8 1 Tf
+17.7206 0 TD
+0 Tw
+(if)Tj
+/TT6 1 Tf
+1.5895 0 TD
+0.1393 Tw
+(si la condición se cumple o no antes de esperar a que se)Tj
+-19.3101 -1.2 TD
+0.0694 Tw
+(cumpla. Dicho de otro modo,)Tj
+/TT8 1 Tf
+12.3167 0 TD
+0 Tw
+(wait)Tj
+/TT6 1 Tf
+2.7198 0 TD
+0.0693 Tw
+[(en una v)25(ariable condición duerme al proceso incondicionalmente. En)]TJ
+-15.0365 -1.2 TD
+0 Tw
+(cambio,)Tj
+/TT8 1 Tf
+3.4838 0 TD
+(wait)Tj
+/TT6 1 Tf
+2.6908 0 TD
+0.0405 Tw
+(en un semáforo \(recuerda que era un posible nombre para)Tj
+/TT8 1 Tf
+23.6726 0 TD
+0 Tw
+(down)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0405 Tw
+[(\))-290.5(sólo duerme al proceso si)]TJ
+-32.2475 -1.2 TD
+0 Tw
+[(el semáforo está sin tick)10(ets.)]TJ
+0 -2.4 TD
+0.0014 Tw
+[(Otra forma de v)15(erlo es que con los semáforos es el semáforo el que se ocupa de si tenemos que dormir o no.)]TJ
+0 -1.2 TD
+-0.0001 Tc
+0.0476 Tw
+[(Nosotros tan sólo pedimos un tick)9.9(et y cuando lo tengamos)]TJ
+/TT8 1 Tf
+24.0679 0 TD
+0 Tc
+0 Tw
+(down)Tj
+/TT6 1 Tf
+2.6979 0 TD
+(\(o)Tj
+/TT8 1 Tf
+1.1305 0 TD
+(wait)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0476 Tw
+[(\))-297.6(nos dejará continuar)55(.)-297.6(Pero con)]TJ
+-30.2967 -1.2 TD
+0.081 Tw
+[(las v)25(ariables condición somos nosotros los que decidimos esperar cuando v)15(emos que no podemos contin-)]TJ
+T*
+0 Tw
+[(uar)55(.)]TJ
+ET
+endstream
+endobj
+23 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+25 0 obj
+<<
+/Length 3487
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+-21.017 -3.6 TD
+0.0094 Tw
+[(P)15(ara que el código de nuestro problema esté completo f)10(alta llamar a)]TJ
+/TT8 1 Tf
+27.4665 0 TD
+0 Tw
+(signal)Tj
+/TT6 1 Tf
+3.8601 0 TD
+0.0095 Tw
+(cuando se cumplan las condi-)Tj
+-31.3266 -1.2 TD
+0 Tw
+(ciones. Si le damos un repaso, este sería nuestro código por el momento:)Tj
+/TT8 1 Tf
+8 0 0 8 133 678 Tm
+(Cond hayhuecos, hayitems;)Tj
+0 -1.5 TD
+(void)Tj
+T*
+(put\(int item\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(if\(ntimes == SIZEOFBUFFER\) {)Tj
+2.4 -1.5 TD
+(wait\(hayhuecos\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buffer[nitems++] = item;)Tj
+T*
+(signal\(hayitems\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(int)Tj
+0 -1.5 TD
+(get\(void\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int item;)Tj
+T*
+(if\(nitems == 0\) {)Tj
+2.4 -1.5 TD
+(wait\(hayitems\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(item = buffer[--nitems];)Tj
+T*
+(signal\(hayhuecos\);)Tj
+T*
+(return item;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 384 Tm
+0.0968 Tw
+[(Un b)20(uen nombre para una v)25(ariable condición es el nombre de la condición. Cuando se llama a)]TJ
+/TT8 1 Tf
+39.4765 0 TD
+0 Tw
+(wait)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.3467 Tc
+[(,e)346.7(l)]TJ
+-41.8769 -1.2 TD
+0 Tc
+0.0416 Tw
+[(proceso se duerme soltando el mute)15(x)-291.6(del monitor para que otros procesos puedan utilizar el monitor mien-)]TJ
+T*
+0.003 Tw
+(tras dormimos. Cuando se llama a)Tj
+/TT8 1 Tf
+13.8764 0 TD
+0 Tw
+(signal)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0029 Tw
+[(,)-253(uno de los procesos que duermen despierta. Si no hay procesos)]TJ
+-17.477 -1.2 TD
+0 Tw
+(dormidos esperando,)Tj
+/TT8 1 Tf
+8.5815 0 TD
+(signal)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(no hace nada.)Tj
+-12.4321 -2.4 TD
+0.0229 Tw
+(Esto quiere decir que deberíamos llamar a)Tj
+/TT8 1 Tf
+17.2365 0 TD
+0 Tw
+(signal)Tj
+/TT6 1 Tf
+3.8735 0 TD
+0.0229 Tw
+(justo al )Tj
+/TT9 1 Tf
+3.2123 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0229 Tw
+(nal de la operación, de tal modo que nosotros)Tj
+-24.8784 -1.2 TD
+0 Tw
+[(terminamos y el proceso que hemos despertado es el único que continúa ejecutando dentro del monitor)55(.)]TJ
+0 -2.4 TD
+0.1404 Tw
+[(Las v)25(ariables condición forman parte de la implementación del monitor y se ocupan de soltar el mute)15(x)]TJ
+0 -1.2 TD
+0.0083 Tw
+(mientras duermen. Dependiendo de la implementación, lo normal es que cuando un proceso despierta en un)Tj
+/TT8 1 Tf
+T*
+0 Tw
+(signal)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(,)-250(e)0(l)-250(que lo despierta le ceda el mute)15(x.)]TJ
+-3.6006 -2.4 TD
+0.024 Tw
+[(En otras ocasiones \(lamentablemente\) el proceso que despierta compite por el mute)15(x)-274(del monitor con todos)]TJ
+0 -1.2 TD
+0.0362 Tw
+[(los demás, lo que quiere decir que otro proceso podría ganarle y hacer que la condición de nue)25(v)20(o)20( )-20.1(sea f)10(alta.)]TJ
+T*
+0 Tw
+(Eso implica que el código en este caso debería ser)Tj
+/TT8 1 Tf
+8 0 0 8 133 198 Tm
+(while\(nitems == 0\) {)Tj
+2.4 -1.5 TD
+(wait\(hayitems\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 156 Tm
+0.25 Tc
+[(yn)250(o)]TJ
+/TT8 1 Tf
+8 0 0 8 133 138 Tm
+0 Tc
+(if\(nitems == 0\) {)Tj
+2.4 -1.5 TD
+(wait\(hayitems\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 96 Tm
+0.0586 Tw
+[(puesto que cuando despertamos es posible que tengamos que v)20(olv)15(er a dormir si otro se nos adelante antes)]TJ
+0 -1.2 TD
+0.0356 Tw
+[(de que podamos adquirir el mute)15(x)-285.6(del monitor)55(.)-285.6(J)0(a)20(v)25(a)-285.6(e)0(s)-285.6(u)0(n)-285.6(notable ejemplo de esta)]TJ
+/TT2 1 Tf
+33.4658 0 TD
+0 Tw
+(pésima)Tj
+/TT6 1 Tf
+3.2857 0 TD
+(implementación)Tj
+-36.7515 -1.2 TD
+(de monitores.)Tj
+ET
+endstream
+endobj
+26 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 13 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+28 0 obj
+<<
+/Length 2004
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+-21.017 -3.6 TD
+0.0372 Tw
+(En UNIX disponemos de llamadas en la librería)Tj
+/TT4 1 Tf
+19.7366 0 TD
+0 Tw
+[(pthr)37(ead\(3\))]TJ
+/TT6 1 Tf
+4.5271 0 TD
+0.0372 Tw
+[(para usar v)25(ariables condición. Dichas llamadas)]TJ
+-24.2636 -1.2 TD
+0.0028 Tw
+[(utilizan tanto una v)25(ariable condición como un mute)15(x)-252.9(que tenemos que crear para que lo use el monitor)55(.)-252.9(Esto)]TJ
+T*
+0 Tw
+(es, podemos implementar monitores pero los estamos programando casi a mano.)Tj
+0 -2.4 TD
+0.026 Tw
+[(Sigue el código de nuestro productor consumidor utilizando los mute)15(x)-276.1(y)-276(v)25(ariables condición de)]TJ
+/TT4 1 Tf
+38.7054 0 TD
+0 Tw
+[(pthr)37(ead\(3\))]TJ
+/TT6 1 Tf
+4.2399 0 TD
+(,)Tj
+-42.9452 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(en lugar de utilizar nuestros semáforos como en la implementación que vimos antes.)Tj
+/TT11 1 Tf
+6.1 -3 TD
+0 Tc
+0 Tw
+([pcmon.c])Tj
+/TT6 1 Tf
+5.4009 0 TD
+(:)Tj
+/TT8 1 Tf
+8 0 0 8 133 606 Tm
+(#include <stdio.h>)Tj
+0 -1.5 TD
+(#include <unistd.h>)Tj
+T*
+(#include <stdlib.h>)Tj
+T*
+(#include <string.h>)Tj
+T*
+(#include <pthread.h>)Tj
+T*
+(#include <err.h>)Tj
+T*
+(#include "sem.h")Tj
+0 -3 TD
+(enum {QSIZE = 4};)Tj
+T*
+(typedef struct Queue Queue;)Tj
+0 -1.5 TD
+(struct Queue {)Tj
+2.4 -1.5 TD
+(pthread_mutex_t mutex;)Tj
+T*
+(pthread_cond_t notempty, notfull;)Tj
+T*
+(char buf[QSIZE];)Tj
+T*
+(int hd, tl, sz;)Tj
+-2.4 -1.5 TD
+(};)Tj
+0 -4.5 TD
+(static int)Tj
+0 -1.5 TD
+(qinit\(Queue *q\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(memset\(q, 0, sizeof *q\);)Tj
+T*
+(if \(pthread_mutex_init\(&q->mutex, NULL\) != 0\) {)Tj
+2.4 -1.5 TD
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(pthread_cond_init\(&q->notfull, NULL\) < 0\) {)Tj
+2.4 -1.5 TD
+(pthread_mutex_destroy\(&q->mutex\);)Tj
+T*
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(pthread_cond_init\(&q->notempty, NULL\) < 0\) {)Tj
+2.4 -1.5 TD
+(pthread_cond_destroy\(&q->notfull\);)Tj
+T*
+(pthread_mutex_destroy\(&q->mutex\);)Tj
+T*
+(return -1;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+29 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT11 14 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+31 0 obj
+<<
+/Length 1059
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-8-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(static void)Tj
+0 -1.5 TD
+(qterm\(Queue *q\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(pthread_cond_destroy\(&q->notfull\);)Tj
+T*
+(pthread_cond_destroy\(&q->notempty\);)Tj
+T*
+(pthread_mutex_destroy\(&q->mutex\);)Tj
+T*
+(q->hd = q->tl = 0;)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(static void)Tj
+0 -1.5 TD
+(qput\(Queue *q, int c\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(if \(pthread_mutex_lock\(&q->mutex\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "mutex"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(while \(q->sz == QSIZE\) {)Tj
+2.4 -1.5 TD
+(if \(pthread_cond_wait\(&q->notfull, &q->mutex\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cond wait"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(q->buf[q->tl] = c;)Tj
+0 -1.5 TD
+(q->tl = \(q->tl+1\)%QSIZE;)Tj
+T*
+(q->sz++;)Tj
+0 -3 TD
+(if \(pthread_cond_signal\(&q->notempty\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cond signal"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(pthread_mutex_unlock\(&q->mutex\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "mutex"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+32 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+34 0 obj
+<<
+/Length 1141
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-9-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(static int)Tj
+0 -1.5 TD
+(qget\(Queue *q\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int c;)Tj
+0 -3 TD
+(if \(pthread_mutex_lock\(&q->mutex\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "mutex"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(while \(q->sz == 0\) {)Tj
+2.4 -1.5 TD
+(if \(pthread_cond_wait\(&q->notempty, &q->mutex\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cond wait"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+[(c)-600(=)-600(q->buf[q->hd];)]TJ
+0 -1.5 TD
+(q->hd = \(q->hd+1\)%QSIZE;)Tj
+T*
+(q->sz--;)Tj
+0 -3 TD
+(if \(pthread_cond_signal\(&q->notfull\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "cond signal"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(pthread_mutex_unlock\(&q->mutex\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "mutex"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return c;)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(static Queue q;)Tj
+T*
+(static void*)Tj
+0 -1.5 TD
+(tput\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(char *s;)Tj
+T*
+(int i;)Tj
+0 -3 TD
+0.6 Tc
+[(s=a)600(;)]TJ
+0 -1.5 TD
+0 Tc
+(for \(i = 0; i < 10; i++\) {)Tj
+2.4 -1.5 TD
+(qput\(&q, s[0]\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+35 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+37 0 obj
+<<
+/Length 1479
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-10-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(static void*)Tj
+0 -1.5 TD
+(tget\(void *a\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(int c;)Tj
+T*
+(char buf[1];)Tj
+0 -3 TD
+(for \(;;\) {)Tj
+2.4 -1.5 TD
+[(c)-600(=)-600(qget\(&q\);)]TJ
+T*
+(if \(c == 0\) {)Tj
+2.4 -1.5 TD
+(break;)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(c < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "qget"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(buf[0] = c;)Tj
+T*
+(if \(write\(1, buf, 1\) != 1\) {)Tj
+2.4 -1.5 TD
+(err\(1, "write"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return NULL;)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(int)Tj
+0 -1.5 TD
+(main\(int argc, char* argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(pthread_t p1, p2, g;)Tj
+T*
+(void *sts;)Tj
+0 -3 TD
+(if \(qinit\(&q\) < 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "qinit"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(pthread_create\(&p1, NULL, tput, "a"\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(pthread_create\(&p2, NULL, tput, "b"\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if \(pthread_create\(&g, NULL, tget, NULL\) != 0\) {)Tj
+2.4 -1.5 TD
+(err\(1, "thread"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(pthread_join\(p1, &sts\);)Tj
+T*
+(pthread_join\(p2, &sts\);)Tj
+T*
+(qput\(&q, 0\);)Tj
+T*
+(pthread_join\(g, &sts\);)Tj
+T*
+(write\(1, "\\n", 1\);)Tj
+T*
+(qterm\(&q\);)Tj
+T*
+(exit\(0\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 102 Tm
+[(Si lo ejecutamos, v)15(eremos que funciona de un modo similar a nuestra última implementación.)]TJ
+ET
+endstream
+endobj
+38 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+40 0 obj
+<<
+/Length 359
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-11-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ pcmon)Tj
+0 -1.5 TD
+(bababaaababaabbbaabb)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 654 Tm
+0.0907 Tw
+[(T)70(e)70( )-70(resultará útil en este punto comparar la implementación con semáforos con la implementación con un)]TJ
+0 -1.2 TD
+0 Tw
+[(monitor)55(.)]TJ
+ET
+endstream
+endobj
+41 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 8 0 R
+>>
+>>
+endobj
+8 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+44 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+45 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+46 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+47 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+48 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+49 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 262179
+/FontBBox [-113 -250 749 801]
+/FontName /Courier-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 439
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 0 0 0 0 0 0 0 333 0 0 0 0 0 
+0 0 0 722 0 0 0 0 0 389 0 0 0 944 0 778 
+0 0 0 556 0 0 722 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 0 0 278 0 0 278 833 556 500 
+556 0 444 389 333 556 500 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 0 0 0 0 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 44 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 0 0 
+0 0 0 500 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 611 667 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 500 444 0 500 500 278 278 0 278 722 500 500 
+500 0 389 389 278 500 0 0 444 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 45 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 0 0 0 0 0 0 333 333 0 0 250 333 250 0 
+500 500 500 500 500 500 500 500 500 500 278 0 0 0 0 444 
+0 722 0 667 722 611 0 0 722 333 389 0 611 0 722 722 
+556 0 0 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 0 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 0 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 46 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 125
+/Widths [600 600 600 600 600 600 600 0 600 600 600 600 600 600 600 0 
+600 600 600 600 600 0 0 0 0 0 0 600 600 600 600 0 
+0 0 600 600 0 600 600 0 0 600 0 0 600 0 600 600 
+0 600 600 600 0 600 0 0 0 0 600 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 47 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 48 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 46
+/LastChar 116
+/Widths [600 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 600 0 600 
+0 0 0 0 0 600 0 0 0 0 0 0 0 0 0 600 
+600 600 600 0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier-Bold
+/FontDescriptor 49 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+10 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 12 0 R
+/Contents 11 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 17 0 R
+/Contents 16 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 23 0 R
+/Contents 22 0 R
+>>
+endobj
+24 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 26 0 R
+/Contents 25 0 R
+>>
+endobj
+27 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 29 0 R
+/Contents 28 0 R
+>>
+endobj
+30 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 32 0 R
+/Contents 31 0 R
+>>
+endobj
+33 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 35 0 R
+/Contents 34 0 R
+>>
+endobj
+36 0 obj
+<<
+/Type /Page
+/Parent 9 0 R
+/Resources 38 0 R
+/Contents 37 0 R
+>>
+endobj
+39 0 obj
+<<
+/Type /Page
+/Parent 43 0 R
+/Resources 41 0 R
+/Contents 40 0 R
+>>
+endobj
+50 0 obj
+<<
+/S /D
+>>
+endobj
+51 0 obj
+<<
+/Nums [0 50 0 R ]
+>>
+endobj
+9 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 10 0 R 15 0 R 18 0 R 21 0 R 24 0 R 27 0 R 30 0 R 33 0 R 36 0 R]
+/Count 10
+/Parent 42 0 R
+>>
+endobj
+43 0 obj
+<<
+/Type /Pages
+/Kids [39 0 R]
+/Count 1
+/Parent 42 0 R
+>>
+endobj
+42 0 obj
+<<
+/Type /Pages
+/Kids [9 0 R 43 0 R ]
+/Count 11
+/MediaBox [0 0 612 792]
+>>
+endobj
+52 0 obj
+<<
+/CreationDate (D:20160905151721+02'00')
+/ModDate (D:20160905151721+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+53 0 obj
+<<
+/Type /Catalog
+/Pages 42 0 R
+/PageLabels 51 0 R
+>>
+endobj
+xref
+0 54
+0000000000 65535 f 
+0000029728 00000 n 
+0000000016 00000 n 
+0000002769 00000 n 
+0000026667 00000 n 
+0000027325 00000 n 
+0000027985 00000 n 
+0000028738 00000 n 
+0000025338 00000 n 
+0000030707 00000 n 
+0000029808 00000 n 
+0000002897 00000 n 
+0000005025 00000 n 
+0000029227 00000 n 
+0000029398 00000 n 
+0000029891 00000 n 
+0000005157 00000 n 
+0000007074 00000 n 
+0000029974 00000 n 
+0000007181 00000 n 
+0000009881 00000 n 
+0000030057 00000 n 
+0000009999 00000 n 
+0000014674 00000 n 
+0000030140 00000 n 
+0000014803 00000 n 
+0000018343 00000 n 
+0000030223 00000 n 
+0000018473 00000 n 
+0000020530 00000 n 
+0000030306 00000 n 
+0000020661 00000 n 
+0000021773 00000 n 
+0000030389 00000 n 
+0000021880 00000 n 
+0000023074 00000 n 
+0000030472 00000 n 
+0000023181 00000 n 
+0000024713 00000 n 
+0000030555 00000 n 
+0000024820 00000 n 
+0000025231 00000 n 
+0000030917 00000 n 
+0000030843 00000 n 
+0000025478 00000 n 
+0000025680 00000 n 
+0000025880 00000 n 
+0000026077 00000 n 
+0000026268 00000 n 
+0000026465 00000 n 
+0000030639 00000 n 
+0000030667 00000 n 
+0000031008 00000 n 
+0000031131 00000 n 
+trailer
+<<
+/Size 54
+/Root 53 0 R
+/Info 52 0 R
+/ID [<e62f9a54e9f1e787ee18f65d361053e9><e62f9a54e9f1e787ee18f65d361053e9>]
+>>
+startxref
+31201
+%%EOF

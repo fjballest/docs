@@ -1,0 +1,7349 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 4121
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 154.89 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Intr)18(oducción a Sistemas Operati)10(v)10(os: Usando el shell)]TJ
+/TT4 1 Tf
+10 0 0 10 241.08 633 Tm
+[(F)55(r)55( )210(ancisco J Ballester)45(os)]TJ
+/TT2 1 Tf
+-16.908 -4.8 TD
+0.25 Tw
+[(1. Comandos)-250(como )250(herramientas)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1031 Tw
+[(En UNIX la idea es combinar programas ya e)15(xistentes para conse)15(guir hacer el trabajo. Actualmente, por)]TJ
+0 -1.2 TD
+0.0907 Tw
+(desgracia, hay muchos usuarios de UNIX que lo han olvidado y corren a implementar programas en C u)Tj
+T*
+0 Tw
+[(otros lenguajes para tareas que ya se pueden resolv)15(er con los programas e)15(xistentes.)]TJ
+0 -2.4 TD
+0.0565 Tw
+(Por ejemplo, quizá conozcas un programa llamado)Tj
+/TT4 1 Tf
+20.8887 0 TD
+0 Tw
+(head\(1\))Tj
+/TT6 1 Tf
+3.4164 0 TD
+0.0564 Tw
+(que imprime las primeras líneas de un )Tj
+/TT7 1 Tf
+15.8626 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-40.7238 -1.2 TD
+(Si recuerdas que)Tj
+/TT4 1 Tf
+6.8584 0 TD
+(seq\(1\))Tj
+/TT6 1 Tf
+2.749 0 TD
+[(escribe líneas con enteros hasta el v)25(alor indicado, v)15(erás que en)]TJ
+/TT9 1 Tf
+8 0 0 8 133 491.4 Tm
+(unix$ seq 10 | head -2)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(2)Tj
+T*
+(unix$)Tj
+10 0 0 10 72 437.4 Tm
+(head)Tj
+/TT6 1 Tf
+2.6859 0 TD
+0.0355 Tw
+(ha impreso las primeras dos líneas aunque)Tj
+/TT9 1 Tf
+17.3829 0 TD
+0 Tw
+(seq)Tj
+/TT6 1 Tf
+2.0859 0 TD
+0.0356 Tw
+(escriba 10 en este caso. Pues resulta que no era pre-)Tj
+-22.1547 -1.2 TD
+0.1119 Tw
+(ciso programar)Tj
+/TT9 1 Tf
+6.4992 0 TD
+0 Tw
+(head)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1119 Tw
+[(,)-361.9(dado que con un editor de)]TJ
+/TT4 1 Tf
+11.8911 0 TD
+0 Tw
+[(str)37(eams)]TJ
+/TT6 1 Tf
+3.4361 0 TD
+0.1118 Tw
+[(\(te)15(xto se)15(gún )]TJ
+/TT7 1 Tf
+5.3591 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1118 Tw
+(uye por un pipe\) ya era posible)Tj
+-30.1421 -1.2 TD
+0 Tw
+(imprimir las primeras)Tj
+/TT4 1 Tf
+8.9146 0 TD
+(n)Tj
+/TT6 1 Tf
+0.75 0 TD
+(líneas. Baste un ejemplo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 395.4 Tm
+(unix$ seq 10 | sed 2q)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(2)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 341.4 Tm
+0.1692 Tw
+(Se le pide educadamente a)Tj
+/TT4 1 Tf
+11.702 0 TD
+0 Tw
+(sed\(1\))Tj
+/TT6 1 Tf
+2.9182 0 TD
+0.1693 Tw
+(que termine tras imprimir las primeras dos líneas sin hacer ninguna)Tj
+-14.6202 -1.2 TD
+0 Tw
+(edición en ellas y ya lo tenemos.)Tj
+0 -2.4 TD
+0.1195 Tw
+(Saber utilizar y combinar los comandos disponibles en UNIX te resultará realmente útil y ahorrará gran)Tj
+0 -1.2 TD
+0.2125 Tw
+[(cantidad de tiempo. Además, dado que estos programas ya están probados y depurados e)25(vitarás b)20(ugs)]TJ
+T*
+0.1772 Tw
+[(innecesarios. Simplemente utiliza el manual \(¡Y aprende a b)20(uscar en él!\) para localizar comandos que)]TJ
+T*
+0.0519 Tw
+[(hagan o todo o parte del trabajo que deseas hacer)55(.)-301.9(Combina v)25(arios de ellos cuando no sea posible efectuar)]TJ
+T*
+0.0144 Tw
+(el trabajo on uno sólo de ellos, y recurre a programar una nu)Tj
+24.3032 0 TD
+-0.025 Tc
+0 Tw
+(eva )Tj
+1.6021 0 TD
+0 Tc
+0.0144 Tw
+(herramienta sólo como último recurso. Los)Tj
+-25.9053 -1.2 TD
+0 Tw
+(comandos de unix son una caja herramientas, ¡úsala!.)Tj
+0 -2.4 TD
+0.0094 Tw
+(La utilidad del shell es, además de permitirnos escribir comandos simples, permitirnos combinar programas)Tj
+0 -1.2 TD
+0.1467 Tw
+[(ya e)15(xistentes para hacer otros nue)25(v)20(os. Y)100(a)-396.7(lo)-396.7(hemos estado haciendo anteriormente, pero ahora v)25(amos a)]TJ
+T*
+0.0591 Tw
+[(dedicarle algo de tiempo a v)15(er cómo programar utilizando el shell.)-559.1(Recuerda que)]TJ
+/TT4 1 Tf
+33.5459 0 TD
+0 Tw
+(sh\(1\))Tj
+/TT6 1 Tf
+2.3644 0 TD
+0.0592 Tw
+(está disponible en)Tj
+-35.9103 -1.2 TD
+0.0425 Tw
+(todos los sistemas UNIX, por lo que aprender a utilizarlo te permitirá poder combinar comandos y progra-)Tj
+T*
+0 Tw
+(mar scripts en todos ellos.)Tj
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(2. Con)40(v)10(enios)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1202 Tw
+[(P)15(ara f)10(acilitarte el trabajo a la hora de utilizar el shell, deberías ser sistemático y se)15(guir tus propios con-)]TJ
+0 -1.2 TD
+0 Tw
+[(v)15(enios. Por ejemplo, si las funciones en C las escribimos siempre como en)]TJ
+0 -8.58 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 5872
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(int)Tj
+0 -1.5 TD
+(myfunc\(int arg\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 642 Tm
+0.1503 Tw
+(entonces sabemos que todas las líneas con un identi)Tj
+/TT7 1 Tf
+21.864 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1503 Tw
+[(cador a principio de linea se)15(guido de un ")]TJ
+/TT9 1 Tf
+17.8124 0 TD
+0 Tw
+(\()Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-400.2(está)]TJ
+-40.8327 -1.2 TD
+(de)Tj
+/TT7 1 Tf
+0.9438 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(niendo una función.)Tj
+-1.5 -2.4 TD
+0.1792 Tw
+(El comando)Tj
+/TT4 1 Tf
+5.4126 0 TD
+0 Tw
+[(e)40(g)0(r)37(ep\(1\))]TJ
+/TT6 1 Tf
+3.7952 0 TD
+0.1793 Tw
+[(imprime líneas que encajan con una e)15(xpresión \(como v)15(eremos más adelante\). Si)]TJ
+-9.2078 -1.2 TD
+0.1446 Tw
+[(hemos sido sistemáticos con nuestro con)40(v)15(enio para programar funciones, podríamos pedirle que escriba)]TJ
+T*
+0.0054 Tw
+[(todas las líneas que declaran funciones en un directorio dado.)-505.4(No te preocupes por cómo se usa)]TJ
+/TT9 1 Tf
+38.6076 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.256 0 TD
+(por)Tj
+-41.8636 -1.2 TD
+[(el momento, presta atención a cómo un simple con)40(v)15(enio nos permite trabajar de forma efecti)25(v)25(a)0(.)]TJ
+0 -2.4 TD
+(Podemos utilizar el comando)Tj
+/TT4 1 Tf
+11.8862 0 TD
+[(e)40(g)0(r)37(ep\(1\))]TJ
+/TT6 1 Tf
+3.6159 0 TD
+[(para v)15(er qué funciones de)]TJ
+/TT7 1 Tf
+10.2579 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nimos y en qué )Tj
+/TT7 1 Tf
+6.3325 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros y líneas:)Tj
+/TT9 1 Tf
+8 0 0 8 133 528 Tm
+(unix$ egrep -n ’ˆ[a-z0-9A-Z_]+\\\(’ *.c)Tj
+0 -1.5 TD
+(alrm.c:11:tout\(int no\))Tj
+T*
+(alrm.c:17:main\(int argc, char* argv[]\))Tj
+T*
+(broke.c:8:main\(int argc, char* argv[]\))Tj
+T*
+(fifo.c:14:main\(int argc, char* argv[]\))Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 450 Tm
+[(O)-250(para contar cuántas funciones de)]TJ
+/TT7 1 Tf
+14.0215 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nimos...)Tj
+/TT9 1 Tf
+8 0 0 8 133 432 Tm
+(unix$ egrep -n ’ˆ[a-z0-9A-Z_]+\\\(’ *.c | wc -l)Tj
+3.6 -1.5 TD
+(24)Tj
+-3.6 -1.5 TD
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 378 Tm
+0.1242 Tw
+[(Programando en un entorno inte)15(grado de desarrollo \(IDE o)]TJ
+/TT4 1 Tf
+24.9567 0 TD
+0.1241 Tw
+[(inte)40(gr)15(ated de)15(velopment en)40(vir)45(onment)]TJ
+/TT6 1 Tf
+14.7553 0 TD
+0 Tw
+[(\))-374.1(puedes)]TJ
+-39.712 -1.2 TD
+0.1285 Tw
+(hacer este tipo de cosas pulsando botones con el ratón. ¡Pero ay de ti si quieres hacer algo que no esté)Tj
+T*
+0.0539 Tw
+[(disponible en tu IDE! Con frecuencia notarás que estás haciendo trabajo repetiti)25(v)20(o)20( )-20(y)20( )-20(mecánico, ¡incluso si)]TJ
+T*
+0.0103 Tw
+[(utilizas un IDE en lugar de un editor sencillo! Cuando te suceda eso, recuerda que se)15(guramente puedas pro-)]TJ
+T*
+-0.0001 Tc
+0.0001 Tw
+[(gramar un script que haga)-250.1(e)-0.1(l)-250.1(trabajo por ti.)]TJ
+0 -2.4 TD
+0 Tc
+0.1106 Tw
+[(El shell es muy b)20(ueno manipulando )]TJ
+/TT7 1 Tf
+15.1972 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1106 Tw
+[(cheros, bytes que proceden de la salida de un comando y te)15(xto en)]TJ
+-15.7534 -1.2 TD
+0.1363 Tw
+(general. Igual sucede con los comandos que manipulan )Tj
+/TT7 1 Tf
+23.3887 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1363 Tw
+[(cheros de te)15(xto en UNIX. P)15(ara programar uti-)]TJ
+-23.9449 -1.2 TD
+0.04 Tw
+(lizando el shell hay que pensar que no estamos utilizando C e intentar escribir comandos que operen sobre)Tj
+T*
+0.0596 Tw
+(todo un )Tj
+/TT7 1 Tf
+3.397 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0596 Tw
+[(chero a la v)15(ez o sobre todo un )]TJ
+/TT7 1 Tf
+12.6801 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0597 Tw
+[(ujo de bytes a la v)15(ez. La idea es ir adaptando los datos que ten-)]TJ
+-17.1894 -1.2 TD
+0.1962 Tw
+[(emos a los que queremos tener)55(.)-446.3(Otra estrate)15(gia es adaptar los datos que tenemos para con)40(v)15(ertirlos en)]TJ
+T*
+0.0228 Tw
+[(comandos que, una v)15(ez ejecutados, produzcan el efecto que deseamos. Iremos viendo esto poco a poco con)]TJ
+T*
+0 Tw
+(los ejemplos que siguen.)Tj
+0 -2.4 TD
+0.0163 Tw
+[(En muchos casos es posible que estés intentando resolv)15(er problemas que has creado tu mismo. Lo mejor en)]TJ
+0 -1.2 TD
+0 Tw
+[(la mayoría de los casos suele ser intentar no crear los problemas en lugar de resolv)15(erlos. Baste un ejemplo.)]TJ
+0 -2.4 TD
+0.1598 Tw
+(Supón que estás programando una aplicación que requiere de un )Tj
+/TT7 1 Tf
+27.5892 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1598 Tw
+(chero de con)Tj
+/TT7 1 Tf
+5.428 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1598 Tw
+[(guración. T)35(radicional-)]TJ
+-34.1295 -1.2 TD
+0.0936 Tw
+(mente estos )Tj
+/TT7 1 Tf
+5.1306 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0936 Tw
+(cheros suelen guardarse en el directorio)Tj
+/TT9 1 Tf
+16.6656 0 TD
+0 Tw
+($HOME)Tj
+/TT6 1 Tf
+3.3441 0 TD
+0.0936 Tw
+(con nombres que comienzan por ")Tj
+/TT9 1 Tf
+14.1218 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0936 Tw
+(", pero)Tj
+-40.4183 -1.2 TD
+0.0437 Tw
+[(eso nos da igual en este punto. Y)100(a)-293.7(sea por se)15(guir la moda o por no saber cómo leer líneas y cómo partirlas)]TJ
+T*
+0.1121 Tw
+(en palabras, quizá programemos la aplicación utilizando XML como formato para el )Tj
+/TT7 1 Tf
+35.416 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.1121 Tw
+(chero de con)Tj
+/TT7 1 Tf
+5.3326 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gu-)Tj
+-41.8609 -1.2 TD
+0.1394 Tw
+(ración. ¡Qué gran error! Al menos, en los casos en que nuestro )Tj
+/TT7 1 Tf
+26.9423 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1394 Tw
+(chero de con)Tj
+/TT7 1 Tf
+5.3872 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.1394 Tw
+[(guración necesite infor)20(-)]TJ
+-33.4418 -1.2 TD
+0 Tw
+(mación tan simple como)Tj
+/TT9 1 Tf
+8 0 0 8 133 96 Tm
+(shell /bin/sh)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+/TT6 1 Tf
+10 0 0 10 72 66 Tm
+0.1789 Tw
+(para indicar qué shell queremos que ejecute y qué directorio queremos que utilice para almacenar sus)Tj
+0 -4.2 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 5219
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+-21.017 -3.6 TD
+-0.0001 Tc
+0.0109 Tw
+(librerías \(por ejemplo\). El lugar de un )Tj
+/TT7 1 Tf
+15.4544 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0108 Tw
+(chero tan sencillo como el que hemos mostrado, quizá termines con)Tj
+-16.0105 -1.2 TD
+0 Tw
+(algo como)Tj
+/TT9 1 Tf
+8 0 0 8 133 678 Tm
+(<?xml version="1.0" encoding="UTF-8" ?>)Tj
+0 -1.5 TD
+(<!DOCTYPE MyConfig SYSTEM "Crap_Config.dtd">)Tj
+T*
+(<Crap_Config>)Tj
+2.4 -1.5 TD
+(<Parameters>)Tj
+2.4 -1.5 TD
+(<Param>)Tj
+2.4 -1.5 TD
+(<Name>shell</Name>)Tj
+T*
+(<Value>/bin/sh</Value>)Tj
+-2.4 -1.5 TD
+(</Param)Tj
+T*
+(<Param>)Tj
+2.4 -1.5 TD
+(<Name>libdir</Name>)Tj
+T*
+(<Value>/usr/lib</Value>)Tj
+-2.4 -1.5 TD
+(</Param)Tj
+-2.4 -1.5 TD
+(</Parameters>)Tj
+-2.4 -1.5 TD
+(</Crap_Config>)Tj
+/TT6 1 Tf
+10 0 0 10 72 492 Tm
+0.0653 Tw
+(Es cierto que tienes librerías ya programadas para la mayoría de lenguajes que saben entender )Tj
+/TT7 1 Tf
+38.7691 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0653 Tw
+(cheros en)Tj
+-39.3252 -1.2 TD
+0.0703 Tw
+[(este formato, leerlos y escribirlos. Pero eso no es una e)15(xcusa si el )]TJ
+/TT7 1 Tf
+27.2527 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0704 Tw
+(chero en cuestión guarda información)Tj
+-27.8089 -1.2 TD
+0.1193 Tw
+[(que puedas tab)20(ular \(líneas de te)15(xto con campos en cada línea\). En realidad, ni siquiera es una e)15(xcusa si)]TJ
+T*
+0 Tw
+(necesitas guardar una estructura de tipo árbol que sea sencilla, como por ejemplo este )Tj
+/TT7 1 Tf
+34.459 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+/TT9 1 Tf
+8 0 0 8 133 438 Tm
+(/)Tj
+2.4 -1.5 TD
+(home)Tj
+2.4 -1.5 TD
+(nemo)Tj
+-2.4 -1.5 TD
+(bin)Tj
+T*
+(tmp)Tj
+/TT6 1 Tf
+10 0 0 10 72 372 Tm
+(que podría indicar con qué partes de un árbol de )Tj
+/TT7 1 Tf
+19.4927 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros queremos trabajar)55(.)]TJ
+-20.0488 -2.4 TD
+0.0094 Tw
+[(Pero v)20(olv)25(amos a nuestro )]TJ
+/TT7 1 Tf
+10.102 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0094 Tw
+(chero de con)Tj
+/TT7 1 Tf
+5.1272 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0094 Tw
+(guración. Supón que deseas comprobar que para todos los usuarios)Tj
+-16.3415 -1.2 TD
+0.0415 Tw
+[(que utilizan tu aplicación en el sistema, los shells que han indicado e)15(xisten y son ejecutables y los directo-)]TJ
+T*
+0 Tw
+[(rios e)15(xisten. ¿Cómo lo harás? Con el formato sencillo para el )]TJ
+/TT7 1 Tf
+24.6447 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero bastaría hacer algo como)Tj
+/TT9 1 Tf
+8 0 0 8 133 306 Tm
+(unix$ shells=‘egrep ’ˆshell’ /home/*/.myapp | cut -f2‘)Tj
+/TT6 1 Tf
+10 0 0 10 72 288 Tm
+0.0797 Tw
+(para tener en)Tj
+/TT9 1 Tf
+5.6523 0 TD
+0 Tw
+($shells)Tj
+/TT6 1 Tf
+4.5305 0 TD
+0.0798 Tw
+[(la lista de shells y lue)15(go podemos utilizar esta v)25(ariable y un b)20(ucle)]TJ
+/TT9 1 Tf
+27.4422 0 TD
+0 Tw
+(for)Tj
+/TT6 1 Tf
+2.1301 0 TD
+0.0798 Tw
+(del shell)Tj
+-39.7551 -1.2 TD
+0.0501 Tw
+[(para comprobar que e)15(xisten. Si has utilizado XML también podrías programar un script para hacerlo, pero)]TJ
+T*
+0 Tw
+[(te resultará mucho más difícil.)-500(T)70(e)70( )-70(has b)20(uscado un problema que no tenías.)]TJ
+0 -2.4 TD
+[(Pero v)25(amos a v)15(er cómo usar el shell para hacer este tipo de cosas...)]TJ
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(3. Usando)-250(expr)18(esiones )250(r)18(egular)18(es)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+-0.0001 Tc
+0.0896 Tw
+[(V)110.9(amos a resolv)14.9(er el problema que teníamos. Supongamos que tenemos nuestra aplicación)]TJ
+/TT9 1 Tf
+37.1837 0 TD
+0 Tc
+0 Tw
+(myapp)Tj
+/TT6 1 Tf
+3.3401 0 TD
+0.0896 Tw
+(con su)Tj
+/TT7 1 Tf
+-40.5238 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero de con)Tj
+/TT7 1 Tf
+5.1084 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(guración en)Tj
+/TT9 1 Tf
+4.9424 0 TD
+($HOME/.myapp)Tj
+/TT6 1 Tf
+7.4512 0 TD
+(para cada usuario, y que su aspecto es como habíamos visto:)Tj
+/TT9 1 Tf
+8 0 0 8 133 158.4 Tm
+(shell /bin/sh)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+/TT6 1 Tf
+10 0 0 10 72 104.4 Tm
+0.1021 Tw
+[(V)111(amos a hacer un script llamado)]TJ
+/TT9 1 Tf
+13.8859 0 TD
+0 Tw
+(chkappconf)Tj
+/TT6 1 Tf
+6.3531 0 TD
+0.102 Tw
+(que compruebe la con)Tj
+/TT7 1 Tf
+9.1078 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.102 Tw
+(guración para todos los usuarios)Tj
+-29.9029 -1.2 TD
+0.1088 Tw
+[(del sistema. Por el momento v)25(amos a usar un )]TJ
+/TT7 1 Tf
+19.2847 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1089 Tw
+(chero llamado)Tj
+/TT9 1 Tf
+6.1597 0 TD
+0 Tw
+(config)Tj
+/TT6 1 Tf
+3.9595 0 TD
+0.1089 Tw
+(que tiene justo el contenido que)Tj
+-29.96 -1.2 TD
+0.0076 Tw
+(mostramos arriba como ejemplo de )Tj
+/TT7 1 Tf
+14.3949 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0076 Tw
+(chero de con)Tj
+/TT7 1 Tf
+5.1236 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0075 Tw
+[(guración. Lue)15(go es fácil trabajar con los )]TJ
+/TT7 1 Tf
+16.3643 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0075 Tw
+[(cheros de v)15(e)0(r)20(-)]TJ
+-37.5513 -1.2 TD
+0.0145 Tw
+[(dad. )-250(La)-264.5(idea es procesar los )]TJ
+/TT7 1 Tf
+11.6378 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+/TT4 1 Tf
+2.8744 0 TD
+[(enter)45(os)]TJ
+/TT6 1 Tf
+2.8988 0 TD
+0.0146 Tw
+[(,)-264.5(poco a poco, e ir generando nue)25(v)20(o)0(s)-264.6(")]TJ
+/TT7 1 Tf
+15.3637 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0146 Tw
+(cheros" como salida de)Tj
+-33.887 -4.44 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 4638
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+-21.017 -3.6 TD
+(comandos que procesan los datos que tenemos. En realidad, generamos bytes que )Tj
+/TT7 1 Tf
+32.8237 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(uyen por un pipe.)Tj
+-33.3799 -2.4 TD
+0.0341 Tw
+[(En este caso, v)25(amos a necesitar utilizar)]TJ
+/TT4 1 Tf
+16.096 0 TD
+0 Tw
+[(gr)37(ep\(1\))]TJ
+/TT6 1 Tf
+2.962 0 TD
+[(,)-284.1(o)0(,)-284.1(concretamente)]TJ
+/TT4 1 Tf
+7.6819 0 TD
+[(e)40(g)0(r)37(ep\(1\))]TJ
+/TT6 1 Tf
+3.3659 0 TD
+0.034 Tw
+[(.)-284(Este comando lee su entrada, o)]TJ
+/TT7 1 Tf
+-30.1058 -1.2 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0949 Tw
+[(cheros indicados en la línea de comandos, línea a línea y escribe aquellas que encajan con la e)15(xpresión)]TJ
+-0.5562 -1.2 TD
+0 Tw
+(que le damos. Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 642 Tm
+(unix$ egrep dir config)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+/TT6 1 Tf
+10 0 0 10 72 588 Tm
+[(El primer parámetro es la e)15(xpresión que b)20(uscamos y el se)15(gundo es el )]TJ
+/TT7 1 Tf
+27.7469 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(chero en que estamos b)20(uscando.)]TJ
+-28.303 -2.4 TD
+(Otro ejemplo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 546 Tm
+(unix$ seq 15 | egrep 1)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 432 Tm
+(En este caso)Tj
+/TT9 1 Tf
+5.1924 0 TD
+(egrep)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(lee de la entrada estándar)40(,)-250(dado que no hemos indicado )]TJ
+/TT7 1 Tf
+22.2569 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero alguno.)Tj
+-31.2559 -2.4 TD
+0.1037 Tw
+[(Las e)15(xpresiones de)]TJ
+/TT9 1 Tf
+8.1545 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3542 0 TD
+0.1036 Tw
+(son muy potentes. Son de hecho un lenguaje denominado)Tj
+/TT2 1 Tf
+24.1502 0 TD
+[(expr)18(esiones r)18(egu-)]TJ
+-35.6589 -1.2 TD
+0 Tw
+[(lar)18(es)]TJ
+/TT6 1 Tf
+2.4117 0 TD
+0.125 Tw
+[(que se utiliza en di)25(v)15(ersos comandos de UNIX, por lo que resulta muy útil aprenderlo. Mirando la)]TJ
+-2.4117 -1.2 TD
+0 Tw
+(página)Tj
+/TT4 1 Tf
+2.9155 0 TD
+[(e)40(g)0(r)37(ep\(1\))]TJ
+/TT6 1 Tf
+3.6159 0 TD
+[(v)15(emos hacia el )]TJ
+/TT7 1 Tf
+6.1769 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nal...)Tj
+/TT9 1 Tf
+8 0 0 8 133 366 Tm
+(unix$ man egrep)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(SEE ALSO)Tj
+3 -1.5 TD
+(ed\(1\), ex\(1\), gzip\(1\), sed\(1\), re_format\(7\))Tj
+-3 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 300 Tm
+[(Y)-276.5(precisamente)]TJ
+/TT4 1 Tf
+6.5501 0 TD
+-0.037 Tc
+(re)Tj
+/TT9 1 Tf
+0.796 0 TD
+0 Tc
+(_)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(format\(7\))Tj
+/TT6 1 Tf
+4.1095 0 TD
+0.0264 Tw
+[(en este sistema documenta las e)15(xpresiones re)15(gulares. Esto lo hemos hecho en)]TJ
+-12.0557 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+(un sistema OS X. Si usamos un sistema Linux podemos hacer la misma jugada)Tj
+/TT9 1 Tf
+8 0 0 8 133 270 Tm
+0 Tc
+0 Tw
+(unix$ man egrep)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(SEE ALSO)Tj
+T*
+[(awk\(1\), )-600(cmp\(1\),)-600(diff\(1\), find\(1\), sed\(1\), sort\(1\),)]TJ
+4.2 -1.5 TD
+(glob\(7\), regex\(7\).)Tj
+-4.2 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 192 Tm
+0.1241 Tw
+[(y)-374.1(v)15(emos que)]TJ
+/TT4 1 Tf
+5.662 0 TD
+0 Tw
+[(r)37(e)40(g)10(e)20(x\(7\))]TJ
+/TT6 1 Tf
+3.6538 0 TD
+0.1241 Tw
+[(documenta sus e)15(xpresiones re)15(gulares. Las que usamos en este curso funcionan en)]TJ
+-9.3158 -1.2 TD
+0 Tw
+(ambos.)Tj
+0 -2.4 TD
+0.2527 Tw
+[(Una e)15(xpresión re)15(gular es un string que describe otros strings. Decimos que un string encaja con la)]TJ
+0 -1.2 TD
+0.0316 Tw
+[(e)15(xpresión si)]TJ
+/TT4 1 Tf
+5.1029 0 TD
+0 Tw
+(contiene)Tj
+/TT6 1 Tf
+3.6688 0 TD
+0.0316 Tw
+[(uno de los strings que describe la e)15(xpresión. Podemos de)]TJ
+/TT7 1 Tf
+23.0428 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0316 Tw
+[(nir las e)15(xpresiones recursi-)]TJ
+-32.3707 -1.2 TD
+0 Tw
+[(v)25(amente como sigue:)]TJ
+2.5 -1.56 TD
+0.1232 Tw
+[(•)-2150(Cualquier carácter normal que no forma parte de la sintaxis de e)15(xpresiones re)15(gulares encaja)]TJ
+2.5 -1.2 TD
+0 Tw
+(con el mismo. Por ejemplo,)Tj
+/TT9 1 Tf
+11.2485 0 TD
+(a)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(describe el string)Tj
+/TT9 1 Tf
+7.0811 0 TD
+(a)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(.)Tj
+-22.2798 -1.56 TD
+0.0017 Tw
+[(•)-2150(L)0(a)-251.7(e)15(xpresión ")]TJ
+/TT9 1 Tf
+8.3391 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0017 Tw
+[(")-251.7(describe con cualquier carácter)40(,)-251.7(pero sólo uno. Por ejemplo,)]TJ
+/TT9 1 Tf
+24.8482 0 TD
+0 Tw
+(.)Tj
+/TT6 1 Tf
+0.8519 0 TD
+0.0018 Tw
+(puede ser tanto)Tj
+/TT9 1 Tf
+-32.1393 -1.2 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(como)Tj
+/TT9 1 Tf
+2.4717 0 TD
+(b)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(,)-250(pero no el string v)25(acío ni tampoco on)]TJ
+/TT9 1 Tf
+15.6381 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-25.7602 -5.28 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 8475
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+-18.517 -3.6 TD
+0.0631 Tw
+[(•)-2150(Una e)15(xpresión re)15(gular)]TJ
+/TT4 1 Tf
+11.7947 0 TD
+0 Tw
+(r0)Tj
+/TT6 1 Tf
+1.2023 0 TD
+0.0631 Tw
+[(se)15(guida de otra)]TJ
+/TT4 1 Tf
+6.4775 0 TD
+0 Tw
+(r1)Tj
+/TT6 1 Tf
+1.2023 0 TD
+0.063 Tw
+(describe los strings que tienen un pre)Tj
+/TT7 1 Tf
+15.2076 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.063 Tw
+(jo descrito)Tj
+-33.9404 -1.2 TD
+0 Tw
+(por)Tj
+/TT4 1 Tf
+1.7118 0 TD
+(r0)Tj
+/TT6 1 Tf
+1.268 0 TD
+0.1289 Tw
+[(se)15(guido de otro descrito por)]TJ
+/TT4 1 Tf
+12.0436 0 TD
+0 Tw
+(r1)Tj
+/TT6 1 Tf
+0.8892 0 TD
+0.1289 Tw
+[(.)-628.9(Por ejemplo)]TJ
+/TT9 1 Tf
+6.247 0 TD
+0 Tw
+(ab)Tj
+/TT6 1 Tf
+1.5791 0 TD
+0.1289 Tw
+(describe el string)Tj
+/TT9 1 Tf
+7.4678 0 TD
+0 Tw
+(ab)Tj
+/TT6 1 Tf
+1.5791 0 TD
+0.1289 Tw
+(puesto que)Tj
+/TT9 1 Tf
+4.8125 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+-37.598 -1.2 TD
+(puede ser)Tj
+/TT9 1 Tf
+4.0537 0 TD
+(a)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(y)Tj
+/TT9 1 Tf
+0.75 0 TD
+(b)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(puede ser)Tj
+/TT9 1 Tf
+4.0537 0 TD
+(b)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(.)-250(Igualmente,)]TJ
+/TT9 1 Tf
+5.498 0 TD
+(.b)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(describe)Tj
+/TT9 1 Tf
+3.5815 0 TD
+(ab )Tj
+1.4503 0 TD
+(bb)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no)Tj
+/TT9 1 Tf
+3.2769 0 TD
+(ba)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-31.565 -1.56 TD
+2.15 Tc
+[(•S)2150(i)]TJ
+/TT4 1 Tf
+3.6312 0 TD
+0 Tc
+(r0)Tj
+/TT6 1 Tf
+1.1863 0 TD
+(y)Tj
+/TT4 1 Tf
+0.7971 0 TD
+(r1)Tj
+/TT6 1 Tf
+1.1863 0 TD
+0.0471 Tw
+[(son dos e)15(xpresiones re)15(gulares, La e)15(xpresión)]TJ
+/TT4 1 Tf
+18.0936 0 TD
+0 Tw
+(r0)Tj
+/TT9 1 Tf
+0.8892 0 TD
+(|)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r1)Tj
+/TT6 1 Tf
+1.1862 0 TD
+0.047 Tw
+(describe los strings que describe)Tj
+-25.0698 -1.2 TD
+0 Tw
+[(alguna de las e)15(xpresiones)]TJ
+/TT4 1 Tf
+10.4259 0 TD
+(r0)Tj
+/TT6 1 Tf
+1.1392 0 TD
+(y)Tj
+/TT4 1 Tf
+0.75 0 TD
+(r1)Tj
+/TT6 1 Tf
+1.1392 0 TD
+(\(o que describen las dos\).)Tj
+-15.9542 -1.56 TD
+0.1831 Tw
+[(•)-2150(S)0(i)-433.1(tenemos una e)15(xpresión)]TJ
+/TT4 1 Tf
+13.7155 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+[(,)-433.1(entonces)]TJ
+/TT4 1 Tf
+4.6147 0 TD
+(r)Tj
+/TT9 1 Tf
+0.3892 0 TD
+(*)Tj
+/TT6 1 Tf
+1.0332 0 TD
+0.1831 Tw
+[(describe los strings "" \(la cadena v)25(acía\), los que)]TJ
+-17.6418 -1.2 TD
+0 Tw
+(describe)Tj
+/TT4 1 Tf
+3.6293 0 TD
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+0.0478 Tw
+[(,)-297.8(los de)]TJ
+/TT4 1 Tf
+3.2542 0 TD
+0 Tw
+(rr)Tj
+/TT6 1 Tf
+0.7783 0 TD
+0.0478 Tw
+[(,)-297.8(los de)]TJ
+/TT4 1 Tf
+3.2542 0 TD
+0 Tw
+(rrr)Tj
+/TT6 1 Tf
+1.1675 0 TD
+0.0477 Tw
+[(,)-297.8(etc. \(Repetimos la e)15(xpresión cualquier número de v)15(eces, posi-)]TJ
+-12.4728 -1.2 TD
+0 Tw
+(blemente ninguna\).)Tj
+-2.5 -1.56 TD
+[(•)-2150(S)0(i)-250(tenemos una e)15(xpresión)]TJ
+/TT4 1 Tf
+12.9831 0 TD
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+[(,)-250(entonces)]TJ
+/TT4 1 Tf
+4.2485 0 TD
+(r)Tj
+/TT9 1 Tf
+0.3892 0 TD
+(+)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(es lo mismo que)Tj
+/TT4 1 Tf
+6.7773 0 TD
+(r)Tj
+/TT9 1 Tf
+0.3892 0 TD
+(\()Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r)Tj
+/TT9 1 Tf
+0.3892 0 TD
+(\)*)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(.)-500(Esto es,)]TJ
+/TT4 1 Tf
+4.1108 0 TD
+(r)Tj
+/TT6 1 Tf
+0.6392 0 TD
+[(una o más v)15(eces.)]TJ
+-32.9661 -1.56 TD
+0.0885 Tw
+[(•)-2150(S)0(i)-338.5(tenemos una e)15(xpresión)]TJ
+/TT4 1 Tf
+13.3372 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+[(,)-338.6(entonces)]TJ
+/TT4 1 Tf
+4.4257 0 TD
+(r)Tj
+/TT9 1 Tf
+0.3892 0 TD
+(?)Tj
+/TT6 1 Tf
+0.9387 0 TD
+0.0886 Tw
+(es lo mismo que)Tj
+/TT9 1 Tf
+7.1317 0 TD
+0 Tw
+(\()Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r)Tj
+/TT9 1 Tf
+0.3892 0 TD
+(\)|\(\))Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0886 Tw
+[(.)-338.6(Esto es,)]TJ
+/TT4 1 Tf
+4.1266 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.7278 0 TD
+0.0886 Tw
+(una o ninguna)Tj
+-32.3558 -1.2 TD
+0 Tw
+[(v)15(ez.)]TJ
+-2.5 -1.56 TD
+(•)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(ˆ)Tj
+/TT6 1 Tf
+0.8792 0 TD
+0.029 Tw
+[(representa el principio del string en que b)20(uscamos encajes de la e)15(xpresión re)15(gular)55(.)-279(Por ejem-)]TJ
+-0.8793 -1.2 TD
+0 Tw
+(plo,)Tj
+/TT9 1 Tf
+1.7778 0 TD
+(ˆa)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(encaja con)Tj
+/TT9 1 Tf
+4.4971 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no con)Tj
+/TT9 1 Tf
+4.9707 0 TD
+(ba)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-17.8462 -1.56 TD
+(•)Tj
+/TT9 1 Tf
+2.5001 0 TD
+($)Tj
+/TT6 1 Tf
+0.9217 0 TD
+0.0716 Tw
+(representa el )Tj
+/TT7 1 Tf
+5.4733 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0716 Tw
+[(nal del string en que b)20(uscamos encajes de la e)15(xpresión re)15(gular)55(.)-321.6(Por ejemplo,)]TJ
+/TT9 1 Tf
+-6.9512 -1.2 TD
+0 Tw
+(a$)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(encaja con)Tj
+/TT9 1 Tf
+4.4971 0 TD
+(ba)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no con)Tj
+/TT9 1 Tf
+4.9707 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-16.0684 -1.56 TD
+(•)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(\\)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(c)Tj
+/TT6 1 Tf
+0.7936 0 TD
+0.0998 Tw
+(quita el signi)Tj
+/TT7 1 Tf
+5.3656 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0998 Tw
+(cado especial a)Tj
+/TT4 1 Tf
+6.6012 0 TD
+0 Tw
+(c)Tj
+/TT6 1 Tf
+0.4438 0 TD
+0.0998 Tw
+[(,)-349.8(d)0(e)-349.8(tal modo que podemos utilizar caracteres que forman)]TJ
+-14.3606 -1.2 TD
+0.0137 Tw
+[(parte de la sintaxis de e)15(xpresiones re)15(gulares como caracteres normales. Por ejemplo,)]TJ
+/TT9 1 Tf
+34.1776 0 TD
+0 Tw
+(\\\\)Tj
+/TT6 1 Tf
+1.464 0 TD
+(encaja)Tj
+-35.6416 -1.2 TD
+(con)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(\\)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(y)Tj
+/TT9 1 Tf
+0.75 0 TD
+(\\.c)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(encaja con)Tj
+/TT9 1 Tf
+4.4971 0 TD
+(.c)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no con)Tj
+/TT9 1 Tf
+4.9707 0 TD
+(ac)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(.)-250(E)0(n)-250(cambio)]TJ
+/TT9 1 Tf
+5.0542 0 TD
+(.c)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(encaja también con)Tj
+/TT9 1 Tf
+7.9683 0 TD
+(ac)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-35.6353 -1.56 TD
+(•)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(\()Tj
+/TT4 1 Tf
+0.6001 0 TD
+(r)Tj
+/TT9 1 Tf
+0.3892 0 TD
+(\))Tj
+/TT6 1 Tf
+1.1487 0 TD
+0.2985 Tw
+[(permite agrupar una e)15(xpresión y describe los strings descritos por)]TJ
+/TT4 1 Tf
+29.463 0 TD
+0 Tw
+(r)Tj
+/TT6 1 Tf
+0.3892 0 TD
+0.2985 Tw
+[(.)-548.5(Por ejemplo,)]TJ
+/TT9 1 Tf
+-31.9902 -1.2 TD
+0 Tw
+(\(a|b\)\(x|y\))Tj
+/TT6 1 Tf
+6.251 0 TD
+(describe)Tj
+/TT9 1 Tf
+3.5815 0 TD
+(ax)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(pero no)Tj
+/TT9 1 Tf
+3.2769 0 TD
+(ab)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-18.2598 -1.56 TD
+(•)Tj
+/TT9 1 Tf
+2.5001 0 TD
+([)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(...)Tj
+/TT9 1 Tf
+0.75 0 TD
+(])Tj
+/TT6 1 Tf
+1.0111 0 TD
+0.1611 Tw
+(describe cualquiera de los caracteres entre los corchetes. Y es posible escribir rangos)Tj
+-2.3613 -1.2 TD
+0.0052 Tw
+(como en)Tj
+/TT9 1 Tf
+3.6759 0 TD
+0 Tw
+([a-c])Tj
+/TT6 1 Tf
+3.2557 0 TD
+0.0052 Tw
+(\(de la)Tj
+/TT9 1 Tf
+2.5089 0 TD
+0 Tw
+(a)Tj
+/TT6 1 Tf
+0.8553 0 TD
+0.2552 Tc
+[(al)255.2(a)]TJ
+/TT9 1 Tf
+1.6759 0 TD
+0 Tc
+(c)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0052 Tw
+(\). Por ejemplo,)Tj
+/TT9 1 Tf
+6.209 0 TD
+0 Tw
+([a-zA-Z0-9_])Tj
+/TT6 1 Tf
+7.4564 0 TD
+0.0052 Tw
+(es cualquier letra minúscula o)Tj
+-26.2372 -1.2 TD
+0 Tw
+(mayúscula o dígito o bien ")Tj
+/TT9 1 Tf
+10.9897 0 TD
+(_)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(". ¡Pero cuidado aquí con caracteres como ")Tj
+/TT9 1 Tf
+17.5313 0 TD
+(ñ)Tj
+/TT6 1 Tf
+0.6001 0 TD
+("!)Tj
+-32.2212 -1.56 TD
+(•)Tj
+/TT9 1 Tf
+2.5001 0 TD
+([ˆ)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(...)Tj
+/TT9 1 Tf
+0.75 0 TD
+(])Tj
+/TT6 1 Tf
+1.0049 0 TD
+0.1548 Tw
+(describe cualquiera de los caracteres no descritos por)Tj
+/TT9 1 Tf
+22.7287 0 TD
+0 Tw
+([)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(...)Tj
+/TT9 1 Tf
+0.75 0 TD
+(])Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1549 Tw
+[(.)-404.9(Por ejemplo,)]TJ
+/TT9 1 Tf
+6.325 0 TD
+0 Tw
+([0-9])Tj
+/TT6 1 Tf
+3.4054 0 TD
+(es)Tj
+-37.3646 -1.2 TD
+(cualquier carácter que no sea un dígito.)Tj
+-5 -2.4 TD
+0.0578 Tw
+[(V)111(eamos algunos ejemplos utilizando)]TJ
+/TT9 1 Tf
+15.1173 0 TD
+0 Tw
+(seq)Tj
+/TT6 1 Tf
+2.1081 0 TD
+0.0578 Tw
+(para usar)Tj
+/TT9 1 Tf
+4.0023 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3083 0 TD
+0.0578 Tw
+[(en su salida. Primero, b)20(uscamos un)]TJ
+/TT9 1 Tf
+14.6579 0 TD
+0 Tw
+(1)Tj
+/TT6 1 Tf
+0.9079 0 TD
+[(se)15(guido)]TJ
+-40.1017 -1.2 TD
+(de un carácter:)Tj
+/TT9 1 Tf
+8 0 0 8 133 330 Tm
+(unix$ seq 15 | egrep 1.)Tj
+0 -1.5 TD
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 228 Tm
+[(Ahora un carácter se)15(guido de un)]TJ
+/TT9 1 Tf
+13.2018 0 TD
+(1)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 210 Tm
+(unix$ seq 15 | egrep .1)Tj
+0 -1.5 TD
+(11)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 168 Tm
+[(O)-250(bien)]TJ
+/TT9 1 Tf
+2.9438 0 TD
+(11)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(o)-250(bien)]TJ
+/TT9 1 Tf
+2.7217 0 TD
+(12)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 150 Tm
+(unix$ seq 15 | egrep ’11|12’)Tj
+0 -1.5 TD
+(11)Tj
+T*
+(12)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 96 Tm
+[(Y)-250(tambien podemos combinar e)15(xpresiones más complejas del mismo modo:)]TJ
+0 -7.2 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 2247
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 15 | egrep ’.2|1.’)Tj
+0 -1.5 TD
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 606 Tm
+(Un)Tj
+/TT9 1 Tf
+1.4722 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(y)-250(cualquier cosa:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 588 Tm
+(unix$ seq 15 | egrep ’1.*’)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 474 Tm
+0.0593 Tw
+(¡Ojo al)Tj
+/TT9 1 Tf
+3.1733 0 TD
+0 Tw
+(.*)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(!)-309.3(S)0(i)-309.3(usáramos)]TJ
+/TT9 1 Tf
+5.8717 0 TD
+(1*)Tj
+/TT6 1 Tf
+1.5095 0 TD
+0.0593 Tw
+[(entonces v)15(eríamos todas las líneas dado que todas contienen el string v)25(acío y)]TJ
+-11.7547 -1.2 TD
+0 Tw
+(que)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(1*)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(encaja con el string v)25(acío. Pero podríamos pedir las líneas que son cualquier número de unos:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 444 Tm
+(unix$ seq 15 | egrep ’ˆ1*$’)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(11)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 378 Tm
+(Un)Tj
+/TT9 1 Tf
+1.4722 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(o)-250(e)0(l)-250(principio del te)15(xto y lue)15(go un)]TJ
+/TT9 1 Tf
+13.7449 0 TD
+(2)Tj
+/TT6 1 Tf
+0.8501 0 TD
+0.25 Tc
+[(ou)250(n)]TJ
+/TT9 1 Tf
+2 0 TD
+0 Tc
+(3)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 360 Tm
+(unix$ seq 15 | egrep ’\(1|ˆ\)\(2|3\)’)Tj
+0 -1.5 TD
+(2)Tj
+T*
+(3)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 282 Tm
+[(Aunque tal v)15(ez sería mejor)]TJ
+/TT9 1 Tf
+8 0 0 8 133 264 Tm
+(unix$ seq 15 | egrep ’\(1|ˆ\)[23]’)Tj
+T*
+(2)Tj
+T*
+(3)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 186 Tm
+[(para conse)15(guir el mismo efecto.)]TJ
+0 -2.4 TD
+(Ahora cualquier línea que use sólo cualquier carácter menos los del)Tj
+/TT9 1 Tf
+27.2393 0 TD
+(2)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(al)Tj
+/TT9 1 Tf
+0.9717 0 TD
+(8)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 144 Tm
+(unix$ seq 15 | egrep ’ˆ[ˆ2-8]*$’)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(9)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+/TT6 1 Tf
+10 0 0 10 72 66 Tm
+-0.0003 Tc
+0.0003 Tw
+(Líneas que tengan)Tj
+/TT9 1 Tf
+7.5199 0 TD
+0 Tc
+0 Tw
+(3)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(una o más v)15(eces:)]TJ
+-8.37 -4.2 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+27 0 obj
+<<
+/Length 3243
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 15 | egrep ’3+’)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 642 Tm
+(Quizá un)Tj
+/TT9 1 Tf
+3.8877 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+0.25 Tc
+[(yu)250(n)]TJ
+/TT9 1 Tf
+2 0 TD
+0 Tc
+(3)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 624 Tm
+(unix$ seq 15 | egrep ’1?3’)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(13)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 558 Tm
+0.0567 Tw
+[(Bueno, ya conocemos las e)15(xpresiones re)15(gulares y podemos utilizar)]TJ
+/TT9 1 Tf
+27.4725 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3072 0 TD
+0.0566 Tw
+(para obtener las líneas de nue-)Tj
+-30.7797 -1.2 TD
+0 Tw
+(stro )Tj
+/TT7 1 Tf
+1.75 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero de con)Tj
+/TT7 1 Tf
+5.1084 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(guración que se re)Tj
+/TT7 1 Tf
+7.3022 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eren al shell:)Tj
+/TT9 1 Tf
+8 0 0 8 133 528 Tm
+(unix$ egrep ’ˆshell ’ config)Tj
+0 -1.5 TD
+(shell /bin/sh)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 486 Tm
+[(Y)-250(también las que se re)]TJ
+/TT7 1 Tf
+9.3579 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eren a directorios:)Tj
+/TT9 1 Tf
+8 0 0 8 133 468 Tm
+(unix$)Tj
+0 -1.5 TD
+(unix$ egrep ’ˆ[a-z]+dir ’ config)Tj
+T*
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 378 Tm
+0.1182 Tw
+(Nótese que utilizar aquí ")Tj
+/TT9 1 Tf
+10.6554 0 TD
+0 Tw
+(dir)Tj
+/TT6 1 Tf
+1.8003 0 TD
+-0.0001 Tc
+0.1183 Tw
+[(")-368.3(como e)14.9(xpresión habría sido se)14.9(guramente un error)54.9(.)-368.3(Líneas que contengan)]TJ
+-12.4557 -1.2 TD
+0 Tc
+0 Tw
+[(algo como "/opt/bindir/ksh" habrían salido y no tienen por qué ser las que b)20(uscamos en este caso.)]TJ
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(4. Líneas)-250(y)-250(campos)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0313 Tw
+[(T)70(enemos toda una plétora de comandos que saben trabajar con )]TJ
+/TT7 1 Tf
+25.5667 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0313 Tw
+(cheros suponiendo que tienen líneas y que)Tj
+-26.1229 -1.2 TD
+0.0074 Tw
+[(cada una tiene una serie de campos.)-507.5(Muchos de los comandos que trabajan con líneas no requieren siquiera)]TJ
+T*
+0.0054 Tw
+[(que tengan campos o cualquier otra estructura predeterminada. V)111(amos a continuar nuestro script de ejemplo)]TJ
+T*
+0 Tw
+(centrándonos ahora en este tipo de tarea: procesar líneas y campos.)Tj
+0 -2.4 TD
+[(T)70(eníamos ya, para nuestro )]TJ
+/TT7 1 Tf
+10.7318 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT9 1 Tf
+8 0 0 8 133 236.4 Tm
+(shell /bin/sh)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+/TT6 1 Tf
+10 0 0 10 72 182.4 Tm
+(un comando capaz de escribir las líneas que corresponden a directorios:)Tj
+/TT9 1 Tf
+8 0 0 8 133 164.4 Tm
+(unix$)Tj
+T*
+(unix$ egrep ’ˆ[a-z]+dir ’ config)Tj
+T*
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 74.4 Tm
+0.0425 Tw
+(Ahora nos gustaría tener la lista de directorios mencionados en dichas líneas. Lo primero que tenemos que)Tj
+0 -1.2 TD
+0.0673 Tw
+(hacer es pensar que la entrada que tenemos es un )Tj
+/TT7 1 Tf
+20.4977 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0673 Tw
+(chero con líneas que tienen dos campos separados por)Tj
+-21.0539 -3.84 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+28 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+30 0 obj
+<<
+/Length 5127
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-8-)Tj
+-21.017 -3.6 TD
+0.0182 Tw
+[(blanco. En tal caso basta con utilizar un programa capaz de escribir el se)15(gundo campo. Hay muchas formas)]TJ
+0 -1.2 TD
+0.003 Tw
+(de hacer esto. Una es utilizar)Tj
+/TT4 1 Tf
+11.8183 0 TD
+0 Tw
+(cut\(1\))Tj
+/TT6 1 Tf
+2.3877 0 TD
+0.253 Tc
+[(.E)253(l)]TJ
+/TT7 1 Tf
+1.6447 0 TD
+0 Tc
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.1968 0 TD
+(-f)Tj
+/TT6 1 Tf
+1.4532 0 TD
+(de)Tj
+/TT9 1 Tf
+1.1968 0 TD
+(cut)Tj
+/TT6 1 Tf
+2.0533 0 TD
+0.003 Tw
+[(admite como ar)18(gumento el número de campo que se)]TJ
+-22.307 -1.2 TD
+0 Tw
+(desea, comenzando a contar desde)Tj
+/TT9 1 Tf
+13.9932 0 TD
+(1)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(.¡Pero atención!)Tj
+/TT9 1 Tf
+8 0 0 8 133 666 Tm
+(unix$ egrep ’ˆ[a-z]+dir ’ config | cut -f2)Tj
+0 -1.5 TD
+(libdir /usr/lib)Tj
+T*
+(bindir /usr/bin)Tj
+T*
+(logdir /log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 600 Tm
+0.0828 Tw
+(Por omisión)Tj
+/TT9 1 Tf
+5.2774 0 TD
+0 Tw
+(cut)Tj
+/TT6 1 Tf
+2.1331 0 TD
+0.0828 Tw
+[(utiliza el tab)20(ulador como carácter separador de campos y)65(,)-332.9(en)-332.9(nuestro caso, teníamos un)]TJ
+-7.4105 -1.2 TD
+0 Tw
+[(espacio en blanco y no un tab)20(ulador separando los campos. En realidad queremos)]TJ
+/TT9 1 Tf
+8 0 0 8 133 570 Tm
+(unix$ egrep ’ˆ[a-z]+dir ’ config | cut ’-d ’ -f2)Tj
+0 -1.5 TD
+(/usr/lib)Tj
+T*
+(/usr/bin)Tj
+T*
+(/log)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 504 Tm
+0.0244 Tw
+(que utiliza la opción)Tj
+/TT9 1 Tf
+8.4838 0 TD
+0 Tw
+(-d)Tj
+/TT6 1 Tf
+1.4746 0 TD
+(de)Tj
+/TT9 1 Tf
+1.2182 0 TD
+(cut)Tj
+/TT6 1 Tf
+2.0747 0 TD
+0.0244 Tw
+(para indicarle que el carácter escrito tras la opción es el que deseamos uti-)Tj
+-13.2514 -1.2 TD
+0 Tw
+[(lizar como separador)55(.)-250(¡)0(Y)100(a)100( )-100(tenemos una lista de directorios!)]TJ
+0 -2.4 TD
+0.0203 Tw
+(No obstante,)Tj
+/TT9 1 Tf
+5.3453 0 TD
+0 Tw
+(cut)Tj
+/TT6 1 Tf
+2.0706 0 TD
+0.0203 Tw
+(no es la mejor opción en la mayoría de los casos. Pensemos en obtener la lista de dueños)Tj
+-7.4159 -1.2 TD
+0 Tw
+(de los )Tj
+/TT7 1 Tf
+2.6108 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros del directorio actual... Sabiendo que podemos usar un listado lar)18(go en)]TJ
+/TT9 1 Tf
+30.9454 0 TD
+(ls)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(como en)Tj
+/TT9 1 Tf
+8 0 0 8 133 438 Tm
+(unix$ ls -l config)Tj
+0 -1.5 TD
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 58)-600(Aug )600(28 )600(11:27 )600(config)]TJ
+/TT6 1 Tf
+10 0 0 10 72 408 Tm
+0 Tw
+(podríamos intentar usar algo como)Tj
+/TT9 1 Tf
+8 0 0 8 133 390 Tm
+(unix$ ls -l config | cut -f3)Tj
+T*
+0.6 Tw
+[(-rw-r--r-- 1)-600(nemo staff 58)-600(Aug )600(28 )600(11:27 )600(config)]TJ
+/TT6 1 Tf
+10 0 0 10 72 360 Tm
+0 Tw
+(¡Pero)Tj
+/TT9 1 Tf
+2.416 0 TD
+(cut)Tj
+/TT6 1 Tf
+2.0503 0 TD
+[(escribiría todos los campos! El problema de nue)25(v)20(o)20( )-20(es)-250(el)-250(separador entre un campo y otro.)]TJ
+-4.4663 -2.4 TD
+0.0323 Tw
+(El programa que menos problemas suele dar para seleccionar campos es)Tj
+/TT4 1 Tf
+29.4827 0 TD
+0 Tw
+(awk\(1\))Tj
+/TT6 1 Tf
+2.7769 0 TD
+0.0323 Tw
+[(.)-282.3(E)0(s)-282.3(u)0(n)-282.3(lenguaje de progra-)]TJ
+-32.2596 -1.2 TD
+0.0808 Tw
+(mación para manipular )Tj
+/TT7 1 Tf
+9.7107 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0808 Tw
+(cheros con aspecto de tabla, pero tiene muchos programas de una sóla línea que)Tj
+-10.2668 -1.2 TD
+0 Tw
+(resultan útiles. En este caso,)Tj
+/TT9 1 Tf
+8 0 0 8 133 294 Tm
+(unix$ ls -l config | awk ’{print $3}’)Tj
+0 -1.5 TD
+(nemo)Tj
+/TT6 1 Tf
+10 0 0 10 72 264 Tm
+[(consigue el efecto que b)20(uscamos. El programa signi)]TJ
+/TT7 1 Tf
+20.7515 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca ")Tj
+/TT4 1 Tf
+1.5459 0 TD
+[(en todas las líneas, imprime el ter)37(cer campo)]TJ
+/TT6 1 Tf
+17.7379 0 TD
+(".)Tj
+-40.5914 -2.4 TD
+0.1382 Tw
+[(Lo b)20(ueno de)]TJ
+/TT9 1 Tf
+5.6431 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.1885 0 TD
+0.1381 Tw
+[(es que utiliza una e)15(xpresión re)15(gular como separador de campos. Y puedes cambiarla)]TJ
+-7.8316 -1.2 TD
+0 Tw
+[(escribiendo la que quieras como ar)18(gumento de la opción)]TJ
+/TT9 1 Tf
+22.7799 0 TD
+(-F)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 210 Tm
+(awk ’-F[: ]+’ ’{print $3}’)Tj
+/TT6 1 Tf
+10 0 0 10 72 192 Tm
+0.0056 Tw
+(imprime el tercer campo suponiendo que un campo está separado de otro por uno o mas caracteres que sean)Tj
+0 -1.2 TD
+0 Tw
+(bien un espacio en blanco o bien dos puntos.)Tj
+0 -2.4 TD
+0.0271 Tw
+[(V)129(olviendo a nuestro problema, una v)15(ez tenemos los directorios mencionados en nuestro )]TJ
+/TT7 1 Tf
+35.5884 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0271 Tw
+(chero de con)Tj
+/TT7 1 Tf
+5.1626 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(gu-)Tj
+-41.8633 -1.2 TD
+0.0436 Tw
+[(ración, estaría bien tenerlos ordenados y sin tener duplicados en la lista. P)15(ara conse)15(guirlo podemos utilizar)]TJ
+T*
+0.0067 Tw
+(el comando)Tj
+/TT4 1 Tf
+4.9006 0 TD
+0 Tw
+(sort\(1\))Tj
+/TT6 1 Tf
+2.9789 0 TD
+0.0066 Tw
+[(que sabe ordenar líneas utilizando campos como cla)20(v)15(e)15( )-15(\(o)-256.6(la)-256.6(línea entera\). Otro comando)]TJ
+-7.8795 -1.2 TD
+0 Tw
+(relacionado es)Tj
+/TT9 1 Tf
+5.9971 0 TD
+(uniq\(1\))Tj
+/TT6 1 Tf
+4.2007 0 TD
+[(,)-250(que elimina duplicados de una entrada ya ordenada. Así pues,)]TJ
+-10.1978 -9.6 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+31 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+33 0 obj
+<<
+/Length 3788
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-9-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ egrep ’ˆ[a-z]+dir ’ config | awk ’{print $1}’ | sort | uniq)Tj
+0 -1.5 TD
+(bindir)Tj
+T*
+(libdir)Tj
+T*
+(logdir)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 642 Tm
+(escribe los directorios ordenados y sin duplicados.)Tj
+0 -2.4 TD
+0.0388 Tw
+[(Esto resulta útil también al recolectar nombres o v)25(alores que aparecen en cualquier otro sitio. Por ejemplo,)]TJ
+0 -1.2 TD
+0 Tw
+(para obtener la lista de dueños de )Tj
+/TT7 1 Tf
+13.5781 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros en el directorio actual:)Tj
+/TT9 1 Tf
+8 0 0 8 133 588 Tm
+(unix$ ls -l * | awk ’{print $3}’ | sort -u)Tj
+0 -1.5 TD
+(nemo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 546 Tm
+(El )Tj
+/TT7 1 Tf
+1.2437 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2988 0 TD
+(-u)Tj
+/TT6 1 Tf
+1.5552 0 TD
+(de)Tj
+/TT9 1 Tf
+1.2988 0 TD
+(sort)Tj
+/TT6 1 Tf
+2.7554 0 TD
+0.105 Tw
+(hace lo mismo que)Tj
+/TT9 1 Tf
+8.1958 0 TD
+0 Tw
+(uniq)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.1049 Tw
+[(.)-354.9(¡)0(Y)100(a)100( )-100(tenemos algo que podríamos incluso guardar en una)]TJ
+-19.3043 -1.2 TD
+0 Tw
+[(v)25(ariable de entorno!)]TJ
+/TT9 1 Tf
+8 0 0 8 133 516 Tm
+(unix$ owners=‘ls -l * | awk ’{print $3}’ | sort -u‘)Tj
+0 -1.5 TD
+(unix$ echo $owners)Tj
+T*
+(nemo)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 450 Tm
+[(De hecho, v)25(amos a hacer justo con nuestros directorios, y ya podemos v)15(er si e)15(xisten o no...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 432 Tm
+(unix$ dirs=‘egrep ’ˆ[a-z]+dir ’ config | awk ’{print $1}’ | sort | uniq‘)Tj
+T*
+(unix$ for d in $dirs ; do)Tj
+T*
+[(>)-2400(i)0(f)-600(test ! -d $d ; then)]TJ
+T*
+[(>)-4800(echo no dir $d)]TJ
+T*
+2.4 Tc
+[(>f)2400(i)]TJ
+T*
+0 Tc
+[(>)-2400(done)]TJ
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 342 Tm
+[(¡Bien, todos los directorios e)15(xisten!, ¡Problema resuelto!)]TJ
+0 -2.4 TD
+0.0228 Tw
+(Recuerda que es el shell el que escribe los ")Tj
+/TT9 1 Tf
+17.6901 0 TD
+0 Tw
+(>)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0229 Tw
+[(")-272.8(para indicarnos que es preciso escribir más líneas para com-)]TJ
+-18.2902 -1.2 TD
+0.0632 Tw
+[(pletar el comando. Hemos usado el b)20(ucle)]TJ
+/TT9 1 Tf
+17.1392 0 TD
+0 Tw
+(for)Tj
+/TT6 1 Tf
+2.1135 0 TD
+0.0632 Tw
+(que vimos anteriormente y que ejecuta los comandos entre)Tj
+/TT9 1 Tf
+-19.2527 -1.2 TD
+0 Tw
+(do)Tj
+/TT6 1 Tf
+1.5445 0 TD
+(y)Tj
+/TT9 1 Tf
+0.8443 0 TD
+(done)Tj
+/TT6 1 Tf
+2.7447 0 TD
+0.0943 Tw
+(para cada palabra que sigue a)Tj
+/TT9 1 Tf
+12.5591 0 TD
+0 Tw
+(in)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0944 Tw
+[(.)-594.4(E)0(n)-344.4(cada iteración, la v)25(ariable cuyo nombre precede a)]TJ
+/TT9 1 Tf
+23.1021 0 TD
+0 Tw
+(in)Tj
+/TT6 1 Tf
+-41.9949 -1.2 TD
+[(toma como v)25(alor cada una de las palabras que siguen a)]TJ
+/TT9 1 Tf
+22.161 0 TD
+(in)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-23.3612 -2.4 TD
+[(T)80(ambién hemos utilizado el comando)]TJ
+/TT9 1 Tf
+15.2213 0 TD
+(if)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(que ejecuta en este caso)Tj
+/TT9 1 Tf
+8 0 0 8 133 240 Tm
+(test ! -d $d)Tj
+/TT6 1 Tf
+10 0 0 10 72 222 Tm
+0.0022 Tw
+[(como condición y)65(,)-252.2(de)-252.2(ser cierta, ejecuta los comandos en el)]TJ
+/TT9 1 Tf
+23.9226 0 TD
+0 Tw
+(then)Tj
+/TT6 1 Tf
+2.4004 0 TD
+0.0021 Tw
+[(.)-252.2(Aunque no lo hemos necesitado, es posi-)]TJ
+-26.323 -1.2 TD
+0 Tw
+(ble escribir)Tj
+/TT9 1 Tf
+8 0 0 8 133 192 Tm
+(if ....)Tj
+0 -1.5 TD
+(then)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(else)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(fi)Tj
+/TT6 1 Tf
+10 0 0 10 72 114 Tm
+(como comando.)Tj
+0 -2.4 TD
+0.0383 Tw
+(El comando)Tj
+/TT9 1 Tf
+5.1308 0 TD
+0 Tw
+(sort)Tj
+/TT6 1 Tf
+2.6887 0 TD
+0.0384 Tw
+(merece que le dediquemos algo más de tiempo. Sabe ordenar la entrada asumiendo que)Tj
+-7.8195 -1.2 TD
+0 Tw
+[(son cadenas de te)15(xto o bien ordenarla se)15(gun su v)25(alor numérico \(y de algunas otras formas\).)-500(Por ejemplo,)]TJ
+0 -5.4 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+34 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+36 0 obj
+<<
+/Length 2594
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-10-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 10 | sort)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(10)Tj
+T*
+(2)Tj
+T*
+(3)Tj
+T*
+(4)Tj
+T*
+(5)Tj
+T*
+(6)Tj
+T*
+(7)Tj
+T*
+(8)Tj
+T*
+(9)Tj
+/TT6 1 Tf
+10 0 0 10 72 570 Tm
+[(no produce el efecto que podrías esperar)55(.)-250(Ahora bien...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 552 Tm
+(unix$ seq 10 | sort -n)Tj
+T*
+(1)Tj
+T*
+(2)Tj
+T*
+(3)Tj
+T*
+(4)Tj
+T*
+(5)Tj
+T*
+(6)Tj
+T*
+(7)Tj
+T*
+(8)Tj
+T*
+(9)Tj
+T*
+(10)Tj
+/TT6 1 Tf
+10 0 0 10 72 414 Tm
+(con la opción)Tj
+/TT9 1 Tf
+5.6372 0 TD
+(-n)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5 0 TD
+(sort)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(ordena numéricamente.)Tj
+-9.9878 -2.4 TD
+[(Sea numérica o alf)10(abéticamente, podemos pedir una ordenación en orden in)40(v)15(erso:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 372 Tm
+(unix$ seq 5 | sort -nr)Tj
+0 -1.5 TD
+(5)Tj
+T*
+(4)Tj
+T*
+(3)Tj
+T*
+(2)Tj
+T*
+(1)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 282 Tm
+0.0044 Tw
+(Aquí utilizamos ambos )Tj
+/TT7 1 Tf
+9.5401 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0044 Tw
+[(ags para indicar que se desea una ordenación numérica y además en orden in)40(v)15(erso.)]TJ
+-10.0962 -2.4 TD
+0.043 Tw
+(Además podemos pedir a)Tj
+/TT9 1 Tf
+10.5582 0 TD
+0 Tw
+(sort)Tj
+/TT6 1 Tf
+2.6934 0 TD
+0.043 Tw
+[(que utilice como cla)20(v)15(e)15( )-15.1(para ordenar sólo alguno de los campos, por ejem-)]TJ
+-13.2516 -1.2 TD
+0 Tw
+(plo)Tj
+/TT9 1 Tf
+8 0 0 8 133 228 Tm
+(sort -k3,5)Tj
+/TT6 1 Tf
+10 0 0 10 72 210 Tm
+0.0842 Tw
+(ordena utilizando los campos del 3 al 5 \(contando desde uno\). Consulta su página de manual en lugar de)Tj
+T*
+0 Tw
+(recordar todo esto.)Tj
+0 -2.4 TD
+(¿Recuerdas el comando)Tj
+/TT4 1 Tf
+9.7456 0 TD
+(du\(1\))Tj
+/TT6 1 Tf
+2.166 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(?)-250.1(!Podemos v)14.9(er dónde estamos gastando el espacio en disco!)]TJ
+/TT9 1 Tf
+8 0 0 8 133 156 Tm
+0 Tc
+0 Tw
+(unix$ du -s * | sort -nr | sed 5q)Tj
+0 -1.5 TD
+1.8 Tw
+(23824 zx-spe)Tj
+T*
+(6088 wr_pic1.eps)Tj
+T*
+(6088 inkdump.eps)Tj
+T*
+(6088 clive_pic3.eps)Tj
+T*
+(5768 zx)Tj
+/TT6 1 Tf
+10 0 0 10 72 78 Tm
+0.0521 Tw
+(Primero, hacemos que)Tj
+/TT9 1 Tf
+9.3204 0 TD
+0 Tw
+(du)Tj
+/TT6 1 Tf
+1.5023 0 TD
+0.0521 Tw
+(liste el total \(opción)Tj
+/TT9 1 Tf
+8.4286 0 TD
+0 Tw
+(-s)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT4 1 Tf
+0.5521 0 TD
+(summary)Tj
+/TT6 1 Tf
+3.6665 0 TD
+0.0522 Tw
+[(\))-302.1(para todos los )]TJ
+/TT7 1 Tf
+6.5964 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0522 Tw
+(cheros y directorios. Orden-)Tj
+-31.8226 -1.2 TD
+0.0023 Tw
+[(amos entonces su salida numéricamente en orden in)40(v)15(erso y nos quedamos con las 5 primeras líneas. Son los)]TJ
+0 -4.2 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+37 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+39 0 obj
+<<
+/Length 3894
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-11-)Tj
+-20.767 -3.6 TD
+(5)Tj
+/TT7 1 Tf
+0.7752 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0252 Tw
+(cheros o directorios en que estamos usando más disco. Ahora podemos pensar qué hacemos con ellos si)Tj
+-1.3314 -1.2 TD
+0 Tw
+(necesitamos espacio...)Tj
+0 -2.4 TD
+(¿Y si queremos los que menos espacio usan? Podríamos quedarnos con las últimas 5 líneas, por ejemplo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 654 Tm
+(unix$ du -s * | sort -nr | tail -5)Tj
+/TT6 1 Tf
+10 0 0 10 72 636 Tm
+(utiliza)Tj
+/TT4 1 Tf
+2.8145 0 TD
+(tail\(1\))Tj
+/TT6 1 Tf
+2.815 0 TD
+0.0655 Tw
+(que escribe las últimas)Tj
+/TT4 1 Tf
+9.5926 0 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.8155 0 TD
+0.0654 Tw
+(líneas de un )Tj
+/TT7 1 Tf
+5.2226 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0654 Tw
+[(chero. Aunque habría sido mejor no in)40(v)15(ertir la orde-)]TJ
+-21.8163 -1.2 TD
+0 Tw
+(nación en sort:)Tj
+/TT9 1 Tf
+8 0 0 8 133 606 Tm
+(unix$ du -s * | sort -n | sed 5q)Tj
+/TT6 1 Tf
+10 0 0 10 72 576 Tm
+0.0262 Tw
+(El comando)Tj
+/TT9 1 Tf
+5.1066 0 TD
+0 Tw
+(tail)Tj
+/TT6 1 Tf
+2.6766 0 TD
+0.0262 Tw
+(tiene otro uso para imprimir las últimas líneas pero empezando a contar desde el princi-)Tj
+-7.7832 -1.2 TD
+0 Tw
+(pio. Esto es útil, por ejemplo, para eliminar las primeras líneas de un )Tj
+/TT7 1 Tf
+27.7148 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero:)Tj
+/TT9 1 Tf
+8 0 0 8 133 546 Tm
+(unix$ seq 5 | tail +3)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(4)Tj
+T*
+(5)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 468 Tm
+0.0276 Tw
+[(T)80(ambién es posible seleccionar determinados campos y/o reordenarlos.)-527.6(Por ejemplo, con la opción)]TJ
+/TT9 1 Tf
+40.2673 0 TD
+0 Tw
+(-l)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5276 0 TD
+(ps)Tj
+/TT6 1 Tf
+-41.9951 -1.2 TD
+[(produce un listado lar)18(go...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 438 Tm
+(unix$ man ps)Tj
+0 -1.5 TD
+(...)Tj
+3 -1.5 TD
+[(-l )-3000(Display)-600(information associated with the following keywords:)]TJ
+4.8 -1.5 TD
+(uid, pid, ppid, flags, cpu, pri, nice, vsz=SZ, rss, wchan,)Tj
+T*
+(state=S, paddr=ADDR, tty, time, and command=CMD.)Tj
+-7.8 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 360 Tm
+0.0521 Tw
+[(P)15(ara cada item,)]TJ
+/TT9 1 Tf
+6.527 0 TD
+0 Tw
+(ps)Tj
+/TT6 1 Tf
+1.5023 0 TD
+0.0521 Tw
+(produce una columna separada de las demás por espacio en blanco. Así pues podemos)Tj
+-8.0293 -1.2 TD
+0 Tw
+(utilizar)Tj
+/TT9 1 Tf
+3.0847 0 TD
+(awk)Tj
+/TT6 1 Tf
+2.053 0 TD
+0.0027 Tw
+(para imprimir el pid, tamaño de la memoria física \()Tj
+/TT4 1 Tf
+20.4613 0 TD
+[(r)37(esident set size)]TJ
+/TT6 1 Tf
+6.3009 0 TD
+[(,)-252.7(o)-252.7(rss\) y nombre de los pro-)]TJ
+-31.9 -1.2 TD
+0 Tw
+(cesos utilizando)Tj
+/TT9 1 Tf
+8 0 0 8 133 318 Tm
+(unix$ ps -l | awk ’{printf\("%s\\t%s\\t%s\\n", $2, $15, $9\);}’)Tj
+0 -1.5 TD
+1.8 Tw
+(PID CMD RSS)Tj
+T*
+(448 -bash 372)Tj
+T*
+(519 acme 28)Tj
+T*
+(526 \(fontsrv\) 0)Tj
+T*
+(527 acme 104)Tj
+T*
+(528 acme 5576)Tj
+T*
+(534 9pserve 24)Tj
+T*
+0 Tw
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 192 Tm
+0.0278 Tw
+[(Como puedes v)15(e)0(r)40(,)]TJ
+/TT9 1 Tf
+7.5269 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.0781 0 TD
+0.0278 Tw
+(dispone de)Tj
+/TT9 1 Tf
+4.6103 0 TD
+0 Tw
+(printf)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0278 Tw
+[(.)-277.8(Dicha función se utiliza prácticamente como la de C. En nue-)]TJ
+-17.8159 -1.2 TD
+0.0796 Tw
+(stro caso optamos por imprimir las columnas 2, 15, y 9 en ese orden. Utilizar)Tj
+/TT9 1 Tf
+32.2428 0 TD
+0 Tw
+(cut)Tj
+/TT6 1 Tf
+2.1299 0 TD
+0.0796 Tw
+(sería más complicado)Tj
+-34.3727 -1.2 TD
+0 Tw
+(dado que hay múltiples blancos entre un campo y el siguiente.)Tj
+0 -2.4 TD
+0.0067 Tw
+(¿Qué proceso está utilizando más memoria? Bastar ordenar numéricamente por el tercer campo, de mayor a)Tj
+0 -1.2 TD
+0 Tw
+(menor y quedarse con la primera línea.)Tj
+/TT9 1 Tf
+8 0 0 8 133 114 Tm
+(unix$ ps -l | awk ’{printf\("%s\\t%s\\t%s\\n", $2, $15, $9\);}’ | \\)Tj
+0 -1.5 TD
+[(>)-2400(sort -nr -k3 | sed 1q)]TJ
+T*
+1.8 Tw
+(91136 acme 52920)Tj
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 24 Tm
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+40 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+44 0 obj
+<<
+/Length 5020
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-12-)Tj
+-20.767 -3.6 TD
+[(P)15(arece que)]TJ
+/TT9 1 Tf
+4.5934 0 TD
+(acme)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(,)-250(con el pid 91136.)]TJ
+/TT2 1 Tf
+-6.9938 -3.6 TD
+[(5. )-250(Funciones)-250(y)-250(otras estructuras de contr)18(ol)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0745 Tw
+(Aún tenemos pendiente escribir nuestro script para procesar los )Tj
+/TT7 1 Tf
+26.3009 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0745 Tw
+(cheros de con)Tj
+/TT7 1 Tf
+5.6466 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0745 Tw
+(guración de nuestra apli-)Tj
+-33.0597 -1.2 TD
+0 Tw
+[(cación y v)15(er si todos son correctos.)]TJ
+0 -2.4 TD
+0.117 Tw
+[(Lo primero que deberíamos hacer es pensar en qué opciones y ar)18(gumentos queremos admitir en nuestro)]TJ
+0 -1.2 TD
+0 Tw
+(script. Por ejemplo, un posible uso podría ser)Tj
+/TT9 1 Tf
+8 0 0 8 133 590.4 Tm
+(chkappconf [-sd] [fich...])Tj
+/TT6 1 Tf
+10 0 0 10 72 572.4 Tm
+[(Hemos utilizado la sintáxis que v)15(emos en la synopsis de las páginas de manual:)]TJ
+2.5 -1.56 TD
+[(•)-2150(Los )]TJ
+/TT7 1 Tf
+4.3056 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ags)Tj
+/TT9 1 Tf
+1.6385 0 TD
+(-d)Tj
+/TT6 1 Tf
+1.5057 0 TD
+(y)Tj
+/TT9 1 Tf
+0.8055 0 TD
+(-s)Tj
+/TT6 1 Tf
+1.5057 0 TD
+0.0554 Tw
+(pueden utilizarse opcionalmente y permiten comprobar sólo los directorios)Tj
+-7.8171 -1.2 TD
+0.1736 Tw
+(utilizados en los )Tj
+/TT7 1 Tf
+7.2698 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1736 Tw
+(cheros de con)Tj
+/TT7 1 Tf
+5.8448 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1736 Tw
+(guración o sólo los shells mencionados. Si no indicamos)Tj
+-14.2269 -1.2 TD
+0 Tw
+(ninguno de estos )Tj
+/TT7 1 Tf
+6.9717 0 TD
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ags queremos que se comprueben ambas cosas.)Tj
+-10.0278 -1.56 TD
+0.0465 Tw
+[(•)-2150(S)0(i)-296.5(s)0(e)-296.5(indican nombres de )]TJ
+/TT7 1 Tf
+12.9806 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0464 Tw
+[(chero \(uno o más\) como ar)18(gumento entonces haremos que se com-)]TJ
+-11.0368 -1.2 TD
+0.0245 Tw
+(prueben sólo dichos )Tj
+/TT7 1 Tf
+8.322 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0245 Tw
+(cheros, en caso contrario comprobaremos todos los )Tj
+/TT7 1 Tf
+20.8878 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0245 Tw
+(cheros en los direc-)Tj
+-30.3222 -1.2 TD
+0 Tw
+(torios)Tj
+/TT9 1 Tf
+2.5278 0 TD
+($HOME)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(de todos los usuarios.)Tj
+-10.7783 -2.4 TD
+0.2186 Tw
+(Sabemos que)Tj
+/TT9 1 Tf
+5.9919 0 TD
+0 Tw
+($*)Tj
+/TT6 1 Tf
+1.6688 0 TD
+0.2185 Tw
+[(corresponde al v)15(ector de ar)18(gumentos en un script, e)15(xcluyendo el nombre del script)]TJ
+-7.6607 -1.2 TD
+0 Tw
+(\()Tj
+/TT9 1 Tf
+0.333 0 TD
+(argv[0])Tj
+/TT6 1 Tf
+4.2007 0 TD
+0.1512 Tw
+[(,)-401.2(que sería)]TJ
+/TT9 1 Tf
+4.7852 0 TD
+0 Tw
+($0)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.1513 Tw
+[(\). Una posibilidad es procesar dicha lista de ar)18(gumentos mientras v)15(eamos que)]TJ
+-10.5191 -1.2 TD
+0 Tw
+(comienzan por ")Tj
+/TT9 1 Tf
+6.5723 0 TD
+(-)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(", y lue)15(go v)15(eremos cómo procesar las opciones que indican.)]TJ
+-7.1724 -2.4 TD
+[(Podemos empezar con algo como esto, que guardaremos en nuestra primera v)15(ersión de)]TJ
+/TT9 1 Tf
+34.9733 0 TD
+(chkappconf)Tj
+/TT6 1 Tf
+6.001 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 403.2 Tm
+(#!/bin/sh)Tj
+0 -3 TD
+(while test $# -gt 0)Tj
+0 -1.5 TD
+(do)Tj
+2.4 -1.5 TD
+(echo $1)Tj
+T*
+(shift)Tj
+-2.4 -1.5 TD
+(done)Tj
+/TT6 1 Tf
+10 0 0 10 72 313.2 Tm
+0.0138 Tw
+(Aquí utilizamos la estructura de control)Tj
+/TT9 1 Tf
+16.1891 0 TD
+0 Tw
+(while)Tj
+/TT6 1 Tf
+3.2642 0 TD
+0.0137 Tw
+(del shell, que ejecuta el comando indicado como condición)Tj
+-19.4533 -1.2 TD
+0 Tw
+[(y)65(,)65( )-65(mientras dicho comando termine con éxito, ejecuta las sentencias entr)]TJ
+/TT9 1 Tf
+29.1191 0 TD
+(do)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(y)Tj
+/TT9 1 Tf
+0.75 0 TD
+(done)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(.)-250(Como condición,)]TJ
+/TT9 1 Tf
+8 0 0 8 133 283.2 Tm
+(test $# -gt 0)Tj
+/TT6 1 Tf
+10 0 0 10 72 265.2 Tm
+0.094 Tw
+[(compara el número de ar)18(gumentos con)]TJ
+/TT9 1 Tf
+16.3181 0 TD
+0 Tw
+(0)Tj
+/TT6 1 Tf
+0.9442 0 TD
+(usando)Tj
+/TT4 1 Tf
+3.1771 0 TD
+0.0941 Tw
+[(gr)37(eater than)]TJ
+/TT6 1 Tf
+5.3729 0 TD
+(como comparación. Por último, dentro del)Tj
+-25.8123 -1.2 TD
+0.1035 Tw
+(cuerpo del)Tj
+/TT9 1 Tf
+4.6494 0 TD
+0 Tw
+(while)Tj
+/TT6 1 Tf
+3.354 0 TD
+0.1034 Tw
+[(escribimos el primer ar)18(gumento y posteriormente lo tiramos a la basura. La primiti)25(v)25(a)]TJ
+/TT9 1 Tf
+-8.0034 -1.2 TD
+0 Tw
+(shift)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(tira el primer ar)18(gumento y conserv)25(a)-250(e)0(l)-250(resto.)]TJ
+-3.2505 -2.4 TD
+[(V)111(amos a probarlo:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 199.2 Tm
+(unix$ chkappconf -a b c)Tj
+0 -1.5 TD
+(-a)Tj
+T*
+(b)Tj
+T*
+(c)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 121.2 Tm
+0.1587 Tw
+[(Ahora estaría bien detener el while si el primer ar)18(gumento no compienza por un ")]TJ
+/TT9 1 Tf
+34.8225 0 TD
+0 Tw
+(-)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1587 Tw
+(". Por el momento)Tj
+-35.4226 -1.2 TD
+0 Tw
+(podríamos usar)Tj
+/TT9 1 Tf
+6.3877 0 TD
+(egrep)Tj
+/TT6 1 Tf
+3.2505 0 TD
+-0.0001 Tc
+0.0001 Tw
+(para eso. Hagamos un par de pruebas:)Tj
+-9.6382 -8.52 TD
+0 Tc
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+45 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+47 0 obj
+<<
+/Length 4103
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-13-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ echo -a | egrep ’ˆ-’)Tj
+0 -1.5 TD
+(-a)Tj
+T*
+(unix$ echo a | egrep ’ˆ-’)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 654 Tm
+0.0939 Tw
+[(¡Estupendo! Pero sólo nos interesa v)15(er si)]TJ
+/TT9 1 Tf
+17.2224 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3444 0 TD
+-0.0001 Tc
+0.0939 Tw
+(dice que la entrada tiene ese aspecto o no. En lugar de)Tj
+-20.5668 -1.2 TD
+0 Tc
+0.022 Tw
+[(en)40(viar su salida a)]TJ
+/TT9 1 Tf
+7.2121 0 TD
+0 Tw
+(/dev/null)Tj
+/TT6 1 Tf
+5.4009 0 TD
+0.022 Tw
+[(,)-272(usaremos la opción)]TJ
+/TT9 1 Tf
+8.5582 0 TD
+0 Tw
+(-q)Tj
+/TT6 1 Tf
+1.4723 0 TD
+(\()Tj
+/TT4 1 Tf
+0.333 0 TD
+(quiet)Tj
+/TT6 1 Tf
+1.9995 0 TD
+0.2721 Tc
+[(\)d)272.1(e)]TJ
+/TT9 1 Tf
+1.8211 0 TD
+0 Tc
+(egrep)Tj
+/TT6 1 Tf
+3.2726 0 TD
+0.0221 Tw
+(que hace que no imprima nada y)Tj
+-30.0696 -1.2 TD
+0 Tw
+(tan sólo llame a)Tj
+/TT4 1 Tf
+6.5537 0 TD
+[(e)20(xit\(2\))]TJ
+/TT6 1 Tf
+2.8394 0 TD
+(con el estatus adecuado.)Tj
+/TT9 1 Tf
+8 0 0 8 133 612 Tm
+(unix$ echo -a | egrep -q ’ˆ-’)Tj
+0 -1.5 TD
+(unix$ echo $?)Tj
+T*
+(0)Tj
+T*
+(unix$ echo a | egrep -q ’ˆ-’)Tj
+T*
+(unix$ echo $?)Tj
+T*
+(1)Tj
+/TT6 1 Tf
+10 0 0 10 72 522 Tm
+0.1145 Tw
+[(Y)100(a)100( )-100(casi estamos. Ahora necesitamos poder escribir como condición que tanto)]TJ
+/TT9 1 Tf
+32.3719 0 TD
+0 Tw
+(test)Tj
+/TT6 1 Tf
+2.7649 0 TD
+0.1145 Tw
+(compruebe que hay)Tj
+-35.1368 -1.2 TD
+0.1775 Tw
+[(algún ar)18(gumento como el comando anterior v)15(ea que comienza por un ")]TJ
+/TT9 1 Tf
+30.2906 0 TD
+0 Tw
+(-)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1776 Tw
+(". Pero esto es fácil. El shell)Tj
+-30.8907 -1.2 TD
+0.0246 Tw
+(dispone de ")Tj
+/TT9 1 Tf
+5.0121 0 TD
+0 Tw
+(&&)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.2746 Tc
+("y")Tj
+/TT9 1 Tf
+1.8656 0 TD
+0 Tc
+(||)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0246 Tw
+[(")-274.6(como operadores. Signi)]TJ
+/TT7 1 Tf
+10.2022 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0246 Tw
+[(can lo mismo que al e)25(v)25(aluar condiciones en C, pero natu-)]TJ
+-20.0365 -1.2 TD
+0 Tw
+(ralmente esto es shell y utilizamos líneas de comandos. Nuestro script queda así por el momento:)Tj
+/TT9 1 Tf
+8 0 0 8 133 468 Tm
+(#!/bin/sh)Tj
+0 -3 TD
+(while test $# -gt 0 && echo $1 | egrep -q ’ˆ-’)Tj
+0 -1.5 TD
+(do)Tj
+2.4 -1.5 TD
+(echo option arg: $1)Tj
+T*
+(shift)Tj
+-2.4 -1.5 TD
+(done)Tj
+T*
+(echo argv is $*)Tj
+/TT6 1 Tf
+10 0 0 10 72 354 Tm
+[(Y)-250(s)0(i)-250(l)0(o)-250(ejecutamos, v)15(emos que funciona:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 336 Tm
+(unix$ chkappconf -a -ab c d)Tj
+T*
+(option arg: -a)Tj
+T*
+(option arg: -ab)Tj
+T*
+(argv is c d)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 258 Tm
+0.0459 Tw
+[(El siguiente paso es procesar cada uno de los ar)18(gumentos correspondientes a opciones. Aunque podríamos)]TJ
+0 -1.2 TD
+0.0612 Tw
+(recurrir a)Tj
+/TT9 1 Tf
+4.0638 0 TD
+0 Tw
+(egrep)Tj
+/TT6 1 Tf
+3.3117 0 TD
+0.0612 Tw
+[(de nue)25(v)20(o)0(,)-311.2(v)25(amos a utilizar la estructura de control)]TJ
+/TT9 1 Tf
+20.6956 0 TD
+0 Tw
+(case)Tj
+/TT6 1 Tf
+2.7115 0 TD
+0.0611 Tw
+(del shell, que sabe como com-)Tj
+-30.7826 -1.2 TD
+0 Tw
+[(probar si un string encaja con una o más e)15(xpresiones. V)111(eamos antes un ejemplo:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 216 Tm
+(unix$ x=ab)Tj
+0 -1.5 TD
+(unix$ case $x in)Tj
+T*
+[(>)-600(a*\))]TJ
+T*
+[(>)-600(echo a;;)]TJ
+T*
+[(>)-600(b*\))]TJ
+T*
+[(>)-600(echo b;;)]TJ
+T*
+[(>)-600(esac)]TJ
+T*
+(a)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 90 Tm
+0.009 Tw
+(Esta estructura compara el string entre)Tj
+/TT9 1 Tf
+15.6585 0 TD
+0 Tw
+(case)Tj
+/TT6 1 Tf
+2.6594 0 TD
+(e)Tj
+/TT9 1 Tf
+0.7029 0 TD
+(in)Tj
+/TT6 1 Tf
+1.4592 0 TD
+0.009 Tw
+[(con cada una de las e)15(xpresiones de cada rama del)]TJ
+/TT9 1 Tf
+20.0652 0 TD
+0 Tw
+(case)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-42.9455 -1.2 TD
+0.0308 Tw
+[(Estas e)15(xpresiones son similares a las utilizadas para globbing y terminan en un ")]TJ
+/TT9 1 Tf
+32.5358 0 TD
+0 Tw
+(\))Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0307 Tw
+[(". T)35(ras cada e)15(xpresión se)]TJ
+-33.1359 -1.2 TD
+0.0504 Tw
+(incluyen las líneas de comandos que hay que ejecutar en dicho caso, terminando con un ")Tj
+/TT9 1 Tf
+36.4855 0 TD
+0 Tw
+(;;)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0505 Tw
+(". Por último,)Tj
+-37.6857 -4.2 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+48 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+50 0 obj
+<<
+/Length 2967
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-14-)Tj
+-20.767 -3.6 TD
+(se cierra el)Tj
+/TT9 1 Tf
+4.5801 0 TD
+(case)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(con ")Tj
+/TT9 1 Tf
+2.1021 0 TD
+(esac)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(".)Tj
+-11.7329 -2.4 TD
+[(Podemos escribir e)15(xpresiones como)]TJ
+/TT9 1 Tf
+8 0 0 8 133 666 Tm
+(case ... in)Tj
+0 -1.5 TD
+([ab]c|d\))Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(;;)Tj
+-2.4 -1.5 TD
+(esac)Tj
+/TT6 1 Tf
+10 0 0 10 72 600 Tm
+0.0462 Tw
+(Esto es, es posible escribir conjuntos de caracteres ")Tj
+/TT9 1 Tf
+21.1875 0 TD
+0 Tw
+([)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(...)Tj
+/TT9 1 Tf
+0.75 0 TD
+(])Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0462 Tw
+[(")-296.2(y)-296.2(también indicar e)15(xpresiones alternati)25(v)25(a)0(s)-296.2(sepa-)]TJ
+-23.1377 -1.2 TD
+0.1052 Tw
+(radas por un ")Tj
+/TT9 1 Tf
+5.9167 0 TD
+0 Tw
+(|)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1052 Tw
+(". Dado que)Tj
+/TT9 1 Tf
+5.3337 0 TD
+0 Tw
+(case)Tj
+/TT6 1 Tf
+2.7556 0 TD
+0.1052 Tw
+[(intentar encajar las e)15(xpresiones en el orden en que se dan, y que ")]TJ
+/TT9 1 Tf
+27.5836 0 TD
+0 Tw
+(*)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(")Tj
+-42.7897 -1.2 TD
+[(encaja con cualquier cosa, no e)15(xiste)]TJ
+/TT9 1 Tf
+14.5617 0 TD
+(else)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(o)Tj
+/TT9 1 Tf
+0.75 0 TD
+(default)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(para)Tj
+/TT9 1 Tf
+1.9707 0 TD
+(case)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(.)-250(Basta usar)]TJ
+/TT9 1 Tf
+8 0 0 8 133 558 Tm
+(case ... in)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(*\))Tj
+2.4 -1.5 TD
+(... este es el default ...)Tj
+T*
+(;;)Tj
+-2.4 -1.5 TD
+(esac)Tj
+/TT6 1 Tf
+10 0 0 10 72 468 Tm
+0.1126 Tw
+[(V)129(olv)25(amos a nuestro script. V)111(amos a de)]TJ
+/TT7 1 Tf
+16.1019 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1126 Tw
+[(nir un par de v)25(ariables para los )]TJ
+/TT7 1 Tf
+13.3418 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.1126 Tw
+(ags y a comprobar si aparecen)Tj
+-30.556 -1.2 TD
+0 Tw
+(como opciones.)Tj
+/TT9 1 Tf
+8 0 0 8 133 438 Tm
+(#!/bin/sh)Tj
+0 -3 TD
+(dflag=y)Tj
+0 -1.5 TD
+(sflag=y)Tj
+T*
+(while test $# -gt 0 && echo $1 | egrep -q ’ˆ-’)Tj
+T*
+(do)Tj
+2.4 -1.5 TD
+(case $1 in)Tj
+T*
+(*d*\))Tj
+2.4 -1.5 TD
+(dflag=y)Tj
+T*
+(sflag=n)Tj
+T*
+(;;)Tj
+-2.4 -1.5 TD
+(esac)Tj
+T*
+(case $1 in)Tj
+T*
+(*s*\))Tj
+2.4 -1.5 TD
+(sflag=y)Tj
+T*
+(dflag=n)Tj
+T*
+(;;)Tj
+-2.4 -1.5 TD
+(esac)Tj
+T*
+(shift)Tj
+-2.4 -1.5 TD
+(done)Tj
+T*
+(echo dflag $dflag)Tj
+T*
+(echo sflag $sflag)Tj
+T*
+(echo argv is $*)Tj
+/TT6 1 Tf
+10 0 0 10 72 156 Tm
+0.1498 Tw
+(Habitualmente habríamos usando ")Tj
+/TT9 1 Tf
+14.4929 0 TD
+0 Tw
+(n)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1498 Tw
+[(")-399.8(como v)25(alor inicial para los )]TJ
+/TT7 1 Tf
+12.4451 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1498 Tw
+(ags y los habríamos puesto a ")Tj
+/TT9 1 Tf
+13.0272 0 TD
+0 Tw
+(y)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.3999 Tc
+[("s)399.9(i)]TJ
+-41.7215 -1.2 TD
+0 Tc
+0.0434 Tw
+(aparecen. Pero en este caso hay que procesar tanto directorios como shells si ninguno de los )Tj
+/TT7 1 Tf
+37.7105 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0434 Tw
+(ags aparece.)Tj
+-38.2667 -1.2 TD
+0 Tw
+(¡Probémoslo!)Tj
+0 -10.8 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+51 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+53 0 obj
+<<
+/Length 3512
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-15-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ chkappconf -d c d)Tj
+0 -1.5 TD
+(dflag y)Tj
+T*
+(sflag n)Tj
+T*
+(argv is c d)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 630 Tm
+0.1321 Tw
+[(Y)100(a)100( disponemos )100(de)]TJ
+/TT9 1 Tf
+7.634 0 TD
+0 Tw
+($dflag)Tj
+/TT6 1 Tf
+3.8827 0 TD
+0.0321 Tw
+[(para v)15(er si hay que procesar sólo directorios y de)]TJ
+/TT9 1 Tf
+20.1331 0 TD
+0 Tw
+($sflag)Tj
+/TT6 1 Tf
+3.8828 0 TD
+0.0322 Tw
+[(para v)15(er si hay que)]TJ
+-35.5325 -1.2 TD
+0 Tw
+(procesar sólo shells. Además, hemos dejado)Tj
+/TT9 1 Tf
+17.8848 0 TD
+($*)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(con el resto de ar)18(gumentos.)]TJ
+-19.335 -2.4 TD
+0.0726 Tw
+[(Pero... ¿Y si hay una opción in)40(válida? Bueno, siempre podemos recurrir a)]TJ
+/TT9 1 Tf
+30.6002 0 TD
+0 Tw
+(echo)Tj
+/TT6 1 Tf
+2.723 0 TD
+(y)Tj
+/TT9 1 Tf
+0.8226 0 TD
+(egrep)Tj
+/TT6 1 Tf
+3.3231 0 TD
+0.0726 Tw
+[(para v)15(er si las)]TJ
+-37.4689 -1.2 TD
+0 Tw
+[(opciones tienen b)20(uen aspecto:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 564 Tm
+(...)Tj
+0 -1.5 TD
+(while test $# -gt 0 && echo $1 | egrep -q ’ˆ-’)Tj
+T*
+(do)Tj
+2.4 -1.5 TD
+(if echo $1 | egrep -q ’[ˆ-sd]’ ; then)Tj
+2.4 -1.5 TD
+(echo usage: $0 ’[-sd] [file...]’ 1>&2)Tj
+T*
+(exit 1)Tj
+-2.4 -1.5 TD
+(fi)Tj
+T*
+(case $1 in)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(done)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 414 Tm
+0.0411 Tw
+[(Ahora podemos ponernos a hacer el trabajo se)15(gún las opciones y los ar)18(gumentos. Lo primero que haremos)]TJ
+0 -1.2 TD
+0 Tw
+[(es dejar en una v)25(ariable la lista de )]TJ
+/TT7 1 Tf
+13.7465 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(cheros que hay que procesar)55(.)]TJ
+/TT9 1 Tf
+8 0 0 8 133 384 Tm
+(files=$*)Tj
+0 -1.5 TD
+(if test $# -eq 0 ; then)Tj
+2.4 -1.5 TD
+(files="/home/*/.myapp")Tj
+-2.4 -1.5 TD
+(fi)Tj
+/TT6 1 Tf
+10 0 0 10 72 330 Tm
+0.0394 Tw
+(Suponiendo que los )Tj
+/TT7 1 Tf
+8.2569 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0394 Tw
+(cheros de con)Tj
+/TT7 1 Tf
+5.5764 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0394 Tw
+(guración se llaman)Tj
+/TT9 1 Tf
+7.9209 0 TD
+0 Tw
+(.myapp)Tj
+/TT6 1 Tf
+3.8899 0 TD
+0.0393 Tw
+[(y)-289.3(que queremos procesar dichos )]TJ
+/TT7 1 Tf
+13.2756 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+-40.5881 -1.2 TD
+(para todos los usuarios si no se indica ningún )Tj
+/TT7 1 Tf
+18.3589 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero.)Tj
+-18.915 -2.4 TD
+(Ahora podríamos procesar un )Tj
+/TT7 1 Tf
+12.1074 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero tras otro...)Tj
+/TT9 1 Tf
+8 0 0 8 133 276 Tm
+(for f in $files ; do)Tj
+2.4 -1.5 TD
+(echo checking $f...)Tj
+T*
+(if test $dflag = y ; then)Tj
+2.4 -1.5 TD
+(checkdirs $f)Tj
+-2.4 -1.5 TD
+(fi)Tj
+T*
+(if test $sflag = y ; then)Tj
+2.4 -1.5 TD
+(checkshells $f)Tj
+-2.4 -1.5 TD
+(fi)Tj
+-2.4 -1.5 TD
+(done)Tj
+/TT6 1 Tf
+10 0 0 10 72 150 Tm
+0.128 Tw
+[(Aquí v)25(amos a utilizar)]TJ
+/TT9 1 Tf
+9.3738 0 TD
+0 Tw
+(checkdirs)Tj
+/TT6 1 Tf
+5.779 0 TD
+(y)Tj
+/TT9 1 Tf
+0.8781 0 TD
+(checkshells)Tj
+/TT6 1 Tf
+6.9792 0 TD
+0.1281 Tw
+(para comprobar cada )Tj
+/TT7 1 Tf
+9.0181 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1281 Tw
+(chero. Aunque podríamos)Tj
+-32.5843 -1.2 TD
+0.1299 Tw
+(hacer otros scripts, parece que lo más adecuado es de)Tj
+/TT7 1 Tf
+22.4377 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1299 Tw
+(nir funciones. Y sí, ¡el shell permite de)Tj
+/TT7 1 Tf
+16.4884 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1299 Tw
+(nir fun-)Tj
+-40.0384 -1.2 TD
+0 Tw
+(ciones!.)Tj
+0 -2.4 TD
+[(P)15(ara de)]TJ
+/TT7 1 Tf
+2.9557 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(nir una función escribimos algo como)Tj
+-3.5119 -7.8 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+54 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+56 0 obj
+<<
+/Length 2058
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-16-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(myfun\(\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 666 Tm
+0.0677 Tw
+(En este caso,)Tj
+/TT9 1 Tf
+5.6455 0 TD
+0 Tw
+(myfun)Tj
+/TT6 1 Tf
+3.3182 0 TD
+0.0677 Tw
+[(es el nombre de la función. T)35(ras el nombre han de ir los paréntesis \(¡Sin nada entre)]TJ
+-8.9637 -1.2 TD
+0.0533 Tw
+[(ellos!\) y después los comandos que constituyen el cuerpo entre lla)20(v)15(es. Recuerda que estás usando el shell,)]TJ
+T*
+0 Tw
+(esto no es C.)Tj
+0 -2.4 TD
+0.0475 Tw
+[(Dentro de la función, los ar)18(gumentos se procesan como en un script.)-547.6(Así pues, en nuestro caso ")]TJ
+/TT9 1 Tf
+39.4391 0 TD
+0 Tw
+($1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.2976 Tc
+[("e)297.6(se)297.6(l)]TJ
+-40.6393 -1.2 TD
+0 Tc
+(nombre del )Tj
+/TT7 1 Tf
+4.7764 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero que hay que comprobar y las funciones podrían ser algo como)Tj
+/TT9 1 Tf
+8 0 0 8 133 588 Tm
+(checkdirs\(\))Tj
+0 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+(echo checking dirs in $1)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(checkshells\(\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(echo checking shells in $1)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 474 Tm
+[(Hemos terminado. Mostramos ahora el script entero para e)25(vitar confusiones.)]TJ
+/TT9 1 Tf
+8 0 0 8 133 456 Tm
+(#!/bin/sh)Tj
+0 -3 TD
+(checkdirs\(\))Tj
+0 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+(file=$1)Tj
+T*
+(dirs=‘egrep ’ˆ[a-z]+dir ’ config | \\)Tj
+2.4 -1.5 TD
+(awk ’{print $1}’ | sort | uniq‘)Tj
+-2.4 -1.5 TD
+(for d in $dirs ; do)Tj
+2.4 -1.5 TD
+(if test ! -d $d ; then)Tj
+2.4 -1.5 TD
+(echo no dir $d in $file)Tj
+-2.4 -1.5 TD
+(fi)Tj
+-2.4 -1.5 TD
+(done)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(checkshells\(\))Tj
+0 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+(file=$1)Tj
+T*
+(shells=‘egrep ’ˆshell ’ config | \\)Tj
+2.4 -1.5 TD
+(awk ’{print $1}’ | sort | uniq‘)Tj
+-2.4 -1.5 TD
+(for s in $shells ; do)Tj
+2.4 -1.5 TD
+(if test ! -x $x ; then)Tj
+2.4 -1.5 TD
+(echo no shell $s in $file)Tj
+-2.4 -1.5 TD
+(fi)Tj
+-2.4 -1.5 TD
+(done)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 24 Tm
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+57 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+59 0 obj
+<<
+/Length 3546
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-17-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(dflag=y)Tj
+0 -1.5 TD
+(sflag=y)Tj
+T*
+(while test $# -gt 0 && echo $1 | egrep -q ’ˆ-’)Tj
+T*
+(do)Tj
+2.4 -1.5 TD
+(if echo $1 | egrep -q ’[ˆ-sd]’ ; then)Tj
+2.4 -1.5 TD
+(echo usage: $0 ’[-sd] [file...]’ 1>&2)Tj
+T*
+(exit 1)Tj
+-2.4 -1.5 TD
+(fi)Tj
+T*
+(case $1 in)Tj
+T*
+(*d*\))Tj
+2.4 -1.5 TD
+(dflag=y)Tj
+T*
+(sflag=n)Tj
+T*
+(;;)Tj
+-2.4 -1.5 TD
+(esac)Tj
+T*
+(case $1 in)Tj
+T*
+(*s*\))Tj
+2.4 -1.5 TD
+(sflag=y)Tj
+T*
+(dflag=n)Tj
+T*
+(;;)Tj
+-2.4 -1.5 TD
+(esac)Tj
+T*
+(shift)Tj
+-2.4 -1.5 TD
+(done)Tj
+0 -4.5 TD
+(files=$*)Tj
+0 -1.5 TD
+(if test $# -eq 0 ; then)Tj
+2.4 -1.5 TD
+(files="a b c")Tj
+-2.4 -1.5 TD
+(fi)Tj
+T*
+(for f in $files ; do)Tj
+2.4 -1.5 TD
+(if test $dflag = y ; then)Tj
+2.4 -1.5 TD
+(checkdirs $f)Tj
+-2.4 -1.5 TD
+(fi)Tj
+T*
+(if test $sflag = y ; then)Tj
+2.4 -1.5 TD
+(checkshells $f)Tj
+-2.4 -1.5 TD
+(fi)Tj
+-2.4 -1.5 TD
+(done)Tj
+/TT6 1 Tf
+10 0 0 10 72 258 Tm
+0.0718 Tw
+(Hay formas mejores de hacer lo que hemos hecho. Pero lo que importa es que hemos podido hacerlo con)Tj
+0 -1.2 TD
+0.0234 Tw
+(las herramientas que tenemos. Por ejemplo, la práctica totalidad de los shells modernos incluyen)Tj
+/TT4 1 Tf
+39.1499 0 TD
+0 Tw
+[(g)10(etopts\(1\))]TJ
+/TT6 1 Tf
+-39.1499 -1.2 TD
+0.1013 Tw
+[(para ayudar a procesar opciones y)65(,)-351.3(además, tienes)]TJ
+/TT4 1 Tf
+20.9031 0 TD
+0 Tw
+[(g)10(etopt\(1\))]TJ
+/TT6 1 Tf
+4.0067 0 TD
+0.1012 Tw
+[(en cualquier caso para la misma tarea.)-601.2(Sólo)]TJ
+-24.9098 -1.2 TD
+0 Tw
+(con eso, ya podemos simpli)Tj
+/TT7 1 Tf
+11.082 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(car en gran medida nuestro script.)Tj
+/TT2 1 Tf
+-11.6382 -3.6 TD
+0.25 Tw
+[(6. Editando)-250(str)18(eams)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.1394 Tw
+[(Y)100(a)100( hemos )100(utilizado)]TJ
+/TT4 1 Tf
+8.0441 0 TD
+0 Tw
+(sed\(1\))Tj
+/TT6 1 Tf
+2.7884 0 TD
+0.0395 Tw
+(para escribir las primeras líneas de un )Tj
+/TT7 1 Tf
+15.6315 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0395 Tw
+(chero. Pero puede hacer mucho más. Se)Tj
+-27.0201 -1.2 TD
+0.0492 Tw
+(trata de un editor similar a)Tj
+/TT4 1 Tf
+11.0691 0 TD
+0 Tw
+(ed\(1\))Tj
+/TT6 1 Tf
+2.4091 0 TD
+0.0491 Tw
+(\(que fue el editor estándar en UNIX durante mucho mucho, pero hace ya)Tj
+-13.4782 -1.2 TD
+0.0945 Tw
+(mucho\). Sus comandos están también disponibles \(en general\) en)Tj
+/TT4 1 Tf
+27.2328 0 TD
+0 Tw
+(vi\(1\))Tj
+/TT6 1 Tf
+1.8877 0 TD
+0.0946 Tw
+[(,)-344.5(u)0(n)-344.6(editor ")]TJ
+/TT4 1 Tf
+5.0244 0 TD
+0 Tw
+(visual)Tj
+/TT6 1 Tf
+2.3887 0 TD
+0.0946 Tw
+[(")-344.6(que puede uti-)]TJ
+-36.5336 -1.2 TD
+0.0284 Tw
+[(lizarse en terminales de te)15(xto que no sean grá)]TJ
+/TT7 1 Tf
+18.3718 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0284 Tw
+(cos. La diferencia radica en que)Tj
+/TT9 1 Tf
+13.1352 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+2.0787 0 TD
+0.0284 Tw
+(está hecho para proce-)Tj
+-34.1419 -1.2 TD
+0 Tw
+[(sar su entrada estándar)40(,)-250(principalmente. De ahí el nombre)]TJ
+/TT4 1 Tf
+23.2007 0 TD
+[(str)37(eam ed)]TJ
+/TT6 1 Tf
+3.879 0 TD
+(.)Tj
+/TT9 1 Tf
+-27.0797 -2.4 TD
+(Sed)Tj
+/TT6 1 Tf
+2.2444 0 TD
+0.1941 Tw
+(trabaja procesando su entrada línea a línea. En general, para cada línea, aplica los comandos de)Tj
+-2.2444 -1.2 TD
+0 Tw
+(edición que se indican y después se escribe la línea en la salida.)Tj
+0 -2.4 TD
+0.2068 Tw
+(Un comando en)Tj
+/TT9 1 Tf
+7.2019 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+2.2571 0 TD
+0.2068 Tw
+(es una o dos)Tj
+/TT4 1 Tf
+5.9932 0 TD
+0 Tw
+[(dir)37(ecciones)]TJ
+/TT6 1 Tf
+5.0292 0 TD
+0.2067 Tw
+[(se)15(guidas de una función y)65(,)-456.7(quizá, ar)18(gumentos para la)]TJ
+-20.4814 -3.84 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+60 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+62 0 obj
+<<
+/Length 4057
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-18-)Tj
+-20.767 -3.6 TD
+(función. Las direcciones determinan en qué líneas son aplicables los comandos.)Tj
+0 -2.4 TD
+(Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 666 Tm
+(sed 5q)Tj
+/TT6 1 Tf
+10 0 0 10 72 648 Tm
+(Signi)Tj
+/TT7 1 Tf
+2.1118 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1187 Tw
+(ca ")Tj
+/TT4 1 Tf
+1.6646 0 TD
+(en la línea 5)Tj
+/TT6 1 Tf
+5.3273 0 TD
+[(")-368.7(ejecuta ")]TJ
+/TT4 1 Tf
+4.3849 0 TD
+0 Tw
+(quit)Tj
+/TT6 1 Tf
+1.5557 0 TD
+0.1188 Tw
+[(". )-250(Dado)-368.8(que no se han ejecutado comandos que alteren las líneas,)]TJ
+/TT9 1 Tf
+-15.6004 -1.2 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+2.0551 0 TD
+-0.0001 Tc
+0.0048 Tw
+[(las escribe tal cual hasta lle)14.9(gar)-254.9(a)-254.9(l)-0.1(a)-254.9(línea 5, momento en que termina. Por ello este comando escribe las)]TJ
+-2.0551 -1.2 TD
+0 Tc
+0 Tw
+[(5)-250(primeras líneas. La primera línea es la)]TJ
+/TT9 1 Tf
+16.2432 0 TD
+(1)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(para)Tj
+/TT9 1 Tf
+1.9707 0 TD
+(sed)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-20.8643 -2.4 TD
+(Sabiendo esto, podemos utilizar)Tj
+/TT9 1 Tf
+13.0254 0 TD
+(sed)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(para escribir un rango de líneas. Por ejemplo)Tj
+/TT9 1 Tf
+8 0 0 8 133 582 Tm
+(unix$ seq 15 | sed -n 5,7p)Tj
+0 -1.5 TD
+(5)Tj
+T*
+(6)Tj
+T*
+(7)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 516 Tm
+0.0186 Tw
+(Aquí el )Tj
+/TT7 1 Tf
+3.2589 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2124 0 TD
+(-n)Tj
+/TT6 1 Tf
+1.4689 0 TD
+0.0187 Tw
+(hace que)Tj
+/TT9 1 Tf
+3.8128 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+2.069 0 TD
+0.0187 Tw
+(no imprima las líneas tras editarlas y utilizamos el comando)Tj
+/TT9 1 Tf
+24.4028 0 TD
+0 Tw
+(p)Tj
+/TT6 1 Tf
+0.8688 0 TD
+0.0187 Tw
+(para imprimir)Tj
+-37.6498 -1.2 TD
+0.0324 Tw
+(las líneas entre la)Tj
+/TT9 1 Tf
+7.2932 0 TD
+0 Tw
+(5)Tj
+/TT6 1 Tf
+0.8825 0 TD
+0.2824 Tc
+[(yl)282.4(a)]TJ
+/TT9 1 Tf
+1.7865 0 TD
+0 Tc
+(7)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0323 Tw
+[(.)-282.4(Como puedes v)15(e)0(r)40(,)-282.3(dos direcciones separadas por una ")]TJ
+/TT9 1 Tf
+22.4987 0 TD
+0 Tw
+(,)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0323 Tw
+[(")-282.3(delimitan un rango de)]TJ
+-33.661 -1.2 TD
+0 Tw
+(líneas.)Tj
+0 -2.4 TD
+0.0954 Tw
+[(V)111(eamos otro ejemplo, sabemos que)]TJ
+/TT9 1 Tf
+14.8626 0 TD
+0 Tw
+(ps)Tj
+/TT6 1 Tf
+1.5457 0 TD
+0.0955 Tw
+(escribe una primera línea con la cabecera que indica qué es cada)Tj
+-16.4083 -1.2 TD
+0 Tw
+(campo. Por ejemplo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 438 Tm
+(unix$ ps)Tj
+1.2 -1.5 TD
+[(PID TTY)-6600(TIME CMD)]TJ
+T*
+[(448 ttys000)-2400(0:00.01 -bash)]TJ
+T*
+[(519 ttys000)-2400(0:00.01 acme)]TJ
+-1.2 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 360 Tm
+(Podemos utilizar)Tj
+/TT9 1 Tf
+8 0 0 8 133 342 Tm
+(unix$ ps | tail +1)Tj
+1.2 -1.5 TD
+[(448 ttys000)-2400(0:00.01 -bash)]TJ
+T*
+[(519 ttys000)-2400(0:00.01 acme)]TJ
+-1.2 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 288 Tm
+(como ya vimos o bien)Tj
+/TT9 1 Tf
+8 0 0 8 133 270 Tm
+(unix$ ps | sed -n ’2,$p’)Tj
+1.2 -1.5 TD
+[(448 ttys000)-2400(0:00.01 -bash)]TJ
+T*
+[(519 ttys000)-2400(0:00.01 acme)]TJ
+-1.2 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 216 Tm
+[(Como puedes v)15(e)0(r)40(,)-250(")]TJ
+/TT9 1 Tf
+7.8517 0 TD
+($)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-250(equi)25(v)25(ale al número de la última línea cuando se utiliza como dirección en)]TJ
+/TT9 1 Tf
+30.2913 0 TD
+(sed)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-40.5434 -2.4 TD
+(De un modo similar podemos eliminar un rango de lineas con el comando)Tj
+/TT9 1 Tf
+29.7983 0 TD
+(d)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(:)Tj
+/TT9 1 Tf
+8 0 0 8 133 174 Tm
+(unix$ seq 15 | sed 2,12d)Tj
+0 -1.5 TD
+(1)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 84 Tm
+0.0292 Tw
+[(¡O v)25(arios rangos! El )]TJ
+/TT7 1 Tf
+8.4785 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2229 0 TD
+(-e)Tj
+/TT6 1 Tf
+1.4793 0 TD
+0.0291 Tw
+[(permite utilizar como ar)18(gumento un comando de edición, y podemos repetirlo)]TJ
+-11.7369 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+[(el número de v)14.9(eces que haga)-250.1(f)9.9(alta. Nos permite aplicar más de un comando en el mismo)]TJ
+/TT9 1 Tf
+35.513 0 TD
+0 Tc
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-37.3133 -4.8 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+63 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+65 0 obj
+<<
+/Length 4651
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-19-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 15 | sed -e 1,3d -e 5,12d)Tj
+0 -1.5 TD
+(4)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 630 Tm
+(Pero recuerda... ¡)Tj
+/TT9 1 Tf
+6.8574 0 TD
+(sed)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(trabaja línea a línea sobre un stream!)Tj
+/TT9 1 Tf
+8 0 0 8 133 612 Tm
+(unix$ seq 15 | sed -e 2,12d -e 1,3d)Tj
+0 -1.5 TD
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 582 Tm
+0.0708 Tw
+[(¡Aquí la hemos liado parda! Este comando no tiene mucho sentido dado que hay v)25(arios comandos que se)]TJ
+0 -1.2 TD
+0 Tw
+(aplican a líneas del mismo rango.)Tj
+0 -2.4 TD
+0.1404 Tw
+[(Las direcciones pueden ser e)15(xpresiones re)15(gulares escritas entre ")]TJ
+/TT9 1 Tf
+26.9345 0 TD
+0 Tw
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1404 Tw
+(". Esto nos permite seleccionar líneas)Tj
+-27.5346 -1.2 TD
+0.0465 Tw
+(entre ciertas líneas de interés. Por ejemplo, suponiendo que tenemos un )Tj
+/TT7 1 Tf
+29.3089 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0465 Tw
+(chero fuente en C con la función)Tj
+/TT9 1 Tf
+-29.865 -1.2 TD
+0 Tw
+(run)Tj
+/TT6 1 Tf
+1.8003 0 TD
+[(,)-250(este comando escribe la cabecera y el cuerpo de dicha función:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 504 Tm
+[(unix$ sed -n)-1200(’/ˆrun/,/ˆ}/p <run2.c)]TJ
+0 -1.5 TD
+(run\(char *cmd, char *argv[]\))Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 414 Tm
+-0.0001 Tc
+0.1455 Tw
+[(P)14.9(ara entender por qué no se escriben todas las líneas hasta la última que contenga)-395.5(u)-0.1(n)-395.5(")]TJ
+/TT9 1 Tf
+36.8142 0 TD
+0 Tc
+0 Tw
+(})Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-395.3(a)0(l)-395.3(principio,)]TJ
+-37.4143 -1.2 TD
+[(piensa cómo e)25(v)25(alúa)]TJ
+/TT9 1 Tf
+8.0857 0 TD
+(sed)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(las direcciones:)Tj
+-7.636 -1.56 TD
+[(•)-2150(Primero esperará hasta tener una línea que encaja con ")]TJ
+/TT9 1 Tf
+24.5919 0 TD
+(ˆrun)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(")Tj
+-26.9923 -1.56 TD
+[(•)-2150(Una v)15(ez encontrada, se)15(guirá hasta una línea que encaja con ")]TJ
+/TT9 1 Tf
+26.8387 0 TD
+(ˆ})Tj
+/TT6 1 Tf
+1.2002 0 TD
+(".)Tj
+-30.5389 -1.2 TD
+0.0885 Tw
+(En cada una de esas líneas ejecutará ")Tj
+/TT9 1 Tf
+15.7142 0 TD
+0 Tw
+(p)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0886 Tw
+[(")-338.5(\(que imprime la línea\) y una v)15(ez alcanza la línea de la se)15(gunda)]TJ
+-16.3143 -1.2 TD
+0 Tw
+[(dirección, el comando termina por lo que no se vuelv)15(e)-250(a)-250(ejecutar para las líneas que siguen.)]TJ
+0 -2.4 TD
+0.093 Tw
+[(Otro comando de los más utilizados es el de sustituir una e)15(xpresión por otra. Por ejemplo, este comando)]TJ
+0 -1.2 TD
+0 Tw
+[(aumenta la tab)20(ulación del te)15(xto a que se aplica:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 292.8 Tm
+(sed ’s/ˆ//’)Tj
+/TT6 1 Tf
+10 0 0 10 72 274.8 Tm
+[(Lo que hace es reemplazar el principio de línea por un tab)20(ulador \(que hemos escrito como ")]TJ
+/TT9 1 Tf
+36.6519 0 TD
+()Tj
+/TT6 1 Tf
+0.6001 0 TD
+(".)Tj
+-37.252 -2.4 TD
+-0.0001 Tc
+0.1073 Tw
+(Supongamos que queremos renombrar todos los )Tj
+/TT7 1 Tf
+20.1353 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1072 Tw
+(cheros ")Tj
+/TT9 1 Tf
+3.3753 0 TD
+0 Tw
+(.c)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.3572 Tc
+("a)Tj
+/TT7 1 Tf
+1.5665 0 TD
+0 Tc
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1072 Tw
+(cheros ")Tj
+/TT9 1 Tf
+3.3753 0 TD
+0 Tw
+(.C)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.1072 Tw
+[(")-357.2(por alguna e)15(xtraña razón.)]TJ
+-31.965 -1.2 TD
+0 Tw
+(Podemos utilizar)Tj
+/TT9 1 Tf
+6.999 0 TD
+(sed)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(para ello:)Tj
+/TT9 1 Tf
+8 0 0 8 133 220.8 Tm
+(unix$ echo foo.c | sed ’s/\\.c$/.C/’)Tj
+0 -1.5 TD
+(foo.C)Tj
+/TT6 1 Tf
+10 0 0 10 72 190.8 Tm
+(Así pues)Tj
+/TT9 1 Tf
+8 0 0 8 133 172.8 Tm
+(unix$ for f in *.c ; do)Tj
+T*
+[(>)-2400(nf=‘echo $f | sed ’s/\\.c$/.C/’‘)]TJ
+T*
+0.6 Tc
+[(>)-1800(m)600(v$)600(f$)600(n)600(f)]TJ
+T*
+0 Tc
+[(>)-2400(done)]TJ
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 106.8 Tm
+0.0302 Tw
+(hace el trabajo. Cuidado aquí. El comando de)Tj
+/TT9 1 Tf
+18.6796 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+2.0805 0 TD
+0.0301 Tw
+(está entre comillas simples, pero todo lo que hay tras el)Tj
+-20.7601 -1.2 TD
+0 Tw
+(signo ")Tj
+/TT9 1 Tf
+2.8252 0 TD
+(=)Tj
+/TT6 1 Tf
+0.6001 0 TD
+[(")-250(está entre comillas in)40(v)15(ertidas. ¡No son iguales!)]TJ
+-3.4253 -2.4 TD
+0.0527 Tw
+(Por ejemplo, podemos tener )Tj
+/TT7 1 Tf
+11.6805 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0527 Tw
+(cheros llamados)Tj
+/TT9 1 Tf
+6.8256 0 TD
+0 Tw
+(ch1.w)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5527 0 TD
+(ch2.w)Tj
+/TT6 1 Tf
+3.0005 0 TD
+-0.0004 Tc
+0.0531 Tw
+[(,)-303.1(etc. y lle)14.6(gar)-303.2(a)-0.4(l)]TJ
+/TT9 1 Tf
+6.6573 0 TD
+0 Tc
+0 Tw
+(ch10.w)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0528 Tw
+[(.)-302.8(E)0(n)-302.8(ese momento)]TJ
+-35.8738 -4.68 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+66 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+68 0 obj
+<<
+/Length 4302
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-20-)Tj
+-20.767 -3.6 TD
+0.0345 Tw
+(quizá queramos renombrar)Tj
+/TT9 1 Tf
+11.0713 0 TD
+0 Tw
+(ch1.w)Tj
+/TT6 1 Tf
+3.285 0 TD
+0.0345 Tw
+(para que sea)Tj
+/TT9 1 Tf
+5.2949 0 TD
+0 Tw
+(ch01.w)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0344 Tw
+[(,)-284.5(y)-284.4(así hasta el)]TJ
+/TT9 1 Tf
+6.0593 0 TD
+0 Tw
+(9)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0344 Tw
+[(.)-284.4(¿Por qué?)-534.4(Bueno, de ese modo)]TJ
+/TT9 1 Tf
+-29.9112 -1.2 TD
+0 Tw
+(ls)Tj
+/TT6 1 Tf
+1.5361 0 TD
+0.0859 Tw
+[(los lista en el orden adecuado y otros programas los v)15(erán en el orden en que deberían estar)55(.)-336(D)0(e)-336(otro)]TJ
+-1.5361 -1.2 TD
+0 Tw
+(modo)Tj
+/TT9 1 Tf
+2.5278 0 TD
+(ch11.w)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(estará listado antes que)Tj
+/TT9 1 Tf
+9.4966 0 TD
+(ch2.w)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(.)Tj
+-18.8755 -2.4 TD
+0.1016 Tw
+[(Una v)15(ez más)]TJ
+/TT9 1 Tf
+5.7044 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+2.1519 0 TD
+0.1015 Tw
+[(nos puede ayudar)55(.)-351.6(P)15(ara probarlo, v)25(amos a crear esos )]TJ
+/TT7 1 Tf
+22.0055 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1015 Tw
+[(cheros, y v)25(amos a utilizar)]TJ
+/TT9 1 Tf
+10.9791 0 TD
+0 Tw
+(seq)Tj
+/TT6 1 Tf
+-41.397 -1.2 TD
+(para crearlos.)Tj
+/TT9 1 Tf
+8 0 0 8 133 630 Tm
+(unix$ for n in ‘seq 12‘; do touch ch$n.w ; done)Tj
+0 -1.5 TD
+(unix$ ls)Tj
+T*
+1.8 Tw
+(ch1.w ch11.w ch2.w ch4.w ch6.w ch8.w)Tj
+T*
+(ch10.w ch12.w ch3.w ch5.w ch7.w ch9.w)Tj
+T*
+0 Tw
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 564 Tm
+[(Y)-250(ahora podemos probar)55(...)]TJ
+/TT9 1 Tf
+8 0 0 8 133 546 Tm
+(unix$ for ch in ch[0-9].w ; do)Tj
+T*
+[(>)-2400(echo mv $ch ‘echo $ch | sed ’s/\\\([0-9]\\\)/0\\1/’ ‘)]TJ
+T*
+[(>)-2400(done)]TJ
+T*
+(mv ch1.w ch01.w)Tj
+T*
+(mv ch2.w ch02.w)Tj
+T*
+(mv ch3.w ch03.w)Tj
+T*
+(mv ch4.w ch04.w)Tj
+T*
+(mv ch5.w ch05.w)Tj
+T*
+(mv ch6.w ch06.w)Tj
+T*
+(mv ch7.w ch07.w)Tj
+T*
+(mv ch8.w ch08.w)Tj
+T*
+(mv ch9.w ch09.w)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 384 Tm
+-0.0003 Tc
+0.0917 Tw
+(En lugar de ejecutar)Tj
+/TT9 1 Tf
+8.634 0 TD
+0 Tc
+0 Tw
+(mv)Tj
+/TT6 1 Tf
+1.5416 0 TD
+0.0915 Tw
+(directamente, lo hemos precedido de)Tj
+/TT9 1 Tf
+15.396 0 TD
+0 Tw
+(echo)Tj
+/TT6 1 Tf
+2.7419 0 TD
+0.0915 Tw
+[(para v)15(er lo que v)25(a)-341.5(a)-341.5(ejecutar)55(.)-341.5(S)0(i)-341.5(nos)]TJ
+-28.3135 -1.2 TD
+0 Tw
+[(con)40(v)15(ence el resultado podemos añadir ")]TJ
+/TT9 1 Tf
+15.8752 0 TD
+(|sh)Tj
+/TT6 1 Tf
+1.8003 0 TD
+[(")-250(para ejecutarlo o quitar el)]TJ
+/TT9 1 Tf
+11.125 0 TD
+(echo)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-31.2009 -2.4 TD
+0.0722 Tw
+(Pero la parte interesante es ")Tj
+/TT9 1 Tf
+11.7365 0 TD
+0 Tw
+(s/\\\([0-9]\\\)/0\\1/)Tj
+/TT6 1 Tf
+9.6016 0 TD
+0.0722 Tw
+[(". Esto quiere decir que hay que sustituir el te)15(xto que)]TJ
+-21.3381 -1.2 TD
+0.0087 Tw
+(encaja con ")Tj
+/TT9 1 Tf
+4.9227 0 TD
+0 Tw
+([0-9])Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0087 Tw
+[(")-258.7(e)0(n)-258.7(cada línea por ")]TJ
+/TT9 1 Tf
+8.1617 0 TD
+0 Tw
+(0\\1)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0087 Tw
+(". El ")Tj
+/TT9 1 Tf
+2.4725 0 TD
+0 Tw
+(\\1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(")-258.7(signi)]TJ
+/TT7 1 Tf
+2.6117 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ca)Tj
+/TT4 1 Tf
+1.1464 0 TD
+0.0087 Tw
+[(el te)20(xto que encaja en la primer)15(a)-258.8(e)20(xpr)37(esión)]TJ
+-25.8721 -1.2 TD
+0 Tw
+[(entr)37(e)]TJ
+/TT6 1 Tf
+2.3039 0 TD
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(\\\()Tj
+/TT6 1 Tf
+1.2002 0 TD
+(...)Tj
+/TT9 1 Tf
+0.75 0 TD
+(\\\))Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0362 Tw
+(", que en este caso es ")Tj
+/TT9 1 Tf
+9.3358 0 TD
+0 Tw
+([0-9])Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0362 Tw
+(". Así pues, ")Tj
+/TT9 1 Tf
+5.3972 0 TD
+0 Tw
+(\\1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0361 Tw
+[(")-286.2(e)0(s)-286.1(capaz de recuperar parte del te)15(xto que ha)]TJ
+-24.7962 -1.2 TD
+0.0192 Tw
+[(encajado en la e)15(xpresión para utilizarlo al reemplazar)55(.)-269.2(V)75(uelv)15(e)-269.2(a)-269.2(leer la sesión anterior y notarás el efecto de)]TJ
+T*
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(\\1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(".)Tj
+-1.6084 -2.4 TD
+0.0181 Tw
+[(Observ)25(a)-268.2(que esta f)10(acilidad te permite reordenar el te)15(xto que hay en la línea. Si contamos de 10 a 15 de 1 en)]TJ
+0 -1.2 TD
+0 Tw
+[(1)-250(usando)]TJ
+/TT9 1 Tf
+3.833 0 TD
+(seq)Tj
+8 0 0 8 133 246 Tm
+(unix$ seq 10 1 15)Tj
+0 -1.5 TD
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+/TT6 1 Tf
+10 0 0 10 72 156 Tm
+[(podemos v)15(er el efecto de estas e)15(xpresiones en otro ejemplo:)]TJ
+0 -13.2 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+69 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+71 0 obj
+<<
+/Length 3894
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-21-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ seq 10 1 15 | sed ’s/\\\([0-9]\\\)\\\([0-9]\\\)/\\2\\1 and not \\1\\2/’)Tj
+0 -1.5 TD
+(01 and not 10)Tj
+T*
+(11 and not 11)Tj
+T*
+(21 and not 12)Tj
+T*
+(31 and not 13)Tj
+T*
+(41 and not 14)Tj
+T*
+(51 and not 15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 606 Tm
+0.0049 Tw
+[(Ahora tenemos dos sube)15(xpresiones entre ")]TJ
+/TT9 1 Tf
+16.9968 0 TD
+0 Tw
+(\\\()Tj
+/TT6 1 Tf
+1.2002 0 TD
+(...)Tj
+/TT9 1 Tf
+0.75 0 TD
+(\\\))Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0049 Tw
+[(", y reemplazamos toda la e)15(xpresión por te)15(xto consistente)]TJ
+-20.1472 -1.2 TD
+0.0623 Tw
+[(en los dos caracteres con el orden cambiado, lue)15(go ")]TJ
+/TT9 1 Tf
+22.1636 0 TD
+(and not)Tj
+/TT6 1 Tf
+4.9253 0 TD
+[(")-312.3(y)-312.3(lue)15(go los dos caracteres en el orden)]TJ
+-27.0888 -1.2 TD
+0.1013 Tw
+[(original. Ni que decir tiene que puedes utilizar cualquier sube)15(xpresión y no una que opere sobre un sólo)]TJ
+T*
+0 Tw
+[(carácter)55(.)]TJ
+0 -2.4 TD
+0.0223 Tw
+[(P)15(ara borrar una e)15(xpresión, podemos reemplazarla por)]TJ
+/TT4 1 Tf
+21.7838 0 TD
+0 Tw
+(nada)Tj
+/TT6 1 Tf
+2 0 TD
+0.0222 Tw
+[(.)-272.3(Por ejemplo, este comando elimina un ni)25(v)15(e)0(l)-272.2(d)0(e)]TJ
+-23.7838 -1.2 TD
+0 Tw
+[(tab)20(ulación de su entrada:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 516 Tm
+(sed ’s/ˆ//’)Tj
+/TT6 1 Tf
+10 0 0 10 72 486 Tm
+0.0508 Tw
+(Debes tener cuidado con las sustituciones en)Tj
+/TT9 1 Tf
+18.4337 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0508 Tw
+[(.)-300.8(S)0(e)-300.8(aplican al primer trozo de la línea que encaja con la)]TJ
+-20.234 -1.2 TD
+0.1088 Tw
+[(e)15(xpresión, pero no se repiten más adelante en la misma línea. Esto es, puedes reemplazar te)15(xto una sóla)]TJ
+T*
+0.0226 Tw
+[(v)15(ez. Si deseas reemplazar todas las v)15(eces que sea posible puedes añadir un )]TJ
+/TT7 1 Tf
+30.3634 0 TD
+0 Tw
+(ß)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0226 Tw
+(ag ")Tj
+/TT9 1 Tf
+1.6246 0 TD
+0 Tw
+(g)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.2727 Tw
+[(")-272.6(a)0(l)-272.6(comando. Por)-272.7(ejem-)]TJ
+-33.1443 -1.2 TD
+0 Tw
+(plo, dados los )Tj
+/TT7 1 Tf
+5.7778 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+/TT9 1 Tf
+2.8599 0 TD
+(chXX.w)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(", este comando nos imprime los números para esos )Tj
+/TT7 1 Tf
+20.9595 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros:)Tj
+/TT9 1 Tf
+8 0 0 8 133 432 Tm
+(unix$ ls)Tj
+0 -1.5 TD
+1.8 Tw
+(ch1.w ch11.w ch2.w ch4.w ch6.w ch8.w)Tj
+T*
+(ch10.w ch12.w ch3.w ch5.w ch7.w ch9.w)Tj
+T*
+0 Tw
+(unix$ ls | sed ’s/[.a-z]//g’)Tj
+2.4 -1.5 TD
+(1)Tj
+T*
+(10)Tj
+T*
+(11)Tj
+T*
+(12)Tj
+T*
+(2)Tj
+T*
+(...)Tj
+T*
+(9)Tj
+-2.4 -1.5 TD
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 282 Tm
+(Compara con)Tj
+/TT9 1 Tf
+8 0 0 8 133 264 Tm
+(unix$ ls | sed ’s/[.a-z]//’)Tj
+T*
+(h1.w)Tj
+T*
+(h10.w)Tj
+T*
+(...)Tj
+T*
+(unix$)Tj
+/TT2 1 Tf
+10 0 0 10 72 174 Tm
+[(7. )-250(T)74(rabajando con tablas)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.069 Tw
+[(En gran cantidad de casos tendrás datos tab)20(ulados como en una hoja de cálculo. Gran número de )]TJ
+/TT7 1 Tf
+40.0292 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros)Tj
+-40.5853 -1.2 TD
+(de con)Tj
+/TT7 1 Tf
+2.6377 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(guración en UNIX presentan este aspecto, y además la salida de muchos comandos está tab)20(ulada.)]TJ
+-3.1938 -2.4 TD
+0.0801 Tw
+[(La mayoría de las v)15(eces puedes operar )]TJ
+/TT7 1 Tf
+16.2327 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ltrando )Tj
+/TT7 1 Tf
+3.1626 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0801 Tw
+(las y columnas y trabajar con los comandos que hemos)Tj
+-20.5076 -1.2 TD
+0.1298 Tw
+[(visto durante el curso. P)15(ara cálculos numéricos puedes utilizar cualquier de las calculadores de línea de)]TJ
+T*
+0.1797 Tw
+[(comandos, aunque tal v)15(ez sea más simple utilizar)]TJ
+/TT4 1 Tf
+21.3889 0 TD
+0 Tw
+[(e)20(xpr\(1\))]TJ
+/TT6 1 Tf
+3.3527 0 TD
+0.1798 Tw
+[(para e)25(v)25(aluar e)15(xpresiones numéricas simples,)]TJ
+-24.7416 -1.2 TD
+0 Tw
+(como en:)Tj
+0 -6.24 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+72 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+75 0 obj
+<<
+/Length 5526
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-22-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ n=4)Tj
+0 -1.5 TD
+(unix$ n=‘expr $n ’*’ 2‘)Tj
+T*
+(unix$ echo $n)Tj
+T*
+(8)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 642 Tm
+(No necesitas mucho más.)Tj
+0 -2.4 TD
+0.1734 Tw
+(No obstante, dispones de)Tj
+/TT4 1 Tf
+10.942 0 TD
+0 Tw
+(awk\(1\))Tj
+/TT6 1 Tf
+3.2002 0 TD
+0.1733 Tw
+[(que es un lenguaje pensado para operar sobre datos tab)20(ulados. Y)100(a)-423.3(lo)]TJ
+-14.1422 -1.2 TD
+0.0112 Tw
+[(hemos utilizado para seleccionar campos, pero ahora v)25(amos a v)15(er algunos otros usos típicos y como son los)]TJ
+T*
+0 Tw
+(programas de)Tj
+/TT9 1 Tf
+5.6646 0 TD
+(awk)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(en general.)Tj
+-7.7148 -2.4 TD
+0.0553 Tw
+(La idea es similar a)Tj
+/TT4 1 Tf
+8.3009 0 TD
+0 Tw
+(sed\(1\))Tj
+/TT6 1 Tf
+2.499 0 TD
+[(.)-305.3(P)15(ara)]TJ
+/TT9 1 Tf
+2.6225 0 TD
+(awk)Tj
+/TT6 1 Tf
+2.1056 0 TD
+(los )Tj
+/TT7 1 Tf
+1.4723 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0553 Tw
+[(cheros constan de re)15(gistros \(líneas\) que tienen campos \(separa-)]TJ
+-17.5564 -1.2 TD
+0.0066 Tw
+(dos por blancos, aunque ya sabes como cambiar esto\). Lo que hace)Tj
+/TT9 1 Tf
+27.1257 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.057 0 TD
+0.0067 Tw
+(es leer la entrada \(o el )Tj
+/TT7 1 Tf
+9.0905 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0067 Tw
+(chero indi-)Tj
+-38.8293 -1.2 TD
+0 Tw
+[(cado como ar)18(gumento\) línea a línea y aplicar el programa sobre el mismo.)]TJ
+0 -2.4 TD
+0.0674 Tw
+(Un programa en)Tj
+/TT9 1 Tf
+6.9498 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.1177 0 TD
+0.0673 Tw
+[(se suele escribir directamente en el primer ar)18(gumento en la llamada a)]TJ
+/TT9 1 Tf
+28.7212 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0673 Tw
+[(,)-317.3(pero ya)]TJ
+-39.589 -1.2 TD
+0.0487 Tw
+(sabes que puedes utilizar ")Tj
+/TT9 1 Tf
+10.8218 0 TD
+0 Tw
+(#!)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0487 Tw
+[(")-298.7(e)0(n)-298.7(scripts para lo que gustes. El programa consta de)]TJ
+/TT2 1 Tf
+22.1598 0 TD
+0 Tw
+[(r)18(eglas)]TJ
+/TT6 1 Tf
+2.5367 0 TD
+0.0488 Tw
+[(,)-298.8(que tienen una)]TJ
+-36.7185 -1.2 TD
+0.0473 Tw
+[(e)15(xpresión \(opcional\) que selecciona a qué lineas se aplica la re)15(gla y una acción entre lla)20(v)15(e)0(s)-297.3(\(opcional\) que)]TJ
+T*
+0.0449 Tw
+(indica qué debe hacer)Tj
+/TT9 1 Tf
+9.1191 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.0952 0 TD
+0.0449 Tw
+[(en esas líneas. Si no hay e)15(xpresión se considera que la acción se aplica a todas)]TJ
+-11.2142 -1.2 TD
+0 Tw
+[(las líneas. Si no hay acción se considera que la acción es imprimir)55(.)]TJ
+0 -2.4 TD
+0.1438 Tw
+[(En las e)15(xpresiones y en las acciones tienes prede)]TJ
+/TT7 1 Tf
+20.6281 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1437 Tw
+[(nidas las v)25(ariables ")]TJ
+/TT9 1 Tf
+8.3956 0 TD
+0 Tw
+($1)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.1437 Tw
+[(")-393.7(\(el primer campo\), ")]TJ
+/TT9 1 Tf
+9.36 0 TD
+0 Tw
+($2)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(")-393.7(\(el)]TJ
+-41.3401 -1.2 TD
+0.0762 Tw
+[(se)15(gundo\), etc. El re)15(gistro entero, la línea, es ")]TJ
+/TT9 1 Tf
+18.7593 0 TD
+0 Tw
+($0)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.0763 Tw
+[(". )-249.9(Y)-326.2(además tienes de)]TJ
+/TT7 1 Tf
+9.2103 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0763 Tw
+[(nidas las v)25(ariables)]TJ
+/TT9 1 Tf
+7.785 0 TD
+0 Tw
+(NR)Tj
+/TT4 1 Tf
+1.5265 0 TD
+0.0763 Tw
+(number of)Tj
+-39.0374 -1.2 TD
+0 Tw
+[(r)37(ecor)37(d)]TJ
+/TT6 1 Tf
+2.842 0 TD
+(\(número de línea\) y)Tj
+/TT9 1 Tf
+8.1079 0 TD
+(NF)Tj
+/TT4 1 Tf
+1.4502 0 TD
+(number of )Tj
+/TT10 1 Tf
+4.333 0 TD
+(Þ)Tj
+/TT4 1 Tf
+0.5 0 TD
+(eld)Tj
+/TT6 1 Tf
+1.4717 0 TD
+(\(número de campos\).)Tj
+-18.7048 -2.4 TD
+-0.0002 Tc
+0.0006 Tw
+[(P)14.8(ara jugar)39.8(,)-250.6(v)24.8(amos a utilizar el )]TJ
+/TT7 1 Tf
+12.1073 0 TD
+0 Tc
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(chero)Tj
+/TT9 1 Tf
+2.4711 0 TD
+(/etc/passwd)Tj
+/TT6 1 Tf
+6.8515 0 TD
+0.0004 Tw
+(que de)Tj
+/TT7 1 Tf
+2.6381 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0003 Tw
+[(ne las cuentas de usuario. T)35(iene este aspecto:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 384 Tm
+0 Tw
+(nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false)Tj
+0 -1.5 TD
+(root:*:0:0:System Administrator:/var/root:/bin/sh)Tj
+T*
+(daemon:*:1:1:System Services:/var/root:/usr/bin/false)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 330 Tm
+0.0135 Tw
+[(El nombre de usuario, se)15(guido de su uid, gid, nombre real, home y por último el shell que utiliza. T)80(odos los)]TJ
+0 -1.2 TD
+0 Tw
+(campos separados por ")Tj
+/TT9 1 Tf
+9.4888 0 TD
+(:)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(".)Tj
+-10.0889 -2.4 TD
+[(V)111(amos a imprimir tan sólo el nombre de usuario y el shell que utilizan:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 276 Tm
+(unix$ awk -F: ’{print $1, $NF}’ /etc/passwd)Tj
+0 -1.5 TD
+(nobody /usr/bin/false)Tj
+T*
+(root /bin/sh)Tj
+T*
+(daemon /usr/bin/false)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 198 Tm
+-0.0001 Tc
+0.0267 Tw
+(En lugar de print, podemos utilizar)Tj
+/TT9 1 Tf
+14.3454 0 TD
+0 Tc
+0 Tw
+(printf)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0265 Tw
+[(.)-276.5(Las acciones de)]TJ
+/TT9 1 Tf
+7.1861 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.0768 0 TD
+0.0265 Tw
+(utilizan sintáxis casi como la de C y las)Tj
+-27.2089 -1.2 TD
+0.0528 Tw
+[(v)25(ariables no es preciso declararlas. Sabiendo esto puedes ser optimista y hacer intentos, la página de man-)]TJ
+T*
+0 Tw
+(ual te sacará de dudas en cualquier caso.)Tj
+/TT9 1 Tf
+8 0 0 8 133 156 Tm
+(unix$ awk -F: ’{printf\("user %s shell %s\\n", $1, $NF\);}’ /etc/passwd)Tj
+0 -1.5 TD
+(user nobody shell /usr/bin/false)Tj
+T*
+(user root shell /bin/sh)Tj
+T*
+(user daemon shell /usr/bin/false)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 78 Tm
+(¡Ahora sólo para)Tj
+/TT4 1 Tf
+6.9697 0 TD
+[(r)45(oot)]TJ
+/TT6 1 Tf
+1.622 0 TD
+(!)Tj
+-8.5917 -5.4 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+76 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+/TT10 77 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+79 0 obj
+<<
+/Length 3546
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-23-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(unix$ awk -F: ’)Tj
+0 -1.5 TD
+[(>)-2400($)0(1)-600(=)0(=)-600("root" {)]TJ
+T*
+[(>)-4800(printf\("user %s shell %s\\n", $1, $NF\);)]TJ
+T*
+[(>)-2400(})0(’)-600(/etc/passwd)]TJ
+T*
+(user root shell /bin/sh)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 630 Tm
+0.0401 Tw
+[(En este caso la e)15(xpresión)]TJ
+/TT9 1 Tf
+10.4873 0 TD
+($1 == "root")Tj
+/TT6 1 Tf
+7.5715 0 TD
+0.04 Tw
+(hace que la acción ejecute sólo si el primer campo es el string)Tj
+/TT9 1 Tf
+-18.0587 -1.2 TD
+0 Tw
+(root)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-2.4004 -2.4 TD
+(Pero compara con este otro comando:)Tj
+/TT9 1 Tf
+8 0 0 8 133 576 Tm
+(unix$ awk -F: ’)Tj
+0 -1.5 TD
+[(>)-2400($)0(1)-600(˜)-600(/root/ {)]TJ
+T*
+[(>)-4800(printf\("user %s shell %s\\n", $1, $NF\);)]TJ
+T*
+[(>)-2400(})0(’)-600(/etc/passwd)]TJ
+T*
+(user root shell /bin/sh)Tj
+T*
+(user _cvmsroot shell /usr/bin/false)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 486 Tm
+0.1205 Tw
+(El operador ")Tj
+/TT9 1 Tf
+5.5916 0 TD
+0 Tw
+(˜)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1206 Tw
+[(")-370.6(permite v)15(er si cierto te)15(xto encaja con una e)15(xpresión re)15(gular \(escrita entre ")]TJ
+/TT9 1 Tf
+31.9492 0 TD
+0 Tw
+(/)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.1206 Tw
+("\). Por eso)Tj
+-38.741 -1.2 TD
+0 Tw
+(aparecen dos cuentas, porque el nombre de usuario contiene)Tj
+/TT9 1 Tf
+24.2681 0 TD
+(root)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(en ambas.)Tj
+-26.9185 -2.4 TD
+0.0788 Tw
+(Igual que en el caso de)Tj
+/TT9 1 Tf
+9.8576 0 TD
+0 Tw
+(sed)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0788 Tw
+[(,)-328.8(podemos utilizar como e)15(xpresión un par de e)15(xpresiones re)15(gulares separadas)]TJ
+-11.6579 -1.2 TD
+0.0003 Tw
+[(por una coma, lo que hace que la e)15(xpresión sea cierta para las líneas comprendidas entre una que encaja con)]TJ
+T*
+0 Tw
+[(la primera y otra que encaja con la se)15(gunda.)]TJ
+/TT9 1 Tf
+8 0 0 8 133 408 Tm
+(unix$ seq 15 | awk ’/3/,/5/ {print}’)Tj
+0 -1.5 TD
+(3)Tj
+T*
+(4)Tj
+T*
+(5)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 306 Tm
+0.0231 Tw
+[(V)111(erás que aparecen las líneas entre la 3 y la 5 \(que encajan con las e)15(xpresiones\) y las líneas entre la 13 y la)]TJ
+0 -1.2 TD
+0.1168 Tw
+[(15 \(que también lo hacen\).)-616.8(Las e)15(xpresiones pueden ser mas elaboradas y puedes utilizar los operadores)]TJ
+T*
+0 Tw
+(")Tj
+/TT9 1 Tf
+0.4082 0 TD
+(&&)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.25 Tc
+("y")Tj
+/TT9 1 Tf
+1.8164 0 TD
+0 Tc
+(||)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(")-250(casi como en C.)]TJ
+-4.625 -2.4 TD
+0.0212 Tw
+(La acción)Tj
+/TT9 1 Tf
+4.2064 0 TD
+0 Tw
+(next)Tj
+/TT6 1 Tf
+2.6715 0 TD
+0.0211 Tw
+[(salta el re)15(gistro en curso.)-521.1(Considerando que)]TJ
+/TT9 1 Tf
+18.1 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.0714 0 TD
+0.0211 Tw
+[(procesa las re)15(glas en el orden en que las)]TJ
+-27.0492 -1.2 TD
+0 Tw
+(escribimos, podemos hacer que imprima un rango de líneas pero salte algunas. Por ejemplo,)Tj
+/TT9 1 Tf
+8 0 0 8 133 228 Tm
+(unix$ seq 15 | awk ’)Tj
+0 -1.5 TD
+[(>)-2400($)0(0)-600(=)0(=)-600("4" {next})]TJ
+T*
+[(>)-2400(/3/,/5/ {print} ’)]TJ
+T*
+(3)Tj
+T*
+(5)Tj
+T*
+(13)Tj
+T*
+(14)Tj
+T*
+(15)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 102 Tm
+(Muy útil para utilizar)Tj
+/TT9 1 Tf
+8 0 0 8 133 84 Tm
+($0 ˜ /ˆ#/ {next})Tj
+/TT6 1 Tf
+10 0 0 10 72 66 Tm
+0.0596 Tw
+(al principio del programa de)Tj
+/TT9 1 Tf
+11.8772 0 TD
+0 Tw
+(awk)Tj
+/TT6 1 Tf
+2.11 0 TD
+0.0597 Tw
+[(e)-309.7(ignorar las líneas que comienzan por un ")]TJ
+/TT9 1 Tf
+17.7686 0 TD
+0 Tw
+(#)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.0597 Tw
+[(")-309.7(\(que suele ser el carácter)]TJ
+-32.3559 -4.2 TD
+0 Tw
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+80 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+82 0 obj
+<<
+/Length 2346
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-24-)Tj
+-20.767 -3.6 TD
+(de comentario en el shell y en muchos )Tj
+/TT7 1 Tf
+15.5508 0 TD
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(cheros\).)Tj
+-16.1069 -2.4 TD
+0.1608 Tw
+[(Las e)15(xpresiones)]TJ
+/TT9 1 Tf
+6.9711 0 TD
+0 Tw
+(BEGIN)Tj
+/TT6 1 Tf
+3.4112 0 TD
+(y)Tj
+/TT9 1 Tf
+0.9107 0 TD
+(END)Tj
+/TT6 1 Tf
+2.211 0 TD
+0.1607 Tw
+(hacen que su acción ejecute antes de procesar la entrada y después de)Tj
+-13.5039 -1.2 TD
+0 Tw
+(haberla procesado. Podemos utilizar esto para sumar los números de la entrada, por ejemplo:)Tj
+/TT9 1 Tf
+8 0 0 8 133 654 Tm
+(unix$ seq 15 | awk ’)Tj
+0 -1.5 TD
+[(>)-2400({tot += $0})]TJ
+T*
+[(>)-2400(END {print tot}’)]TJ
+T*
+(120)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 588 Tm
+[(O)-250(para obtener la media:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 570 Tm
+(unix$ seq 15 | awk ’)Tj
+T*
+[(>)-2400({tot += $0})]TJ
+T*
+[(>)-2400(END {print tot/NR}’)]TJ
+T*
+(8)Tj
+T*
+(unix$)Tj
+/TT6 1 Tf
+10 0 0 10 72 492 Tm
+(Este otro obtiene la media de los números pares, y además los imprime:)Tj
+/TT9 1 Tf
+8 0 0 8 133 474 Tm
+(unix$ seq 15 | awk ’)Tj
+T*
+0.6 Tc
+[(>)-1800($)600(0%2=)600(=0{)]TJ
+T*
+0 Tc
+[(>)-4800(print;)]TJ
+T*
+[(>)-4800(tot += $0;)]TJ
+T*
+2.4 Tc
+(>})Tj
+T*
+0 Tc
+[(>)-2400(END {print tot/NR}’)]TJ
+T*
+(2)Tj
+T*
+(4)Tj
+T*
+(6)Tj
+T*
+(8)Tj
+T*
+(10)Tj
+T*
+(12)Tj
+T*
+(14)Tj
+T*
+(3.73333)Tj
+/TT6 1 Tf
+10 0 0 10 72 288 Tm
+(Pero podríamos haberlo hecho así:)Tj
+/TT9 1 Tf
+8 0 0 8 133 270 Tm
+(unix$ seq 15 | awk ’)Tj
+T*
+[(>)-2400({)-600(if \($0 %2 == 0\) {)]TJ
+T*
+[(>)-4800(print;)]TJ
+T*
+[(>)-4800(tot += $0;)]TJ
+T*
+3.6 Tc
+(>})Tj
+T*
+2.4 Tc
+[(>})2400(’)]TJ
+T*
+0 Tc
+(2)Tj
+T*
+(4)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 144 Tm
+0.1534 Tw
+(Simplemente recuerda que las acciones disponen de sintaxis similar a la de C y se optimista. Consulta)Tj
+/TT4 1 Tf
+0 -1.2 TD
+0 Tw
+(awk\(1\))Tj
+/TT6 1 Tf
+3.0922 0 TD
+0.0652 Tw
+[(para v)15(er qué funciones tienes disponibles y que e)15(xpresiones y estructuras de control. Si has enten-)]TJ
+-3.0922 -1.2 TD
+0 Tw
+[(dido lo que hemos estado haciendo, se)15(guro que te sobra con la página de manual.)]TJ
+0 -2.4 TD
+0.0677 Tw
+(¿Puedes escribir un comando que numere las líneas de un )Tj
+/TT7 1 Tf
+23.9475 0 TD
+0 Tw
+(Þ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0677 Tw
+[(chero? P)15(ara imprimirlo con números de línea,)]TJ
+-24.5037 -1.2 TD
+0 Tw
+(por ejemplo.)Tj
+0 -6 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+83 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+85 0 obj
+<<
+/Length 126
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-25-)Tj
+-20.767 -72 TD
+(\(c\) 2016 Francisco J. Ballesteros)Tj
+ET
+endstream
+endobj
+86 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+87 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+88 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+89 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+90 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+91 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+92 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 333 250 0 
+0 500 500 500 500 500 500 500 0 0 333 0 0 0 0 0 
+0 0 0 722 0 667 611 0 0 389 0 0 667 0 0 778 
+0 0 0 556 667 722 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 500 556 278 333 0 278 833 556 500 
+556 0 444 389 333 556 500 0 500 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 87 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 243
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 250 0 0 0 
+500 500 500 0 0 500 0 500 0 0 0 0 0 0 0 0 
+0 0 611 0 0 0 611 0 0 0 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 500 444 278 500 500 278 278 444 278 722 500 500 
+500 500 389 389 278 500 444 667 444 444 389 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 0 
+0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 88 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 250
+/Widths [250 333 408 0 0 0 0 0 333 333 0 0 250 333 250 278 
+500 500 500 500 500 500 500 500 500 500 278 0 0 0 0 444 
+0 722 667 667 722 611 556 722 722 333 389 0 611 889 722 722 
+556 722 667 556 611 722 722 0 722 722 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 350 0 0 0 0 0 0 0 0 0 0 
+0 333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 444 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 444 0 0 0 0 0 0 0 444 0 0 0 278 0 0 
+0 500 0 500 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 89 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 90 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 31
+/LastChar 241
+/Widths [600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 91 0 R
+>>
+endobj
+77 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 222
+/Widths [500 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 92 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+26 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 28 0 R
+/Contents 27 0 R
+>>
+endobj
+29 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 31 0 R
+/Contents 30 0 R
+>>
+endobj
+32 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 34 0 R
+/Contents 33 0 R
+>>
+endobj
+35 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 37 0 R
+/Contents 36 0 R
+>>
+endobj
+38 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 40 0 R
+/Contents 39 0 R
+>>
+endobj
+43 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 45 0 R
+/Contents 44 0 R
+>>
+endobj
+46 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 48 0 R
+/Contents 47 0 R
+>>
+endobj
+49 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 51 0 R
+/Contents 50 0 R
+>>
+endobj
+52 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 54 0 R
+/Contents 53 0 R
+>>
+endobj
+55 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 57 0 R
+/Contents 56 0 R
+>>
+endobj
+58 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 60 0 R
+/Contents 59 0 R
+>>
+endobj
+61 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 63 0 R
+/Contents 62 0 R
+>>
+endobj
+64 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 66 0 R
+/Contents 65 0 R
+>>
+endobj
+67 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 69 0 R
+/Contents 68 0 R
+>>
+endobj
+70 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 72 0 R
+/Contents 71 0 R
+>>
+endobj
+74 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 76 0 R
+/Contents 75 0 R
+>>
+endobj
+78 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 80 0 R
+/Contents 79 0 R
+>>
+endobj
+81 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 83 0 R
+/Contents 82 0 R
+>>
+endobj
+84 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 86 0 R
+/Contents 85 0 R
+>>
+endobj
+93 0 obj
+<<
+/S /D
+>>
+endobj
+94 0 obj
+<<
+/Nums [0 93 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R 26 0 R 29 0 R 32 0 R 35 0 R]
+/Count 10
+/Parent 41 0 R
+>>
+endobj
+42 0 obj
+<<
+/Type /Pages
+/Kids [38 0 R 43 0 R 46 0 R 49 0 R 52 0 R 55 0 R 58 0 R 61 0 R 64 0 R 67 0 R]
+/Count 10
+/Parent 41 0 R
+>>
+endobj
+73 0 obj
+<<
+/Type /Pages
+/Kids [70 0 R 74 0 R 78 0 R 81 0 R 84 0 R]
+/Count 5
+/Parent 41 0 R
+>>
+endobj
+41 0 obj
+<<
+/Type /Pages
+/Kids [10 0 R 42 0 R 73 0 R ]
+/Count 25
+/MediaBox [0 0 612 792]
+>>
+endobj
+95 0 obj
+<<
+/CreationDate (D:20161107101221+01'00')
+/ModDate (D:20161107101221+01'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+96 0 obj
+<<
+/Type /Catalog
+/Pages 41 0 R
+/PageLabels 94 0 R
+>>
+endobj
+xref
+0 97
+0000000000 65535 f 
+0000108224 00000 n 
+0000000016 00000 n 
+0000004189 00000 n 
+0000104720 00000 n 
+0000105406 00000 n 
+0000106088 00000 n 
+0000106861 00000 n 
+0000107035 00000 n 
+0000103393 00000 n 
+0000110389 00000 n 
+0000108305 00000 n 
+0000004328 00000 n 
+0000010253 00000 n 
+0000108389 00000 n 
+0000010382 00000 n 
+0000015654 00000 n 
+0000108473 00000 n 
+0000015794 00000 n 
+0000020485 00000 n 
+0000108557 00000 n 
+0000020625 00000 n 
+0000029153 00000 n 
+0000108641 00000 n 
+0000029282 00000 n 
+0000031582 00000 n 
+0000108725 00000 n 
+0000031689 00000 n 
+0000034985 00000 n 
+0000108809 00000 n 
+0000035114 00000 n 
+0000040294 00000 n 
+0000108893 00000 n 
+0000040423 00000 n 
+0000044264 00000 n 
+0000108977 00000 n 
+0000044382 00000 n 
+0000047029 00000 n 
+0000109061 00000 n 
+0000047158 00000 n 
+0000051105 00000 n 
+0000110766 00000 n 
+0000110526 00000 n 
+0000109145 00000 n 
+0000051234 00000 n 
+0000056307 00000 n 
+0000109229 00000 n 
+0000056447 00000 n 
+0000060603 00000 n 
+0000109313 00000 n 
+0000060732 00000 n 
+0000063752 00000 n 
+0000109397 00000 n 
+0000063870 00000 n 
+0000067435 00000 n 
+0000109481 00000 n 
+0000067553 00000 n 
+0000069664 00000 n 
+0000109565 00000 n 
+0000069782 00000 n 
+0000073381 00000 n 
+0000109649 00000 n 
+0000073521 00000 n 
+0000077631 00000 n 
+0000109733 00000 n 
+0000077760 00000 n 
+0000082464 00000 n 
+0000109817 00000 n 
+0000082582 00000 n 
+0000086937 00000 n 
+0000109901 00000 n 
+0000087066 00000 n 
+0000091013 00000 n 
+0000110664 00000 n 
+0000109985 00000 n 
+0000091153 00000 n 
+0000096732 00000 n 
+0000108052 00000 n 
+0000110069 00000 n 
+0000096885 00000 n 
+0000100484 00000 n 
+0000110153 00000 n 
+0000100591 00000 n 
+0000102990 00000 n 
+0000110237 00000 n 
+0000103119 00000 n 
+0000103297 00000 n 
+0000103533 00000 n 
+0000103735 00000 n 
+0000103935 00000 n 
+0000104132 00000 n 
+0000104329 00000 n 
+0000104520 00000 n 
+0000110321 00000 n 
+0000110349 00000 n 
+0000110865 00000 n 
+0000110988 00000 n 
+trailer
+<<
+/Size 97
+/Root 96 0 R
+/Info 95 0 R
+/ID [<b8d8e0d784ed26d0d756991a2af144e1><b8d8e0d784ed26d0d756991a2af144e1>]
+>>
+startxref
+111058
+%%EOF

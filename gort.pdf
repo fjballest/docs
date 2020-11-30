@@ -1,0 +1,4125 @@
+%PDF-1.3
+%‚„œ”
+2 0 obj
+<<
+/Length 4713
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 210.444 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+[(Notes on the Go 1.4 Run-T)18(ime)]TJ
+/TT4 1 Tf
+10 0 0 10 239.955 633 Tm
+-0.21 Tw
+[(F)55(r)55( ancisco )-210(J)25(.)-250(Ballester)45(os)]TJ
+0.373 -1.2 TD
+0 Tw
+[(TR LSUB-15-2 \(r)37(e)15(v)15( )-15(1\))]TJ
+2.085 -4.8 TD
+[(ABSTRA)30(CT)]TJ
+/TT6 1 Tf
+-13.1535 -2.4 TD
+0.0845 Tw
+[(This TR contains notes about the Go run time as of Go 1.4. The)15(y)-334.5(are intended to)]TJ
+-2.5 -1.2 TD
+0.0712 Tw
+[(aid in the construction of a k)10(ernel for Cli)25(v)15(e)0(.)-321.2(The description here will be updated in the)]TJ
+T*
+0.0347 Tw
+[(future without publising a ne)25(w)-284.7(TR, the TR re)25(vision number can be used to see if the v)15(e)0(r)20(-)]TJ
+T*
+0 Tw
+(sion is up to date or not.)Tj
+/TT2 1 Tf
+-3.6 -3.6 TD
+0.25 Tw
+(1. Initialization)Tj
+/TT6 1 Tf
+0 -1.92 TD
+0 Tw
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(rt0_darwin_amd64.s:13 main\(\))Tj
+/TT6 1 Tf
+17.0527 0 TD
+[(is the entry point for the binary)65(.)-250(A)-250(direct jump to...)]TJ
+-19.5528 -2.76 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.136 Tw
+(asm_amd64.s:9: runtime.rt0_go)Tj
+/TT6 1 Tf
+17.9249 0 TD
+(which is the actual crt0. This initializes the stack calls)Tj
+/TT8 1 Tf
+-17.925 -1.2 TD
+0 Tw
+(_cgo_init)Tj
+/TT6 1 Tf
+5.7348 0 TD
+0.0839 Tw
+(if needed, updates stack guards, setups TLS, sets)Tj
+/TT8 1 Tf
+20.4168 0 TD
+0 Tw
+(m)Tj
+/TT6 1 Tf
+0.934 0 TD
+(to)Tj
+/TT8 1 Tf
+1.1117 0 TD
+(m0)Tj
+/TT6 1 Tf
+1.5341 0 TD
+(and)Tj
+/TT8 1 Tf
+1.7777 0 TD
+(g)Tj
+/TT6 1 Tf
+0.934 0 TD
+(to)Tj
+/TT8 1 Tf
+1.1116 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.534 0 TD
+0.0838 Tw
+(and continues)Tj
+-35.0888 -1.2 TD
+0 Tw
+(calling...)Tj
+0 -2.76 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(runtime.args)Tj
+/TT6 1 Tf
+7.4512 0 TD
+[(to sa)20(v)15(e)15( )-15(the ar)18(guments from the OS)]TJ
+-9.9513 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(os_darwin.c:54: runtime.osinit)Tj
+/TT6 1 Tf
+18.2529 0 TD
+[(to initialize threading \(the)15(y)-250(doní)18(t)-250(use their libc\))]TJ
+-20.753 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.042 Tw
+(proc.c:122: runtime.schedinit\(void\))Tj
+/TT6 1 Tf
+21.3374 0 TD
+(to create a G that calls)Tj
+/TT8 1 Tf
+9.4141 0 TD
+0 Tw
+(runtime.main)Tj
+/TT6 1 Tf
+7.2012 0 TD
+(.)Tj
+-37.9528 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(traceback.go:48: func tracebackinit\(\))Tj
+/TT6 1 Tf
+-2.5001 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(symtab.go:46: func symtabinit)Tj
+/TT6 1 Tf
+-2.5001 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0912 Tw
+(stack.c:42: runtime.stackinit\(void\))Tj
+/TT6 1 Tf
+21.4358 0 TD
+0.0911 Tw
+(calls this function for the stacks in)Tj
+-21.4359 -1.2 TD
+0 Tw
+(the pool:)Tj
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mheap.c:663: runtime.MSpanList_Init)Tj
+/TT6 1 Tf
+-5.0001 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(malloc.c:109: runtime.mallocinit)Tj
+/TT6 1 Tf
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mheap.c:57: runtime.MHeap_Init)Tj
+/TT6 1 Tf
+18.2529 0 TD
+(initializes the heap using these:)Tj
+-18.253 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mfixalloc.c:16: runtime.FixAlloc_Init)Tj
+/TT6 1 Tf
+22.2036 0 TD
+[(,)-250(for se)25(v)15(eral allocs.)]TJ
+-24.7037 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0508 Tw
+(mheap.c:663: runtime.MSpanList_Init)Tj
+/TT6 1 Tf
+21.0542 0 TD
+[(,)-300.8(for free and b)20(usy lists.)]TJ
+-23.5543 -1.56 TD
+0 Tw
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mcentral.c:21: runtime.MCentral_Init)Tj
+/TT6 1 Tf
+21.6035 0 TD
+[(,)-250(for mcentral lists.)]TJ
+-26.6036 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.292 Tw
+(mcache.c:19: runtime.allocmcache)Tj
+/TT6 1 Tf
+20.0371 0 TD
+0 Tw
+(sets)Tj
+/TT8 1 Tf
+2.042 0 TD
+(g->m->mcache)Tj
+/TT6 1 Tf
+7.2012 0 TD
+[(,)-542(a)-542(per)20(-P)]TJ
+-29.2804 -1.2 TD
+(malloc cache for small objects.)Tj
+-5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.2272 Tw
+(proc.c:190: mcommoninit)Tj
+/TT6 1 Tf
+14.5066 0 TD
+(calls os-speci)Tj
+/TT9 1 Tf
+5.5866 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(c)Tj
+/TT8 1 Tf
+0.921 0 TD
+(mpreinit)Tj
+/TT6 1 Tf
+5.278 0 TD
+0.2272 Tw
+(and links m into the)Tj
+-26.8485 -1.2 TD
+0 Tw
+(sched list \()Tj
+/TT8 1 Tf
+4.3325 0 TD
+(allm)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(\).)Tj
+-9.2329 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(goargs)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(and)Tj
+/TT8 1 Tf
+1.6938 0 TD
+(goenvs)Tj
+/TT6 1 Tf
+3.8506 0 TD
+[(sa)20(v)15(e)15( )-15(the UNIX ar)18(guments.)]TJ
+-11.8951 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mgc0.c:1345: runtime.gcinit)Tj
+/TT6 1 Tf
+16.4526 0 TD
+(sets GC masks for data and bss.)Tj
+-18.9527 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:2655: procresize)Tj
+/TT6 1 Tf
+14.0522 0 TD
+(is called to create)Tj
+/TT4 1 Tf
+7.2183 0 TD
+(Ps)Tj
+/TT6 1 Tf
+1.25 0 TD
+(for)Tj
+/TT8 1 Tf
+1.416 0 TD
+(GOMAXPROCS)Tj
+/TT6 1 Tf
+6.001 0 TD
+(.)Tj
+-34.9376 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:2154: runtime.newproc)Tj
+/TT6 1 Tf
+17.0527 0 TD
+(is called to run)Tj
+/TT8 1 Tf
+6.165 0 TD
+(runtime.main)Tj
+/TT6 1 Tf
+7.4512 0 TD
+(using)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 4111
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+-16.017 -3.6 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.6668 Tw
+(asm_amd64.s:218: runtime.onM)Tj
+/TT6 1 Tf
+18.3862 0 TD
+0.6667 Tw
+(to call)Tj
+/TT8 1 Tf
+4.0546 0 TD
+0 Tw
+(newproc_m\))Tj
+/TT6 1 Tf
+6.9177 0 TD
+0.6667 Tw
+(to run)Tj
+/TT8 1 Tf
+3.9442 0 TD
+0 Tw
+(run-)Tj
+-33.3028 -1.2 TD
+(time.main)Tj
+/TT6 1 Tf
+5.4009 0 TD
+[(.)-250(This switches to g0, if not on m stack \(i.e., no switch this time\).)]TJ
+-5.4009 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.004 Tw
+(proc.c:2128: newproc_m)Tj
+/TT6 1 Tf
+13.4601 0 TD
+[(is called by g0 and copies the ar)18(gs and then calls:)]TJ
+-13.4602 -1.56 TD
+0 Tw
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0739 Tw
+(proc.c:2182: runtime.newproc1)Tj
+/TT6 1 Tf
+17.4767 0 TD
+[(.)-323.9(This creates a G to run a func-)]TJ
+-17.4768 -1.2 TD
+0 Tw
+(tion \()Tj
+/TT8 1 Tf
+2.1387 0 TD
+(runtime.main)Tj
+/TT6 1 Tf
+7.2012 0 TD
+(\). Using:)Tj
+-9.3398 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:2295: gfget)Tj
+/TT6 1 Tf
+11.0518 0 TD
+(to get a G from the free list, or)Tj
+-13.5519 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.1086 Tw
+(proc.c:2102: runtime.malg)Tj
+/TT6 1 Tf
+15.4696 0 TD
+(to allocate a G, which ends up)Tj
+-15.4697 -1.2 TD
+0 Tw
+(doing a)Tj
+/TT8 1 Tf
+3.2217 0 TD
+(new\(g\))Tj
+/TT6 1 Tf
+3.8506 0 TD
+(in go.)Tj
+-9.5723 -1.2 TD
+0.0387 Tw
+[(Then it copies ar)18(guments to the ne)25(w)-288.7(G)-288.7(stack, sets the sched label to call the)]TJ
+T*
+0 Tw
+(function, using)Tj
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.45 Tw
+(stack.c:806: runtime.gostartcallfn)Tj
+/TT6 1 Tf
+20.8533 0 TD
+[(,)-700(similar to set-)]TJ
+-20.8534 -1.2 TD
+0 Tw
+(label.)Tj
+-2.5 -1.2 TD
+(Sets the state to Grunnable and calls)Tj
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0445 Tw
+(proc.c:3284: runqput)Tj
+/TT6 1 Tf
+12.341 0 TD
+0.0444 Tw
+[(to put the ne)25(w)-294.4(G)-294.4(o)0(n)-294.4(a)-294.4(local runq or the)]TJ
+-12.341 -1.2 TD
+0 Tw
+(global one.)Tj
+-2.5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0032 Tw
+(proc.c:1276: wakep)Tj
+/TT6 1 Tf
+10.805 0 TD
+[(,)-253.2(which is a nop or a call to sched the M for)]TJ
+-10.8051 -1.2 TD
+0.025 Tw
+[(P)-250(o)0(r)-250(mak)10(e)-250(a)-250(n)0(e)25(w)25( M)25( for )25(P)111(.)]TJ
+0 -1.56 TD
+0 Tw
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1200: startm)Tj
+/TT6 1 Tf
+-15.0001 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:818: runtime.mstart)Tj
+/TT6 1 Tf
+15.8525 0 TD
+(starts the M. It calls:)Tj
+-15.8526 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(asminit)Tj
+/TT6 1 Tf
+4.4507 0 TD
+[(to do per)20(-thread initialization \(nop for our arch\).)]TJ
+-6.9508 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(os_darwin.c:144: minit)Tj
+/TT6 1 Tf
+13.4521 0 TD
+(initializes signal handling for our arch.)Tj
+-15.9522 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0093 Tw
+(proc.c:1537: schedule)Tj
+/TT6 1 Tf
+12.8706 0 TD
+(runs the scheduller and calls this when gets something to)Tj
+-12.8707 -1.2 TD
+0 Tw
+(run:)Tj
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1358: execute)Tj
+/TT6 1 Tf
+12.252 0 TD
+(is mostly a call to a goto-label:)Tj
+-12.252 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(asm_amd64.s:143: gogo)Tj
+/TT6 1 Tf
+-10.0001 -2.4 TD
+[(At the end, the ne)25(w)-250(G)-250(calls)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.go:16: runtime.main\(\))Tj
+/TT6 1 Tf
+15.6025 0 TD
+[(,)-250(which calls)]TJ
+-15.6026 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(runtime_init)Tj
+/TT6 1 Tf
+-2.5001 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(main_init)Tj
+/TT6 1 Tf
+-2.5001 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(main_main)Tj
+/TT6 1 Tf
+-2.5001 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(exit\(0\))Tj
+/TT6 1 Tf
+-2.5001 -2.4 TD
+0.0428 Tw
+[(These are the initialization code and main program for the binary)65(.)-292.8(The)]TJ
+/TT8 1 Tf
+28.7987 0 TD
+0 Tw
+(runtime.init)Tj
+/TT6 1 Tf
+7.494 0 TD
+0.0428 Tw
+(function in)Tj
+/TT8 1 Tf
+-36.2927 -1.2 TD
+0 Tw
+(proc.go)Tj
+/TT6 1 Tf
+4.4507 0 TD
+[(spa)15(wns the goroutine to call)]TJ
+/TT8 1 Tf
+11.4547 0 TD
+(gogc\(1\))Tj
+/TT6 1 Tf
+4.4507 0 TD
+(in a loop.)Tj
+/TT2 1 Tf
+-22.8561 -3.6 TD
+0.25 Tw
+(2. Labels)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(A)Tj
+/TT8 1 Tf
+0.9722 0 TD
+(Gobuf)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(is similar to a)Tj
+/TT4 1 Tf
+5.666 0 TD
+(Label)Tj
+/TT6 1 Tf
+2.2778 0 TD
+(:)Tj
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 4144
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+1.8 Tw
+(struct Gobuf)Tj
+0 -1.5 TD
+0 Tw
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+[(uintptr sp; //)-600(the )1800(actual )1800(label.)]TJ
+T*
+[(uintptr pc; //)-600(the )1800(actual )1800(label.)]TJ
+T*
+[(G* g; //)-600(the )1800(actual )1800(label.)]TJ
+T*
+[(void* ctxt; //)-600(aux )1800(context )1800(pointer.)]TJ
+T*
+[(uintreg ret; //)-600(return )1800(value)]TJ
+T*
+0 Tw
+[(uintptr )-1800(lr; )-1800(//)-600(link register used in ARM.)]TJ
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 594 Tm
+(The main operations are:)Tj
+2.5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(runtime.gosave)Tj
+/TT6 1 Tf
+8.4014 0 TD
+[(,)-250(i.e., set label. Clears)]TJ
+/TT8 1 Tf
+8.8306 0 TD
+(ctxt)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(and)Tj
+/TT8 1 Tf
+1.6938 0 TD
+(ret)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-25.8766 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(runtime.gogo)Tj
+/TT6 1 Tf
+7.2012 0 TD
+0.1622 Tw
+[(,)-412.2(i.e., goto label. Sets)]TJ
+/TT8 1 Tf
+9.4209 0 TD
+0 Tw
+(ctxt)Tj
+/TT6 1 Tf
+2.8126 0 TD
+(in)Tj
+/TT8 1 Tf
+1.19 0 TD
+(DX)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.1622 Tw
+[(,)-412.2(used by)]TJ
+/TT8 1 Tf
+4.3195 0 TD
+0 Tw
+(runtime.morestack)Tj
+/TT6 1 Tf
+10.6138 0 TD
+(and)Tj
+-36.7582 -1.2 TD
+(returns)Tj
+/TT8 1 Tf
+3.0269 0 TD
+(ret)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(after the actual jump to the label.)Tj
+-10.0771 -2.4 TD
+(Here,)Tj
+/TT8 1 Tf
+2.4429 0 TD
+(pc)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT8 1 Tf
+0.5 0 TD
+(sp)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(,)-250(and)]TJ
+/TT8 1 Tf
+2.1938 0 TD
+(g)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(are the actual conte)15(xt sa)20(v)15(e)0(d)-250(and restored. That is the label.)]TJ
+-8.3872 -2.4 TD
+(The )Tj
+/TT9 1 Tf
+1.8962 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eld)Tj
+/TT8 1 Tf
+1.5632 0 TD
+(ctxt)Tj
+/TT6 1 Tf
+2.742 0 TD
+0.0916 Tw
+[(is used to point to a frame in the stack and seems to be the user conte)15(xt in other places.)]TJ
+-6.7575 -1.2 TD
+0.0745 Tw
+[(Seems to be an auxiliary pointer b)20(ut it is not clear \(yet\) ho)25(w)-324.6(i)0(t)-324.6(i)0(s)-324.6(used. The )]TJ
+/TT9 1 Tf
+31.327 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(eld)Tj
+/TT8 1 Tf
+1.5462 0 TD
+(lr)Tj
+/TT6 1 Tf
+1.5247 0 TD
+0.0745 Tw
+(seems to be the link)Tj
+-34.954 -1.2 TD
+0 Tw
+[(re)15(gister for the ARM and is not used by our architecture.)]TJ
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(3. Sleep/W)65(ak)10(eup)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(These are giant locks:)Tj
+/TT8 1 Tf
+8 0 0 8 133 409.2 Tm
+1.8 Tw
+(void runtime.stoptheworld\(void\);)Tj
+0 -1.5 TD
+(void runtime.starttheworld\(void\);)Tj
+T*
+0 Tw
+(extern uint32 runtime.worldsema;)Tj
+/TT6 1 Tf
+10 0 0 10 72 367.2 Tm
+[(used for e)15(xample to dump all the stacks.)]TJ
+0 -2.4 TD
+[(These are the usual locks with a user)20(-le)25(v)15(e)0(l)-250(f)10(ast path:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 325.2 Tm
+1.8 Tw
+(void runtime.lock\(Mutex*\);)Tj
+0 -1.5 TD
+(void runtime.unlock\(Mutex*\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 283.2 Tm
+0.1118 Tw
+[(These are sleep/w)10(ak)10(eup lik)10(e)-361.8(structures, and timed out v)25(ariants for them with the usual con)40(v)15(entions of at)]TJ
+0 -1.2 TD
+0.1002 Tw
+[(most one calling sleep and at most one calling w)10(a)0(k)10(eup for it. Plus, there is a clear operation to reset the)]TJ
+T*
+0 Tw
+(thing for a further use:)Tj
+/TT8 1 Tf
+8 0 0 8 133 241.2 Tm
+1.8 Tw
+(void runtime.noteclear\(Note*\);)Tj
+0 -1.5 TD
+(void runtime.notesleep\(Note*\);)Tj
+T*
+(void runtime.notewakeup\(Note*\);)Tj
+T*
+0 Tw
+[(bool )-1800(runtime.notetsleep\(Note*,)-600(int64\); )-600(//)-600(false - timeout)]TJ
+T*
+[(bool )-1800(runtime.notetsleepg\(Note*,)-600(int64\); )-600(//)-600(false - timeout)]TJ
+/TT6 1 Tf
+10 0 0 10 72 163.2 Tm
+[(And these are fute)15(x)15(e)0(s)-250(o)0(r)-250(semaphores \(e)15(g., on Darwin\) to implement the ones abo)15(v)15(e)0(:)]TJ
+/TT8 1 Tf
+8 0 0 8 133 145.2 Tm
+1.8 Tw
+(uintptr runtime.semacreate\(void\);)Tj
+T*
+(int32 runtime.semasleep\(int64\);)Tj
+T*
+(void runtime.semawakeup\(M*\);)Tj
+/TT6 1 Tf
+10 0 0 10 72 91.2 Tm
+0.0959 Tw
+[(In man)15(y)-345.9(cases lock-free data structures are used; or at least parts of them are handled lock-free by using)]TJ
+0 -1.2 TD
+0 Tw
+[(atomic and CAS-lik)10(e)-250(operations, e)15(g. to change statuses of processes and to link them to a list.)]TJ
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 3108
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT2 1 Tf
+-21.017 -3.6 TD
+0.25 Tw
+(4. Scheduling)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(Most of the interesting code is in)Tj
+/TT8 1 Tf
+13.4146 0 TD
+(proc.c)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(.)-250(There are three central structures:)]TJ
+-14.5151 -1.2 TD
+(ï)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(G)Tj
+/TT6 1 Tf
+1.8999 -1.2 TD
+[(A)-282.5(goroutine.)]TJ
+/TT8 1 Tf
+5.3697 0 TD
+(g)Tj
+/TT6 1 Tf
+0.8826 0 TD
+0.0325 Tw
+(refers to the current and)Tj
+/TT8 1 Tf
+9.9633 0 TD
+0 Tw
+(g0)Tj
+/TT6 1 Tf
+1.4827 0 TD
+0.0325 Tw
+[(is the idle process. This is a user)20(-le)25(v)15(e)0(l)-282.4(thread.)]TJ
+/TT8 1 Tf
+18.9491 0 TD
+0 Tw
+(g)Tj
+/TT6 1 Tf
+0.8825 0 TD
+(is)Tj
+-37.5299 -1.2 TD
+[(a)-250(r)0(e)15(gister on the ARM and a slot in TLS e)25(v)15(erywhere else.)]TJ
+-2.5 -1.2 TD
+(ï)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(M)Tj
+/TT6 1 Tf
+1.8999 -1.2 TD
+0.0603 Tw
+[(A)-310.3(machine, actually a UNIX process.)]TJ
+/TT8 1 Tf
+15.5787 0 TD
+0 Tw
+(m)Tj
+/TT6 1 Tf
+0.9105 0 TD
+0.0604 Tw
+[(refers to the current one. This is a k)10(ernel-le)25(v)15(e)0(l)-310.4(thread)]TJ
+-16.4892 -1.2 TD
+0 Tw
+(that runs)Tj
+/TT4 1 Tf
+3.7217 0 TD
+(Gs)Tj
+/TT6 1 Tf
+1.3613 0 TD
+(or is idle or is in a syscall.)Tj
+-7.583 -1.2 TD
+(ï)Tj
+/TT4 1 Tf
+0.6001 0 TD
+(P)Tj
+/TT6 1 Tf
+1.8999 -1.2 TD
+[(A)-250(processor)40(,)-250(actually a per)]TJ
+/TT8 1 Tf
+10.8999 0 TD
+(GOMAXPROCS)Tj
+/TT6 1 Tf
+6.251 0 TD
+(sched.)Tj
+-22.1509 -2.4 TD
+(The idea is that)Tj
+/TT4 1 Tf
+6.3867 0 TD
+(M)Tj
+/TT6 1 Tf
+1.083 0 TD
+[(tak)10(es a)]TJ
+/TT4 1 Tf
+2.9885 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(when it must run)Tj
+/TT4 1 Tf
+6.9995 0 TD
+(Gs)Tj
+/TT6 1 Tf
+1.1113 0 TD
+(.)Tj
+/TT4 1 Tf
+0.5 0 TD
+(Ps)Tj
+/TT6 1 Tf
+1.25 0 TD
+(were introduced to do job stealing.)Tj
+-21.1799 -2.4 TD
+(The interesting bits of)Tj
+/TT4 1 Tf
+9.0537 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+(are:)Tj
+/TT8 1 Tf
+8 0 0 8 133 530.4 Tm
+1.8 Tw
+(struct G)Tj
+0 -1.5 TD
+0 Tw
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+[(Stack stack; //)-600([stack.lo, )1800(stack.hi\).)]TJ
+T*
+[(uintptr stackguard0; //)-600(stack.lo+StackGuard )1800(or )1800(StackPreempt)]TJ
+T*
+0 Tw
+[(uintptr )-1800(stackguard1; )-1800(//)-600(stack.lo+StackGuard on g0 or ò0 on others)]TJ
+0 -3 TD
+[(Panic* )-1800(panic; )-1800(//)-600(innermost panic - offset known to liblink)]TJ
+0 -1.5 TD
+1.8 Tw
+[(Defer* defer; //)-600(innermost )1800(defer)]TJ
+T*
+(Gobuf sched;)Tj
+T*
+0 Tw
+[(uintptr )-1800(syscallsp; )-1800(//)-600(if status==Gsyscall, syscallsp = sched.sp to use during gc)]TJ
+T*
+[(uintptr )-1800(syscallpc; )-1800(//)-600(if status==Gsyscall, syscallpc = sched.pc to use during gc)]TJ
+T*
+[(void* )-1800(param; )-1800(//)-600(passed parameter on wakeup)]TJ
+T*
+1.8 Tw
+(int64 goid;)Tj
+T*
+(G* schedlink;)Tj
+T*
+0 Tw
+[(bool )-1800(preempt; )-1800(//)-600(preemption signal, dup of stackguard0 = StackPreempt)]TJ
+T*
+[(M* )-1800(m; )-1800(//)-600(for debuggers, but offset not hard-coded)]TJ
+T*
+1.8 Tw
+(M* lockedm;)Tj
+T*
+0 Tw
+[(SudoG* )-1800(waiting; )-1800(//)-600(sudog structures this G is waiting on)]TJ
+T*
+(...)Tj
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 272.4 Tm
+(The interesting bits of)Tj
+/TT4 1 Tf
+9.0537 0 TD
+(M)Tj
+/TT6 1 Tf
+1.083 0 TD
+(are:)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 1943
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+1.8 Tw
+(struct M)Tj
+0 -1.5 TD
+0 Tw
+({)Tj
+2.4 -1.5 TD
+[(G* )-1800(g0;)-4800(// goroutine with scheduling stack)]TJ
+T*
+1.8 Tw
+[(G* gsignal; //)-600(signal-handling )1800(G)]TJ
+T*
+0 Tw
+[(uintptr )-1800(tls[4];)-4800(// thread-local storage \(for x86 extern register\))]TJ
+T*
+1.8 Tw
+(void \(*mstartfn\)\(void\);)Tj
+T*
+0 Tw
+[(G* )-1800(curg;)-4800(// current running goroutine)]TJ
+T*
+[(G* )-1800(caughtsig; )-1800(//)-600(goroutine running during fatal signal)]TJ
+T*
+[(P* )-1800(p;)-4800(// attached P for executing Go code \(nil if not executing Go code\))]TJ
+T*
+1.8 Tw
+(int32 mallocing,throwing,gcing;)Tj
+T*
+(int32 locks;)Tj
+T*
+0 Tw
+[(bool )-1800(spinning; )-1800(//)-600(M)-600(i)0(s)-600(out of work and is actively looking for work)]TJ
+T*
+[(bool )-1800(blocked; )-1800(//)-600(M)-600(i)0(s)-600(blocked on a Note)]TJ
+T*
+1.8 Tw
+(Note park;)Tj
+T*
+[(M* alllink; //)-600(on )1800(allm)]TJ
+T*
+(M* schedlink;)Tj
+T*
+(MCache* mcache;)Tj
+T*
+(G* lockedg;)Tj
+T*
+0 Tw
+[(uint32 )-1800(locked;)-4800(// tracking for LockOSThread)]TJ
+T*
+[(M* )-1800(nextwaitm; )-1800(//)-600(next M waiting for lock)]TJ
+T*
+[(uintptr )-1800(waitsema; )-1800(//)-600(semaphore for parking on locks)]TJ
+T*
+1.8 Tw
+(uint32 waitsemacount;)Tj
+T*
+(uint32 waitsemalock;)Tj
+T*
+[(bool \(*waitunlockf\)\(G*,)-600(void*\);)]TJ
+T*
+(void* waitlock;)Tj
+T*
+0 Tw
+[(uintptr scalararg[4];)-2400(// scalar argument/return for mcall)]TJ
+T*
+[(void* )-1200(ptrarg[4];)-2400(// pointer argument/return for mcall)]TJ
+T*
+(...)Tj
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 342 Tm
+[(A)-250(v)25(alue of)]TJ
+/TT8 1 Tf
+4.4457 0 TD
+(m->locks)Tj
+/TT6 1 Tf
+5.0508 0 TD
+-0.0001 Tc
+0.0001 Tw
+[(greater than zero pre)24.9(v)14.9(ents preemption and also pre)24.9(v)14.9(ents garbage colloection.)]TJ
+-9.4965 -2.4 TD
+0 Tc
+0 Tw
+(The interesting bits of)Tj
+/TT4 1 Tf
+9.0537 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(are:)Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 3213
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT8 1 Tf
+8 0 0 8 133 708 Tm
+(struct P)Tj
+0 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+(Mutex lock;)Tj
+T*
+0 Tw
+[(uint32 )-1800(status;)-4800(// Pidle, Prunning, Psyscall, Pgcstop, Pdead)]TJ
+T*
+1.8 Tw
+(P* link;)Tj
+T*
+0 Tw
+[(uint32 )-1800(schedtick;)-4800(// incremented on every scheduler call)]TJ
+T*
+[(uint32 )-1800(syscalltick; )-1800(//)-600(incremented on every system call)]TJ
+T*
+[(M* )-1800(m;)-4800(// back-link to associated M \(nil if idle\))]TJ
+T*
+1.8 Tw
+(MCache* mcache;)Tj
+T*
+0 Tw
+[(Defer* )-1800(deferpool[5]; )-1800(//)-600(pool of available Defers)]TJ
+0 -3 TD
+(// Cache of goroutine ids, amortizes accesses to runtime.sched.goidgen.)Tj
+0 -1.5 TD
+1.8 Tw
+(uint64 goidcache;)Tj
+T*
+(uint64 goidcacheend;)Tj
+0 -3 TD
+0 Tw
+(// Queue of runnable goroutines.)Tj
+0 -1.5 TD
+1.8 Tw
+(uint32 runqhead;)Tj
+T*
+(uint32 runqtail;)Tj
+T*
+(G* runq[256];)Tj
+0 -3 TD
+0 Tw
+(// Available Gís \(status == Gdead\))Tj
+0 -1.5 TD
+1.8 Tw
+(G* gfree;)Tj
+T*
+(int32 gfreecnt;)Tj
+-2.4 -1.5 TD
+0 Tw
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 414 Tm
+0.0286 Tw
+(This is a local scheduler plus cached structures per UNIX process used to run Go code. And then there is a)Tj
+0 -1.2 TD
+0 Tw
+(global scheduler structure that also caches some structures.)Tj
+/TT8 1 Tf
+8 0 0 8 133 372 Tm
+1.8 Tw
+(struct SchedT)Tj
+0 -1.5 TD
+0 Tw
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+(Mutex lock;)Tj
+T*
+(uint64 goidgen;)Tj
+T*
+0 Tw
+[(M* )-1800(midle;)-3000(// idle mís waiting for work)]TJ
+T*
+[(P* )-1800(pidle;)-3600(// idle Pís)]TJ
+T*
+[(G* )-1800(runqhead;)-600(// Global runnable queue.)]TJ
+T*
+[(Mutex )-1800(gflock; )-1800(//)-600(global cache go dead Gs)]TJ
+T*
+1.8 Tw
+(G* gfree;)Tj
+T*
+0 Tw
+[(uint32 )-1800(gcwaiting; )-1800(//)-600(gc is waiting to run)]TJ
+T*
+1.8 Tw
+(int32 stopwait;)Tj
+T*
+(Note stopnote;)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 198 Tm
+(There is a single)Tj
+/TT8 1 Tf
+6.8311 0 TD
+(runtime.sched)Tj
+/TT6 1 Tf
+7.8013 0 TD
+[(,)-250(and)]TJ
+/TT8 1 Tf
+2.1938 0 TD
+(runtime.sched.lock)Tj
+/TT6 1 Tf
+11.0518 0 TD
+(protects it all.)Tj
+/TT2 1 Tf
+-27.8779 -3.6 TD
+0.25 Tw
+[(4.1. Pr)18(ocess )250(cr)18(eation)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0043 Tw
+[(Code lik)10(e)]TJ
+/TT8 1 Tf
+4.109 0 TD
+(go fn\(\))Tj
+/TT6 1 Tf
+4.4593 0 TD
+(is translated as a call to)Tj
+/TT8 1 Tf
+9.5786 0 TD
+(proc.c:2154: runtime.newproc)Tj
+/TT6 1 Tf
+17.0615 0 TD
+[(as sho)25(wn in the )]TJ
+/TT9 1 Tf
+6.4364 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(rst)Tj
+-42.201 -1.2 TD
+0.5322 Tw
+(section for initialization. This records the function and a pointer to the)Tj
+/TT8 1 Tf
+34.6837 0 TD
+0 Tw
+(...)Tj
+/TT6 1 Tf
+2.5824 0 TD
+0.5321 Tw
+[(ar)18(guments yn)]TJ
+/TT8 1 Tf
+-37.2661 -1.2 TD
+0 Tw
+(g->m->ptrarg[])Tj
+/TT6 1 Tf
+8.6514 0 TD
+(and then calls)Tj
+/TT8 1 Tf
+5.748 0 TD
+(newproc_m)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(using)Tj
+/TT8 1 Tf
+2.417 0 TD
+(runtime.onM)Tj
+/TT6 1 Tf
+6.6011 0 TD
+(.)Tj
+-26.5684 -1.56 TD
+[(ï)-2150(Thereí)55(s)-250(a)-250(switch to)]TJ
+/TT8 1 Tf
+10.3313 0 TD
+(M)Tj
+/TT6 1 Tf
+0.6001 0 TD
+-0.055 Tc
+(ís)Tj
+/TT8 1 Tf
+0.9172 0 TD
+0 Tc
+(g0)Tj
+/TT6 1 Tf
+-11.8486 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(newproc_m)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(runs there.)Tj
+-8.151 -1.56 TD
+[(ï)-2150(And thereí)55(s)-250(a)-250(switch back when done.)]TJ
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+27 0 obj
+<<
+/Length 9057
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+-21.017 -3.6 TD
+(Then)Tj
+/TT8 1 Tf
+2.3047 0 TD
+(newproc_m)Tj
+/TT6 1 Tf
+5.6509 0 TD
+[(tak)10(es the function and ar)18(guments from)]TJ
+/TT8 1 Tf
+15.6341 0 TD
+(m->ptrarg)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(and calls)Tj
+/TT8 1 Tf
+3.7764 0 TD
+(runtime.newproc1)Tj
+/TT6 1 Tf
+9.6016 0 TD
+(:)Tj
+-40.1185 -1.56 TD
+[(ï)-2150(This adds to)]TJ
+/TT8 1 Tf
+7.6388 0 TD
+(m->locks)Tj
+/TT6 1 Tf
+5.0508 0 TD
+[(to a)20(v)20(oid preemption and tak)10(es)]TJ
+/TT4 1 Tf
+12.2522 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(from)Tj
+/TT8 1 Tf
+2.1938 0 TD
+(m->p)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-30.3969 -1.56 TD
+2.15 Tc
+(ïA)Tj
+/TT4 1 Tf
+3.4723 0 TD
+0 Tc
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+[(is tak)10(en from the cache at)]TJ
+/TT4 1 Tf
+10.4851 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(or allocated \(with)Tj
+/TT8 1 Tf
+7.3027 0 TD
+(StackMin)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(stack bytes\).)Tj
+-30.6439 -2.4 TD
+(At this point)Tj
+/TT4 1 Tf
+5.2505 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+(is)Tj
+/TT8 1 Tf
+0.917 0 TD
+(Gdead)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(.)-250(Then ar)18(guments are copied into)]TJ
+/TT4 1 Tf
+13.3941 0 TD
+(G)Tj
+/TT6 1 Tf
+0.7222 0 TD
+[(í)55(s)55( )-55(stack and ití)55(s)-250(prepared:)]TJ
+-21.7564 -1.56 TD
+[(ï)-2150(Ití)55(s)-406(label)]TJ
+/TT8 1 Tf
+6.5335 0 TD
+(pc)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(,)Tj
+/TT8 1 Tf
+0.656 0 TD
+(sp)Tj
+/TT6 1 Tf
+1.2002 0 TD
+[(,)-406(and)]TJ
+/TT8 1 Tf
+2.5058 0 TD
+(g)Tj
+/TT6 1 Tf
+1.0061 0 TD
+0.156 Tw
+[(are set to the function pointer and the ne)25(w)-406(stack and)]TJ
+/TT8 1 Tf
+22.7672 0 TD
+0 Tw
+(g)Tj
+/TT6 1 Tf
+0.6001 0 TD
+0.156 Tw
+[(,)-406(and then)]TJ
+-33.9691 -1.2 TD
+0.0336 Tw
+(adjusted to pretend that such function did call)Tj
+/TT8 1 Tf
+18.7639 0 TD
+0 Tw
+(gosave)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.2836 Tc
+[(,s)283.6(ow)283.6(ec)283.6(a)283.6(n)]TJ
+/TT8 1 Tf
+4.8271 0 TD
+0 Tc
+(gogo)Tj
+/TT6 1 Tf
+2.6839 0 TD
+0.0335 Tw
+(\(gotolabel\) it. In this)Tj
+-29.8755 -1.2 TD
+0.2165 Tw
+(case, the label)Tj
+/TT8 1 Tf
+6.5353 0 TD
+0 Tw
+(ctxt)Tj
+/TT6 1 Tf
+2.867 0 TD
+0.2166 Tw
+(is set to the)Tj
+/TT8 1 Tf
+5.6437 0 TD
+0 Tw
+(FuncVal)Tj
+/TT6 1 Tf
+4.6673 0 TD
+0.2166 Tw
+[(v)25(alue going. The return v)25(alue is set to call)]TJ
+/TT8 1 Tf
+-19.7134 -1.2 TD
+0 Tw
+(goexit+PCQuantum)Tj
+/TT6 1 Tf
+9.8516 0 TD
+(which is a call to)Tj
+/TT8 1 Tf
+7.0259 0 TD
+(goexit1)Tj
+/TT6 1 Tf
+4.2007 0 TD
+(.)Tj
+-23.5781 -1.56 TD
+[(ï)-2150(Its state is changed to)]TJ
+/TT8 1 Tf
+11.359 0 TD
+(Grunnable)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(\(cas op.\))Tj
+-17.0099 -1.56 TD
+[(ï)-2150(A)-250(ne)25(w)]TJ
+/TT8 1 Tf
+5.3633 0 TD
+(id)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(is tak)10(en from the id cache at)]TJ
+/TT8 1 Tf
+11.5129 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(\(perhaps re)Tj
+/TT9 1 Tf
+4.4697 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(lling the cache\).)Tj
+-26.7024 -2.4 TD
+0.0635 Tw
+[(No)25(w)-313.5(ití)55(s)-313.5(put in the scheduler queue by calling)]TJ
+/TT8 1 Tf
+19.1814 0 TD
+(runqput\(p, newg\))Tj
+/TT6 1 Tf
+9.6651 0 TD
+[(.)-313.5(This uses atomic load/store to put)]TJ
+/TT8 1 Tf
+-28.8465 -1.2 TD
+0 Tw
+(newg)Tj
+/TT6 1 Tf
+2.7736 0 TD
+(at)Tj
+/TT8 1 Tf
+1.0949 0 TD
+(p->runq[tail])Tj
+/TT6 1 Tf
+7.8013 0 TD
+[(,)-373.2(using)]TJ
+/TT8 1 Tf
+3.1634 0 TD
+(p->runqtail)Tj
+/TT6 1 Tf
+6.9743 0 TD
+0.1232 Tw
+(as a increasing counter for the tail that is copied to)Tj
+/TT8 1 Tf
+-21.8074 -1.2 TD
+0 Tw
+(tail)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(and truncated as an inde)15(x)-250(for)]TJ
+/TT8 1 Tf
+11.8136 0 TD
+(runq)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(.)-250(This happens if)]TJ
+/TT8 1 Tf
+6.9155 0 TD
+(p->runq)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(is not full.)Tj
+-28.2306 -2.4 TD
+(If)Tj
+/TT8 1 Tf
+1.0243 0 TD
+(p->runq)Tj
+/TT6 1 Tf
+4.559 0 TD
+0.1083 Tw
+(is full,)Tj
+/TT8 1 Tf
+3.0223 0 TD
+0 Tw
+(runqputslow)Tj
+/TT6 1 Tf
+6.9594 0 TD
+0.1083 Tw
+[(is called to tak)10(e)-358.3(half of the local queue at)]TJ
+/TT4 1 Tf
+17.7327 0 TD
+0 Tw
+(P)Tj
+/TT6 1 Tf
+0.9691 0 TD
+0.1083 Tw
+(and place them at the)Tj
+-34.2667 -1.2 TD
+0 Tw
+(global)Tj
+/TT8 1 Tf
+2.8204 0 TD
+(runtime.sched.runqhead/tail)Tj
+/TT6 1 Tf
+16.5235 0 TD
+0.0709 Tw
+(queue while holding the global scheduler lock. if the CAS)Tj
+-19.3439 -1.2 TD
+0 Tw
+[(operation to operate on the local queue f)10(ails, the whole)]TJ
+/TT8 1 Tf
+22.1765 0 TD
+(runqput)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(is retried.)Tj
+/TT2 1 Tf
+-26.6272 -3.6 TD
+0.25 Tw
+[(4.2. Pr)18(ocess )250(termination)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(Performed by a call to)Tj
+2.5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1682: runtime.goexit1)Tj
+/TT6 1 Tf
+16.8027 0 TD
+[(,)-250(that does an)]TJ
+/TT8 1 Tf
+5.5264 0 TD
+(mcall)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(to run)Tj
+/TT8 1 Tf
+2.6108 0 TD
+(goexit0)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(at)Tj
+/TT8 1 Tf
+0.9717 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-37.3131 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(goexit0)Tj
+/TT6 1 Tf
+4.4855 0 TD
+0.0347 Tw
+[(\(or an)15(y)-284.8(other mcall\) ne)25(v)15(e)0(r)-284.7(returns and calls)]TJ
+/TT8 1 Tf
+17.7157 0 TD
+0 Tw
+(gogo)Tj
+/TT6 1 Tf
+2.6851 0 TD
+0.0347 Tw
+[(to sched to some)25(where else, usu-)]TJ
+-24.8863 -1.2 TD
+0 Tw
+(ally to)Tj
+/TT8 1 Tf
+2.7773 0 TD
+(g->sched)Tj
+/TT6 1 Tf
+5.0508 0 TD
+[(to let it run later)55(.)-250(The)]TJ
+/TT4 1 Tf
+8.6921 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+(state is set to)Tj
+/TT8 1 Tf
+5.3882 0 TD
+(Gdead)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(.)-250(Then these are called:)]TJ
+-25.881 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1598: dropg)Tj
+/TT6 1 Tf
+10.8018 0 TD
+[(,)-250(t)0(o)-250(release)]TJ
+/TT8 1 Tf
+4.5532 0 TD
+(m->curg->m)Tj
+/TT6 1 Tf
+6.251 0 TD
+(and)Tj
+/TT8 1 Tf
+1.6938 0 TD
+(m->curg)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(\()Tj
+/TT8 1 Tf
+0.333 0 TD
+(g)Tj
+/TT6 1 Tf
+0.8501 0 TD
+[(is no)25(w)]TJ
+/TT8 1 Tf
+2.8642 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(\).)Tj
+-35.498 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.4749 Tw
+(proc.c:2259: gfput)Tj
+/TT6 1 Tf
+11.2767 0 TD
+[(,)-724.9(t)0(o)-724.9(put the dying)]TJ
+/TT4 1 Tf
+9.4297 0 TD
+0 Tw
+(G)Tj
+/TT6 1 Tf
+1.4471 0 TD
+(at)Tj
+/TT8 1 Tf
+1.4466 0 TD
+(p->gfree)Tj
+/TT6 1 Tf
+4.8008 0 TD
+0.4749 Tw
+[(,)-724.9(link)10(ed through)]TJ
+/TT8 1 Tf
+-28.4009 -1.2 TD
+0 Tw
+(g->schedlink)Tj
+/TT6 1 Tf
+7.2012 0 TD
+0.0064 Tw
+[(.)-256.4(I)0(f)-256.4(there are too man)15(y)-256.3(free)]TJ
+/TT4 1 Tf
+10.9681 0 TD
+0 Tw
+(G)Tj
+/TT6 1 Tf
+0.7222 0 TD
+0.0063 Tw
+[(s)-256.3(cached, the)15(y)-256.3(are mo)15(v)15(e)0(d)-256.3(t)0(o)-256.3(the global list)]TJ
+-18.8914 -1.2 TD
+0 Tw
+(at)Tj
+/TT8 1 Tf
+0.9717 0 TD
+(runtime.sched.gfree)Tj
+/TT6 1 Tf
+11.4019 0 TD
+(.)Tj
+-14.8735 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(schedule)Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(,)-250(runs one scheduler loop and jumps to a ne)25(w)]TJ
+/TT4 1 Tf
+18.2768 0 TD
+(G)Tj
+/TT6 1 Tf
+0.7222 0 TD
+(.)Tj
+-31.2998 -2.4 TD
+(Note that returning from the main function of a goroutine returns to)Tj
+2.5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(asm_amd64.s:2237: runtime.goexit)Tj
+/TT6 1 Tf
+19.2031 0 TD
+[(,)-250(which calls)]TJ
+/TT8 1 Tf
+5.2764 0 TD
+(runtime.goexit1)Tj
+/TT6 1 Tf
+9.0015 0 TD
+(.)Tj
+/TT2 1 Tf
+-38.481 -3.6 TD
+0.25 Tw
+[(4.3. Context)-250(switches)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(Calls to)Tj
+/TT8 1 Tf
+3.3335 0 TD
+(schedule)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(can be found at:)Tj
+-5.8843 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:661: mquiesce)Tj
+/TT6 1 Tf
+12.002 0 TD
+[(,)-250(used to run code at)]TJ
+/TT8 1 Tf
+8.3032 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(and then schedule back a)Tj
+/TT4 1 Tf
+10.2456 0 TD
+(G)Tj
+/TT6 1 Tf
+0.7222 0 TD
+(.)Tj
+-35.2232 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:868: mstart)Tj
+/TT6 1 Tf
+10.8018 0 TD
+[(,)-250(t)0(o)-250(jump to a ne)25(w)]TJ
+/TT8 1 Tf
+7.4462 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(for a ne)25(w)]TJ
+/TT4 1 Tf
+4.0009 0 TD
+(M)Tj
+/TT6 1 Tf
+0.833 0 TD
+(.)Tj
+-27.0321 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1655: runtime.park_m)Tj
+/TT6 1 Tf
+16.2026 0 TD
+[(,)-250(used to mak)10(e)]TJ
+/TT4 1 Tf
+6.0164 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+[(w)10(ait for something.)]TJ
+-25.6913 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1675: runtime.gosched_m)Tj
+/TT6 1 Tf
+18.0029 0 TD
+0.25 Tc
+[(,a)250(n)]TJ
+/TT8 1 Tf
+1.6938 0 TD
+0 Tc
+(mcall)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(from)Tj
+/TT8 1 Tf
+2.1938 0 TD
+(Gosched)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(at)Tj
+/TT8 1 Tf
+0.9717 0 TD
+(proc.go)Tj
+/TT6 1 Tf
+4.2007 0 TD
+(.)Tj
+-37.2643 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1718: goexit0)Tj
+/TT6 1 Tf
+12.002 0 TD
+0.25 Tc
+[(,t)250(or)250(u)250(n)]TJ
+/TT8 1 Tf
+3.1108 0 TD
+0 Tc
+(g0)Tj
+/TT6 1 Tf
+1.4502 0 TD
+(or other)Tj
+/TT4 1 Tf
+3.3877 0 TD
+(G)Tj
+/TT6 1 Tf
+0.7222 0 TD
+[(s)-250(when e)15(xiting.)]TJ
+-23.1729 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:2022: exitsyscall0)Tj
+/TT6 1 Tf
+15.0024 0 TD
+[(,)-250(called after a system call at)]TJ
+/TT8 1 Tf
+11.6055 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.2002 0 TD
+(.)Tj
+-30.3082 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(malloc.go:482: gogc)Tj
+/TT6 1 Tf
+11.6519 0 TD
+(calls)Tj
+/TT8 1 Tf
+2.0825 0 TD
+(Gosched)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(when the GC is done.)Tj
+-20.6852 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mgc0.go:87: bgsweep)Tj
+/TT6 1 Tf
+11.6519 0 TD
+(calls)Tj
+/TT8 1 Tf
+2.0825 0 TD
+(Gosched)Tj
+/TT6 1 Tf
+4.2007 0 TD
+(.)Tj
+-22.9352 -2.4 TD
+0.0795 Tw
+(Plus, if)Tj
+/TT8 1 Tf
+3.243 0 TD
+0 Tw
+(g->stackguard0)Tj
+/TT6 1 Tf
+8.7309 0 TD
+(is)Tj
+/TT8 1 Tf
+0.9965 0 TD
+(StackPreempt)Tj
+/TT6 1 Tf
+7.2012 0 TD
+[(,)-329.5(then)]TJ
+/TT8 1 Tf
+2.6307 0 TD
+(asm_amd64.s:824:runtime.stackcheck)Tj
+ET
+endstream
+endobj
+28 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+30 0 obj
+<<
+/Length 6755
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-8-)Tj
+-21.017 -3.6 TD
+(calls)Tj
+/TT8 1 Tf
+2.1202 0 TD
+(morestack)Tj
+/TT6 1 Tf
+5.6886 0 TD
+0.0376 Tw
+(and preemts if the goroutine seems to be running user code \(not runtime code\), by call-)Tj
+-7.8088 -1.2 TD
+0 Tw
+(ing)Tj
+/TT8 1 Tf
+1.5813 0 TD
+(gosched_m)Tj
+/TT6 1 Tf
+5.7044 0 TD
+[(lik)10(e)]TJ
+/TT8 1 Tf
+1.793 0 TD
+(Gosched)Tj
+/TT6 1 Tf
+4.5042 0 TD
+0.0535 Tw
+[(does. I ha)20(v)15(e)15( )-15(not check)10(ed out if the compiler inserts calls in loops that do)]TJ
+-13.5829 -1.2 TD
+0.0936 Tw
+[(not perform function calls \(which check the stack\), and those might ne)25(v)15(e)0(r)-343.6(b)0(e)-343.6(preempted; which does not)]TJ
+T*
+0.0514 Tw
+[(matter much for us no)25(w)-301.4(becase the)15(y)-301.4(w)10(ould be b)20(ugs in the code and not the normal case. The stack checks)]TJ
+T*
+0.0238 Tw
+[(are inserted silently by the link)10(er unless)]TJ
+/TT8 1 Tf
+16.2919 0 TD
+0 Tw
+(NOSPLIT)Tj
+/TT6 1 Tf
+4.4745 0 TD
+0.0238 Tw
+(is indicated, and thus normal function calls are a source)Tj
+-20.7663 -1.2 TD
+0 Tw
+(of possible preemptions.)Tj
+0 -2.4 TD
+(As a side-efect, a)Tj
+/TT8 1 Tf
+7.1353 0 TD
+(NOSPLIT)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(function call is not preemptible by this mechanism.)Tj
+-11.5859 -2.4 TD
+(The code in)Tj
+/TT8 1 Tf
+4.9702 0 TD
+(schedule)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(runs the scheduler:)Tj
+-7.521 -1.56 TD
+[(ï)-2150(There can be no)]TJ
+/TT8 1 Tf
+9.1632 0 TD
+(m->locks)Tj
+/TT6 1 Tf
+4.8008 0 TD
+0.25 Tc
+[(,o)250(ri)250(t)250(í)305(sab)270(u)250(g)250(.)]TJ
+-13.964 -1.56 TD
+2.15 Tc
+[(ïI)2150(f)]TJ
+/TT8 1 Tf
+3.4161 0 TD
+0 Tc
+(m->lockedg)Tj
+/TT6 1 Tf
+6.251 0 TD
+(then)Tj
+-7.1671 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0494 Tw
+(proc.c:1287: stoplockedm)Tj
+/TT6 1 Tf
+14.7511 0 TD
+(is called, to stop the current)Tj
+/TT4 1 Tf
+11.5986 0 TD
+0 Tw
+(G)Tj
+/TT6 1 Tf
+1.0216 0 TD
+(at)Tj
+/TT4 1 Tf
+1.0211 0 TD
+(M)Tj
+/TT6 1 Tf
+1.1325 0 TD
+(until)Tj
+/TT4 1 Tf
+2.133 0 TD
+(G)Tj
+/TT6 1 Tf
+1.0217 0 TD
+0.0495 Tw
+(can run)Tj
+-32.6797 -1.2 TD
+-0.0002 Tc
+0.237 Tw
+(again. This is done by lending)Tj
+/TT8 1 Tf
+13.7195 0 TD
+0 Tc
+0 Tw
+(m->p)Tj
+/TT6 1 Tf
+2.8872 0 TD
+0.2368 Tw
+(to another)Tj
+/TT4 1 Tf
+4.7499 0 TD
+0 Tw
+(M)Tj
+/TT6 1 Tf
+0.833 0 TD
+0.4867 Tc
+-0.7317 Tw
+[(,i)486.7(fw)486.7(eh)486.7(a)506.7(v)506.7( ea)]TJ
+/TT4 1 Tf
+6.7569 0 TD
+0 Tc
+0 Tw
+(P)Tj
+/TT6 1 Tf
+1.0975 0 TD
+(using)Tj
+/TT8 1 Tf
+2.6537 0 TD
+(hand-)Tj
+-32.6977 -1.2 TD
+(offp\(releasep\(\)\))Tj
+/TT6 1 Tf
+9.6016 0 TD
+0.2405 Tw
+[(,)-490.5(and then calling)]TJ
+/TT8 1 Tf
+8.0987 0 TD
+0 Tw
+(runtime.notesleep\(&g->m->park\))Tj
+/TT6 1 Tf
+-17.7003 -1.2 TD
+(to sleep. Later)Tj
+/TT8 1 Tf
+5.9419 0 TD
+(acquirep\(m->nextp\))Tj
+/TT6 1 Tf
+11.0518 0 TD
+[(is used to get a ne)25(w)]TJ
+/TT4 1 Tf
+8.0844 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(before returning and...)Tj
+-28.4389 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1358: execute)Tj
+/TT6 1 Tf
+12.252 0 TD
+(is called for)Tj
+/TT8 1 Tf
+4.9702 0 TD
+(m->lockedg)Tj
+/TT6 1 Tf
+6.001 0 TD
+(.)Tj
+-28.2232 -2.76 TD
+2.15 Tc
+[(ïI)2150(f)]TJ
+/TT8 1 Tf
+3.609 0 TD
+0 Tc
+(runtime.sched.gcwaiting)Tj
+/TT6 1 Tf
+14.2451 0 TD
+(then)Tj
+/TT8 1 Tf
+2.1646 0 TD
+(gcstopm)Tj
+/TT6 1 Tf
+4.6436 0 TD
+0.1929 Tw
+(is called, which calls)Tj
+/TT8 1 Tf
+9.3522 0 TD
+0 Tw
+(releasep)Tj
+/TT6 1 Tf
+5.2436 0 TD
+(and)Tj
+/TT8 1 Tf
+-36.7581 -1.2 TD
+(stopm)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.1444 Tw
+[(;)-394.4(This happens when)]TJ
+/TT8 1 Tf
+9.0761 0 TD
+0 Tw
+(stoptheworld)Tj
+/TT6 1 Tf
+7.5956 0 TD
+0.1444 Tw
+(is called and, once we are done)Tj
+/TT8 1 Tf
+13.7272 0 TD
+0 Tw
+(schedule)Tj
+/TT6 1 Tf
+-33.3994 -1.2 TD
+-0.0003 Tc
+0.0003 Tw
+(restarts again.)Tj
+-5 -2.4 TD
+0 Tc
+0 Tw
+(At this point)Tj
+/TT8 1 Tf
+5.2505 0 TD
+(schedule)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(picks a ready)Tj
+/TT4 1 Tf
+5.5254 0 TD
+(G)Tj
+/TT6 1 Tf
+0.7222 0 TD
+[(.)-500(Once in a while from the global pool, and usually from)]TJ
+/TT8 1 Tf
+23.0225 0 TD
+(m->p)Tj
+/TT6 1 Tf
+2.4004 0 TD
+(.)Tj
+-39.4717 -2.76 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:3333: runqget)Tj
+/TT6 1 Tf
+12.252 0 TD
+(picks one)Tj
+/TT4 1 Tf
+4.0547 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+(from the queue using)Tj
+/TT8 1 Tf
+8.7202 0 TD
+(p->runqhead)Tj
+/TT6 1 Tf
+6.8511 0 TD
+(and CAS.)Tj
+-32.8502 -1.56 TD
+0.0179 Tw
+[(ï)-2150(When there is no)]TJ
+/TT4 1 Tf
+9.6249 0 TD
+0 Tw
+(G)Tj
+/TT6 1 Tf
+0.9901 0 TD
+0.0179 Tw
+(ready to run,)Tj
+/TT8 1 Tf
+5.3851 0 TD
+(proc.c:1381: findrunnable)Tj
+/TT6 1 Tf
+15.288 0 TD
+(tries to steal call-)Tj
+-28.7882 -1.2 TD
+0 Tw
+(ing)Tj
+/TT8 1 Tf
+1.5278 0 TD
+(globrunqget)Tj
+/TT6 1 Tf
+6.8511 0 TD
+(and,)Tj
+/TT8 1 Tf
+1.9438 0 TD
+(runtime.netpoll)Tj
+/TT6 1 Tf
+9.2515 0 TD
+(\(!!\).)Tj
+-22.0742 -1.56 TD
+[(ï)-2150(Then if thereí)55(s)-250(n)0(o)-250(w)10(ork,)]TJ
+/TT8 1 Tf
+12.3765 0 TD
+(m->spinning)Tj
+/TT6 1 Tf
+6.8511 0 TD
+(is set and it tries to steal from others.)Tj
+-19.2276 -1.56 TD
+[(ï)-2150(When e)25(v)15(erything f)10(ails, it calls)]TJ
+/TT8 1 Tf
+14.724 0 TD
+(stopm)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(and blocks.)Tj
+-22.9745 -2.4 TD
+(Once it gets a)Tj
+/TT4 1 Tf
+5.7202 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+(to run:)Tj
+-4.1924 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(proc.c:1358: execute)Tj
+/TT6 1 Tf
+12.252 0 TD
+(is called, which is mostly a call to a goto-label:)Tj
+-12.252 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(asm_amd64.s:143: gogo)Tj
+/TT2 1 Tf
+-7.5001 -3.6 TD
+0.25 Tw
+[(5. System)-250(calls)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(All system calls call)Tj
+T*
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(asm_darwin_amd64.s:19 syscall.Syscall)Tj
+/TT6 1 Tf
+22.4536 0 TD
+(or)Tj
+/TT8 1 Tf
+1.083 0 TD
+(Syscall6)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(that)Tj
+-28.5875 -1.56 TD
+[(ï)-2150(calls)]TJ
+/TT8 1 Tf
+4.5826 0 TD
+(proc.c:1761 runtime.reentersyscall)Tj
+/TT6 1 Tf
+20.6533 0 TD
+(\(from)Tj
+/TT8 1 Tf
+2.5269 0 TD
+(runtime.entersyscall)Tj
+/TT6 1 Tf
+12.0019 0 TD
+(\))Tj
+-34.7647 -1.2 TD
+(to prepare for a system call)Tj
+-2.5 -1.56 TD
+0.2083 Tw
+[(ï)-2150(This increments)]TJ
+/TT8 1 Tf
+9.5817 0 TD
+0 Tw
+(m->locks)Tj
+/TT6 1 Tf
+5.2591 0 TD
+0.2083 Tw
+[(to a)20(v)20(oid preemption, and tricks)]TJ
+/TT8 1 Tf
+13.7208 0 TD
+0 Tw
+(g->stackguard0)Tj
+/TT6 1 Tf
+8.8598 0 TD
+(to)Tj
+-34.9214 -1.2 TD
+[(mak)10(e)-250(sure the no split-stack happens.)]TJ
+-2.5 -1.56 TD
+[(ï)-2150(Sets)]TJ
+/TT4 1 Tf
+4.4171 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+(status to)Tj
+/TT8 1 Tf
+3.5557 0 TD
+(Gsyscall)Tj
+/TT6 1 Tf
+-8.9449 -1.56 TD
+[(ï)-2150(S)0(a)20(v)20( )245(es)-250(the PC and SP in)]TJ
+/TT8 1 Tf
+12.0769 0 TD
+(g->sched)Tj
+/TT6 1 Tf
+4.8008 0 TD
+(.)Tj
+-16.8777 -1.56 TD
+[(ï)-2150(Releases)]TJ
+/TT8 1 Tf
+6.2486 0 TD
+(p->m)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(and)Tj
+/TT8 1 Tf
+1.6938 0 TD
+(m->mcache)Tj
+/TT6 1 Tf
+-10.5929 -1.56 TD
+[(ï)-2150(Sets)]TJ
+/TT4 1 Tf
+4.4171 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(status to)Tj
+/TT8 1 Tf
+3.5557 0 TD
+(Psyscall)Tj
+/TT6 1 Tf
+-8.8336 -1.56 TD
+[(ï)-2150(Calls)]TJ
+/TT8 1 Tf
+4.8058 0 TD
+(entersyscall_gcwait)Tj
+/TT6 1 Tf
+11.6519 0 TD
+(when)Tj
+/TT8 1 Tf
+2.416 0 TD
+(runtime.sched.gcwaiting)Tj
+ET
+endstream
+endobj
+31 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+33 0 obj
+<<
+/Length 4988
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-9-)Tj
+-16.017 -3.6 TD
+[(ï)-2150(Decrements)]TJ
+/TT8 1 Tf
+7.5255 0 TD
+(m->locks)Tj
+/TT6 1 Tf
+5.0508 0 TD
+[(before proceding further)55(.)]TJ
+-15.0763 -1.56 TD
+[(ï)-2150(m)0(o)15(v)15(e)0(s)-250(parameters into re)15(gisters and e)15(x)15(ecutes)]TJ
+T*
+[(ï)-2150(e)15(x)15(ecutes)]TJ
+/TT8 1 Tf
+6.1625 0 TD
+(SYSCALL)Tj
+/TT6 1 Tf
+4.2007 0 TD
+[(,)-250(and, upon return from the system call, calls)]TJ
+-10.3632 -1.56 TD
+[(ï)-2150(calls)]TJ
+/TT8 1 Tf
+4.5826 0 TD
+(proc.c:1893 runtime.exitsyscall)Tj
+/TT6 1 Tf
+18.853 0 TD
+(calls directly)Tj
+-20.9356 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(exitsyscallfast)Tj
+/TT6 1 Tf
+9.2515 0 TD
+(to either re-acquire the last)Tj
+/TT4 1 Tf
+10.9668 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(or or get another idle)Tj
+/TT4 1 Tf
+8.6357 0 TD
+(P)Tj
+/TT6 1 Tf
+0.6108 0 TD
+(.)Tj
+-32.8258 -1.56 TD
+[(ï)-2150(o)0(r)-302(runs)]TJ
+/TT8 1 Tf
+5.6593 0 TD
+(exitsyscall0)Tj
+/TT6 1 Tf
+7.5032 0 TD
+0.052 Tw
+(as an)Tj
+/TT8 1 Tf
+2.3808 0 TD
+0 Tw
+(mcall)Tj
+/TT6 1 Tf
+3.3024 0 TD
+0.0519 Tw
+(to run the scheduler and then return to continue)Tj
+-16.3456 -1.2 TD
+0 Tw
+(when the scheduler returns and)Tj
+/TT4 1 Tf
+12.6899 0 TD
+(G)Tj
+/TT6 1 Tf
+0.9722 0 TD
+-0.0004 Tc
+0.0004 Tw
+(can run again.)Tj
+-13.6621 -1.56 TD
+0 Tc
+0.3402 Tw
+[(ï)-2150(This calls)]TJ
+/TT8 1 Tf
+7.2908 0 TD
+0 Tw
+(pidleget)Tj
+/TT6 1 Tf
+5.391 0 TD
+0.3402 Tw
+(and then)Tj
+/TT8 1 Tf
+4.3459 0 TD
+0 Tw
+(acquirep)Tj
+/TT6 1 Tf
+5.391 0 TD
+(and)Tj
+/TT8 1 Tf
+2.034 0 TD
+(execute)Tj
+/TT6 1 Tf
+4.7909 0 TD
+(or)Tj
+/TT8 1 Tf
+1.4232 0 TD
+(stopm)Tj
+/TT6 1 Tf
+3.5907 0 TD
+(and)Tj
+/TT8 1 Tf
+-31.7576 -1.2 TD
+(schedule)Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(,)-250(depending.)]TJ
+-12.3008 -1.56 TD
+[(ï)-2150(and returns to the caller)55(.)]TJ
+0 -2.4 TD
+[(There are other wrappers for system calls b)20(ut in the end the)15(y)-250(call the ab)]TJ
+28.5651 0 TD
+-0.015 Tc
+(ove )Tj
+1.6638 0 TD
+0 Tc
+(entry points.)Tj
+-30.2289 -2.4 TD
+-0.18 Tw
+[(T)80(w)80( o)-387.8(other )-317.8(functions,)]TJ
+/TT8 1 Tf
+8.9328 0 TD
+0 Tw
+(syscall.RawSyscall)Tj
+/TT6 1 Tf
+11.1896 0 TD
+(and)Tj
+/TT8 1 Tf
+1.8316 0 TD
+(.RawSyscall6)Tj
+/TT6 1 Tf
+7.589 0 TD
+0.1378 Tw
+(are wrappers that issue the)Tj
+-29.5429 -1.2 TD
+0.0819 Tw
+[(system call without doing an)15(ything: no calls to)]TJ
+/TT8 1 Tf
+19.5826 0 TD
+0 Tw
+(runtime.entersyscall)Tj
+/TT6 1 Tf
+12.3339 0 TD
+0.082 Tw
+(and no calls to)Tj
+/TT8 1 Tf
+6.3822 0 TD
+0 Tw
+(run-)Tj
+-38.2986 -1.2 TD
+(time.exitsyscall)Tj
+/TT6 1 Tf
+9.6016 0 TD
+-0.0003 Tc
+0.0009 Tw
+[(.)-250.3(I)-250.3(doní)17.7(t)-250.3(kno)24.7(w)-250.3(w)-0.3(hy the)14.7(y)-250.3(are not called from the entry points abo)14.7(v)14.7(e)-0.3(.)]TJ
+/TT2 1 Tf
+-12.1016 -3.6 TD
+0 Tc
+0.25 Tw
+(6. Signals)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(There is a global)Tj
+/TT8 1 Tf
+6.9419 0 TD
+(runtime.sigtab[sig])Tj
+/TT6 1 Tf
+11.6519 0 TD
+(table with entries of this data type:)Tj
+/TT8 1 Tf
+8 0 0 8 133 433.2 Tm
+1.8 Tw
+(struct SigTab)Tj
+0 -1.5 TD
+0 Tw
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+(int32 flags;)Tj
+T*
+(int8 *name;)Tj
+-2.4 -1.5 TD
+0 Tw
+(};)Tj
+T*
+(enum)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+[(SigNotify = 1<<0,)-2400(// let signal.Notify have signal, even if from kernel)]TJ
+T*
+[(SigKill = 1<<1,)-4800(// if signal.Notify doesnít take it, exit quietly)]TJ
+T*
+[(SigThrow = 1<<2,)-2400(// if signal.Notify doesnít take it, exit loudly)]TJ
+T*
+[(SigPanic = 1<<3,)-2400(// if the signal is from the kernel, panic)]TJ
+T*
+[(SigDefault = 1<<4,)-2400(// if the signal isnít explicitly requested, donít monitor it)]TJ
+T*
+[(SigHandling = 1<<5,)-2400(// our signal handler is registered)]TJ
+T*
+[(SigIgnored = 1<<6,)-2400(// the signal was ignored before we registered for it)]TJ
+T*
+[(SigGoExit = 1<<7,)-2400(// cause all runtime procs to exit \(only used on Plan 9\).)]TJ
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 72 223.2 Tm
+[(Signals are handled in their o)25(wn signal stack. When a ne)25(w)]TJ
+/TT4 1 Tf
+23.5545 0 TD
+(M)Tj
+/TT6 1 Tf
+1.083 0 TD
+(is initialized,)Tj
+-22.1375 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(runtime.minit)Tj
+/TT6 1 Tf
+8.0513 0 TD
+[(is called, e)15(g., for Darwin, it calls)]TJ
+-8.0514 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.1825 Tw
+(sys_darwin_amd64.s:265: runtime.sigaltstack)Tj
+/TT6 1 Tf
+26.4192 0 TD
+(to set the signal stack)Tj
+-26.4193 -1.2 TD
+0 Tw
+[(conte)15(xt, and)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.173 Tw
+(sys_darwin_386.s:218: runtime.sigprocmask)Tj
+/TT6 1 Tf
+25.2 0 TD
+(to set the signal mask to)Tj
+-25.2001 -1.2 TD
+0 Tw
+(none.)Tj
+-7.5 -2.4 TD
+(Later on, when)Tj
+/TT8 1 Tf
+6.2754 0 TD
+(dropm)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(is called to release an)Tj
+/TT4 1 Tf
+8.8013 0 TD
+(M)Tj
+/TT6 1 Tf
+0.833 0 TD
+(,)Tj
+-16.6602 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(runtime.unminit)Tj
+/TT6 1 Tf
+9.4427 0 TD
+0.1912 Tw
+(is called and it calls)Tj
+/TT8 1 Tf
+9.0922 0 TD
+0 Tw
+(runtime.signalstack)Tj
+/TT6 1 Tf
+11.8431 0 TD
+0.1912 Tw
+(to unset the signal)Tj
+-30.378 -1.2 TD
+0 Tw
+(stack.)Tj
+-5 -2.4 TD
+(The)Tj
+/TT8 1 Tf
+1.8047 0 TD
+(signal)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(package)Tj
+/TT8 1 Tf
+3.5254 0 TD
+(init)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(function:)Tj
+ET
+endstream
+endobj
+34 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+36 0 obj
+<<
+/Length 6472
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-10-)Tj
+-18.267 -3.6 TD
+[(ï)-2150(calls)]TJ
+/TT8 1 Tf
+4.7223 0 TD
+(runtime.signal_enable)Tj
+/TT6 1 Tf
+12.6021 0 TD
+0.1397 Tw
+[(,)-389.7(which when called for the )]TJ
+/TT9 1 Tf
+11.973 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.1397 Tw
+(rst time sets)Tj
+/TT8 1 Tf
+5.4464 0 TD
+0 Tw
+(sig.inuse)Tj
+/TT6 1 Tf
+-32.7999 -1.2 TD
+(and clears the)Tj
+/TT8 1 Tf
+5.7471 0 TD
+(sig.note)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(note, to prepare for handling signals.)Tj
+-13.2979 -2.76 TD
+[(ï)-2150(loops calling)]TJ
+/TT8 1 Tf
+7.8883 0 TD
+(process\(syscall.Signal\(signal_recv\(\)\)\))Tj
+/TT6 1 Tf
+22.8037 0 TD
+[(.)-500(Here,)]TJ
+-28.192 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(sig.s:21 signal_recv)Tj
+/TT6 1 Tf
+12.252 0 TD
+(is just a jump to)Tj
+-14.752 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0393 Tw
+(sigqueue.go:91 runtime.signal_recv)Tj
+/TT6 1 Tf
+20.4426 0 TD
+[(,)-289.3(which returns a signal number when)]TJ
+-20.4427 -1.2 TD
+0 Tw
+[(ití)55(s)-250(posted by the OS.)]TJ
+-7.5 -2.4 TD
+(When)Tj
+/TT8 1 Tf
+2.6377 0 TD
+(signal.Notify)Tj
+/TT6 1 Tf
+8.0513 0 TD
+(is called to install a handler:)Tj
+-8.189 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.1043 Tw
+(signal.go:49 Notify)Tj
+/TT6 1 Tf
+11.8605 0 TD
+(records in a)Tj
+/TT8 1 Tf
+5.2274 0 TD
+0 Tw
+(handlers)Tj
+/TT6 1 Tf
+5.1551 0 TD
+0.1044 Tw
+[(table for the signal gi)25(v)15(e)0(n)-354.4(o)0(r)-354.4(for all the)]TJ
+-22.2431 -1.2 TD
+0 Tw
+(signals, and calls)Tj
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(signal_unix.go:47 signal.enableSignal)Tj
+/TT6 1 Tf
+22.2036 0 TD
+[(,)-250(which is just a call to)]TJ
+-24.7037 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.7222 Tw
+(sigqueue.go:128 runtime.signal_enable)Tj
+/TT6 1 Tf
+22.9258 0 TD
+[(.)-972.2(This sets the signal in)]TJ
+/TT8 1 Tf
+-22.9259 -1.2 TD
+0 Tw
+(sig.wanted)Tj
+/TT6 1 Tf
+6.251 0 TD
+(and calls)Tj
+/TT8 1 Tf
+3.7764 0 TD
+(sigenable_go)Tj
+/TT6 1 Tf
+7.4512 0 TD
+(which is just a call, using)Tj
+/TT8 1 Tf
+10.3599 0 TD
+(onM)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(to this:)Tj
+-29.8887 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0495 Tw
+(signal.c:8 runtime.sigenable_m)Tj
+/TT6 1 Tf
+18.3519 0 TD
+(enables a signal calling with the sig-)Tj
+-18.352 -1.2 TD
+0 Tw
+[(nal number k)10(ept at)]TJ
+/TT8 1 Tf
+7.7097 0 TD
+(m->scalararg[0])Tj
+/TT6 1 Tf
+9.0015 0 TD
+[(.)-250(I)0(t)-250(i)0(s)-250(just a call to:)]TJ
+-19.2112 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0472 Tw
+(signal_unix.c:44 runtime.sigenable)Tj
+/TT6 1 Tf
+20.7477 0 TD
+0.0471 Tw
+(enables a signal, making a call)Tj
+-20.7478 -1.2 TD
+0 Tw
+[(to the ne)15(xt with)]TJ
+/TT8 1 Tf
+6.484 0 TD
+(runtime.sighandler)Tj
+/TT6 1 Tf
+11.0518 0 TD
+(as the handler function.)Tj
+-17.5358 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.4556 Tw
+(os_darwin.c:519: runtime.setsig)Tj
+/TT6 1 Tf
+19.7643 0 TD
+0 Tw
+(calls)Tj
+/TT8 1 Tf
+2.5382 0 TD
+(runtime.sigac-)Tj
+-22.3026 -1.2 TD
+(tion)Tj
+/TT6 1 Tf
+2.7591 0 TD
+(specifying)Tj
+/TT8 1 Tf
+4.5242 0 TD
+(runtime.sigtramp)Tj
+/TT6 1 Tf
+9.9602 0 TD
+0.1086 Tw
+(as the handler and supplying the)Tj
+-17.2435 -1.2 TD
+0 Tw
+(handler function \(runtime.sighandler\) in the)Tj
+/TT4 1 Tf
+17.7725 0 TD
+(sigaction)Tj
+/TT6 1 Tf
+3.9165 0 TD
+(structure.)Tj
+-34.189 -2.4 TD
+[(Later)40(,)-250(when a signal arri)25(v)15(es:)]TJ
+2.5 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(sys_darwin_386.s:240 runtime.sigtramp)Tj
+/TT6 1 Tf
+0 -1.56 TD
+-0.02 Tc
+-0.225 Tw
+[(ï)-2170(s)-20(av e)-20(s)]TJ
+/TT8 1 Tf
+4.8811 0 TD
+0 Tc
+0 Tw
+(g)Tj
+/TT6 1 Tf
+0.8501 0 TD
+(and sets)Tj
+/TT8 1 Tf
+3.4438 0 TD
+(m->gsignal)Tj
+/TT6 1 Tf
+6.251 0 TD
+(as the current)Tj
+/TT4 1 Tf
+5.6362 0 TD
+(G)Tj
+/TT6 1 Tf
+0.7222 0 TD
+[(,)-250(and then calls the actual handler:)]TJ
+-19.2844 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.511 Tw
+(signal_amd64x.c:44 runtime.sighandler)Tj
+/TT6 1 Tf
+23.4756 0 TD
+(looks into the global)Tj
+/TT8 1 Tf
+-23.4757 -1.2 TD
+0 Tw
+(runtime.sigtab)Tj
+/TT6 1 Tf
+8.7217 0 TD
+0.0702 Tw
+[(and might panic if not handled or deli)25(v)15(e)0(r)-320.2(the signal by call-)]TJ
+-8.7217 -1.2 TD
+0 Tw
+[(ing the ne)15(xt.)]TJ
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0684 Tw
+(sigqueue.go:48 runtime.sigsend)Tj
+/TT6 1 Tf
+18.3897 0 TD
+(is called with a signal number)Tj
+-18.3898 -1.2 TD
+0.0239 Tw
+[(to send the signal to recei)25(v)15(ers. The signal is queued in a global if there is no)]TJ
+T*
+0 Tw
+[(recei)25(v)15(e)0(r)-250(ready b)20(ut the signal is w)10(anted and is not already in the queue.)]TJ
+-12.5 -2.4 TD
+0.0197 Tw
+(From here, the loop started in the)Tj
+/TT8 1 Tf
+13.6902 0 TD
+0 Tw
+(singal.init)Tj
+/TT6 1 Tf
+6.8709 0 TD
+0.0198 Tw
+[(function w)10(ould send the signal to the users channel with)]TJ
+-20.5611 -1.2 TD
+0 Tw
+[(a)-250(non-blocking send. That is, if there is not enough b)20(u)0(f)25(fering in the channel signals are lost; b)20(ut thatí)55(s)-250(ok.)]TJ
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(7. Memory)-250(allocation)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(Memory is allocated by calls to)Tj
+/TT8 1 Tf
+12.8301 0 TD
+(new)Tj
+/TT6 1 Tf
+1.8003 0 TD
+[(.)-250(The implementation for this b)20(uiltin is:)]TJ
+-12.1304 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.0219 Tw
+(malloc.go:348 newobject)Tj
+/TT6 1 Tf
+13.8241 0 TD
+[(,)-271.9(which calls to)]TJ
+/TT8 1 Tf
+6.3915 0 TD
+0 Tw
+(mallocgc)Tj
+/TT6 1 Tf
+5.0726 0 TD
+(using)Tj
+/TT8 1 Tf
+2.4388 0 TD
+(flagNoScan)Tj
+/TT6 1 Tf
+6.2728 0 TD
+0.0218 Tw
+(as a )Tj
+/TT9 1 Tf
+1.8205 0 TD
+0 Tw
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0218 Tw
+(ag if)Tj
+-36.3765 -1.2 TD
+0 Tw
+[(the type is mark)10(ed as ha)20(ving no pointers.)]TJ
+0 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(malloc.go:46 mallocgc)Tj
+/TT6 1 Tf
+12.852 0 TD
+(is the main entry point for memory allocation.)Tj
+-20.3521 -2.4 TD
+0.059 Tw
+(Slices are created by calling)Tj
+/TT8 1 Tf
+11.7618 0 TD
+(malloc.go:357 newarray)Tj
+/TT6 1 Tf
+13.2611 0 TD
+[(,)-309(which does the same. Ra)15(w)-309(memory is allo-)]TJ
+-25.0229 -1.2 TD
+0.0593 Tw
+(cated by calls to)Tj
+/TT8 1 Tf
+6.9569 0 TD
+0 Tw
+(rawmem)Tj
+/TT6 1 Tf
+3.9099 0 TD
+0.0593 Tw
+(which also calls)Tj
+/TT8 1 Tf
+6.8151 0 TD
+0 Tw
+(mallocgc)Tj
+/TT6 1 Tf
+5.1101 0 TD
+(with )Tj
+/TT9 1 Tf
+2.0871 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ags)Tj
+/TT8 1 Tf
+1.6423 0 TD
+(flagNoScan)Tj
+/TT6 1 Tf
+6.3103 0 TD
+(and)Tj
+/TT8 1 Tf
+1.753 0 TD
+(flagNoZero)Tj
+/TT6 1 Tf
+6.001 0 TD
+[(;)-309.2(i.e.,)]TJ
+-41.1419 -1.2 TD
+[(thatí)55(s)-250(almost a direct)]TJ
+/TT8 1 Tf
+8.5534 0 TD
+(malloc)Tj
+/TT6 1 Tf
+3.8506 0 TD
+[(call, b)20(ut for the GC.)]TJ
+-12.404 -2.4 TD
+0.1059 Tw
+[(There are se)25(v)15(eral allocation classes. Sizes are recorded in)]TJ
+/TT8 1 Tf
+24.1235 0 TD
+0 Tw
+(runtime.class_to_size[])Tj
+/TT6 1 Tf
+13.8022 0 TD
+[(.)-355.9(Alignments)]TJ
+-37.9258 -1.2 TD
+(are:)Tj
+ET
+endstream
+endobj
+37 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+39 0 obj
+<<
+/Length 5847
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-11-)Tj
+-18.267 -3.6 TD
+[(ï)-2150(8)0(,)-250(for sizes under 16 bytes and sizes that are not a po)25(wer of 2.)]TJ
+0 -1.56 TD
+[(ï)-2150(16, for sizes under 128 bytes,)]TJ
+T*
+[(ï)-2150(size/8, for sizes under 2KiB,)]TJ
+T*
+[(ï)-2150(256, for sizes starting at 2KiB.)]TJ
+-2.5 -1.2 TD
+-0.0003 Tc
+0.0003 Tw
+[(Re)14.7(garding sizes:)]TJ
+2.5 -1.56 TD
+0 Tc
+0.1864 Tw
+[(ï)-2150(Sizes under)]TJ
+/TT8 1 Tf
+7.7606 0 TD
+0 Tw
+(MaxSmallSize)Tj
+/TT6 1 Tf
+7.6376 0 TD
+0.1864 Tw
+[(\(32KiB\), use the lar)18(ger size that k)10(eeps the same number of)]TJ
+-12.8982 -1.2 TD
+0 Tw
+[(objects in each page. The)15(y)-250(are allocated from a per)20(-)]TJ
+/TT4 1 Tf
+20.6764 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(cache.)Tj
+-24.0373 -1.56 TD
+[(ï)-2150(Sizes starting at 32KiB are rounded to)]TJ
+/TT8 1 Tf
+18.0245 0 TD
+(PageSize)Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(.)-250(The)15(y)-250(are allocated from the global heap.)]TJ
+-25.3253 -2.4 TD
+(The allocator used depends on the allocation:)Tj
+2.5 -1.56 TD
+0.0273 Tw
+[(ï)-2150(Objects with no pointers and less than 16 bytes \()]TJ
+/TT8 1 Tf
+22.1594 0 TD
+0 Tw
+(maxTinySize)Tj
+/TT6 1 Tf
+6.6011 0 TD
+0.0273 Tw
+[(\))-277.3(are allocated within a single)]TJ
+-26.2604 -1.2 TD
+0.0988 Tw
+(allocation and share it. This is done in the)Tj
+/TT4 1 Tf
+17.8296 0 TD
+0 Tw
+(P)Tj
+/TT6 1 Tf
+0.9596 0 TD
+0.0987 Tw
+(cache. The allocation is released when all such)Tj
+-18.7893 -1.2 TD
+0 Tw
+(objects are collected. This is done in the)Tj
+/TT4 1 Tf
+16.3003 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(cache.)Tj
+-19.6611 -1.56 TD
+[(ï)-2150(Objects up to 1024-8 bytes go into a size class rounded to multiples of 8 bytes.)]TJ
+T*
+[(ï)-2150(Objects up to 32KiB are rounded to multiples of 128 bytes. This is done in the)]TJ
+/TT4 1 Tf
+34.0792 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(cache.)Tj
+-34.94 -1.56 TD
+[(ï)-2150(Objects lar)18(ger than 32KiB are allocated on the heap by calling)]TJ
+/TT8 1 Tf
+27.6672 0 TD
+(largeAlloc_m )Tj
+7.4513 0 TD
+(onM)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-39.4187 -2.4 TD
+-0.0001 Tc
+0.0001 Tw
+[(The heap operates using pages, b)19.9(ut smaller allocators up in the hierarchy)-250.1(uses bytes. This is ho)24.9(w)-250.1(i)-0.1(t)-250.1(w)9.9(orks:)]TJ
+2.5 -1.56 TD
+0 Tc
+0.1862 Tw
+[(ï)-2150(The tin)15(y)-436.2(allocations use the)]TJ
+/TT8 1 Tf
+14.6632 0 TD
+0 Tw
+(tiny)Tj
+/TT6 1 Tf
+2.8366 0 TD
+0.1863 Tw
+(allocation from the)Tj
+/TT8 1 Tf
+8.4173 0 TD
+0 Tw
+(MCache)Tj
+/TT6 1 Tf
+4.0369 0 TD
+0.1863 Tw
+(structure at)Tj
+/TT8 1 Tf
+5.0928 0 TD
+0 Tw
+(p->mcache)Tj
+/TT6 1 Tf
+5.4009 0 TD
+(.)Tj
+-37.9476 -1.2 TD
+(There is one per)Tj
+/TT4 1 Tf
+6.7192 0 TD
+(P)Tj
+/TT6 1 Tf
+0.8608 0 TD
+(and it requires no locks:)Tj
+/TT8 1 Tf
+8 0 0 8 158 426 Tm
+(struct MCache)Tj
+0 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+1.8 Tw
+(byte* tiny;)Tj
+T*
+(uintptr tinysize;)Tj
+T*
+0 Tw
+(// The rest is not accessed on every malloc.)Tj
+T*
+[(MSpan* )-1800(alloc[NumSizeClasses]; )-1800(//)-600(spans to allocate from)]TJ
+0 -3 TD
+(StackFreeList stackcache[NumStackOrders];)Tj
+0 -1.5 TD
+1.8 Tw
+(SudoG* sudogcache;)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(};)Tj
+/TT6 1 Tf
+10 0 0 10 122 276 Tm
+(When)Tj
+/TT8 1 Tf
+2.6583 0 TD
+(tiny)Tj
+/TT6 1 Tf
+2.671 0 TD
+0.0206 Tw
+[(is e)15(xhausted, a ne)25(w)-270.6(one is tak)10(en from)]TJ
+/TT8 1 Tf
+15.3604 0 TD
+0 Tw
+(Mcache.alloc)Tj
+/TT6 1 Tf
+7.2012 0 TD
+0.0206 Tw
+[(,)-270.6(and, if that is e)15(xhausted,)]TJ
+-27.8909 -1.2 TD
+0.0186 Tw
+[(a)-268.6(n)0(e)25(w)25( )-25(one is allocated by a call to)]TJ
+/TT8 1 Tf
+13.8871 0 TD
+0 Tw
+(runtime.MCache_Refill)Tj
+/TT6 1 Tf
+12.602 0 TD
+[(,)-268.7(using)]TJ
+/TT8 1 Tf
+2.9544 0 TD
+(onM)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.0187 Tw
+[(.)-268.7(This asks)]TJ
+/TT8 1 Tf
+4.5561 0 TD
+0 Tw
+(run-)Tj
+-35.8 -1.2 TD
+(time.MCentral_CacheSpan)Tj
+/TT6 1 Tf
+14.0522 0 TD
+[(to allocate a ne)25(w)-250(span and places it into)]TJ
+/TT8 1 Tf
+16.1083 0 TD
+(Mache.alloc)Tj
+/TT6 1 Tf
+6.6011 0 TD
+(.)Tj
+-39.2616 -2.76 TD
+0.0312 Tw
+[(ï)-2150(The allocations with pointers or starting at 16 bytes, try )]TJ
+/TT9 1 Tf
+25.2242 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0312 Tw
+(rst to use)Tj
+/TT8 1 Tf
+3.9544 0 TD
+0 Tw
+(p->cache.alloc)Tj
+/TT6 1 Tf
+8.6826 0 TD
+0.0312 Tw
+(to get)Tj
+-35.9174 -1.2 TD
+0 Tw
+[(an allocation of the right size. If this f)10(ails,)]TJ
+/TT8 1 Tf
+16.9573 0 TD
+(MCache_Refill)Tj
+/TT6 1 Tf
+8.0513 0 TD
+(is called as before,)Tj
+/TT8 1 Tf
+7.6909 0 TD
+(onM)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-36.9998 -2.76 TD
+[(ï)-2150(Lar)18(ge allocations starting at 32KiB call)]TJ
+/TT8 1 Tf
+18.4772 0 TD
+(largeAlloc_m )Tj
+7.4513 0 TD
+(onM)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-25.2288 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.3327 Tw
+(malloc.c:372: runtime.largeAlloc_m)Tj
+/TT6 1 Tf
+21.3187 0 TD
+(rounds the size to a multiple of)Tj
+/TT8 1 Tf
+-21.3188 -1.2 TD
+0 Tw
+(PageSize)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(and calls:)Tj
+-5.0508 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+0.1802 Tw
+(mheap.c:231: runtime.MHeap_Alloc)Tj
+/TT6 1 Tf
+19.8135 0 TD
+0 Tw
+(calls)Tj
+/TT8 1 Tf
+2.2627 0 TD
+(mheap_alloc)Tj
+/TT6 1 Tf
+7.0313 0 TD
+0.1802 Tw
+(directly if)Tj
+-29.1076 -1.2 TD
+0 Tw
+[(ití)55(s)-250(a)-250(call made by)]TJ
+/TT8 1 Tf
+7.5256 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.2002 0 TD
+0.25 Tc
+[(,o)250(r)]TJ
+/TT8 1 Tf
+1.583 0 TD
+0 Tc
+(mcall)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(s)-250(it.)]TJ
+-13.3093 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mheap.c:171 mheap_alloc)Tj
+/TT6 1 Tf
+14.0522 0 TD
+(allocates n memory pages.)Tj
+-19.0523 -1.56 TD
+(ï)Tj
+/TT8 1 Tf
+2.5001 0 TD
+(mgc0.c:1815: runtime.markspan)Tj
+/TT6 1 Tf
+17.6528 0 TD
+(is called to tell the GC.)Tj
+-27.6529 -2.4 TD
+0.1083 Tw
+(Unless the allocation is)Tj
+/TT8 1 Tf
+9.9869 0 TD
+0 Tw
+(flagNoScan)Tj
+/TT6 1 Tf
+6.001 0 TD
+0.1083 Tw
+[(,)-358.3(the GC bitmap is updated by looking at the type gi)25(v)15(e)0(n)-358.3(t)0(o)]TJ
+/TT8 1 Tf
+24.8088 0 TD
+0 Tw
+(mal-)Tj
+-40.7967 -1.2 TD
+(locgc)Tj
+/TT6 1 Tf
+3.3953 0 TD
+0.1448 Tw
+[(to record which w)10(ords are pointers. Also, the unused part at the end of the actual allocation is)]TJ
+ET
+endstream
+endobj
+40 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+44 0 obj
+<<
+/Length 530
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-12-)Tj
+-20.767 -3.6 TD
+[(mark)10(ed in the GC bitmap as dead.)]TJ
+0 -2.4 TD
+0.0102 Tw
+(Looking at the)Tj
+/TT8 1 Tf
+6.1126 0 TD
+0 Tw
+(MHeap)Tj
+/TT6 1 Tf
+3.2607 0 TD
+0.0102 Tw
+[(no)25(w)65(,)65( )-65(for allocations under 1Mbyte \(for 4KiB pages\), there is a list of allocation with)]TJ
+-9.3733 -1.2 TD
+0 Tw
+[(e)15(xactly that page size. F)15(or lar)18(ger allocations there is a )]TJ
+/TT9 1 Tf
+21.6932 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(nal lar)18(ge list used.)]TJ
+ET
+endstream
+endobj
+45 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT8 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+46 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+47 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+48 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+49 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+50 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 122
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 333 250 278 
+0 500 500 500 500 500 500 500 0 0 0 0 0 0 0 0 
+0 0 0 722 0 0 0 778 0 389 0 0 667 944 722 0 
+611 0 722 556 667 0 0 1000 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 0 500 556 278 0 556 278 833 556 500 
+556 0 444 389 333 556 0 722 500 500 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 46 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 118
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 0 333 250 0 
+0 500 500 0 0 500 0 0 0 0 0 0 0 0 0 0 
+0 611 611 667 0 0 611 722 0 0 444 0 556 833 0 0 
+611 0 611 500 556 722 0 0 0 0 0 0 0 0 0 0 
+0 500 500 444 0 444 0 500 0 278 0 0 278 0 500 500 
+0 0 389 389 278 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 47 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 149
+/Widths [250 333 0 0 0 0 0 0 333 333 0 0 250 333 250 278 
+500 500 500 500 500 500 500 500 500 500 278 278 0 0 0 0 
+0 722 667 667 722 0 556 722 722 333 0 722 611 889 722 722 
+556 0 667 556 611 722 0 944 722 0 0 0 0 0 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 333 0 0 350 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 48 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 152
+/Widths [600 0 0 0 0 0 600 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 
+0 600 0 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 600 600 600 600 0 600 0 600 600 600 600 0 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 0 600 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 600 0 0 0 0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 49 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 50 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+26 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 28 0 R
+/Contents 27 0 R
+>>
+endobj
+29 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 31 0 R
+/Contents 30 0 R
+>>
+endobj
+32 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 34 0 R
+/Contents 33 0 R
+>>
+endobj
+35 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 37 0 R
+/Contents 36 0 R
+>>
+endobj
+38 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 40 0 R
+/Contents 39 0 R
+>>
+endobj
+43 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 45 0 R
+/Contents 44 0 R
+>>
+endobj
+51 0 obj
+<<
+/S /D
+>>
+endobj
+52 0 obj
+<<
+/Nums [0 51 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R 26 0 R 29 0 R 32 0 R 35 0 R]
+/Count 10
+/Parent 41 0 R
+>>
+endobj
+42 0 obj
+<<
+/Type /Pages
+/Kids [38 0 R 43 0 R]
+/Count 2
+/Parent 41 0 R
+>>
+endobj
+41 0 obj
+<<
+/Type /Pages
+/Kids [10 0 R 42 0 R ]
+/Count 12
+/MediaBox [0 0 612 792]
+>>
+endobj
+53 0 obj
+<<
+/CreationDate (D:20150611125724+02'00')
+/ModDate (D:20150611125724+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+54 0 obj
+<<
+/Type /Catalog
+/Pages 41 0 R
+/PageLabels 52 0 R
+>>
+endobj
+xref
+0 55
+0000000000 65535 f 
+0000060353 00000 n 
+0000000016 00000 n 
+0000004781 00000 n 
+0000058216 00000 n 
+0000058655 00000 n 
+0000059067 00000 n 
+0000059610 00000 n 
+0000060179 00000 n 
+0000057089 00000 n 
+0000061426 00000 n 
+0000060434 00000 n 
+0000004920 00000 n 
+0000009084 00000 n 
+0000060518 00000 n 
+0000009213 00000 n 
+0000013410 00000 n 
+0000060602 00000 n 
+0000013539 00000 n 
+0000016700 00000 n 
+0000060686 00000 n 
+0000016829 00000 n 
+0000018825 00000 n 
+0000060770 00000 n 
+0000018943 00000 n 
+0000022209 00000 n 
+0000060854 00000 n 
+0000022338 00000 n 
+0000031448 00000 n 
+0000060938 00000 n 
+0000031588 00000 n 
+0000038396 00000 n 
+0000061022 00000 n 
+0000038525 00000 n 
+0000043566 00000 n 
+0000061106 00000 n 
+0000043695 00000 n 
+0000050220 00000 n 
+0000061190 00000 n 
+0000050360 00000 n 
+0000056260 00000 n 
+0000061644 00000 n 
+0000061563 00000 n 
+0000061274 00000 n 
+0000056389 00000 n 
+0000056971 00000 n 
+0000057229 00000 n 
+0000057431 00000 n 
+0000057631 00000 n 
+0000057828 00000 n 
+0000058019 00000 n 
+0000061358 00000 n 
+0000061386 00000 n 
+0000061736 00000 n 
+0000061859 00000 n 
+trailer
+<<
+/Size 55
+/Root 54 0 R
+/Info 53 0 R
+/ID [<2a2d8d58e3cd1c8994bdc039f418d0e3><2a2d8d58e3cd1c8994bdc039f418d0e3>]
+>>
+startxref
+61929
+%%EOF

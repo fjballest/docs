@@ -1,0 +1,7578 @@
+%PDF-1.3
+%‚„œ”
+2 0 obj
+<<
+/Length 3975
+>>
+stream
+BT
+/TT2 1 Tf
+12 0 0 12 265.824 669 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(Lsub Go)Tj
+/TT4 1 Tf
+10 0 0 10 239.955 633 Tm
+-0.21 Tw
+[(F)55(r)55( ancisco )-210(J)25(.)-250(Ballester)45(os)]TJ
+0.373 -1.2 TD
+0 Tw
+[(TR LSUB-15-3 \(r)37(e)15(v)15( )-15(1\))]TJ
+2.085 -4.8 TD
+[(ABSTRA)30(CT)]TJ
+/TT6 1 Tf
+-13.1535 -2.4 TD
+0.0988 Tw
+[(F)15(o)0(r)-348.8(the Cli)25(v)15(e)15( )-15(OS)-348.8(being de)25(v)15(eloped at Lsub, we ha)20(v)15(e)15( )-15(modi)]TJ
+/TT7 1 Tf
+23.8258 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0988 Tw
+(ed the Go compiler in)Tj
+-26.8819 -1.2 TD
+0.0039 Tw
+[(se)25(v)15(eral important aspects. This document describes the changes made to the language, the)]TJ
+T*
+0 Tw
+[(compiler)40(,)-250(and its run-time.)]TJ
+/TT2 1 Tf
+-3.6 -4.8 TD
+0.25 Tw
+[(1. Intr)18(oduction)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+-0.0001 Tc
+0.0059 Tw
+[(Cli)24.9(v)14.9(e)14.9( )-15(is)-255.9(written using the Go programming language [1]. Cli)24.9(v)14.9(e)14.9( )-15(system services are or)17.9(ganized by connecting)]TJ
+0 -1.2 TD
+0 Tc
+0.031 Tw
+[(them through a pipe-lik)10(e)-281(abstraction. Lik)10(e)-281(i)0(t)-281(has been done in UNIX for decades. The aim is to let applica-)]TJ
+T*
+0 Tw
+[(tions le)25(v)15(erage the CSP programming style while, at the same time, mak)10(e)-250(them w)10(ork across the netw)10(ork.)]TJ
+0 -2.4 TD
+[(The problem with standard Go \(or CSP-lik)10(e\) channels is that:)]TJ
+2.5 -1.56 TD
+-0.0001 Tc
+0.0001 Tw
+[(1. )-1500(The)14.9(y)-250.1(d)-0.1(o)-250.1(not beha)19.9(v)14.9(e)14.9( )-15(well upon errors, re)14.9(garding termination of pipelines.)]TJ
+T*
+0 Tc
+1.5 Tw
+[(2. The)15(y)-250(d)0(o)-250(not )1500(con)]TJ
+8.9714 0 TD
+-0.015 Tc
+0 Tw
+(vey )Tj
+1.6638 0 TD
+0 Tc
+(error messages when errors happen.)Tj
+-13.1352 -2.4 TD
+0.0171 Tw
+(Therefore, we modi)Tj
+/TT7 1 Tf
+7.9473 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0171 Tw
+[(ed the channel abstraction as pro)15(vided by Go to mak)10(e)-267.1(i)0(t)-267.1(a)-267.1(better replacement for tradi-)]TJ
+-8.5034 -1.2 TD
+0.0494 Tw
+[(tional pipes. When using channels in Cli)25(v)15(e)0(í)55(s)55( )-55.1(Go, each end of the pipe may close it and the channel imple-)]TJ
+T*
+0.0731 Tw
+[(mentation tak)10(es care of propagating the error indication to the other end. Furthermore, an error string can)]TJ
+T*
+0.189 Tw
+[(be supplied when closing a channel and the other end may inquire about the cause of the error)55(.)-439(This)]TJ
+T*
+0 Tw
+[(becomes utterly important when channels cross the netw)10(ork because errors do happen.)]TJ
+0 -2.4 TD
+[(F)15(o)0(r)-250(e)15(xample, consider the pipeline)]TJ
+ET
+0 G
+1 J 1 j 0.4 w 10 M []0 d
+1 i 
+233.94 250.2 m
+233.94 240.264 225.876 232.2 215.94 232.2 c
+206.004 232.2 197.94 240.264 197.94 250.2 c
+197.94 260.136 206.004 268.2 215.94 268.2 c
+225.876 268.2 233.94 260.136 233.94 250.2 c
+s
+BT
+10 0 0 10 204.615 248 Tm
+(proc1)Tj
+ET
+270 250.2 m
+262.8 248.4 l
+262.8 252 l
+f
+0.1 w 
+270 250.2 m
+262.8 248.4 l
+262.8 252 l
+s
+0.4 w 
+234.03 250.23 m
+262.83 250.23 l
+S
+BT
+10 0 0 10 245.89 254 Tm
+(inc)Tj
+ET
+306 250.2 m
+306 240.264 297.936 232.2 288 232.2 c
+278.064 232.2 270 240.264 270 250.2 c
+270 260.136 278.064 268.2 288 268.2 c
+297.936 268.2 306 260.136 306 250.2 c
+s
+BT
+10 0 0 10 276.615 248 Tm
+(proc2)Tj
+ET
+342 250.2 m
+334.8 248.4 l
+334.8 252 l
+f
+0.1 w 
+342 250.2 m
+334.8 248.4 l
+334.8 252 l
+s
+0.4 w 
+306.03 250.23 m
+334.83 250.23 l
+S
+BT
+10 0 0 10 315.39 254 Tm
+(outc)Tj
+ET
+378 250.2 m
+378 240.264 369.936 232.2 360 232.2 c
+350.064 232.2 342 240.264 342 250.2 c
+342 260.136 350.064 268.2 360 268.2 c
+369.936 268.2 378 260.136 378 250.2 c
+s
+BT
+10 0 0 10 348.615 248 Tm
+(proc3)Tj
+/TT2 1 Tf
+-25.1615 -3.88 TD
+[(Figur)18(e)-250(1)0(:)]TJ
+/TT4 1 Tf
+4.1475 0 TD
+[(Example pipeline of pr)45(ocesses in clive)]TJ
+/TT6 1 Tf
+-6.6475 -2.4 TD
+0.0255 Tw
+[(In Cli)25(v)15(e)0(,)]TJ
+/TT9 1 Tf
+3.7605 0 TD
+0 Tw
+(proc2)Tj
+/TT6 1 Tf
+3.276 0 TD
+0.0255 Tw
+[(can e)15(x)15(ecute this code to recei)25(v)15(e)15( )-15(data from an input channel, modify it, and send the result)]TJ
+-7.0365 -1.2 TD
+0 Tw
+(to an output channel:)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+12 0 obj
+<<
+/Length 5765
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-2-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(var inc, outc chan[]byte)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(for data := range inc {)Tj
+2.4 -1.5 TD
+(ndata := modify\(data\))Tj
+T*
+(if ok := outc <-ndata; !ok {)Tj
+2.4 -1.5 TD
+(close\(inc, cerror\(outc\)\))Tj
+T*
+(break)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(close\(outc, cerror\(inc\)\))Tj
+/TT6 1 Tf
+10 0 0 10 72 582 Tm
+0.075 Tw
+(Should the )Tj
+/TT7 1 Tf
+4.7057 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.075 Tw
+(rst process,)Tj
+/TT9 1 Tf
+4.899 0 TD
+0 Tw
+(proc1)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0751 Tw
+[(,)-325(terminate normally \(or abnormally\), it calls)]TJ
+/TT9 1 Tf
+18.6032 0 TD
+0 Tw
+(close)Tj
+/TT6 1 Tf
+3.3256 0 TD
+0.0751 Tw
+(on the)Tj
+/TT9 1 Tf
+2.8719 0 TD
+0 Tw
+(inc)Tj
+/TT6 1 Tf
+2.1254 0 TD
+(channel)Tj
+-40.0874 -1.2 TD
+0.1614 Tw
+[(sho)25(wn in the code e)15(xcerpt. At this point, the code sho)25(wn for)]TJ
+/TT9 1 Tf
+26.2009 0 TD
+0 Tw
+(proc2)Tj
+/TT6 1 Tf
+3.4119 0 TD
+[(e)15(x)15(ecutes)]TJ
+/TT9 1 Tf
+3.8238 0 TD
+0.1614 Tw
+(close\(outc, cer-)Tj
+-33.4366 -1.2 TD
+0 Tw
+(ror\(inc\)\))Tj
+/TT6 1 Tf
+5.4009 0 TD
+[(,)-250(which does tw)10(o)-250(things:)]TJ
+-2.9009 -1.56 TD
+[(1. )-1500(retrie)25(v)15(e)0(s)-250(the cause for the close of the input channel, by calling)]TJ
+/TT9 1 Tf
+27.9781 0 TD
+(cerror\(inc\))Tj
+/TT6 1 Tf
+6.6011 0 TD
+(.)Tj
+-34.5791 -1.56 TD
+0.0267 Tw
+[(2. )-1473.3(closes)-276.7(the output channel pro)15(viding e)15(xactly that error indication, by calling)]TJ
+/TT9 1 Tf
+33.0327 0 TD
+0 Tw
+(close)Tj
+/TT6 1 Tf
+3.2772 0 TD
+0.0268 Tw
+(with a sec-)Tj
+-33.8099 -1.2 TD
+0 Tw
+[(ond ar)18(gument that pro)15(vides the error)55(.)]TJ
+-5 -1.2 TD
+0.0718 Tw
+[(Therefore, the error at a point of the pipe can be nicely propagated forw)10(ard. In its interesting to to recon-)]TJ
+T*
+0 Tw
+[(sider the implications of this for e)15(xamples lik)10(e)-250(that sho)25(wn for remo)15(ving )]TJ
+/TT7 1 Tf
+28.8735 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(les, and for similar system tools.)Tj
+-29.4296 -2.4 TD
+0.0043 Tw
+(The most interesting case is when the third process,)Tj
+/TT9 1 Tf
+20.9226 0 TD
+0 Tw
+(proc3)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0044 Tw
+[(,)-254.4(decides to cease consuming data. F)15(or e)15(xample,)]TJ
+-23.9231 -1.2 TD
+0.0324 Tw
+(because of an error or because it did )Tj
+/TT7 1 Tf
+14.9745 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0323 Tw
+[(nd what it w)10(anted. In this case, it calls)]TJ
+/TT9 1 Tf
+15.8049 0 TD
+0 Tw
+(close)Tj
+/TT6 1 Tf
+3.2828 0 TD
+0.0323 Tw
+(on the)Tj
+/TT9 1 Tf
+2.7863 0 TD
+0 Tw
+(outc)Tj
+/TT6 1 Tf
+2.6827 0 TD
+(channel)Tj
+-40.0874 -1.2 TD
+[(sho)25(wn in the code.)]TJ
+0 -2.4 TD
+0.0602 Tw
+(The middle process is not able to send more data from that point in time. Instead of panicing, as the stan-)Tj
+0 -1.2 TD
+0.023 Tw
+[(dard Go implementation w)10(ould do, the send operation no)25(w)-273(returns)]TJ
+/TT9 1 Tf
+27.0505 0 TD
+0 Tw
+(false)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-273(thus)]TJ
+/TT9 1 Tf
+2.463 0 TD
+(ok)Tj
+/TT6 1 Tf
+1.4732 0 TD
+(becomes)Tj
+/TT9 1 Tf
+3.7715 0 TD
+(false)Tj
+/TT6 1 Tf
+3.2735 0 TD
+(when)Tj
+/TT9 1 Tf
+-41.0322 -1.2 TD
+(proc2)Tj
+/TT6 1 Tf
+3.293 0 TD
+0.0425 Tw
+[(tries to send more data. The loop can be brok)10(en cleanly)65(,)-292.5(closing also the input channel to signal to)]TJ
+-3.293 -1.2 TD
+0 Tw
+(the )Tj
+/TT7 1 Tf
+1.4717 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(rst process that there is no point in producing further data.)Tj
+-2.0278 -2.4 TD
+0.1878 Tw
+[(Furthermore, all in)40(v)20(olv)15(ed processes can retrie)25(v)15(e)15( )-15.1(the actual error indicating the source of the problems)]TJ
+0 -1.2 TD
+0 Tw
+(\(which is not just)Tj
+/TT4 1 Tf
+7.1665 0 TD
+[("c)15(hannel was closed")]TJ
+/TT6 1 Tf
+8.8512 0 TD
+(and can be of more help\).)Tj
+-16.0177 -2.4 TD
+0.0715 Tw
+(As an aside, the last call to)Tj
+/TT9 1 Tf
+11.4419 0 TD
+0 Tw
+(close)Tj
+/TT6 1 Tf
+3.322 0 TD
+0.0715 Tw
+[(becomes no)25(w)-321.5(a)-321.5(no-operation, because the output channel w)10(as already)]TJ
+-14.7639 -1.2 TD
+0.0322 Tw
+[(closed, and we doní)18(t)-282.2(need to add unnecessary code to pre)25(v)15(ent the call because in Cli)25(v)15(e)15( )-15(this does not panic,)]TJ
+T*
+0 Tw
+[(unlik)10(e)-250(i)0(n)-250(standard Go.)]TJ
+0 -2.4 TD
+0.0392 Tw
+(The important point is that termination of the data stream is easy to handle for the program without resort-)Tj
+0 -1.2 TD
+0.075 Tw
+[(ing to e)15(xceptions \(or panics\), and we kno)25(w)-325(which one is the error)40(,)-325(s)0(o)-325(w)0(e)-325(can tak)10(e)-325(whate)25(v)15(e)0(r)-325(measures are)]TJ
+T*
+0 Tw
+[(con)40(v)15(enient in each case.)]TJ
+0 -2.4 TD
+0.0397 Tw
+[(There is a second change required by Cli)25(v)15(e)0(:)-289.7(application conte)15(xts. W)80(e)-289.7(had to modify the runtime to include)]TJ
+0 -1.2 TD
+0.0154 Tw
+[(the concept of an application id that is inherited when ne)25(w)-265.5(processes \(goroutines\) are created. Also, we had)]TJ
+T*
+0 Tw
+(to access the current process \(goroutine\) id.)Tj
+0 -2.4 TD
+0.069 Tw
+[(These were the tw)10(o)-319(required changes. But, once we had to maintain our o)25(wn Go compiler)40(,)-319(w)0(e)-319(introduced)]TJ
+0 -1.2 TD
+0 Tw
+[(other changes as well, as a con)40(v)15(enience.)]TJ
+0 -2.4 TD
+0.0908 Tw
+[(The follo)25(wing sections describe the changes made, as a reference for further ports. In all the changes we)]TJ
+0 -1.2 TD
+0.0436 Tw
+[(tried to be conserv)25(ati)25(v)15(e)15( )-15(and preserv)15(e)-293.6(a)0(s)-293.6(much as possible the e)15(xisting structure, to mak)10(e)-293.6(i)0(t)-293.6(easy to upgrade)]TJ
+T*
+0 Tw
+[(to future v)15(ersions of the compiler)55(.)]TJ
+0 -2.4 TD
+0.0021 Tw
+[(Also, just in case we made a mistak)10(e)-252.2(r)0(e)15(g)15( )242.1(arding assumptions made by the compiler)40(,)-252.1(adding more checks w)10(a)0(s)]TJ
+0 -1.2 TD
+0 Tw
+[(preferred. The changes look w)10(orse b)20(ut are safer)55(.)]TJ
+ET
+endstream
+endobj
+13 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT4 5 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+15 0 obj
+<<
+/Length 3394
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-3-)Tj
+/TT2 1 Tf
+-21.017 -3.6 TD
+0.25 Tw
+(2. Close)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(The)Tj
+/TT9 1 Tf
+1.8292 0 TD
+(close)Tj
+/TT6 1 Tf
+3.275 0 TD
+0.0245 Tw
+[(operation accepts no)25(w)-274.5(a)0(n)-274.5(optional second ar)18(gument with the error status, and does not panic if)]TJ
+-5.1042 -1.2 TD
+0.112 Tw
+(the channel is already closed or is)Tj
+/TT9 1 Tf
+14.5291 0 TD
+0 Tw
+(nil)Tj
+/TT6 1 Tf
+1.8003 0 TD
+0.112 Tw
+[(.)-362(Sending or recei)25(ving from a closed channel does not block and)]TJ
+-16.3294 -1.2 TD
+0 Tw
+[(does not do an)15(ything. A ne)25(w)-250(function)]TJ
+/TT9 1 Tf
+15.2911 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.8506 0 TD
+[(returns such error status, if an)15(y)65(,)65( )-65(for a gi)25(v)15(e)0(n)-250(channel.)]TJ
+-19.1416 -2.4 TD
+[(These calls are no)25(w)-250(equi)25(v)25(alent:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 626.4 Tm
+(close\(c\))Tj
+0 -1.5 TD
+(close\(c, nil\))Tj
+T*
+(close\(c, ""\))Tj
+/TT2 1 Tf
+10 0 0 10 72 560.4 Tm
+[(2.1. )-250(Changes)-250(in the runtime package)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0627 Tw
+(The type)Tj
+/TT9 1 Tf
+3.9018 0 TD
+0 Tw
+(hchan)Tj
+/TT6 1 Tf
+3.3132 0 TD
+0.0627 Tw
+[(is changed to include an error string embedded in the structure, to preserv)15(e)-312.7(the in)40(v)25(ariant)]TJ
+-7.215 -1.2 TD
+0.1152 Tw
+[(that there are no pointers to collect. This will change in the future, and we will k)10(eep an)]TJ
+/TT9 1 Tf
+36.9962 0 TD
+0 Tw
+(error)Tj
+/TT6 1 Tf
+3.3657 0 TD
+(instead)Tj
+-40.3619 -1.2 TD
+-0.0001 Tc
+0.0001 Tw
+[(garbage collected as e)24.9(v)14.9(erybode else.)]TJ
+0 -1.56 TD
+0 Tc
+0 Tw
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àtype.hchan)Tj
+8 0 0 8 158 487.2 Tm
+(type hchan struct {)Tj
+2.4 -1.5 TD
+[(qcount )-1200(uint)-6600(// total data in the queue)]TJ
+T*
+[(dataqsiz uint)-6600(// size of the circular queue)]TJ
+T*
+[(buf )-3000(unsafe.Pointer)-600(// points to an array of dataqsiz elements)]TJ
+T*
+(elemsize uint16)Tj
+T*
+1.2 Tw
+(errlen uint16)Tj
+T*
+(closed uint32)Tj
+T*
+0 Tw
+(elemtype *_type // element type)Tj
+T*
+[(sendx )-1800(uint)-1800(// send index)]TJ
+T*
+[(recvx )-1800(uint)-1800(// receive index)]TJ
+T*
+[(recvq )-1800(waitq)-1200(// list of recv waiters)]TJ
+T*
+[(sendq )-1800(waitq)-1200(// list of send waiters)]TJ
+T*
+3 Tw
+(err [maxerr]byte)Tj
+T*
+2.4 Tw
+(lock mutex)Tj
+-2.4 -1.5 TD
+0 Tw
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 301.2 Tm
+[(The ne)25(w)]TJ
+/TT7 1 Tf
+3.6957 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(elds are)Tj
+/TT9 1 Tf
+3.3315 0 TD
+(errlen)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(err)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-14.9281 -2.4 TD
+(The standard)Tj
+/TT9 1 Tf
+5.4424 0 TD
+(closechan)Tj
+/TT6 1 Tf
+5.6509 0 TD
+[(is no)25(w)-250(a)-250(call to)]TJ
+/TT9 1 Tf
+6.2792 0 TD
+(closechan2)Tj
+/TT6 1 Tf
+6.251 0 TD
+(with)Tj
+/TT9 1 Tf
+2.0278 0 TD
+(nil)Tj
+/TT6 1 Tf
+2.0503 0 TD
+[(as the second ar)18(gument.)]TJ
+-30.2016 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.closechan)Tj
+8 0 0 8 158 243.6 Tm
+(func closechan\(c *hchan\) {)Tj
+2.4 -1.5 TD
+(closechan2\(c, nil\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 189.6 Tm
+0.2622 Tc
+[(An)262.2(e)287.2(w)]TJ
+/TT9 1 Tf
+2.8876 0 TD
+0 Tc
+(chanerrstr)Tj
+/TT6 1 Tf
+6.2632 0 TD
+0.0123 Tw
+[(function returns the error string for the types accepted as a second ar)18(gument to)]TJ
+/TT9 1 Tf
+-9.1508 -1.2 TD
+0 Tw
+(close)Tj
+/TT6 1 Tf
+3.0005 0 TD
+(:)Tj
+-5.5005 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.chanerrstr)Tj
+ET
+endstream
+endobj
+16 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 2227
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-4-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func chanerrstr\(e interface{}\) string {)Tj
+2.4 -1.5 TD
+(if e == nil {)Tj
+2.4 -1.5 TD
+(return "")Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(switch v := e.\(type\) {)Tj
+T*
+(case nil:)Tj
+2.4 -1.5 TD
+(return "")Tj
+-2.4 -1.5 TD
+(case stringer:)Tj
+2.4 -1.5 TD
+(return v.String\(\))Tj
+-2.4 -1.5 TD
+(case error:)Tj
+2.4 -1.5 TD
+(return v.Error\(\))Tj
+-2.4 -1.5 TD
+(case string:)Tj
+2.4 -1.5 TD
+(return v)Tj
+-2.4 -1.5 TD
+(default:)Tj
+2.4 -1.5 TD
+(panic\("close errors must be a string or an error"\))Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 486 Tm
+(The old)Tj
+/TT9 1 Tf
+3.3325 0 TD
+(closechan)Tj
+/TT6 1 Tf
+5.6509 0 TD
+[(is no)25(w)]TJ
+/TT9 1 Tf
+2.8642 0 TD
+(closechan2)Tj
+/TT6 1 Tf
+6.001 0 TD
+(:)Tj
+-20.3485 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.closechan2)Tj
+8 0 0 8 158 452.4 Tm
+(func closechan2\(c *hchan, e interface{}\) {)Tj
+2.4 -1.5 TD
+(if c == nil {)Tj
+2.4 -1.5 TD
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(estr := chanerrstr\(e\))Tj
+0 -1.5 TD
+(lock\(&c.lock\))Tj
+T*
+(if c.closed != 0 {)Tj
+2.4 -1.5 TD
+(unlock\(&c.lock\))Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+T*
+(c.errlen = uint16\(0\))Tj
+T*
+(if estr != "" {)Tj
+2.4 -1.5 TD
+[(n)-600(:)0(=)-600(\(*stringStruct\)\(unsafe.Pointer\(&estr\)\).len)]TJ
+T*
+(if n > maxerr {)Tj
+2.4 -1.5 TD
+[(n)-600(=)-600(maxerr)]TJ
+-2.4 -1.5 TD
+(})Tj
+T*
+(c.errlen = uint16\(n\))Tj
+T*
+(c.err[c.errlen] = 0)Tj
+T*
+[(p)-600(:)0(=)-600(\(*stringStruct\)\(unsafe.Pointer\(&estr\)\).str)]TJ
+T*
+(memmove\(unsafe.Pointer\(&c.err[0]\), p, uintptr\(c.errlen\)\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 134.4 Tm
+(The)Tj
+/TT9 1 Tf
+1.995 0 TD
+(chansend)Tj
+/TT6 1 Tf
+5.2411 0 TD
+0.1902 Tw
+(function is changed not to panic when sending on a closed channel. It will be)Tj
+-7.2361 -1.2 TD
+-0.0001 Tc
+0.0084 Tw
+[(changed again later to return a boolean indicating if the send could proceed or not. F)14.9(or no)24.9(w)64.9(,)64.9( )-65.1(it)-258.5(returns)]TJ
+/TT9 1 Tf
+T*
+0 Tc
+0 Tw
+(true)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(indicating the send is complete \(and discarded\).)Tj
+-5.1504 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.chansend)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 2164
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-5-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func chansend\(...\) bool {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(if c.closed != 0 {)Tj
+2.4 -1.5 TD
+(unlock\(&c.lock\))Tj
+T*
+(return true)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(// and the same in a few other places that did panic.)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 582 Tm
+(In)Tj
+/TT9 1 Tf
+1.1801 0 TD
+(selectgoImpl)Tj
+/TT6 1 Tf
+7.5483 0 TD
+0.0971 Tw
+[(we ha)20(v)15(e)15( )-15(to)-347.1(change the case for)]TJ
+/TT9 1 Tf
+13.1662 0 TD
+0 Tw
+(sclose)Tj
+/TT6 1 Tf
+3.9477 0 TD
+0.097 Tw
+(so it does not panic. Instead, selects)Tj
+-25.8423 -1.2 TD
+0 Tw
+[(proceeds without actually doing an)15(ything.)]TJ
+-2.5 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/select.go:/àsclose)Tj
+8 0 0 8 158 524.4 Tm
+(func selectgoImpl\(...\) \(uintptr, uint16\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(sclose:)Tj
+2.4 -1.5 TD
+(selunlock\(sel\))Tj
+T*
+(goto retc)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 422.4 Tm
+0.0322 Tw
+[(A)-282.2(n)0(e)25(w)25( )-25(type and a couple of functions permits the user to call)]TJ
+/TT9 1 Tf
+24.9699 0 TD
+0 Tw
+(cerror\(\))Tj
+/TT6 1 Tf
+5.0831 0 TD
+0.0323 Tw
+[(and retrie)25(v)15(e)15( )-15(the error for a)]TJ
+-30.053 -1.2 TD
+0 Tw
+(channel \(or nil\), and to learn if the channel is closed and drained.)Tj
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àtype.chanError)Tj
+8 0 0 8 158 376.8 Tm
+(type chanError string)Tj
+0 -1.5 TD
+(func \(e chanError\) Error\(\) string {)Tj
+2.4 -1.5 TD
+(return string\(e\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 307.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.cerror)Tj
+8 0 0 8 158 289.2 Tm
+(func cerror\(c *hchan\) error {)Tj
+2.4 -1.5 TD
+(if c == nil {)Tj
+2.4 -1.5 TD
+(return nil)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(lock\(&c.lock\))Tj
+T*
+(if c.closed == 0 || c.errlen == 0 || c.err[0] == 0 {)Tj
+2.4 -1.5 TD
+(unlock\(&c.lock\))Tj
+T*
+(return nil)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(msg := gostringn\(&c.err[0], int\(c.errlen\)\))Tj
+T*
+(unlock\(&c.lock\))Tj
+T*
+(return chanError\(msg\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 111.5999 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.cclosed)Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 2863
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-6-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func cclosed\(c *hchan\) bool {)Tj
+2.4 -1.5 TD
+(if c == nil {)Tj
+2.4 -1.5 TD
+(return true)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(lock\(&c.lock\))Tj
+T*
+(closed := c.closed != 0 && \(c.dataqsiz == 0 ||)Tj
+2.4 -1.5 TD
+(c.qcount <= 0\))Tj
+-2.4 -1.5 TD
+(unlock\(&c.lock\))Tj
+T*
+(return closed)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 558 Tm
+[(2.2. )-250(Changes)-250(in the compiler)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.3522 Tw
+(The compiler must add)Tj
+/TT9 1 Tf
+10.9064 0 TD
+0 Tw
+(cerror)Tj
+/TT6 1 Tf
+4.2028 0 TD
+(and)Tj
+/TT9 1 Tf
+2.0459 0 TD
+(cclosed)Tj
+/TT6 1 Tf
+4.8028 0 TD
+0.3521 Tw
+[(as ne)25(w)-602.1(b)20(uiltins, and must decide which one of)]TJ
+/TT9 1 Tf
+-21.9579 -1.2 TD
+0 Tw
+(closechan)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(closechan2)Tj
+/TT6 1 Tf
+6.251 0 TD
+(should be called.)Tj
+-13.5957 -2.4 TD
+-0.08 Tc
+0.16 Tw
+[(We d)-80(e)]TJ
+/TT7 1 Tf
+2.5015 0 TD
+0 Tc
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(ne ne)25(w)-250(constants for nodes that are calls to)]TJ
+/TT9 1 Tf
+17.3861 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(or)Tj
+/TT9 1 Tf
+1.083 0 TD
+(cclosed)Tj
+/TT6 1 Tf
+4.2007 0 TD
+(.)Tj
+-29.5781 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/syntax.go:/OCCLOSED)Tj
+8 0 0 8 158 472.8 Tm
+(// Node ops.)Tj
+0 -1.5 TD
+(const \()Tj
+2.4 -1.5 TD
+(OXXX = iota)Tj
+T*
+(...)Tj
+T*
+4.8 Tw
+[(OCCLOSED //)-600(cclosed)]TJ
+T*
+5.4 Tw
+[(OCERROR //)-600(cerror)]TJ
+T*
+6 Tw
+[(OCLOSE //)-600(close)]TJ
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(\))Tj
+/TT6 1 Tf
+10 0 0 10 97 346.8 Tm
+[(W)80(e)80( )-80(gi)25(v)25( )240(e)-250(names for the ne)25(w)-250(constants when printed:)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:0+/goopnames/+/OCCLOSED/)Tj
+8 0 0 8 158 313.2 Tm
+(var goopnames = []string{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+0.6 Tw
+(OCCLOSED: "cclosed",)Tj
+T*
+1.2 Tw
+(OCERROR: "cerror",)Tj
+T*
+1.8 Tw
+(OCLOSE: "close",)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 211.2 Tm
+[(Precedence must be gi)25(v)15(e)0(n)-250(t)0(o)]TJ
+/TT9 1 Tf
+11.6504 0 TD
+(cclosed)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(:)Tj
+-23.8955 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:0+/opprec/+/OCCLOSED/)Tj
+8 0 0 8 158 177.6 Tm
+(var opprec = []int{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+3 Tw
+(OCCLOSED: 8,)Tj
+T*
+3.6 Tw
+(OCERROR: 8,)Tj
+T*
+4.2 Tw
+(OCLOSE: 8,)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 75.5999 Tm
+(Also,)Tj
+/TT9 1 Tf
+2.5904 0 TD
+(exprfmt)Tj
+/TT6 1 Tf
+4.652 0 TD
+0.2013 Tw
+(has to check out if)Tj
+/TT9 1 Tf
+8.5876 0 TD
+0 Tw
+(close)Tj
+/TT6 1 Tf
+3.4518 0 TD
+0.2013 Tw
+[(has one or tw)10(o)-451.3(a)0(r)18(guments and must add cases for)]TJ
+/TT9 1 Tf
+-19.2817 -1.2 TD
+0 Tw
+(cclosed)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(.)Tj
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+27 0 obj
+<<
+/Length 2625
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-7-)Tj
+-21.017 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:/àfunc.exprfmt/+/OCLOSE/)Tj
+8 0 0 8 158 690 Tm
+(func exprfmt\(n *Node, prec int\) string {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OCLOSE:)Tj
+2.4 -1.5 TD
+(// nemo: close with 2nd arg)Tj
+T*
+(if n.Left != nil && n.Right != nil {)Tj
+2.4 -1.5 TD
+(return fmt.Sprintf\("%v\(%v, %v\)",)Tj
+T*
+(Oconv\(int\(n.Op\), obj.FmtSharp\),)Tj
+2.4 -1.5 TD
+(n.Left, n.Right\))Tj
+-4.8 -1.5 TD
+(})Tj
+T*
+(fallthrough)Tj
+-2.4 -1.5 TD
+(case OREAL,)Tj
+2.4 -1.5 TD
+(OIMAG,)Tj
+T*
+(...)Tj
+T*
+(OCERROR, OCCLOSED,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 480 Tm
+(The prede)Tj
+/TT7 1 Tf
+4.0254 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ned)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(syms)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(at)Tj
+/TT9 1 Tf
+0.9717 0 TD
+(lex.go)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(must add)Tj
+/TT9 1 Tf
+3.8887 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(cclosed)Tj
+/TT6 1 Tf
+4.2007 0 TD
+(.)Tj
+-29.8818 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/lex.go:/cclosed)Tj
+8 0 0 8 158 446.4 Tm
+(var syms = []struct {...} {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+({"cclosed", LNAME, Txxx, OCCLOSED},)Tj
+T*
+({"cerror", LNAME, Txxx, OCERROR},)Tj
+T*
+({"close", LNAME, Txxx, OCLOSE},)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 344.4 Tm
+(The)Tj
+/TT9 1 Tf
+1.8047 0 TD
+(opnames)Tj
+/TT6 1 Tf
+4.4507 0 TD
+[(array is auto-generated and we doní)18(t)-250(h)0(a)20(v)20( )245(e)-250(to add entries, b)20(ut these are them.)]TJ
+-8.7554 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/opnames.go:/CCLOSED)Tj
+8 0 0 8 158 310.8 Tm
+(var opnames = []string{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+4.8 Tw
+(OCCLOSED: "CCLOSED",)Tj
+T*
+5.4 Tw
+(OCERROR: "CERROR",)Tj
+T*
+6 Tw
+(OCLOSE: "CLOSE",)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 208.8 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(order.go)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(we must add)Tj
+/TT9 1 Tf
+5.3047 0 TD
+(cclosed)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(to)Tj
+/TT9 1 Tf
+1.0278 0 TD
+(orderstmt)Tj
+/TT6 1 Tf
+5.4009 0 TD
+(.)Tj
+-30.3623 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/order.go:/CCLOSED)Tj
+8 0 0 8 158 175.2 Tm
+(case OAS2,)Tj
+2.4 -1.5 TD
+(OCLOSE,)Tj
+T*
+(OCCLOSED,)Tj
+T*
+(OCERROR,)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 97 97.2 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(racewalk.go)Tj
+/TT6 1 Tf
+6.8511 0 TD
+(must do the same for)Tj
+/TT9 1 Tf
+8.6372 0 TD
+(racewalknode)Tj
+/TT6 1 Tf
+7.2012 0 TD
+(.)Tj
+-26.2725 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/racewalk.go:/CCLOSED)Tj
+ET
+endstream
+endobj
+28 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+30 0 obj
+<<
+/Length 1778
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-8-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(// should not appear in AST by now)Tj
+0 -1.5 TD
+(case OSEND,)Tj
+2.4 -1.5 TD
+(ORECV,)Tj
+T*
+(OCCLOSED,)Tj
+T*
+(OCERROR,)Tj
+T*
+(OCLOSE,)Tj
+/TT6 1 Tf
+10 0 0 10 97 618 Tm
+(In)Tj
+/TT9 1 Tf
+1.2015 0 TD
+(typecheck1)Tj
+/TT6 1 Tf
+6.001 0 TD
+(,)Tj
+/TT9 1 Tf
+0.6185 0 TD
+(OCLOSE)Tj
+/TT6 1 Tf
+3.9691 0 TD
+0.1184 Tw
+[(must accept an optional second ar)18(gument and doní)18(t)-368.4(f)10(ail for send-only)]TJ
+-11.7901 -1.2 TD
+0 Tw
+(channels:)Tj
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.typecheck1/+/OCLOSE/)Tj
+8 0 0 8 158 572.4 Tm
+(case OCLOSE:)Tj
+2.4 -1.5 TD
+(// nemo: accept opt. second arg and donít fail on close for)Tj
+T*
+(// send only channels.)Tj
+T*
+(args := n.List)Tj
+T*
+(if args == nil {)Tj
+2.4 -1.5 TD
+(Yyerror\("missing argument for close\(\)"\))Tj
+T*
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if args.Next != nil && args.Next.Next != nil {)Tj
+2.4 -1.5 TD
+(Yyerror\("too many arguments for close\(\)"\))Tj
+T*
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -3 TD
+(// nemo: this probably isnítneeded. n should be ok already.)Tj
+0 -1.5 TD
+(n.Left = args.N)Tj
+T*
+(if args.Next != nil {)Tj
+2.4 -1.5 TD
+(n.Right = args.Next.N)Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(n.Right = nil)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(n.List = nil)Tj
+0 -3 TD
+(typecheck\(&n.Left, Erv\))Tj
+0 -1.5 TD
+(defaultlit\(&n.Left, nil\))Tj
+T*
+[(l)-600(:)0(=)-600(n.Left)]TJ
+T*
+[(t)-600(:)0(=)-600(l.Type)]TJ
+T*
+(if t == nil {)Tj
+2.4 -1.5 TD
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if t.Etype != TCHAN {)Tj
+2.4 -1.5 TD
+(Yyerror\("invalid operation: %v \(non-chan type %v\)", n, t\))Tj
+T*
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+31 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+33 0 obj
+<<
+/Length 1815
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 282.17 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-9-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(if n.Right != nil {)Tj
+2.4 -1.5 TD
+(typecheck\(&n.Right, Erv\))Tj
+T*
+(defaultlit\(&n.Right, nil\))Tj
+T*
+[(t)-600(=)-600(n.Right.Type)]TJ
+T*
+(if t == nil {)Tj
+2.4 -1.5 TD
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(// TODO: check that the type is string or an error type.)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(ok |= Etop)Tj
+T*
+(break OpSwitch)Tj
+/TT6 1 Tf
+10 0 0 10 97 534 Tm
+(Also in)Tj
+/TT9 1 Tf
+3.167 0 TD
+(typecheck1)Tj
+/TT6 1 Tf
+6.001 0 TD
+(,)Tj
+/TT9 1 Tf
+0.5 0 TD
+(cclosed)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(must be processed.)Tj
+-22.1631 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.typecheck1/+/OCCLOSED/)Tj
+8 0 0 8 158 500.4 Tm
+(case OCCLOSED, OCERROR:)Tj
+2.4 -1.5 TD
+(// nemo: new builtins)Tj
+T*
+(ok |= Erv)Tj
+T*
+(args := n.List)Tj
+T*
+(if args == nil {)Tj
+2.4 -1.5 TD
+(Yyerror\("missing argument for %v", n\))Tj
+T*
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if args.Next != nil {)Tj
+2.4 -1.5 TD
+(Yyerror\("too many arguments for %v", n\))Tj
+T*
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -3 TD
+(n.Left = args.N)Tj
+0 -1.5 TD
+(n.List = nil)Tj
+T*
+(typecheck\(&n.Left, Erv\))Tj
+T*
+(defaultlit\(&n.Left, nil\))Tj
+T*
+[(l)-600(:)0(=)-600(n.Left)]TJ
+T*
+[(t)-600(:)0(=)-600(l.Type)]TJ
+T*
+(if t == nil {)Tj
+2.4 -1.5 TD
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if t.Etype != TCHAN {)Tj
+2.4 -1.5 TD
+(Yyerror\("invalid operation: %v \(non-chan type %v\)", n, t\))Tj
+T*
+(n.Type = nil)Tj
+T*
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if n.Op == OCCLOSED {)Tj
+2.4 -1.5 TD
+(n.Type = Types[TBOOL])Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(n.Type = errortype)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(break OpSwitch)Tj
+ET
+endstream
+endobj
+34 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+36 0 obj
+<<
+/Length 2968
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-10-)Tj
+-18.267 -3.6 TD
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(checkdefergo)Tj
+/TT6 1 Tf
+7.4512 0 TD
+[(we must pre)25(v)15(ent discarding the result of)]TJ
+/TT9 1 Tf
+16.2613 0 TD
+(cclosed)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(cerror)Tj
+/TT6 1 Tf
+3.6006 0 TD
+(.)Tj
+-37.0406 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.checkde-)Tj
+0 -1.2 TD
+(fergo/+/OCCLOSED/)Tj
+8 0 0 8 158 662.4 Tm
+(case OAPPEND,)Tj
+2.4 -1.5 TD
+(OCAP,)Tj
+T*
+(OCCLOSED,)Tj
+T*
+(OCERROR,)Tj
+/TT6 1 Tf
+10 0 0 10 97 596.4 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(walkstmt)Tj
+/TT6 1 Tf
+5.0508 0 TD
+[(we must check w)10(alk the tw)10(o)-250(n)0(e)25(w)25( )-25(b)20(uiltins.)]TJ
+-8.6338 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/walk.go:/àfunc.walkstmt/+/OCCLOSED/)Tj
+8 0 0 8 158 562.8 Tm
+(case OAS,)Tj
+2.4 -1.5 TD
+(OCCLOSED,)Tj
+T*
+(OCERROR,)Tj
+/TT6 1 Tf
+10 0 0 10 97 508.8 Tm
+(In)Tj
+/TT9 1 Tf
+1.2095 0 TD
+(walkexpr)Tj
+/TT6 1 Tf
+4.8008 0 TD
+0.1264 Tw
+[(,)-376.5(w)0(e)-376.5(must check if we ha)20(v)15(e)15( )-15.1(one or tw)10(o)-376.4(a)0(r)18(guments for)]TJ
+/TT9 1 Tf
+22.9198 0 TD
+0 Tw
+(close)Tj
+/TT6 1 Tf
+3.3769 0 TD
+0.1264 Tw
+(and then call one of)Tj
+/TT9 1 Tf
+-32.307 -1.2 TD
+0 Tw
+(closechan)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(closechan2)Tj
+/TT6 1 Tf
+6.001 0 TD
+(.)Tj
+-15.8457 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/walk.go:/àfunc.walkexpr/+/OCLOSE/)Tj
+8 0 0 8 158 463.2 Tm
+(case OCLOSE:)Tj
+2.4 -1.5 TD
+(if n.Right == nil {)Tj
+2.4 -1.5 TD
+(fn := syslook\("closechan", 1\))Tj
+T*
+(substArgTypes\(fn, n.Left.Type\))Tj
+T*
+[(n)-600(=)-600(mkcall1\(fn, nil, init, n.Left\))]TJ
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(fn := syslook\("closechan2", 1\))Tj
+T*
+(substArgTypes\(fn, n.Left.Type\))Tj
+T*
+[(n)-600(=)-600(mkcall1\(fn, nil, init, n.Left, n.Right\))]TJ
+-2.4 -1.5 TD
+(})Tj
+T*
+(goto ret)Tj
+/TT6 1 Tf
+10 0 0 10 97 313.2 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(walkexpr)Tj
+/TT6 1 Tf
+4.8008 0 TD
+[(,)-250(w)0(e)-250(must add calls for the tw)10(o)-250(n)0(e)25(w)25( )-25(b)20(uiltins:)]TJ
+-8.3838 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/walk.go:/àfunc.walkexpr/+/OCCLOSED/)Tj
+8 0 0 8 158 279.6 Tm
+(case OCCLOSED:)Tj
+2.4 -1.5 TD
+(fn := syslook\("cclosed", 1\))Tj
+T*
+(substArgTypes\(fn, n.Left.Type\))Tj
+T*
+[(n)-600(=)-600(mkcall1\(fn, Types[TBOOL], init, n.Left\))]TJ
+T*
+(goto ret)Tj
+-2.4 -3 TD
+(case OCERROR:)Tj
+2.4 -1.5 TD
+(fn := syslook\("cerror", 1\))Tj
+T*
+(substArgTypes\(fn, n.Left.Type\))Tj
+T*
+[(n)-600(=)-600(mkcall1\(fn, errortype, init, n.Left\))]TJ
+T*
+(goto ret)Tj
+/TT6 1 Tf
+10 0 0 10 97 117.5999 Tm
+(The )Tj
+/TT7 1 Tf
+1.8047 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(le)Tj
+/TT9 1 Tf
+0.9717 0 TD
+(builtin.go)Tj
+/TT6 1 Tf
+6.251 0 TD
+[(is generated, b)20(ut anw)10(ay these are the ne)25(w)-250(runtime functions called:)]TJ
+-12.0835 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/builtin.go:/closechan)Tj
+ET
+endstream
+endobj
+37 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+39 0 obj
+<<
+/Length 2955
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-11-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+("func @\\"\\".closechan \(@\\"\\".hchan.1 any\)\\n" +)Tj
+0 -1.5 TD
+("func @\\"\\".closechan2 \(@\\"\\".hchan.1 any, @\\"\\".err.2 interface {}\)\\n" +)Tj
+T*
+("func @\\"\\".cerror \(@\\"\\".hchan.2 any\) \(? error\)\\n" +)Tj
+T*
+("func @\\"\\".cclosed \(@\\"\\".hchan.2 any\) \(? bool\)\\n" +)Tj
+/TT6 1 Tf
+10 0 0 10 97 642 Tm
+-0.025 Tc
+[(A)-275(n)-25(ew )]TJ
+/TT7 1 Tf
+2.8632 0 TD
+0 Tc
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(le)Tj
+/TT9 1 Tf
+0.9717 0 TD
+(lsub_test.go)Tj
+/TT6 1 Tf
+7.4512 0 TD
+(tests for the changes in close.)Tj
+/TT2 1 Tf
+-14.3422 -3.6 TD
+0.25 Tw
+(3. Send)Tj
+/TT6 1 Tf
+0 -1.56 TD
+0.1941 Tw
+[(The send operation on a closed chan w)10(as changed to proceed, doing nothing in that case. It must be)]TJ
+0 -1.2 TD
+0 Tw
+(changed to report if the send could be done or not, as in:)Tj
+/TT9 1 Tf
+8 0 0 8 133 560.4 Tm
+(if ok := c <- v; !ok {)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 494.4 Tm
+[(3.1. )-250(Changes)-250(in the runtime package)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0514 Tw
+[(A)-276.4(n)0(e)25(w)25( function)]TJ
+/TT9 1 Tf
+6.5248 0 TD
+0 Tw
+(chansend2)Tj
+/TT6 1 Tf
+5.4009 0 TD
+[(,)-276.3(replaces)]TJ
+/TT9 1 Tf
+4.078 0 TD
+(chansend1)Tj
+/TT6 1 Tf
+5.6772 0 TD
+0.0263 Tw
+(as the entry point for sends. It returns a)Tj
+/TT9 1 Tf
+16.1215 0 TD
+0 Tw
+(bool)Tj
+/TT6 1 Tf
+2.6767 0 TD
+(report-)Tj
+-40.479 -1.2 TD
+[(ing if the send w)10(as done or not \(i.e., if the channel w)10(as open or closed\).)]TJ
+0 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.chansend2)Tj
+8 0 0 8 158 433.2 Tm
+(func chansend2\(t *chantype, c *hchan, elem unsafe.Pointer\) bool {)Tj
+2.4 -1.5 TD
+(if t == nil {)Tj
+2.4 -1.5 TD
+(return false // prevent this from inlining)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(_, did := chansend\(t, c, elem, true,)Tj
+2.4 -1.5 TD
+(getcallerpc\(unsafe.Pointer\(&t\)\)\))Tj
+-2.4 -1.5 TD
+(return did)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 319.2 Tm
+0.0398 Tw
+(The old)Tj
+/TT9 1 Tf
+3.4121 0 TD
+0 Tw
+(chansend)Tj
+/TT6 1 Tf
+5.0906 0 TD
+0.0398 Tw
+[(is changed to return tw)10(o)-289.8(booleans instead of one: could we send without block-)]TJ
+-8.5027 -1.2 TD
+0 Tw
+[(ing?, and did the send happen? \(i.e., w)10(as the channel not closed\).)]TJ
+0 -2.4 TD
+(When it did return)Tj
+/TT9 1 Tf
+7.6089 0 TD
+(false)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.25 Tc
+[(,i)250(tn)250(o)275(w)250(:)]TJ
+-13.1094 -1.56 TD
+0 Tc
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.chansend\\\()Tj
+8 0 0 8 158 249.6 Tm
+(func chansend\(...\) \(bool, bool\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(if !block {)Tj
+2.4 -1.5 TD
+(return false, false)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 159.6 Tm
+(When it did return)Tj
+/TT9 1 Tf
+7.6089 0 TD
+(true)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(because it could send, it no)25(w)-250(does)]TJ
+/TT9 1 Tf
+8 0 0 8 158 141.6 Tm
+(return true, true)Tj
+/TT6 1 Tf
+10 0 0 10 97 111.5999 Tm
+(Also, when the channel is found closed:)Tj
+ET
+endstream
+endobj
+40 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+44 0 obj
+<<
+/Length 2600
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-12-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(if c.closed != 0 {)Tj
+2.4 -1.5 TD
+(unlock\(&c.lock\))Tj
+T*
+(return true, false)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 654 Tm
+[(Note that this did panic before we changed an)15(ything.)]TJ
+0 -2.4 TD
+(This part of the code is also changed:)Tj
+/TT9 1 Tf
+8 0 0 8 158 612 Tm
+(gp.waiting = nil)Tj
+0 -1.5 TD
+(done := true)Tj
+T*
+(if gp.param == nil {)Tj
+2.4 -1.5 TD
+(if c.closed == 0 {)Tj
+2.4 -1.5 TD
+(throw\("chansend: spurious wakeup"\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(// nemo: donít panic\("send on closed channel"\))Tj
+T*
+(done = false)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(gp.param = nil)Tj
+T*
+(if mysg.releasetime > 0 {)Tj
+2.4 -1.5 TD
+(blockevent\(int64\(mysg.releasetime\)-t0, 2\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(releaseSudog\(mysg\))Tj
+T*
+(return true, done)Tj
+/TT6 1 Tf
+10 0 0 10 97 414 Tm
+(Because of this change,)Tj
+/TT9 1 Tf
+9.6909 0 TD
+(selectnbsend)Tj
+/TT6 1 Tf
+7.4512 0 TD
+[(has to be changed to use one of the tw)10(o)-250(returned v)25(alues.)]TJ
+-19.6421 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.selectnbsend)Tj
+8 0 0 8 158 380.4 Tm
+(func selectnbsend\(...\) \(selected bool\) {)Tj
+2.4 -1.5 TD
+(can, _ := chansend\(...\))Tj
+T*
+(return can)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 314.4 Tm
+(The same happens to)Tj
+/TT9 1 Tf
+8.6641 0 TD
+(reflect_chansend)Tj
+/TT6 1 Tf
+9.6016 0 TD
+(.)Tj
+-20.7656 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.reflect_chansend)Tj
+8 0 0 8 158 280.8 Tm
+(func reflect_chansend\(...\) \(selected bool\) {)Tj
+2.4 -1.5 TD
+(can, _ := chansend\(...\))Tj
+T*
+(return can)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 202.8 Tm
+[(3.2. )-250(Changes)-250(in the compiler)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+[(The syntax must no)25(w)-250(accept using)]TJ
+/TT9 1 Tf
+14.0277 0 TD
+(c<-x)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(as a v)25(alue. In the grammar we must note that)]TJ
+-16.6781 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.y:0+/àexpr/+/LCOMM)Tj
+8 0 0 8 158 153.6 Tm
+(expr LCOMM expr)Tj
+0 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OSEND, $1, $3\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 99.5999 Tm
+-0.0001 Tc
+0.0511 Tw
+[(is no)24.9(w)-301.1(a)-301.1(v)24.9(alid e)14.9(xpression once again. This does not change the code, b)19.9(ut there w)9.9(as a comment indi-)]TJ
+0 -1.2 TD
+0 Tc
+0 Tw
+[(cating that this w)10(as here just to report syntax errors.)]TJ
+0 -2.4 TD
+(The )Tj
+/TT7 1 Tf
+1.8047 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(le)Tj
+/TT9 1 Tf
+0.9717 0 TD
+(builtin.go)Tj
+/TT6 1 Tf
+6.251 0 TD
+[(is generated, b)20(ut anw)10(ay this function is added:)]TJ
+ET
+endstream
+endobj
+45 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+47 0 obj
+<<
+/Length 2550
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-13-)Tj
+-20.767 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/builtin.go:/closechan)Tj
+8 0 0 8 158 690 Tm
+("func @\\"\\".chansend2 \(@\\"\\".chanType.2 *byte, @\\"\\".hchan.3 chan<- any, @\\"\\".elem.4 *any\) \(@)Tj
+ET
+BT
+8 0 0 8 609.2735 690 Tm
+(\\)Tj
+ET
+BT
+/TT6 1 Tf
+10 0 0 10 97 660 Tm
+0.0396 Tw
+(The function)Tj
+/TT9 1 Tf
+5.4664 0 TD
+0 Tw
+(hascallchan)Tj
+/TT6 1 Tf
+6.8907 0 TD
+0.0396 Tw
+[(is used to see if something has a call to a channel, and must no)25(w)-289.7(con-)]TJ
+-12.3571 -1.2 TD
+0 Tw
+(sider)Tj
+/TT9 1 Tf
+2.1938 0 TD
+(OSEND)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(as part of e)15(xpressions:)]TJ
+-7.9443 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/const.go:/àfunc.hascallchan/+/OSEND)Tj
+8 0 0 8 158 614.4 Tm
+(func hascallchan\(n *Node\) bool {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(switch n.Op {)Tj
+T*
+(case OAPPEND,)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(OSEND:)Tj
+T*
+(return true)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 476.4 Tm
+0.0157 Tw
+(It is ok to use send in assignments in a)Tj
+/TT9 1 Tf
+15.7668 0 TD
+0 Tw
+(select)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.0156 Tw
+[(.)-265.6(W)80(e)-265.6(introduce a ne)25(w)]TJ
+/TT9 1 Tf
+8.7469 0 TD
+0 Tw
+(OSELSEND)Tj
+/TT6 1 Tf
+5.0664 0 TD
+0.0156 Tw
+(node type that will)Tj
+-33.1807 -1.2 TD
+0 Tw
+[(later be used lik)10(e)]TJ
+/TT9 1 Tf
+7.0427 0 TD
+(OSELRECV)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(nodes. First we de)Tj
+/TT7 1 Tf
+7.2769 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+[(ne the ne)25(w)-250(node type.)]TJ
+-22.4265 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/syntax.go:/OSELSEND)Tj
+8 0 0 8 158 430.8 Tm
+(// Node ops.)Tj
+0 -1.5 TD
+(const \()Tj
+2.4 -1.5 TD
+(OXXX = iota)Tj
+T*
+[(OSELRECV )-4800(//)-600(case x = <-c:)]TJ
+T*
+[(OSELRECV2 )-4200(//)-600(case x, ok = <-c:)]TJ
+T*
+[(OSELSEND )-4800(//)-600(case ok = c <- x:)]TJ
+T*
+(...)Tj
+-2.4 -1.5 TD
+(\))Tj
+/TT6 1 Tf
+10 0 0 10 97 316.8 Tm
+[(This is generated, b)20(ut an)15(yw)10(ay)65(...)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/opnames.go:/opnames/)Tj
+8 0 0 8 158 283.2 Tm
+(var opnames = []string{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+4.8 Tw
+(OSELRECV: "SELRECV",)Tj
+T*
+4.2 Tw
+(OSELRECV2: "SELRECV2",)Tj
+T*
+4.8 Tw
+(OSELSEND: "SELSEND",)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 181.2 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(order)Tj
+/TT6 1 Tf
+3.0005 0 TD
+[(,)-250(a)-250(send can no)25(w)-250(happen within a e)15(xpression.)]TJ
+-6.5835 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/order.go:/àfunc.orderexpr/)Tj
+ET
+endstream
+endobj
+48 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+50 0 obj
+<<
+/Length 2290
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-14-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func orderexpr\(np **Node, order *Order, lhs *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSEND:)Tj
+2.4 -1.5 TD
+[(t)-600(:)0(=)-600(marktemp\(order\);)]TJ
+T*
+(orderexpr\(&n.Left, order, nil\))Tj
+T*
+(orderexpr\(&n.Right, order, nil\))Tj
+T*
+(orderaddrtemp\(&n.Right, order\))Tj
+T*
+(cleantemp\(t, order\))Tj
+-4.8 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 582 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(select)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(,)-250(w)0(e)-250(must prepare to accept assignments using sends.)]TJ
+-7.1836 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/select.go:/àfunc.typecheckselect/+/OAS/)Tj
+8 0 0 8 158 548.4 Tm
+(func typecheckselect\(sel *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OAS:)Tj
+2.4 -1.5 TD
+(switch n.Right.Op {)Tj
+T*
+(case ORECV:)Tj
+2.4 -1.5 TD
+(n.Op = OSELRECV)Tj
+-2.4 -1.5 TD
+(case OSEND:)Tj
+2.4 -1.5 TD
+(// n.Op = OSELSEND)Tj
+T*
+(Yyerror\("BUG: TODO"\))Tj
+-2.4 -1.5 TD
+(default:)Tj
+2.4 -1.5 TD
+(Yyerror\("must have chan op on rhs"\))Tj
+-2.4 -1.5 TD
+(})Tj
+-4.8 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 370.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/select.go:/àfunc.walkselect/+/OSEND/)Tj
+8 0 0 8 158 352.8 Tm
+(func walkselect\(sel *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(// optimization: one-case select: single op.)Tj
+T*
+(...)Tj
+T*
+(case OSEND:)Tj
+2.4 -1.5 TD
+(ch = n.Left)Tj
+-2.4 -1.5 TD
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(Fatal\("walkselect OSELSEND not implemented"\))Tj
+-2.4 -1.5 TD
+(...)Tj
+T*
+(// convert case value arguments to addresses.)Tj
+T*
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(Fatal\("walkselect OSELSEND not implemented"\))Tj
+-2.4 -1.5 TD
+(...)Tj
+T*
+(// optimization: two-case select but one is default)Tj
+T*
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(Fatal\("walkselect OSELSEND not implemented"\))Tj
+-2.4 -1.5 TD
+(...)Tj
+T*
+(// register cases)Tj
+T*
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(Fatal\("walkselect OSELSEND not implemented"\))Tj
+-4.8 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 82.8 Tm
+(In)Tj
+/TT9 1 Tf
+1.2667 0 TD
+(typecheck)Tj
+/TT6 1 Tf
+5.4009 0 TD
+(,)Tj
+/TT9 1 Tf
+0.6837 0 TD
+(callrecv)Tj
+/TT6 1 Tf
+5.2345 0 TD
+0.1838 Tw
+(must be updated so it does not indicate if a node is just a call or)Tj
+-12.5858 -1.2 TD
+0 Tw
+[(recei)25(v)15(e)0(,)-250(b)20(ut also a send.)]TJ
+ET
+endstream
+endobj
+51 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+53 0 obj
+<<
+/Length 2232
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-15-)Tj
+-20.767 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.callrecv)Tj
+8 0 0 8 158 690 Tm
+(func callrecv\(n *Node\) bool {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OCALL,)Tj
+2.4 -1.5 TD
+(OSEND,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 600 Tm
+(The main change is making)Tj
+/TT9 1 Tf
+11.3022 0 TD
+(typecheck1)Tj
+/TT6 1 Tf
+6.251 0 TD
+(accept)Tj
+/TT9 1 Tf
+2.8032 0 TD
+(OSEND)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(as)Tj
+/TT9 1 Tf
+1.083 0 TD
+(Erv)Tj
+/TT6 1 Tf
+1.8003 0 TD
+(.)Tj
+-28.9902 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.typecheck1/+/OSEND/)Tj
+8 0 0 8 158 566.4 Tm
+(func typecheck1\(np **Node, top int\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSEND:)Tj
+2.4 -1.5 TD
+(ok |= Etop|Erv)Tj
+T*
+(...)Tj
+T*
+(// TODO: more aggressive)Tj
+T*
+(// n.Etype = 0)Tj
+T*
+(n.Type = Types[TBOOL])Tj
+T*
+(break OpSwitch)Tj
+-4.8 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 428.4 Tm
+(Also, in)Tj
+/TT9 1 Tf
+3.417 0 TD
+(walk)Tj
+/TT6 1 Tf
+2.4004 0 TD
+[(,)-250(calling)]TJ
+/TT9 1 Tf
+3.4712 0 TD
+(chansend2)Tj
+/TT6 1 Tf
+5.6509 0 TD
+[(so it can return its v)25(alue.)]TJ
+-17.4395 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/walk.go:/àfunc.walkexpr/+/OSEND/)Tj
+8 0 0 8 158 394.8 Tm
+(func walkexpr\(...\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSEND:)Tj
+2.4 -1.5 TD
+(n1 := n.Right)Tj
+T*
+(n1 = assignconv\(n1, n.Left.Type.Type, "chan send"\))Tj
+T*
+(walkexpr\(&n1, init\))Tj
+T*
+(n1 = Nod\(OADDR, n1, nil\))Tj
+T*
+[(n)-600(=)-600(mkcall1\(chanfn\("chansend2", 2, n.Left.Type\),)]TJ
+2.4 -1.5 TD
+(Types[TBOOL], init,)Tj
+T*
+(typename\(n.Left.Type\), n.Left, n1\))Tj
+-2.4 -1.5 TD
+(n.Type = Types[TBOOL])Tj
+T*
+(goto ret)Tj
+-4.8 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 208.8 Tm
+0.25 Tw
+[(4. Send)-250(in )250(selects)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(This change permits using)Tj
+/TT9 1 Tf
+8 0 0 8 133 175.2 Tm
+(select {)Tj
+0 -1.5 TD
+(case ok := c <- v:)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 97.2 Tm
+[(4.1. )-250(Changes)-250(in the runtime)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+[(T)80(w)80( )180(o)-250(n)0(e)25(w)-250(functions accept a pointer to the returned v)25(alue in sends, one blocks and one doesní)18(t.)]TJ
+ET
+endstream
+endobj
+54 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+56 0 obj
+<<
+/Length 2239
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-16-)Tj
+-20.767 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/chan.go:/àfunc.chanselsend/)Tj
+8 0 0 8 158 690 Tm
+(func chanselsend\(t *chantype, c *hchan, elem unsafe.Pointer, okp *bool\) bool {)Tj
+2.4 -1.5 TD
+(if t == nil {)Tj
+2.4 -1.5 TD
+[(return false)-2400(// prevent this from inlining)]TJ
+-2.4 -1.5 TD
+(})Tj
+T*
+(ok, did := chansend\(t, c, elem, true, getcallerpc\(unsafe.Pointer\(&t\)\)\))Tj
+T*
+(if okp != nil {)Tj
+2.4 -1.5 TD
+(*okp = did)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return ok)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -4.5 TD
+(func channbselsend\(t *chantype, c *hchan, elem unsafe.Pointer, okp *bool\) bool {)Tj
+2.4 -1.5 TD
+(if t == nil {)Tj
+2.4 -1.5 TD
+[(return false)-2400(// prevent this from inlining)]TJ
+-2.4 -1.5 TD
+(})Tj
+T*
+(ok, did := chansend\(t, c, elem, false, getcallerpc\(unsafe.Pointer\(&t\)\)\))Tj
+T*
+(if okp != nil {)Tj
+2.4 -1.5 TD
+(*okp = did)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return ok)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 396 Tm
+[(4.2. )-250(Changes)-250(in the compiler)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+(In)Tj
+/TT9 1 Tf
+1.0949 0 TD
+(typecheckselect)Tj
+/TT6 1 Tf
+9.0015 0 TD
+0.0119 Tw
+[(,)-261.9(w)0(e)-261.9(will con)40(v)15(ert cases lik)10(e)]TJ
+/TT9 1 Tf
+10.8241 0 TD
+0 Tw
+(ok=c<-v)Tj
+/TT6 1 Tf
+4.4625 0 TD
+(to)Tj
+/TT9 1 Tf
+1.0396 0 TD
+(OSELSEND)Tj
+/TT6 1 Tf
+5.0626 0 TD
+0.0118 Tw
+[(nodes, lik)10(e)-261.8(done for recei)25(v)15(es.)]TJ
+-31.4852 -1.56 TD
+0 Tw
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/select.go:/àfunc.typecheckselect/+/OAS/)Tj
+8 0 0 8 158 346.8 Tm
+(case OAS:)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(switch n.Right.Op {)Tj
+T*
+(case ORECV:)Tj
+2.4 -1.5 TD
+(n.Op = OSELRECV)Tj
+-2.4 -1.5 TD
+(case OSEND:)Tj
+2.4 -1.5 TD
+(n.Op = OSELSEND)Tj
+-2.4 -1.5 TD
+(default:)Tj
+2.4 -1.5 TD
+(Yyerror\("select assignment must have receive on rhs"\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 208.8 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(orderstmt)Tj
+/TT6 1 Tf
+5.4009 0 TD
+[(,)-250(w)0(e)-250(must add a case for)]TJ
+/TT9 1 Tf
+9.8853 0 TD
+(OSELSEND)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(within)Tj
+/TT9 1 Tf
+2.8057 0 TD
+(OSELECT)Tj
+/TT6 1 Tf
+4.2007 0 TD
+(.)Tj
+-30.9263 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/order.go:/àfunc.orderstmt/+/OSE-)Tj
+0 -1.2 TD
+(LECT/+/OSELSEND/)Tj
+ET
+endstream
+endobj
+57 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+59 0 obj
+<<
+/Length 2195
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-17-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(if r.Colas {)Tj
+2.4 -1.5 TD
+[(t)-600(=)-600(r.Ninit)]TJ
+T*
+(if t != nil && t.N.Op == ODCL && t.N.Left == r.Left {)Tj
+2.4 -1.5 TD
+[(t)-600(=)-600(t.Next)]TJ
+-2.4 -1.5 TD
+(})Tj
+T*
+(if t != nil && t.N.Op == ODCL && t.N.Left == r.Ntest {)Tj
+2.4 -1.5 TD
+[(t)-600(=)-600(t.Next)]TJ
+-2.4 -1.5 TD
+(})Tj
+T*
+(if t == nil {)Tj
+2.4 -1.5 TD
+(r.Ninit = nil)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if r.Ninit != nil {)Tj
+2.4 -1.5 TD
+(Yyerror\("ninit on select send"\))Tj
+T*
+(dumplist\("ninit", r.Ninit\))Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -3 TD
+(// case ok = c <- x)Tj
+0 -1.5 TD
+(// r->left is ok, r->right is SEND, r->right->left is c, r->right->right is x)Tj
+T*
+(// r->left == N means ícase c<-xí.)Tj
+T*
+(// c is always evaluated; ok is only evaluated when assigned.)Tj
+T*
+(orderexpr\(&r.Right.Left, order, nil\))Tj
+T*
+(if r.Right.Left.Op != ONAME {)Tj
+2.4 -1.5 TD
+(r.Right.Left = ordercopyexpr\(r.Right.Left, r.Right.Left.Type, order, 0\))Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(if r.Left != nil && isblank\(r.Left\) {)Tj
+2.4 -1.5 TD
+(r.Left = nil)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if r.Left != nil {)Tj
+2.4 -1.5 TD
+(tmp1 = r.Left)Tj
+T*
+(if r.Colas {)Tj
+2.4 -1.5 TD
+(tmp2 = Nod\(ODCL, tmp1, nil\))Tj
+T*
+(typecheck\(&tmp2, Etop\))Tj
+T*
+(l.N.Ninit = list\(l.N.Ninit, tmp2\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(r.Left = ordertemp\(tmp1.Type, order, false\))Tj
+T*
+(tmp2 = Nod\(OAS, tmp1, r.Left\))Tj
+T*
+(typecheck\(&tmp2, Etop\))Tj
+T*
+(l.N.Ninit = list\(l.N.Ninit, tmp2\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(orderblock\(&l.N.Ninit\))Tj
+/TT6 1 Tf
+10 0 0 10 97 174 Tm
+0.021 Tw
+[(W)80(e)80( )-80(k)10(eep the old)]TJ
+/TT9 1 Tf
+6.7689 0 TD
+0 Tw
+(OSEND)Tj
+/TT6 1 Tf
+3.2715 0 TD
+0.021 Tw
+[(case within selects to lea)20(v)15(e)15( )-15(the pre)25(vious setup undisturbed, in case we intro-)]TJ
+-10.0404 -1.2 TD
+0 Tw
+[(duce an)15(y)-250(b)20(ugs.)]TJ
+0 -2.4 TD
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(walkselect)Tj
+/TT6 1 Tf
+6.001 0 TD
+[(,)-250(w)0(e)-250(must handle the ne)25(w)-250(case. First in the one-case select.)]TJ
+-9.584 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/select.go:/àfunc.walkselect/+/OSELSEND/)Tj
+ET
+endstream
+endobj
+60 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+62 0 obj
+<<
+/Length 2377
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-18-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(// optimization: one-case select: single op.)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(ch = n.Right.Left)Tj
+T*
+(if n.Op == OSELSEND || n.Ntest == nil {)Tj
+2.4 -1.5 TD
+(if n.Left == nil {)Tj
+2.4 -1.5 TD
+[(n)-600(=)-600(n.Right)]TJ
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(n.Op = OAS)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(break)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(Fatal\("walkselect OSELSEND with OAS2"\))Tj
+/TT6 1 Tf
+10 0 0 10 97 534 Tm
+[(Then while con)40(v)15(erting case ar)18(guments to addresses.)]TJ
+/TT9 1 Tf
+8 0 0 8 158 516 Tm
+(// convert case value arguments to addresses.)Tj
+T*
+(...)Tj
+T*
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(n.Left = Nod\(OADDR, n.Left, nil\))Tj
+T*
+(typecheck\(&n.Left, Erv\))Tj
+T*
+(n.Right.Right = Nod\(OADDR, n.Right.Right, nil\))Tj
+T*
+(typecheck\(&n.Right.Right, Erv\))Tj
+/TT6 1 Tf
+10 0 0 10 97 414 Tm
+[(Ne)15(xt, in the tw)10(o-case select with def)10(ault optimization.)]TJ
+/TT9 1 Tf
+8 0 0 8 158 396 Tm
+(// optimization: two-case select but one is default)Tj
+T*
+(...)Tj
+T*
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+[(r)-600(=)-600(Nod\(OIF, nil, nil\))]TJ
+T*
+(r.Ninit = cas.Ninit)Tj
+T*
+(ch := n.Right.Left)Tj
+T*
+(r.Ntest = mkcall1\(chanfn\("channbselsend", 2, ch.Type\),)Tj
+2.4 -1.5 TD
+(Types[TBOOL], &r.Ninit, typename\(ch.Type\),)Tj
+T*
+(ch, n.Right.Right, n.Left\))Tj
+/TT6 1 Tf
+10 0 0 10 97 270 Tm
+[(Finally)65(,)-250(i)0(n)-250(the plain select cases.)]TJ
+/TT9 1 Tf
+8 0 0 8 158 252 Tm
+(// register cases)Tj
+T*
+(...)Tj
+T*
+(case OSELSEND:)Tj
+2.4 -1.5 TD
+(r.Ntest = mkcall1\(chanfn\("chanselsend", 2, n.Right.Left.Type\),)Tj
+2.4 -1.5 TD
+(Types[TBOOL], &r.Ninit, var_,)Tj
+T*
+(n.Right.Left, n.Right.Right, n.Left\))Tj
+/TT6 1 Tf
+10 0 0 10 97 162 Tm
+(The )Tj
+/TT7 1 Tf
+1.8047 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(le)Tj
+/TT9 1 Tf
+0.9717 0 TD
+(builtin.go)Tj
+/TT6 1 Tf
+6.251 0 TD
+[(is generated, b)20(ut anw)10(ay this is added:)]TJ
+-12.0835 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/builtin.go:/channbselsend)Tj
+8 0 0 8 158 128.4 Tm
+("func @\\"\\".channbselsend \(@\\"\\".chanType.2 *byte, @\\"\\".hchan.3 chan<- any, @\\"\\".elem.4 *any)Tj
+ET
+BT
+8 0 0 8 609.2735 128.4 Tm
+(,)Tj
+ET
+BT
+8 0 0 8 158 116.4 Tm
+("func @\\"\\".chanselsend \(@\\"\\".chanType.2 *byte, @\\"\\".hchan.3 chan<- any, @\\"\\".elem.4 *any, )Tj
+ET
+BT
+8 0 0 8 609.2735 116.4 Tm
+(@)Tj
+ET
+endstream
+endobj
+63 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+65 0 obj
+<<
+/Length 2237
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-19-)Tj
+/TT2 1 Tf
+-20.767 -3.6 TD
+0.25 Tw
+[(5. A)25(pp )250(ids)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.022 Tw
+[(This change pro)15(vides each process \(goroutine\) with a ne)25(w)-272.1(application id, inherited when ne)25(w)-272.1(processes are)]TJ
+0 -1.2 TD
+0 Tw
+(created.)Tj
+0 -2.4 TD
+[(First, a ne)25(w)]TJ
+/TT9 1 Tf
+4.9188 0 TD
+(gappid)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(is added to)Tj
+/TT9 1 Tf
+4.5825 0 TD
+(g)Tj
+/TT6 1 Tf
+0.6001 0 TD
+(.)Tj
+-13.9521 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/runtime2.go:/à.readyg /)Tj
+8 0 0 8 158 622.8 Tm
+(type g struct {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+3.6 Tw
+(readyg *g)Tj
+T*
+(gappid int64)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 532.8 Tm
+(It is initialized to the)Tj
+/TT9 1 Tf
+8.5259 0 TD
+(goid)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(for top-le)25(v)15(e)0(l)-250(processes.)]TJ
+-13.6763 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/proc1.go:/àfunc.newextram)Tj
+8 0 0 8 158 499.2 Tm
+(func newextram\(\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(gp.goid = int64\(xadd64\(&sched.goidgen, 1\)\))Tj
+T*
+(gp.gappid = gp.goid)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 405.6 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/proc.go:/àfunc.main)Tj
+8 0 0 8 158 387.6 Tm
+(func main\(\) {)Tj
+2.4 -1.5 TD
+[(g)-600(:)0(=)-600(getg\(\))]TJ
+T*
+(g.gappid = g.goid)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 309.6 Tm
+0.0914 Tw
+[(And it is inherited. W)80(e)-341.4(pass the application id as an ar)18(gumetn because)]TJ
+/TT9 1 Tf
+29.3591 0 TD
+0 Tw
+(systemstack)Tj
+/TT6 1 Tf
+6.9424 0 TD
+0.0913 Tw
+[(is lik)10(ely to)]TJ
+-36.3015 -1.2 TD
+0 Tw
+(run on)Tj
+/TT9 1 Tf
+2.833 0 TD
+(g0)Tj
+/TT6 1 Tf
+1.4502 0 TD
+[(and not on the caller process conte)15(xt.)]TJ
+-6.7832 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/proc1.go:/à/func.newproc\\\()Tj
+8 0 0 8 158 252 Tm
+(func newproc\(...\) {)Tj
+2.4 -1.5 TD
+(argp := add\(unsafe.Pointer\(&fn\), ptrSize\))Tj
+T*
+(pc := getcallerpc\(unsafe.Pointer\(&siz\)\))Tj
+T*
+(appid := int64\(0\))Tj
+T*
+(if _g_ := getg\(\); _g_ != nil {)Tj
+2.4 -1.5 TD
+(appid = _g_.gappid)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(systemstack\(func\(\) {)Tj
+2.4 -1.5 TD
+(newproc1\(fn, \(*uint8\)\(argp\), siz, 0, appid, pc\))Tj
+-2.4 -1.5 TD
+(}\))Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+66 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+68 0 obj
+<<
+/Length 2328
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-20-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func newproc1\(..., appid int64,...\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(newg.goid = int64\(_p_.goidcache\))Tj
+T*
+(newg.gappid = appid)Tj
+T*
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 97 630 Tm
+[(The interf)10(ace for the user is lik)10(e)-250(follo)25(ws.)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(runtime/proc.go:/à/func.AppId)Tj
+8 0 0 8 158 596.4 Tm
+(// Return the application id for the current process \(goroutine\).)Tj
+0 -1.5 TD
+(func AppId\(\) int64 {)Tj
+2.4 -1.5 TD
+[(g)-600(:)0(=)-600(getg\(\))]TJ
+T*
+(return g.gappid)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(// Return the process id \(goroutine id\))Tj
+0 -1.5 TD
+(func GoId\(\) int64 {)Tj
+2.4 -1.5 TD
+[(g)-600(:)0(=)-600(getg\(\))]TJ
+T*
+(return g.goid)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(// Make the current process the leader of a new application, with its own id)Tj
+0 -1.5 TD
+(// set to that of the process id.)Tj
+T*
+(func NewApp\(\) {)Tj
+2.4 -1.5 TD
+[(g)-600(:)0(=)-600(getg\(\))]TJ
+T*
+(g.gappid = g.goid)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 350.4 Tm
+0.25 Tw
+[(6. Looping)-250(select )250(construct)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0507 Tw
+[(This change w)10(as not strictly required, b)20(ut, because we had to change the compiler as sho)25(wn before, it w)10(a)0(s)]TJ
+0 -1.2 TD
+0 Tw
+[(made for the programmerí)55(s)-250(con)40(v)15(enience.)]TJ
+0 -2.4 TD
+0.124 Tw
+[(The change introduces a ne)25(w)]TJ
+/TT9 1 Tf
+12.5066 0 TD
+0 Tw
+(doselect)Tj
+/TT6 1 Tf
+5.1748 0 TD
+0.124 Tw
+[(construct that is a looping select \(similar to CSPí)55(s)]TJ
+/TT4 1 Tf
+21.3086 0 TD
+0 Tw
+(do)Tj
+/TT6 1 Tf
+1.374 0 TD
+(control)Tj
+-40.364 -1.2 TD
+0.037 Tw
+[(structure\). W)40(ithin the construct, a)]TJ
+/TT9 1 Tf
+13.8349 0 TD
+0 Tw
+(break)Tj
+/TT6 1 Tf
+3.2876 0 TD
+0.0371 Tw
+(breaks the entire loop and a)Tj
+/TT9 1 Tf
+11.496 0 TD
+0 Tw
+(continue)Tj
+/TT6 1 Tf
+5.0879 0 TD
+0.0371 Tw
+(continues looping. This)Tj
+-33.7064 -1.2 TD
+0 Tw
+[(is an e)15(xample:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 256.8 Tm
+(doselect {)Tj
+0 -1.5 TD
+(case <-a:)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(case <-b:)Tj
+2.4 -1.5 TD
+(if foo {)Tj
+2.4 -1.5 TD
+(break)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(case <-c: {)Tj
+2.4 -1.5 TD
+(if bar {)Tj
+2.4 -1.5 TD
+(continue)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 82.8 Tm
+(The meaning is:)Tj
+ET
+endstream
+endobj
+69 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+71 0 obj
+<<
+/Length 1797
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-21-)Tj
+/TT9 1 Tf
+8 0 0 8 133 708 Tm
+(Loop:)Tj
+0 -1.5 TD
+(for {)Tj
+2.4 -1.5 TD
+(select {)Tj
+T*
+(case <-a:)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(case <-b:)Tj
+2.4 -1.5 TD
+(if foo {)Tj
+2.4 -1.5 TD
+(break Loop)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(case <-c: {)Tj
+2.4 -1.5 TD
+(if bar {)Tj
+2.4 -1.5 TD
+(continue Loop)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 486 Tm
+[(First, we add a ne)25(w)-250(tok)10(en for)]TJ
+/TT9 1 Tf
+11.9064 0 TD
+(doselect)Tj
+/TT6 1 Tf
+4.8008 0 TD
+(.)Tj
+-16.7072 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.y:/LDOSELECT/)Tj
+8 0 0 8 158 452.4 Tm
+(...)Tj
+0 -1.5 TD
+1.8 Tw
+[(%token <sym> LTYPE)-600(LVAR)]TJ
+T*
+(%token <sym> LDOSELECT)Tj
+T*
+0 Tw
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 97 386.4 Tm
+[(Then we add it to the le)15(x)15(e)0(r)55(.)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/lex.go:/func._yylex/+/LDOSELECT/)Tj
+8 0 0 8 158 352.8 Tm
+(...)Tj
+0 -1.5 TD
+(case LFOR, LIF, LSWITCH, LSELECT, LDOSELECT:)Tj
+2.4 -1.5 TD
+(loophack = 1 // see comment about loophack above)Tj
+-2.4 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 283.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/lex.go:/àvar.syms/+/LDOSELECT/)Tj
+8 0 0 8 158 265.2 Tm
+(var syms = ... {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+({"default", LDEFAULT, Txxx, OXXX},)Tj
+T*
+({"doselect", LDOSELECT, Txxx, OXXX},)Tj
+T*
+({"else", LELSE, Txxx, OXXX},)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 171.6 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/lex.go:/àvar.lexn/+/LDOSELECT/)Tj
+8 0 0 8 158 153.6 Tm
+(var lexn = ... {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+({LDEFER, "DEFER"},)Tj
+T*
+({LDOSELECT, "DOSELECT"},)Tj
+T*
+({LELSE, "ELSE"},)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+72 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+75 0 obj
+<<
+/Length 2296
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-22-)Tj
+-20.767 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/lex.go:/àvar.yytfix/+/LDOSELECT/)Tj
+8 0 0 8 158 690 Tm
+(var yytfix = ... {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+({LDEFER, "DEFER"},)Tj
+T*
+({LDOSELECT, "DOSELECT"},)Tj
+T*
+({LELSE, "ELSE"},)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 588 Tm
+0.0276 Tw
+(The grammar is changed to include the construct. A)Tj
+/TT9 1 Tf
+21.2416 0 TD
+0 Tw
+(doselect)Tj
+/TT6 1 Tf
+5.0784 0 TD
+0.0275 Tw
+[(is b)20(uilt as a)]TJ
+/TT9 1 Tf
+4.8673 0 TD
+0 Tw
+(for)Tj
+/TT6 1 Tf
+2.0778 0 TD
+0.0275 Tw
+(with a)Tj
+/TT9 1 Tf
+2.7767 0 TD
+0 Tw
+(select)Tj
+/TT6 1 Tf
+3.8781 0 TD
+(in)Tj
+-39.9198 -1.2 TD
+[(it, b)20(ut the node for)]TJ
+/TT9 1 Tf
+7.645 0 TD
+(select)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(uses)Tj
+/TT9 1 Tf
+1.9722 0 TD
+(ODOSELECT)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(instead of)Tj
+/TT9 1 Tf
+4.1655 0 TD
+(OSELECT)Tj
+/TT6 1 Tf
+4.2007 0 TD
+[(,)-250(t)0(o)-250(let us handle breaks.)]TJ
+-29.9849 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.y:/select_stmtd/)Tj
+8 0 0 8 158 530.4 Tm
+1.8 Tw
+[(%type <node> doselect_stmt)-1200(doselect_hdr)]TJ
+/TT6 1 Tf
+10 0 0 10 72 496.8 Tm
+0 Tw
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.y:/ànon_dcl_stmt/)Tj
+8 0 0 8 158 478.8 Tm
+(non_dcl_stmt:)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+[(|)-2400(select_stmt)]TJ
+T*
+[(|)-2400(doselect_stmt)]TJ
+2.4 -1.5 TD
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 397.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.y:/àdoselect_stmt/)Tj
+8 0 0 8 158 379.2 Tm
+(doselect_stmt:)Tj
+2.4 -1.5 TD
+(LDOSELECT)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(// for)Tj
+T*
+(markdcl\(\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(doselect_hdr)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(// select)Tj
+T*
+(typesw = Nod\(OXXX, typesw, nil\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(LBODY caseblock_list í}í)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(// select)Tj
+T*
+(nd := Nod\(ODOSELECT, nil, nil\);)Tj
+T*
+(nd.Lineno = typesw.Lineno;)Tj
+T*
+(nd.List = $6;)Tj
+T*
+(typesw = typesw.Left;)Tj
+0 -3 TD
+(// for)Tj
+0 -1.5 TD
+($$ = $3;)Tj
+T*
+($$.Nbody = list1\(nd\))Tj
+T*
+(popdcl\(\);)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 73.2 Tm
+[(The header w)10(orks lik)10(e)-250(i)0(n)-250(a)]TJ
+/TT9 1 Tf
+10.8648 0 TD
+(for)Tj
+/TT6 1 Tf
+2.0503 0 TD
+[(construct, so we can do things lik)10(e)-250(limit the number of loops, etc.)]TJ
+ET
+endstream
+endobj
+76 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+78 0 obj
+<<
+/Length 2011
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-23-)Tj
+-20.767 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.y:/àdoselect_hdr/)Tj
+8 0 0 8 158 690 Tm
+(doselect_hdr:)Tj
+2.4 -1.5 TD
+(osimple_stmt í;í osimple_stmt í;í osimple_stmt)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+(// init ; test ; incr)Tj
+T*
+(if $5 != nil && $5.Colas {)Tj
+2.4 -1.5 TD
+(Yyerror\("cannot declare in the doselect-increment"\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+($$ = Nod\(OFOR, nil, nil\);)Tj
+T*
+(if $1 != nil {)Tj
+2.4 -1.5 TD
+($$.Ninit = list1\($1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+($$.Ntest = $3;)Tj
+T*
+($$.Nincr = $5;)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+[(|)-2400(osimple_stmt)]TJ
+2.4 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+(// normal test)Tj
+T*
+($$ = Nod\(OFOR, nil, nil\);)Tj
+T*
+($$.Ntest = $1;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 432 Tm
+0.0536 Tw
+[(A)-278.6(n)0(e)25(w)25( node)]TJ
+/TT9 1 Tf
+5.1429 0 TD
+0 Tw
+(ODOSELECT)Tj
+/TT6 1 Tf
+5.6796 0 TD
+0.0287 Tw
+(is added mainly to handle)Tj
+/TT9 1 Tf
+10.6689 0 TD
+0 Tw
+(break)Tj
+/TT6 1 Tf
+3.2792 0 TD
+(and)Tj
+/TT9 1 Tf
+1.7225 0 TD
+(continue)Tj
+/TT6 1 Tf
+5.0795 0 TD
+0.0287 Tw
+[(as e)15(xpected in the ne)25(w)]TJ
+-31.5726 -1.2 TD
+0 Tw
+(construct.)Tj
+-2.5 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/syntax.go:/OSELECT/)Tj
+8 0 0 8 158 374.4 Tm
+(// Node ops.)Tj
+0 -1.5 TD
+(const \()Tj
+2.4 -1.5 TD
+(OXXX = iota)Tj
+T*
+(...)Tj
+T*
+1.2 Tw
+[(OSELECT //)-600(select)]TJ
+T*
+0 Tw
+(ODOSELECT // doselect)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(\))Tj
+/TT6 1 Tf
+10 0 0 10 72 256.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:/àvar.goopnames/)Tj
+8 0 0 8 158 238.8 Tm
+(var goopnames = []string{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+1.2 Tw
+(OSELECT: "select",)Tj
+T*
+0 Tw
+(ODOSELECT: "doselect",)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 145.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:/àfunc.stmtfmt/+/OSELECT/)Tj
+8 0 0 8 158 127.2 Tm
+(func stmtfmt\(n *Node\) string {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSELECT, ODOSELECT, OSWITCH:)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+79 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+81 0 obj
+<<
+/Length 2073
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-24-)Tj
+-20.767 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:/àvar.opprec/)Tj
+8 0 0 8 158 690 Tm
+(var opprec = []int{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+2.4 Tw
+(OSELECT: -1,)Tj
+T*
+1.2 Tw
+(ODOSELECT: -1,)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 600 Tm
+[(This one is generated, b)20(ut an)15(yw)10(ay)65(...)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/opnames.go)Tj
+8 0 0 8 158 566.4 Tm
+(...)Tj
+0 -1.5 TD
+5.4 Tw
+(OSELECT: "SELECT",)Tj
+T*
+4.2 Tw
+(ODOSELECT: "DOSELECT",)Tj
+T*
+0 Tw
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 97 500.4 Tm
+0.1218 Tw
+[(No)25(w)-371.8(w)0(e)-371.8(h)0(a)20(v)20( )366.8(e)-371.8(to honor the ne)25(w)-371.8(node. In general, a)]TJ
+/TT9 1 Tf
+21.6645 0 TD
+0 Tw
+(ODOSELECT)Tj
+/TT6 1 Tf
+5.7727 0 TD
+0.1217 Tw
+(is to be handled as a)Tj
+/TT9 1 Tf
+9.0613 0 TD
+0 Tw
+(OSELECT)Tj
+/TT6 1 Tf
+-36.4984 -1.2 TD
+(node, because it is already within a)Tj
+/TT9 1 Tf
+14.2729 0 TD
+(OFOR)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(node.)Tj
+-19.4233 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/inl.go:/àfunc.ishairy/+/OSELECT/)Tj
+8 0 0 8 158 442.8 Tm
+(func ishairy\(n *Node, budget *int\) bool {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OCLOSURE,)Tj
+2.4 -1.5 TD
+(OCALLPART,)Tj
+T*
+(ORANGE,)Tj
+T*
+(OFOR,)Tj
+T*
+(OSELECT,)Tj
+T*
+(ODOSELECT,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 301.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/order.go:/àfunc.orderstmt\\\(/+/OSELECT/)Tj
+8 0 0 8 158 283.2 Tm
+(func orderstmt\(n *Node, order *Order\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSELECT, ODOSELECT:)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 201.6 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/racewalk.go:/àfunc.racewalknode\\\(/+/OSE-)Tj
+0 -1.2 TD
+(LECT/)Tj
+8 0 0 8 158 171.6 Tm
+(func racewalknode\(np **Node, init **NodeList, wr int, skip int\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(// just do generic traversal)Tj
+T*
+(case OFOR,)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(OSELECT,)Tj
+T*
+(ODOSELECT,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+82 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+84 0 obj
+<<
+/Length 1357
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-25-)Tj
+-20.767 -3.6 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.typecheck1\\\(/+/OSELECT/)Tj
+8 0 0 8 158 690 Tm
+(func typecheck1\(np **Node, top int\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSELECT, ODOSELECT:)Tj
+2.4 -1.5 TD
+(ok |= Etop)Tj
+T*
+(typecheckselect\(n\))Tj
+T*
+(break OpSwitch)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 572.4 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.markbreak\\\(/+/OSELECT/)Tj
+8 0 0 8 158 554.4 Tm
+(func markbreak\(n *Node, implicit *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OFOR,)Tj
+2.4 -1.5 TD
+(OSWITCH,)Tj
+T*
+(OTYPESW,)Tj
+T*
+(OSELECT,)Tj
+T*
+(ODOSELECT,)Tj
+T*
+(ORANGE:)Tj
+T*
+(implicit = n)Tj
+T*
+(fallthrough)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 388.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.markbreaklist\\\(/+/OSE-)Tj
+0 -1.2 TD
+(LECT/)Tj
+8 0 0 8 158 358.8 Tm
+(func markbreaklist\(...\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OFOR,)Tj
+2.4 -1.5 TD
+(OSWITCH,)Tj
+T*
+(OTYPESW,)Tj
+T*
+(OSELECT,)Tj
+T*
+(ODOSELECT,)Tj
+T*
+(ORANGE:)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 217.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.isterminating\\\(/+/OSE-)Tj
+0 -1.2 TD
+(LECT/)Tj
+ET
+endstream
+endobj
+85 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+87 0 obj
+<<
+/Length 2971
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-26-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func isterminating\(...\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSWITCH, OTYPESW, OSELECT, ODOSELECT:)Tj
+2.4 -1.5 TD
+(if n.Hasbreak {)Tj
+2.4 -1.5 TD
+(return false)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(...)Tj
+T*
+(if n.Op != OSELECT && n.Op != ODOSELECT && def == 0 {)Tj
+2.4 -1.5 TD
+(return false)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 554.4 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/walk.go:/àfunc.walkstmt\\\(/+/OSELECT/)Tj
+8 0 0 8 158 536.4 Tm
+(func walkstmt\(np **Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OSELECT, ODOSELECT:)Tj
+2.4 -1.5 TD
+(walkselect\(n\))Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 442.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/gen.go:/àfunc.gen\\\(/+/OSELECT/)Tj
+8 0 0 8 158 424.8 Tm
+(func gen\(n *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(if n.Defn != nil {)Tj
+2.4 -1.5 TD
+(switch n.Defn.Op {)Tj
+T*
+(// so stmtlabel can find the label)Tj
+T*
+(case OFOR, OSWITCH, OSELECT, ODOSELECT:)Tj
+2.4 -1.5 TD
+(n.Defn.Sym = lab.Sym)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 274.8 Tm
+0.0923 Tw
+(And this is the main change for a)Tj
+/TT9 1 Tf
+14.235 0 TD
+0 Tw
+(ODOSELECT)Tj
+/TT6 1 Tf
+5.4009 0 TD
+0.0923 Tw
+[(.)-342.3(I)0(t)-342.3(w)10(orks lik)10(e)-342.3(a)]TJ
+/TT9 1 Tf
+6.94 0 TD
+0 Tw
+(select)Tj
+/TT6 1 Tf
+3.9429 0 TD
+0.0922 Tw
+[(b)20(u)0(t)-342.2(does not rede)]TJ
+/TT7 1 Tf
+7.116 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+0.0922 Tw
+(ne the)Tj
+-38.1909 -1.2 TD
+0 Tw
+[(user break PC, so that breaks and continues al)10(w)10(ays refer to the enclosing, implicit,)]TJ
+/TT9 1 Tf
+33.2212 0 TD
+(for)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(loop.)Tj
+-35.2715 -2.4 TD
+0.0478 Tw
+(The idea is that implicit)Tj
+/TT9 1 Tf
+9.9867 0 TD
+0 Tw
+(breaks)Tj
+/TT6 1 Tf
+3.8985 0 TD
+0.0479 Tw
+(inserted by the compiler will not be)Tj
+/TT9 1 Tf
+14.8041 0 TD
+0 Tw
+(OBREAK)Tj
+/TT6 1 Tf
+3.6006 0 TD
+0.2979 Tc
+[(,b)317.9(u)297.9(t)]TJ
+/TT9 1 Tf
+2.1036 0 TD
+0 Tc
+(OCBREAK)Tj
+/TT6 1 Tf
+4.2007 0 TD
+[(.)-297.9(The)]TJ
+-38.5941 -1.2 TD
+[(ne)25(w)]TJ
+/TT9 1 Tf
+2.0105 0 TD
+(OCBREAK)Tj
+/TT6 1 Tf
+4.5702 0 TD
+0.1195 Tw
+[(is a compiler)20(-inserted break and)]TJ
+/TT9 1 Tf
+13.6556 0 TD
+0 Tw
+(gen.go)Tj
+/TT6 1 Tf
+3.9701 0 TD
+0.1195 Tw
+(can skip those breaks when jumping on)Tj
+/TT9 1 Tf
+-24.2064 -1.2 TD
+0 Tw
+(break)Tj
+/TT6 1 Tf
+3.2505 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(continue)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(within)Tj
+/TT9 1 Tf
+2.8057 0 TD
+(doselect)Tj
+/TT6 1 Tf
+5.0508 0 TD
+(structures.)Tj
+-20.3516 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/syntax.go:/OBREAK)Tj
+8 0 0 8 158 169.2 Tm
+(// Node ops.)Tj
+0 -1.5 TD
+(const \()Tj
+2.4 -1.5 TD
+(OXXX = iota)Tj
+T*
+(...)Tj
+T*
+1.8 Tw
+[(OBREAK //)-600(break)]TJ
+T*
+0 Tw
+[(OCBREAK )-1800(//)-600(break generated by the compiler)]TJ
+/TT6 1 Tf
+10 0 0 10 72 75.5999 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/opnames.go:/OCBREAK)Tj
+ET
+endstream
+endobj
+88 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+90 0 obj
+<<
+/Length 1926
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-27-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(...)Tj
+0 -1.5 TD
+6 Tw
+(OBREAK: "BREAK",)Tj
+T*
+5.4 Tw
+(OCBREAK: "CBREAK",)Tj
+T*
+0 Tw
+(...)Tj
+/TT6 1 Tf
+10 0 0 10 72 638.4 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:/àvar.goopnames/)Tj
+8 0 0 8 158 620.4 Tm
+(var goopnames = []string{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+1.8 Tw
+(OBREAK: "break",)Tj
+T*
+(OCBREAK: "break",)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 526.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:/àfunc.stmtfmt/)Tj
+8 0 0 8 158 508.8 Tm
+(func stmtfmt\(n *Node\) string {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OBREAK, OCBREAK,)Tj
+2.4 -1.5 TD
+(OCONTINUE,)Tj
+T*
+(OGOTO,)Tj
+T*
+(OFALL,)Tj
+T*
+(OXFALL:)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 379.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/fmt.go:/àvar.opprec/)Tj
+8 0 0 8 158 361.2 Tm
+(var opprec = []int{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+3 Tw
+(OBREAK: -1,)Tj
+T*
+(OCBREAK: -1,)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 271.2 Tm
+(In)Tj
+/TT9 1 Tf
+1.083 0 TD
+(select)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(we insert)Tj
+/TT9 1 Tf
+3.8877 0 TD
+(OCBREAK)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(nodes instead of)Tj
+/TT9 1 Tf
+6.7485 0 TD
+(OBREAK)Tj
+/TT6 1 Tf
+3.6006 0 TD
+[(,)-250(which are no)25(w)-250(left for the user breaks.)]TJ
+-26.1211 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/select.go:/àfunc.racewalknode/)Tj
+8 0 0 8 158 237.6 Tm
+(func walkselect\(sel *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(r.Nbody = concat\(r.Nbody, cas.Nbody\))Tj
+T*
+(r.Nbody = list\(r.Nbody, Nod\(OCBREAK, nil, nil\)\))Tj
+T*
+(init = list\(init, r\))Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 135.5999 Tm
+(The same must be done in)Tj
+/TT9 1 Tf
+10.7197 0 TD
+(swt)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(for switches.)Tj
+-15.27 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/swt.go:/àfunc.casebody/)Tj
+ET
+endstream
+endobj
+91 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+93 0 obj
+<<
+/Length 1856
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-28-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func casebody\(sw *Node, typeswvar *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+[(var cas *NodeList)-1200(// cases)]TJ
+T*
+(var stat *NodeList // statements)Tj
+T*
+[(var def *Node)-3600(// defaults)]TJ
+T*
+(br := Nod\(OCBREAK, nil, nil\))Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 590.4 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/swt.go:/àfunc.*exprswitch.*walk/)Tj
+8 0 0 8 158 572.4 Tm
+(func \(s *exprSwitch\) walk\(sw *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(if len\(cc\) > 0 && cc[0].typ == caseKindDefault {)Tj
+2.4 -1.5 TD
+(def = cc[0].node.Right)Tj
+T*
+(cc = cc[1:])Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(def = Nod\(OCBREAK, nil, nil\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 430.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/swt.go:/àfunc.*typeSwitch.*walk/)Tj
+8 0 0 8 158 412.8 Tm
+(func \(s *typeSwitch\) walk\(sw *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(if len\(cc\) > 0 && cc[0].typ == caseKindDefault {)Tj
+2.4 -1.5 TD
+(def = cc[0].node.Right)Tj
+T*
+(cc = cc[1:])Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(def = Nod\(OCBREAK, nil, nil\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 274.8 Tm
+(And almost all processing is shared with the user)Tj
+/TT9 1 Tf
+19.8574 0 TD
+(OBREAK)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(node.)Tj
+-26.208 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/order.go:/àfunc.orderstmt/)Tj
+8 0 0 8 158 229.2 Tm
+(func orderstmt\(n *Node, order *Order\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OBREAK, OCBREAK,)Tj
+2.4 -1.5 TD
+(OCONTINUE,)Tj
+T*
+(ODCL,)Tj
+T*
+(ODCLCONST,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 111.5999 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/racewalk.go:/àfunc.racewalknode/)Tj
+ET
+endstream
+endobj
+94 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+96 0 obj
+<<
+/Length 1670
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-29-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func racewalknode\(...\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OFOR,)Tj
+2.4 -1.5 TD
+(OBREAK,)Tj
+T*
+(OCBREAK,)Tj
+T*
+(OCONTINUE,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 590.4 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.typecheck1/)Tj
+8 0 0 8 158 572.4 Tm
+(func typecheck1\(np **Node, top int\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OBREAK,)Tj
+2.4 -1.5 TD
+(OCBREAK,)Tj
+T*
+(OCONTINUE,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 466.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/typecheck.go:/àfunc.markbreak/)Tj
+8 0 0 8 158 448.8 Tm
+(func markbreak\(n *Node, implicit *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(switch n.Op {)Tj
+T*
+(case OBREAK, OCBREAK:)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 355.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/walk.go:/àfunc.markbreak/)Tj
+8 0 0 8 158 337.2 Tm
+(func func walkstmt\(np **Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case OBREAK,)Tj
+2.4 -1.5 TD
+(OCBREAK,)Tj
+T*
+(ODCL,)Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 235.2 Tm
+0.1711 Tw
+[(Here is where things start to change. A ne)25(w)]TJ
+/TT9 1 Tf
+19.2317 0 TD
+0 Tw
+(ubreakpc)Tj
+/TT6 1 Tf
+5.2219 0 TD
+0.1712 Tw
+(records the PC for user \(not compiler\))Tj
+-24.4536 -1.2 TD
+0 Tw
+(breaks.)Tj
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.go:/àvar.breakpc/)Tj
+8 0 0 8 158 189.6 Tm
+(var breakpc, ubreakpc *obj.Prog)Tj
+/TT6 1 Tf
+10 0 0 10 72 156 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/pgen.go:/àfunc.compile/+/breakpc/)Tj
+ET
+endstream
+endobj
+97 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+99 0 obj
+<<
+/Length 2608
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-30-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func compile\(fn *Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(continpc = nil)Tj
+T*
+(breakpc = nil)Tj
+T*
+(ubreakpc = nil)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 606 Tm
+0.0065 Tw
+(The code in)Tj
+/TT9 1 Tf
+4.9897 0 TD
+0 Tw
+(gen)Tj
+/TT6 1 Tf
+2.0568 0 TD
+0.0065 Tw
+[(is changed no)25(w)-256.5(s)0(o)-256.5(that)]TJ
+/TT9 1 Tf
+9.3669 0 TD
+0 Tw
+(ubreakpc)Tj
+/TT6 1 Tf
+5.0573 0 TD
+0.0065 Tw
+[(is recorded for user breaks b)20(ut not for compiler)20(-)]TJ
+-21.4707 -1.2 TD
+0 Tw
+(inserted breaks.)Tj
+0 -2.4 TD
+0.0822 Tw
+(The processing for)Tj
+/TT9 1 Tf
+7.9943 0 TD
+0 Tw
+(OBREAK)Tj
+/TT6 1 Tf
+3.9329 0 TD
+(and)Tj
+/TT9 1 Tf
+1.7761 0 TD
+(OCBREAK)Tj
+/TT6 1 Tf
+4.533 0 TD
+0.0823 Tw
+[(dif)25(fers in the)]TJ
+/TT9 1 Tf
+5.5813 0 TD
+0 Tw
+(breakpc)Tj
+/TT6 1 Tf
+4.533 0 TD
+0.0823 Tw
+(used \(which is be)Tj
+/TT9 1 Tf
+7.5499 0 TD
+0 Tw
+(ubreakpc)Tj
+/TT6 1 Tf
+-35.9004 -1.2 TD
+(for user breaks\).)Tj
+0 -2.4 TD
+0.09 Tw
+(Processing for)Tj
+/TT9 1 Tf
+6.179 0 TD
+0 Tw
+(ODOSELECT)Tj
+/TT6 1 Tf
+5.7409 0 TD
+0.09 Tw
+[(is lik)10(e)-340(that for)]TJ
+/TT9 1 Tf
+6.182 0 TD
+0 Tw
+(OSELECT)Tj
+/TT6 1 Tf
+4.5407 0 TD
+0.09 Tw
+[(b)20(u)0(t)-340(does not rede)]TJ
+/TT7 1 Tf
+7.1094 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.09 Tw
+(ne the user break, so that)Tj
+-30.3081 -1.2 TD
+0 Tw
+[(breaks and continues refer to the enclosing for loop inserted by the compiler)55(.)]TJ
+-2.5 -2.76 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/gen.go:/àfunc.gen/+/à.case.OBREAK/)Tj
+8 0 0 8 158 476.4 Tm
+(case OBREAK, OCBREAK:)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(if breakpc == nil || ubreakpc == nil {)Tj
+2.4 -1.5 TD
+(Yyerror\("break is not in a loop"\))Tj
+T*
+(break)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if n.Op == OBREAK {)Tj
+2.4 -1.5 TD
+(gjmp\(ubreakpc\))Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(gjmp\(breakpc\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 322.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/gen.go:/àfunc.gen/+/à.case.OFOR/)Tj
+8 0 0 8 158 304.8 Tm
+(case OFOR:)Tj
+2.4 -1.5 TD
+(sbreak, subreak := breakpc, ubreakpc)Tj
+T*
+[(p1 := gjmp\(nil\))-3000(// )-4200(goto)-600(test)]TJ
+T*
+[(breakpc = gjmp\(nil\) // break:)-2400(goto done)]TJ
+T*
+(ubreakpc = breakpc)Tj
+T*
+(...)Tj
+T*
+(Patch\(breakpc, Pc\) // done:)Tj
+T*
+(Patch\(ubreakpc, Pc\) // done:)Tj
+T*
+(continpc = scontin)Tj
+T*
+(breakpc, ubreakpc = sbreak, subreak)Tj
+T*
+(if lab != nil {)Tj
+2.4 -1.5 TD
+(lab.Breakpc = nil)Tj
+T*
+(lab.Continpc = nil)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 115.2 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/gen.go:/àfunc.gen/+/à.case.OSWITCH/)Tj
+ET
+endstream
+endobj
+100 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+102 0 obj
+<<
+/Length 2440
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-31-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(case OSWITCH:)Tj
+2.4 -1.5 TD
+(sbreak, subreak := breakpc, ubreakpc)Tj
+T*
+[(p1 := gjmp\(nil\))-3000(// )-4200(goto)-600(test)]TJ
+T*
+[(breakpc = gjmp\(nil\) // break:)-2400(goto done)]TJ
+T*
+(ubreakpc = breakpc)Tj
+T*
+(// define break label)Tj
+T*
+(lab := stmtlabel\(n\))Tj
+T*
+(if lab != nil {)Tj
+2.4 -1.5 TD
+(lab.Breakpc = breakpc)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+[(Patch\(p1, Pc\))-3600(// test:)]TJ
+0 -1.5 TD
+1.2 Tw
+[(Genlist\(n.Nbody\) //)-4800(switch\(test\) )1200(body)]TJ
+T*
+0 Tw
+(Patch\(breakpc, Pc\) // done:)Tj
+T*
+(Patch\(ubreakpc, Pc\) // done:)Tj
+T*
+(breakpc, ubreakpc = sbreak, subreak)Tj
+T*
+(if lab != nil {)Tj
+2.4 -1.5 TD
+(lab.Breakpc = nil)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 458.4 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/gen.go:/àfunc.gen/+/à.case.OSELECT/)Tj
+8 0 0 8 158 440.4 Tm
+(case OSELECT, ODOSELECT:)Tj
+2.4 -1.5 TD
+(sbreak, subreak := breakpc, ubreakpc)Tj
+T*
+[(p1 := gjmp\(nil\))-3000(// )-4200(goto)-600(test)]TJ
+T*
+[(breakpc = gjmp\(nil\) // break:)-2400(goto done)]TJ
+T*
+(if n.Op == OSELECT {)Tj
+2.4 -1.5 TD
+(ubreakpc = breakpc)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(// define break label)Tj
+T*
+(lab := stmtlabel\(n\))Tj
+T*
+(if lab != nil {)Tj
+2.4 -1.5 TD
+(lab.Breakpc = breakpc)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+[(Patch\(p1, Pc\))-3600(// test:)]TJ
+0 -1.5 TD
+1.2 Tw
+[(Genlist\(n.Nbody\) //)-4800(select\(\) )1200(body)]TJ
+T*
+0 Tw
+(Patch\(breakpc, Pc\) // done:)Tj
+T*
+(breakpc = sbreak)Tj
+T*
+(if n.Op == OSELECT {)Tj
+2.4 -1.5 TD
+(Patch\(ubreakpc, Pc\) // done:)Tj
+T*
+(ubreakpc = subreak)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if lab != nil {)Tj
+2.4 -1.5 TD
+(lab.Breakpc = nil)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 122.4 Tm
+[(7. )-250(Implicit)-250(structur)18(e)-250(and interface declarations)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+[(This is yet another con)40(v)15(enience change, added because we already had to change the compiler)55(.)]TJ
+0 -2.4 TD
+0.0051 Tw
+(In most cases types are)Tj
+/TT9 1 Tf
+9.4948 0 TD
+0 Tw
+(struct)Tj
+/TT6 1 Tf
+3.8558 0 TD
+0.0052 Tw
+(types. It can be easy for the compiler in certain cases to assume that a type)Tj
+-13.3506 -1.2 TD
+0.2118 Tw
+(declaration where the)Tj
+/TT9 1 Tf
+9.4918 0 TD
+0 Tw
+(struct)Tj
+/TT6 1 Tf
+4.0624 0 TD
+0.2118 Tw
+[(k)10(e)15(yw)10(ord is missing is a)]TJ
+/TT9 1 Tf
+10.6627 0 TD
+0 Tw
+(struct)Tj
+/TT6 1 Tf
+4.0624 0 TD
+0.2118 Tw
+[(type declaration. W)80(e)-461.8(assume that a)]TJ
+ET
+endstream
+endobj
+103 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+106 0 obj
+<<
+/Length 1993
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-32-)Tj
+-20.767 -3.6 TD
+[(structure is declared if we see something lik)10(e)]TJ
+/TT9 1 Tf
+8 0 0 8 133 690 Tm
+(type Point {)Tj
+2.4 -1.5 TD
+(x, y int)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 648 Tm
+(while a type is declared \(i.e., in the)Tj
+/TT9 1 Tf
+14.2446 0 TD
+(typedcl)Tj
+/TT6 1 Tf
+4.4507 0 TD
+(node of the grammar\).)Tj
+-18.6953 -2.4 TD
+0.087 Tw
+[(In the same w)10(a)0(y)65(,)-337(because)]TJ
+/TT9 1 Tf
+10.7999 0 TD
+0 Tw
+(interface{})Tj
+/TT6 1 Tf
+6.9381 0 TD
+0.087 Tw
+[(is a v)15(ery popular type for channels in Cli)25(v)15(e)0(,)-337(the)]TJ
+/TT9 1 Tf
+20.0596 0 TD
+0 Tw
+(interface)Tj
+/TT6 1 Tf
+-37.7976 -1.2 TD
+[(k)10(e)15(yw)10(ord can be remo)15(v)15(e)0(d)-250(when declaring the type for a channel. These tw)10(o)-250(are equi)25(v)25(alent:)]TJ
+/TT9 1 Tf
+8 0 0 8 133 594 Tm
+(chan {})Tj
+0 -1.5 TD
+(chan interface{})Tj
+/TT6 1 Tf
+10 0 0 10 72 552 Tm
+[(The changes in the grammar are as sho)25(wn here.)]TJ
+0 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(cmd/compile/internal/gc/go.y)Tj
+8 0 0 8 158 518.4 Tm
+1.8 Tw
+[(%type <node> implstructtype)-600(implinterfacetype)]TJ
+0 -1.5 TD
+0 Tw
+(...)Tj
+0 -3 TD
+(typedcl:)Tj
+2.4 -1.5 TD
+(typedclname ntype)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+($$ = typedcl1\($1, $2, true\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(|)Tj
+2.4 -1.5 TD
+(typedclname implstructtype)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+($$ = typedcl1\($1, $2, true\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(...)Tj
+0 -3 TD
+(implstructtype:)Tj
+2.4 -1.5 TD
+(lbrace structdcl_list osemi í}í)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTSTRUCT, nil, nil\);)Tj
+T*
+($$.List = $2;)Tj
+T*
+(fixlbrace\($1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+[(|)-2400(lbrace í}í)]TJ
+2.4 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTSTRUCT, nil, nil\);)Tj
+T*
+(fixlbrace\($1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(...)Tj
+0 -3 TD
+(implinterfacetype:)Tj
+2.4 -1.5 TD
+(lbrace í}í)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTINTER, nil, nil\);)Tj
+T*
+(fixlbrace\($1\);)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(...)Tj
+ET
+endstream
+endobj
+107 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+109 0 obj
+<<
+/Length 2258
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-33-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(othertype:)Tj
+2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+[(|)-2400(LCHAN non_recvchantype)]TJ
+2.4 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTCHAN, $2, nil\);)Tj
+T*
+($$.Etype = Cboth;)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+[(|)-2400(LCHAN LCOMM ntype)]TJ
+2.4 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTCHAN, $3, nil\);)Tj
+T*
+($$.Etype = Csend;)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+[(|)-2400(LCHAN implinterfacetype)]TJ
+2.4 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTCHAN, $2, nil\);)Tj
+T*
+($$.Etype = Cboth;)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+[(|)-2400(LCHAN LCOMM implinterfacetype)]TJ
+2.4 -1.5 TD
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTCHAN, $3, nil\);)Tj
+T*
+($$.Etype = Csend;)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(...)Tj
+0 -3 TD
+(recvchantype:)Tj
+2.4 -1.5 TD
+(LCOMM LCHAN ntype)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTCHAN, $3, nil\);)Tj
+T*
+($$.Etype = Crecv;)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(|)Tj
+2.4 -1.5 TD
+(LCOMM LCHAN implinterfacetype)Tj
+T*
+({)Tj
+2.4 -1.5 TD
+($$ = Nod\(OTCHAN, $3, nil\);)Tj
+T*
+($$.Etype = Crecv;)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 246 Tm
+[(8. )-250(Go)-250(package and Go tools)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0111 Tw
+[(Pre)25(vious changes should suf)]TJ
+/TT7 1 Tf
+11.3432 0 TD
+0 Tw
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.011 Tw
+[(ce, gi)25(v)15(e)0(n)-261.1(that the compiler is no)25(w)-261.1(written in Go. Ho)25(we)25(v)15(e)0(r)40(,)40( )-40(there is a)]TJ
+/TT9 1 Tf
+27.6156 0 TD
+0 Tw
+(go)Tj
+/TT6 1 Tf
+1.4612 0 TD
+(pack-)Tj
+-40.9761 -1.2 TD
+0.0132 Tw
+(age that contains yet another parser for the language, and it has to be changed as well. Most Go tools \(com-)Tj
+T*
+0 Tw
+(mands\) use it, and we must update it.)Tj
+/TT2 1 Tf
+0 -3.6 TD
+0.25 Tw
+[(8.1. Channel)-250(sends)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0.0948 Tw
+[(W)80(e)80( must )80(add)]TJ
+/TT9 1 Tf
+5.4908 0 TD
+0 Tw
+(<-)Tj
+/TT6 1 Tf
+1.465 0 TD
+0.0147 Tw
+[(in the predecende table. T)80(o)-264.7(preserv)15(e)-264.7(the le)25(v)15(els, hardwired into)]TJ
+/TT9 1 Tf
+25.1687 0 TD
+0 Tw
+(gofmt)Tj
+/TT6 1 Tf
+3.0005 0 TD
+0.0147 Tw
+[(,)-264.7(w)0(e)-264.7(set for the send)]TJ
+-35.1249 -1.2 TD
+0 Tw
+[(operation the lo)25(west one.)]TJ
+0 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/token/token.go:/à.LowestPrec)Tj
+ET
+endstream
+endobj
+110 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+112 0 obj
+<<
+/Length 1766
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-34-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(const \()Tj
+2.4 -1.5 TD
+0.6 Tw
+[(LowestPrec =)-600(0)-600(/)0(/)-600(non-operators)]TJ
+T*
+1.2 Tw
+[(UnaryPrec =)-600(6)]TJ
+T*
+0 Tw
+(HighestPrec = 7)Tj
+-2.4 -1.5 TD
+(\))Tj
+0 -3 TD
+(func \(op Token\) Precedence\(\) int {)Tj
+2.4 -1.5 TD
+(switch op {)Tj
+T*
+(case ARROW, LOR:)Tj
+2.4 -1.5 TD
+(return 1)Tj
+-2.4 -1.5 TD
+(case LAND:)Tj
+2.4 -1.5 TD
+(return 2)Tj
+-2.4 -1.5 TD
+(case EQL, NEQ, LSS, LEQ, GTR, GEQ:)Tj
+2.4 -1.5 TD
+(return 3)Tj
+-2.4 -1.5 TD
+(case ADD, SUB, OR, XOR:)Tj
+2.4 -1.5 TD
+(return 4)Tj
+-2.4 -1.5 TD
+(case MUL, QUO, REM, SHL, SHR, AND, AND_NOT:)Tj
+2.4 -1.5 TD
+(return 5)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(return LowestPrec)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 426 Tm
+0.25 Tw
+[(8.2. Looping)-250(selects)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+(The main change id adding)Tj
+/TT9 1 Tf
+11.1353 0 TD
+(DOSELECT)Tj
+/TT6 1 Tf
+5.0508 0 TD
+[(as a ne)25(w)-250(tok)10(en.)]TJ
+-16.186 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/token/token.go)Tj
+8 0 0 8 158 376.8 Tm
+(// The list of tokens.)Tj
+0 -1.5 TD
+(const \()Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(DEFAULT)Tj
+T*
+(DEFER)Tj
+T*
+(DOSELECT)Tj
+T*
+(ELSE)Tj
+T*
+(FALLTHROUGH)Tj
+T*
+(FOR)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(\))Tj
+0 -3 TD
+(var tokens = [...]string{)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+2.4 Tw
+(DEFAULT: "default",)Tj
+T*
+3.6 Tw
+(DEFER: "defer",)Tj
+T*
+1.8 Tw
+(DOSELECT: "doselect",)Tj
+T*
+4.2 Tw
+(ELSE: "else",)Tj
+T*
+0 Tw
+(FALLTHROUGH: "fallthrough",)Tj
+T*
+4.8 Tw
+(FOR: "for",)Tj
+T*
+0 Tw
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 94.8 Tm
+(The AST must include a)Tj
+/TT9 1 Tf
+10.0259 0 TD
+(DoSelectStmt)Tj
+/TT6 1 Tf
+7.2012 0 TD
+(.)Tj
+-19.727 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/ast/ast.go:/à.DoSelectStmt)Tj
+ET
+endstream
+endobj
+113 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+115 0 obj
+<<
+/Length 1997
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-35-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(// A DoSelectStmt node represents a doselect statement.)Tj
+0 -1.5 TD
+(DoSelectStmt struct {)Tj
+2.4 -1.5 TD
+[(DoSelect token.Pos)-1200(// position of "doselect" keyword)]TJ
+T*
+[(Init Stmt)-6600(// initialization statement; or nil)]TJ
+T*
+[(Cond Expr)-6600(// condition; or nil)]TJ
+T*
+[(Post Stmt)-6600(// post iteration statement; or nil)]TJ
+T*
+1.2 Tw
+[(Body *BlockStmt //)-600(CommClauses )1200(only)]TJ
+-2.4 -1.5 TD
+0 Tw
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 594 Tm
+(And its methods...)Tj
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/ast/ast.go)Tj
+8 0 0 8 158 560.4 Tm
+(...)Tj
+0 -1.5 TD
+[(func \(s *SelectStmt\) Pos\(\) token.Pos)-3000({)-600(return s.Select })]TJ
+T*
+[(func \(s *DoSelectStmt\) Pos\(\) token.Pos)-1800({)-600(return s.DoSelect })]TJ
+T*
+(...)Tj
+T*
+(func \(s *SelectStmt\) End\(\) token.Pos { return s.Body.End\(\) })Tj
+T*
+(func \(s *DoSelectStmt\) End\(\) token.Pos { return s.Body.End\(\) })Tj
+T*
+(...)Tj
+T*
+[(func \(*SelectStmt\) stmtNode\(\))-3000({})]TJ
+T*
+[(func \(*DoSelectStmt\) stmtNode\(\))-1800({})]TJ
+/TT6 1 Tf
+10 0 0 10 97 434.4 Tm
+(Plus a)Tj
+/TT9 1 Tf
+2.667 0 TD
+(walk)Tj
+/TT6 1 Tf
+2.6504 0 TD
+(for it.)Tj
+-7.8174 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/ast/walk.go)Tj
+8 0 0 8 158 400.8 Tm
+(func Walk\(v Visitor, node Node\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case *DoSelectStmt:)Tj
+2.4 -1.5 TD
+(if n.Init != nil {)Tj
+2.4 -1.5 TD
+(Walk\(v, n.Init\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if n.Cond != nil {)Tj
+2.4 -1.5 TD
+(Walk\(v, n.Cond\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if n.Post != nil {)Tj
+2.4 -1.5 TD
+(Walk\(v, n.Post\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(Walk\(v, n.Body\))Tj
+-2.4 -1.5 TD
+(case *ForStmt:)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 190.8 Tm
+[(Then the parser)55(.)-250(There is a ne)25(w)-250(statement to synchronize on errors.)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.syncStmt\\\()Tj
+ET
+endstream
+endobj
+116 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+118 0 obj
+<<
+/Length 1235
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-36-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func syncStmt\(p *parser\) {)Tj
+2.4 -1.5 TD
+(for {)Tj
+2.4 -1.5 TD
+(switch p.tok {)Tj
+T*
+(case token.BREAK, ...)Tj
+2.4 -1.5 TD
+(token.DOSELECT, ...)Tj
+T*
+(token.VAR:)Tj
+-2.4 -1.5 TD
+(...)Tj
+T*
+(case token.EOF:)Tj
+2.4 -1.5 TD
+(return)Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(p.next\(\))Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 534 Tm
+[(And there is a ne)25(w)-250(statement.)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.parseStmt\\\()Tj
+8 0 0 8 158 500.4 Tm
+(func \(p *parser\) parseStmt\(\) \(s ast.Stmt\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case token.SELECT:)Tj
+2.4 -1.5 TD
+[(s)-600(=)-600(p.parseSelectStmt\(\))]TJ
+-2.4 -1.5 TD
+(case token.DOSELECT:)Tj
+2.4 -1.5 TD
+[(s)-600(=)-600(p.parseDoSelectStmt\(\))]TJ
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 386.4 Tm
+[(The parsing is tak)10(en from the parsing of a)]TJ
+/TT9 1 Tf
+16.9573 0 TD
+(for)Tj
+/TT6 1 Tf
+2.0503 0 TD
+(header and a)Tj
+/TT9 1 Tf
+5.3022 0 TD
+(select)Tj
+/TT6 1 Tf
+3.8506 0 TD
+[(body)65(.)]TJ
+-30.6604 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.parseStmt\\\()Tj
+ET
+endstream
+endobj
+119 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+121 0 obj
+<<
+/Length 1813
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-37-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func \(p *parser\) parseDoSelectStmt\(\) *ast.DoSelectStmt {)Tj
+2.4 -1.5 TD
+(if p.trace {)Tj
+2.4 -1.5 TD
+(defer un\(trace\(p, "DoSelectStmt"\)\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(pos := p.expect\(token.DOSELECT\))Tj
+T*
+(p.openScope\(\))Tj
+T*
+(defer p.closeScope\(\))Tj
+0 -3 TD
+(var s1, s2, s3 ast.Stmt)Tj
+0 -1.5 TD
+(if p.tok != token.LBRACE {)Tj
+2.4 -1.5 TD
+(prevLev := p.exprLev)Tj
+T*
+(p.exprLev = -1)Tj
+T*
+(if p.tok != token.SEMICOLON {)Tj
+2.4 -1.5 TD
+(isRange := false)Tj
+T*
+(if p.tok == token.RANGE {)Tj
+2.4 -1.5 TD
+(isRange = true)Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(s2, isRange = p.parseSimpleStmt\(basic\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if isRange {)Tj
+2.4 -1.5 TD
+(p.error\(pos, "unexpected range"\))Tj
+T*
+(// but ignore it for now)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if p.tok == token.SEMICOLON {)Tj
+2.4 -1.5 TD
+(p.next\(\))Tj
+T*
+(s1 = s2)Tj
+T*
+(s2 = nil)Tj
+T*
+(if p.tok != token.SEMICOLON {)Tj
+2.4 -1.5 TD
+(s2, _ = p.parseSimpleStmt\(basic\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(p.expectSemi\(\))Tj
+T*
+(if p.tok != token.LBRACE {)Tj
+2.4 -1.5 TD
+(s3, _ = p.parseSimpleStmt\(basic\))Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(p.exprLev = prevLev)Tj
+-2.4 -1.5 TD
+(})Tj
+0 -3 TD
+(lbrace := p.expect\(token.LBRACE\))Tj
+0 -1.5 TD
+(var list []ast.Stmt)Tj
+T*
+(for p.tok == token.CASE || p.tok == token.DEFAULT {)Tj
+2.4 -1.5 TD
+(list = append\(list, p.parseCommClause\(\)\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(rbrace := p.expect\(token.RBRACE\))Tj
+T*
+(p.expectSemi\(\))Tj
+T*
+(body := &ast.BlockStmt{Lbrace: lbrace, List: list, Rbrace: rbrace})Tj
+0 -3 TD
+(return &ast.DoSelectStmt {)Tj
+2.4 -1.5 TD
+(DoSelect: pos,)Tj
+T*
+(Init: s1,)Tj
+T*
+(Cond: p.makeExpr\(s2, "boolean expression"\),)Tj
+T*
+(Post: s3,)Tj
+T*
+(Body: body,)Tj
+ET
+endstream
+endobj
+122 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+124 0 obj
+<<
+/Length 2535
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-38-)Tj
+/TT9 1 Tf
+8 0 0 8 177.2 708 Tm
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 666 Tm
+[(No)25(w)-250(w)0(e)-250(can print it.)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/printer/nodes.go:/àfunc.*printer.*stmt\\\(/)Tj
+8 0 0 8 158 632.4 Tm
+(func \(p *printer\) stmt\(stmt ast.Stmt, nextIsRBrace bool\) {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(case *ast.DoSelectStmt:)Tj
+2.4 -1.5 TD
+(p.print\(token.DOSELECT, blank\))Tj
+T*
+(p.controlClause\(true, s.Init, s.Cond, s.Post\))Tj
+T*
+(body := s.Body)Tj
+T*
+(if len\(body.List\) == 0 && !p.commentBefore\(p.posFor\(body.Rbrace\)\) {)Tj
+2.4 -1.5 TD
+(// print empty select statement w/o comments on one line)Tj
+T*
+(p.print\(body.Lbrace, token.LBRACE, body.Rbrace, token.RBRACE\))Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(p.block\(body, 0\))Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 434.4 Tm
+0.25 Tw
+[(8.3. Implicit)-250(k)10(eyw)10(ords)]TJ
+/TT6 1 Tf
+0 -1.56 TD
+0 Tw
+[(W)80(e)80( )-80(are going to )]TJ
+/TT7 1 Tf
+6.5841 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.1938 0 TD
+(StructType)Tj
+/TT6 1 Tf
+6.251 0 TD
+(for implicit)Tj
+/TT9 1 Tf
+4.7769 0 TD
+(struct)Tj
+/TT6 1 Tf
+3.8506 0 TD
+(and)Tj
+/TT9 1 Tf
+1.6938 0 TD
+(interface)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(declarations.)Tj
+-30.5572 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/ast/ast.go:/à.StructType)Tj
+8 0 0 8 158 385.2 Tm
+(// A StructType node represents a struct type.)Tj
+0 -1.5 TD
+(StructType struct {)Tj
+2.4 -1.5 TD
+[(Struct )-2400(token.Pos)-1200(// position of "struct" keyword)]TJ
+T*
+[(Fields )-2400(*FieldList)-600(// list of field declarations)]TJ
+T*
+(Incomplete bool)Tj
+T*
+(Implicit bool)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 279.6 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/ast/ast.go:/à.InterfaceType)Tj
+8 0 0 8 158 261.6 Tm
+(// An InterfaceType node represents an interface type.)Tj
+0 -1.5 TD
+(InterfaceType struct {)Tj
+2.4 -1.5 TD
+[(Interface )-600(token.Pos )-600(//)-600(position of "interface" keyword)]TJ
+T*
+[(Methods )-1800(*FieldList)-600(// list of methods)]TJ
+T*
+(Incomplete bool)Tj
+T*
+(Implicit bool)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 159.6 Tm
+[(Globals in the parser records if we can accept implicit k)10(e)15(yw)10(ords.)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àtype.parser)Tj
+8 0 0 8 158 126 Tm
+(type parser struct {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(implStructOk, implInterOk bool)Tj
+-2.4 -1.5 TD
+(})Tj
+ET
+endstream
+endobj
+125 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+127 0 obj
+<<
+/Length 1721
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-39-)Tj
+-18.267 -3.6 TD
+0.0314 Tw
+(In a global type declaration, we accept)Tj
+/TT9 1 Tf
+15.879 0 TD
+0 Tw
+(struct)Tj
+/TT6 1 Tf
+3.882 0 TD
+0.0314 Tw
+[(to be implicit. This is not e)15(xactly what the Go com-)]TJ
+-19.761 -1.2 TD
+0 Tw
+[(piler does, b)20(ut it is close enough.)]TJ
+-2.5 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.*parser.*parseDecl\\\()Tj
+8 0 0 8 158 662.4 Tm
+(func \(p *parser\) parseDecl\(sync func\(*parser\)\) ast.Decl {)Tj
+2.4 -1.5 TD
+(if p.trace {)Tj
+2.4 -1.5 TD
+(defer un\(trace\(p, "Declaration"\)\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(p.implStructOk = false)Tj
+T*
+(defer func\(\) {p.implStructOk = false}\(\))Tj
+T*
+(var f parseSpecFunction)Tj
+T*
+(switch p.tok {)Tj
+T*
+(...)Tj
+T*
+(case token.TYPE:)Tj
+2.4 -1.5 TD
+(p.implStructOk = true)Tj
+T*
+[(f)-600(=)-600(p.parseTypeSpec)]TJ
+-2.4 -1.5 TD
+(...)Tj
+T*
+(})Tj
+T*
+(return p.parseGenDecl\(p.tok, f\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 72 448.8 Tm
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.*parser.*parseGen-)Tj
+0 -1.2 TD
+(Decl\\\()Tj
+8 0 0 8 158 418.8 Tm
+(func \(p *parser\) parseGenDecl\(...\) *ast.GenDecl {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(old := p.implStructOk)Tj
+T*
+(for ... {)Tj
+2.4 -1.5 TD
+(p.implStructOk = old)Tj
+T*
+(list = append\(...\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 292.8 Tm
+[(Later)40(,)]TJ
+/TT9 1 Tf
+2.5694 0 TD
+(parseStructType)Tj
+/TT6 1 Tf
+9.2515 0 TD
+(can honor the )Tj
+/TT7 1 Tf
+5.6924 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag.)Tj
+-20.5694 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.*parser.*parseStruct-)Tj
+0 -1.2 TD
+(Type\\\()Tj
+ET
+endstream
+endobj
+128 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+130 0 obj
+<<
+/Length 2307
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-40-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func \(p *parser\) parseStructType\(\) *ast.StructType {)Tj
+2.4 -1.5 TD
+(if p.trace {)Tj
+2.4 -1.5 TD
+(defer un\(trace\(p, "StructType"\)\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(var pos, lbrace token.Pos)Tj
+T*
+(implicit := p.implStructOk)Tj
+T*
+[(if implicit)-1200(&& p.tok == token.LBRACE {)]TJ
+2.4 -1.5 TD
+(pos = p.expect\(token.LBRACE\))Tj
+T*
+(lbrace = pos)Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(pos = p.expect\(token.STRUCT\))Tj
+T*
+(lbrace = p.expect\(token.LBRACE\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(old := p.implStructOk)Tj
+T*
+(p.implStructOk = false)Tj
+T*
+(defer func\(\) {p.implStructOk = old}\(\))Tj
+0 -3 TD
+(scope := ast.NewScope\(nil\) // struct scope)Tj
+0 -1.5 TD
+(...)Tj
+T*
+(return &ast.StructType{)Tj
+2.4 -1.5 TD
+(Struct: pos,)Tj
+T*
+(Fields: &ast.FieldList{)Tj
+2.4 -1.5 TD
+(Opening: lbrace,)Tj
+T*
+1.8 Tw
+(List: list,)Tj
+T*
+0 Tw
+(Closing: rbrace,)Tj
+-2.4 -1.5 TD
+(},)Tj
+T*
+(Implicit: implicit,)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 354 Tm
+(The )Tj
+/TT7 1 Tf
+1.8433 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0386 Tw
+[(ag is sa)20(v)15(ed, cleared, and restored to pre)25(v)15(ent implicit)]TJ
+/TT9 1 Tf
+21.3481 0 TD
+0 Tw
+(struct)Tj
+/TT6 1 Tf
+3.8892 0 TD
+0.0386 Tw
+[(declarations an)15(ywhere b)20(ut at the)]TJ
+-27.6367 -1.2 TD
+0 Tw
+[(top-le)25(v)15(el.)]TJ
+0 -2.4 TD
+0.08 Tw
+[(T)80(o)80( accept )80(implicit)]TJ
+/TT9 1 Tf
+7.4449 0 TD
+0 Tw
+(interface)Tj
+/TT6 1 Tf
+5.6509 0 TD
+(declarations, we set the )Tj
+/TT7 1 Tf
+9.5796 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+(ag while declaring a channel type.)Tj
+-25.7315 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.*parser.*parseChan-)Tj
+0 -1.2 TD
+(Type\\\()Tj
+8 0 0 8 158 272.4 Tm
+(func \(p *parser\) parseChanType\(\) *ast.ChanType {)Tj
+2.4 -1.5 TD
+(...)Tj
+T*
+(p.implInterOk = true)Tj
+T*
+(value := p.parseType\(\))Tj
+T*
+(p.implInterOk = false)Tj
+T*
+(...)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 170.4 Tm
+(And)Tj
+/TT9 1 Tf
+1.9722 0 TD
+(parseInterfaceType)Tj
+/TT6 1 Tf
+11.0518 0 TD
+[(tak)10(es care of the )]TJ
+/TT7 1 Tf
+6.7639 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag.)Tj
+-22.844 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/parser/parser.go:/àfunc.*parser.*parseInter-)Tj
+0 -1.2 TD
+(faceType\\\()Tj
+ET
+endstream
+endobj
+131 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+133 0 obj
+<<
+/Length 2816
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-41-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(func \(p *parser\) parseInterfaceType\(\) *ast.InterfaceType {)Tj
+2.4 -1.5 TD
+(if p.trace {)Tj
+2.4 -1.5 TD
+(defer un\(trace\(p, "InterfaceType"\)\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(var pos, lbrace token.Pos)Tj
+T*
+(implicit := p.implInterOk)Tj
+T*
+[(if implicit)-1200(&& p.tok == token.LBRACE {)]TJ
+2.4 -1.5 TD
+(pos = p.expect\(token.LBRACE\))Tj
+T*
+(lbrace = pos)Tj
+-2.4 -1.5 TD
+[(})-600(else {)]TJ
+2.4 -1.5 TD
+(pos = p.expect\(token.INTERFACE\))Tj
+T*
+(lbrace = p.expect\(token.LBRACE\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(p.implInterOk = false)Tj
+T*
+(scope := ast.NewScope\(nil\) // interface scope)Tj
+T*
+(var list []*ast.Field)Tj
+T*
+(for p.tok == token.IDENT {)Tj
+2.4 -1.5 TD
+(list = append\(list, p.parseMethodSpec\(scope\)\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(if implicit && len\(list\) > 0 {)Tj
+2.4 -1.5 TD
+(p.error\(pos, "ok only for empty interfaces"\))Tj
+-2.4 -1.5 TD
+(})Tj
+T*
+(rbrace := p.expect\(token.RBRACE\))Tj
+T*
+(return &ast.InterfaceType{)Tj
+2.4 -1.5 TD
+(Interface: pos,)Tj
+T*
+(Methods: &ast.FieldList{)Tj
+2.4 -1.5 TD
+(Opening: lbrace,)Tj
+T*
+1.8 Tw
+(List: list,)Tj
+T*
+0 Tw
+(Closing: rbrace,)Tj
+-2.4 -1.5 TD
+(},)Tj
+T*
+(Implicit: implicit,)Tj
+-2.4 -1.5 TD
+(})Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 294 Tm
+0.0611 Tw
+(This time we clear the )Tj
+/TT7 1 Tf
+9.4408 0 TD
+0 Tw
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+0.0611 Tw
+[(ag right after using it, because the implicit interf)10(ace declaration w)10(orks only)]TJ
+-9.9969 -1.2 TD
+0 Tw
+(right after the)Tj
+/TT9 1 Tf
+5.6919 0 TD
+(chan)Tj
+/TT6 1 Tf
+2.6504 0 TD
+[(k)10(e)15(yw)10(ord \(b)20(ut for send/recei)25(v)15(e)15( )-15(only indications\).)]TJ
+-8.3423 -2.4 TD
+[(In the printer)40(,)-250(w)0(e)-250(d)0(e)]TJ
+/TT7 1 Tf
+8.0401 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ne)Tj
+-11.0962 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/go/printer/printer.go:/àtype.Config)Tj
+8 0 0 8 158 224.4 Tm
+(type Config struct {)Tj
+2.4 -1.5 TD
+[(Mode )-2400(Mode)-600(// default: 0)]TJ
+T*
+[(Tabwidth int)-1200(// default: 8)]TJ
+T*
+[(Indent )-1200(int)-1200(// default: 0 \(all code is indented at least by this much\))]TJ
+T*
+(DontPrintImplicits bool)Tj
+-2.4 -1.5 TD
+(})Tj
+/TT6 1 Tf
+10 0 0 10 97 146.4 Tm
+(The )Tj
+/TT7 1 Tf
+1.8668 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag)Tj
+/TT9 1 Tf
+1.2559 0 TD
+(DontPrintImplicits)Tj
+/TT6 1 Tf
+11.1139 0 TD
+0.0621 Tw
+(may be set by the code using this package to instruct nodes not)Tj
+-14.7927 -1.2 TD
+0 Tw
+[(to print the implicit k)10(e)15(yw)10(ords. By def)10(ault, the)15(y)-250(are printed.)]TJ
+0 -2.4 TD
+(The)Tj
+/TT9 1 Tf
+1.8047 0 TD
+(gofmt)Tj
+/TT6 1 Tf
+3.2505 0 TD
+[(command is gi)25(v)15(e)0(n)-250(a)]TJ
+/TT7 1 Tf
+8.2359 0 TD
+(ﬂ)Tj
+/TT6 1 Tf
+0.5562 0 TD
+(ag to set it.)Tj
+-16.3472 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/cmd/gofmt/gofmt.go)Tj
+ET
+endstream
+endobj
+134 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+137 0 obj
+<<
+/Length 779
+>>
+stream
+BT
+/TT6 1 Tf
+10 0 0 10 279.67 744 Tm
+0 g
+/GS1 gs
+0 Tc
+0 Tw
+(-42-)Tj
+/TT9 1 Tf
+8 0 0 8 158 708 Tm
+(var noImpls = flag.Bool\("S", false,)Tj
+2.4 -1.5 TD
+("omit struct keyword in top-level type declarations"\))Tj
+/TT6 1 Tf
+10 0 0 10 97 666 Tm
+(And to process )Tj
+/TT7 1 Tf
+6.249 0 TD
+(ﬁ)Tj
+/TT6 1 Tf
+0.5561 0 TD
+(le...)Tj
+-9.3052 -1.56 TD
+(ï)Tj
+/TT9 1 Tf
+2.5001 0 TD
+(/usr/local/go/src/cmd/gofmt/gofmt.go:/àfunc.processFile)Tj
+8 0 0 8 158 632.4 Tm
+(func processFile\(...\) error {)Tj
+2.4 -1.5 TD
+(cfg := printer.Config{..., DontPrintImplicits: noImpls})Tj
+T*
+(res, err := format.Format\(..., cfg\))Tj
+-2.4 -1.5 TD
+(})Tj
+/TT2 1 Tf
+10 0 0 10 72 554.4 Tm
+[(Refer)18(ences)]TJ
+/TT6 1 Tf
+8 0 0 8 72 538.8 Tm
+[(1. The Go Programming Language. The Go Authors. http://golang.or)18(g.)]TJ
+ET
+endstream
+endobj
+138 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT7 7 0 R
+/TT9 8 0 R
+>>
+/ExtGState <<
+/GS1 9 0 R
+>>
+>>
+endobj
+9 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+139 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+140 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+141 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+142 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+143 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 753
+/CapHeight 562
+/Descent -246
+/Flags 35
+/FontBBox [-28 -250 628 805]
+/FontName /Courier
+/ItalicAngle 0
+/StemV 51
+/XHeight 426
+/StemH 51
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 121
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 500 500 500 500 500 500 500 500 0 333 0 0 0 0 0 
+0 722 0 722 0 0 611 778 0 389 0 0 667 0 0 0 
+0 0 722 556 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 556 444 556 444 333 500 556 278 0 556 278 833 556 500 
+556 0 444 389 333 556 0 722 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 139 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 120
+/Widths [250 0 420 0 0 0 0 0 333 333 0 0 0 333 250 0 
+0 500 0 500 0 500 0 0 0 0 0 0 0 0 0 0 
+0 611 611 667 0 611 611 0 0 0 444 0 556 0 0 0 
+0 0 611 500 556 722 0 0 0 0 0 0 0 0 0 0 
+0 500 0 444 500 444 278 0 500 278 0 0 278 722 500 500 
+500 0 389 389 278 0 444 667 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 140 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 149
+/Widths [250 0 0 0 0 0 0 0 333 333 0 0 250 333 250 278 
+500 500 500 500 500 500 500 500 500 500 278 0 0 0 0 444 
+0 722 667 667 0 0 556 722 722 333 0 0 611 889 722 722 
+556 0 0 556 611 722 0 944 722 0 0 333 0 333 0 0 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 333 0 0 350 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 141 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 222
+/LastChar 223
+/Widths [556 556 ]
+/Encoding /MacRomanEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 142 0 R
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 146
+/Widths [600 600 600 0 600 600 600 0 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 0 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 0 600 600 600 0 600 
+0 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 0 0 
+0 0 0 0 0 0 0 0 600 0 0 0 0 0 0 0 
+0 0 600 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Courier
+/FontDescriptor 143 0 R
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 13 0 R
+/Contents 12 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 16 0 R
+/Contents 15 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+26 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 28 0 R
+/Contents 27 0 R
+>>
+endobj
+29 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 31 0 R
+/Contents 30 0 R
+>>
+endobj
+32 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 34 0 R
+/Contents 33 0 R
+>>
+endobj
+35 0 obj
+<<
+/Type /Page
+/Parent 10 0 R
+/Resources 37 0 R
+/Contents 36 0 R
+>>
+endobj
+38 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 40 0 R
+/Contents 39 0 R
+>>
+endobj
+43 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 45 0 R
+/Contents 44 0 R
+>>
+endobj
+46 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 48 0 R
+/Contents 47 0 R
+>>
+endobj
+49 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 51 0 R
+/Contents 50 0 R
+>>
+endobj
+52 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 54 0 R
+/Contents 53 0 R
+>>
+endobj
+55 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 57 0 R
+/Contents 56 0 R
+>>
+endobj
+58 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 60 0 R
+/Contents 59 0 R
+>>
+endobj
+61 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 63 0 R
+/Contents 62 0 R
+>>
+endobj
+64 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 66 0 R
+/Contents 65 0 R
+>>
+endobj
+67 0 obj
+<<
+/Type /Page
+/Parent 42 0 R
+/Resources 69 0 R
+/Contents 68 0 R
+>>
+endobj
+70 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 72 0 R
+/Contents 71 0 R
+>>
+endobj
+74 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 76 0 R
+/Contents 75 0 R
+>>
+endobj
+77 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 79 0 R
+/Contents 78 0 R
+>>
+endobj
+80 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 82 0 R
+/Contents 81 0 R
+>>
+endobj
+83 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 85 0 R
+/Contents 84 0 R
+>>
+endobj
+86 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 88 0 R
+/Contents 87 0 R
+>>
+endobj
+89 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 91 0 R
+/Contents 90 0 R
+>>
+endobj
+92 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 94 0 R
+/Contents 93 0 R
+>>
+endobj
+95 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 97 0 R
+/Contents 96 0 R
+>>
+endobj
+98 0 obj
+<<
+/Type /Page
+/Parent 73 0 R
+/Resources 100 0 R
+/Contents 99 0 R
+>>
+endobj
+101 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 103 0 R
+/Contents 102 0 R
+>>
+endobj
+105 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 107 0 R
+/Contents 106 0 R
+>>
+endobj
+108 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 110 0 R
+/Contents 109 0 R
+>>
+endobj
+111 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 113 0 R
+/Contents 112 0 R
+>>
+endobj
+114 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 116 0 R
+/Contents 115 0 R
+>>
+endobj
+117 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 119 0 R
+/Contents 118 0 R
+>>
+endobj
+120 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 122 0 R
+/Contents 121 0 R
+>>
+endobj
+123 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 125 0 R
+/Contents 124 0 R
+>>
+endobj
+126 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 128 0 R
+/Contents 127 0 R
+>>
+endobj
+129 0 obj
+<<
+/Type /Page
+/Parent 104 0 R
+/Resources 131 0 R
+/Contents 130 0 R
+>>
+endobj
+132 0 obj
+<<
+/Type /Page
+/Parent 135 0 R
+/Resources 134 0 R
+/Contents 133 0 R
+>>
+endobj
+136 0 obj
+<<
+/Type /Page
+/Parent 135 0 R
+/Resources 138 0 R
+/Contents 137 0 R
+>>
+endobj
+144 0 obj
+<<
+/S /D
+>>
+endobj
+145 0 obj
+<<
+/Nums [0 144 0 R ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 11 0 R 14 0 R 17 0 R 20 0 R 23 0 R 26 0 R 29 0 R 32 0 R 35 0 R]
+/Count 10
+/Parent 41 0 R
+>>
+endobj
+42 0 obj
+<<
+/Type /Pages
+/Kids [38 0 R 43 0 R 46 0 R 49 0 R 52 0 R 55 0 R 58 0 R 61 0 R 64 0 R 67 0 R]
+/Count 10
+/Parent 41 0 R
+>>
+endobj
+73 0 obj
+<<
+/Type /Pages
+/Kids [70 0 R 74 0 R 77 0 R 80 0 R 83 0 R 86 0 R 89 0 R 92 0 R 95 0 R 98 0 R]
+/Count 10
+/Parent 41 0 R
+>>
+endobj
+104 0 obj
+<<
+/Type /Pages
+/Kids [101 0 R 105 0 R 108 0 R 111 0 R 114 0 R 117 0 R 120 0 R 123 0 R 126 0 R 129 0 R]
+/Count 10
+/Parent 41 0 R
+>>
+endobj
+135 0 obj
+<<
+/Type /Pages
+/Kids [132 0 R 136 0 R]
+/Count 2
+/Parent 41 0 R
+>>
+endobj
+41 0 obj
+<<
+/Type /Pages
+/Kids [10 0 R 42 0 R 73 0 R 104 0 R 135 0 R ]
+/Count 42
+/MediaBox [0 0 612 792]
+>>
+endobj
+146 0 obj
+<<
+/CreationDate (D:20150611130020+02'00')
+/ModDate (D:20150611130020+02'00')
+/Producer (Apple pstopdf)
+>>
+endobj
+147 0 obj
+<<
+/Type /Catalog
+/Pages 41 0 R
+/PageLabels 145 0 R
+>>
+endobj
+xref
+0 148
+0000000000 65535 f 
+0000108222 00000 n 
+0000000016 00000 n 
+0000004043 00000 n 
+0000106077 00000 n 
+0000106506 00000 n 
+0000106931 00000 n 
+0000107471 00000 n 
+0000107646 00000 n 
+0000104945 00000 n 
+0000111867 00000 n 
+0000108303 00000 n 
+0000004182 00000 n 
+0000010000 00000 n 
+0000108387 00000 n 
+0000010129 00000 n 
+0000013576 00000 n 
+0000108471 00000 n 
+0000013705 00000 n 
+0000015985 00000 n 
+0000108555 00000 n 
+0000016092 00000 n 
+0000018309 00000 n 
+0000108639 00000 n 
+0000018416 00000 n 
+0000021332 00000 n 
+0000108723 00000 n 
+0000021461 00000 n 
+0000024139 00000 n 
+0000108807 00000 n 
+0000024257 00000 n 
+0000026088 00000 n 
+0000108891 00000 n 
+0000026195 00000 n 
+0000028063 00000 n 
+0000108975 00000 n 
+0000028170 00000 n 
+0000031191 00000 n 
+0000109059 00000 n 
+0000031309 00000 n 
+0000034317 00000 n 
+0000112513 00000 n 
+0000112004 00000 n 
+0000109143 00000 n 
+0000034446 00000 n 
+0000037099 00000 n 
+0000109227 00000 n 
+0000037228 00000 n 
+0000039831 00000 n 
+0000109311 00000 n 
+0000039949 00000 n 
+0000042292 00000 n 
+0000109395 00000 n 
+0000042399 00000 n 
+0000044684 00000 n 
+0000109479 00000 n 
+0000044802 00000 n 
+0000047094 00000 n 
+0000109563 00000 n 
+0000047212 00000 n 
+0000049460 00000 n 
+0000109647 00000 n 
+0000049567 00000 n 
+0000051997 00000 n 
+0000109731 00000 n 
+0000052115 00000 n 
+0000054405 00000 n 
+0000109815 00000 n 
+0000054523 00000 n 
+0000056904 00000 n 
+0000109899 00000 n 
+0000057033 00000 n 
+0000058883 00000 n 
+0000112142 00000 n 
+0000109983 00000 n 
+0000058990 00000 n 
+0000061339 00000 n 
+0000110067 00000 n 
+0000061446 00000 n 
+0000063510 00000 n 
+0000110151 00000 n 
+0000063617 00000 n 
+0000065743 00000 n 
+0000110235 00000 n 
+0000065850 00000 n 
+0000067260 00000 n 
+0000110319 00000 n 
+0000067367 00000 n 
+0000070391 00000 n 
+0000110403 00000 n 
+0000070509 00000 n 
+0000072488 00000 n 
+0000110487 00000 n 
+0000072595 00000 n 
+0000074504 00000 n 
+0000110571 00000 n 
+0000074611 00000 n 
+0000076334 00000 n 
+0000110655 00000 n 
+0000076441 00000 n 
+0000079102 00000 n 
+0000110740 00000 n 
+0000079221 00000 n 
+0000081715 00000 n 
+0000112280 00000 n 
+0000110828 00000 n 
+0000081834 00000 n 
+0000083881 00000 n 
+0000110916 00000 n 
+0000083989 00000 n 
+0000086301 00000 n 
+0000111004 00000 n 
+0000086431 00000 n 
+0000088251 00000 n 
+0000111092 00000 n 
+0000088370 00000 n 
+0000090421 00000 n 
+0000111180 00000 n 
+0000090529 00000 n 
+0000091818 00000 n 
+0000111268 00000 n 
+0000091926 00000 n 
+0000093793 00000 n 
+0000111356 00000 n 
+0000093901 00000 n 
+0000096490 00000 n 
+0000111444 00000 n 
+0000096620 00000 n 
+0000098395 00000 n 
+0000111532 00000 n 
+0000098514 00000 n 
+0000100875 00000 n 
+0000111620 00000 n 
+0000100994 00000 n 
+0000103864 00000 n 
+0000112429 00000 n 
+0000111708 00000 n 
+0000103983 00000 n 
+0000104815 00000 n 
+0000105085 00000 n 
+0000105288 00000 n 
+0000105489 00000 n 
+0000105687 00000 n 
+0000105885 00000 n 
+0000111796 00000 n 
+0000111825 00000 n 
+0000112628 00000 n 
+0000112752 00000 n 
+trailer
+<<
+/Size 148
+/Root 147 0 R
+/Info 146 0 R
+/ID [<64647931e8b958afacd904fda30add92><64647931e8b958afacd904fda30add92>]
+>>
+startxref
+112824
+%%EOF
